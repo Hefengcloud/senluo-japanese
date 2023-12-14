@@ -1,0 +1,30 @@
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:meta/meta.dart';
+import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
+import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
+
+part 'grammar_event.dart';
+part 'grammar_state.dart';
+
+class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
+  GrammarBloc({required this.grammarRepository}) : super(GrammarLoading()) {
+    on<GrammarStarted>(_onStarted);
+  }
+
+  final GrammarRepository grammarRepository;
+
+  Future<void> _onStarted(
+    GrammarStarted event,
+    Emitter<GrammarState> emit,
+  ) async {
+    emit(GrammarLoading());
+
+    try {
+      final items = await grammarRepository.loadItems();
+      emit(GrammarLoaded(items: [...items], currentItem: items.first));
+    } catch (_) {
+      emit(GrammarError());
+    }
+  }
+}
