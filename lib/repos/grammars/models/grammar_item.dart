@@ -5,10 +5,9 @@ class GrammarItem extends Equatable {
 
   final List<String> jpMeanings;
   final List<String> cnMeanings;
-
   final List<String> conjugations;
-
   final List<String> explanation;
+  final List<GrammarExample> examples;
 
   const GrammarItem.title(String title)
       : this(
@@ -17,6 +16,7 @@ class GrammarItem extends Equatable {
           cnMeanings: const [],
           conjugations: const [],
           explanation: const [],
+          examples: const [],
         );
 
   const GrammarItem({
@@ -25,6 +25,7 @@ class GrammarItem extends Equatable {
     required this.cnMeanings,
     required this.conjugations,
     required this.explanation,
+    required this.examples,
   });
 
   static const empty = GrammarItem(
@@ -33,6 +34,7 @@ class GrammarItem extends Equatable {
     cnMeanings: [],
     conjugations: [],
     explanation: [],
+    examples: [],
   );
 
   @override
@@ -42,14 +44,15 @@ class GrammarItem extends Equatable {
         cnMeanings,
         conjugations,
         explanation,
+        examples,
       ];
 }
 
-class GrammarExampleSentence {
+class GrammarExample {
   final String jp;
   final String cn;
 
-  GrammarExampleSentence({
+  const GrammarExample({
     required this.jp,
     required this.cn,
   });
