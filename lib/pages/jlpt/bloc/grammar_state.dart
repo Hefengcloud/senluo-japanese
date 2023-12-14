@@ -21,6 +21,15 @@ final class GrammarLoaded extends GrammarState {
 
   @override
   List<Object?> get props => [currentItem];
+
+  GrammarLoaded copyWith({
+    GrammarItem? currentItem,
+    List<GrammarItem>? items,
+  }) =>
+      GrammarLoaded(
+        currentItem: currentItem ?? this.currentItem,
+        items: items ?? this.items,
+      );
 }
 
 final class GrammarError extends GrammarState {

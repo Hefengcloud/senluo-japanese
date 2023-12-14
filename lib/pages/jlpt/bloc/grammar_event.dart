@@ -18,3 +18,12 @@ class GrammarItemAdded extends GrammarEvent {
   @override
   List<Object?> get props => [item];
 }
+
+class GrammarItemSelected extends GrammarEvent {
+  final GrammarItem item;
+
+  const GrammarItemSelected({required this.item});
+
+  @override
+  List<Object?> get props => [item];
+}

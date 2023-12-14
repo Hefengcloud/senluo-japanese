@@ -54,7 +54,7 @@ class GrammarPanelPage extends StatelessWidget {
               const VerticalDivider(thickness: 1, width: 1),
               Expanded(
                 child: Container(
-                  child: const GrammarDetailView(),
+                  child: GrammarDetailView(item: state.currentItem),
                 ),
               ),
             ],
@@ -68,7 +68,11 @@ class GrammarPanelPage extends StatelessWidget {
       children: [
         GrammarLevelView(),
         _buildSearchBox(context),
-        GrammarListView(items: items),
+        GrammarListView(
+          items: items,
+          onItemSelected: (item) => BlocProvider.of<GrammarBloc>(context)
+              .add(GrammarItemSelected(item: item)),
+        ),
         ElevatedButton(
           onPressed: () {
             _showAddDialog(context);

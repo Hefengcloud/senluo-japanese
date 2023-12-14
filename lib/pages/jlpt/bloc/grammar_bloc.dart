@@ -10,6 +10,7 @@ part 'grammar_state.dart';
 class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
   GrammarBloc({required this.grammarRepository}) : super(GrammarLoading()) {
     on<GrammarStarted>(_onStarted);
+    on<GrammarItemSelected>(_onItemSelected);
   }
 
   final GrammarRepository grammarRepository;
@@ -26,5 +27,14 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     } catch (_) {
       emit(GrammarError());
     }
+  }
+
+  Future<void> _onItemSelected(
+    GrammarItemSelected event,
+    Emitter<GrammarState> emit,
+  ) async {
+    final state = this.state as GrammarLoaded;
+    final newState = state.copyWith(currentItem: event.item);
+    emit(newState);
   }
 }
