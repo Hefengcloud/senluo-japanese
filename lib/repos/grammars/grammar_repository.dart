@@ -1,3 +1,5 @@
+import 'package:senluo_japanese_cms/database/database_helper.dart';
+import 'package:senluo_japanese_cms/database/grammars/models/grammar_item_model.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
 const _delay = Duration(milliseconds: 800);
@@ -34,7 +36,17 @@ class GrammarRepository {
     const GrammarItem.title('〜がてら'),
   ];
 
-  void addItem(GrammarItem item) => _items.add(item);
+  Future<void> addItem(GrammarItem item) async {
+    await DatabaseHelper().insertGrammarItem(
+      GrammarItemModel(
+        name: item.title,
+        meaning: item.cnMeanings.toString(),
+      ),
+    );
+  }
 
-  Future<List<GrammarItem>> loadItems() => Future.delayed(_delay, () => _items);
+  Future<List<GrammarItem>> loadItems() async {
+    final models = await DatabaseHelper().loadGrammars();
+    return models.map((e) => GrammarItem.title(e.name)).toList();
+  }
 }

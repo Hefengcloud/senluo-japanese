@@ -13,7 +13,7 @@ import 'package:senluo_japanese_cms/pages/jlpt/widgets/grammar_list_view.dart';
 import 'package:senluo_japanese_cms/pages/jlpt/widgets/grammar_text_view.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
-import 'widgets/grammar_adding_view.dart';
+import 'grammar_adding_page.dart';
 import 'widgets/grammar_image_view.dart';
 
 class GrammarPanelPage extends StatelessWidget {
@@ -119,7 +119,7 @@ class GrammarPanelPage extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: 20.0, vertical: 40.0),
           content: SizedBox(
             width: 500,
-            child: GrammarAddingView(),
+            child: GrammarAddingPage(),
           ),
         );
       },

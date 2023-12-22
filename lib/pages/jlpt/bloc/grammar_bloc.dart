@@ -11,6 +11,7 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
   GrammarBloc({required this.grammarRepository}) : super(GrammarLoading()) {
     on<GrammarStarted>(_onStarted);
     on<GrammarItemSelected>(_onItemSelected);
+    on<GrammarItemAdded>(_onItemAdded);
   }
 
   final GrammarRepository grammarRepository;
@@ -36,5 +37,15 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     final state = this.state as GrammarLoaded;
     final newState = state.copyWith(currentItem: event.item);
     emit(newState);
+  }
+
+  Future<void> _onItemAdded(
+    GrammarItemAdded event,
+    Emitter<GrammarState> emit,
+  ) async {
+    final state = this.state as GrammarLoaded;
+    final newState = state.copyWith(currentItem: event.item);
+    emit(newState);
+    await grammarRepository.addItem(event.item);
   }
 }
