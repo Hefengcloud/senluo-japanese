@@ -24,7 +24,11 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
 
     try {
       final items = await grammarRepository.loadItems();
-      emit(GrammarLoaded(items: [...items], currentItem: items.first));
+      if (items.isNotEmpty) {
+        emit(GrammarLoaded(items: [...items], currentItem: items.first));
+      } else {
+        emit(const GrammarLoaded(items: []));
+      }
     } catch (_) {
       emit(GrammarError());
     }

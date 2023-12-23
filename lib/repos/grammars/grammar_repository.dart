@@ -12,6 +12,9 @@ class GrammarRepository {
         name: item.name,
         level: item.level,
         meaning: jsonEncode(item.meaning.toJson()),
+        conjugation: item.conjugations.join('#'),
+        explanation: item.explanations.join('#'),
+        example: jsonEncode(item.examples.map((e) => e.toJson()).toList()),
       ),
     );
   }

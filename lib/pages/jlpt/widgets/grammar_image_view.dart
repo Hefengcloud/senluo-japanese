@@ -8,7 +8,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/pages/jlpt/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
+import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
+
+import '../../../constants/colors.dart';
 
 class GrammarImageView extends StatelessWidget {
   GrammarImageView({
@@ -94,21 +97,7 @@ class GrammarImageView extends StatelessWidget {
   _buildTop() {
     return Row(
       children: [
-        SvgPicture.asset(
-          'assets/images/sushi.svg',
-          height: 48,
-          width: 48,
-        ),
-        const Expanded(
-          child: Text(
-            'everjapan.com',
-            style: TextStyle(
-              fontStyle: FontStyle.italic,
-              color: kColorBrand,
-              fontSize: 16,
-            ),
-          ),
-        ),
+        const EverJapanLogo(),
         Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 16.0,

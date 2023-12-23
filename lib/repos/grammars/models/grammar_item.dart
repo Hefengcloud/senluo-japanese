@@ -35,17 +35,23 @@ class GrammarItem extends Equatable {
         );
 
   factory GrammarItem.from(GrammarItemModel model) {
+    // Meanings
     final Map<String, dynamic> meaning = jsonDecode(model.meaning);
     final jpMeanings = meaning['jp'].map<String>((e) => e.toString()).toList();
     final cnMeanings = meaning['cn'].map<String>((e) => e.toString()).toList();
+
+    // Examples
+    final examples = jsonDecode(model.example)
+        .map<GrammarExample>((e) => GrammarExample(jp: e['jp'], cn: e['cn']))
+        .toList();
     return GrammarItem(
       id: model.id,
       name: model.name,
       level: model.level,
       meaning: GrammarMeaning(jp: jpMeanings, cn: cnMeanings),
-      conjugations: const [],
-      explanations: const [],
-      examples: const [],
+      conjugations: model.conjugation.split('#'),
+      explanations: model.explanation.split('#'),
+      examples: examples,
     );
   }
 
@@ -76,6 +82,13 @@ class GrammarExample {
     required this.jp,
     required this.cn,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'jp': jp,
+      'cn': cn,
+    };
+  }
 }
 
 class GrammarMeaning {

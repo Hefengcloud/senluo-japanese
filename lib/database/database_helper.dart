@@ -39,7 +39,10 @@ class DatabaseHelper {
             id INTEGER PRIMARY KEY, 
             name TEXT,
             level TEXT,
-            meaning TEXT
+            meaning TEXT,
+            conjugation TEXT,
+            explanation TEXT,
+            example TEXT
            )
           ''');
   }
@@ -51,11 +54,17 @@ class DatabaseHelper {
         _tableGrammar,
         {
           'name': model.name,
+          'level': model.level,
           'meaning': model.meaning,
+          'conjugation': model.conjugation,
+          'explanation': model.explanation,
+          'example': model.example,
         },
         conflictAlgorithm: ConflictAlgorithm.replace,
       );
-    } catch (e) {}
+    } catch (e) {
+      log(e.toString());
+    }
   }
 
   Future<GrammarItemModel> loadGrammarItem(int id) async {
