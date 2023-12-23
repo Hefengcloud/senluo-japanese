@@ -14,70 +14,137 @@ class ProverbDisplayWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return AspectRatio(
-      aspectRatio: 3 / 4,
-      child: Card(
-        color: const Color.fromRGBO(0xF2, 0xE9, 0xE1, 1),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Gap(32),
-              AutoSizeText(
-                item.name,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.getFont(
-                  'Rampart One',
-                  textStyle: const TextStyle(
-                    fontSize: 48,
-                    color: kColorBrand,
-                  ),
-                ),
-                maxLines: 1,
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          flex: 3,
+          child: AspectRatio(
+            aspectRatio: 3 / 4,
+            child: Card(
+              color: const Color.fromRGBO(0xF2, 0xE9, 0xE1, 1),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: _buildContent(),
               ),
-              AutoSizeText(
-                item.reading,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.getFont(
-                  'Zen Kurenaido',
-                  textStyle: const TextStyle(
-                    fontSize: 24,
-                    color: Colors.black54,
-                  ),
-                ),
-                maxLines: 1,
-              ),
-              const Gap(16),
-              Expanded(
-                child: Image.network(
-                    'https://nihongokyoshi-net.com/wp-content/uploads/2021/01/amatamakushite.png'),
-              ),
-              const Gap(16),
-              ...item.meanings
-                  .map<AutoSizeText>(
-                    (e) => AutoSizeText(
-                      e,
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.getFont(
-                        'ZCOOL KuaiLe',
-                        textStyle: const TextStyle(fontSize: 32.0),
-                      ),
-                    ),
-                  )
-                  .toList(),
-              const Gap(32),
-              const Opacity(
-                opacity: 0.8,
-                child: EverJapanLogo(),
-              ),
-              const Gap(8),
-            ],
+            ),
           ),
         ),
-      ),
+        Expanded(
+          flex: 2,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: _buildText(),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Column _buildText() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SelectableText(
+          '【日语谚语】${item.name}',
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const Gap(16),
+        SelectableText(
+          _generateDisplayText(item),
+          style: const TextStyle(fontSize: 20),
+        ),
+        Row(
+          children: [
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('Save Image'),
+            ),
+            const Gap(8),
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('Copy Text'),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  String _generateDisplayText(ProverbItem item) {
+    return """
+🔈【读音】
+${item.reading}
+
+💡【意思】
+${item.meanings.map((e) => '- $e').toList().join('\n')}
+
+✍️【例句】
+${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
+""";
+  }
+
+  Column _buildContent() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        const Gap(32),
+        AutoSizeText(
+          item.name,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.getFont(
+            'Rampart One',
+            textStyle: const TextStyle(
+              fontSize: 48,
+              color: kColorBrand,
+            ),
+          ),
+          maxLines: 1,
+        ),
+        AutoSizeText(
+          item.reading,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.getFont(
+            'Zen Kurenaido',
+            textStyle: const TextStyle(
+              fontSize: 24,
+              color: Colors.black54,
+            ),
+          ),
+          maxLines: 1,
+        ),
+        const Gap(16),
+        Expanded(
+          child: Image.network(
+              'https://nihongokyoshi-net.com/wp-content/uploads/2021/01/amatamakushite.png'),
+        ),
+        const Gap(16),
+        ...item.meanings
+            .map<AutoSizeText>(
+              (e) => AutoSizeText(
+                e,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.getFont(
+                  'ZCOOL KuaiLe',
+                  textStyle: const TextStyle(fontSize: 32.0),
+                ),
+              ),
+            )
+            .toList(),
+        const Gap(32),
+        const Opacity(
+          opacity: 0.8,
+          child: EverJapanLogo(),
+        ),
+        const Gap(8),
+      ],
     );
   }
 }

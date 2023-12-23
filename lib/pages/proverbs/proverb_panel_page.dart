@@ -30,7 +30,7 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
           children: [
             const Text('Filters'),
             _buildFilters(context),
-            _buildProverbGrid(),
+            _buildProverbGrid(context),
           ],
         ),
       ),
@@ -62,7 +62,7 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
     );
   }
 
-  _buildProverbGrid() {
+  _buildProverbGrid(BuildContext context) {
     return Wrap(
       spacing: 8.0,
       runSpacing: 4.0,
@@ -93,6 +93,13 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
               name: map['item'],
               reading: map['yomi'],
               meanings: map['zh'].map<String>((e) => e.toString()).toList(),
+              examples: map['examples']
+                      ?.map<ProverbExample>((e) => ProverbExample(
+                            jp: e['jp'],
+                            zh: e['zh'],
+                          ))
+                      .toList() ??
+                  [],
             ),
           )
           .toList();
@@ -102,17 +109,20 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
     }
   }
 
-  _showProverbCard(BuildContext context, ProverbItem item) => showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          content: SizedBox(
-            width: 600,
-            child: ProverbDisplayWidget(
-              item: item,
-            ),
+  _showProverbCard(BuildContext context, ProverbItem item) {
+    Scaffold.of(context).openEndDrawer();
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        content: SizedBox(
+          width: 1000,
+          child: ProverbDisplayWidget(
+            item: item,
           ),
         ),
-      );
+      ),
+    );
+  }
 }
 
 enum ProverbCategory {
