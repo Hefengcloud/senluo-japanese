@@ -38,6 +38,7 @@ class DatabaseHelper {
           CREATE TABLE $_tableGrammar (
             id INTEGER PRIMARY KEY, 
             name TEXT,
+            level TEXT,
             meaning TEXT
            )
           ''');
@@ -57,7 +58,27 @@ class DatabaseHelper {
     } catch (e) {}
   }
 
-  Future<List<GrammarItemModel>> loadGrammars() async {
+  Future<GrammarItemModel> loadGrammarItem(int id) async {
+    final db = await database;
+    try {
+      final maps = await db.query(
+        _tableGrammar,
+        where: 'id = ?',
+        whereArgs: [id],
+        limit: 1,
+      );
+      if (maps.isNotEmpty) {
+        return GrammarItemModel.fromMap(maps[0]);
+      } else {
+        return GrammarItemModel.empty();
+      }
+    } catch (e) {
+      log(e.toString());
+    }
+    return GrammarItemModel.empty();
+  }
+
+  Future<List<GrammarItemModel>> loadGrammarItems() async {
     final db = await database;
     try {
       final List<Map<String, dynamic>> maps = await db.query(

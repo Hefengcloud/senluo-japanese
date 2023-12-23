@@ -35,7 +35,8 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     Emitter<GrammarState> emit,
   ) async {
     final state = this.state as GrammarLoaded;
-    final newState = state.copyWith(currentItem: event.item);
+    final item = await grammarRepository.loadItem(event.item.id);
+    final newState = state.copyWith(currentItem: item);
     emit(newState);
   }
 

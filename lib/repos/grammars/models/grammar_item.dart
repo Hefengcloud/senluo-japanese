@@ -1,49 +1,69 @@
+import 'dart:convert';
+
 import 'package:equatable/equatable.dart';
 
-class GrammarItem extends Equatable {
-  final String title;
+import '../../../database/grammars/models/grammar_item_model.dart';
 
-  final List<String> jpMeanings;
-  final List<String> cnMeanings;
+class GrammarItem extends Equatable {
+  final int id;
+  final String name;
+  final String level;
+  final GrammarMeaning meaning;
   final List<String> conjugations;
-  final List<String> explanation;
+  final List<String> explanations;
   final List<GrammarExample> examples;
 
-  const GrammarItem.title(String title)
-      : this(
-          title: title,
-          jpMeanings: const [],
-          cnMeanings: const [],
-          conjugations: const [],
-          explanation: const [],
-          examples: const [],
-        );
-
   const GrammarItem({
-    required this.title,
-    required this.jpMeanings,
-    required this.cnMeanings,
+    this.id = 0,
+    required this.name,
+    required this.level,
+    required this.meaning,
     required this.conjugations,
-    required this.explanation,
+    required this.explanations,
     required this.examples,
   });
 
+  const GrammarItem.simple(int id, String name)
+      : this(
+          id: id,
+          name: name,
+          level: '',
+          meaning: const GrammarMeaning(jp: [], cn: []),
+          conjugations: const [],
+          explanations: const [],
+          examples: const [],
+        );
+
+  factory GrammarItem.from(GrammarItemModel model) {
+    final Map<String, dynamic> meaning = jsonDecode(model.meaning);
+    final jpMeanings = meaning['jp'].map<String>((e) => e.toString()).toList();
+    final cnMeanings = meaning['cn'].map<String>((e) => e.toString()).toList();
+    return GrammarItem(
+      id: model.id,
+      name: model.name,
+      level: model.level,
+      meaning: GrammarMeaning(jp: jpMeanings, cn: cnMeanings),
+      conjugations: const [],
+      explanations: const [],
+      examples: const [],
+    );
+  }
+
   static const empty = GrammarItem(
-    title: '',
-    jpMeanings: [],
-    cnMeanings: [],
+    name: '',
+    level: '',
+    meaning: GrammarMeaning(jp: [], cn: []),
     conjugations: [],
-    explanation: [],
+    explanations: [],
     examples: [],
   );
 
   @override
   List<Object?> get props => [
-        title,
-        jpMeanings,
-        cnMeanings,
+        name,
+        meaning,
         conjugations,
-        explanation,
+        explanations,
         examples,
       ];
 }
@@ -56,4 +76,21 @@ class GrammarExample {
     required this.jp,
     required this.cn,
   });
+}
+
+class GrammarMeaning {
+  final List<String> jp;
+  final List<String> cn;
+
+  const GrammarMeaning({
+    required this.jp,
+    required this.cn,
+  });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'jp': jp,
+      'cn': cn,
+    };
+  }
 }

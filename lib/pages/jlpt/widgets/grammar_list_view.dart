@@ -17,7 +17,7 @@ class GrammarListView extends StatelessWidget {
     return Expanded(
       child: ListView.separated(
         itemBuilder: (ctx, idx) => ListTile(
-          title: Text(items[idx].title),
+          title: Text(items[idx].name),
           onTap: () => onItemSelected(items[idx]),
         ),
         separatorBuilder: (ctx, idx) => const Divider(),

@@ -7,13 +7,13 @@ extension GrammarItemX on GrammarItem {
       "$kTitleConjugations\n\n$conjugationText\n\n"
       "$kTitleExplanation\n\n$explainationText\n\n";
 
-  get jpMeaningText => joinLinesToText(jpMeanings);
+  get jpMeaningText => joinLinesToText(meaning.jp);
 
-  get cnMeaningText => joinLinesToText(cnMeanings);
+  get cnMeaningText => joinLinesToText(meaning.cn);
 
   get conjugationText => joinLinesToText(conjugations);
 
-  get explainationText => joinLinesToText(explanation);
+  get explainationText => joinLinesToText(explanations);
 }
 
 joinLinesToText(List<String> lines) => lines.map((e) => '・$e').join('\n');

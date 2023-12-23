@@ -7,7 +7,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/pages/jlpt/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/constants/texts.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
@@ -44,7 +43,7 @@ class GrammarImageView extends StatelessWidget {
               _buildTop(),
               const Gap(32),
               AutoSizeText(
-                item.title,
+                item.name,
                 maxLines: 1,
                 style: Theme.of(context).textTheme.displayLarge?.copyWith(
                       color: kColorN1,
@@ -53,7 +52,7 @@ class GrammarImageView extends StatelessWidget {
               ),
               const Gap(8),
               AutoSizeText(
-                item.jpMeanings.join('；'),
+                item.meaning.jp.join('；'),
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 16,
@@ -63,7 +62,7 @@ class GrammarImageView extends StatelessWidget {
               ),
               const Gap(32),
               Text(
-                item.cnMeanings.join('；'),
+                item.meaning.cn.join('；'),
                 style: const TextStyle(color: kColorN1, fontSize: 20.0),
                 textAlign: TextAlign.center,
                 maxLines: 1,

@@ -1,52 +1,28 @@
+import 'dart:convert';
+
 import 'package:senluo_japanese_cms/database/database_helper.dart';
 import 'package:senluo_japanese_cms/database/grammars/models/grammar_item_model.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
-const _delay = Duration(milliseconds: 800);
-
 class GrammarRepository {
-  final _items = <GrammarItem>[
-    const GrammarItem(
-      title: '〜あっての・・・',
-      jpMeanings: [
-        '〜があるから・・・が成り立つ',
-        '〜がなかったら、・・・が成り立たない',
-      ],
-      cnMeanings: [
-        '有〜才〜',
-        '没有〜就不能（没有）〜',
-      ],
-      conjugations: ['N1 + あってのN2'],
-      explanation: [],
-      examples: [
-        GrammarExample(
-          jp: 'お客様 **あっての** 仕事ですから、いつもご来店いただくお客様には感謝しております。',
-          cn: '正因为有了顾客，工作才得以存在，所以我们对经常光临的顾客深表感谢。',
-        ),
-        GrammarExample(
-          jp: '学生 **あっての** 学校ですから、いくら設備が良くても、素晴らしい先生がいても、学生が来なければ意味がない。',
-          cn: '因为有了学生，学校才存在。再好的设施，再优秀的老师，如果没有学生前来，都是没有意义的。',
-        ),
-      ],
-    ),
-    const GrammarItem.title('〜いかんでは\n〜いかんによっては'),
-    const GrammarItem.title('〜いかんにかかわらず\n〜いかんによらず\n〜いかんをとわず'),
-    const GrammarItem.title('〜かたがた'),
-    const GrammarItem.title('〜かたわら'),
-    const GrammarItem.title('〜がてら'),
-  ];
-
   Future<void> addItem(GrammarItem item) async {
     await DatabaseHelper().insertGrammarItem(
       GrammarItemModel(
-        name: item.title,
-        meaning: item.cnMeanings.toString(),
+        id: 0,
+        name: item.name,
+        level: item.level,
+        meaning: jsonEncode(item.meaning.toJson()),
       ),
     );
   }
 
   Future<List<GrammarItem>> loadItems() async {
-    final models = await DatabaseHelper().loadGrammars();
-    return models.map((e) => GrammarItem.title(e.name)).toList();
+    final models = await DatabaseHelper().loadGrammarItems();
+    return models.map((e) => GrammarItem.simple(e.id, e.name)).toList();
+  }
+
+  Future<GrammarItem> loadItem(int id) async {
+    final model = await DatabaseHelper().loadGrammarItem(id);
+    return GrammarItem.from(model);
   }
 }

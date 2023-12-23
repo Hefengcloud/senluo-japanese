@@ -38,17 +38,17 @@ class GrammarDetailView extends StatelessWidget {
           ListView(
             children: [
               _buildTitle(context, kTitleJpMeaning),
-              Text(item.jpMeanings.map((e) => "・ $e").toList().join('\n')),
+              Text(item.meaning.jp.map((e) => "・ $e").toList().join('\n')),
               const Gap(32),
               _buildTitle(context, kTitleCnMeaning),
-              Text(item.cnMeanings.map((e) => "・ $e").toList().join('\n')),
+              Text(item.meaning.cn.map((e) => "・ $e").toList().join('\n')),
               const Gap(32),
               _buildTitle(context, kTitleConjugations),
               Text(item.conjugations.map((e) => "・ $e").toList().join('\n')),
-              if (item.explanation.isNotEmpty) ...[
+              if (item.explanations.isNotEmpty) ...[
                 const Gap(32),
                 _buildTitle(context, kTitleExplanation),
-                Text(item.explanation.map((e) => "・ $e").toList().join('\n')),
+                Text(item.explanations.map((e) => "・ $e").toList().join('\n')),
               ],
               const Gap(32),
               _buildTitle(context, kTitleExample),

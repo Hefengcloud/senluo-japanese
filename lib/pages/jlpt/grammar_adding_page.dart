@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/pages/jlpt/bloc/grammar_bloc.dart';
 import 'package:yaml/yaml.dart';
 
@@ -132,7 +131,7 @@ class _GrammarAddingPageState extends State<GrammarAddingPage> {
 
   _parseYamlString(String yamlString) {
     final yamlMap = loadYaml(yamlString);
-    final pattern = yamlMap['pattern'];
+    final name = yamlMap['pattern'];
     final level = yamlMap['level'];
     final meanings = yamlMap['meanings'];
     final conjugations = yamlMap['conjugations'];
@@ -140,11 +139,11 @@ class _GrammarAddingPageState extends State<GrammarAddingPage> {
     final examples = yamlMap['examples'];
 
     final grammar = GrammarItem(
-      title: pattern,
-      jpMeanings: [],
-      cnMeanings: [],
+      name: name,
+      level: level,
+      meaning: GrammarMeaning(jp: meanings['jp'], cn: meanings['cn']),
       conjugations: conjugations.map<String>((e) => e.toString()).toList(),
-      explanation: explanation ?? [],
+      explanations: explanation ?? [],
       examples: examples
           .map<GrammarExample>(
             (e) => GrammarExample(
