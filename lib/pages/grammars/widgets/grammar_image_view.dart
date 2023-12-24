@@ -1,19 +1,17 @@
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/constants/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
 import '../../../constants/colors.dart';
+import '../constants/colors.dart';
 
 class GrammarImageView extends StatelessWidget {
   GrammarImageView({
@@ -45,47 +43,45 @@ class GrammarImageView extends StatelessWidget {
           ),
           child: Column(
             children: [
+              const Gap(16),
               _buildTop(),
               const Gap(32),
               AutoSizeText(
                 item.name,
                 maxLines: 1,
-                style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                      color: kColorN1,
-                      fontWeight: FontWeight.bold,
-                    ),
+                style: GoogleFonts.getFont(
+                  'Rampart One',
+                  fontSize: 64,
+                  fontWeight: FontWeight.bold,
+                  color: kColorN1,
+                ),
               ),
               const Gap(8),
               AutoSizeText(
-                item.meaning.jp.join('；'),
+                item.meaning.jp.join('、'),
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 20,
                   color: kColorBrand,
                 ),
                 maxLines: 1,
               ),
               const Gap(32),
               Text(
-                item.meaning.cn.join('；'),
-                style: const TextStyle(color: kColorN1, fontSize: 20.0),
+                item.meaning.cn.join('、'),
+                style: const TextStyle(
+                  color: kColorN1,
+                  fontSize: 20.0,
+                ),
                 textAlign: TextAlign.center,
                 maxLines: 1,
               ),
               const Gap(32),
-              Container(
-                color: kColorN1,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16.0,
-                  vertical: 8.0,
-                ),
-                child: Text(
-                  item.conjugations.join('\n'),
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24.0,
-                  ),
-                ),
+              _buildConjugation(),
+              const Gap(32),
+              const Divider(
+                height: 0.5,
+                color: Colors.black12,
               ),
               const Gap(32),
               ..._buildExamples(item.examples),
@@ -96,24 +92,39 @@ class GrammarImageView extends StatelessWidget {
     );
   }
 
+  Container _buildConjugation() {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
+        vertical: 8.0,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: kColorN1,
+      ),
+      child: Text(
+        item.conjugations.join('\n'),
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 20.0,
+        ),
+      ),
+    );
+  }
+
   _buildTop() {
-    return Row(
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const EverJapanLogo(),
-        Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 16.0,
-            vertical: 4.0,
+        EverJapanLogo(),
+        Chip(
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: kColorN1),
+            borderRadius: BorderRadius.all(Radius.circular(16)),
           ),
-          color: kColorN1,
-          child: const Text(
+          label: Text(
             'JLPT N1',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-              fontSize: 16,
-            ),
+            style: TextStyle(color: kColorN1),
           ),
         ),
       ],
@@ -122,6 +133,7 @@ class GrammarImageView extends StatelessWidget {
 
   _buildExamples(List<GrammarExample> examples) {
     return examples
+        .take(3)
         .map((e) => Padding(
               padding: const EdgeInsets.only(
                 bottom: 32.0,
@@ -133,16 +145,6 @@ class GrammarImageView extends StatelessWidget {
             ))
         .toList();
   }
-
-  _buildTitle(String text) => Padding(
-        padding: const EdgeInsets.only(
-          bottom: 4,
-        ),
-        child: Text(
-          text,
-          style: const TextStyle(color: Colors.black54),
-        ),
-      );
 
   Future<Uint8List?> captureWidget() async {
     final boundary =

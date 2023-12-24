@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/constants/texts.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
+
+import '../constants/colors.dart';
+import '../constants/texts.dart';
 
 class GrammarDetailView extends StatelessWidget {
   const GrammarDetailView({

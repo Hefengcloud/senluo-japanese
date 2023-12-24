@@ -1,5 +1,6 @@
-import 'package:senluo_japanese_cms/pages/jlpt/constants/texts.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
+
+import '../constants/texts.dart';
 
 extension GrammarItemX on GrammarItem {
   get text => "$kTitleJpMeaning\n\n$jpMeaningText\n\n"

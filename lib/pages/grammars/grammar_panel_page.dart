@@ -5,17 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/bloc/grammar_bloc.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/helpers/grammar_helper.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/widgets/grammar_detail_view.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/widgets/grammar_level_view.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/widgets/grammar_list_view.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/widgets/grammar_text_view.dart';
+import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:yaml/yaml.dart';
 
+import 'bloc/grammar_bloc.dart';
 import 'grammar_adding_page.dart';
+import 'widgets/grammar_detail_view.dart';
 import 'widgets/grammar_image_view.dart';
+import 'widgets/grammar_level_view.dart';
+import 'widgets/grammar_list_view.dart';
+import 'widgets/grammar_text_view.dart';
 
 class GrammarPanelPage extends StatelessWidget {
   const GrammarPanelPage({super.key});
@@ -151,7 +151,7 @@ class GrammarPanelPage extends StatelessWidget {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        content: imageView,
+        content: SizedBox(width: 600, child: imageView),
         actionsAlignment: MainAxisAlignment.center,
         actions: [
           OutlinedButton.icon(

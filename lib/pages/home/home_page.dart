@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/pages/gojuon/gojuon_panel_page.dart';
-import 'package:senluo_japanese_cms/pages/jlpt/grammar_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_panel_page.dart';
 
+import '../grammars/grammar_panel_page.dart';
 import '../kanji/kanji_panel_page.dart';
 
 class HomePage extends StatefulWidget {

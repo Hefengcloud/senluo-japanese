@@ -20,8 +20,6 @@ class ProverbPanelPage extends StatefulWidget {
 class _ProverbPanelPageState extends State<ProverbPanelPage> {
   ProverbCategory? _category;
 
-  List<ProverbItem> _items = [];
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProverbBloc, ProverbState>(
@@ -103,25 +101,7 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
       File file = File(result.files.single.path!);
       final yamlString = await file.readAsString();
       final yamlMaps = loadYaml(yamlString);
-      final items = yamlMaps
-          .map<ProverbItem>(
-            (map) => ProverbItem(
-              name: map['item'],
-              reading: map['yomi'],
-              meanings: map['zh'].map<String>((e) => e.toString()).toList(),
-              examples: map['examples']
-                      ?.map<ProverbExample>((e) => ProverbExample(
-                            jp: e['jp'],
-                            zh: e['zh'],
-                          ))
-                      .toList() ??
-                  [],
-            ),
-          )
-          .toList();
-      setState(() {
-        _items = items;
-      });
+      setState(() {});
     }
   }
 
