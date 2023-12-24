@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/pages/home/home_page.dart';
 import 'package:senluo_japanese_cms/pages/jlpt/bloc/grammar_bloc.dart';
+import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
 import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
+import 'package:senluo_japanese_cms/repos/proverbs/proverb_repository.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +14,7 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
 
   final GrammarRepository grammarRepository = GrammarRepository();
+  final ProverbRepository proverbRepository = ProverbRepository();
 
   // This widget is the root of your application.
   @override
@@ -21,7 +24,11 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => GrammarBloc(grammarRepository: grammarRepository)
             ..add(GrammarStarted()),
-        )
+        ),
+        BlocProvider(
+          create: (_) => ProverbBloc(proverbRepository: proverbRepository)
+            ..add(ProverbStarted()),
+        ),
       ],
       child: MaterialApp(
           title: 'Flutter Demo',
@@ -44,6 +51,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
+          debugShowCheckedModeBanner: false,
           home: const HomePage()),
     );
   }

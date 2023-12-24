@@ -1,15 +1,20 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:path/path.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
+import '../../../helpers/image_helper.dart';
+
 class ProverbDisplayWidget extends StatelessWidget {
+  final GlobalKey globalKey = GlobalKey();
+
   final ProverbItem item;
-  const ProverbDisplayWidget({super.key, required this.item});
+
+  ProverbDisplayWidget({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +24,16 @@ class ProverbDisplayWidget extends StatelessWidget {
       children: [
         Expanded(
           flex: 3,
-          child: AspectRatio(
-            aspectRatio: 3 / 4,
-            child: Card(
-              color: const Color.fromRGBO(0xF2, 0xE9, 0xE1, 1),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: _buildContent(),
+          child: RepaintBoundary(
+            key: globalKey,
+            child: AspectRatio(
+              aspectRatio: 3 / 4,
+              child: Card(
+                color: const Color.fromRGBO(0xF2, 0xE9, 0xE1, 1),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: _buildContent(context),
+                ),
               ),
             ),
           ),
@@ -42,13 +50,15 @@ class ProverbDisplayWidget extends StatelessWidget {
   }
 
   Column _buildText() {
+    final proverbText = _generateDisplayText(item);
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SelectableText(
-          '【日语谚语】${item.name}',
+          '日语谚语 | ${item.name}',
           style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -56,19 +66,21 @@ class ProverbDisplayWidget extends StatelessWidget {
         ),
         const Gap(16),
         SelectableText(
-          _generateDisplayText(item),
+          proverbText,
           style: const TextStyle(fontSize: 20),
         ),
         Row(
           children: [
             OutlinedButton(
-              onPressed: () {},
-              child: Text('Save Image'),
+              onPressed: () => _saveProverbAsImage(),
+              child: const Text('Save Image'),
             ),
             const Gap(8),
             OutlinedButton(
-              onPressed: () {},
-              child: Text('Copy Text'),
+              onPressed: () async {
+                await Clipboard.setData(ClipboardData(text: proverbText));
+              },
+              child: const Text('Copy Text'),
             ),
           ],
         ),
@@ -89,7 +101,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
 """;
   }
 
-  Column _buildContent() {
+  Column _buildContent(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -100,7 +112,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
           item.name,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
-            'Rampart One',
+            'Yusei Magic',
             textStyle: const TextStyle(
               fontSize: 48,
               color: kColorBrand,
@@ -112,7 +124,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
           item.reading,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
-            'Zen Kurenaido',
+            'Yusei Magic',
             textStyle: const TextStyle(
               fontSize: 24,
               color: Colors.black54,
@@ -122,8 +134,9 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
         ),
         const Gap(16),
         Expanded(
-          child: Image.network(
-              'https://nihongokyoshi-net.com/wp-content/uploads/2021/01/amatamakushite.png'),
+          child: Center(
+            child: _buildIllustration(context, item),
+          ),
         ),
         const Gap(16),
         ...item.meanings
@@ -146,5 +159,24 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
         const Gap(8),
       ],
     );
+  }
+
+  _buildIllustration(BuildContext context, ProverbItem item) {
+    if (item.imgUrl?.isNotEmpty == true) {
+      return Image.network(item.imgUrl!);
+    }
+    return AutoSizeText(
+      item.name,
+      textAlign: TextAlign.center,
+      style: GoogleFonts.getFont(
+        'Rampart One',
+        fontSize: 96,
+      ),
+    );
+  }
+
+  _saveProverbAsImage() async {
+    final bytes = await captureWidget(globalKey);
+    await saveImageToFile(bytes!, 'proverb.png');
   }
 }

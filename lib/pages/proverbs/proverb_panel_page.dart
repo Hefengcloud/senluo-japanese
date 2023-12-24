@@ -2,11 +2,13 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_card_widget.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_widget.dart';
 import 'package:yaml/yaml.dart';
 
 import '../../repos/proverbs/models/proverb_item.dart';
+import 'bloc/proverb_bloc.dart';
 
 class ProverbPanelPage extends StatefulWidget {
   const ProverbPanelPage({super.key});
@@ -22,25 +24,39 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Proverbs')),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Filters'),
-            _buildFilters(context),
-            _buildProverbGrid(context),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _importFromYaml(context);
-        },
-        child: const Icon(Icons.file_open),
-      ),
+    return BlocBuilder<ProverbBloc, ProverbState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(title: const Text('Proverbs')),
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Filters'),
+                _buildFilters(context),
+                if (state is ProverbLoading) _buildLoading(context),
+                if (state is ProverbLoaded) _buildProverbGrid(context, state),
+              ],
+            ),
+          ),
+          endDrawer: _buildDrawer(context),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              _importFromYaml(context);
+            },
+            child: const Icon(Icons.file_open),
+          ),
+        );
+      },
     );
+  }
+
+  _buildLoading(BuildContext context) {
+    return const Center(child: CircularProgressIndicator());
+  }
+
+  _buildDrawer(BuildContext context) {
+    return Drawer();
   }
 
   _buildFilters(BuildContext context) {
@@ -62,11 +78,11 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
     );
   }
 
-  _buildProverbGrid(BuildContext context) {
+  _buildProverbGrid(BuildContext context, ProverbLoaded state) {
     return Wrap(
       spacing: 8.0,
       runSpacing: 4.0,
-      children: _items
+      children: state.items
           .map<Widget>(
             (item) => InkWell(
               onTap: () => _showProverbCard(context, item),

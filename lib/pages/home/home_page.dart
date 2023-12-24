@@ -16,6 +16,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
+  final _pages = [
+    const GojuonPanelPage(),
+    const GrammarPanelPage(),
+    const VocabularyPanelPage(),
+    const KanjiPanelPage(),
+    const ProverbPanelPage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,18 +76,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildPanel(int index) {
-    if (index == 0) {
-      return const GojuonPanelPage();
-    } else if (index == 1) {
-      return const GrammarPanelPage();
-    } else if (index == 2) {
-      return const VocabularyPanelPage();
-    } else if (index == 3) {
-      return const KanjiPanelPage();
-    } else if (index == 4) {
-      return const ProverbPanelPage();
+    if (index < _pages.length) {
+      return _pages[index];
+    } else {
+      return Text('Invalid index: $index');
     }
-
-    return Text('Invalid index: $index');
   }
 }
