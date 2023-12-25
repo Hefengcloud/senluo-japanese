@@ -25,7 +25,7 @@ class SentenceText extends StatelessWidget {
           TextSpan(text: prefixText),
           ..._buildFormatedText(lines[0]),
           TextSpan(
-            text: '(${lines[1]})',
+            text: "(${lines[1].replaceAll('**', '').replaceAll(' ', '')})",
             style: TextStyle(
               color: Colors.black54,
               fontSize: fontSize,

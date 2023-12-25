@@ -1,14 +1,18 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
-import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
+import 'package:senluo_japanese_cms/pages/grammars/widgets/sentence_text.dart';
 
 import '../../../constants/colors.dart';
 import '../constants/colors.dart';
@@ -27,6 +31,51 @@ class GrammarDisplayView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          flex: 3,
+          child: _buildImage(),
+        ),
+        const Gap(16),
+        Expanded(
+          flex: 2,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SelectableText(item.text),
+              _buildBottomButtons(context),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  _buildBottomButtons(BuildContext context) {
+    return Row(
+      children: [
+        OutlinedButton.icon(
+          onPressed: () => _onSaveImage(),
+          icon: const Icon(Icons.save),
+          label: const Text('Save Image'),
+        ),
+        const Gap(8),
+        OutlinedButton.icon(
+          icon: const Icon(Icons.abc),
+          label: const Text('Copy Text'),
+          onPressed: () async {
+            await Clipboard.setData(ClipboardData(text: item.text));
+            // ignore: use_build_context_synchronously
+            ScaffoldMessenger.of(context)
+                .showSnackBar(const SnackBar(content: Text('Copied')));
+          },
+        )
+      ],
+    );
+  }
+
+  RepaintBoundary _buildImage() {
     return RepaintBoundary(
       key: globalKey,
       child: AspectRatio(
@@ -159,6 +208,25 @@ class GrammarDisplayView extends StatelessWidget {
               ),
             ))
         .toList();
+  }
+
+  _onSaveImage() async {
+    final bytes = await captureWidget();
+    _saveImageToFile(bytes!);
+  }
+
+  _saveImageToFile(Uint8List bytes) async {
+    // Directory appDocDir = await getApplicationDocumentsDirectory();
+    // String appDocPath = appDocDir.path;
+    String? outputFile = await FilePicker.platform.saveFile(
+      dialogTitle: 'Please select an output file:',
+      fileName: 'grammar.jpg',
+    );
+
+    if (outputFile != null) {
+      File file = File(outputFile);
+      file.writeAsBytes(bytes);
+    }
   }
 
   Future<Uint8List?> captureWidget() async {

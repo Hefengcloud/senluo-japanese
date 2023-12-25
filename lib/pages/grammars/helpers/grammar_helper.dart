@@ -14,7 +14,7 @@ $kTitleConjugations
 $conjugationText
 
 $kTitleExample
-${examples.map((e) => "◎ ${e.jp}\n→ ${e.cn}").toList().join('\n---\n')}
+${examples.map((e) => "◎ ${e.jp.replaceAll('**', '')}\n→ ${e.cn.replaceAll('**', '').replaceAll(' ', '')}").toList().join('\n\n')}
 """;
 
   get jpMeaningText => joinLinesToText(meaning.jp);

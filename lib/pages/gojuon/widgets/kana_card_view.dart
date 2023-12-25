@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -21,12 +20,12 @@ class KanaCardView extends StatelessWidget {
           const Gap(16),
           Text(
             kana.hiragana,
-            style: TextStyle(fontSize: 24),
+            style: const TextStyle(fontSize: 24),
           ),
           const Gap(8),
           Text(
             kana.romaji,
-            style: TextStyle(fontSize: 18),
+            style: const TextStyle(fontSize: 18),
           ),
           const Gap(16),
         ],

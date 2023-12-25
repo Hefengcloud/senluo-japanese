@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/pages/gojuon/widgets/kana_display_view.dart';
 import 'package:senluo_japanese_cms/pages/gojuon/widgets/kana_table_view.dart';
 
-import '../../repos/gojuon/models/models.dart';
 import 'bloc/gojuon_bloc.dart';
 
 class GojuonPanelPage extends StatelessWidget {
