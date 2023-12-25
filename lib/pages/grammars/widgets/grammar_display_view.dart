@@ -22,12 +22,15 @@ class GrammarDisplayView extends StatelessWidget {
     super.key,
     required this.item,
     this.examples = const [],
-  });
+  }) {
+    _mainColor = kLevel2color[item.level]!;
+  }
 
   final GlobalKey globalKey = GlobalKey();
 
   final GrammarItem item;
   final List<GrammarExample> examples;
+  late final Color _mainColor;
 
   @override
   Widget build(BuildContext context) {
@@ -121,8 +124,8 @@ class GrammarDisplayView extends StatelessWidget {
   Text _buildZhMeaning() {
     return Text(
       item.meaning.cn.join('、'),
-      style: const TextStyle(
-        color: kColorN1,
+      style: TextStyle(
+        color: _mainColor,
         fontSize: 24.0,
       ),
       textAlign: TextAlign.center,
@@ -150,7 +153,7 @@ class GrammarDisplayView extends StatelessWidget {
         'Rampart One',
         fontSize: 72,
         fontWeight: FontWeight.bold,
-        color: kColorN1,
+        color: _mainColor,
       ),
     );
   }
@@ -163,7 +166,7 @@ class GrammarDisplayView extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: kColorN1,
+        color: _mainColor,
       ),
       child: Text(
         item.conjugations.join('\n'),
@@ -176,18 +179,18 @@ class GrammarDisplayView extends StatelessWidget {
   }
 
   _buildTopLogo() {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        EverJapanLogo(),
+        const EverJapanLogo(),
         Chip(
           shape: RoundedRectangleBorder(
-            side: BorderSide(color: kColorN1),
-            borderRadius: BorderRadius.all(Radius.circular(16)),
+            side: BorderSide(color: _mainColor),
+            borderRadius: const BorderRadius.all(Radius.circular(16)),
           ),
           label: Text(
-            'JLPT N1',
-            style: TextStyle(color: kColorN1),
+            'JLPT ${item.level.toUpperCase()}',
+            style: TextStyle(color: _mainColor),
           ),
         ),
       ],
@@ -204,7 +207,7 @@ class GrammarDisplayView extends StatelessWidget {
               child: SentenceText(
                 fontSize: 24.0,
                 lines: [e.jp, e.cn],
-                emphasizedColor: kColorN1,
+                emphasizedColor: _mainColor,
               ),
             ))
         .toList();
