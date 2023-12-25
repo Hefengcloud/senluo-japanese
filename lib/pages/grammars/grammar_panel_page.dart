@@ -64,8 +64,6 @@ class GrammarPanelPage extends StatelessWidget {
                 child: Container(
                   child: GrammarDetailView(
                     item: state.currentItem,
-                    onGenerateImage: (item) =>
-                        _showImagePreviewDialog(context, item),
                     onGenerateText: (item) => _showTextDialog(context, item),
                   ),
                 ),
@@ -144,46 +142,6 @@ class GrammarPanelPage extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  _showImagePreviewDialog(BuildContext context, GrammarItem item) {
-    final imageView = GrammarDisplayView(item: item);
-    return showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        content: SizedBox(width: 600, child: imageView),
-        actionsAlignment: MainAxisAlignment.center,
-        actions: [
-          OutlinedButton.icon(
-            onPressed: () async {
-              final bytes = await imageView.captureWidget();
-              if (bytes != null) {
-                _saveImageToFile(bytes);
-              }
-            },
-            icon: const Icon(Icons.save),
-            label: const Text('Save'),
-          ),
-          CloseButton(
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-        ],
-      ),
-    );
-  }
-
-  _saveImageToFile(Uint8List bytes) async {
-    // Directory appDocDir = await getApplicationDocumentsDirectory();
-    // String appDocPath = appDocDir.path;
-    String? outputFile = await FilePicker.platform.saveFile(
-      dialogTitle: 'Please select an output file:',
-      fileName: 'grammar.jpg',
-    );
-
-    if (outputFile != null) {
-      File file = File(outputFile);
-      file.writeAsBytes(bytes);
-    }
   }
 
   _onPickYamlFile(BuildContext context) async {

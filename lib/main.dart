@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/pages/gojuon/bloc/gojuon_bloc.dart';
 import 'package:senluo_japanese_cms/pages/home/home_page.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
+import 'package:senluo_japanese_cms/repos/gojuon/gojuon_repository.dart';
 import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/proverb_repository.dart';
 
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
 
   final GrammarRepository grammarRepository = GrammarRepository();
   final ProverbRepository proverbRepository = ProverbRepository();
+  final GojuonRepository gojuonRepository = GojuonRepository();
 
   // This widget is the root of your application.
   @override
@@ -30,6 +33,9 @@ class MyApp extends StatelessWidget {
           create: (_) => ProverbBloc(proverbRepository: proverbRepository)
             ..add(ProverbStarted()),
         ),
+        BlocProvider(
+            create: (_) => GojuonBloc(gojuonRepository: gojuonRepository)
+              ..add(GojuonStarted()))
       ],
       child: MaterialApp(
           title: 'Flutter Demo',

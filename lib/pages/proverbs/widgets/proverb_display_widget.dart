@@ -42,14 +42,14 @@ class ProverbDisplayWidget extends StatelessWidget {
           flex: 2,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: _buildText(),
+            child: _buildText(context),
           ),
         ),
       ],
     );
   }
 
-  Column _buildText() {
+  Column _buildText(BuildContext context) {
     final proverbText = _generateDisplayText(item);
 
     return Column(
@@ -79,6 +79,8 @@ class ProverbDisplayWidget extends StatelessWidget {
             OutlinedButton(
               onPressed: () async {
                 await Clipboard.setData(ClipboardData(text: proverbText));
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(const SnackBar(content: Text('Copied')));
               },
               child: const Text('Copy Text'),
             ),
@@ -94,7 +96,7 @@ class ProverbDisplayWidget extends StatelessWidget {
 ${item.reading}
 
 💡【意思】
-${item.meanings.map((e) => '- $e').toList().join('\n')}
+${item.meanings.map((e) => '・ $e').toList().join('\n')}
 
 ✍️【例句】
 ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}

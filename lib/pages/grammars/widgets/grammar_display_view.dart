@@ -17,11 +17,13 @@ class GrammarDisplayView extends StatelessWidget {
   GrammarDisplayView({
     super.key,
     required this.item,
+    this.examples = const [],
   });
 
   final GlobalKey globalKey = GlobalKey();
 
   final GrammarItem item;
+  final List<GrammarExample> examples;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +61,7 @@ class GrammarDisplayView extends StatelessWidget {
                 color: Colors.black12,
               ),
               const Gap(32),
-              ..._buildExamples(item.examples),
+              ..._buildExamples(),
             ],
           ),
         ),
@@ -143,9 +145,9 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  _buildExamples(List<GrammarExample> examples) {
-    return examples
-        .take(2)
+  _buildExamples() {
+    final theExamples = examples.isNotEmpty ? examples : item.examples.take(2);
+    return theExamples
         .map((e) => Padding(
               padding: const EdgeInsets.only(
                 bottom: 32.0,
