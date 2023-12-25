@@ -12,6 +12,7 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     on<GrammarStarted>(_onStarted);
     on<GrammarItemSelected>(_onItemSelected);
     on<GrammarItemAdded>(_onItemAdded);
+    on<GrammarItemDeleted>(_onItemDeleted);
   }
 
   final GrammarRepository grammarRepository;
@@ -48,9 +49,23 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     GrammarItemAdded event,
     Emitter<GrammarState> emit,
   ) async {
-    final state = this.state as GrammarLoaded;
-    final newState = state.copyWith(currentItem: event.item);
-    emit(newState);
     await grammarRepository.addItem(event.item);
+
+    final state = this.state as GrammarLoaded;
+    final newState = state.copyWith(
+      items: [...state.items, event.item],
+      currentItem: event.item,
+    );
+    emit(newState);
+  }
+
+  Future<void> _onItemDeleted(
+    GrammarItemDeleted event,
+    Emitter<GrammarState> emit,
+  ) async {
+    final successful = await grammarRepository.delItem(event.item.id);
+    if (successful) {
+      add(GrammarStarted());
+    }
   }
 }

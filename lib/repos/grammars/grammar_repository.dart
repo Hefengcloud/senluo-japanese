@@ -28,4 +28,9 @@ class GrammarRepository {
     final model = await DatabaseHelper().loadGrammarItem(id);
     return GrammarItem.from(model);
   }
+
+  Future<bool> delItem(int id) async {
+    final count = await DatabaseHelper().delGrammarItem(id);
+    return count > 0;
+  }
 }

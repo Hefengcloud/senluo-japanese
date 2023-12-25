@@ -51,21 +51,19 @@ class GrammarPanelPage extends StatelessWidget {
   }
 
   _buildGrammarListView(BuildContext context, List<GrammarItem> items) {
+    final bloc = BlocProvider.of<GrammarBloc>(context);
     return Column(
       children: [
         GrammarLevelView(),
         _buildSearchBox(context),
         GrammarListView(
           items: items,
-          onItemSelected: (item) => BlocProvider.of<GrammarBloc>(context)
-              .add(GrammarItemSelected(item: item)),
+          onItemSelected: (item) => bloc.add(GrammarItemSelected(item: item)),
+          onItemDelete: (item) => bloc.add(GrammarItemDeleted(item: item)),
         ),
-        ElevatedButton(
-          onPressed: () {
-            // _showAddDialog(context);
-            _onPickYamlFile(context);
-          },
-          child: const Text('Add Grammar'),
+        IconButton.filled(
+          onPressed: () => _onPickYamlFile(context),
+          icon: const Icon(Icons.add),
         ),
         const Gap(16),
       ],

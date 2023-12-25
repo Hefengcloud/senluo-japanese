@@ -87,6 +87,21 @@ class DatabaseHelper {
     return GrammarItemModel.empty();
   }
 
+  Future<int> delGrammarItem(int id) async {
+    final db = await database;
+    try {
+      final int count = await db.delete(
+        _tableGrammar,
+        where: 'id = ?',
+        whereArgs: [id],
+      );
+      return count;
+    } catch (e) {
+      log(e.toString());
+    }
+    return 0;
+  }
+
   Future<List<GrammarItemModel>> loadGrammarItems() async {
     final db = await database;
     try {
