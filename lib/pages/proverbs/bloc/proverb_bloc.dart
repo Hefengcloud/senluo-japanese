@@ -11,6 +11,7 @@ class ProverbBloc extends Bloc<ProverbEvent, ProverbState> {
   final ProverbRepository proverbRepository;
   ProverbBloc({required this.proverbRepository}) : super(ProverbLoading()) {
     on<ProverbStarted>(_onStarted);
+    on<ProverbSearched>(_onSearched);
   }
 
   _onStarted(
@@ -19,6 +20,15 @@ class ProverbBloc extends Bloc<ProverbEvent, ProverbState> {
   ) async {
     emit(ProverbLoading());
     final List<ProverbItem> items = await proverbRepository.loadProverbs();
+    emit(ProverbLoaded(items: items));
+  }
+
+  _onSearched(
+    ProverbSearched event,
+    Emitter<ProverbState> emit,
+  ) async {
+    emit(ProverbLoading());
+    final items = await proverbRepository.searchProverbs(event.keyword);
     emit(ProverbLoaded(items: items));
   }
 }

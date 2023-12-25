@@ -126,7 +126,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
           style: GoogleFonts.getFont(
             'Yusei Magic',
             textStyle: const TextStyle(
-              fontSize: 24,
+              fontSize: 32,
               color: Colors.black54,
             ),
           ),

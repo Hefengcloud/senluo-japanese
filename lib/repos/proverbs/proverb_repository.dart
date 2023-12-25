@@ -5,10 +5,14 @@ import 'package:yaml/yaml.dart';
 class ProverbRepository {
   static const kYamlFilePath = 'assets/data/proverbs.yaml';
 
+  List<ProverbItem> _items = [];
+
   Future<List<ProverbItem>> loadProverbs() async {
+    if (_items.isNotEmpty) return _items;
+
     String yamlString = await rootBundle.loadString(kYamlFilePath);
     final yamlMaps = loadYaml(yamlString);
-    return yamlMaps
+    _items = yamlMaps
         .map<ProverbItem>(
           (map) => ProverbItem(
             name: map['item'],
@@ -23,6 +27,13 @@ class ProverbRepository {
                 [],
           ),
         )
+        .toList();
+    return _items;
+  }
+
+  Future<List<ProverbItem>> searchProverbs(String keyword) async {
+    return _items
+        .where((e) => e.name.contains(keyword) || e.reading.contains(keyword))
         .toList();
   }
 }

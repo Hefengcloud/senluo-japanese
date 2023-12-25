@@ -3,10 +3,19 @@ import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import '../constants/texts.dart';
 
 extension GrammarItemX on GrammarItem {
-  get text => "$kTitleJpMeaning\n\n$jpMeaningText\n\n"
-      "$kTitleCnMeaning\n\n$cnMeaningText\n\n"
-      "$kTitleConjugations\n\n$conjugationText\n\n"
-      "$kTitleExplanation\n\n$explainationText\n\n";
+  get text => """
+$kTitleJpMeaning
+$jpMeaningText
+
+$kTitleCnMeaning
+$cnMeaningText
+
+$kTitleConjugations
+$conjugationText
+
+$kTitleExample
+${examples.map((e) => "◎ ${e.jp}\n→ ${e.cn}").toList().join('\n---\n')}
+""";
 
   get jpMeaningText => joinLinesToText(meaning.jp);
 

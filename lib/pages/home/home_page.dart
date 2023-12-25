@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/gojuon/gojuon_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_panel_page.dart';
@@ -31,7 +32,15 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           NavigationRail(
             selectedIndex: _selectedIndex,
-            groupAlignment: 0,
+            leading: Text(
+              '森罗\n日语',
+              style: GoogleFonts.getFont(
+                'Zhi Mang Xing',
+                fontSize: 20,
+                color: Colors.purple,
+              ),
+            ),
+            groupAlignment: -1,
             labelType: NavigationRailLabelType.all,
             onDestinationSelected: (int index) {
               setState(() {

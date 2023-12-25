@@ -6,11 +6,13 @@ class SentenceText extends StatelessWidget {
   final TextStyle? style;
   final String prefixText;
   final Color emphasizedColor;
+  final double fontSize;
 
   const SentenceText({
     super.key,
     this.prefixText = '',
     this.style,
+    this.fontSize = 18,
     required this.lines,
     required this.emphasizedColor,
   });
@@ -24,9 +26,9 @@ class SentenceText extends StatelessWidget {
           ..._buildFormatedText(lines[0]),
           TextSpan(
             text: '(${lines[1]})',
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.black54,
-              fontSize: 18,
+              fontSize: fontSize,
             ),
           ),
         ],
@@ -48,7 +50,7 @@ class SentenceText extends StatelessWidget {
             style: TextStyle(
               color: emphasizedColor,
               fontWeight: FontWeight.bold,
-              fontSize: 18,
+              fontSize: fontSize,
             ),
           ),
         );
@@ -56,7 +58,7 @@ class SentenceText extends StatelessWidget {
         spans.add(
           TextSpan(
             text: parts[i],
-            style: const TextStyle(fontSize: 18),
+            style: TextStyle(fontSize: fontSize),
           ),
         );
       }

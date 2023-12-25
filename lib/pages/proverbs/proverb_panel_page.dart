@@ -20,18 +20,37 @@ class ProverbPanelPage extends StatefulWidget {
 class _ProverbPanelPageState extends State<ProverbPanelPage> {
   ProverbCategory? _category;
 
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    _searchController.addListener(() {
+      final keyword = _searchController.text.trim();
+      BlocProvider.of<ProverbBloc>(context)
+          .add(ProverbSearched(keyword: keyword));
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _searchController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProverbBloc, ProverbState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(title: const Text('Proverbs')),
+          appBar: _buildAppBar(context),
           body: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Filters'),
-                _buildFilters(context),
+                // const Text('Filters'),
+                // _buildFilters(context),
                 if (state is ProverbLoading) _buildLoading(context),
                 if (state is ProverbLoaded) _buildProverbGrid(context, state),
               ],
@@ -46,6 +65,34 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
           ),
         );
       },
+    );
+  }
+
+  _buildAppBar(BuildContext context) {
+    return AppBar(
+      flexibleSpace: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.deepPurple, Colors.purple.shade300],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+      ),
+      leading: const Icon(
+        Icons.search,
+        color: Colors.white,
+      ),
+      title: TextField(
+        controller: _searchController,
+        style: const TextStyle(color: Colors.white),
+        cursorColor: Colors.white,
+        decoration: const InputDecoration(
+          hintText: 'Search...',
+          hintStyle: TextStyle(color: Colors.white54),
+          border: InputBorder.none,
+        ),
+      ),
     );
   }
 

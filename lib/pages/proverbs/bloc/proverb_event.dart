@@ -8,3 +8,9 @@ sealed class ProverbEvent extends Equatable {
 }
 
 final class ProverbStarted extends ProverbEvent {}
+
+final class ProverbSearched extends ProverbEvent {
+  final String keyword;
+
+  const ProverbSearched({required this.keyword});
+}

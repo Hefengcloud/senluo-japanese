@@ -12,7 +12,7 @@ import 'package:yaml/yaml.dart';
 import 'bloc/grammar_bloc.dart';
 import 'grammar_adding_page.dart';
 import 'widgets/grammar_detail_view.dart';
-import 'widgets/grammar_image_view.dart';
+import 'widgets/grammar_display_view.dart';
 import 'widgets/grammar_level_view.dart';
 import 'widgets/grammar_list_view.dart';
 import 'widgets/grammar_text_view.dart';
@@ -147,7 +147,7 @@ class GrammarPanelPage extends StatelessWidget {
   }
 
   _showImagePreviewDialog(BuildContext context, GrammarItem item) {
-    final imageView = GrammarImageView(item: item);
+    final imageView = GrammarDisplayView(item: item);
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -177,7 +177,7 @@ class GrammarPanelPage extends StatelessWidget {
     // String appDocPath = appDocDir.path;
     String? outputFile = await FilePicker.platform.saveFile(
       dialogTitle: 'Please select an output file:',
-      fileName: 'image.jpg',
+      fileName: 'grammar.jpg',
     );
 
     if (outputFile != null) {

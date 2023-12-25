@@ -9,6 +9,6 @@ class GrammarTextView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(item.text);
+    return SelectableText(item.text);
   }
 }

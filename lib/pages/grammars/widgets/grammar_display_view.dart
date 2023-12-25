@@ -13,8 +13,8 @@ import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 import '../../../constants/colors.dart';
 import '../constants/colors.dart';
 
-class GrammarImageView extends StatelessWidget {
-  GrammarImageView({
+class GrammarDisplayView extends StatelessWidget {
+  GrammarDisplayView({
     super.key,
     required this.item,
   });
@@ -44,38 +44,13 @@ class GrammarImageView extends StatelessWidget {
           child: Column(
             children: [
               const Gap(16),
-              _buildTop(),
-              const Gap(32),
-              AutoSizeText(
-                item.name,
-                maxLines: 1,
-                style: GoogleFonts.getFont(
-                  'Rampart One',
-                  fontSize: 64,
-                  fontWeight: FontWeight.bold,
-                  color: kColorN1,
-                ),
-              ),
+              _buildTopLogo(),
+              const Gap(16),
+              _buildItemName(),
               const Gap(8),
-              AutoSizeText(
-                item.meaning.jp.join('、'),
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: kColorBrand,
-                ),
-                maxLines: 1,
-              ),
+              _buildJpMeaning(),
               const Gap(32),
-              Text(
-                item.meaning.cn.join('、'),
-                style: const TextStyle(
-                  color: kColorN1,
-                  fontSize: 20.0,
-                ),
-                textAlign: TextAlign.center,
-                maxLines: 1,
-              ),
+              _buildZhMeaning(),
               const Gap(32),
               _buildConjugation(),
               const Gap(32),
@@ -88,6 +63,43 @@ class GrammarImageView extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Text _buildZhMeaning() {
+    return Text(
+      item.meaning.cn.join('、'),
+      style: const TextStyle(
+        color: kColorN1,
+        fontSize: 24.0,
+      ),
+      textAlign: TextAlign.center,
+      maxLines: 1,
+    );
+  }
+
+  AutoSizeText _buildJpMeaning() {
+    return AutoSizeText(
+      item.meaning.jp.join('、'),
+      textAlign: TextAlign.center,
+      style: const TextStyle(
+        fontSize: 24,
+        color: kColorBrand,
+      ),
+      maxLines: 1,
+    );
+  }
+
+  AutoSizeText _buildItemName() {
+    return AutoSizeText(
+      item.name,
+      maxLines: 1,
+      style: GoogleFonts.getFont(
+        'Rampart One',
+        fontSize: 72,
+        fontWeight: FontWeight.bold,
+        color: kColorN1,
       ),
     );
   }
@@ -106,13 +118,13 @@ class GrammarImageView extends StatelessWidget {
         item.conjugations.join('\n'),
         style: const TextStyle(
           color: Colors.white,
-          fontSize: 20.0,
+          fontSize: 24.0,
         ),
       ),
     );
   }
 
-  _buildTop() {
+  _buildTopLogo() {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -133,12 +145,13 @@ class GrammarImageView extends StatelessWidget {
 
   _buildExamples(List<GrammarExample> examples) {
     return examples
-        .take(3)
+        .take(2)
         .map((e) => Padding(
               padding: const EdgeInsets.only(
                 bottom: 32.0,
               ),
               child: SentenceText(
+                fontSize: 24.0,
                 lines: [e.jp, e.cn],
                 emphasizedColor: kColorN1,
               ),
