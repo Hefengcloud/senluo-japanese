@@ -10,6 +10,28 @@ class GrammarStarted extends GrammarEvent {
   List<Object?> get props => [];
 }
 
+class GrammarLevelChanged extends GrammarEvent {
+  final String? level;
+
+  const GrammarLevelChanged({
+    required this.level,
+  });
+
+  @override
+  List<Object?> get props => [level];
+}
+
+class GrammarKeywordChanged extends GrammarEvent {
+  final String? keyword;
+
+  const GrammarKeywordChanged({
+    required this.keyword,
+  });
+
+  @override
+  List<Object?> get props => [keyword];
+}
+
 class GrammarItemAdded extends GrammarEvent {
   final GrammarItem item;
 

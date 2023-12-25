@@ -26,6 +26,7 @@ class GojuonPanelPage extends StatelessWidget {
           return _buildLoading(context);
         } else if (state is GojuonLoaded) {
           return Row(
+            mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
                 flex: 2,

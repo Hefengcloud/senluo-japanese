@@ -21,7 +21,22 @@ class GrammarRepository {
 
   Future<List<GrammarItem>> loadItems() async {
     final models = await DatabaseHelper().loadGrammarItems();
-    return models.map((e) => GrammarItem.simple(e.id, e.name)).toList();
+    return models
+        .map((e) => GrammarItem.simple(e.id, e.name, e.level))
+        .toList();
+  }
+
+  Future<List<GrammarItem>> searchItems({
+    String? keyword,
+    String? level,
+  }) async {
+    final models = await DatabaseHelper().loadGrammarItems(
+      keyword: keyword,
+      level: level,
+    );
+    return models
+        .map((e) => GrammarItem.simple(e.id, e.name, e.level))
+        .toList();
   }
 
   Future<GrammarItem> loadItem(int id) async {

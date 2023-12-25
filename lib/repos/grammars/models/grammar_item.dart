@@ -23,11 +23,11 @@ class GrammarItem extends Equatable {
     required this.examples,
   });
 
-  const GrammarItem.simple(int id, String name)
+  const GrammarItem.simple(int id, String name, String level)
       : this(
           id: id,
           name: name,
-          level: '',
+          level: level,
           meaning: const GrammarMeaning(jp: [], cn: []),
           conjugations: const [],
           explanations: const [],
@@ -50,7 +50,8 @@ class GrammarItem extends Equatable {
       level: model.level,
       meaning: GrammarMeaning(jp: jpMeanings, cn: cnMeanings),
       conjugations: model.conjugation.split('#'),
-      explanations: model.explanation.split('#'),
+      explanations:
+          model.explanation.isNotEmpty ? model.explanation.split('#') : [],
       examples: examples,
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
 class GrammarListView extends StatelessWidget {
@@ -18,14 +19,21 @@ class GrammarListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.separated(
-        itemBuilder: (ctx, idx) => ListTile(
-          title: Text(items[idx].name),
-          onTap: () => onItemSelected(items[idx]),
-          trailing: IconButton(
-            icon: const Icon(Icons.delete_outlined),
-            onPressed: () => _showContextMenu(context, items[idx]),
-          ),
-        ),
+        itemBuilder: (ctx, idx) {
+          final item = items[idx];
+          return ListTile(
+            title: Text(item.name),
+            onTap: () => onItemSelected(item),
+            subtitle: Text(
+              item.level,
+              style: TextStyle(color: kLevel2color[item.level]),
+            ),
+            trailing: IconButton(
+              icon: const Icon(Icons.delete_outlined),
+              onPressed: () => _showContextMenu(context, items[idx]),
+            ),
+          );
+        },
         separatorBuilder: (ctx, idx) => const Divider(),
         itemCount: items.length,
       ),

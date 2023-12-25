@@ -12,8 +12,32 @@ import 'widgets/grammar_detail_view.dart';
 import 'widgets/grammar_level_view.dart';
 import 'widgets/grammar_list_view.dart';
 
-class GrammarPanelPage extends StatelessWidget {
+class GrammarPanelPage extends StatefulWidget {
   const GrammarPanelPage({super.key});
+
+  @override
+  State<GrammarPanelPage> createState() => _GrammarPanelPageState();
+}
+
+class _GrammarPanelPageState extends State<GrammarPanelPage> {
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    _searchController.addListener(() {
+      final keyword = _searchController.text.trim();
+      BlocProvider.of<GrammarBloc>(context)
+          .add(GrammarKeywordChanged(keyword: keyword));
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _searchController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +59,14 @@ class GrammarPanelPage extends StatelessWidget {
       GrammarError() => const Text('Something went wrong!'),
       GrammarLoaded() => Row(
           children: [
-            SizedBox(
-              width: 260,
+            Expanded(
+              flex: 1,
               child: _buildGrammarListView(context, state.items),
             ),
             const VerticalDivider(thickness: 1, width: 1),
             Expanded(
-              child: GrammarDetailView(
-                item: state.currentItem,
-              ),
+              flex: 2,
+              child: GrammarDetailView(item: state.currentItem),
             ),
           ],
         ),
@@ -54,7 +77,10 @@ class GrammarPanelPage extends StatelessWidget {
     final bloc = BlocProvider.of<GrammarBloc>(context);
     return Column(
       children: [
-        GrammarLevelView(),
+        GrammarLevelView(
+          onLevelChanged: (level) =>
+              bloc.add(GrammarLevelChanged(level: level)),
+        ),
         _buildSearchBox(context),
         GrammarListView(
           items: items,
@@ -70,15 +96,17 @@ class GrammarPanelPage extends StatelessWidget {
     );
   }
 
-  _buildSearchBox(BuildContext context) => const Padding(
-        padding: EdgeInsets.symmetric(
+  _buildSearchBox(BuildContext context) => Padding(
+        padding: const EdgeInsets.symmetric(
           vertical: 4.0,
           horizontal: 0.0,
         ),
         child: TextField(
-          decoration: InputDecoration(
-            hintText: 'Search',
-            border: OutlineInputBorder(),
+          controller: _searchController,
+          decoration: const InputDecoration(
+            hintText: 'Search...',
+            border: UnderlineInputBorder(),
+            prefixIcon: Icon(Icons.search),
           ),
         ),
       );
@@ -117,7 +145,8 @@ class GrammarPanelPage extends StatelessWidget {
         cn: meanings['cn']?.map<String>((e) => e.toString()).toList() ?? [],
       ),
       conjugations: conjugations.map<String>((e) => e.toString()).toList(),
-      explanations: explanation ?? [],
+      explanations:
+          explanation?.map<String>((e) => e.toString()).toList() ?? [],
       examples: examples
           .map<GrammarExample>(
             (e) => GrammarExample(

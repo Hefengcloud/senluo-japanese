@@ -13,14 +13,18 @@ final class GrammarLoading extends GrammarState {
 final class GrammarLoaded extends GrammarState {
   final List<GrammarItem> items;
   final GrammarItem currentItem;
+  final String? level;
+  final String? keyword;
 
   const GrammarLoaded({
     this.items = const [],
     this.currentItem = GrammarItem.empty,
+    this.level,
+    this.keyword,
   });
 
   @override
-  List<Object?> get props => [currentItem];
+  List<Object?> get props => [items, currentItem, level, keyword];
 
   GrammarLoaded copyWith({
     GrammarItem? currentItem,

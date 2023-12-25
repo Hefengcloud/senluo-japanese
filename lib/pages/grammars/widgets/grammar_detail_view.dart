@@ -34,22 +34,19 @@ class _GrammarDetailViewState extends State<GrammarDetailView> {
               ListView(
                 children: [
                   _buildTitle(context, kTitleJpMeaning),
-                  Text(widget.item.meaning.jp
-                      .map((e) => "・ $e")
-                      .toList()
-                      .join('\n')),
+                  ...widget.item.meaning.jp
+                      .map((e) => ListTile(title: Text(e), onTap: () {}))
+                      .toList(),
                   const Gap(32),
                   _buildTitle(context, kTitleCnMeaning),
-                  Text(widget.item.meaning.cn
-                      .map((e) => "・ $e")
-                      .toList()
-                      .join('\n')),
+                  ...widget.item.meaning.cn
+                      .map((e) => ListTile(title: Text(e), onTap: () {}))
+                      .toList(),
                   const Gap(32),
                   _buildTitle(context, kTitleConjugations),
-                  Text(widget.item.conjugations
-                      .map((e) => "・ $e")
-                      .toList()
-                      .join('\n')),
+                  ...widget.item.conjugations
+                      .map((e) => ListTile(title: Text(e), onTap: () {}))
+                      .toList(),
                   if (widget.item.explanations.isNotEmpty) ...[
                     const Gap(32),
                     _buildTitle(context, kTitleExplanation),
@@ -78,8 +75,8 @@ class _GrammarDetailViewState extends State<GrammarDetailView> {
     );
   }
 
-  _showPreviewDialog(BuildContext context) {
-    return showDialog(
+  _showPreviewDialog(BuildContext context) async {
+    await showDialog(
       context: context,
       builder: (context) => AlertDialog(
         content: SizedBox(
@@ -91,6 +88,7 @@ class _GrammarDetailViewState extends State<GrammarDetailView> {
         ),
       ),
     );
+    _selectedExamples = [];
   }
 
   _buildTitle(BuildContext context, String text) {
@@ -103,7 +101,7 @@ class _GrammarDetailViewState extends State<GrammarDetailView> {
         ),
       ),
       child: Text(
-        style: Theme.of(context).textTheme.titleSmall,
+        style: Theme.of(context).textTheme.titleLarge,
         text,
       ),
     );

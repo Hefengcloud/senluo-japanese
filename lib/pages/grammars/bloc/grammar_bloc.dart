@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
@@ -13,6 +14,8 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     on<GrammarItemSelected>(_onItemSelected);
     on<GrammarItemAdded>(_onItemAdded);
     on<GrammarItemDeleted>(_onItemDeleted);
+    on<GrammarLevelChanged>(_onLevelChanged);
+    on<GrammarKeywordChanged>(_onKeywordChanged);
   }
 
   final GrammarRepository grammarRepository;
@@ -33,6 +36,40 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     } catch (_) {
       emit(GrammarError());
     }
+  }
+
+  Future<void> _onLevelChanged(
+    GrammarLevelChanged event,
+    Emitter<GrammarState> emit,
+  ) async {
+    final theState = state as GrammarLoaded;
+    final items = await grammarRepository.searchItems(
+      keyword: theState.keyword,
+      level: event.level,
+    );
+    emit(GrammarLoaded(
+      items: items,
+      currentItem: theState.currentItem,
+      level: event.level,
+      keyword: theState.keyword,
+    ));
+  }
+
+  Future<void> _onKeywordChanged(
+    GrammarKeywordChanged event,
+    Emitter<GrammarState> emit,
+  ) async {
+    final theState = state as GrammarLoaded;
+    final items = await grammarRepository.searchItems(
+      keyword: event.keyword,
+      level: theState.level,
+    );
+    emit(GrammarLoaded(
+      items: items,
+      currentItem: theState.currentItem,
+      level: theState.level,
+      keyword: event.keyword,
+    ));
   }
 
   Future<void> _onItemSelected(

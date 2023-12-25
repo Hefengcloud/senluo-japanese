@@ -43,13 +43,26 @@ class GrammarDisplayView extends StatelessWidget {
         const Gap(16),
         Expanded(
           flex: 2,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+          child: Stack(
             children: [
               SelectableText(item.text),
-              _buildBottomButtons(context),
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: _buildBottomButtons(context),
+                ),
+              ),
             ],
           ),
+          // child: SingleChildScrollView(
+          //   child: Column(
+          //     mainAxisSize: MainAxisSize.min,
+          //     children: [
+
+          //
+          //     ],
+          //   ),
+          // ),
         ),
       ],
     );
@@ -57,14 +70,14 @@ class GrammarDisplayView extends StatelessWidget {
 
   _buildBottomButtons(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        OutlinedButton.icon(
+        ElevatedButton.icon(
           onPressed: () => _onSaveImage(),
           icon: const Icon(Icons.save),
           label: const Text('Save Image'),
         ),
-        const Gap(8),
-        OutlinedButton.icon(
+        ElevatedButton.icon(
           icon: const Icon(Icons.abc),
           label: const Text('Copy Text'),
           onPressed: () async {
@@ -202,7 +215,7 @@ class GrammarDisplayView extends StatelessWidget {
     return theExamples
         .map((e) => Padding(
               padding: const EdgeInsets.only(
-                bottom: 32.0,
+                bottom: 16.0,
               ),
               child: SentenceText(
                 fontSize: 24.0,

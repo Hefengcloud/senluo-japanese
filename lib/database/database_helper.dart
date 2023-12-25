@@ -102,12 +102,35 @@ class DatabaseHelper {
     return 0;
   }
 
-  Future<List<GrammarItemModel>> loadGrammarItems() async {
+  Future<List<GrammarItemModel>> loadGrammarItems({
+    String? keyword,
+    String? level,
+  }) async {
     final db = await database;
     try {
+      String? where;
+      List<Object?>? whereArgs;
+
+      if (keyword?.isNotEmpty == true) {
+        where = "name LIKE ?";
+        whereArgs = ['%$keyword%'];
+      }
+
+      if (level?.isNotEmpty == true) {
+        if (where != null) {
+          where += ' AND level = ?';
+          whereArgs!.add(level);
+        } else {
+          where = 'level = ?';
+          whereArgs = [level];
+        }
+      }
+
       final List<Map<String, dynamic>> maps = await db.query(
         _tableGrammar,
-        columns: ['id', 'name'],
+        columns: ['id', 'name', 'level'],
+        where: where,
+        whereArgs: whereArgs,
       );
       return List.generate(
         maps.length,
