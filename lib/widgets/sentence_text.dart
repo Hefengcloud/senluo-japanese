@@ -21,16 +21,17 @@ class SentenceText extends StatelessWidget {
       TextSpan(
         children: [
           ..._buildFormatedText(lines[0]),
+          const TextSpan(text: '\n'),
           TextSpan(
             text: "(${lines[1].replaceAll('**', '')})",
             style: TextStyle(
               color: Colors.black54,
-              fontSize: fontSize - 4,
+              fontSize: fontSize - 2,
             ),
           ),
         ],
       ),
-      textAlign: TextAlign.left,
+      textAlign: TextAlign.center,
     );
   }
 

@@ -17,8 +17,7 @@ class Onomatopoeia extends Equatable {
     required this.examples,
   });
 
-  factory Onomatopoeia.fromYamlString(String yamlString) {
-    final yamlMap = loadYaml(yamlString);
+  factory Onomatopoeia.fromYamlMap(YamlMap yamlMap) {
     final key = yamlMap['key'];
     final name = yamlMap['name'];
     final Meaning meanings = {

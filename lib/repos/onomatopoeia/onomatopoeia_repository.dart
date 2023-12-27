@@ -33,14 +33,8 @@ class OnomatopoeiaRepository {
 
     final yamlStr = await rootBundle.loadString(_itemsFile);
     final yamlMap = loadYaml(yamlStr);
-    _items = yamlMap.map<Onomatopoeia>((e) {
-      return Onomatopoeia(
-        key: e['key'],
-        name: e['name'],
-        meanings: const {},
-        examples: const [],
-      );
-    }).toList();
+    _items =
+        yamlMap.map<Onomatopoeia>((e) => Onomatopoeia.fromYamlMap(e)).toList();
     return _items;
   }
 
