@@ -60,12 +60,15 @@ class _GrammarDetailViewState extends State<GrammarDetailView> {
                   ..._buildExamples(context, widget.item.examples),
                 ],
               ),
-              Positioned(
-                right: 16,
+              Positioned.fill(
                 bottom: 16,
-                child: FloatingActionButton(
-                  onPressed: () => _showPreviewDialog(context),
-                  child: const Icon(Icons.image),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: ElevatedButton.icon(
+                    onPressed: () => _showPreviewDialog(context),
+                    icon: const Icon(Icons.image),
+                    label: const Text('Preview'),
+                  ),
                 ),
               )
             ],

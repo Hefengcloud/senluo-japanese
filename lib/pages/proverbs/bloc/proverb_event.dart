@@ -14,3 +14,9 @@ final class ProverbSearched extends ProverbEvent {
 
   const ProverbSearched({required this.keyword});
 }
+
+final class ProverbFiltered extends ProverbEvent {
+  final KanaLine kanaLine;
+
+  const ProverbFiltered({required this.kanaLine});
+}

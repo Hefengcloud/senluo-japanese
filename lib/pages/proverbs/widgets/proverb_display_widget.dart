@@ -9,12 +9,19 @@ import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
 import '../../../helpers/image_helper.dart';
 
-class ProverbDisplayWidget extends StatelessWidget {
-  final GlobalKey globalKey = GlobalKey();
-
+class ProverbDisplayWidget extends StatefulWidget {
   final ProverbItem item;
 
-  ProverbDisplayWidget({super.key, required this.item});
+  const ProverbDisplayWidget({super.key, required this.item});
+
+  @override
+  State<ProverbDisplayWidget> createState() => _ProverbDisplayWidgetState();
+}
+
+class _ProverbDisplayWidgetState extends State<ProverbDisplayWidget> {
+  final GlobalKey globalKey = GlobalKey();
+
+  double _currentSliderValue = 96;
 
   @override
   Widget build(BuildContext context) {
@@ -50,25 +57,21 @@ class ProverbDisplayWidget extends StatelessWidget {
   }
 
   Column _buildText(BuildContext context) {
-    final proverbText = _generateDisplayText(item);
+    final proverbText = _generateDisplayText(widget.item);
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SelectableText(
-          '日语谚语 | ${item.name}',
-          style: const TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        const Gap(16),
+        const Gap(8),
         SelectableText(
           proverbText,
-          style: const TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 18),
         ),
+        const Divider(),
+        _buildSlider(),
+        const Gap(8),
         Row(
           children: [
             OutlinedButton(
@@ -77,8 +80,8 @@ class ProverbDisplayWidget extends StatelessWidget {
             ),
             const Gap(8),
             OutlinedButton(
-              onPressed: () async {
-                await Clipboard.setData(ClipboardData(text: proverbText));
+              onPressed: () {
+                Clipboard.setData(ClipboardData(text: proverbText));
                 ScaffoldMessenger.of(context)
                     .showSnackBar(const SnackBar(content: Text('Copied')));
               },
@@ -90,8 +93,30 @@ class ProverbDisplayWidget extends StatelessWidget {
     );
   }
 
+  _buildSlider() => Row(
+        children: [
+          Text('Font Size:'),
+          Expanded(
+            child: Slider(
+              value: _currentSliderValue,
+              min: 64,
+              max: 112,
+              divisions: 6,
+              label: _currentSliderValue.round().toString(),
+              onChanged: (double value) {
+                setState(() {
+                  _currentSliderValue = value;
+                });
+              },
+            ),
+          ),
+        ],
+      );
+
   String _generateDisplayText(ProverbItem item) {
     return """
+日语谚语 | ${item.name}
+
 🔈【读音】
 ${item.reading}
 
@@ -111,7 +136,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
       children: [
         const Gap(32),
         AutoSizeText(
-          item.name,
+          widget.item.name,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
             'Yusei Magic',
@@ -123,7 +148,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
           maxLines: 1,
         ),
         AutoSizeText(
-          item.reading,
+          widget.item.reading,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
             'Yusei Magic',
@@ -137,11 +162,11 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
         const Gap(16),
         Expanded(
           child: Center(
-            child: _buildIllustration(context, item),
+            child: _buildIllustration(context, widget.item),
           ),
         ),
         const Gap(16),
-        ...item.meanings
+        ...widget.item.meanings
             .map<AutoSizeText>(
               (e) => AutoSizeText(
                 e,
@@ -172,7 +197,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
       textAlign: TextAlign.center,
       style: GoogleFonts.getFont(
         'Rampart One',
-        fontSize: 96,
+        fontSize: _currentSliderValue,
       ),
     );
   }

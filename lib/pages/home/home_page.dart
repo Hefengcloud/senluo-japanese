@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/pages/bunpo/bunpo_page.dart';
 import 'package:senluo_japanese_cms/pages/gojuon/gojuon_panel_page.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_page.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_panel_page.dart';
 
@@ -23,6 +25,8 @@ class _HomePageState extends State<HomePage> {
     const VocabularyPanelPage(),
     const KanjiPanelPage(),
     const ProverbPanelPage(),
+    const OnomatopoeiaPage(),
+    const BunpoPage(),
   ];
 
   @override
@@ -72,6 +76,16 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.donut_small_outlined),
                 selectedIcon: Icon(Icons.donut_small),
                 label: Text('慣用語'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.adb_outlined),
+                selectedIcon: Icon(Icons.adb),
+                label: Text('オノマトペ'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.translate_outlined),
+                selectedIcon: Icon(Icons.translate),
+                label: Text('文法'),
               ),
             ],
           ),

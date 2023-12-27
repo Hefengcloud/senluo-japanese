@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/constants/kanas.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_card_widget.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_widget.dart';
 import 'package:yaml/yaml.dart';
@@ -45,16 +46,12 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
       builder: (context, state) {
         return Scaffold(
           appBar: _buildAppBar(context),
-          body: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // const Text('Filters'),
-                // _buildFilters(context),
-                if (state is ProverbLoading) _buildLoading(context),
-                if (state is ProverbLoaded) _buildProverbGrid(context, state),
-              ],
-            ),
+          body: Row(
+            children: [
+              Expanded(flex: 1, child: _buildLeftPanel(context, state)),
+              const VerticalDivider(width: 1),
+              Expanded(flex: 3, child: _buildRightPanel(context, state)),
+            ],
           ),
           endDrawer: _buildDrawer(context),
           floatingActionButton: FloatingActionButton(
@@ -65,6 +62,41 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
           ),
         );
       },
+    );
+  }
+
+  _buildRightPanel(BuildContext context, ProverbState state) {
+    if (state is ProverbLoading) {
+      return _buildLoading(context);
+    } else if (state is ProverbLoaded) {
+      return _buildProverbGrid(context, state);
+    }
+  }
+
+  _buildLeftPanel(BuildContext context, ProverbState state) {
+    int? totalCount;
+    var currentKanaLine = KanaLine.none;
+
+    if (state is ProverbLoaded) {
+      totalCount = state.items.length;
+      currentKanaLine = state.currentKanaLine;
+    }
+
+    return ListView(
+      children: [
+        if (totalCount != null) ListTile(title: Text('Total: $totalCount')),
+        const Divider(),
+        ...KanaLine.values.map<ListTile>((line) {
+          return ListTile(
+            trailing: line == currentKanaLine ? const Icon(Icons.check) : null,
+            title: Text("${line != KanaLine.none ? line.name : '全部'} 行"),
+            onTap: () {
+              BlocProvider.of<ProverbBloc>(context)
+                  .add(ProverbFiltered(kanaLine: line));
+            },
+          );
+        }).toList(),
+      ],
     );
   }
 
@@ -105,8 +137,8 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
   }
 
   _buildFilters(BuildContext context) {
-    return Wrap(
-      spacing: 5.0,
+    return GridView.count(
+      crossAxisCount: 4,
       children: ProverbCategory.values
           .map(
             (category) => ChoiceChip(
@@ -124,9 +156,8 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
   }
 
   _buildProverbGrid(BuildContext context, ProverbLoaded state) {
-    return Wrap(
-      spacing: 8.0,
-      runSpacing: 4.0,
+    return GridView.count(
+      crossAxisCount: 4,
       children: state.items
           .map<Widget>(
             (item) => InkWell(

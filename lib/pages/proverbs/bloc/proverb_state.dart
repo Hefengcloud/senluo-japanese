@@ -11,8 +11,15 @@ final class ProverbLoading extends ProverbState {}
 
 final class ProverbLoaded extends ProverbState {
   final List<ProverbItem> items;
+  final KanaLine currentKanaLine;
 
-  const ProverbLoaded({required this.items});
+  const ProverbLoaded({
+    required this.items,
+    this.currentKanaLine = KanaLine.none,
+  });
+
+  @override
+  List<Object> get props => [items, currentKanaLine];
 }
 
 final class ProverbError extends ProverbState {}

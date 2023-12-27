@@ -4,13 +4,11 @@ import 'package:flutter/material.dart';
 class SentenceText extends StatelessWidget {
   final List<String> lines;
   final TextStyle? style;
-  final String prefixText;
   final Color emphasizedColor;
   final double fontSize;
 
   const SentenceText({
     super.key,
-    this.prefixText = '',
     this.style,
     this.fontSize = 18,
     required this.lines,
@@ -22,13 +20,12 @@ class SentenceText extends StatelessWidget {
     return AutoSizeText.rich(
       TextSpan(
         children: [
-          TextSpan(text: prefixText),
           ..._buildFormatedText(lines[0]),
           TextSpan(
-            text: "(${lines[1].replaceAll('**', '').replaceAll(' ', '')})",
+            text: "(${lines[1].replaceAll('**', '')})",
             style: TextStyle(
               color: Colors.black54,
-              fontSize: fontSize,
+              fontSize: fontSize - 4,
             ),
           ),
         ],

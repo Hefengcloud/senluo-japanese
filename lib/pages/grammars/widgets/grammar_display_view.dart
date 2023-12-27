@@ -12,7 +12,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
-import 'package:senluo_japanese_cms/pages/grammars/widgets/sentence_text.dart';
+import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
 import '../../../constants/colors.dart';
 import '../constants/colors.dart';
@@ -92,6 +92,10 @@ class GrammarDisplayView extends StatelessWidget {
   }
 
   RepaintBoundary _buildImage() {
+    final itemNameParts = _parseItemName(item.name);
+    final itemName = itemNameParts[0];
+    final itemReading = itemNameParts.length > 1 ? itemNameParts[1] : null;
+
     return RepaintBoundary(
       key: globalKey,
       child: AspectRatio(
@@ -113,7 +117,8 @@ class GrammarDisplayView extends StatelessWidget {
               const Gap(16),
               _buildTopLogo(),
               const Gap(16),
-              _buildItemName(),
+              _buildItemName(itemName),
+              if (itemReading != null) _buildItemReading(itemReading),
               const Gap(8),
               _buildJpMeaning(),
               const Gap(32),
@@ -158,15 +163,25 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  AutoSizeText _buildItemName() {
+  AutoSizeText _buildItemName(String itemName) {
     return AutoSizeText(
-      item.name,
+      itemName,
       maxLines: 1,
       style: GoogleFonts.getFont(
         'Rampart One',
         fontSize: 72,
         fontWeight: FontWeight.bold,
         color: _mainColor,
+      ),
+    );
+  }
+
+  _buildItemReading(String itemReading) {
+    return Text(
+      "$itemReading",
+      style: const TextStyle(
+        color: Colors.grey,
+        fontSize: 20,
       ),
     );
   }
@@ -251,5 +266,16 @@ class GrammarDisplayView extends StatelessWidget {
     final image = await boundary.toImage(pixelRatio: 3.0);
     final byteData = await image.toByteData(format: ImageByteFormat.png);
     return byteData?.buffer.asUint8List();
+  }
+
+  List<String> _parseItemName(String itemName) {
+    RegExp regex = RegExp(r'（([^（）]+)）');
+    Match? match = regex.firstMatch(item.name);
+    final String itemName = item.name.replaceAll(regex, '');
+    if (match != null) {
+      return [itemName, match.group(1)!];
+    } else {
+      return [itemName];
+    }
   }
 }
