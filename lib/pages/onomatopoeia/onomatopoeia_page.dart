@@ -2,8 +2,14 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/categories_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_list_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/onomatopoeia_card.dart';
+import 'package:senluo_japanese_cms/repos/onomatopoeia/models/category_model.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
+
+import 'bloc/onomatopoeia_bloc.dart';
 
 class OnomatopoeiaPage extends StatefulWidget {
   const OnomatopoeiaPage({super.key});
@@ -13,90 +19,66 @@ class OnomatopoeiaPage extends StatefulWidget {
 }
 
 class _OnomatopoeiaPageState extends State<OnomatopoeiaPage> {
-  final _collections = [
-    'all',
-    'body',
-    'clothes',
-    'feeling',
-    'food',
-    'sense',
-    'shape',
-    'sound',
-    'state',
-    'temperature',
-    'voice',
-    'water',
-    'weather',
-  ];
-
   Onomatopoeia? onomatopoeia;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('オノマトペ')),
-      body: _buildBody(context),
+    return BlocBuilder<OnomatopoeiaBloc, OnomatopoeiaState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(title: const Text('オノマトペ')),
+          body: _buildBody(context, state),
+        );
+      },
     );
   }
 
-  _buildBody(BuildContext context) {
+  _buildBody(BuildContext context, OnomatopoeiaState state) {
     return Row(
       children: [
-        Expanded(flex: 1, child: _buildLeftPanel(context)),
+        Expanded(flex: 1, child: _buildLeftPanel(context, state)),
         const VerticalDivider(width: 1.0),
-        Expanded(flex: 3, child: _buildRightPanel(context)),
+        Expanded(flex: 3, child: _buildRightPanel(context, state)),
       ],
     );
   }
 
-  _buildLeftPanel(BuildContext context) {
-    return Stack(
-      children: [
-        ListView.separated(
-          itemBuilder: (context, index) => ListTile(
-            title: Text(_collections[index]),
-            onTap: () {},
+  _buildLeftPanel(BuildContext context, OnomatopoeiaState state) {
+    if (state is OnomatopoeiaLoading) {
+      return const Center(child: CircularProgressIndicator());
+    } else if (state is OnomatopoeiaLoaded) {
+      final bloc = BlocProvider.of<OnomatopoeiaBloc>(context);
+      return ListView(
+        children: [
+          ListTile(
+            title: Text('Total: ${state.items.length}'),
           ),
-          separatorBuilder: (_, __) => const Divider(),
-          itemCount: _collections.length,
-        ),
-        Positioned.fill(
-          bottom: 32,
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: ElevatedButton.icon(
-              icon: const Icon(Icons.add),
-              onPressed: () => _pickYamlFile(),
-              label: const Text('Add New Item'),
-            ),
+          Divider(),
+          ListTile(
+            title: Text('All'),
+            onTap: () => bloc.add(const OnomatopoeiaFiltered(
+              category: OnomatopoeiaCategory.empty,
+            )),
           ),
-        ),
-      ],
-    );
-  }
-
-  _buildRightPanel(BuildContext context) {
-    if (onomatopoeia != null) {
-      return OnomatopoeiaCard(item: onomatopoeia!);
-    } else {
-      return Text('empty');
+          ...state.categories
+              .map<ListTile>(
+                (category) => ListTile(
+                  title: Text(category.name),
+                  onTap: () =>
+                      bloc.add(OnomatopoeiaFiltered(category: category)),
+                ),
+              )
+              .toList(),
+        ],
+      );
     }
   }
 
-  _pickYamlFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      allowedExtensions: ['yaml', 'yml'],
-    );
-
-    if (result != null) {
-      File file = File(result.files.single.path!);
-      final yamlString = await file.readAsString();
-      final item = Onomatopoeia.fromYamlString(yamlString);
-      setState(() {
-        onomatopoeia = item;
-      });
-    } else {
-      // User canceled the picker
+  _buildRightPanel(BuildContext context, OnomatopoeiaState state) {
+    if (state is OnomatopoeiaLoading) {
+      return const Center(child: CircularProgressIndicator());
+    } else if (state is OnomatopoeiaLoaded) {
+      return ItemListView(items: state.items);
     }
   }
 }
