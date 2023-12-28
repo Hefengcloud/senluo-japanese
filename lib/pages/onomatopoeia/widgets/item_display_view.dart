@@ -221,7 +221,7 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
             const Gap(32),
             Expanded(
               child: Image.asset(
-                'assets/onomatopoeia/images/${widget.item.key}.jpg',
+                'assets/onomatopoeia/images/${widget.item.key}.png',
               ),
             ),
             const Gap(32),
