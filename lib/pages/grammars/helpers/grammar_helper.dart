@@ -9,7 +9,7 @@ $level文法 | $name
 $kTitleJpMeaning
 $jpMeaningText
 
-$kTitleCnMeaning
+$kTitleZhMeaning
 $cnMeaningText
 
 $kTitleConjugations

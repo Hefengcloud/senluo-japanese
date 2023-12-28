@@ -38,7 +38,7 @@ class _GrammarDetailViewState extends State<GrammarDetailView> {
                       .map((e) => ListTile(title: Text(e), onTap: () {}))
                       .toList(),
                   const Gap(32),
-                  _buildTitle(context, kTitleCnMeaning),
+                  _buildTitle(context, kTitleZhMeaning),
                   ...widget.item.meaning.cn
                       .map((e) => ListTile(title: Text(e), onTap: () {}))
                       .toList(),

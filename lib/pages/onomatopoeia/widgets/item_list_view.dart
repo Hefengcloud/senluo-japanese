@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_display_view.dart';
-import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
+
+import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
+import 'item_display_view.dart';
 
 class ItemListView extends StatelessWidget {
   final List<Onomatopoeia> items;
@@ -43,7 +44,11 @@ class ItemCardView extends StatelessWidget {
   _showDisplayDialog(BuildContext context, Onomatopoeia item) => showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          content: ItemDisplayView(item: item),
+          content: SizedBox(
+            width: 1000,
+            height: 800,
+            child: ItemDisplayView(item: item),
+          ),
         ),
       );
 }

@@ -6,6 +6,7 @@ class SentenceText extends StatelessWidget {
   final TextStyle? style;
   final Color emphasizedColor;
   final double fontSize;
+  final TextAlign? textAlign;
 
   const SentenceText({
     super.key,
@@ -13,6 +14,7 @@ class SentenceText extends StatelessWidget {
     this.fontSize = 18,
     required this.lines,
     required this.emphasizedColor,
+    this.textAlign,
   });
 
   @override
@@ -20,22 +22,26 @@ class SentenceText extends StatelessWidget {
     return AutoSizeText.rich(
       TextSpan(
         children: [
-          ..._buildFormatedText(lines[0]),
-          const TextSpan(text: '\n'),
-          TextSpan(
-            text: "(${lines[1].replaceAll('**', '')})",
-            style: TextStyle(
-              color: Colors.black54,
-              fontSize: fontSize - 2,
-            ),
-          ),
+          ..._buildMainText(lines[0]),
+          const TextSpan(text: '\n\n'),
+          _buildTranslatedText(lines[1]),
+          const TextSpan(text: '\n\n'),
+          if (lines.length > 2) _buildTranslatedText(lines[2])
         ],
       ),
-      textAlign: TextAlign.center,
+      textAlign: textAlign,
     );
   }
 
-  _buildFormatedText(String text) {
+  _buildTranslatedText(String text) => TextSpan(
+        text: text.replaceAll('**', ''),
+        style: TextStyle(
+          color: Colors.black54,
+          fontSize: fontSize - 2,
+        ),
+      );
+
+  _buildMainText(String text) {
     final parts = text.split('**');
     final emphasizedIndex = text.startsWith('**') ? 0 : 1;
     final spans = [];

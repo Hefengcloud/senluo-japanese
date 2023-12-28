@@ -1,48 +1,56 @@
 - examples:
-  - en: 'While traveling abroad, I was the victim of a sleeping pill robbery and had all my belongings taken away.'
-    jp: 海外旅行中、睡眠薬強盗の被害に遭い持ち物を **ごっそり** 奪われた。
   - en: When I was shampooing my hair, it fell out like crazy and I became worried.
     jp: シャンプーをしていたら、髪が **ごっそり** 抜けて心配になった。
+    zh: 当我洗头时，头发大量脱落，让我感到担忧。
+  - en: 'While traveling abroad, I was the victim of a sleeping pill robbery and had all my belongings taken away.'
+    jp: 海外旅行中、睡眠薬強盗の被害に遭い持ち物を **ごっそり** 奪われた。
+    zh: 在海外旅行时，我遭到了服用安眠药抢劫，所有的物品都被全数夺走了。
   key: gossori
   meanings:
+    zh:
+      - 全部，通通，一股脑儿，一点不剩，精光
     en:
-    - The way in which many things are moved or transferred from one place to another.
-    - A large quantity.
+      - The way in which many things are moved or transferred from one place to another.
+      - A large quantity.
     jp:
-    - たくさんの物が残らず別のところへ移動する様子。
-    - 数量が多い様子。
+      - たくさんの物が残らず別のところへ移動する様子。
+      - 数量が多い様子。
   name: ごっそり
 - examples:
-  - en: I envy her because her hair is always so **smooth**.
-    jp: 彼女の髪はいつも **サラサラ** で羨ましい。
-  - en: It is said that lemons and grapes make the blood flow **smoothly**
-    jp: レモンやぶどうには血液を **サラサラ** にする効果があると言われている。
+    - en: I envy her because her hair is always so **smooth**.
+      jp: 彼女の髪はいつも **サラサラ** で羨ましい。
+    - en: It is said that lemons and grapes make the blood flow **smoothly**
+      jp: レモンやぶどうには血液を **サラサラ** にする効果があると言われている。
   key: sarasara
   meanings:
     en:
-    - An appearance of smoothness without dampness or stickiness.
-    - The state of water or liquid flowing lightly without stagnation.
+      - An appearance of smoothness without dampness or stickiness.
+      - The state of water or liquid flowing lightly without stagnation.
     jp:
-    - 物に湿り気や粘り気がなく、滑らかな様子。
-    - 水や液体がよどみなく軽やかに流れる様子。
+      - 物に湿り気や粘り気がなく、滑らかな様子。
+      - 水や液体がよどみなく軽やかに流れる様子。
+    zh:
+      - 干薄物轻触声沙沙
+      - 流利地
+      - 哗啦哗啦，潺潺
+      - 干燥清爽
   name: さらさら
 - examples:
   - en: You'll miss the train if you don’t hurry.
     jp: '**モタモタ** してると電車に乗り遅れるよ。'
-  - en: 'If you don''t hurry, you won''t make it in time for today''s meeting. Hurry
-      up
-
-      and make the documents.'
+  - en: 'If you don''t hurry, you won''t make it in time for today''s meeting. Hurry up and make the documents.'
     jp: '**モタモタ** してると、今日の会議までに間に合わないよ。急いで資料作って。'
   - en: If you don't hurry, I will leave you.
     jp: '**モタモタ** してると、置いていくよ。'
   key: motamota
   meanings:
     en:
-    - Indicates slow movement or things are not progressing well.
+      - Indicates slow movement or things are not progressing well.
     jp:
-    - 動きが遅いこと、物事の進行が捗っていないことを表す。
-  name: 'モタモタ '
+      - 動きが遅いこと、物事の進行が捗っていないことを表す。
+    zh:
+      - 缓慢，慢腾腾
+  name: モタモタ
 - examples:
   - en: The cat **meows**.
     jp: 猫が **ニャー** と鳴く。
@@ -51,9 +59,11 @@
   key: nyaa
   meanings:
     en:
-    - The sound of a cat's meow.
+      - The sound of a cat's meow.
     jp:
-    - 猫の鳴き声。
+      - 猫の鳴き声。
+    zh:
+      - 猫叫声（咪、喵）
   name: ニャー
 - examples:
   - en: I have frostbite and my fingers are tingling.
@@ -63,10 +73,11 @@
   key: jinjin
   meanings:
     en:
-    - The state of feeling constant pain or numbness in the affected area due to illness
-      or injury.
+      - The state of feeling constant pain or numbness in the affected area due to illness or injury.
     jp:
-    - 病気や怪我などで、患部が絶え間なく痛んだり、痺れたりする様子。
+      - 病気や怪我などで、患部が絶え間なく痛んだり、痺れたりする様子。
+    zh:
+      - 手脚发麻，刺痛的样子
   name: じんじん
 - examples:
   - en: My tooth is **throbbing**.
@@ -78,9 +89,12 @@
   key: zukizuki
   meanings:
     en:
-    - throbbing pain
+      - throbbing pain
     jp:
-    - 連続的に、脈を打つように痛むこと。
+      - 連続的に、脈を打つように痛むこと。
+    zh:
+      - 跳痛，跳疼，一跳一跳地疼
+      - 伤口或头等脉动似地连续发痛状
   name: ズキズキ
 - examples:
   - en: I clapped my hands.
@@ -99,6 +113,9 @@
     jp:
     - 手を叩く時に出る音。
     - しきりに瞬きをする様子。
+    zh:
+      - 劈劈啪啪
+      - 不停眨眼的样子
   name: パチパチ
 - examples:
   - en: This bread is very fluffy and delicious.
@@ -110,9 +127,11 @@
   key: fukkura
   meanings:
     en:
-    - Soft and puffy appearance.
+      - Soft and puffy appearance.
     jp:
-    - 柔らかく、膨らんでいる様子。
+      - 柔らかく、膨らんでいる様子。
+    zh:
+      - 软和，丰满，暄腾
   name: ふっくら
 - examples:
   - en: I can't wear this dress anymore, it's **too tight**.
@@ -130,6 +149,9 @@
     jp:
     - 服のサイズが小さすぎる様子。
     - 空間や時間に余裕がない様子。
+    zh: 
+      - 衣服尺寸很小的样子
+      - 空间和时间不够的样子
   name: キツキツ
 - examples:
   - en: The **spikes** of the rose stung my hand and hurt.
@@ -214,7 +236,7 @@
 
       predict which team would win until the end.'
     jp: 昨日見た試合は、最後までどっちのチームが勝つのか予測不可能で、とても **ハラハラ** しました。
-  key: -harahara
+  key: harahara
   meanings:
     en:
     - Seeing a dangerous situation and worrying that something bad or terrible will
@@ -3697,10 +3719,11 @@
   key: fuufuu
   meanings:
     en:
-    - The sound or state of blowing in order to cool hot food or drinks. This word
-      is child like so it's generally used for children.
+      - The sound or state of blowing in order to cool hot food or drinks. This word is child like so it's generally used for children.
     jp:
-    - 熱い食べ物や飲み物を冷ますために息を吹きかける様子や、その音。 子供に対して使うことが多い。
+      - 熱い食べ物や飲み物を冷ますために息を吹きかける様子や、その音。 子供に対して使うことが多い。
+    zh:
+      - 咈咈（吹气凉了吃）
   name: フーフー
 - examples:
   - en: The owl is **hooting**.
@@ -3708,9 +3731,11 @@
   key: hoohoo
   meanings:
     en:
-    - The sound of a owl's hoot.
+      - The sound of a owl's hoot.
     jp:
-    - フクロウの鳴き声。
+      - フクロウの鳴き声。
+    zh:
+      - 猫头鹰的叫声
   name: ホーホー
 - examples:
   - en: I can hear the sound of wood being sawed in the yard.
@@ -3720,9 +3745,11 @@
   key: gikogiko
   meanings:
     en:
-    - The sound of cutting wood with a saw.
+      - The sound of cutting wood with a saw.
     jp:
-    - ノコギリで木を切る時に出る音。
+      - ノコギリで木を切る時に出る音。
+    zh:
+      - 叽嘎叽嘎
   name: ギコギコ
 - examples:
   - en: The fingers of my hands became wrinkled from soaking in the bathtub too much.
@@ -3734,9 +3761,11 @@
   key: shiwashiwa
   meanings:
     en:
-    - Indicates a large number of wrinkles.
+      - Indicates a large number of wrinkles.
     jp:
-    - しわが多いことを表す。
+      - しわが多いことを表す。
+    zh:
+      - 皱皱巴巴，褶子多，起皱纹
   name: しわしわ / しわくちゃ
 - examples:
   - en: This shampoo is said to make your hair **shiny and glossy.**
@@ -3746,10 +3775,12 @@
   key: tsuyatsuya
   meanings:
     en:
-    - The state of being lustrous and beautiful.
+      - The state of being lustrous and beautiful.
     jp:
-    - 光沢があって美しい様子。
-  name: 'ツヤツヤ '
+      - 光沢があって美しい様子。
+    zh:
+      - （皮肤、家具等）光润；光滑
+  name: ツヤツヤ
 - examples:
   - en: What are you **staring** at me for?
     jp: 何、俺のこと **じろじろ** 見てんだよ。
@@ -3760,9 +3791,12 @@
   key: jirojiro
   meanings:
     en:
-    - The state of gazing at a person's face or something without hesitation.
+      - The state of gazing at a person's face or something without hesitation.
     jp:
-    - 遠慮なく人の顔などを見つめる様子。
+      - 遠慮なく人の顔などを見つめる様子。
+    zh:
+      - 盯着看
+      - 目不转睛地看凝视
   name: じろじろ
 - examples:
   - en: A squirrel is chewing on some nuts.
@@ -3774,10 +3808,11 @@
   key: mogumogu
   meanings:
     en:
-    - '"chew chew" The state of chewing food without opening the mouth widely or chewing
-      with closed mouth.'
+      - '"chew chew" The state of chewing food without opening the mouth widely or chewing with closed mouth.'
     jp:
-    - 口を大きく開けず、あるいは口を閉じて食べ物を噛む様子。
+      - 口を大きく開けず、あるいは口を閉じて食べ物を噛む様子。
+    zh:
+      - 闭上嘴咀嚼，不张嘴说话
   name: もぐもぐ
 - examples:
   - en: 'In Southeast Asian countries such as the Philippines and Malaysia, skyscrapers
@@ -3791,11 +3826,13 @@
   key: nyokinyoki
   meanings:
     en:
-    - The state of long, thin objects coming out one after another.
-    - The state of plants keep growing one after another.
+      - The state of long, thin objects coming out one after another.
+      - The state of plants keep growing one after another.
     jp:
-    - 細長い物が次々に出てくる様子。
-    - 植物が次々に生えてくる様子。
+      - 細長い物が次々に出てくる様子。
+      - 植物が次々に生えてくる様子。
+    zh:
+      - 连耸起
   name: にょきにょき
 - examples:
   - en: My father has been **coughing** a lot lately, and I'm worried about him.
@@ -3808,9 +3845,11 @@
   key: gohogoho
   meanings:
     en:
-    - The sound of coughing.
+      - The sound of coughing.
     jp:
-    - 咳をする時に出る音。
+      - 咳をする時に出る音。
+    zh:
+      - 咳嗽的拟声词
   name: ゴホゴホ
 - examples:
   - en: I just woke up, so my hair is all messy.
@@ -3822,9 +3861,11 @@
   key: bosabosa
   meanings:
     en:
-    - The state of hair being messy.
+      - The state of hair being messy.
     jp:
-    - 髪が乱れている様子。
+      - 髪が乱れている様子。
+    zh:
+      - 头发蓬乱
   name: ぼさぼさ
 - examples:
   - en: The boxer is **wobbling** by the punch of his opponent.
@@ -3836,10 +3877,14 @@
   key: yoroyoro
   meanings:
     en:
-    - The state of a person being unsteady on his/her feet, wobbling and about to
-      fall down.
+      - The state of a person being unsteady on his/her feet, wobbling and about to fall down.
     jp:
-    - 足元がしっかりせず、ふらついて倒れそうになる様子。
+      - 足元がしっかりせず、ふらついて倒れそうになる様子。
+    zh:
+      - 东倒西歪
+      - 摇摇晃晃
+      - 踉踉跄跄
+      - 蹒跚
   name: よろよろ
 - examples:
   - en: I will **simmer** the soup.
@@ -3849,9 +3894,11 @@
   key: kotokoto
   meanings:
     en:
-    - Simmering over low heat for a long time.
+      - Simmering over low heat for a long time.
     jp:
-    - 弱火で時間をかけて煮込む様子。
+      - 弱火で時間をかけて煮込む様子。
+    zh: 
+      - 咕嘟咕嘟
   name: コトコト
 - examples:
   - en: There is a strong wind blowing outside.
@@ -3861,9 +3908,12 @@
   key: byuubyuu
   meanings:
     en:
-    - The state of strong wind blowing.
+      - The state of strong wind blowing.
     jp:
-    - 風が勢いよく吹いている様子。
+      - 風が勢いよく吹いている様子。
+    zh:
+      - 呼呼地
+      - 嗖嗖地
   name: びゅうびゅう
 - examples:
   - en: What are you **smiling** about? Did something good happen to you?
@@ -3877,7 +3927,12 @@
   key: nikoniko
   meanings:
     en:
-    - The state of smiling happily or joyfully.
+      - The state of smiling happily or joyfully.
     jp:
-    - 楽しそう、あるいは嬉しそうに笑みを浮かべる様子。
+      - 楽しそう、あるいは嬉しそうに笑みを浮かべる様子。
+    zh:
+      - 笑嘻嘻
+      - 笑眯眯
+      - 笑吟吟
+      - 微微笑
   name: にこにこ

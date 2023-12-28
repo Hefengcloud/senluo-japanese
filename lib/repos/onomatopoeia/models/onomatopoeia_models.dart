@@ -20,14 +20,17 @@ class Onomatopoeia extends Equatable {
   factory Onomatopoeia.fromYamlMap(YamlMap yamlMap) {
     final key = yamlMap['key'];
     final name = yamlMap['name'];
+    final meaningMap = yamlMap['meanings'];
     final Meaning meanings = {
-      'jp': yamlMap['meanings']['jp'].map<String>((e) => e.toString()).toList(),
-      'en': yamlMap['meanings']['en'].map<String>((e) => e.toString()).toList(),
+      'jp': meaningMap['jp']?.map<String>((e) => e.toString()).toList() ?? [],
+      'en': meaningMap['en']?.map<String>((e) => e.toString()).toList() ?? [],
+      'zh': meaningMap['zh']?.map<String>((e) => e.toString()).toList() ?? [],
     };
     final examples = yamlMap['examples']
         .map<Example>((e) => <String, String>{
               'jp': e['jp'].toString(),
               'en': e['en'].toString(),
+              'zh': e['zh'].toString(),
             })
         .toList();
     return Onomatopoeia(
