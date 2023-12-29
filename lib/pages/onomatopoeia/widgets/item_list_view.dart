@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
@@ -26,15 +27,18 @@ class ItemCardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              item.name,
-              style: Theme.of(context).textTheme.bodyLarge,
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              AutoSizeText(
+                item.name.split("/").join('\n'),
+                style: const TextStyle(fontSize: 24.0),
+              )
+            ],
+          ),
         ),
         onTap: () => _showDisplayDialog(context, item),
       ),
