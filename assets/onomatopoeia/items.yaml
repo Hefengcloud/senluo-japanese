@@ -19,8 +19,10 @@
 - examples:
     - en: I envy her because her hair is always so **smooth**.
       jp: 彼女の髪はいつも **サラサラ** で羨ましい。
+      zh: 她的头发总是顺滑亮丽，让人羡慕。
     - en: It is said that lemons and grapes make the blood flow **smoothly**
       jp: レモンやぶどうには血液を **サラサラ** にする効果があると言われている。
+      zh: 据说柠檬和葡萄有使血液变得顺畅的效果。
   key: sarasara
   meanings:
     en:
@@ -31,7 +33,6 @@
       - 水や液体がよどみなく軽やかに流れる様子。
     zh:
       - 干薄物轻触声沙沙
-      - 流利地
       - 哗啦哗啦，潺潺
       - 干燥清爽
   name: さらさら
@@ -68,8 +69,10 @@
 - examples:
   - en: I have frostbite and my fingers are tingling.
     jp: しもやけで指が **じんじん** する。
+    zh: 我因为冻伤而感到手指发麻。
   - en: The wound I got from my fall is painful.
     jp: 転んでできた傷が **じんじん** と痛む。
+    zh: 我摔倒受伤的伤口隐隐作痛。
   key: jinjin
   meanings:
     en:
@@ -77,15 +80,18 @@
     jp:
       - 病気や怪我などで、患部が絶え間なく痛んだり、痺れたりする様子。
     zh:
-      - 手脚发麻，刺痛的样子
+      - 指尖发麻，轻微的刺痛感，持续而轻微的疼痛感
   name: じんじん
 - examples:
   - en: My tooth is **throbbing**.
     jp: 歯が **ズキズキ** と痛む。
+    zh: 我的牙齿悸动疼痛。
   - en: I have a **throbbing** headache.
     jp: 頭が **ズキズキ** する。
+    zh: 我有一种搏动性头痛。
   - en: The finger that I injured while playing is **throbbing**.
     jp: 遊んでいる時に怪我した指が **ズキズキ** と痛む。
+    zh: 我在玩耍时受伤的手指搏动着疼痛。
   key: zukizuki
   meanings:
     en:
@@ -405,16 +411,21 @@
 - examples:
   - en: I was diagnosed with thick blood, so I need to review my diet.
     jp: 血液が **ドロドロ** だと診断されたので、食生活を見直す必要がある。
+    zh: 因为被诊断出血液很 粘稠，所以需要重新审视饮食习惯。
   - en: My son was playing in the mud at the park and came home all muddy.
     jp: 息子は公園で泥んこ遊びをしたそうで、 **ドロドロ** になって帰ってきた。
+    zh: 儿子好像在公园玩泥巴，回来的时候弄得一身泥巴。
   key: dorodoro
   meanings:
     en:
-    - The state of fluid being sticky or muddy.
-    - The state of being covered in mud and looking terribly dirty.
+      - The state of fluid being sticky or muddy.
+      - The state of being covered in mud and looking terribly dirty.
     jp:
-    - 泥のような粘り気のある流動物になっている様子。
-    - 泥まみれで、ひどく汚れている様子
+      - 泥のような粘り気のある流動物になっている様子。
+      - 泥まみれで、ひどく汚れている様子
+    zh:
+      - 粘糊，稠糊
+      - 涂满了泥，沾满了泥，到处是泥
   name: ドロドロ
 - examples:
   - en: He always **smiles** when he talked about her.
@@ -572,21 +583,24 @@
 - examples:
   - en: I'm **excited** about tomorrow's excursion.
     jp: 明日の遠足、 **ワクワク** するなー。
+    zh: 明天的远足让我感到很兴奋。
   - en: My college life will start tomorrow. I'm so **excited**.
     jp: 明日から大学生活が始まるのか。 **ワクワク** するなぁ。
-  - en: 'I heard that a sequel to the movie is in the works.I''m **excited** about
-      what
-
-      kind of story it will be.'
+    zh: 我的大学生活明天就要开始了。我感到很兴奋。
+  - en: 'I heard that a sequel to the movie is in the works.I''m **excited** about what kind of story it will be.'
     jp: 映画の続編決定だって。どんなストーリーになるのか **ワクワク** するね。
+    zh: 听说电影要拍续集了。对于接下来的故事我感到很兴奋。
   - en: I'm **excited** to be able to work with you all in this company.
     jp: この会社で皆さんと一緒に仕事ができることに **ワクワク** しています。
+    zh: 能和这家公司的大家一起工作让我感到很兴奋。
   key: wakuwaku
   meanings:
     en:
-    - '"excited / thrilled" A state of being excited due to expectation, joy, etc.'
+      - '"excited / thrilled" A state of being excited due to expectation, joy, etc.'
     jp:
-    - 期待や喜びなどで心が落ち着かず、胸が躍る様子。
+      - 期待や喜びなどで心が落ち着かず、胸が躍る様子。
+    zh:
+      - 因为期待、喜悦等感情而兴奋，情绪无法平静，内心激动
   name: ワクワク
 - examples:
   - en: "A: Hey, Mr. Suzuki, there's a mess on your desk.  \nB: I'm sorry. I'll sort\
@@ -985,14 +999,19 @@
 - examples:
   - en: The morning train is crowded and jam-packed.
     jp: 朝の電車は人がいっぱいで **ギュウギュウ** だ。
+    zh: 早上的电车挤得像沙丁鱼罐头一样。
   - en: I stuffed my luggage tightly into my travel bag.
     jp: 旅行バッグに荷物を **ギュウギュウ** に詰め込んだ。
+    zh: 我把行李塞得满满当当地装进旅行袋里。
   key: gyuugyuu
   meanings:
     en:
-    - packed like sardine / jam-packed
+      - packed like sardine / jam-packed
     jp:
-    - 無理に詰め込んだり押し込んだりするさま
+      - 無理に詰め込んだり押し込んだりするさま
+    zh:
+      - 拥挤不堪
+      - 紧紧地，慢慢地
   name: ギュウギュウ
 - examples:
   - en: My son is growing up healthily without any serious illness.
@@ -2086,16 +2105,21 @@
 - examples:
   - en: Tom's grades have been improving rapidly over the past few months.
     jp: ここ数ヶ月、トムさんの成績は **グングン** 伸びている。
+    zh: 在过去的几个月里，汤姆的成绩迅速提升。
   - en: James started to practice shadowing, and his Japanese improved rapidly.
     jp: ジェームスさんはシャドーイングの練習を始めたことで、 **グングン** と日本語が上達した。
+    zh: 詹姆斯开始练习跟读，他的日语迅速进步。
   - en: The temperature is rising rapidly.
     jp: 気温が **グングン** と上昇する。
+    zh: 气温迅猛地上升。
   key: gungun
   meanings:
     en:
-    - The state of something proceeding forward with momentum.
+      - The state of something proceeding forward with momentum.
     jp:
-    - 物事が勢いよく進行する様子。
+      - 物事が勢いよく進行する様子。
+    zh:
+      - 猛地，使劲地，突飞猛进的样子，有力发展的样子
   name: グングン
 - examples:
   - en: The man drank the miso soup with a **slurping sound**.
@@ -2185,16 +2209,21 @@
 - examples:
   - en: The eggs in this omelet rice are **fluffy** and delicious.
     jp: このオムライス、卵が **フワフワ** で美味しい。
+    zh: 这份蛋包饭里的鸡蛋松软蓬松，很美味。
   - en: The pancakes in this store are very **fluffy**.
     jp: このお店のパンケーキ、とっても **フワフワ** なんだよ。
+    zh: 这家店的煎饼非常松软蓬松。
   - en: This cat is so **fluffy** and cute.
     jp: この猫は **フワフワ** してて、可愛い。
+    zh: 这只猫蓬松可爱。
   key: fuwafuwa
   meanings:
     en:
-    - fluffy
+      - fluffy
     jp:
-    - 柔らかく膨らんでいる様子。
+      - 柔らかく膨らんでいる様子
+    zh:
+      - 表示柔软而蓬松的状态
   name: フワフワ
 - examples:
   - en: 'I had been saving up my part-time job money little by little, so by the time
@@ -3137,27 +3166,34 @@
 - examples:
   - en: After the toast, he guzzled his beer.
     jp: 乾杯が終わると、彼は **グビグビ** とビールを飲んだ。
+    zh: 敬酒之后，他大口大口地喝着啤酒。
   - en: After taking a hot spring bath, I'd like to drink coffee with milk.
     jp: 温泉に入った後は、やっぱりコーヒー牛乳を **グビグビ** と飲みたいね。
+    zh: 泡完温泉后，我想大口地喝杯牛奶咖啡。
   key: gubigubi
   meanings:
     en:
-    - The state of drinking vigorously and gulping loudly.
+      - The state of drinking vigorously and gulping loudly.
     jp:
-    - のどを鳴らしながら、飲み物を勢いよく飲む様子。
+      - のどを鳴らしながら、飲み物を勢いよく飲む様子。
+    zh:
+      - 表示大口大口地、大声喝东西的状态
   name: グビグビ
 - examples:
   - en: A glass fell off the table and broke into **pieces**.
     jp: グラスがテーブルから落ちて、 **こなごな** に割れた。
+    zh: 一杯玻璃杯从桌子上掉下来，摔成碎片。
   - en: There was a mangled **piece** of snack left at the bottom of my bag.
     jp: カバンの底に、 **こなごな** になったお菓子が残っていた。
+    zh: 我的包包底部有一个被挤压成碎片的零食。
   key: konagona
   meanings:
     en:
-    - Indicates that the original form is broken into pieces so that the original
-      shape is forgotten.
+      - Indicates that the original form is broken into pieces so that the original shape is forgotten.
     jp:
-    - 元の形がわからない程に、こまかく砕ける様子。
+      - 元の形がわからない程に、こまかく砕ける様子。
+    zh:
+      - 表示原本的形状被打碎成小碎片，以至于无法辨认原本的形状。
   name: こなごな（粉々）
 - examples:
   - en: The chick **chirps**.
@@ -3221,18 +3257,21 @@
 - examples:
   - en: I was suddenly asked to give a speech at a party, and I was **in a panic**.
     jp: パーティーで、突然スピーチを求められて **あたふた** した。
+    zh: 在派对上突然被要求演讲，我感到手忙脚乱。
   - en: A friend suddenly came to my house and I was **in a panic**.
     jp: 急に友達が家を訪ねてきて、 **あたふた** した。
-  - en: 'My junior colleague made a mistake in sending an e-mail to the wrong address,
-
-      and he was **in a panic**.'
+    zh: 朋友突然来我家，我感到慌乱。
+  - en: My junior colleague made a mistake in sending an e-mail to the wrong address, and he was **in a panic**.
     jp: 後輩はメールの送信先を間違えてしまい、 **あたふた** している。
+    zh: 我的晚辈同事发送邮件时弄错了地址，他手忙脚乱了。
   key: atafuta
   meanings:
     en:
-    - to be in a hurry / to freak out / hastily
+      - to be in a hurry / to freak out / hastily
     jp:
-    - 慌てて騒ぐ様子。
+      - 慌てて騒ぐ様子。
+    zh:
+      - 表示匆忙或慌乱的状态
   name: アタフタ
 - examples:
   - en: My clothes are sticky because of my sweat.
@@ -3657,65 +3696,87 @@
 - examples:
   - en: My hit was not strong enough so the ball rolled towards the third base.
     jp: 打ったボールは勢いが弱く **コロコロ** とサードのほうへ転がっていった。
+    zh: 我的击球力不够，所以球滚滚地朝着三垒方向滚去了。
   - en: Oh, the eraser I dropped rolled to that area.
     jp: あ、落とした消しゴムが **コロコロ** 転がってあんなところまで行っちゃった。
+    zh: 啊，我掉的橡皮滚来滚去滚到了那边去了。
   - en: This kitten is so cute and round.
     jp: この子猫、 **コロコロ** しててかわいいね。
+    zh: 这只小猫非常可爱，而且圆圆的。
   - en: I don't want to work with him because he changes his mind so often.
     jp: 彼は言うことが **コロコロ** 変わるからあまり一緒に仕事をしたくない。
+    zh: 我不想和他一起工作，因为他的想法变化无常。
   key: korokoro
   meanings:
     en:
-    - The state of a round or small object rolling around.
-    - A round, cute appearance.
-    - The way things change so easily (ex. opinion).
+      - The state of a round or small object rolling around.
+      - A round, cute appearance.
+      - The way things change so easily (ex. opinion).
     jp:
-    - 丸いものや小さな物が転がる様子。
-    - 丸々として、かわいらしい様子。
-    - 物事が簡単に変わる様子。
+      - 丸いものや小さな物が転がる様子。
+      - 丸々として、かわいらしい様子。
+      - 物事が簡単に変わる様子。
+    zh:
+      - 圆形或小物体滚动的状态
+      - 圆润、可爱的外观
+      - 事物易变化的状态（例如，意见）
   name: コロコロ
 - examples:
-  - en: 'I highly recommend this reference book. When I was a student, I used it until
-
-      it was old and tattered.'
+  - en: 'I highly recommend this reference book. When I was a student, I used it until it was old and tattered.'
     jp: この参考書すごいオススメですよ。私が学生の頃、 **ボロボロ** になるまで使い込みました。
+    zh: 这本参考书非常推荐。我还是学生时，用它用到破烂不堪。
   - en: My house looks like a wreck, but it's very clean inside.
     jp: 私の家は見た目は **ボロボロ** ですが、中はとても綺麗ですよ。
+    zh: 我的房子看起来破破烂烂的，但里面非常干净。
   - en: I've been working overtime every day, and my body is already falling apart.
     jp: 毎日、残業ばかりで、もう身体が **ボロボロ** だ。
+    zh: 我每天都在加班，我的身体已经疲惫不堪了。
   key: boroboro
   meanings:
     en:
-    - The state of objects being badly damaged.
-    - the state of clothes being torn badly
-    - The state of body and mind being exhausted
-    - The state of small particles spilling out of something.
+      - The state of objects being badly damaged.
+      - the state of clothes being torn badly
+      - The state of body and mind being exhausted
+      - The state of small particles spilling out of something.
     jp:
-    - 物がひどく壊れている様子。
-    - 衣服などがひどく破れている様子。
-    - 心身が疲れ切っている様子。
-    - 粒状の物がこぼれ落ちる様子。
+      - 物がひどく壊れている様子。
+      - 衣服などがひどく破れている様子。
+      - 心身が疲れ切っている様子。
+      - 粒状の物がこぼれ落ちる様子。
+    zh:
+      - 物品严重受损
+      - 衣物破烂不堪
+      - 身心俱疲
+      - 有小颗粒物洒落的状态
   name: ボロボロ
 - examples:
   - en: "A：What’s wrong? Why are you jaw-dropped?  \nB: Be…Behind you, there's a ghost."
     jp: "A：どうしたの？口を **ぽかん** と開けて。  \nB：う、うしろに、お化けが・・・。"
+    zh: "A: 怎么了？为什么惊讶得嘴巴都张大了。 \nB: 后面...后面有个鬼。"
   - en: He listened to the story with his jaws dropped.
     jp: 彼は **ぽかん** と口を開けて話を聞いていた。
+    zh: 他听故事的时候惊讶得嘴都张大了。
   - en: I was confused when my friend told me something I didn't remember.
     jp: 友達に身に覚えのないことを言われて、 **ぽかん** としてしまった。
+    zh: 当朋友告诉我一些我不记得的事情时，我感到懵懂不知所措。
   key: pokan
   meanings:
     en:
-    - The state of being surprised and having one’s mouth open.
-    - A dazed look.
+      - The state of being surprised and having one’s mouth open.
+      - A dazed look.
     jp:
-    - 驚いて口を開けたままでいる様子。 ぼんやりしている様子。
+      - 驚いて口を開けたままでいる様子。 ぼんやりしている様子。
+    zh:
+      - 因惊讶而张开嘴巴
+      - 愣住了
   name: ぽかん
 - examples:
   - en: The soup is hot, so blow on it and eat it.
     jp: スープは熱いから **フーフー** して食べるのよ。
+    zh: 汤很烫，所以吹吹凉了再吃。
   - en: This is freshly made and hot, so blow on it and eat it.
     jp: 出来立てで熱いから **フーフー** して食べてね。
+    zh: 这是刚做好的，很烫，所以吹吹凉了再吃。
   key: fuufuu
   meanings:
     en:
@@ -3728,6 +3789,7 @@
 - examples:
   - en: The owl is **hooting**.
     jp: フクロウが **ホーホー** と鳴いている。
+    zh: 猫头鹰在发出嘶嘶的叫声。
   key: hoohoo
   meanings:
     en:
@@ -3740,8 +3802,10 @@
 - examples:
   - en: I can hear the sound of wood being sawed in the yard.
     jp: 庭から **ギコギコ** と木を切る音が聞こえる。
+    zh: 我能听到从院子里传来叽嘎叽嘎切割木头的声音。
   - en: I sawed it with my saw.
     jp: ノコギリで **ギコギコ** と木を切った。
+    zh: 我用我的锯子叽嘎叽嘎地锯了它。
   key: gikogiko
   meanings:
     en:
@@ -3754,10 +3818,13 @@
 - examples:
   - en: The fingers of my hands became wrinkled from soaking in the bathtub too much.
     jp: 湯船に浸かりすぎて、手の指が **しわしわ** になった。
+    zh: 由于泡在浴缸里时间过长，我的手指变得起了很多皱纹。
   - en: Taro Urashima opened the pandora's box and became a wrinkled old man.
     jp: 浦島太郎が玉手箱を開けてしまったせいで、 **しわくちゃ** のおじいさんになってしまった。
+    zh: 浦島太郎打开了潘多拉的盒子，变成了皱纹满面的老人。
   - en: A wrinkled shirt looks disheveled, so you'd better iron it.
     jp: '**しわくちゃ** のシャツはだらしなく見えるからアイロンをかけたほうがいいよ。'
+    zh: 皱巴巴的衬衫看起来凌乱不堪，最好熨烫一下。
   key: shiwashiwa
   meanings:
     en:
@@ -3770,8 +3837,10 @@
 - examples:
   - en: This shampoo is said to make your hair **shiny and glossy.**
     jp: このシャンプーを使うと、髪が **ツヤツヤ** になるそうです。
+    zh: 据说使用这种洗发水，头发会变得光滑有光泽。
   - en: My mother is in her fifties, but her skin is as **lustrous** as mine.
     jp: 母は５０代ですが、私と同じぐらい肌が **ツヤツヤ** です。
+    zh: 我母亲已经五十多岁了，但她的皮肤和我的一样光润。
   key: tsuyatsuya
   meanings:
     en:
@@ -3784,10 +3853,13 @@
 - examples:
   - en: What are you **staring** at me for?
     jp: 何、俺のこと **じろじろ** 見てんだよ。
+    zh: 你为什么盯着看我？
   - en: It's rude to **stare** at people's faces.
     jp: 人の顔を **じろじろ** と見るのは失礼だよ。
+    zh: 直勾勾地盯着人的脸是不礼貌的。
   - en: I'm afraid that I feel like someone is **staring** at me somehow.
     jp: なんだか、誰かに **じろじろ** 見られている気がして怖い。
+    zh: 我感觉好像有人盯着我看，感觉有点害怕。
   key: jirojiro
   meanings:
     en:
@@ -3801,10 +3873,13 @@
 - examples:
   - en: A squirrel is chewing on some nuts.
     jp: リスがも **もぐもぐ** と木の実を食べている。
+    zh: 松鼠正咯吱咯吱地啃着一些坚果。
   - en: Watching my friend munching on a donut in front of me made me hungry.
     jp: 目の前でもドーナツを **もぐもぐ** 食べる友達を見てたら、お腹が空いてきた。
+    zh: 看着我的朋友在我面前啃着甜甜圈让我开始感到饥饿。
   - en: Be sure to chew your food well and swallow.
     jp: ちゃんと **もぐもぐ** してからごっくんするのよ。
+    zh: 记得好好咀嚼食物然后再吞咽。
   key: mogumogu
   meanings:
     en:
@@ -3815,14 +3890,15 @@
       - 闭上嘴咀嚼，不张嘴说话
   name: もぐもぐ
 - examples:
-  - en: 'In Southeast Asian countries such as the Philippines and Malaysia, skyscrapers
-
-      are beginning to appear.'
+  - en: 'In Southeast Asian countries such as the Philippines and Malaysia, skyscrapers are beginning to appear.'
     jp: フィリピンやマレーシアといった東南アジアの国々で、高層ビルが **ニョキニョキ** 建ち始めている。
+    zh: 在菲律宾和马来西亚等东南亚国家，高楼大厦开始迅速崛起。
   - en: Horsetails are sprouting up all over the place.
     jp: つくしが **にょきにょき** と生えている。
+    zh: 小蕨草到处迅速生长。
   - en: Mushrooms are sprouting up all over the place.
     jp: キノコが **にょきにょき** と生えている。
+    zh: 蘑菇到处迅速生长。
   key: nyokinyoki
   meanings:
     en:
@@ -3837,11 +3913,10 @@
 - examples:
   - en: My father has been **coughing** a lot lately, and I'm worried about him.
     jp: 父はここ最近、よく **ゴホゴホ** と咳をしているので心配だ。
-  - en: 'During the exam, I couldn''t concentrate at all because the person next to
-      me
-
-      kept **coughing and coughing.**'
+    zh: 最近我父亲经常咳嗽，我很担心他。
+  - en: "During the exam, I couldn't concentrate at all because the person next to me kept **coughing and coughing.**"
     jp: 試験中、隣の人が **ゴホゴホ** と何度も咳をするので、全然集中できなかった。
+    zh: 在考试时，因为旁边的人一直咳嗽个不停，我根本无法集中精力。
   key: gohogoho
   meanings:
     en:
@@ -3854,10 +3929,13 @@
 - examples:
   - en: I just woke up, so my hair is all messy.
     jp: 起きたばかりなので、髪が **ぼさぼさ** です。
+    zh: 我刚刚起床，所以我的头发凌乱。
   - en: My hair became messy because of the strong wind.
     jp: 強い風のせいで、髪が **ぼさぼさ** になった。
+    zh: 因为强风吹乱了我的头发，变得凌乱了。
   - en: I don't take care of my hair properly, so it's messy.
     jp: 髪をきちんと手入れしていないので、 **ぼさぼさ** だ。
+    zh: 因为我没有好好打理我的头发，所以它现在凌乱不堪。
   key: bosabosa
   meanings:
     en:
@@ -3870,10 +3948,13 @@
 - examples:
   - en: The boxer is **wobbling** by the punch of his opponent.
     jp: ボクサーは相手のパンチを受けて、 **よろよろ** している。
+    zh: 那位拳击手被对手的拳击击中后，摇摇晃晃地站立着。
   - en: He can't walk straight because he drank too much and is **wobbling**.
     jp: 彼は飲み過ぎたせいで、まっすぐ歩けず、 **よろよろ** している。
+    zh: 他喝醉了，摇摇晃晃地走不直。
   - en: The old man is **wobbling** , I wonder if he is all right.
     jp: あのおじいさん、 **よろよろ** と歩いているけど、大丈夫かなあ。
+    zh: 那位老人走路摇摇晃晃的，不知道他是不是没事。
   key: yoroyoro
   meanings:
     en:
@@ -3889,8 +3970,10 @@
 - examples:
   - en: I will **simmer** the soup.
     jp: スープを **コトコト** 煮込む。
+    zh: 我会慢炖这锅汤。
   - en: Once you put ingredients in the pot, all you have to do is to **simmer**.
     jp: 具材を鍋に入れたら、あとは **コトコト** 煮込むだけです。
+    zh: 一旦你把食材放入锅中，接下来只需缓火煮。
   key: kotokoto
   meanings:
     en:
@@ -3903,8 +3986,10 @@
 - examples:
   - en: There is a strong wind blowing outside.
     jp: 外では強い風が **びゅうびゅう** と吹いている。
+    zh: 外面有强风呼啸
   - en: A typhoon is approaching, and the wind is blowing fast.
     jp: 台風が近づいていて、風が **びゅうびゅう** と吹いている。
+    zh: 台风正在接近，风势猛烈。
   key: byuubyuu
   meanings:
     en:
@@ -3918,21 +4003,23 @@
 - examples:
   - en: What are you **smiling** about? Did something good happen to you?
     jp: どうしたの **ニコニコ** して？ 何か良いことでもあった？
+    zh: 你为什么在笑？发生了什么好事吗？
   - en: Hey, let's take a picture. **Smile** more
     jp: はーい、みんな写真撮るよー。もっと **ニコニコ** してー。
+    zh: 嘿，我们来拍照吧。多笑一点。
   - en: 'He seemed to have found a girlfriend yesterday, and he was **smiling** all day today.'
     jp: 彼は昨日、彼女ができたようで、今日１日中 **ニコニコ** していた。
+    zh: 他昨天似乎找到了女朋友，今天一整天都笑容满面。
   - en: Mr. Lee is always **smiling** , isn't he?
     jp: リーさんっていつも **ニコニコ** しているよね。
+    zh: 李先生总是笑眯眯的，是吧？
   key: nikoniko
   meanings:
     en:
-      - The state of smiling happily or joyfully.
+      - The state of smiling happily or joyfully.
     jp:
       - 楽しそう、あるいは嬉しそうに笑みを浮かべる様子。
     zh:
-      - 笑嘻嘻
-      - 笑眯眯
-      - 笑吟吟
-      - 微微笑
+      - 笑嘻嘻，笑眯眯
+      - 笑吟吟，微微笑。
   name: にこにこ

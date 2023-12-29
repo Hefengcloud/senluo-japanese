@@ -1,11 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/helpers/image_helper.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_example_list_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meaning_list_view.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_title_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
@@ -32,38 +33,38 @@ class ItemDisplayView extends StatefulWidget {
 
 class _ItemDisplayViewState extends State<ItemDisplayView> {
   static const _kMainColor = kColorN1;
+  final GlobalKey globalKey = GlobalKey();
 
-  final Map<PreviewType, Widget> _tabs = {};
-  final Map<PreviewType, Widget> _previews = {};
+  final _previewTypes = <PreviewType>[
+    PreviewType.full,
+    PreviewType.meanings,
+    PreviewType.examples,
+  ];
 
-  var _previewType = PreviewType.full;
+  var _currentType = PreviewType.full;
 
   List<Example> _examples = [];
 
-  @override
-  void initState() {
-    super.initState();
-    _tabs[PreviewType.full] = _buildFullText(context);
-    _tabs[PreviewType.meanings] = _buildMeaningsText(context);
-    _tabs[PreviewType.examples] = _buildExamplesText(context);
-
-    _previews[PreviewType.full] = _buildFullPreview(context);
-    _previews[PreviewType.meanings] = _buildMeaningsPreview(context);
-    _previews[PreviewType.examples] = _buildExamplesPreview(context);
-  }
+  double _fontSizeScaleFactor = 1;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 3, child: _buildLeft(context)),
+        Expanded(
+          flex: 3,
+          child: RepaintBoundary(
+            key: globalKey,
+            child: _buildLeft(context),
+          ),
+        ),
         Expanded(flex: 2, child: _buildRight(context)),
       ],
     );
   }
 
   _buildLeft(BuildContext context) {
-    switch (_previewType) {
+    switch (_currentType) {
       case PreviewType.full:
         return _buildFullPreview(context);
       case PreviewType.meanings:
@@ -75,33 +76,23 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
 
   _buildRight(BuildContext context) {
     return DefaultTabController(
-      length: _tabs.length,
+      length: _previewTypes.length,
       child: Builder(builder: (context) {
         final controller = DefaultTabController.of(context);
         controller.addListener(() {
           setState(() {
-            _previewType = _tabs.keys.toList()[controller.index];
+            _currentType = _previewTypes[controller.index];
           });
         });
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TabBar(
-                tabs: _tabs.entries
-                    .map(
-                      (e) => Tab(text: e.key.value),
-                    )
-                    .toList()),
+            TabBar(tabs: _previewTypes.map((e) => Tab(text: e.value)).toList()),
             const Gap(32),
             Expanded(
               child: TabBarView(
-                children: _tabs.entries
-                    .map(
-                      (e) => Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: e.value,
-                      ),
-                    )
+                children: _previewTypes
+                    .map<Widget>((type) => _buildTabbarView(type))
                     .toList(),
               ),
             ),
@@ -109,15 +100,16 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () => _saveImage(),
                   icon: const Icon(Icons.image),
                   label: const Text('Save Image'),
                 ),
-                ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(Icons.abc),
-                  label: const Text('Copy Text'),
-                ),
+                if (_currentType == PreviewType.full)
+                  ElevatedButton.icon(
+                    onPressed: () => _copyText(),
+                    icon: const Icon(Icons.abc),
+                    label: const Text('Copy Text'),
+                  ),
               ],
             ),
           ],
@@ -126,11 +118,37 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
     );
   }
 
+  Widget _buildTabbarView(PreviewType type) {
+    switch (type) {
+      case PreviewType.full:
+        return _buildFullText(context);
+      case PreviewType.meanings:
+        return _buildMeaningsText(context);
+      case PreviewType.examples:
+        return _buildExamplesText(context);
+    }
+  }
+
+  _copyText() async {
+    final text = _generateFullText(widget.item);
+    await Clipboard.setData(ClipboardData(text: text));
+  }
+
+  _saveImage() async {
+    final bytes = await captureWidget(globalKey);
+    if (bytes != null) {
+      await saveImageToFile(
+        bytes,
+        '${widget.item.key}-${_currentType.value.toLowerCase()}.jpg',
+      );
+    }
+  }
+
   _buildFullText(BuildContext context) {
     final item = widget.item;
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
-      child: Text(_generateFullText(item)),
+      child: SelectableText(_generateFullText(item)),
     );
   }
 
@@ -142,8 +160,8 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
           .map((e) => ListTile(
                 title: Text(e['jp'] ?? ''),
                 subtitle: Text(e['en'] ?? ''),
-                tileColor: _examples.contains(e) ? _kMainColor : null,
-                textColor: _examples.contains(e) ? Colors.white : Colors.black,
+                leading: _examples.contains(e) ? const Icon(Icons.check) : null,
+                // leading: const Icon(Icons.check),
                 onTap: () {
                   final examples = List<Example>.from(_examples);
                   if (examples.contains(e)) {
@@ -183,6 +201,18 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
                   title: Text(e),
                 ))
             .toList(),
+        Slider(
+          label: _fontSizeScaleFactor.toStringAsFixed(1),
+          value: _fontSizeScaleFactor,
+          max: 2,
+          min: 0.5,
+          divisions: 15,
+          onChanged: (value) {
+            setState(() {
+              _fontSizeScaleFactor = value;
+            });
+          },
+        ),
       ],
     );
   }
@@ -202,6 +232,7 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
     return ItemMeaningListView(
       item: item,
       mainColor: _kMainColor,
+      fontSize: 20 * _fontSizeScaleFactor,
     );
   }
 
@@ -209,6 +240,7 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
     return ItemExampleListView(
       item: widget.item,
       mainColor: _kMainColor,
+      examples: _examples,
     );
   }
 
@@ -216,9 +248,10 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
     return AspectRatio(
       aspectRatio: 3 / 4,
       child: Card(
+        color: Colors.white,
         child: Column(
           children: [
-            const Gap(32),
+            const Gap(128),
             Expanded(
               child: Image.asset(
                 'assets/onomatopoeia/images/${widget.item.key}.png',
@@ -233,9 +266,9 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               child: AutoSizeText(
-                widget.item.meanings['zh']?.join('。') ?? '',
+                "${widget.item.meanings['zh']?.join('；') ?? ''}。",
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 24),
                 maxLines: 1,
               ),
             ),

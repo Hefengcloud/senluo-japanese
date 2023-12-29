@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,20 +21,24 @@ class ItemTitleView extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Text(
+        AutoSizeText(
           title,
           style: GoogleFonts.getFont(
             'Rampart One',
             color: mainColor,
-            fontSize: 64,
+            fontSize: 48,
           ),
         ),
-        const Gap(32),
-        Text(
-          caption,
-          style: const TextStyle(
-            fontSize: 20,
-            color: kColorBrand,
+        const Gap(8),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: Text(
+            caption,
+            style: const TextStyle(
+              fontSize: 20,
+              color: kColorBrand,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ],

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -9,11 +10,13 @@ import 'item_title_view.dart';
 class ItemMeaningListView extends StatelessWidget {
   final Onomatopoeia item;
   final Color mainColor;
+  final double fontSize;
 
   const ItemMeaningListView({
     super.key,
     required this.item,
     required this.mainColor,
+    required this.fontSize,
   });
 
   @override
@@ -71,6 +74,7 @@ class ItemMeaningListView extends StatelessWidget {
           title: title,
           meanings: meanings,
           color: color,
+          fontSize: fontSize,
         ),
       ),
     );
@@ -81,12 +85,14 @@ class ItemMeaningView extends StatelessWidget {
   final String title;
   final List<String> meanings;
   final Color color;
+  final double fontSize;
 
   const ItemMeaningView({
     super.key,
     required this.title,
     required this.meanings,
     required this.color,
+    this.fontSize = 20,
   });
 
   @override
@@ -114,8 +120,11 @@ class ItemMeaningView extends StatelessWidget {
             children: [
               ...meanings
                   .map((e) => ListTile(
-                        leading: const Text('・'),
-                        title: Text(e),
+                        leading: const Text(''),
+                        title: AutoSizeText(
+                          e,
+                          style: TextStyle(fontSize: fontSize),
+                        ),
                       ))
                   .toList()
             ],

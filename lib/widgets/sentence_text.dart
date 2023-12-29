@@ -7,6 +7,7 @@ class SentenceText extends StatelessWidget {
   final Color emphasizedColor;
   final double fontSize;
   final TextAlign? textAlign;
+  final bool multipleLines;
 
   const SentenceText({
     super.key,
@@ -15,16 +16,18 @@ class SentenceText extends StatelessWidget {
     required this.lines,
     required this.emphasizedColor,
     this.textAlign,
+    this.multipleLines = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return AutoSizeText.rich(
+    return Text.rich(
       TextSpan(
         children: [
           ..._buildMainText(lines[0]),
-          const TextSpan(text: '\n\n'),
-          _buildTranslatedText(lines[1]),
+          if (multipleLines) const TextSpan(text: '\n\n'),
+          _buildTranslatedText(
+              "${multipleLines ? '' : '（'}${lines[1]}${multipleLines ? '' : '）'}"),
           const TextSpan(text: '\n\n'),
           if (lines.length > 2) _buildTranslatedText(lines[2])
         ],
@@ -42,10 +45,12 @@ class SentenceText extends StatelessWidget {
       );
 
   _buildMainText(String text) {
-    final parts = text.split('**');
+    var parts = text.split('**');
     final emphasizedIndex = text.startsWith('**') ? 0 : 1;
     final spans = [];
-
+    if (emphasizedIndex == 0) {
+      parts = parts.sublist(1);
+    }
     for (int i = 0; i < parts.length; i++) {
       if (i % 2 == emphasizedIndex) {
         spans.add(

@@ -7,12 +7,14 @@ import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
 class ItemExampleListView extends StatelessWidget {
   final Onomatopoeia item;
+  final List<Example> examples;
 
   final Color mainColor;
   const ItemExampleListView({
     super.key,
     required this.item,
     required this.mainColor,
+    this.examples = const [],
   });
 
   @override
@@ -29,8 +31,7 @@ class ItemExampleListView extends StatelessWidget {
               mainColor: mainColor,
             ),
           ),
-          ...item.examples
-              .take(3)
+          ..._getExamples()
               .map<Widget>(
                 (e) => Expanded(child: _buildExample(context, e, 1)),
               )
@@ -43,19 +44,22 @@ class ItemExampleListView extends StatelessWidget {
     );
   }
 
+  _getExamples() =>
+      examples.isNotEmpty ? examples : item.examples.take(3).toList();
+
   _buildExample(BuildContext context, Example example, int index) => Stack(
         children: [
           Container(
             width: double.infinity,
             height: double.infinity,
             margin: const EdgeInsets.symmetric(
-              vertical: 8.0,
-              horizontal: 16.0,
+              vertical: 16.0,
+              horizontal: 32.0,
             ),
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
-              color: mainColor.withAlpha(10),
-              borderRadius: BorderRadius.circular(8),
+              color: Colors.green.withAlpha(10),
+              borderRadius: BorderRadius.circular(16),
             ),
             child: Align(
               alignment: Alignment.centerLeft,
@@ -65,7 +69,9 @@ class ItemExampleListView extends StatelessWidget {
                   example['zh'] ?? '',
                   example['en'] ?? '',
                 ],
+                fontSize: 22,
                 emphasizedColor: mainColor,
+                multipleLines: true,
               ),
             ),
           ),

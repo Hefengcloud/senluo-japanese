@@ -15,6 +15,7 @@ import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
 import '../../../constants/colors.dart';
+import '../../../helpers/image_helper.dart';
 import '../constants/colors.dart';
 
 class GrammarDisplayView extends StatelessWidget {
@@ -141,7 +142,7 @@ class GrammarDisplayView extends StatelessWidget {
 
   Text _buildZhMeaning() {
     return Text(
-      item.meaning.cn.join('、'),
+      item.meaning.cn.join('；'),
       style: TextStyle(
         color: _mainColor,
         fontSize: 24.0,
@@ -153,7 +154,7 @@ class GrammarDisplayView extends StatelessWidget {
 
   AutoSizeText _buildJpMeaning() {
     return AutoSizeText(
-      item.meaning.jp.join('、'),
+      item.meaning.jp.join('；'),
       textAlign: TextAlign.center,
       style: const TextStyle(
         fontSize: 24,
@@ -230,42 +231,22 @@ class GrammarDisplayView extends StatelessWidget {
     return theExamples
         .map((e) => Padding(
               padding: const EdgeInsets.only(
-                bottom: 16.0,
+                bottom: 0.0,
               ),
               child: SentenceText(
                 fontSize: 24.0,
                 lines: [e.jp, e.cn],
                 emphasizedColor: _mainColor,
+                textAlign: TextAlign.left,
+                multipleLines: false,
               ),
             ))
         .toList();
   }
 
   _onSaveImage() async {
-    final bytes = await captureWidget();
-    _saveImageToFile(bytes!);
-  }
-
-  _saveImageToFile(Uint8List bytes) async {
-    // Directory appDocDir = await getApplicationDocumentsDirectory();
-    // String appDocPath = appDocDir.path;
-    String? outputFile = await FilePicker.platform.saveFile(
-      dialogTitle: 'Please select an output file:',
-      fileName: 'grammar.jpg',
-    );
-
-    if (outputFile != null) {
-      File file = File(outputFile);
-      file.writeAsBytes(bytes);
-    }
-  }
-
-  Future<Uint8List?> captureWidget() async {
-    final boundary =
-        globalKey.currentContext!.findRenderObject() as RenderRepaintBoundary;
-    final image = await boundary.toImage(pixelRatio: 3.0);
-    final byteData = await image.toByteData(format: ImageByteFormat.png);
-    return byteData?.buffer.asUint8List();
+    final bytes = await captureWidget(globalKey);
+    saveImageToFile(bytes!, 'grammar.jpg');
   }
 
   List<String> _parseItemName(String itemName) {
