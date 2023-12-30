@@ -10,7 +10,7 @@ import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meaning_list
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
-import '../../grammars/constants/texts.dart';
+import '../grammars/constants/texts.dart';
 
 enum PreviewType {
   full(value: 'Full'),
@@ -22,16 +22,16 @@ enum PreviewType {
   const PreviewType({required this.value});
 }
 
-class ItemDisplayView extends StatefulWidget {
+class ItemDisplayPage extends StatefulWidget {
   final Onomatopoeia item;
 
-  const ItemDisplayView({super.key, required this.item});
+  const ItemDisplayPage({super.key, required this.item});
 
   @override
-  State<ItemDisplayView> createState() => _ItemDisplayViewState();
+  State<ItemDisplayPage> createState() => _ItemDisplayPageState();
 }
 
-class _ItemDisplayViewState extends State<ItemDisplayView> {
+class _ItemDisplayPageState extends State<ItemDisplayPage> {
   static const _kMainColor = kColorN1;
   final GlobalKey globalKey = GlobalKey();
 
@@ -92,7 +92,13 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
             Expanded(
               child: TabBarView(
                 children: _previewTypes
-                    .map<Widget>((type) => _buildTabbarView(type))
+                    .map<Widget>((type) => Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 8,
+                          ),
+                          child: _buildTabbarView(type),
+                        ))
                     .toList(),
               ),
             ),
@@ -179,41 +185,37 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
   }
 
   _buildMeaningsText(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _buildTitle(kTitleJpMeaning),
-        ...widget.item.meanings['jp']!
-            .map((e) => ListTile(
-                  title: Text(e),
-                ))
-            .toList(),
-        _buildTitle(kTitleEnMeaning),
-        ...widget.item.meanings['en']!
-            .map((e) => ListTile(
-                  title: Text(e),
-                ))
-            .toList(),
-        _buildTitle(kTitleZhMeaning),
-        ...widget.item.meanings['zh']!
-            .map((e) => ListTile(
-                  title: Text(e),
-                ))
-            .toList(),
-        Slider(
-          label: _fontSizeScaleFactor.toStringAsFixed(1),
-          value: _fontSizeScaleFactor,
-          max: 2,
-          min: 0.5,
-          divisions: 15,
-          onChanged: (value) {
-            setState(() {
-              _fontSizeScaleFactor = value;
-            });
-          },
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _buildTitle(kTitleJpMeaning),
+          ...widget.item.meanings['jp']!.map((e) => Text(e)).toList(),
+          const Gap(16),
+          _buildTitle(kTitleZhMeaning),
+          ...widget.item.meanings['zh']!.map((e) => Text(e)).toList(),
+          const Gap(16),
+          _buildTitle(kTitleEnMeaning),
+          ...widget.item.meanings['en']!.map((e) => Text(e)).toList(),
+          const Gap(32),
+          const Divider(height: 1),
+          const Gap(32),
+          _buildTitle('Font Size'),
+          Slider(
+            label: _fontSizeScaleFactor.toStringAsFixed(1),
+            value: _fontSizeScaleFactor,
+            max: 2,
+            min: 0.5,
+            divisions: 15,
+            onChanged: (value) {
+              setState(() {
+                _fontSizeScaleFactor = value;
+              });
+            },
+          ),
+        ],
+      ),
     );
   }
 
@@ -247,7 +249,7 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
   AspectRatio _buildFullPreview(BuildContext context) {
     return AspectRatio(
       aspectRatio: 3 / 4,
-      child: Card(
+      child: Container(
         color: Colors.white,
         child: Column(
           children: [
@@ -300,11 +302,11 @@ class _ItemDisplayViewState extends State<ItemDisplayView> {
 $kTitleJpMeaning
 ${item.meanings['jp']?.map((e) => '- $e').toList().join('\n')}
 
-$kTitleEnMeaning
-${item.meanings['en']?.map((e) => '- $e').toList().join('\n')}
-
 $kTitleZhMeaning
 ${item.meanings['zh']?.map((e) => '- $e').toList().join('\n')}
+
+$kTitleEnMeaning
+${item.meanings['en']?.map((e) => '- $e').toList().join('\n')}
 
 $kTitleExample
 ${item.examples.map((e) => "◎ ${e['jp']}\n→ ${e['en']}\n→ ${e['zh']}\n").toList().join('\n')}

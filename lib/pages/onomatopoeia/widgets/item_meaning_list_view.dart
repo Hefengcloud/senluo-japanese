@@ -23,7 +23,8 @@ class ItemMeaningListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 3 / 4,
-      child: Card(
+      child: Container(
+        color: Colors.white,
         child: Column(
           children: [
             _buildTitle(),
@@ -119,13 +120,15 @@ class ItemMeaningView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ...meanings
-                  .map((e) => ListTile(
-                        leading: const Text(''),
-                        title: AutoSizeText(
-                          e,
-                          style: TextStyle(fontSize: fontSize),
-                        ),
-                      ))
+                  .map(
+                    (e) => Padding(
+                      padding: const EdgeInsets.only(left: 32.0, bottom: 8),
+                      child: AutoSizeText(
+                        e,
+                        style: TextStyle(fontSize: fontSize),
+                      ),
+                    ),
+                  )
                   .toList()
             ],
           ),

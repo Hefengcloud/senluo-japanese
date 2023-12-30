@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_list_view.dart';
-import 'package:senluo_japanese_cms/repos/onomatopoeia/models/category_model.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
 import 'bloc/onomatopoeia_bloc.dart';

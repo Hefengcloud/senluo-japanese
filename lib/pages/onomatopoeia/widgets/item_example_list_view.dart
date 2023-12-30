@@ -19,7 +19,8 @@ class ItemExampleListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
+      color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -58,7 +59,7 @@ class ItemExampleListView extends StatelessWidget {
             ),
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
-              color: Colors.green.withAlpha(10),
+              color: Colors.red.withAlpha(10),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Align(

@@ -633,23 +633,24 @@
     - Indicates a lot of hair.
     jp:
     - 毛が多いことを表す。
-  name: 'フサフサ '
+  name: フサフサ
 - examples:
   - en: My throat feels a little **itchy**. I wonder if I caught a cold.
     jp: なんだか喉が **いがいが** する。風邪でも引いたのかな。
+    zh: 喉咙有点发痒。我是不是感冒了呢？
   key: igaiga
   meanings:
     en:
-    - Spiky feeling.  Often used for sore or itchy throat.
+      - Spiky feeling.  Often used for sore or itchy throat.
     jp:
-    - トゲによる刺激を感じる様子。喉の痛みやかゆみに使われることが多い。
+      - トゲによる刺激を感じる様子。喉の痛みやかゆみに使われることが多い。
+    zh:
+      - 刺痛感，通常用于喉咙疼痛或发痒的情况
   name: いがいが
 - examples:
   - en: He's always **madly in love** with Jessica.
     jp: 彼はいつもジェシカさんに **メロメロ** だ。
-  - en: 'Ms. Tanaka is **madly in love** with the man she met at the last party that
-
-      she keeps in touch with him every day.'
+  - en: 'Ms. Tanaka is **madly in love** with the man she met at the last party that she keeps in touch with him every day.'
     jp: 田中さんはこの前の合コンで出会った男性に **メロメロ** で、毎日のように連絡をとっているそうだ。
   key: meromero
   meanings:

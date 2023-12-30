@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
-import 'item_display_view.dart';
+import '../onomatopoeia_display_page.dart';
 
 class ItemListView extends StatelessWidget {
   final List<Onomatopoeia> items;
@@ -51,7 +51,7 @@ class ItemCardView extends StatelessWidget {
           content: SizedBox(
             width: 1000,
             height: 800,
-            child: ItemDisplayView(item: item),
+            child: ItemDisplayPage(item: item),
           ),
         ),
       );
