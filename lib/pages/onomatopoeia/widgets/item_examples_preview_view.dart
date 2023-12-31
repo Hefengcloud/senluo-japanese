@@ -26,8 +26,6 @@ class ItemExamplesPreviewView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
           padding: const EdgeInsets.all(16.0),
@@ -42,9 +40,6 @@ class ItemExamplesPreviewView extends StatelessWidget {
               (e) => Expanded(child: _buildExample(context, e, 1)),
             )
             .toList(),
-        const Gap(16),
-        const Center(child: EverJapanLogo()),
-        const Gap(32),
       ],
     );
   }
@@ -56,8 +51,11 @@ class ItemExamplesPreviewView extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Align(
-              alignment: Alignment.topCenter,
-              child: _buildTitle(kTitleExample),
+              alignment: Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: _buildTitle(kTitleExample),
+              ),
             ),
           ),
           Container(
@@ -73,14 +71,14 @@ class ItemExamplesPreviewView extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
             child: Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
               child: SentenceText(
                 lines: [
                   example['jp'] ?? '',
                   example['zh'] ?? '',
                   example['en'] ?? '',
                 ],
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.left,
                 fontSize: kItemBodyTextSize * fontScaleFactor,
                 emphasizedColor: kItemMainColor,
                 multipleLines: true,
@@ -98,6 +96,6 @@ class ItemExamplesPreviewView extends StatelessWidget {
           ),
         ),
         side: BorderSide.none,
-        backgroundColor: bgColor.withAlpha(40),
+        backgroundColor: bgColor.withOpacity(0.1),
       );
 }

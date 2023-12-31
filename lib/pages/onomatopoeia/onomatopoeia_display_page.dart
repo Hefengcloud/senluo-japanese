@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
@@ -12,6 +13,7 @@ import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meanings_pre
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meanings_text_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
+import '../../widgets/everjapan_logo.dart';
 import 'helpers/item_text_helper.dart';
 
 enum PreviewType {
@@ -47,7 +49,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   List<Example> _examples = [];
 
   double _fontSizeScaleFactor = 1;
-  bool? _showBorder = true;
+  bool? _showBorder = false;
 
   @override
   Widget build(BuildContext context) {
@@ -234,7 +236,31 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
             color: Colors.white,
             borderRadius: BorderRadius.circular(8),
           ),
-          child: child,
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: child,
+              ),
+              Positioned.fill(
+                right: 16,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Opacity(
+                    opacity: 0.05,
+                    child: Transform.rotate(
+                      angle: -math.pi / 6,
+                      child: const EverJapanLogo(
+                        lang: LogoLang.zh,
+                        logoSize: 80,
+                        fontSize: 40,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

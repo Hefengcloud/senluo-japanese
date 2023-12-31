@@ -25,7 +25,7 @@ class ItemFullPreviewView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 128, bottom: 32),
           child: SizedBox(
-            height: 200,
+            height: 250,
             child: Image.asset(
               'assets/onomatopoeia/images/${item.key}.png',
             ),
@@ -46,9 +46,6 @@ class ItemFullPreviewView extends StatelessWidget {
             ),
           ),
         ),
-        const Gap(96),
-        const EverJapanLogo(),
-        const Gap(32),
       ],
     );
   }

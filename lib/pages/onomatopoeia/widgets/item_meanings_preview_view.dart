@@ -40,9 +40,6 @@ class ItemMeaningsPreviewView extends StatelessWidget {
           item.meanings['jp'] ?? [],
           Colors.red,
         ),
-        const Gap(16),
-        const EverJapanLogo(),
-        const Gap(32),
       ],
     );
   }
@@ -93,8 +90,11 @@ class ItemMeaningView extends StatelessWidget {
       children: [
         Positioned.fill(
           child: Align(
-            alignment: Alignment.topCenter,
-            child: _buildTitle(),
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: _buildTitle(),
+            ),
           ),
         ),
         Container(
@@ -108,7 +108,7 @@ class ItemMeaningView extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ...meanings
                   .map(
@@ -136,6 +136,6 @@ class ItemMeaningView extends StatelessWidget {
           ),
         ),
         side: BorderSide.none,
-        backgroundColor: color.withAlpha(40),
+        backgroundColor: color.withOpacity(0.2),
       );
 }

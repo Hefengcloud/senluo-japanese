@@ -3,13 +3,21 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants/colors.dart';
 
+enum LogoLang {
+  zh,
+  en,
+}
+
 class EverJapanLogo extends StatelessWidget {
   final double logoSize;
   final double fontSize;
+  final LogoLang lang;
+
   const EverJapanLogo({
     super.key,
     this.logoSize = 32,
     this.fontSize = 16,
+    this.lang = LogoLang.zh,
   });
 
   @override
@@ -23,7 +31,7 @@ class EverJapanLogo extends StatelessWidget {
           width: logoSize,
         ),
         Text(
-          '日系生活家',
+          lang == LogoLang.zh ? '日系生活家' : 'everjapan',
           style: TextStyle(
             color: kBrandColor,
             fontSize: fontSize,
