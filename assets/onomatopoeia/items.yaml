@@ -1213,12 +1213,18 @@
 - examples:
   - en: I have a **sharp pain** in my stomach.
     jp: 胃が **キリキリ** と痛む。
+    zh: 胃部感到刺痛。
+  - en: Suddenly, my stomach is experiencing sharp pains.
+    jp: 突然腹が **キリキリ** 痛む。
+    zh: 突然肚子剧痛。
   key: kirikiri
   meanings:
     en:
-    - sharp pain / stabbing pain
+      - sharp pain / stabbing pain
     jp:
-    - 鋭い痛みを表す。
+      - 鋭い痛みを表す。
+    zh:
+      - 刺痛
   name: キリキリ
 - examples:
   - en: I heard that this cream makes your skin **smooth**.

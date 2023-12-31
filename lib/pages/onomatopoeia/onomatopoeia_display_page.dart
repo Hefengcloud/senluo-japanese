@@ -1,16 +1,18 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/helpers/image_helper.dart';
-import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_example_list_view.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meaning_list_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/contants.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_examples_preview_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_examples_text_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_full_preview_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_full_text_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meanings_preview_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meanings_text_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
-import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
-import '../grammars/constants/texts.dart';
+import 'helpers/item_text_helper.dart';
 
 enum PreviewType {
   full(value: 'Full'),
@@ -32,7 +34,6 @@ class ItemDisplayPage extends StatefulWidget {
 }
 
 class _ItemDisplayPageState extends State<ItemDisplayPage> {
-  static const _kMainColor = kColorN1;
   final GlobalKey globalKey = GlobalKey();
 
   final _previewTypes = <PreviewType>[
@@ -46,6 +47,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   List<Example> _examples = [];
 
   double _fontSizeScaleFactor = 1;
+  bool? _showBorder = true;
 
   @override
   Widget build(BuildContext context) {
@@ -64,13 +66,30 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   }
 
   _buildLeft(BuildContext context) {
+    final item = widget.item;
     switch (_currentType) {
       case PreviewType.full:
-        return _buildFullPreview(context);
+        return _buildPreviewView(
+          child: ItemFullPreviewView(
+            item: item,
+            fontSizeScaleFactor: _fontSizeScaleFactor,
+          ),
+        );
       case PreviewType.meanings:
-        return _buildMeaningsPreview(context);
+        return _buildPreviewView(
+          child: ItemMeaningsPreviewView(
+            item: item,
+            fontSize: kItemBodyTextSize * _fontSizeScaleFactor,
+          ),
+        );
       case PreviewType.examples:
-        return _buildExamplesPreview(context);
+        return _buildPreviewView(
+          child: ItemExamplesPreviewView(
+            item: item,
+            examples: _examples,
+            fontScaleFactor: _fontSizeScaleFactor,
+          ),
+        );
     }
   }
 
@@ -102,41 +121,92 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
                     .toList(),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton.icon(
-                  onPressed: () => _saveImage(),
-                  icon: const Icon(Icons.image),
-                  label: const Text('Save Image'),
-                ),
-                if (_currentType == PreviewType.full)
-                  ElevatedButton.icon(
-                    onPressed: () => _copyText(),
-                    icon: const Icon(Icons.abc),
-                    label: const Text('Copy Text'),
-                  ),
-              ],
-            ),
+            _buildBottomActions(),
           ],
         );
       }),
     );
   }
 
+  _buildBottomActions() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              const Text('Font Size'),
+              Expanded(
+                child: Slider(
+                  label: _fontSizeScaleFactor.toStringAsFixed(1),
+                  value: _fontSizeScaleFactor,
+                  max: 2,
+                  min: 0.5,
+                  divisions: 15,
+                  onChanged: (value) {
+                    setState(() {
+                      _fontSizeScaleFactor = value;
+                    });
+                  },
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              const Text('Show Border'),
+              Checkbox(
+                value: _showBorder,
+                onChanged: (value) => setState(() {
+                  _showBorder = value;
+                }),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ElevatedButton.icon(
+                onPressed: () => _saveImage(),
+                icon: const Icon(Icons.image),
+                label: const Text('Save Image'),
+              ),
+              ElevatedButton.icon(
+                onPressed: _currentType == PreviewType.full ? _copyText : null,
+                icon: const Icon(Icons.abc),
+                label: const Text('Copy Text'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildTabbarView(PreviewType type) {
+    final item = widget.item;
     switch (type) {
       case PreviewType.full:
-        return _buildFullText(context);
+        return ItemFullTextView(item: item);
       case PreviewType.meanings:
-        return _buildMeaningsText(context);
+        return ItemMeaningsTextView(item: item);
       case PreviewType.examples:
-        return _buildExamplesText(context);
+        return ItemExamplesTextView(
+          examples: item.examples,
+          onExamplesSelected: (examples) {
+            setState(() {
+              _examples = examples;
+            });
+          },
+        );
     }
   }
 
   _copyText() async {
-    final text = _generateFullText(widget.item);
+    final text = generateFullText(widget.item);
     await Clipboard.setData(ClipboardData(text: text));
   }
 
@@ -150,166 +220,23 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
     }
   }
 
-  _buildFullText(BuildContext context) {
-    final item = widget.item;
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: SelectableText(_generateFullText(item)),
-    );
-  }
-
-  _buildExamplesText(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: widget.item.examples
-          .map((e) => ListTile(
-                title: Text(e['jp'] ?? ''),
-                subtitle: Text(e['en'] ?? ''),
-                leading: _examples.contains(e) ? const Icon(Icons.check) : null,
-                // leading: const Icon(Icons.check),
-                onTap: () {
-                  final examples = List<Example>.from(_examples);
-                  if (examples.contains(e)) {
-                    examples.remove(e);
-                  } else {
-                    examples.add(e);
-                  }
-                  setState(() {
-                    _examples = examples;
-                  });
-                },
-              ))
-          .toList(),
-    );
-  }
-
-  _buildMeaningsText(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildTitle(kTitleJpMeaning),
-          ...widget.item.meanings['jp']!.map((e) => Text(e)).toList(),
-          const Gap(16),
-          _buildTitle(kTitleZhMeaning),
-          ...widget.item.meanings['zh']!.map((e) => Text(e)).toList(),
-          const Gap(16),
-          _buildTitle(kTitleEnMeaning),
-          ...widget.item.meanings['en']!.map((e) => Text(e)).toList(),
-          const Gap(32),
-          const Divider(height: 1),
-          const Gap(32),
-          _buildTitle('Font Size'),
-          Slider(
-            label: _fontSizeScaleFactor.toStringAsFixed(1),
-            value: _fontSizeScaleFactor,
-            max: 2,
-            min: 0.5,
-            divisions: 15,
-            onChanged: (value) {
-              setState(() {
-                _fontSizeScaleFactor = value;
-              });
-            },
-          ),
-        ],
-      ),
-    );
-  }
-
-  _buildTitle(String title) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8.0),
-      child: Text(
-        title,
-        style: const TextStyle(fontSize: 16),
-      ),
-    );
-  }
-
-  _buildMeaningsPreview(BuildContext context) {
-    final item = widget.item;
-    return ItemMeaningListView(
-      item: item,
-      mainColor: _kMainColor,
-      fontSize: 20 * _fontSizeScaleFactor,
-    );
-  }
-
-  _buildExamplesPreview(BuildContext context) {
-    return ItemExampleListView(
-      item: widget.item,
-      mainColor: _kMainColor,
-      examples: _examples,
-    );
-  }
-
-  AspectRatio _buildFullPreview(BuildContext context) {
+  _buildPreviewView({required Widget child}) {
     return AspectRatio(
       aspectRatio: 3 / 4,
       child: Container(
-        color: Colors.white,
-        child: Column(
-          children: [
-            const Gap(128),
-            Expanded(
-              child: Image.asset(
-                'assets/onomatopoeia/images/${widget.item.key}.png',
-              ),
-            ),
-            const Gap(32),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32),
-              child: _buildItemTitle(fontSize: 96.0),
-            ),
-            const Gap(16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32),
-              child: AutoSizeText(
-                "${widget.item.meanings['zh']?.join('；') ?? ''}。",
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 24),
-                maxLines: 1,
-              ),
-            ),
-            const Gap(128),
-            const EverJapanLogo(),
-            const Gap(32),
-          ],
+        decoration: BoxDecoration(
+          color: _showBorder == true ? kBrandColor : Colors.white,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Container(
+          margin: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: child,
         ),
       ),
     );
-  }
-
-  AutoSizeText _buildItemTitle({double? fontSize}) {
-    return AutoSizeText(
-      widget.item.name,
-      style: GoogleFonts.getFont(
-        'Rampart One',
-        fontSize: fontSize,
-        color: _kMainColor,
-      ),
-      maxLines: 1,
-    );
-  }
-
-  _generateFullText(Onomatopoeia item) {
-    return """
-拟声拟态词 | ${item.name}
-
-$kTitleJpMeaning
-${item.meanings['jp']?.map((e) => '- $e').toList().join('\n')}
-
-$kTitleZhMeaning
-${item.meanings['zh']?.map((e) => '- $e').toList().join('\n')}
-
-$kTitleEnMeaning
-${item.meanings['en']?.map((e) => '- $e').toList().join('\n')}
-
-$kTitleExample
-${item.examples.map((e) => "◎ ${e['jp']}\n→ ${e['en']}\n→ ${e['zh']}\n").toList().join('\n')}
-""";
   }
 }

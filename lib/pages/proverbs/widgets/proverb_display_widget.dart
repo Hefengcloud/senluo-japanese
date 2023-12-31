@@ -25,7 +25,6 @@ class _ProverbDisplayWidgetState extends State<ProverbDisplayWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -36,7 +35,7 @@ class _ProverbDisplayWidgetState extends State<ProverbDisplayWidget> {
             child: AspectRatio(
               aspectRatio: 3 / 4,
               child: Card(
-                color: const Color.fromRGBO(0xF2, 0xE9, 0xE1, 1),
+                color: kBgColor,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: _buildContent(context),
@@ -142,7 +141,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
             'Yusei Magic',
             textStyle: const TextStyle(
               fontSize: 48,
-              color: kColorBrand,
+              color: kBrandColor,
             ),
           ),
           maxLines: 1,

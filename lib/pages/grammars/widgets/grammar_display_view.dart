@@ -158,7 +158,7 @@ class GrammarDisplayView extends StatelessWidget {
       textAlign: TextAlign.center,
       style: const TextStyle(
         fontSize: 24,
-        color: kColorBrand,
+        color: kBrandColor,
       ),
       maxLines: 1,
     );

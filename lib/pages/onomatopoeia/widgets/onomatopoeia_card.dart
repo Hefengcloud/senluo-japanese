@@ -35,7 +35,7 @@ class OnomatopoeiaCard extends StatelessWidget {
             style: GoogleFonts.getFont(
               'Yusei Magic',
               fontSize: 20,
-              color: kColorBrand,
+              color: kBrandColor,
             ),
           ),
           const Gap(16),

@@ -1,13 +1,14 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/constants/colors.dart';
 
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
 import '../onomatopoeia_display_page.dart';
 
-class ItemListView extends StatelessWidget {
+class ItemGridView extends StatelessWidget {
   final List<Onomatopoeia> items;
 
-  const ItemListView({super.key, required this.items});
+  const ItemGridView({super.key, required this.items});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,11 @@ class ItemCardView extends StatelessWidget {
             children: [
               AutoSizeText(
                 item.name.split("/").join('\n'),
-                style: const TextStyle(fontSize: 24.0),
+                style: const TextStyle(
+                  fontSize: 24.0,
+                  color: kBrandColor,
+                  fontWeight: FontWeight.bold,
+                ),
               )
             ],
           ),

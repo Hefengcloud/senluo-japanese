@@ -1,54 +1,49 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
 import '../../../widgets/everjapan_logo.dart';
 import '../../grammars/constants/texts.dart';
 import 'item_title_view.dart';
 
-class ItemMeaningListView extends StatelessWidget {
+class ItemMeaningsPreviewView extends StatelessWidget {
   final Onomatopoeia item;
-  final Color mainColor;
   final double fontSize;
 
-  const ItemMeaningListView({
+  const ItemMeaningsPreviewView({
     super.key,
     required this.item,
-    required this.mainColor,
     required this.fontSize,
   });
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 3 / 4,
-      child: Container(
-        color: Colors.white,
-        child: Column(
-          children: [
-            _buildTitle(),
-            _buildItemMeaning(
-              kFlagJp,
-              item.meanings['jp'] ?? [],
-              Colors.red,
-            ),
-            _buildItemMeaning(
-              kFlagZh,
-              item.meanings['zh'] ?? [],
-              Colors.green,
-            ),
-            _buildItemMeaning(
-              kFlagEn,
-              item.meanings['en'] ?? [],
-              Colors.blue,
-            ),
-            const Gap(16),
-            const EverJapanLogo(),
-            const Gap(32),
-          ],
+    return Column(
+      children: [
+        _buildTitle(),
+        const Gap(16),
+        _buildItemMeaning(
+          kTitleZhMeaning,
+          item.meanings['zh'] ?? [],
+          Colors.green,
         ),
-      ),
+        _buildItemMeaning(
+          kTitleEnMeaning,
+          item.meanings['en'] ?? [],
+          Colors.blue,
+        ),
+        _buildItemMeaning(
+          kTitleJpMeaning,
+          item.meanings['jp'] ?? [],
+          Colors.red,
+        ),
+        const Gap(16),
+        const EverJapanLogo(),
+        const Gap(32),
+      ],
     );
   }
 
@@ -57,8 +52,7 @@ class ItemMeaningListView extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: ItemTitleView(
         title: item.name,
-        caption: '意思',
-        mainColor: mainColor,
+        mainColor: kItemMainColor,
       ),
     );
   }
@@ -69,14 +63,11 @@ class ItemMeaningListView extends StatelessWidget {
     Color color,
   ) {
     return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: ItemMeaningView(
-          title: title,
-          meanings: meanings,
-          color: color,
-          fontSize: fontSize,
-        ),
+      child: ItemMeaningView(
+        title: title,
+        meanings: meanings,
+        color: color,
+        fontSize: fontSize,
       ),
     );
   }
@@ -102,7 +93,7 @@ class ItemMeaningView extends StatelessWidget {
       children: [
         Positioned.fill(
           child: Align(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.topCenter,
             child: _buildTitle(),
           ),
         ),
@@ -117,12 +108,12 @@ class ItemMeaningView extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ...meanings
                   .map(
                     (e) => Padding(
-                      padding: const EdgeInsets.only(left: 32.0, bottom: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: AutoSizeText(
                         e,
                         style: TextStyle(fontSize: fontSize),
@@ -137,14 +128,14 @@ class ItemMeaningView extends StatelessWidget {
     );
   }
 
-  _buildTitle() => Container(
-        width: 32,
-        height: 32,
-        decoration: BoxDecoration(
-          color: color.withAlpha(120),
-          borderRadius: BorderRadius.all(Radius.circular(32)),
+  _buildTitle() => Chip(
+        label: Text(
+          title,
+          style: const TextStyle(
+            color: kBrandColor,
+          ),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 8),
-        child: Center(child: Text(title)),
+        side: BorderSide.none,
+        backgroundColor: color.withAlpha(40),
       );
 }

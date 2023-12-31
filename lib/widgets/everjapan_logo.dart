@@ -25,7 +25,7 @@ class EverJapanLogo extends StatelessWidget {
         Text(
           '日系生活家',
           style: TextStyle(
-            color: kColorBrand,
+            color: kBrandColor,
             fontSize: fontSize,
           ),
         ),

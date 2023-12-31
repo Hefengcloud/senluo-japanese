@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_list_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_grid_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
 import 'bloc/onomatopoeia_bloc.dart';
@@ -58,7 +58,7 @@ class _OnomatopoeiaPageState extends State<OnomatopoeiaPage> {
     if (state is OnomatopoeiaLoading) {
       return const Center(child: CircularProgressIndicator());
     } else if (state is OnomatopoeiaLoaded) {
-      return ItemListView(items: state.items);
+      return ItemGridView(items: state.items);
     }
   }
 }
