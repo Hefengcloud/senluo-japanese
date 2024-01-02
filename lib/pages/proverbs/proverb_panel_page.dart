@@ -157,7 +157,7 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
 
   _buildProverbGrid(BuildContext context, ProverbLoaded state) {
     return GridView.count(
-      crossAxisCount: 4,
+      crossAxisCount: 6,
       children: state.items
           .map<Widget>(
             (item) => InkWell(
@@ -184,7 +184,6 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
   }
 
   _showProverbCard(BuildContext context, ProverbItem item) {
-    Scaffold.of(context).openEndDrawer();
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(

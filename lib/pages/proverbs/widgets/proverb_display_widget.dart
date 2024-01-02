@@ -7,6 +7,7 @@ import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
+import '../../../constants/texts.dart';
 import '../../../helpers/image_helper.dart';
 
 class ProverbDisplayWidget extends StatefulWidget {
@@ -122,7 +123,7 @@ ${item.reading}
 💡【意思】
 ${item.meanings.map((e) => '・ $e').toList().join('\n')}
 
-✍️【例句】
+$kTitleExample
 ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
 """;
   }
@@ -197,6 +198,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
       style: GoogleFonts.getFont(
         'Rampart One',
         fontSize: _currentSliderValue,
+        color: kBrandColor,
       ),
     );
   }

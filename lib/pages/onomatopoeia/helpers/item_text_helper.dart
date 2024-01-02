@@ -1,3 +1,4 @@
+import '../../../constants/texts.dart';
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
 import '../../grammars/constants/texts.dart';
 

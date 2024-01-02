@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/pages/grammars/widgets/grammar_display_view.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
+import '../../../constants/texts.dart';
 import '../constants/texts.dart';
 
 typedef GrammarExampleSelectCallback = void Function(GrammarExample item);

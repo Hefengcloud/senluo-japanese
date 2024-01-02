@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/pages/grammars/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_caption_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_title_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
-import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
-import '../../../constants/colors.dart';
+import '../../../constants/texts.dart';
 import '../constants/contants.dart';
 
 class ItemExamplesPreviewView extends StatelessWidget {
@@ -53,8 +52,11 @@ class ItemExamplesPreviewView extends StatelessWidget {
             child: Align(
               alignment: Alignment.topLeft,
               child: Padding(
-                padding: const EdgeInsets.only(left: 16.0),
-                child: _buildTitle(kTitleExample),
+                padding: const EdgeInsets.only(left: 8.0),
+                child: ItemCaptionTitle(
+                  title: kTitleExample,
+                  bgColor: bgColor,
+                ),
               ),
             ),
           ),
@@ -62,8 +64,8 @@ class ItemExamplesPreviewView extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
             margin: const EdgeInsets.symmetric(
-              vertical: 16.0,
-              horizontal: 16.0,
+              vertical: 20.0,
+              horizontal: 8.0,
             ),
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
@@ -86,16 +88,5 @@ class ItemExamplesPreviewView extends StatelessWidget {
             ),
           ),
         ],
-      );
-
-  _buildTitle(String title) => Chip(
-        label: Text(
-          title,
-          style: const TextStyle(
-            color: kBrandColor,
-          ),
-        ),
-        side: BorderSide.none,
-        backgroundColor: bgColor.withOpacity(0.1),
       );
 }

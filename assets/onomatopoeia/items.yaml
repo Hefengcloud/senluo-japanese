@@ -1873,18 +1873,24 @@
 - examples:
   - en: My tongue burns and tingles.
     jp: 舌が火傷して **ヒリヒリ** と痛む。
+    zh: 我的舌头被烫伤感到火辣辣地疼。
   - en: The part where I fell and scraped myself a while ago is tingling and painful.
     jp: さっき転んで擦りむいたところが **ヒリヒリ** と痛い。
+    zh: 刚刚摔倒摩擦过的部位刺痛难忍。
   - en: The sunburned area tingled and ached.
     jp: 日焼けしたところが **ヒリヒリ** と痛む。
+    zh: 晒伤的部位火辣辣地疼。
   key: hirihiri
   meanings:
     en:
-    - The state of feeling a slight numbing pain due to an abrasion or burn.
-    - The state of the tongue feeling lightly numb due to a pungent taste.
+      - The state of feeling a slight numbing pain due to an abrasion or burn.
+      - The state of the tongue feeling lightly numb due to a pungent taste.
     jp:
-    - 擦りむいたり、火傷したりして、皮膚や粘膜に軽くしびれるような痛みを感じる様子。
-    - 辛味が強く舌などが軽くしびれる様子。
+      - 擦りむいたり、火傷したりして、皮膚や粘膜に軽くしびれるような痛みを感じる様子。
+      - 辛味が強く舌などが軽くしびれる様子。
+    zh:
+      - 刺痛，火辣辣
+      - 辣得慌
   name: ひりひり
 - examples:
   - en: I'm so sad, tears are **flowing**.

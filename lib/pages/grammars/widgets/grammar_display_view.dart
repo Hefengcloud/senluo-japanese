@@ -1,11 +1,5 @@
-import 'dart:io';
-import 'dart:ui';
-
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,6 +20,11 @@ class GrammarDisplayView extends StatelessWidget {
   }) {
     _mainColor = kLevel2color[item.level]!;
   }
+
+  final _conjugationTextStyle = const TextStyle(
+    color: Colors.white,
+    fontSize: 20,
+  );
 
   final GlobalKey globalKey = GlobalKey();
 
@@ -194,15 +193,23 @@ class GrammarDisplayView extends StatelessWidget {
         vertical: 8.0,
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: _mainColor,
+        borderRadius: BorderRadius.circular(8),
+        color: _mainColor.withOpacity(0.9),
       ),
-      child: Text(
-        item.conjugations.join('\n'),
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 24.0,
-        ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: item.conjugations
+            .map(
+              (e) => Text(
+                e,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              ),
+            )
+            .toList(),
       ),
     );
   }

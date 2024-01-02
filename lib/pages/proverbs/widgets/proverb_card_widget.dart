@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 
 class ProverbCardWidget extends StatelessWidget {
@@ -11,7 +12,7 @@ class ProverbCardWidget extends StatelessWidget {
     final theme = Theme.of(context);
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -20,12 +21,7 @@ class ProverbCardWidget extends StatelessWidget {
               item.name,
               textAlign: TextAlign.center,
               style:
-                  theme.textTheme.headlineLarge?.copyWith(color: Colors.purple),
-            ),
-            AutoSizeText(
-              item.reading,
-              textAlign: TextAlign.center,
-              style: theme.textTheme.bodyLarge,
+                  theme.textTheme.headlineSmall?.copyWith(color: kBrandColor),
             ),
           ],
         ),

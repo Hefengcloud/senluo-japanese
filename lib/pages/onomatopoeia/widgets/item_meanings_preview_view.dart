@@ -1,11 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_caption_view.dart';
 
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
-import '../../../widgets/everjapan_logo.dart';
 import '../../grammars/constants/texts.dart';
 import 'item_title_view.dart';
 
@@ -92,13 +91,16 @@ class ItemMeaningView extends StatelessWidget {
           child: Align(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: const EdgeInsets.only(left: 16),
-              child: _buildTitle(),
+              padding: const EdgeInsets.only(left: 8),
+              child: ItemCaptionTitle(title: title, bgColor: color),
             ),
           ),
         ),
         Container(
-          margin: const EdgeInsets.all(16.0),
+          margin: const EdgeInsets.symmetric(
+            horizontal: 8.0,
+            vertical: 20,
+          ),
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
@@ -113,7 +115,10 @@ class ItemMeaningView extends StatelessWidget {
               ...meanings
                   .map(
                     (e) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 4,
+                      ),
                       child: AutoSizeText(
                         e,
                         style: TextStyle(fontSize: fontSize),
@@ -127,15 +132,4 @@ class ItemMeaningView extends StatelessWidget {
       ],
     );
   }
-
-  _buildTitle() => Chip(
-        label: Text(
-          title,
-          style: const TextStyle(
-            color: kBrandColor,
-          ),
-        ),
-        side: BorderSide.none,
-        backgroundColor: color.withOpacity(0.2),
-      );
 }

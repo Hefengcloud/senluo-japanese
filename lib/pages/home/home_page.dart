@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/bunpo/bunpo_page.dart';
+import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/gojuon/gojuon_panel_page.dart';
+import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_page.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_panel_page.dart';
@@ -26,7 +28,8 @@ class _HomePageState extends State<HomePage> {
     const KanjiPanelPage(),
     const ProverbPanelPage(),
     const OnomatopoeiaPage(),
-    const BunpoPage(),
+    const ExpressionPanelPage(),
+    const KeigoHomePage(),
   ];
 
   @override
@@ -55,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               NavigationRailDestination(
                 icon: Icon(Icons.explore_outlined),
                 selectedIcon: Icon(Icons.explore),
-                label: Text('五十音'),
+                label: Text('假名'),
               ),
               NavigationRailDestination(
                 icon: Icon(Icons.view_module_outlined),
@@ -83,9 +86,14 @@ class _HomePageState extends State<HomePage> {
                 label: Text('オノマトペ'),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.translate_outlined),
-                selectedIcon: Icon(Icons.translate),
-                label: Text('文法'),
+                icon: Icon(Icons.speaker_outlined),
+                selectedIcon: Icon(Icons.speaker),
+                label: Text('表現'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.account_box_outlined),
+                selectedIcon: Icon(Icons.account_box),
+                label: Text('敬語'),
               ),
             ],
           ),

@@ -1,3 +1,3 @@
-import '../../grammars/constants/colors.dart';
+import 'dart:ui';
 
-const kItemMainColor = kColorN1;
+const kItemMainColor = Color(0xFFBA1825);
