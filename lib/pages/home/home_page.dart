@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:senluo_japanese_cms/pages/bunpo/bunpo_page.dart';
 import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/gojuon/gojuon_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
