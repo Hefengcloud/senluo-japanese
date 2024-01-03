@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/gojuon/widgets/kana_card_view.dart';
+import 'package:senluo_japanese_cms/pages/gojuon/views/kana_card_view.dart';
 
 import '../../../repos/gojuon/models/models.dart';
 

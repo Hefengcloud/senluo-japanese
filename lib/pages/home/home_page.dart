@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
               NavigationRailDestination(
                 icon: Icon(Icons.thumb_up_outlined),
                 selectedIcon: Icon(Icons.thumb_up),
-                label: Text('語彙'),
+                label: Text('単語'),
               ),
               NavigationRailDestination(
                 icon: Icon(Icons.fmd_good_outlined),

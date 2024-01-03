@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/gojuon/widgets/kana_display_view.dart';
-import 'package:senluo_japanese_cms/pages/gojuon/widgets/kana_table_view.dart';
+import 'package:senluo_japanese_cms/pages/gojuon/views/kana_category_list_view.dart';
+import 'package:senluo_japanese_cms/pages/gojuon/views/kana_display_view.dart';
+import 'package:senluo_japanese_cms/pages/gojuon/views/kana_table_view.dart';
 
 import 'bloc/gojuon_bloc.dart';
 
@@ -29,17 +30,17 @@ class GojuonPanelPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                flex: 2,
+                flex: 1,
+                child: KanaCategoryListView(),
+              ),
+              Expanded(
+                flex: 3,
                 child: KanaTableView(
                   gojuon: state.gojuon,
                   onKanaTap: (kana) => bloc.add(
                     GojuonKanaSelected(kana: kana),
                   ),
                 ),
-              ),
-              Expanded(
-                flex: 1,
-                child: KanaDisplayView(kana: state.kana),
               ),
             ],
           );

@@ -1,0 +1,2918 @@
+- kanjis:
+  - char: 里
+    key: kanji-sato
+  level: n0
+- kanjis:
+  - char: 炊
+    key: kanji-taku3
+  - char: 煮
+    key: kanji-niru2
+  - char: 渇
+    key: kanji-kawaku
+  - char: 悟
+    key: kanji-satoru
+  - char: 染
+    key: kanji-someru
+  - char: 尽
+    key: kanji-tsukusu
+  - char: 攻
+    key: kanji-semeru
+  - char: 侵
+    key: kanji-okasu2
+  - char: 狙
+    key: kanji-nerau
+  - char: 迫
+    key: kanji-semaru
+  - char: 叱
+    key: kanji-shikaru
+  - char: 拒
+    key: kanji-kobamu
+  - char: 抗
+    key: kanji-kou6
+  - char: 惜
+    key: kanji-oshii
+  - char: 奇
+    key: kanji-ki10
+  - char: 怪
+    key: kanji-ayashii
+  - char: 乏
+    key: kanji-toboshii
+  - char: 壮
+    key: kanji-sou3
+  - char: 忍
+    key: kanji-shinobi
+  - char: 刀
+    key: kanji-katana
+  - char: 刃
+    key: kanji-yaiba
+  - char: 汽
+    key: kanji-ki9
+  - char: 紺
+    key: kanji-kon
+  - char: 紫
+    key: kanji-murasaki
+  - char: 丘
+    key: kanji-oka
+  - char: 嵐
+    key: kanji-arashi
+  - char: 又
+    key: kanji-mata
+  - char: 乙
+    key: kanji-otsu
+  - char: 弓
+    key: kanji-yumi
+  - char: 士
+    key: kanji-shi5
+  - char: 寸
+    key: kanji-sun
+  - char: 及
+    key: kanji-oyobu
+  - char: 凡
+    key: kanji-bon
+  - char: 豆
+    key: kanji-mame
+  - char: 浦
+    key: kanji-ura2
+  - char: 旬
+    key: kanji-shun
+  - char: 玄
+    key: kanji-gen4
+  - char: 呂
+    key: kanji-ro2
+  - char: 丈
+    key: kanji-take2
+  - char: 匂
+    key: kanji-nioi
+  - char: 企
+    key: kanji-ki8
+  - char: 矢
+    key: kanji-ya2
+  - char: 我
+    key: kanji-ware
+  - char: 井
+    key: kanji-i7
+  - char: 丼
+    key: kanji-donburi
+  - char: 冗
+    key: kanji-jou3
+  - char: 卓
+    key: kanji-taku4
+  - char: 肢
+    key: kanji-shi6
+  - char: 芝
+    key: kanji-shiba
+  - char: 己
+    key: kanji-onore
+  - char: 蚊
+    key: kanji-ka8
+  - char: 汁
+    key: kanji-shiru2
+  - char: 俳
+    key: kanji-hai2
+  - char: 匠
+    key: kanji-takumi
+  - char: 洞
+    key: kanji-dou2
+  - char: 伯
+    key: kanji-haku2
+  - char: 妊
+    key: kanji-nin2
+  - char: 泡
+    key: kanji-awa
+  - char: 虎
+    key: kanji-tora
+  - char: 矛
+    key: kanji-hoko
+  - char: 尻
+    key: kanji-shiri
+  - char: 肖
+    key: kanji-shou2
+  - char: 句
+    key: kanji-ku2
+  - char: 刑
+    key: kanji-kei4
+  - char: 亜
+    key: kanji-a
+  - char: 析
+    key: kanji-seki3
+  - char: 吉
+    key: kanji-kichi
+  - char: 克
+    key: kanji-koku3
+  - char: 冒
+    key: kanji-bou3
+  - char: 孝
+    key: kanji-kou7
+  - char: 択
+    key: kanji-taku5
+  - char: 帝
+    key: kanji-tei3
+  - char: 盆
+    key: kanji-bon2
+  - char: 丁
+    key: kanji-chou4
+  - char: 派
+    key: kanji-ha3
+  - char: 缶
+    key: kanji-kan10
+  - char: 枠
+    key: kanji-waku2
+  - char: 浄
+    key: kanji-jou5
+  - char: 炉
+    key: kanji-ro3
+  - char: 枕
+    key: kanji-makura
+  - char: 袖
+    key: kanji-sode
+  - char: 傘
+    key: kanji-kasa
+  - char: 抹
+    key: kanji-matsu3
+  - char: 垣
+    key: kanji-kaki
+  - char: 扉
+    key: kanji-tobira
+  - char: 芳
+    key: kanji-kanbashii
+  - char: 麻
+    key: kanji-asa2
+  - char: 斎
+    key: kanji-sai6
+  - char: 肪
+    key: kanji-bou5
+  - char: 裕
+    key: kanji-yuu5
+  - char: 倉
+    key: kanji-kura2
+  - char: 塀
+    key: kanji-hei3
+  - char: 椅
+    key: kanji-i10
+  - char: 珠
+    key: kanji-shu
+  - char: 扇
+    key: kanji-ougi
+  - char: 迅
+    key: kanji-jin2
+  - char: 姿
+    key: kanji-sugata
+  - char: 但
+    key: kanji-tadashi
+  - char: 往
+    key: kanji-ou6
+  - char: 即
+    key: kanji-soku3
+  - char: 潔
+    key: kanji-isagiyoi
+  - char: 契
+    key: kanji-kei7
+  - char: 宜
+    key: kanji-gi2
+  - char: 至
+    key: kanji-itaru
+  - char: 屈
+    key: kanji-kutsu2
+  - char: 扱
+    key: kanji-atsukau
+  - char: 促
+    key: kanji-unagasu
+  - char: 託
+    key: kanji-taku6
+  - char: 討
+    key: kanji-tou5
+  - char: 益
+    key: kanji-eki3
+  - char: 秀
+    key: kanji-shuu5
+  - char: 致
+    key: kanji-itasu
+  - char: 挑
+    key: kanji-idomu
+  - char: 添
+    key: kanji-soeru
+  - char: 怠
+    key: kanji-okotaru
+  - char: 岐
+    key: kanji-ki13
+  - char: 詳
+    key: kanji-kuwashii
+  - char: 抑
+    key: kanji-osaeru
+  - char: 施
+    key: kanji-hodokosu
+  - char: 痴
+    key: kanji-chi3
+  - char: 挫
+    key: kanji-za
+  - char: 寧
+    key: kanji-nei
+  - char: 該
+    key: kanji-gai2
+  - char: 剣
+    key: kanji-ken9
+  - char: 瓶
+    key: kanji-bin
+  - char: 弊
+    key: kanji-hei4
+  - char: 頑
+    key: kanji-gan
+  - char: 彩
+    key: kanji-irodoru
+  - char: 威
+    key: kanji-i11
+  - char: 邦
+    key: kanji-hou4
+  - char: 拍
+    key: kanji-haku4
+  - char: 刈
+    key: kanji-karu
+  - char: 脅
+    key: kanji-odosu
+  - char: 爪
+    key: kanji-tsume
+  - char: 肺
+    key: kanji-hai3
+  - char: 舌
+    key: kanji-shita2
+  - char: 肘
+    key: kanji-hiji
+  - char: 肝
+    key: kanji-kimo
+  - char: 狩
+    key: kanji-kari2
+  - char: 孤
+    key: kanji-ko4
+  - char: 苗
+    key: kanji-nae
+  - char: 描
+    key: kanji-egaku
+  - char: 滑
+    key: kanji-suberu
+  - char: 架
+    key: kanji-ka10
+  - char: 培
+    key: kanji-tsuchikau
+  - char: 妬
+    key: kanji-netamu
+  - char: 焦
+    key: kanji-kogeru
+  - char: 眉
+    key: kanji-mayu
+  - char: 侮
+    key: kanji-anadoru
+  - char: 奨
+    key: kanji-shou6
+  - char: 挿
+    key: kanji-sou8
+  - char: 援
+    key: kanji-en4
+  - char: 詩
+    key: kanji-shi10
+  - char: 卑
+    key: kanji-hi6
+  - char: 娯
+    key: kanji-go4
+  - char: 辱
+    key: kanji-joku
+  - char: 漫
+    key: kanji-man3
+  - char: 菌
+    key: kanji-kin4
+  - char: 恩
+    key: kanji-on2
+  - char: 吐
+    key: kanji-haku5
+  - char: 梅
+    key: kanji-ume
+  - char: 豚
+    key: kanji-buta
+  - char: 挨
+    key: kanji-ai2
+  - char: 拶
+    key: kanji-satsu4
+  - char: 嫁
+    key: kanji-yome
+  - char: 郎
+    key: kanji-rou2
+  - char: 誘
+    key: kanji-sasou
+  - char: 弔
+    key: kanji-tomurau
+  - char: 涯
+    key: kanji-gai3
+  - char: 従
+    key: kanji-shitagau
+  - char: 桜
+    key: kanji-sakura
+  - char: 滝
+    key: kanji-taki
+  - char: 尾
+    key: kanji-o
+  - char: 沼
+    key: kanji-numa
+  - char: 崖
+    key: kanji-gake
+  - char: 蛍
+    key: kanji-hotaru
+  - char: 芽
+    key: kanji-me2
+  - char: 峡
+    key: kanji-kyou5
+  - char: 浸
+    key: kanji-hitasu
+  - char: 昆
+    key: kanji-kon3
+  - char: 脈
+    key: kanji-myaku
+  - char: 唇
+    key: kanji-kuchibiru
+  - char: 脇
+    key: kanji-waki
+  - char: 胴
+    key: kanji-dou5
+  - char: 倫
+    key: kanji-rin
+  - char: 旨
+    key: kanji-shi11
+  - char: 功
+    key: kanji-kou14
+  - char: 筋
+    key: kanji-suzi
+  - char: 斜
+    key: kanji-naname
+  - char: 邪
+    key: kanji-ja
+  - char: 侍
+    key: kanji-samurai
+  - char: 滅
+    key: kanji-metsu
+  - char: 訳
+    key: kanji-wake
+  - char: 肥
+    key: kanji-koeru2
+  - char: 晶
+    key: kanji-shou7
+  - char: 抽
+    key: kanji-chuu4
+  - char: 併
+    key: kanji-awaseru
+  - char: 亜
+    key: kanji-a2
+  - char: 惧
+    key: kanji-gu2
+  - char: 胎
+    key: kanji-tai2
+  - char: 劣
+    key: kanji-otoru
+  - char: 穴
+    key: kanji-ana
+  - char: 序
+    key: kanji-jo
+  - char: 忠
+    key: kanji-chuu5
+  - char: 氾
+    key: kanji-han7
+  - char: 廷
+    key: kanji-tei5
+  - char: 如
+    key: kanji-nyo
+  - char: 充
+    key: kanji-juu2
+  - char: 密
+    key: kanji-mitsu
+  - char: 仰
+    key: kanji-aogu
+  - char: 免
+    key: kanji-men2
+  - char: 罰
+    key: kanji-batsu
+  - char: 訴
+    key: kanji-uttaeru
+  - char: 貢
+    key: kanji-mitsugu
+  - char: 惑
+    key: kanji-madou
+  - char: 控
+    key: kaanji-hikaeru
+  - char: 柵
+    key: kanji-saku3
+  - char: 紀
+    key: kanji-ki14
+  - char: 津
+    key: kanji-tsu
+  - char: 徐
+    key: kanji-jo2
+  - char: 捗
+    key: kanji-choku
+  - char: 耐
+    key: kanji-taeru
+  - char: 盾
+    key: kanji-tate
+  - char: 漏
+    key: kanji-moreru
+  - char: 滞
+    key: kanji-todokooru
+  - char: 拘
+    key: kanji-kou15
+  - char: 頃
+    key: kanji-koro
+  - char: 釣
+    key: kanji-tsuri
+  - char: 宴
+    key: kanji-utage
+  - char: 秩
+    key: kanji-chitsu
+  - char: 源
+    key: kanji-minamoto
+  - char: 脱
+    key: kanji-nugu
+  - char: 湧
+    key: kanji-waku3
+  - char: 潜
+    key: kanji-moguru
+  - char: 詐
+    key: kanji-sa3
+  - char: 妙
+    key: kanji-myou
+  - char: 患
+    key: kanji-wazurau
+  - char: 衰
+    key: kanji-otoroeru
+  - char: 隊
+    key: kanji-tai3
+  - char: 偏
+    key: kanji-hen3
+  - char: 啓
+    key: kanji-kei8
+  - char: 巣
+    key: kanji-su
+  - char: 剤
+    key: kanji-zai4
+  - char: 寿
+    key: kanji-kotobuki
+  - char: 挙
+    key: kanji-ageru
+  - char: 戒
+    key: kanji-kai9
+  - char: 誇
+    key: kanji-hokoru
+  - char: 雷
+    key: kanji-kaminari
+  - char: 謎
+    key: kanji-nazo
+  - char: 膝
+    key: kanji-hiza
+  - char: 豪
+    key: kanji-gou3
+  - char: 誠
+    key: kanji-makoto
+  - char: 兼
+    key: kanji-kaneru
+  - char: 粗
+    key: kanji-arai2
+  - char: 慢
+    key: kanji-man4
+  - char: 絹
+    key: kanji-kinu
+  - char: 暇
+    key: kanji-hima
+  - char: 禅
+    key: kanji-zen4
+  - char: 策
+    key: kanji-saku4
+  - char: 雰
+    key: kanji-fun2
+  - char: 箇
+    key: kanji-ka11
+  - char: 溺
+    key: kanji-oboreru
+  - char: 創
+    key: kanji-tsukuru3
+  - char: 煩
+    key: kanji-wazurau2
+  - char: 裁
+    key: kanji-sai7
+  - char: 熟
+    key: kanji-juku
+  - char: 挙
+    key: kanji-kobushi
+  - char: 鮮
+    key: kanji-azayaka
+  - char: 樹
+    key: kanji-ju
+  - char: 鈴
+    key: kanji-suzu
+  - char: 濁
+    key: kanji-nigoru
+  - char: 典
+    key: kanji-ten3
+  - char: 唆
+    key: kanji-sosonokasu
+  - char: 弧
+    key: kanji-ko5
+  - char: 飼
+    key: kanji-kau2
+  - char: 倹
+    key: kanji-ken10
+  - char: 叔
+    key: kanji-shuku
+  - char: 飢
+    key: kanji-ueru2
+  - char: 葬
+    key: kanji-houmuru
+  - char: 疎
+    key: kanji-utoi
+  - char: 陥
+    key: kanji-ochiiru
+  - char: 傷
+    key: kanji-kizu
+  - char: 祥
+    key: kanji-shou9
+  - char: 索
+    key: kanji-saku5
+  - char: 甚
+    key: kanji-hanahadashii
+  - char: 循
+    key: kanji-jun4
+  - char: 阻
+    key: kanji-so2
+  - char: 跳
+    key: kanji-haneru
+  - char: 眼
+    key: kanji-manako
+  - char: 諾
+    key: kanji-daku2
+  - char: 棚
+    key: kanji-tana
+  - char: 麺
+    key: kanji-men3
+  - char: 粧
+    key: kanji-shou8
+  - char: 裂
+    key: kanji-sakeru
+  - char: 逝
+    key: kanji-yuku
+  - char: 赴
+    key: kanji-fu7
+  - char: 虚
+    key: kanji-munashii
+  - char: 隣
+    key: kanji-tonari
+  - char: 酢
+    key: kanji-su2
+  - char: 欺
+    key: kanji-azamuku
+  - char: 憧
+    key: kanji-akogareru
+  - char: 娠
+    key: kanji-shin
+  - char: 蜜
+    key: kanji-mitsu2
+  - char: 腐
+    key: kanji-kusaru
+  - char: 践
+    key: kanji-sen4
+  - char: 潰
+    key: kanji-tsubusu
+  - char: 敵
+    key: kanji-teki2
+  - char: 鍋
+    key: kanji-nabe
+  - char: 鉢
+    key: kanji-hachi2
+  - char: 婿
+    key: kanji-muko
+  - char: 睡
+    key: kanji-sui
+  - char: 雅
+    key: kanji-miyabi
+  - char: 掲
+    key: kanji-kakageru
+  - char: 請
+    key: kanji-ukeru2
+  - char: 偽
+    key: kanji-itsuwaru
+  - char: 嫉
+    key: kanji-shitsu3
+  - char: 磁
+    key: kanji-ji4
+  - char: 範
+    key: kanji-han8
+  - char: 嘆
+    key: kanji-nageku
+  - char: 懐
+    key: kanji-futokoro
+  - char: 釜
+    key: kanji-kama
+  - char: 濫
+    key: kanji-ran
+  - char: 揚
+    key: kanji-ageru2
+  - char: 飽
+    key: kanji-akiru
+  - char: 裸
+    key: kanji-hadaka
+  - char: 唐
+    key: ''
+  - char: 壊
+    key: kanji-kowasu
+  - char: 堅
+    key: kanji-katai3
+  - char: 壇
+    key: kanji-dan4
+  - char: 握
+    key: kanji-nigiru
+  - char: 圏
+    key: kanji-ken11
+  - char: 腫
+    key: kanji-hareru
+  - char: 襟
+    key: kanji-eri
+  - char: 遇
+    key: kanji-guu
+  - char: 飾
+    key: kanji-kazaru
+  - char: 憤
+    key: kanji-ikidooru
+  - char: 勧
+    key: kanji-susumeru
+  - char: 倣
+    key: kanji-hou5
+  - char: 督
+    key: kanji-toku3
+  - char: 糖
+    key: kanji-tou7
+  - char: 銭
+    key: kanji-zeni
+  - char: 票
+    key: kanji-hyou3
+  - char: 撮
+    key: kanji-toru2
+  - char: 輩
+    key: kanji-yakara
+  - char: 閣
+    key: kanji-kaku6
+  - char: 拠
+    key: kanji-kyo3
+  - char: 喪
+    key: kanji-mo
+  - char: 稿
+    key: kanji-kou16
+  - char: 隔
+    key: kanji-kaku7
+  - char: 箋
+    key: kanji-sen5
+  - char: 唱
+    key: kanji-tonaeru
+  - char: 寮
+    key: kanji-ryou6
+  - char: 縫
+    key: kanji-nuu
+  - char: 端
+    key: kanji-hashi2
+  - char: 噴
+    key: kanji-fun3
+  - char: 遭
+    key: kanji-sou9
+  - char: 憶
+    key: kanji-oku4
+  - char: 継
+    key: kanji-tsugu
+  - char: 慎
+    key: kanji-tsutsushimu
+  - char: 僚
+    key: kanji-ryou7
+  - char: 遣
+    key: kanji-ken12
+  - char: 婆
+    key: kanji-ba2
+  - char: 貴
+    key: kanji-ki15
+  - char: 締
+    key: kanji-shimeru2
+  - char: 獄
+    key: kanji-goku
+  - char: 障
+    key: kanji-shou10
+  - char: 慰
+    key: kanji-nagusameru
+  - char: 謡
+    key: kanji-you7
+  - char: 寛
+    key: kanji-kan11
+  - char: 聴
+    key: kanji-kiku3
+  - char: 跡
+    key: kanji-ato
+  - char: 携
+    key: kanji-kei9
+  - char: 叙
+    key: kanji-jo3
+  - char: 弾
+    key: kanji-tama3
+  - char: 喩
+    key: kanji-yu3
+  - char: 酸
+    key: kanji-san3
+  - char: 罵
+    key: kanji-nonoshiru
+  - char: 銃
+    key: kanji-juu3
+  - char: 射
+    key: kanji-sha2
+  - char: 羨
+    key: kanji-urayamashii
+  - char: 縦
+    key: kanji-tate2
+  - char: 陰
+    key: kanji-kage
+  - char: 揮
+    key: kanji-ki16
+  - char: 憾
+    key: kanji-kan12
+  - char: 為
+    key: kanji-i12
+  - char: 虐
+    key: kanji-gyaku2
+  - char: 軌
+    key: kanji-ki17
+  - char: 廊
+    key: kanji-rou3
+  - char: 懲
+    key: kanji-chou5
+  - char: 碑
+    key: kanji-hi7
+  - char: 寂
+    key: kanji-sabishii
+  - char: 措
+    key: kanji-so3
+  - char: 奮
+    key: kanji-furuu
+  - char: 興
+    key: kanji-kyou6
+  - char: 褒
+    key: kanji-homeru
+  - char: 監
+    key: kanji-kan13
+  - char: 催
+    key: kanji-moyoosu
+  - char: 衆
+    key: kanji-shuu6
+  - char: 債
+    key: kanji-sai8
+  - char: 慌
+    key: kanji-awateru
+  - char: 振
+    key: kanji-furu
+  - char: 素
+    key: kanji-su3
+  - char: 属
+    key: kanji-zoku2
+  - char: 釈
+    key: kanji-shaku
+  - char: 紛
+    key: kanji-magireru
+  - char: 頬
+    key: kanji-hoo
+  - char: 頻
+    key: kanji-hin2
+  - char: 逮
+    key: kanji-tai4
+  - char: 視
+    key: kanji-miru3
+  - char: 盟
+    key: kanji-mei
+  - char: 廃
+    key: kanji-hai4
+  - char: 剰
+    key: kanji-jou6
+  - char: 既
+    key: kanji-sudeni
+  - char: 慮
+    key: kanji-ryo
+  - char: 蔑
+    key: kanji-sagesumu
+  - char: 媒
+    key: kanji-bai2
+  - char: 隠
+    key: kanji-kakusu
+  - char: 傑
+    key: kanji-ketsu2
+  - char: 穀
+    key: kanji-koku14
+  - char: 窮
+    key: kanji-kyuu6
+  - char: 趣
+    key: kanji-omomuki
+  - char: 厳
+    key: kanji-kibishii
+  - char: 魅
+    key: kanji-mi4
+  - char: 徹
+    key: kanji-tetsu2
+  - char: 維
+    key: kanji-i13
+  - char: 鎖
+    key: kanji-kusari
+  - char: 歓
+    key: kanji-kan14
+  - char: 模
+    key: kanji-bo
+  - char: 薦
+    key: kanji-susumeru2
+  - char: 瞬
+    key: kanji-matataku
+  - char: 脚
+    key: kanji-ashi2
+  - char: 殉
+    key: kanji-jun5
+  - char: 糾
+    key: kanji-kyuu7
+  - char: 潮
+    key: kanji-shio2
+  - char: 慕
+    key: kanji-shitau
+  - char: 幕
+    key: kanji-maku2
+  - char: 履
+    key: kanji-haku6
+  - char: 誉
+    key: kanji-homare
+  - char: 蓄
+    key: kanji-chiku2
+  - char: 窟
+    key: kanji-kutsu3
+  - char: 償
+    key: kanji-tsugunau
+  - char: 猿
+    key: kanji-saru
+  - char: 棄
+    key: kanji-ki18
+  - char: 慨
+    key: kanji-gai4
+  - char: 餌
+    key: kanji-esa
+  - char: 遍
+    key: kanji-hen4
+  - char: 緊
+    key: kanji-kin5
+  - char: 敷
+    key: kanji-shiku
+  - char: 稽
+    key: kanji-kei10
+  - char: 戚
+    key: kanji-seki5
+  - char: 僅
+    key: kanji-wazuka
+  - char: 緩
+    key: kanji-yurui
+  - char: 購
+    key: kanji-kou17
+  - char: 閑
+    key: kanji-kan15
+  - char: 郷
+    key: kanji-gou4
+  - char: 遡
+    key: kanji-sakanoboru
+  - char: 鍵
+    key: kanji-kagi
+  - char: 融
+    key: kanji-yuu7
+  - char: 綻
+    key: kanji-hokorobiru
+  - char: 礎
+    key: kanji-so4
+  - char: 翻
+    key: kanji-hirugaesu
+  - char: 駄
+    key: kanji-da
+  level: n1
+- kanjis:
+  - char: 泳
+    key: kanji-oyogu
+  - char: 包
+    key: kanji-tsutsumu
+  - char: 含
+    key: kanji-fukumu
+  - char: 悩
+    key: kanji-nayamu
+  - char: 占
+    key: kanji-uranau
+  - char: 任
+    key: kanji-makaseru
+  - char: 拡
+    key: kanji-kaku4
+  - char: 浮
+    key: kanji-uku
+  - char: 沈
+    key: kanji-shizumu
+  - char: 刻
+    key: kanji-kizamu
+  - char: 寄
+    key: kanji-yoru2
+  - char: 担
+    key: kanji-ninau
+  - char: 放
+    key: kanji-hanatsu
+  - char: 落
+    key: kanji-ochiru
+  - char: 除
+    key: kanji-nozoku
+  - char: 貯
+    key: kanji-cho
+  - char: 招
+    key: kanji-maneku
+  - char: 干
+    key: kanji-hosu
+  - char: 犯
+    key: kanji-okasu
+  - char: 打
+    key: kanji-utsu
+  - char: 迷
+    key: kanji-mayou
+  - char: 囲
+    key: kanji-kakomu
+  - char: 刺
+    key: kanji-sasu
+  - char: 責
+    key: kanji-seki2
+  - char: 余
+    key: kanji-amaru
+  - char: 争
+    key: kanji-arasoi
+  - char: 拝
+    key: kanji-ogamu
+  - char: 突
+    key: kanji-totsu
+  - char: 伸
+    key: kanji-nobiru
+  - char: 延
+    key: kanji-en2
+  - char: 埋
+    key: kanji-umeru
+  - char: 祈
+    key: kanji-inoru
+  - char: 効
+    key: kanji-kiku2
+  - char: 依
+    key: kanji-i6
+  - char: 似
+    key: kanji-niru
+  - char: 応
+    key: kanji-ou3
+  - char: 承
+    key: kanji-uketamawaru
+  - char: 枯
+    key: kanji-kareru
+  - char: 巻
+    key: kanji-maku
+  - char: 抱
+    key: kanji-daku
+  - char: 照
+    key: kanji-terasu
+  - char: 採
+    key: kanji-sai5
+  - char: 逃
+    key: kanji-nigeru
+  - char: 設
+    key: kanji-setsu3
+  - char: 拾
+    key: kanji-hirou
+  - char: 得
+    key: kanji-toku2
+  - char: 掃
+    key: kanji-haku3
+  - char: 修
+    key: kanji-shuu4
+  - char: 頂
+    key: kanji-itadaku
+  - char: 取
+    key: kanji-toru
+  - char: 封
+    key: kanji-fuu
+  - char: 刷
+    key: kanji-satsu3
+  - char: 届
+    key: kanji-todokeru
+  - char: 装
+    key: kanji-sou5
+  - char: 異
+    key: kanji-kotonaru
+  - char: 殺
+    key: kanji-korosu
+  - char: 燃
+    key: kanji-moeru
+  - char: 抜
+    key: kanji-nuku
+  - char: 到
+    key: kanji-tou3
+  - char: 追
+    key: kanji-ou4
+  - char: 塗
+    key: kanji-nuru
+  - char: 紹
+    key: kanji-shou5
+  - char: 越
+    key: kanji-koeru
+  - char: 憎
+    key: kanji-nikumu
+  - char: 張
+    key: kanji-haru2
+  - char: 退
+    key: kanji-shirizoku
+  - char: 暮
+    key: kanji-kurasu
+  - char: 誤
+    key: kanji-ayamari
+  - char: 咲
+    key: kanji-saku2
+  - char: 浴
+    key: kanji-abiru
+  - char: 栄
+    key: kanji-sakaeru
+  - char: 務
+    key: kaanji-mu
+  - char: 傾
+    key: kanji-katamuki
+  - char: 溶
+    key: kanji-tokeru
+  - char: 震
+    key: kanji-furueru
+  - char: 固
+    key: kanji-katai2
+  - char: 沸
+    key: kanji-waku
+  - char: 迎
+    key: kanji-mukaeru
+  - char: 敗
+    key: kanji-yabureru
+  - char: 盗
+    key: kanji-nusumu
+  - char: 乱
+    key: kanji-midareru
+  - char: 叫
+    key: kanji-sakebu
+  - char: 判
+    key: kanji-han5
+  - char: 測
+    key: kanji-soku2
+  - char: 給
+    key: kanji-kyuu5
+  - char: 探
+    key: kanji-sagasu
+  - char: 居
+    key: kanji-iru
+  - char: 昇
+    key: kanji-noboru2
+  - char: 批
+    key: kanji-hi5
+  - char: 評
+    key: kanji-hyou2
+  - char: 訪
+    key: kanji-hou3
+  - char: 蒸
+    key: kanji-musu
+  - char: 耕
+    key: kanji-tagayasu
+  - char: 掘
+    key: kanji-horu
+  - char: 植
+    key: kanji-ueru
+  - char: 倒
+    key: kanji-taoreru
+  - char: 敬
+    key: kanji-kei6
+  - char: 詰
+    key: kanji-tsumeru
+  - char: 述
+    key: kanji-noberu
+  - char: 演
+    key: kanji-en3
+  - char: 捕
+    key: kanji-tsukamaeru
+  - char: 補
+    key: kanji-oginau
+  - char: 置
+    key: kanji-oku2
+  - char: 頼
+    key: kanji-tayoru
+  - char: 踊
+    key: kanji-odoru
+  - char: 築
+    key: kanji-kizuku
+  - char: 散
+    key: kanji-chiru
+  - char: 磨
+    key: kanji-migaku
+  - char: 曇
+    key: kanji-kumoru
+  - char: 舞
+    key: kanji-mau
+  - char: 暴
+    key: kanji-abareru
+  - char: 爆
+    key: kanji-baku
+  - char: 絶
+    key: kanji-zetsu
+  - char: 被
+    key: kanji-kaburu
+  - char: 編
+    key: kanji-hen2
+  - char: 報
+    key: kanji-mukuiru
+  - char: 捜
+    key: kanji-sagasu2
+  - char: 雇
+    key: kanji-yatou
+  - char: 競
+    key: kanji-kisou
+  - char: 触
+    key: kanji-sawaru
+  - char: 操
+    key: kanji-ayatsuru
+  - char: 疑
+    key: kanji-utagau
+  - char: 幸
+    key: kanji-sachi
+  - char: 悲
+    key: kanji-kanashii
+  - char: 静
+    key: kanji-shizuka
+  - char: 良
+    key: kanji-yoi
+  - char: 柔
+    key: kanji-yawarakai
+  - char: 硬
+    key: kanji-katai
+  - char: 深
+    key: kanji-fukai
+  - char: 浅
+    key: kanji-asai
+  - char: 湿
+    key: kanji-shitsu2
+  - char: 暖
+    key: kanji-atatakai
+  - char: 涼
+    key: kanji-suzushii
+  - char: 珍
+    key: kanji-mezurashii
+  - char: 遅
+    key: kanji-osoi
+  - char: 軟
+    key: kanji-nan
+  - char: 賢
+    key: kanji-kashikoi
+  - char: 善
+    key: kanji-zen3
+  - char: 幼
+    key: kanji-osanai
+  - char: 甘
+    key: kanji-amai
+  - char: 辛
+    key: kanji-karai
+  - char: 荒
+    key: kanji-arai
+  - char: 丸
+    key: kanji-maru
+  - char: 純
+    key: kanji-jun3
+  - char: 怖
+    key: kanji-kowai
+  - char: 貧
+    key: kanji-mazushii
+  - char: 恐
+    key: kanji-osoreru
+  - char: 緑
+    key: kanji-midori
+  - char: 岩
+    key: kanji-iwa
+  - char: 湖
+    key: kanji-mizuumi
+  - char: 門
+    key: kanji-mon
+  - char: 玉
+    key: kanji-tama
+  - char: 灰
+    key: kanji-hai
+  - char: 炭
+    key: kanji-sumi2
+  - char: 印
+    key: kanji-shirushi
+  - char: 泥
+    key: kanji-doro
+  - char: 仏
+    key: kanji-hotoke
+  - char: 圧
+    key: kanji-atsu
+  - char: 双
+    key: kanji-sou2
+  - char: 兆
+    key: kanji-chou
+  - char: 芸
+    key: kanji-gei
+  - char: 団
+    key: kanji-dan2
+  - char: 永
+    key: kanji-ei4
+  - char: 卒
+    key: kanji-sotsu
+  - char: 皮
+    key: kanji-kawa2
+  - char: 老
+    key: kanji-oiru
+  - char: 符
+    key: kanji-fu4
+  - char: 片
+    key: kanji-kata2
+  - char: 共
+    key: kanji-kyou3
+  - char: 央
+    key: kanji-ou2
+  - char: 札
+    key: kanji-fuda
+  - char: 児
+    key: kanji-ji3
+  - char: 逆
+    key: kanji-gyaku
+  - char: 検
+    key: kanji-ken7
+  - char: 久
+    key: kanji-hisashii
+  - char: 状
+    key: kanji-jou2
+  - char: 互
+    key: kanji-tagai
+  - char: 貨
+    key: kanji-ka6
+  - char: 枝
+    key: kanji-eda
+  - char: 毛
+    key: kanji-ke
+  - char: 羽
+    key: kanji-hane
+  - char: 竹
+    key: kanji-take
+  - char: 糸
+    key: kanji-ito
+  - char: 仲
+    key: kanji-naka2
+  - char: 介
+    key: kanji-kai7
+  - char: 旧
+    key: kanji-kyuu3
+  - char: 匹
+    key: kanji-hiki
+  - char: 宇
+    key: kanji-u
+  - char: 宙
+    key: kanji-chuu3
+  - char: 庁
+    key: kanji-chou2
+  - char: 床
+    key: kanji-yuka
+  - char: 巨
+    key: kanji-kyo2
+  - char: 臣
+    key: kanji-jin
+  - char: 板
+    key: kanji-ita
+  - char: 姓
+    key: kanji-sei6
+  - char: 季
+    key: kanji-ki7
+  - char: 肌
+    key: kanji-hada
+  - char: 辺
+    key: kanji-atari
+  - char: 史
+    key: kanji-shi4
+  - char: 志
+    key: kanji-kokorozashi
+  - char: 柱
+    key: kanji-hashira
+  - char: 況
+    key: kanji-kyou4
+  - char: 仮
+    key: kanji-kari
+  - char: 州
+    key: kanji-shuu2
+  - char: 布
+    key: kanji-nuno
+  - char: 列
+    key: kanji-retsu
+  - char: 革
+    key: kanji-kawa4
+  - char: 河
+    key: kanji-kawa3
+  - char: 令
+    key: kanji-rei3
+  - char: 坂
+    key: kanji-saka
+  - char: 畑
+    key: kanji-hatake
+  - char: 兵
+    key: kanji-hei2
+  - char: 灯
+    key: kanji-tou
+  - char: 処
+    key: kanji-sho
+  - char: 具
+    key: kanji-gu
+  - char: 杯
+    key: kanji-sakazuki
+  - char: 独
+    key: kanji-doku
+  - char: 香
+    key: kanji-kaori
+  - char: 泉
+    key: kanji-izumi
+  - char: 訓
+    key: kanji-kun
+  - char: 刊
+    key: kanji-kan6
+  - char: 官
+    key: kanji-kan8
+  - char: 周
+    key: kanji-mawari
+  - char: 談
+    key: kanji-dan3
+  - char: 努
+    key: kanji-do2
+  - char: 郊
+    key: kanji-kou4
+  - char: 第
+    key: kanji-dai4
+  - char: 机
+    key: kanji-tsukue
+  - char: 更
+    key: kanji-kou5
+  - char: 清
+    key: kanji-kiyomeru
+  - char: 看
+    key: kanji-kan7
+  - char: 算
+    key: kanji-san2
+  - char: 谷
+    key: kanji-tani
+  - char: 晴
+    key: kanji-hare
+  - char: 雲
+    key: kanji-kumo
+  - char: 星
+    key: kanji-hoshi
+  - char: 麦
+    key: kanji-mugi
+  - char: 舟
+    key: kanji-fune2
+  - char: 湾
+    key: kanji-wan
+  - char: 岸
+    key: kanji-kishi
+  - char: 宗
+    key: kanji-shuu3
+  - char: 坊
+    key: kanji-bou4
+  - char: 恋
+    key: kanji-koi2
+  - char: 愛
+    key: kanji-ai
+  - char: 災
+    key: kanji-wazawai
+  - char: 背
+    key: kanji-se2
+  - char: 祖
+    key: kanji-so
+  - char: 孫
+    key: kanji-mago
+  - char: 規
+    key: kanji-ki11
+  - char: 総
+    key: kanji-sou4
+  - char: 漁
+    key: kanji-gyo
+  - char: 塔
+    key: kanji-tou2
+  - char: 器
+    key: kanji-utsuwa
+  - char: 域
+    key: kanji-iki2
+  - char: 精
+    key: kanji-sei7
+  - char: 管
+    key: kanji-kuda
+  - char: 賃
+    key: kanji-chin
+  - char: 資
+    key: kanji-shi7
+  - char: 福
+    key: kanji-fuku7
+  - char: 副
+    key: kanji-fuku4
+  - char: 婦
+    key: kanji-fu5
+  - char: 腰
+    key: kanji-koshi
+  - char: 軒
+    key: kanji-noki
+  - char: 械
+    key: kanji-kai8
+  - char: 翌
+    key: kanji-yoku
+  - char: 誌
+    key: kanji-shi8
+  - char: 像
+    key: kanji-zou
+  - char: 能
+    key: kanji-nou
+  - char: 毒
+    key: kanji-doku2
+  - char: 歴
+    key: kanji-reki
+  - char: 喫
+    key: kanji-kitsu
+  - char: 達
+    key: kanji-tatsu3
+  - char: 標
+    key: kanji-hyou
+  - char: 夢
+    key: kanji-yume
+  - char: 肩
+    key: kanji-kata3
+  - char: 胃
+    key: kanji-i9
+  - char: 液
+    key: kanji-eki2
+  - char: 将
+    key: kanji-shou3
+  - char: 委
+    key: kanji-i8
+  - char: 恥
+    key: kanji-haji
+  - char: 皆
+    key: kanji-mina
+  - char: 章
+    key: kanji-shou4
+  - char: 途
+    key: kanji-to2
+  - char: 然
+    key: kanji-zen2
+  - char: 詞
+    key: kanji-shi9
+  - char: 諸
+    key: kanji-sho2
+  - char: 殿
+    key: kanji-tono
+  - char: 秒
+    key: kanji-byou
+  - char: 司
+    key: kanji-tsukasa
+  - char: 均
+    key: kanji-kin3
+  - char: 粒
+    key: kanji-tsubu
+  - char: 宝
+    key: kanji-takara
+  - char: 城
+    key: kanji-shiro2
+  - char: 命
+    key: kanji-inochi
+  - char: 脂
+    key: kanji-abura2
+  - char: 条
+    key: kanji-jou4
+  - char: 党
+    key: kanji-tou4
+  - char: 欧
+    key: kanji-ou5
+  - char: 順
+    key: kanji-jun2
+  - char: 底
+    key: kanji-soko
+  - char: 則
+    key: kanji-soku
+  - char: 損
+    key: kanji-son
+  - char: 版
+    key: kanji-han6
+  - char: 財
+    key: kanji-zai3
+  - char: 制
+    key: kanji-sei8
+  - char: 徒
+    key: kanji-to3
+  - char: 庭
+    key: kanji-niwa
+  - char: 脳
+    key: kanji-nou2
+  - char: 超
+    key: kanji-chou3
+  - char: 候
+    key: kanji-kou8
+  - char: 勇
+    key: kanji-yuu4
+  - char: 象
+    key: kanji-zou2
+  - char: 針
+    key: kanji-hari
+  - char: 率
+    key: kanji-ritsu
+  - char: 武
+    key: kanji-bu2
+  - char: 腹
+    key: kanji-hara2
+  - char: 畜
+    key: kanji-chiku
+  - char: 程
+    key: kanji-tei4
+  - char: 滴
+    key: kanji-shizuku
+  - char: 航
+    key: kanji-kou9
+  - char: 署
+    key: kanji-sho3
+  - char: 景
+    key: kanji-kei5
+  - char: 猫
+    key: kanji-neko
+  - char: 根
+    key: kanji-ne
+  - char: 害
+    key: kanji-gai
+  - char: 罪
+    key: kanji-tsumi
+  - char: 鉱
+    key: kanji-kou10
+  - char: 軍
+    key: kanji-gun
+  - char: 律
+    key: kanji-ritsu2
+  - char: 畳
+    key: kanji-tatami
+  - char: 零
+    key: kanji-rei5
+  - char: 陸
+    key: kanji-riku
+  - char: 幅
+    key: kanji-haba
+  - char: 富
+    key: kanji-tomi
+  - char: 髪
+    key: kanji-kami3
+  - char: 銅
+    key: kanji-dou3
+  - char: 童
+    key: kanji-dou4
+  - char: 億
+    key: kanji-oku3
+  - char: 層
+    key: kanji-sou6
+  - char: 綿
+    key: kanji-wata
+  - char: 境
+    key: kanji-sakai
+  - char: 農
+    key: kanji-nou3
+  - char: 基
+    key: kanji-ki12
+  - char: 陽
+    key: kanji-you6
+  - char: 筒
+    key: kanji-tsutsu
+  - char: 論
+    key: kanji-ron
+  - char: 恵
+    key: kanji-megumi
+  - char: 勢
+    key: kanji-ikioi
+  - char: 複
+    key: kanji-fuku5
+  - char: 劇
+    key: kanji-geki
+  - char: 腕
+    key: kanji-ude
+  - char: 靴
+    key: kanji-kutsu
+  - char: 節
+    key: kanji-setsu4
+  - char: 績
+    key: kanji-seki4
+  - char: 極
+    key: kanji-kyoku2
+  - char: 壁
+    key: kanji-kabe
+  - char: 輪
+    key: kanji-wa2
+  - char: 緒
+    key: kanji-sho4
+  - char: 臓
+    key: kanji-zou3
+  - char: 膚
+    key: kanji-fu6
+  - char: 筆
+    key: kanji-fude
+  - char: 略
+    key: kanji-ryaku
+  - char: 菓
+    key: kanji-ka9
+  - char: 燥
+    key: kanji-sou7
+  - char: 較
+    key: kanji-kaku5
+  - char: 著
+    key: kanji-ichijirushii
+  - char: 尊
+    key: kanji-son2
+  - char: 療
+    key: kanji-ryou5
+  - char: 雑
+    key: kanji-zatsu
+  - char: 権
+    key: kanji-ken8
+  - char: 講
+    key: kanji-kou13
+  - char: 構
+    key: kanji-kou11
+  - char: 康
+    key: kanji-kou12
+  - char: 御
+    key: kanji-on
+  level: n2
+- kanjis:
+  - char: 申
+    key: kanji-mousu
+  - char: 助
+    key: kanji-tasukeru
+  - char: 折
+    key: kanji-oru
+  - char: 伝
+    key: kanji-tsutaeru
+  - char: 付
+    key: kanji-tsuku2
+  - char: 困
+    key: kanji-komaru
+  - char: 当
+    key: kanji-ataru
+  - char: 必
+    key: kanji-kanarazu
+  - char: 全
+    key: kanji-zen
+  - char: 号
+    key: kanji-gou
+  - char: 向
+    key: kanji-mukau
+  - char: 信
+    key: kanji-shinjiru
+  - char: 守
+    key: kanji-mamoru
+  - char: 交
+    key: kanji-majiru
+  - char: 換
+    key: kanji-kan4
+  - char: 払
+    key: kanji-harau
+  - char: 失
+    key: kanji-ushinau
+  - char: 加
+    key: kanji-kuwaeru
+  - char: 込
+    key: kanji-komu
+  - char: 支
+    key: kanji-sasaeru
+  - char: 流
+    key: kanji-nagareru
+  - char: 留
+    key: kanji-ryuu
+  - char: 比
+    key: kanji-kuraberu
+  - char: 捨
+    key: kanji-suteru
+  - char: 受
+    key: kanji-ukeru
+  - char: 笑
+    key: kanji-warau
+  - char: 召
+    key: kanji-mesu
+  - char: 変
+    key: kanji-hen
+  - char: 消
+    key: kanji-kesu
+  - char: 並
+    key: kanji-hei
+  - char: 忘
+    key: kanji-wasureru
+  - char: 伺
+    key: kanji-ukagau
+  - char: 直
+    key: kanji-naoru
+  - char: 造
+    key: kanji-tsukuru2
+  - char: 存
+    key: kanji-zon
+  - char: 返
+    key: kanji-kaeru3
+  - char: 要
+    key: kanji-you4
+  - char: 救
+    key: kanji-sukuu
+  - char: 授
+    key: kanji-sazukaru
+  - char: 保
+    key: kanji-tamotsu
+  - char: 整
+    key: kanji-sei3
+  - char: 移
+    key: kanji-i5
+  - char: 協
+    key: kanji-kyou2
+  - char: 改
+    key: kanji-aratameru
+  - char: 示
+    key: kanji-shimesu
+  - char: 戻
+    key: kanji-modoru
+  - char: 与
+    key: kanji-ataeru
+  - char: 求
+    key: kanji-motomeru
+  - char: 投
+    key: kanji-nageru
+  - char: 告
+    key: kanji-koku
+  - char: 録
+    key: kanji-roku2
+  - char: 戦
+    key: kanji-tatakau
+  - char: 増
+    key: kanji-fueru
+  - char: 勝
+    key: kanji-katsu2
+  - char: 負
+    key: kanji-makeru
+  - char: 祝
+    key: kanji-iwau
+  - char: 決
+    key: kanji-kimeru
+  - char: 吹
+    key: kanji-fuku2
+  - char: 禁
+    key: kanji-kin2
+  - char: 防
+    key: kanji-fusegu
+  - char: 断
+    key: kanji-kotowaru
+  - char: 関
+    key: kanji-kan3
+  - char: 飛
+    key: kanji-tobu
+  - char: 過
+    key: kanji-sugiru
+  - char: 記
+    key: kanji-shirusu
+  - char: 確
+    key: kanji-tashikameru
+  - char: 認
+    key: kanji-nin
+  - char: 駐
+    key: kanji-chuu2
+  - char: 満
+    key: kanji-man2
+  - char: 停
+    key: kanji-tei2
+  - char: 案
+    key: kanji-an
+  - char: 備
+    key: kanji-sonaeru
+  - char: 遊
+    key: kanji-asobu
+  - char: 凍
+    key: kanji-kooru
+  - char: 混
+    key: kanji-mazeru
+  - char: 焼
+    key: kanji-yaku3
+  - char: 渡
+    key: kanji-watasu
+  - char: 減
+    key: kanji-heru
+  - char: 育
+    key: kanji-sodateru
+  - char: 在
+    key: kanji-zai2
+  - char: 想
+    key: kanji-omoi2
+  - char: 治
+    key: kanji-naoru2
+  - char: 参
+    key: kanji-mairu
+  - char: 泊
+    key: kanji-haku
+  - char: 解
+    key: kanji-kai6
+  - char: 替
+    key: kanji-kaeru2
+  - char: 泣
+    key: kanji-naku
+  - char: 呼
+    key: kaanji-yobu
+  - char: 吸
+    key: kanji-suu
+  - char: 成
+    key: kanji-naru
+  - char: 結
+    key: kanji-musubi
+  - char: 婚
+    key: kanji-kon2
+  - char: 済
+    key: kanji-sumi
+  - char: 感
+    key: kanji-kan5
+  - char: 辞
+    key: kanji-yameru
+  - char: 登
+    key: kanji-noboru
+  - char: 疲
+    key: kanji-tsukareru
+  - char: 続
+    key: kanji-tsuduku
+  - char: 割
+    key: kanji-waru
+  - char: 残
+    key: kanji-nokori
+  - char: 望
+    key: kanji-nozomu
+  - char: 連
+    key: kanji-ren
+  - char: 配
+    key: kanji-kubaru
+  - char: 接
+    key: kanji-setsu2
+  - char: 調
+    key: kanji-shiraberu
+  - char: 募
+    key: kanji-tsunoru
+  - char: 預
+    key: kanji-azukaru
+  - char: 選
+    key: kanji-erabu
+  - char: 量
+    key: kanji-ryou4
+  - char: 練
+    key: kanji-ren2
+  - char: 輸
+    key: kanji-yu2
+  - char: 鳴
+    key: kanji-naru2
+  - char: 違
+    key: kanji-chigai
+  - char: 願
+    key: kanji-negau
+  - char: 観
+    key: kanji-miru2
+  - char: 勤
+    key: kanji-tsutomeru
+  - char: 難
+    key: kanji-muzukashii
+  - char: 危
+    key: kanji-abunai
+  - char: 忙
+    key: kanji-isogashii
+  - char: 美
+    key: kanji-utsukushii
+  - char: 汚
+    key: kanji-kitanai
+  - char: 若
+    key: kanji-wakai
+  - char: 苦
+    key: kanji-nigai
+  - char: 快
+    key: kanji-kai4
+  - char: 易
+    key: kanji-yasashii
+  - char: 優
+    key: kanji-yasashii2
+  - char: 険
+    key: kanji-ken4
+  - char: 冷
+    key: kanji-tsumetai
+  - char: 温
+    key: kanji-atatamaeru
+  - char: 細
+    key: kanji-hosoi
+  - char: 厚
+    key: kanji-atsui2
+  - char: 眠
+    key: kanji-nemui
+  - char: 濃
+    key: kanji-koi
+  - char: 薄
+    key: kanji-usui
+  - char: 痛
+    key: kanji-itai
+  - char: 内
+    key: kanji-uchi
+  - char: 速
+    key: kanji-hayai2
+  - char: 各
+    key: kanji-kaku2
+  - char: 次
+    key: kanji-tsugi
+  - char: 石
+    key: kanji-ishi
+  - char: 夫
+    key: kanji-otto
+  - char: 葉
+    key: kanji-ha
+  - char: 化
+    key: kanji-ka
+  - char: 反
+    key: kanji-han2
+  - char: 亡
+    key: kanji-bou
+  - char: 欠
+    key: kanji-ketsu
+  - char: 皿
+    key: kanji-sara
+  - char: 血
+    key: kanji-chi2
+  - char: 寺
+    key: kanji-tera
+  - char: 未
+    key: kanji-mi
+  - char: 末
+    key: kanji-matsu2
+  - char: 由
+    key: kanji-yuu2
+  - char: 非
+    key: kanji-hi2
+  - char: 神
+    key: kanji-kami2
+  - char: 定
+    key: kanji-tei
+  - char: 港
+    key: kanji-minato
+  - char: 形
+    key: kanji-katachi
+  - char: 彼
+    key: kanji-kare
+  - char: 昔
+    key: kanji-mukashi
+  - char: 活
+    key: kanji-katsu
+  - char: 位
+    key: kanji-i4
+  - char: 表
+    key: kanji-omote
+  - char: 才
+    key: kanji-sai2
+  - char: 雪
+    key: kanji-yuki
+  - char: 平
+    key: kanji-taira
+  - char: 供
+    key: kanji-tomo2
+  - char: 可
+    key: kanji-ka2
+  - char: 因
+    key: kanji-in3
+  - char: 王
+    key: kanji-ou
+  - char: 様
+    key: kanji-sama
+  - char: 骨
+    key: kanji-hone
+  - char: 氷
+    key: kanji-koori
+  - char: 法
+    key: kanji-hou2
+  - char: 局
+    key: kanji-kyoku
+  - char: 役
+    key: kanji-yaku
+  - char: 予
+    key: kanji-yo
+  - char: 油
+    key: kanji-abura
+  - char: 汗
+    key: kanji-ase
+  - char: 倍
+    key: kanji-bai
+  - char: 礼
+    key: kanji-rei
+  - char: 了
+    key: kanji-ryou2
+  - char: 衣
+    key: kanji-koromo
+  - char: 完
+    key: kanji-kan2
+  - char: 枚
+    key: kanji-mai2
+  - char: 性
+    key: kanji-sei2
+  - char: 税
+    key: kanji-zei
+  - char: 型
+    key: kanji-kata
+  - char: 故
+    key: kanji-yue
+  - char: 差
+    key: kanji-sa
+  - char: 技
+    key: kanji-waza
+  - char: 他
+    key: kanji-hoka
+  - char: 息
+    key: kanji-iki
+  - char: 虫
+    key: kanji-mushi
+  - char: 波
+    key: kanji-nami
+  - char: 単
+    key: kanji-tan
+  - char: 昨
+    key: kanji-saku
+  - char: 曲
+    key: kanji-magaru
+  - char: 対
+    key: kanji-tai
+  - char: 否
+    key: kanji-hi3
+  - char: 的
+    key: kanji-mato
+  - char: 宿
+    key: kanji-yado
+  - char: 束
+    key: kanji-taba
+  - char: 査
+    key: kanji-sa2
+  - char: 実
+    key: kanji-mi2
+  - char: 涙
+    key: kanji-namida
+  - char: 労
+    key: kanji-rou
+  - char: 相
+    key: kanji-sou
+  - char: 点
+    key: kanji-ten2
+  - char: 原
+    key: kanji-hara
+  - char: 営
+    key: kanji-ei3
+  - char: 指
+    key: kanji-yubi
+  - char: 席
+    key: kanji-seki
+  - char: 式
+    key: kanji-shiki
+  - char: 面
+    key: kanji-men
+  - char: 客
+    key: kanji-kyaku
+  - char: 係
+    key: kanji-kakari
+  - char: 約
+    key: kanji-yaku2
+  - char: 絵
+    key: kanji-e
+  - char: 箱
+    key: kanji-hako
+  - char: 科
+    key: kanji-ka3
+  - char: 常
+    key: kanji-jou
+  - char: 島
+    key: kanji-shima
+  - char: 窓
+    key: kanji-mado
+  - char: 横
+    key: kanji-yoko
+  - char: 果
+    key: kanji-ka4
+  - char: 無
+    key: kanji-nai
+  - char: 普
+    key: kanji-fu3
+  - char: 段
+    key: kanji-dan
+  - char: 路
+    key: kanji-ro
+  - char: 側
+    key: kanji-gawa
+  - char: 術
+    key: kanji-jutsu
+  - char: 券
+    key: kanji-ken5
+  - char: 両
+    key: kanji-ryou3
+  - char: 階
+    key: kanji-kai5
+  - char: 線
+    key: kanji-sen2
+  - char: 煙
+    key: kanji-kemuri
+  - char: 現
+    key: kanji-gen2
+  - char: 準
+    key: kanji-jun
+  - char: 橋
+    key: kanji-hashi
+  - char: 組
+    key: kanji-kumi
+  - char: 郵
+    key: kanji-yuu3
+  - char: 販
+    key: kanji-han3
+  - char: 園
+    key: kanji-sono
+  - char: 卵
+    key: kanji-tamago
+  - char: 費
+    key: kanji-hi4
+  - char: 賞
+    key: kanji-shou
+  - char: 庫
+    key: kanji-ko2
+  - char: 材
+    key: kanji-zai
+  - char: 製
+    key: kanji-sei4
+  - char: 期
+    key: kanji-ki4
+  - char: 件
+    key: kanji-ken6
+  - char: 限
+    key: kanji-gen3
+  - char: 警
+    key: kanji-kei2
+  - char: 察
+    key: kanji-satsu2
+  - char: 乳
+    key: kanji-nyuu
+  - char: 数
+    key: kanji-kazu
+  - char: 冊
+    key: kanji-satsu
+  - char: 価
+    key: kanji-ka5
+  - char: 粉
+    key: kanji-kona
+  - char: 湯
+    key: kanji-yu
+  - char: 再
+    key: kanji-sai3
+  - char: 格
+    key: kanji-kaku3
+  - char: 裏
+    key: kanji-ura
+  - char: 商
+    key: kanji-syou
+  - char: 機
+    key: kanji-ki5
+  - char: 紅
+    key: kanji-kurenai
+  - char: 砂
+    key: kanji-suna
+  - char: 塩
+    key: kanji-shio
+  - char: 例
+    key: kanji-rei2
+  - char: 袋
+    key: kanji-fukuro
+  - char: 師
+    key: kanji-shi3
+  - char: 角
+    key: kanji-shi3
+  - char: 戸
+    key: kanji-to
+  - char: 荷
+    key: kanji-ni2
+  - char: 帯
+    key: kanji-obi
+  - char: 宅
+    key: kanji-taku2
+  - char: 念
+    key: kanji-nen2
+  - char: 希
+    key: kanji-ki6
+  - char: 欲
+    key: kanji-hoshii
+  - char: 初
+    key: kanji-hatsu2
+  - char: 政
+    key: kanji-sei5
+  - char: 容
+    key: kanji-you5
+  - char: 身
+    key: kanji-mi3
+  - char: 祭
+    key: kanji-matsuri
+  - char: 値
+    key: kanji-atai
+  - char: 船
+    key: kanji-fune
+  - char: 球
+    key: kanji-tama2
+  - char: 君
+    key: kanji-kimi
+  - char: 専
+    key: kanji-sen3
+  - char: 熱
+    key: kanji-netsu
+  - char: 貿
+    key: kanji-bou2
+  - char: 経
+    key: kanji-kei3
+  - char: 絡
+    key: kanji-raku
+  - char: 情
+    key: kanji-nasake
+  - char: 個
+    key: kanji-ko3
+  - char: 歯
+    key: kanji-ha2
+  - char: 復
+    key: kanji-fuku3
+  - char: 級
+    key: kanji-kyuu4
+  - char: 妻
+    key: kanji-tsuma
+  - char: 際
+    key: kanji-kiwa
+  - char: 類
+    key: kanji-rui
+  - char: 適
+    key: kanji-teki
+  - char: 課
+    key: kanji-ka7
+  - char: 般
+    key: kanji-han4
+  - char: 種
+    key: kanji-tane
+  - char: 額
+    key: kanji-hitai
+  - char: 簡
+    key: kanji-kan9
+  - char: 議
+    key: kanji-gi
+  - char: 最
+    key: kanji-sai4
+  - char: 達
+    key: kanji-tatsu2
+  - char: 職
+    key: kanji-shoku
+  - char: 齢
+    key: kanji-rei4
+  - char: 歳
+    key: kanji-toshi
+  - char: 鼻
+    key: kanji-hana2
+  - char: 蔵
+    key: kanji-kura
+  - char: 草
+    key: kanji-kusa
+  level: n3
+- kanjis:
+  - char: 勉
+    key: kanji-ben
+  - char: 習
+    key: kanji-narau
+  - char: 教
+    key: kanji-oshieru
+  - char: 住
+    key: kanji-sumu
+  - char: 知
+    key: kanji-shiru
+  - char: 作
+    key: kanji-tsukuru
+  - char: 有
+    key: kanji-aru
+  - char: 止
+    key: kanji-tomaru
+  - char: 通
+    key: kanji-tooru
+  - char: 乗
+    key: kanji-noru
+  - char: 降
+    key: kanji-oriru
+  - char: 待
+    key: kanji-matsu
+  - char: 持
+    key: kanji-motsu
+  - char: 押
+    key: kanji-osu
+  - char: 引
+    key: kanji-hiku
+  - char: 歩
+    key: kanji-aruku
+  - char: 走
+    key: kanji-hashiru
+  - char: 急
+    key: kanji-isogu
+  - char: 座
+    key: kanji-suwaru
+  - char: 写
+    key: kanji-utsusu
+  - char: 思
+    key: kanji-omou
+  - char: 切
+    key: kanji-kiru
+  - char: 売
+    key: kanji-uru
+  - char: 合
+    key: kanji-gou2
+  - char: 考
+    key: kanji-kangaeru
+  - char: 貸
+    key: kanji-kasu
+  - char: 借
+    key: kanji-kariru
+  - char: 開
+    key: kanji-akeru
+  - char: 閉
+    key: kanji-shimeru
+  - char: 別
+    key: kanji-betsu
+  - char: 答
+    key: kanji-kotaeru
+  - char: 送
+    key: kanji-okuru
+  - char: 帰
+    key: kanji-kaeru
+  - char: 着
+    key: kanji-tsuku
+  - char: 起
+    key: kanji-okiru
+  - char: 寝
+    key: kanji-neru
+  - char: 去
+    key: kanji-kyo
+  - char: 転
+    key: kanji-korobu
+  - char: 始
+    key: kanji-hajimeru
+  - char: 終
+    key: kanji-owaru
+  - char: 動
+    key: kanji-ugoku
+  - char: 働
+    key: kanji-hataraku
+  - char: 洗
+    key: kanji-arau
+  - char: 進
+    key: kanji-susumu
+  - char: 使
+    key: kanji-tsukau
+  - char: 試
+    key: kanji-kokoromiru
+  - char: 研
+    key: kanji-ken2
+  - char: 建
+    key: kanji-tateru
+  - char: 説
+    key: kanji-setsu
+  - char: 産
+    key: kanji-umu
+  - char: 発
+    key: kanji-hatsu
+  - char: 田
+    key: kanji-ta
+  - char: 貝
+    key: kanji-kai
+  - char: 犬
+    key: kanji-inu
+  - char: 正
+    key: kanji-tadashii
+  - char: 早
+    key: kanji-hayai
+  - char: 太
+    key: kanji-futoi
+  - char: 広
+    key: kanji-hiroi
+  - char: 近
+    key: kanji-chikai
+  - char: 遠
+    key: kanji-tooi
+  - char: 低
+    key: kanji-hikui
+  - char: 好
+    key: kanji-suki
+  - char: 明
+    key: kanji-akarui
+  - char: 暗
+    key: kanji-kurai
+  - char: 悪
+    key: kanji-warui
+  - char: 強
+    key: kanji-tsuyoi
+  - char: 弱
+    key: kanji-yowai
+  - char: 楽
+    key: kanji-tanoshii
+  - char: 軽
+    key: kanji-karui
+  - char: 重
+    key: kanji-omoi
+  - char: 暑
+    key: kanji-atsui
+  - char: 寒
+    key: kanji-samui
+  - char: 短
+    key: kanji-mijikai
+  - char: 仕
+    key: kanji-tsukaeru
+  - char: 元
+    key: kanji-gen
+  - char: 道
+    key: kanji-michi
+  - char: 文
+    key: kanji-bun
+  - char: 字
+    key: kanji-ji2
+  - char: 京
+    key: kanji-kyou
+  - char: 私
+    key: kanji-waatashi
+  - char: 自
+    key: kanji-ji
+  - char: 心
+    key: kanji-kokoro
+  - char: 公
+    key: kanji-kou2
+  - char: 台
+    key: kanji-dai
+  - char: 夕
+    key: kanji-yuu
+  - char: 春
+    key: kanji-haru
+  - char: 夏
+    key: kanji-natsu
+  - char: 秋
+    key: kanji-aki
+  - char: 冬
+    key: kanji-fuyu
+  - char: 兄
+    key: kanji-ani
+  - char: 姉
+    key: kanji-ane
+  - char: 弟
+    key: kanji-otouto
+  - char: 妹
+    key: kanji-imouto
+  - char: 不
+    key: kanji-fu
+  - char: 工
+    key: kanji-kou3
+  - char: 方
+    key: kanji-hou
+  - char: 図
+    key: kanji-zu
+  - char: 声
+    key: kanji-koe
+  - char: 音
+    key: kanji-oto
+  - char: 歌
+    key: kanji-uta
+  - char: 風
+    key: kanji-kaze
+  - char: 光
+    key: kanji-hikari
+  - char: 米
+    key: kanji-kome
+  - char: 回
+    key: kanji-kai2
+  - char: 同
+    key: kanji-onaji
+  - char: 品
+    key: kanji-hin
+  - char: 池
+    key: kanji-ike
+  - char: 地
+    key: kanji-chi
+  - char: 区
+    key: kanji-ku
+  - char: 以
+    key: kanji-i
+  - char: 林
+    key: kanji-hayashi
+  - char: 森
+    key: kanji-mori
+  - char: 英
+    key: kanji-ei
+  - char: 朝
+    key: kanji-asa
+  - char: 昼
+    key: kanji-hiru
+  - char: 夜
+    key: kanji-yoru
+  - char: 晩
+    key: kanji-ban
+  - char: 肉
+    key: kanji-niku
+  - char: 菜
+    key: kanji-sai
+  - char: 注
+    key: kanji-chuu
+  - char: 意
+    key: kanji-i3
+  - char: 味
+    key: kanji-aji
+  - char: 府
+    key: kanji-fu2
+  - char: 県
+    key: kanji-ken
+  - char: 市
+    key: kanji-shi2
+  - char: 町
+    key: kanji-machi
+  - char: 村
+    key: kanji-mura
+  - char: 色
+    key: kanji-iro
+  - char: 黒
+    key: kanji-kuro
+  - char: 赤
+    key: kanji-aka
+  - char: 青
+    key: kanji-ao
+  - char: 黄
+    key: kanji-ki3
+  - char: 茶
+    key: kanji-cha
+  - char: 銀
+    key: kanji-gin
+  - char: 世
+    key: kanji-se
+  - char: 死
+    key: kanji-shi
+  - char: 医
+    key: kanji-i2
+  - char: 質
+    key: kanji-shitsu
+  - char: 鉄
+    key: kanji-tetsu
+  - char: 民
+    key: kanji-min
+  - char: 用
+    key: kanji-you
+  - char: 和
+    key: kanji-wa
+  - char: 旅
+    key: kanji-tabi
+  - char: 鳥
+    key: kanji-tori
+  - char: 体
+    key: kanji-karada
+  - char: 酒
+    key: kanji-sake
+  - char: 漢
+    key: kanji-kan
+  - char: 病
+    key: kanji-yaamai
+  - char: 物
+    key: kanji-mono
+  - char: 紙
+    key: kanji-kami
+  - char: 海
+    key: kanji-umi
+  - char: 頭
+    key: kanji-atama
+  - char: 顔
+    key: kanji-kao
+  - char: 首
+    key: kaanji-kubi
+  - char: 利
+    key: kanji-ri
+  - char: 家
+    key: kanji-ie
+  - char: 族
+    key: kanji-zoku
+  - char: 洋
+    key: kanji-you2
+  - char: 室
+    key: kanji-muro
+  - char: 員
+    key: kanji-in
+  - char: 界
+    key: kanji-kai3
+  - char: 親
+    key: kanji-oya
+  - char: 薬
+    key: kanji-kusuri
+  - char: 堂
+    key: kanji-dou
+  - char: 真
+    key: kanji-ma
+  - char: 曜
+    key: kanji-you3
+  - char: 特
+    key: kanji-toku
+  - char: 屋
+    key: kanji-ya
+  - char: 事
+    key: kanji-koto
+  - char: 運
+    key: kanji-un
+  - char: 部
+    key: kanji-bu
+  - char: 飯
+    key: kanji-meshi
+  - char: 野
+    key: kanji-no
+  - char: 度
+    key: kanji-do
+  - char: 濯
+    key: kanji-taku
+  - char: 究
+    key: kanji-kyuu2
+  - char: 料
+    key: kanji-ryou
+  - char: 理
+    key: kanji-ri2
+  - char: 館
+    key: kanji-yakata
+  - char: 場
+    key: kanji-ba
+  - char: 所
+    key: kanji-tokoro
+  - char: 都
+    key: kanji-miyako
+  - char: 業
+    key: kanji-gyou
+  - char: 題
+    key: kanji-dai2
+  - char: 院
+    key: kanji-in2
+  - char: 験
+    key: kanji-ken3
+  - char: 計
+    key: kanji-kei
+  - char: 画
+    key: kanji-ga
+  - char: 映
+    key: kanji-ei2
+  - char: 奥
+    key: kanji-oku
+  - char: 服
+    key: kanji-fuku
+  - char: 者
+    key: kanji-mono2
+  - char: 代
+    key: kanji-dai3
+  - char: 番
+    key: kanji-ban2
+  - char: 問
+    key: kanji-toi
+  level: n4
+- kanjis:
+  - char: 一
+    key: kanji-ichi
+  - char: 二
+    key: kanji-ni
+  - char: 三
+    key: kanji-san
+  - char: 四
+    key: kanji-yon
+  - char: 五
+    key: kanji-go
+  - char: 六
+    key: kanji-roku
+  - char: 七
+    key: kanji-nana
+  - char: 八
+    key: kanji-hachi
+  - char: 九
+    key: kanji-kyuu
+  - char: 十
+    key: kanji-juu
+  - char: 百
+    key: kanji-hyaku
+  - char: 千
+    key: kanji-sen
+  - char: 万
+    key: kanji-man
+  - char: 日
+    key: kanji-nichi
+  - char: 月
+    key: kanji-tsuki
+  - char: 火
+    key: kanji-hi
+  - char: 水
+    key: kanji-mizu
+  - char: 木
+    key: kanji-ki
+  - char: 金
+    key: kanji-kin
+  - char: 土
+    key: kanji-tsuchi
+  - char: 上
+    key: kanji-ue
+  - char: 下
+    key: kanji-shita
+  - char: 右
+    key: kanji-migi
+  - char: 左
+    key: kanji-hidari
+  - char: 外
+    key: kanji-soto
+  - char: 中
+    key: kanji-naka
+  - char: 前
+    key: kanji-mae
+  - char: 後
+    key: kanji-ushiro
+  - char: 北
+    key: kanji-kita
+  - char: 南
+    key: kanji-minami
+  - char: 東
+    key: kanji-higashi
+  - char: 西
+    key: kanji-nishi
+  - char: 大
+    key: kanji-ookii
+  - char: 小
+    key: kanji-chiisai
+  - char: 高
+    key: kanji-takai
+  - char: 安
+    key: kanji-yasui
+  - char: 多
+    key: kanji-ooi
+  - char: 少
+    key: sukunai
+  - char: 長
+    key: kanji-nagai
+  - char: 新
+    key: kanji-atarashii
+  - char: 古
+    key: kanji-furui
+  - char: 口
+    key: kanji-kuchi
+  - char: 目
+    key: kanji-me
+  - char: 手
+    key: kanji-te
+  - char: 足
+    key: kanji-ashi
+  - char: 耳
+    key: kanji-mimi
+  - char: 山
+    key: kanji-yama
+  - char: 川
+    key: kanji-kawa
+  - char: 花
+    key: kanji-hana
+  - char: 人
+    key: kanji-hito
+  - char: 男
+    key: kanji-otoko
+  - char: 女
+    key: kanji-onna
+  - char: 父
+    key: kanji-chichi
+  - char: 母
+    key: kanji-haha
+  - char: 子
+    key: kanji-ko
+  - char: 友
+    key: kanji-tomo
+  - char: 力
+    key: kanji-chikara
+  - char: 行
+    key: kanji-iku
+  - char: 来
+    key: kanji-kuru
+  - char: 会
+    key: kanji-au
+  - char: 休
+    key: kanji-yasumu
+  - char: 食
+    key: kanji-taberu
+  - char: 飲
+    key: kanji-nomu
+  - char: 立
+    key: kanji-tatsu
+  - char: 言
+    key: kanji-iu
+  - char: 話
+    key: kanji-hanasu
+  - char: 見
+    key: kanji-miru
+  - char: 聞
+    key: kanji-kiku
+  - char: 書
+    key: kanji-kaku
+  - char: 読
+    key: kanji-yomu
+  - char: 入
+    key: kanji-hairu
+  - char: 出
+    key: kanji-deru
+  - char: 買
+    key: kanji-kau
+  - char: 学
+    key: kanji-gaku
+  - char: 年
+    key: kanji-nen
+  - char: 時
+    key: kanji-toki
+  - char: 分
+    key: kanji-fun
+  - char: 毎
+    key: kanji-mai
+  - char: 週
+    key: kanji-shuu
+  - char: 今
+    key: kanji-ima
+  - char: 間
+    key: kanji-aida
+  - char: 午
+    key: kanji-go2
+  - char: 半
+    key: kanji-han
+  - char: 白
+    key: kanji-shiro
+  - char: 名
+    key: kanji-na
+  - char: 先
+    key: kanji-saki
+  - char: 生
+    key: kanji-sei
+  - char: 円
+    key: kanji-en
+  - char: 空
+    key: kanji-sora
+  - char: 天
+    key: kanji-ten
+  - char: 気
+    key: kanji-ki2
+  - char: 雨
+    key: kanji-ame
+  - char: 国
+    key: kanji-kuni
+  - char: 電
+    key: kanji-den
+  - char: 本
+    key: kanji-hon
+  - char: 車
+    key: kanji-kuruma
+  - char: 校
+    key: kanji-kou
+  - char: 社
+    key: kanji-sha
+  - char: 何
+    key: kanji-nani
+  - char: 語
+    key: kanji-go3
+  - char: 牛
+    key: kanji-ushi
+  - char: 馬
+    key: kanji-uma
+  - char: 魚
+    key: kanji-sakana
+  - char: 店
+    key: kanji-mise
+  - char: 駅
+    key: kanji-eki
+  level: n5

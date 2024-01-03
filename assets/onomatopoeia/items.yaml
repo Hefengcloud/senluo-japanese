@@ -39,10 +39,13 @@
 - examples:
   - en: You'll miss the train if you don’t hurry.
     jp: '**モタモタ** してると電車に乗り遅れるよ。'
+    zh: 如果你再磨蹭的话就赶不上电车了。
   - en: 'If you don''t hurry, you won''t make it in time for today''s meeting. Hurry up and make the documents.'
     jp: '**モタモタ** してると、今日の会議までに間に合わないよ。急いで資料作って。'
+    zh: 如果你不赶快的话，今天的会议就来不及了。赶紧做资料吧。
   - en: If you don't hurry, I will leave you.
     jp: '**モタモタ** してると、置いていくよ。'
+    zh: 如果再拖拖拉拉的话，我就不管你了。
   key: motamota
   meanings:
     en:
@@ -2308,17 +2311,23 @@
 - examples:
   - en: Oh, my nose feels **itchy** **.** I wonder if it's hay fever.
     jp: あー、鼻が **ムズムズ** する。花粉症かなあ。
+    zh: 啊，我的鼻子感觉发痒。不知道是不是花粉症。
   - en: My back is **itchy**.
     jp: なんだか、背中が **ムズムズ** とかゆい。
+    zh: 我的背部感觉发痒。
   - en: My feet are **itchy** because of athlete's foot.
     jp: 水虫で足が **ムズムズ** する。
+    zh: 我的脚因为有脚癣感觉发痒。
   key: muzumuzu
   meanings:
     en:
-    - '"to feel itchy / to tickle" Describes an itchy feeling, like a small insect
-      crawling.'
+    - '"to feel itchy / to tickle"'
+    - Describes an itchy feeling, like a small insect crawling.
     jp:
     - 小さな虫が這うようで、かゆい様子。
+    zh:
+    - 痒，刺挠
+    - 身上像有虫子乱爬似的感觉
   name: ムズムズ
 - examples:
   - en: My tooth is wobbling and are about to fall out.
