@@ -1,0 +1,1595 @@
+- group: Family
+  words:
+  - en: family
+    jp: かぞく
+    reading: 家族
+  - en: (my) older brother
+    jp: あに
+    reading: 兄
+  - en: (someone else's) older brother
+    jp: おにいさん
+    reading: お兄さん
+  - en: (my) older sister
+    jp: あね
+    reading: 姉
+  - en: (someone else's) older sister
+    jp: おねえさん
+    reading: お姉さん
+  - en: younger brother
+    jp: おとうと
+    reading: 弟
+  - en: younger sister
+    jp: いもうと
+    reading: 妹
+  - en: parent
+    jp: おや
+    reading: 親
+  - en: parents
+    jp: りょうしん
+    reading: 両親
+  - en: mother
+    jp: ははおや
+    reading: 母親
+  - en: father
+    jp: ちちおや
+    reading: 父親
+  - en: husband
+    jp: おっと
+    reading: 夫
+  - en: (someone else's) husband
+    jp: ごしゅじん
+    reading: ご主人
+  - en: wife
+    jp: つま
+    reading: 妻
+  - en: (someone else's) wife
+    jp: おくさん
+    reading: 奥さん
+  - en: son
+    jp: むすこ
+    reading: 息子
+  - en: daughter
+    jp: むすめ
+    reading: 娘
+  - en: uncle
+    jp: おじ
+    reading: 伯父
+  - en: aunt
+    jp: おば
+    reading: 伯母
+  - en: grandchild
+    jp: まご
+    reading: 孫
+- group: People
+  words:
+  - en: senior (colleague/coworker)
+    jp: せんぱい
+    reading: 先輩
+  - en: junior (colleague/coworker)
+    jp: こうはい
+    reading: 後輩
+  - en: man
+    jp: だんせい
+    reading: 男性
+  - en: woman
+    jp: じょせい
+    reading: 女性
+  - en: nation
+    jp: こくみん
+    reading: 国民
+  - en: citizen
+    jp: しみん
+    reading: 市民
+- group: Body Parts
+  words:
+  - en: body
+    jp: からだ
+    reading: 体
+  - en: head
+    jp: あたま
+    reading: 頭
+  - en: face
+    jp: かお
+    reading: 顔
+  - en: hair
+    jp: かみ
+    reading: 髪
+  - en: beard
+    jp: ひげ
+    reading: 髭
+  - en: nose
+    jp: はな
+    reading: 鼻
+  - en: neck
+    jp: くび
+    reading: 首
+  - en: throat
+    jp: のど
+    reading: 喉
+  - en: arm
+    jp: うで
+    reading: 腕
+  - en: finger
+    jp: ゆび
+    reading: 指
+  - en: chest
+    jp: むね
+    reading: 胸
+  - en: stomach
+    jp: おなか
+    reading: お腹
+  - en: lower back
+    jp: こし
+    reading: 腰
+  - en: butt
+    jp: おしり
+    reading: お尻
+  - en: back
+    jp: せなか
+    reading: 背中
+  - en: bone
+    jp: ほね
+    reading: 骨
+- group: Work
+  words:
+  - en: work
+    jp: しごと
+    reading: 仕事
+  - en: company president
+    jp: しゃちょう
+    reading: 社長
+  - en: general manager
+    jp: ぶちょう
+    reading: 部長
+  - en: section manager
+    jp: かちょう
+    reading: 課長
+  - en: colleague
+    jp: どうりょう
+    reading: 同僚
+  - en: dentist
+    jp: はいしゃ
+    reading: 歯医者
+  - en: police
+    jp: けいさつ
+    reading: 警察
+  - en: shop clerk
+    jp: てんいん
+    reading: 店員
+  - en: station staff
+    jp: えきいん
+    reading: 駅員
+  - en: company employee
+    jp: かいしゃいん
+    reading: 会社員
+  - en: bank clerk
+    jp: ぎんこういん
+    reading: 銀行員
+  - en: driver
+    jp: うんてんしゅ
+    reading: 運転手
+  - en: singer
+    jp: かしゅ
+    reading: 歌手
+  - en: part-time job
+    jp: アルバイト
+    reading: '-'
+  - en: interview
+    jp: めんせつ
+    reading: 面接
+  - en: resume
+    jp: りれきしょ
+    reading: 履歴書
+  - en: documents
+    jp: しょるい
+    reading: 書類
+  - en: salary
+    jp: きゅうりょう
+    reading: 給料
+  - en: business trip
+    jp: しゅっちょう
+    reading: 出張
+  - en: meeting
+    jp: かいぎ
+    reading: 会議
+  - en: industry
+    jp: こうぎょう/さんぎょう
+    reading: 工業/産業
+  - en: trade
+    jp: ぼうえき
+    reading: 貿易
+- group: Food / Beverage
+  words:
+  - en: food
+    jp: たべもの
+    reading: 食べ物
+  - en: beverage
+    jp: のみもの
+    reading: 飲み物
+  - en: cuisine
+    jp: りょうり
+    reading: 料理
+  - en: vegetable
+    jp: やさい
+    reading: 野菜
+  - en: onion
+    jp: たまねぎ
+    reading: 玉ねぎ
+  - en: carrot
+    jp: にんじん
+    reading: 人参
+  - en: eggplant
+    jp: なす
+    reading: 茄子
+  - en: rice
+    jp: こめ
+    reading: 米
+  - en: breakfast
+    jp: ちょうしょく
+    reading: 朝食
+  - en: lunch
+    jp: ちゅうしょく
+    reading: 昼食
+  - en: dinner
+    jp: ゆうしょく
+    reading: 夕食
+  - en: meat
+    jp: にく
+    reading: 肉
+  - en: beef
+    jp: ぎゅうにく
+    reading: 牛肉
+  - en: pork
+    jp: ぶたにく
+    reading: 豚肉
+  - en: chicken
+    jp: とりにく
+    reading: 鶏肉
+  - en: soup
+    jp: スープ
+    reading: '-'
+  - en: sandwich
+    jp: サンドイッチ
+    reading: '-'
+  - en: salad
+    jp: サラダ
+    reading: '-'
+  - en: spaghetti
+    jp: スパゲッティ
+    reading: '-'
+  - en: cake
+    jp: ケーキ
+    reading: '-'
+  - en: liquor / sake
+    jp: おさけ
+    reading: お酒
+  - en: tea
+    jp: おちゃ
+    reading: お茶
+  - en: hot water
+    jp: おゆ
+    reading: お湯
+  - en: wine
+    jp: ワイン
+    reading: '-'
+  - en: juice
+    jp: ジュース
+    reading: '-'
+  - en: Japanese food
+    jp: わしょく
+    reading: '-'
+  - en: western food
+    jp: ようしょく
+    reading: 洋食
+- group: Transportation
+  words:
+  - en: vehicle
+    jp: のりもの
+    reading: 乗り物
+  - en: bicycle
+    jp: じてんしゃ
+    reading: 自転車
+  - en: car
+    jp: じどうしゃ
+    reading: 自動車
+  - en: taxi
+    jp: タクシー
+    reading: '-'
+  - en: airplane
+    jp: ひこうき
+    reading: 飛行機
+  - en: ship
+    jp: ふね
+    reading: 船
+  - en: ambulance
+    jp: きゅうきゅうしゃ
+    reading: 救急車
+  - en: fire engine
+    jp: しょうぼうしゃ
+    reading: 消防車
+  - en: bullet train
+    jp: しんかんせん
+    reading: 新幹線
+  - en: local train
+    jp: ふつう（でんしゃ）
+    reading: 普通（電車）
+  - en: express train
+    jp: きゅうこう（でんしゃ）
+    reading: 急行（電車）
+  - en: limited-express train
+    jp: とっきゅう（でんしゃ）
+    reading: 特急（電車）
+  - en: subway
+    jp: ちかてつ
+    reading: 地下鉄
+  - en: traffic light
+    jp: しんごう
+    reading: 信号
+  - en: road
+    jp: どうろ
+    reading: 道路
+  - en: transportation
+    jp: こうつう
+    reading: 交通
+  - en: traffic jam
+    jp: こうつうじゅうたい
+    reading: 交通渋滞
+  - en: under construction
+    jp: こうじちゅう
+    reading: 工事中
+- group: Clothes
+  words:
+  - en: clothes
+    jp: ふく
+    reading: 服
+  - en: western-style clothes
+    jp: ようふく
+    reading: 洋服
+  - en: Japanese-style clothes
+    jp: わふく
+    reading: 和服
+  - en: kimono
+    jp: きもの
+    reading: 着物
+  - en: coat
+    jp: コート
+    reading: '-'
+  - en: skirt
+    jp: スカート
+    reading: '-'
+  - en: sweater
+    jp: セーター
+    reading: '-'
+  - en: winter scarf
+    jp: マフラー
+    reading: '-'
+  - en: cap / hat
+    jp: ぼうし
+    reading: 帽子
+  - en: suit
+    jp: スーツ
+    reading: '-'
+  - en: dress
+    jp: ドレス
+    reading: '-'
+  - en: ring
+    jp: ゆびわ
+    reading: 指輪
+  - en: gloves
+    jp: てぶくろ
+    reading: 手袋
+  - en: jacket
+    jp: うわぎ/ジャケット
+    reading: 上着
+  - en: underwear
+    jp: したぎ
+    reading: 下着
+  - en: necktie
+    jp: ネクタイ
+    reading: '-'
+  - en: pants
+    jp: ズボン
+    reading: '-'
+  - en: boots
+    jp: ブーツ
+    reading: '-'
+  - en: sneaker
+    jp: スニーカー
+    reading: '-'
+  - en: high heels
+    jp: ハイヒール
+    reading: '-'
+  - en: sandals
+    jp: サンダル
+    reading: '-'
+  - en: socks
+    jp: くつした
+    reading: 靴下
+  - en: pocket
+    jp: ポケット
+    reading: '-'
+  - en: accessory
+    jp: アクセサリー
+    reading: '-'
+  - en: glasses
+    jp: めがね
+    reading: 眼鏡
+- group: Directions
+  words:
+  - en: north
+    jp: きた
+    reading: 北
+  - en: south
+    jp: みなみ
+    reading: 南
+  - en: east
+    jp: ひがし
+    reading: 東
+  - en: west
+    jp: にし
+    reading: 西
+  - en: northeast
+    jp: ほくとう
+    reading: 北東
+  - en: northwest
+    jp: ほくせい
+    reading: 北西
+  - en: southeast
+    jp: なんとう
+    reading: 南東
+  - en: southwest
+    jp: なんせい
+    reading: 南西
+- group: World
+  words:
+  - en: world
+    jp: せかい
+    reading: 世界
+  - en: Asia
+    jp: アジア
+    reading: '-'
+  - en: Europe
+    jp: ヨーロッパ
+    reading: '-'
+  - en: North America
+    jp: きたアメリカ
+    reading: 北アメリカ
+  - en: South America
+    jp: みなみアメリカ
+    reading: 南アメリカ
+  - en: Africa
+    jp: アフリカ
+    reading: '-'
+  - en: country
+    jp: くに
+    reading: 国
+  - en: Japan
+    jp: にほん
+    reading: 日本
+  - en: Korea
+    jp: かんこく
+    reading: 韓国
+  - en: China
+    jp: ちゅうごく
+    reading: 中国
+  - en: America
+    jp: アメリカ
+    reading: '-'
+  - en: Canada
+    jp: カナダ
+    reading: '-'
+  - en: Brazil
+    jp: ブラジル
+    reading: '-'
+  - en: Australia
+    jp: オーストラリア
+    reading: '-'
+  - en: France
+    jp: フランス
+    reading: '-'
+  - en: Germany
+    jp: ドイツ
+    reading: '-'
+  - en: The United Kingdom
+    jp: イギリス
+    reading: '-'
+  - en: Rusia
+    jp: ロシア
+    reading: '-'
+  - en: Philippines
+    jp: フィリピン
+    reading: '-'
+  - en: Thailand
+    jp: タイ
+    reading: '-'
+  - en: Indonesia
+    jp: インドネシア
+    reading: '-'
+  - en: India
+    jp: インド
+    reading: '-'
+  - en: Egypt
+    jp: エジプト
+    reading: '-'
+- group: Colors
+  words:
+  - en: color
+    jp: いろ
+    reading: 色
+  - en: blue
+    jp: あおいろ
+    reading: 青色
+  - en: red
+    jp: あかいろ
+    reading: 赤色
+  - en: black
+    jp: くろいろ
+    reading: 黒色
+  - en: white
+    jp: しろいろ
+    reading: 白色
+  - en: yellow
+    jp: きいろ
+    reading: 黄色
+  - en: brown
+    jp: ちゃいろ
+    reading: 茶色
+  - en: silver
+    jp: ぎんいろ
+    reading: 銀色
+- group: Illness
+  words:
+  - en: illness
+    jp: びょうき
+    reading: 病気
+  - en: cold
+    jp: かぜ
+    reading: 風邪
+  - en: fever
+    jp: ねつ
+    reading: 熱
+  - en: cough
+    jp: せき
+    reading: 咳
+- group: Accident
+  words:
+  - en: accident
+    jp: じこ
+    reading: 事故
+  - en: injury
+    jp: けが
+    reading: 怪我
+  - en: fire / burning
+    jp: かじ
+    reading: 火事
+- group: Nature
+  words:
+  - en: scenery
+    jp: けしき
+    reading: 景色
+  - en: air
+    jp: くうき
+    reading: 空気
+  - en: lake
+    jp: みずうみ
+    reading: 湖
+  - en: wind
+    jp: かぜ
+    reading: 風
+  - en: sea
+    jp: うみ
+    reading: 海
+  - en: woods / small forest
+    jp: はやし
+    reading: 林
+  - en: forest
+    jp: もり
+    reading: 森
+  - en: pond
+    jp: いけ
+    reading: 池
+  - en: light
+    jp: ひかり
+    reading: 光
+  - en: sound
+    jp: おと
+    reading: 音
+  - en: sun
+    jp: たいよう
+    reading: 太陽
+  - en: cloud
+    jp: くも
+    reading: 雲
+- group: Weather / Season
+  words:
+  - en: season
+    jp: きせつ
+    reading: 季節
+  - en: weather
+    jp: てんき
+    reading: 天気
+  - en: weather forecast
+    jp: てんきよほう
+    reading: 天気予報
+  - en: rainy season
+    jp: つゆ
+    reading: 梅雨
+- group: Hobbies
+  words:
+  - en: hobby
+    jp: しゅみ
+    reading: 趣味
+  - en: shopping
+    jp: かいもの
+    reading: 買い物
+  - en: picture
+    jp: しゃしん
+    reading: 写真
+  - en: movie
+    jp: えいが
+    reading: 映画
+  - en: travel
+    jp: りょこう
+    reading: 旅行
+  - en: game
+    jp: ゲーム
+    reading: '-'
+  - en: anime
+    jp: アニメ
+    reading: '-'
+  - en: comic
+    jp: まんが
+    reading: 漫画
+- group: Sports
+  words:
+  - en: tennis
+    jp: テニス
+    reading: tenisu
+  - en: soccer
+    jp: サッカー
+    reading: sakkā
+  - en: basketball
+    jp: バスケットボール
+    reading: basuketto bōru
+  - en: golf
+    jp: ゴルフ
+    reading: gorufu
+  - en: baseball
+    jp: やきゅう
+    reading: yakyū
+  - en: table tennis
+    jp: たっきゅう
+    reading: takkyū
+- group: Music
+  words:
+  - en: music
+    jp: おんがく
+    reading: 音楽
+  - en: song
+    jp: うた
+    reading: 歌
+  - en: karaoke
+    jp: カラオケ
+    reading: '-'
+  - en: piano
+    jp: ピアノ
+    reading: '-'
+  - en: guitar
+    jp: ギター
+    reading: '-'
+  - en: violin
+    jp: バイオリン
+    reading: '-'
+  - en: rock
+    jp: ロック
+    reading: '-'
+  - en: jazz
+    jp: ジャズ
+    reading: '-'
+- group: Animals
+  words:
+  - en: animal
+    jp: どうぶつ
+    reading: 動物
+  - en: dog
+    jp: いぬ
+    reading: 犬
+  - en: puppy
+    jp: こいぬ
+    reading: 子犬
+  - en: cat
+    jp: ねこ
+    reading: 猫
+  - en: kitten
+    jp: こねこ
+    reading: 子猫
+  - en: bird
+    jp: とり
+    reading: 鳥
+  - en: small bird
+    jp: ことり
+    reading: 小鳥
+- group: Events
+  words:
+  - en: exhibition
+    jp: てんらんかい
+    reading: 展覧会
+  - en: concert
+    jp: コンサート
+    reading: '-'
+  - en: wedding ceremony
+    jp: けっこんしき
+    reading: 結婚式
+  - en: sports day
+    jp: うんどうかい
+    reading: 運動会
+  - en: cherry blossom viewing
+    jp: はなみ
+    reading: 花見
+  - en: festival
+    jp: おまつり
+    reading: お祭り
+  - en: firework festival
+    jp: はなびたいかい
+    reading: 花火大会
+  - en: Christmas
+    jp: クリスマス
+    reading: '-'
+- group: Verb 1 (U-verbs)
+  words:
+  - en: something opens
+    jp: あく
+    reading: 開く
+  - en: to knit
+    jp: あむ
+    reading: 編む
+  - en: to apologize
+    jp: あやまる
+    reading: 謝る
+  - en: to walk
+    jp: あるく
+    reading: 歩く
+  - en: to hurry
+    jp: いそぐ
+    reading: 急ぐ
+  - en: to move
+    jp: うごく
+    reading: 動く
+  - en: to tell a lie
+    jp: うそをつく
+    reading: 嘘をつく
+  - en: to sing
+    jp: うたう
+    reading: 歌う
+  - en: to hit
+    jp: うつ
+    reading: 打つ
+  - en: to copy
+    jp: うつす
+    reading: 写す
+  - en: to sell
+    jp: うる
+    reading: 売る
+  - en: to choose
+    jp: えらぶ
+    reading: 選ぶ
+  - en: to put / to place
+    jp: おく
+    reading: 置く
+  - en: to send
+    jp: おくる
+    reading: 送る
+  - en: to wake someone up
+    jp: おこす
+    reading: 起こす
+  - en: to get angry
+    jp: おこる
+    reading: 怒る
+  - en: to press / to push
+    jp: おす
+    reading: 押す
+  - en: to be in someone's care
+    jp: おせわになる
+    reading: お世話になる
+  - en: to feel sad / to feed down
+    jp: おちこむ
+    reading: 落ち込む
+  - en: to drop something
+    jp: おとす
+    reading: 落とす
+  - en: to dance
+    jp: おどる
+    reading: 踊る
+  - en: to withdraw (money)
+    jp: おろす
+    reading: 下ろす
+  - en: to darw
+    jp: かく
+    reading: 描く
+  - en: to decolate
+    jp: かざる
+    reading: 飾る
+  - en: to catch a cold
+    jp: かぜをひく
+    reading: 風邪を引く
+  - en: to win
+    jp: かつ
+    reading: 勝つ
+  - en: to bite / to chew
+    jp: かむ
+    reading: 噛む
+  - en: something changes
+    jp: かわる
+    reading: 変わる
+  - en: to do one's best / to work hard
+    jp: がんばる
+    reading: 頑張る
+  - en: to notice
+    jp: きがつく / きづく
+    reading: 気がつく / 気づく
+  - en: to be decided
+    jp: きまる
+    reading: 決まる
+  - en: to kick
+    jp: ける
+    reading: 蹴る
+  - en: to have a trouble
+    jp: こまる
+    reading: 困る
+  - en: to be crowded
+    jp: こむ
+    reading: 込む
+  - en: to break
+    jp: こわす
+    reading: 壊す
+  - en: to look for
+    jp: さがす
+    reading: 探す
+  - en: to bloom
+    jp: さく
+    reading: 咲く
+  - en: to invite
+    jp: さそう
+    reading: 誘う
+  - en: to make a noise
+    jp: さわぐ
+    reading: 騒ぐ
+  - en: to touch
+    jp: さわる
+    reading: 触る
+  - en: to scold
+    jp: しかる
+    reading: 叱る
+  - en: something closes
+    jp: しまる
+    reading: 閉まる
+  - en: to advance / to proceed
+    jp: すすむ
+    reading: 進む
+  - en: to slip
+    jp: すべる
+    reading: 滑る
+  - en: to be saved
+    jp: たすかる
+    reading: 助かる
+  - en: to enjoy
+    jp: たのしむ
+    reading: 楽しむ
+  - en: to ask a favor
+    jp: たのむ
+    reading: 頼む
+  - en: to take something out / to be caught
+    jp: だす
+    reading: 出す
+  - en: to be arrested / to be caught
+    jp: つかまる
+    reading: 捕まる
+  - en: to date / to get together
+    jp: つきあう
+    reading: 付き合う
+  - en: to arrive
+    jp: つく
+    reading: 着く
+  - en: something turns on
+    jp: つく
+    reading: '-'
+  - en: to wrap
+    jp: つつむ
+    reading: 包む
+  - en: to fish
+    jp: つる
+    reading: 釣る
+  - en: to take someone to
+    jp: つれていく
+    reading: 連れて行く
+  - en: to help
+    jp: てつだう
+    reading: 手伝う
+  - en: to fly / to jump
+    jp: とぶ
+    reading: 飛ぶ
+  - en: to stay over
+    jp: とまる
+    reading: 泊まる
+  - en: to fix / to repair
+    jp: なおす
+    reading: 直す
+  - en: to recover
+    jp: なおる
+    reading: 治る
+  - en: to cry
+    jp: なく
+    reading: 泣く
+  - en: to lose something
+    jp: なくす
+    reading: '-'
+  - en: to be lost
+    jp: なくなる
+    reading: '-'
+  - en: to pass away
+    jp: なくなる
+    reading: 亡くなる
+  - en: to punch / to strike
+    jp: なぐる
+    reading: 殴る
+  - en: to take off （clothes）
+    jp: にあう
+    reading: 脱ぐ
+  - en: to steal
+    jp: ぬすむ
+    reading: 盗む
+  - en: to remain / to be left
+    jp: のこる
+    reading: 残る
+  - en: to carry
+    jp: はこぶ
+    reading: 運ぶ
+  - en: to run
+    jp: はしる
+    reading: 走る
+  - en: to pay
+    jp: はらう
+    reading: 払う
+  - en: to post / to paste
+    jp: はる
+    reading: 貼る
+  - en: to pull
+    jp: ひく
+    reading: 引く
+  - en: to move (to another place to live)
+    jp: ひっこす
+    reading: 引っ越す
+  - en: to pick up
+    jp: ひろう
+    reading: 拾う
+  - en: to blow
+    jp: ふく
+    reading: 吹く
+  - en: to step on
+    jp: ふむ
+    reading: 踏む
+  - en: to bump into
+    jp: ぶつかる
+    reading: '-'
+  - en: to turn (right/left)
+    jp: まがる
+    reading: 曲がる
+  - en: to be in time
+    jp: まにあう
+    reading: 間に合う
+  - en: to polish / to brush (teeth)
+    jp: みがく
+    reading: 磨く
+  - en: to get lost
+    jp: みちにまよう
+    reading: 道に迷う
+  - en: to be found
+    jp: みつかる
+    reading: 見つかる
+  - en: to head for
+    jp: むかう
+    reading: 向かう
+  - en: to go to pick up someone
+    jp: むかえにいく
+    reading: 迎えに行く
+  - en: to come back / to return
+    jp: もどる
+    reading: 戻る
+  - en: to bake
+    jp: やく
+    reading: 焼く
+  - en: to translate
+    jp: やくす
+    reading: 訳す
+  - en: to be useful
+    jp: やくにたつ
+    reading: 役に立つ
+  - en: to make dirty
+    jp: よごす
+    reading: 汚す
+  - en: to call one's name
+    jp: よぶ
+    reading: 呼ぶ
+  - en: to stop by
+    jp: よる
+    reading: 寄る
+  - en: to boil (water)
+    jp: わかす
+    reading: 沸かす
+  - en: (water) boils
+    jp: わく
+    reading: 沸く
+  - en: to cross
+    jp: わたる
+    reading: 渡る
+  - en: to laugh
+    jp: わらう
+    reading: 笑う
+- group: Verb 2 (Ru-verbs)
+  words:
+  - en: to give up
+    jp: あきらめる
+    reading: 諦める
+  - en: to collect
+    jp: あつめる
+    reading: 集める
+  - en: to bully
+    jp: いじめる
+    reading: 虐める
+  - en: to insert / to put something in
+    jp: いれる
+    reading: 挿れる
+  - en: to plant
+    jp: うえる
+    reading: 植える
+  - en: to take (an exam, interview)
+    jp: うける
+    reading: 受ける
+  - en: to be born
+    jp: うまれる
+    reading: 産まれる
+  - en: to be late
+    jp: おくれる
+    reading: 遅れる
+  - en: something drops
+    jp: おちる
+    reading: 落ちる
+  - en: to memorize
+    jp: おぼえる
+    reading: 覚える
+  - en: to change
+    jp: かえる
+    reading: 変える
+  - en: to tidy up
+    jp: かたづける
+    reading: 片付ける
+  - en: to consider / to think
+    jp: かんがえる
+    reading: 考える
+  - en: something goes off
+    jp: きえる
+    reading: 消える
+  - en: to change clothes
+    jp: きがえる
+    reading: 着替える
+  - en: to be audible / to be heard
+    jp: きこえる
+    reading: 聞こえる
+  - en: to decide
+    jp: きめる
+    reading: 決める
+  - en: to decide
+    jp: きをつける
+    reading: 気を付ける
+  - en: to compare
+    jp: くらべる
+    reading: 比べる
+  - en: to give me
+    jp: くれる
+    reading: '-'
+  - en: to be broken
+    jp: こわれる
+    reading: 壊れる
+  - en: to inform
+    jp: しらせる
+    reading: 知らせる
+  - en: to look up / to look into
+    jp: しらべる
+    reading: 調べる
+  - en: to believe
+    jp: しんじる
+    reading: 信じる
+  - en: to throw away
+    jp: すてる
+    reading: 捨てる
+  - en: to bring up
+    jp: そだてる
+    reading: 育てる
+  - en: to fall down
+    jp: たおれる
+    reading: 倒れる
+  - en: to save / to rescue
+    jp: たすける
+    reading: 助ける
+  - en: to build
+    jp: たてる
+    reading: 建てる
+  - en: to be enough
+    jp: たりる
+    reading: 足りる
+  - en: to catch
+    jp: つかまえる
+    reading: 捕まえる
+  - en: to convey
+    jp: つたえる
+    reading: 伝える
+  - en: to continue
+    jp: つづける
+    reading: 続ける
+  - en: to work for
+    jp: つとめる
+    reading: 務める
+  - en: to deliver
+    jp: とどける
+    reading: 届ける
+  - en: to get used to
+    jp: なれる
+    reading: 慣れる
+  - en: to escape / to run away
+    jp: にげる
+    reading: 逃げる
+  - en: to look like
+    jp: にる
+    reading: 似る
+  - en: to transfer / to change lines
+    jp: のりかえる
+    reading: 乗り換える
+  - en: to miss (a train, bus...)
+    jp: のりおくれる
+    reading: 乗り遅れる
+  - en: to be sunny
+    jp: はれる
+    reading: 晴れる
+  - en: to praise
+    jp: ほめる
+    reading: 褒める
+  - en: to lose (a match)
+    jp: まける
+    reading: 負ける
+  - en: to make a mistake
+    jp: まちがえる
+    reading: 間違える
+  - en: to be visible / to be seen
+    jp: みえる
+    reading: 見える
+  - en: to show
+    jp: みせる
+    reading: 見せる
+  - en: to find
+    jp: みつける
+    reading: 見つける
+  - en: to be popular
+    jp: もてる
+    reading: '-'
+  - en: to lose weight
+    jp: やせる
+    reading: 痩せる
+  - en: to quit / to resign
+    jp: やめる
+    reading: '-'
+  - en: to become dirty
+    jp: よごれる
+    reading: 汚れる
+  - en: to lock
+    jp: （かぎを）かける
+    reading: 掛ける
+- group: Verb 3 (Irregular verbs)
+  words:
+  - en: to worry
+    jp: しんぱいする
+    reading: 心配する
+  - en: to be relieved
+    jp: あんしんする
+    reading: 安心する
+  - en: to be surprised
+    jp: びっくりする おどろく
+    reading: 驚く
+  - en: to be disappointed
+    jp: がっかりする
+    reading: '-'
+  - en: to ask questions
+    jp: しつもんする
+    reading: 質問する
+  - en: to book / to reserve
+    jp: よやくする
+    reading: 予約する
+  - en: to take a note
+    jp: メモする
+    reading: '-'
+  - en: to show around / to guide
+    jp: あんないする
+    reading: 案内する
+  - en: to hesitate
+    jp: えんりょする
+    reading: 遠慮する
+  - en: to respect
+    jp: そんけいする
+    reading: 尊敬する
+  - en: to greet
+    jp: あいさつする
+    reading: 挨拶する
+  - en: to attend
+    jp: しゅっせきする
+    reading: 出席する
+  - en: to consult
+    jp: そうだんする
+    reading: 相談する
+  - en: to produce
+    jp: せいさんする
+    reading: 生産する
+  - en: to import
+    jp: ゆにゅうする
+    reading: 輸入する
+  - en: to export
+    jp: ゆしゅつする
+    reading: 輸出する
+  - en: to plan
+    jp: けいかくする
+    reading: 計画する
+  - en: to drive
+    jp: うんてんする
+    reading: 運転する
+  - en: to prepare
+    jp: よういする/じゅんびする/したくする
+    reading: 用意する/準備する/支度する
+  - en: to compete
+    jp: きょうそうする
+    reading: 競争する
+  - en: to be hospitalized
+    jp: にゅういんする
+    reading: 入院する
+  - en: to be discharged from hospital
+    jp: たいいんする
+    reading: 退院する
+  - en: to explain
+    jp: せつめいする
+    reading: 説明する
+  - en: to enroll
+    jp: にゅうがくする
+    reading: 入学する
+  - en: to graduate
+    jp: そつぎょうする
+    reading: 卒業する
+  - en: to confirm
+    jp: かくにんする
+    reading: 確認する
+  - en: to contact
+    jp: れんらくする
+    reading: 連絡する
+  - en: to research
+    jp: けんきゅうする
+    reading: 研究する
+  - en: to order
+    jp: ちゅうもんする
+    reading: 注文する
+  - en: to do laundry
+    jp: せんたくする
+    reading: 洗濯する
+  - en: to pass (the exam)
+    jp: ごうかくする
+    reading: 合格する
+  - en: to be touched
+    jp: かんどうする
+    reading: 感動する
+  - en: to decide on
+    jp: 〜にする
+    reading: '-'
+  - en: to get a divorce
+    jp: りこんする
+    reading: 離婚する
+  - en: to oversleep
+    jp: （あさ）ねぼうする
+    reading: （朝）寝坊する
+  - en: to come to pick up
+    jp: むかえにくる
+    reading: 迎えに来る
+  - en: to put makeup on
+    jp: けしょうする
+    reading: 化粧する
+  - en: to fail / to be unsuccessful
+    jp: しっぱいする
+    reading: 失敗する
+  - en: to be patient
+    jp: がまんする
+    reading: 我慢する
+  - en: to take care of
+    jp: せわをする
+    reading: 世話をする
+  - en: to get nervous
+    jp: きんちょうする
+    reading: 緊張する
+  - en: to go on a diet
+    jp: ダイエットする
+    reading: '-'
+  - en: to study abroad
+    jp: りゅうがくする
+    reading: 留学する
+  - en: to introduce
+    jp: しょうかいする
+    reading: 紹介する
+  - en: to review
+    jp: ふくしゅうする
+    reading: 復習する
+- group: Adverbs
+  words:
+  - en: surely
+    jp: きっと
+    reading: '-'
+  - en: finally
+    jp: やっと
+    reading: '-'
+  - en: a while ago
+    jp: さっき
+    reading: '-'
+  - en: soon
+    jp: もうすぐ
+    reading: '-'
+  - en: absolutely / certainly
+    jp: かならず
+    reading: 必ず
+  - en: usually
+    jp: たいてい
+    reading: '-'
+  - en: almost
+    jp: ほとんど
+    reading: '-'
+- group: i - Adjective
+  words:
+  - en: glad
+    jp: うれしい
+    reading: 嬉しい
+  - en: sad
+    jp: かなしい
+    reading: 悲しい
+  - en: lonely
+    jp: さびしい
+    reading: 寂しい
+  - en: boring
+    jp: つまらない
+    reading: '-'
+  - en: amazing
+    jp: すごい
+    reading: '-'
+  - en: wonderful
+    jp: すばらしい
+    reading: 素晴らしい
+  - en: scary
+    jp: こわい
+    reading: 怖い
+  - en: delicious
+    jp: おいしい
+    reading: 美味しい
+  - en: bad taste
+    jp: まずい
+    reading: '-'
+  - en: deep
+    jp: ふかい
+    reading: 深い
+  - en: shallow
+    jp: あさい
+    reading: 浅い
+  - en: strong
+    jp: つよい
+    reading: 強い
+  - en: weak
+    jp: よわい
+    reading: 弱い
+  - en: hard
+    jp: かたい
+    reading: 硬い
+  - en: soft
+    jp: やわらかい
+    reading: 柔らかい
+  - en: noisy
+    jp: うるさい
+    reading: 煩い
+  - en: gentle
+    jp: やさしい
+    reading: 優しい
+  - en: strict
+    jp: きびしい
+    reading: 厳しい
+  - en: young
+    jp: わかい
+    reading: 若い
+  - en: long
+    jp: ながい
+    reading: 長い
+  - en: short
+    jp: みじかい
+    reading: 短い
+  - en: rare
+    jp: めずらしい
+    reading: 珍しい
+  - en: beautiful
+    jp: うつくしい
+    reading: 美しい
+  - en: to feel good
+    jp: きもちがいい
+    reading: 気持ちがいい
+  - en: warm
+    jp: あたたかい
+    reading: 暖かい
+  - en: cool
+    jp: すずしい
+    reading: 涼しい
+  - en: blue
+    jp: あおい
+    reading: 青い
+  - en: red
+    jp: あかい
+    reading: 赤い
+  - en: black
+    jp: くろい
+    reading: 黒い
+  - en: white
+    jp: しろい
+    reading: 白い
+  - en: bright
+    jp: あかるい
+    reading: 明るい
+  - en: dark
+    jp: くらい
+    reading: 暗い
+  - en: heavy
+    jp: おもい
+    reading: 重い
+  - en: light
+    jp: かるい
+    reading: 軽い
+  - en: near
+    jp: ちかい
+    reading: 近い
+  - en: far
+    jp: とおい
+    reading: 遠い
+  - en: smart
+    jp: あたまがいい
+    reading: 頭がいい
+  - en: correct
+    jp: ただしい
+    reading: 正しい
+  - en: fun
+    jp: たのしい
+    reading: 楽しい
+  - en: wide
+    jp: ひろい
+    reading: 広い
+  - en: narrow
+    jp: せまい
+    reading: 狭い
+  - en: dirty
+    jp: きたない
+    reading: 汚い
+  - en: envious
+    jp: うらやましい
+    reading: 羨ましい
+  - en: a little / a few
+    jp: すくない
+    reading: 少ない
+  - en: to feel bad/sick
+    jp: きぶんがわるい
+    reading: 気分が悪い
+  - en: to feel embarrassed
+    jp: はずかしい
+    reading: 恥ずかしい
+  - en: awful
+    jp: ひどい
+    reading: '-'
+  - en: inconvenient (schedule)
+    jp: つごうがわるい
+    reading: 都合が悪い
+  - en: sleepy
+    jp: ねむい
+    reading: 眠い
+  - en: bitter
+    jp: にがい
+    reading: 苦い
+  - en: cute
+    jp: かわいい
+    reading: 可愛い
+- group: na - Adjective
+  words:
+  - en: quiet
+    jp: しずかな
+    reading: 静かな
+  - en: lively
+    jp: にぎやかな
+    reading: 賑やかな
+  - en: safe
+    jp: あんぜんな
+    reading: 安全な
+  - en: dangerous
+    jp: きけんな
+    reading: 危険な
+  - en: diligent / serious
+    jp: まじめな
+    reading: 真面目な
+  - en: necessary
+    jp: ひつような
+    reading: 必要な
+  - en: disgusting
+    jp: いやな
+    reading: 嫌な
+  - en: regrettable
+    jp: ざんねんな
+    reading: 残念な
+  - en: kind
+    jp: しんせつな
+    reading: 親切な
+  - en: weird / strange
+    jp: へんな
+    reading: 変な
+  - en: convenient
+    jp: べんりな
+    reading: 便利な
+  - en: inconvenient
+    jp: ふべんな
+    reading: 不便な
+  - en: special
+    jp: とくべつな
+    reading: 特別な
+  - en: famous
+    jp: ゆうめいな
+    reading: 有名な
+  - en: various / kinds of
+    jp: いろいろな
+    reading: 色々な
+  - en: happy
+    jp: しあわせな
+    reading: 幸せな
+  - en: no good
+    jp: だめな
+    reading: 駄目な
+  - en: stingy
+    jp: けちな
+    reading: '-'
+  - en: precious
+    jp: たいせつな
+    reading: 大切な
+  - en: messy
+    jp: めちゃくちゃな
+    reading: '-'
+  - en: worried / anxious
+    jp: しんぱいな
+    reading: 心配な
+  - en: poor
+    jp: びんぼうな
+    reading: 貧乏な
+  - en: easy / comfortable
+    jp: らくな
+    reading: 楽な
+  - en: mean
+    jp: いじわるな
+    reading: 意地悪な
+  - en: unreasonable
+    jp: むりな
+    reading: 無理な
+  - en: useless
+    jp: むだな
+    reading: 無駄な
+  - en: enthusiastic
+    jp: ねっしんな
+    reading: 熱心な
+  - en: enough
+    jp: じゅうぶんな
+    reading: 十分な
+  - en: complicated
+    jp: ふくざつな
+    reading: 複雑な
+  - en: polite
+    jp: ていねいな
+    reading: 丁寧な
+  - en: rude
+    jp: しつれいな
+    reading: 失礼な

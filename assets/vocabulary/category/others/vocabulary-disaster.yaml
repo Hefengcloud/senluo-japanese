@@ -1,0 +1,75 @@
+- en: disaster
+  group: 1. 災害：Disaster
+  jp: 災害（さいがい）
+- en: earthquake
+  group: 1. 災害：Disaster
+  jp: 地震（じしん）
+- en: tsunami
+  group: 1. 災害：Disaster
+  jp: 津波（つなみ）
+- en: tornado
+  group: 1. 災害：Disaster
+  jp: 竜巻（たつまき）
+- en: avalanche
+  group: 1. 災害：Disaster
+  jp: 雪崩（なだれ）
+- en: eruption
+  group: 1. 災害：Disaster
+  jp: 噴火（ふんか）
+- en: flood
+  group: 1. 災害：Disaster
+  jp: 洪水（こうずい）
+- en: fire
+  group: 1. 災害：Disaster
+  jp: 火事（かじ）
+- en: landslide
+  group: 1. 災害：Disaster
+  jp: 土砂崩れ（どしゃくずれ）
+- en: Japanese seismic scale
+  group: 2. 地震：earthquake
+  jp: 震度（しんど）
+- en: magnitude
+  group: 2. 地震：earthquake
+  jp: マグニチュード
+- en: epicenter
+  group: 2. 地震：earthquake
+  jp: 震源地（しんげんち）
+- en: aftershock
+  group: 2. 地震：earthquake
+  jp: 余震（よしん）
+- en: damage
+  group: 3. 被害：damage
+  jp: 被害（ひがい）
+- en: power outage / blackout
+  group: 3. 被害：damage
+  jp: 停電（ていでん）
+- en: water outage
+  group: 3. 被害：damage
+  jp: 断水（だんすい）
+- en: to occur
+  group: 4. 動詞：Verb
+  jp: 起こる（おこる） 発生する（はっせいする）
+- en: to hide
+  group: 4. 動詞：Verb
+  jp: 隠れる（かくれる）
+- en: to be evacuated
+  group: 4. 動詞：Verb
+  jp: 避難する（ひなんする）
+- en: to escape
+  group: 4. 動詞：Verb
+  jp: 逃げる（にげる）
+- en: to run
+  group: 4. 動詞：Verb
+  jp: 走る（はしる）
+- en: to watch out
+  group: 4. 動詞：Verb
+  jp: 気を付ける（きをつける）
+- en: to shake
+  group: 4. 動詞：Verb
+  jp: 揺れる（ゆれる）
+- en: to help
+  group: 4. 動詞：Verb
+  jp: 助ける（たすける）
+- en: to destory
+  group: 4. 動詞：Verb
+  jp: 破壊する（はかいする）

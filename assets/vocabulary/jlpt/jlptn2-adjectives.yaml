@@ -1,0 +1,214 @@
+- group: JLPT N2 い形容詞：i - Adjectives
+  words:
+  - en: pale 
+    jp: 青白い
+    reading: あおじろい
+  - en: to get bored easily
+    jp: 飽きっぽい
+    reading: あきっぽい
+  - en: impudent / shameless, 
+    jp: 厚かましい
+    reading: あつかましい
+  - en: dangerous / critical
+    jp: 危うい
+    reading: あやうい
+  - en: grateful
+    jp: 有難い
+    reading: ありがたい
+  - en: busy / hurried
+    jp: 慌ただしい
+    reading: あわただしい
+  - en: brave / courageous
+    jp: 勇ましい
+    reading: いさましい
+  - en: gloomy
+    jp: 薄暗い
+    reading: うすぐらい
+  - en: great
+    jp: 偉い
+    reading: えらい
+  - en: regrettable
+    jp: 惜しい
+    reading: おしい
+  - en: docile / quiet
+    jp: 大人しい
+    reading: おとなしい
+  - en: matter for congratulation
+    jp: '-'
+    reading: おめでたい
+  - en: unexpected
+    jp: 思いがけない
+    reading: おもいがけない
+  - en: pure
+    jp: 清い
+    reading: きよい
+  - en: smoky
+    jp: 煙い
+    reading: けむい
+  - en: dear / beloved
+    jp: 恋しい
+    reading: こいしい
+  - en: bitter
+    jp: 渋い
+    reading: しぶい
+  - en: impudent / shameless
+    jp: 図々しい
+    reading: ずうずうしい
+  - en: quick
+    jp: 素早い
+    reading: すばやい
+  - en: careless / thoughtless
+    jp: '-'
+    reading: そそっかしい
+  - en: ' reliable'
+    jp: 頼もしい
+    reading: たのもしい
+  - en: unreliable
+    jp: 頼りない
+    reading: たよりない
+  - en: impudent
+    jp: 図々しい
+    reading: ずうずうしい
+  - en: big
+    jp: '-'
+    reading: でかい
+  - en: slovenly
+    jp: '-'
+    reading: だらしない
+  - en: unexpected / No way!
+    jp: '-'
+    reading: とんでもない
+  - en: hateful
+    jp: 憎たらしい
+    reading: にくたらしい
+  - en: absurd
+    jp: 馬鹿らしい
+    reading: ばからしい
+  - en: miserable / pitiful
+    jp: 情けない
+    reading: なさけない
+  - en: fishy
+    jp: 生臭い
+    reading: なまぐさい
+  - en: chilly
+    jp: 肌寒い
+    reading: はだざむい
+  - en: extreme / terrible
+    jp: 甚だしい
+    reading: はなはだしい
+  - en: equal
+    jp: 等しい
+    reading: ひとしい
+  - en: shameful
+    jp: '-'
+    reading: みっともない
+  - en: incredible / horrible
+    jp: 物凄い
+    reading: ものすごい
+  - en: ' careful'
+    jp: 用心深い
+    reading: ようじんぶかい
+  - en: youthful / young
+    jp: 若々しい
+    reading: わかわかしい
+- group: JLPT N2 な形容詞：na - Adjectives
+  words:
+  - en: unfortunately
+    jp: 生憎
+    reading: あいにく
+  - en: ambiguous
+    jp: 曖昧
+    reading: あいまい
+  - en: obvious / clear
+    jp: 明らか
+    reading: あきらか
+  - en: usual / common
+    jp: 当たり前
+    reading: あたりまえ
+  - en: pathetic /pity / sorrow
+    jp: 哀れ
+    reading: あわれ
+  - en: easy-going
+    jp: 安易
+    reading: あんい
+  - en: malicious
+    jp: 意地悪
+    reading: いじわる
+  - en: greatness
+    jp: 偉大
+    reading: いだい
+  - en: eternity / perpetuity
+    jp: 永久
+    reading: えいきゅう
+  - en: rough (not precise)
+    jp: 大雑把
+    reading: おおざっぱ
+  - en: fashionable
+    jp: お洒落
+    reading: おしゃれ
+  - en: warm
+    jp: 温暖
+    reading: おんだん
+  - en: fiction
+    jp: 架空
+    reading: かくう
+  - en: exceptional
+    jp: 格別
+    reading: かくべつ
+  - en: excess
+    jp: 過剰
+    reading: かじょう
+  - en: refreshing
+    jp: 爽やか
+    reading: さわやか
+  - en: vulgar
+    jp: 下品
+    reading: げひん
+  - en: forcible
+    jp: 強引
+    reading: ごういん
+  - en: valid
+    jp: 妥当
+    reading: だとう
+  - en: accurate
+    jp: 的確
+    reading: てきかく
+  - en: special / unique
+    jp: 特殊
+    reading: とくしゅ
+  - en: impertinent
+    jp: 生意気
+    reading: なまいき
+  - en: optimistic
+    jp: 呑気
+    reading: のんき
+  - en: ordinary
+    jp: 平凡
+    reading: へいぼん
+  - en: insecure
+    jp: 物騒
+    reading: ぶっそう
+  - en: cheerfulness
+    jp: 朗らか
+    reading: ほがらか
+  - en: deep blue / bright blue / pale
+    jp: 真っ青
+    reading: まっさお
+  - en: pure / white
+    jp: 真っ白
+    reading: まっしろ
+  - en: rare
+    jp: 稀
+    reading: まれ
+  - en: pitiful
+    jp: 惨め
+    reading: みじめ
+  - en: capable / talented
+    jp: 有能
+    reading: ゆうのう
+  - en: childish
+    jp: 幼稚
+    reading: ようち
+  - en: unnecessary
+    jp: 余計
+    reading: よけい

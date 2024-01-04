@@ -1,0 +1,181 @@
+- key: people
+  menu: 人
+  subMenus:
+  - key: vocabulary-family
+    menu: 家族
+  - key: vocabulary-people
+    menu: 人
+  - key: vocabulary-personality
+    menu: 性格
+  - key: vocabulary-body-parts
+    menu: 体のパーツ
+  - key: vocabulary-organ
+    menu: 体の中（臓器・骨など）
+  - key: vocabulary-hair
+    menu: 髪・ひげ・髪型
+  - key: vocabulary-teeth
+    menu: 歯
+  - key: vocabulary-love
+    menu: 恋愛
+- key: animal
+  menu: 生き物
+  subMenus:
+  - key: vocabulary-animal
+    menu: 動物
+  - key: vocabulary-bird
+    menu: 鳥
+  - key: vocabulary-fish
+    menu: 海の生き物
+  - key: vocabulary-insect
+    menu: 虫・昆虫
+  - key: animal-cry
+    menu: 動物の泣き声
+- key: food
+  menu: 食べ物
+  subMenus:
+  - key: vocabulary-vegetable
+    menu: 野菜
+  - key: vocabulary-fruits
+    menu: 果物
+  - key: vocabulary-beverage
+    menu: 飲み物
+  - key: vocabulary-sweets
+    menu: お菓子・スイーツ
+  - key: vocabulary-dairy-products
+    menu: 乳製品
+  - key: vocabulary-fast-food
+    menu: ファストフード
+  - key: vocabulary-nutrition
+    menu: 栄養成分
+- key: nature
+  menu: 自然
+  subMenus:
+  - key: vocabulary-nature
+    menu: 自然
+  - key: vocabulary-plant
+    menu: 花・木・植物
+  - key: vocabulary-weather
+    menu: 天気
+- key: cooking
+  menu: 料理
+  subMenus:
+  - key: vocabulary-cooking
+    menu: 料理
+  - key: vocabulary-seasoning
+    menu: 調味料・油
+  - key: vocabulary-cookware
+    menu: 食器・調理器具
+- key: vehicle
+  menu: 乗り物
+  subMenus:
+  - key: vocabulary-vehicle
+    menu: 乗り物
+  - key: vocabulary-transportation
+    menu: 交通
+- key: hobby
+  menu: 趣味・娯楽
+  subMenus:
+  - key: vocabulary-sports
+    menu: スポーツ
+  - key: vocabulary-music
+    menu: 音楽・楽器
+  - key: vocabulary-movie
+    menu: 映画
+  - key: vocabulary-shopping
+    menu: 買い物
+  - key: vocabulary-workout
+    menu: 筋トレ・エクササイズ
+- key: star
+  menu: 星
+  subMenus:
+  - key: vocabulary-space
+    menu: 宇宙・星
+  - key: vocabulary-zodiac-sign
+    menu: 十二星座
+  - key: vocabulary-chinese-zodiac
+    menu: 十二支
+- key: thing
+  menu: 物
+  subMenus:
+  - key: vocabulary-clothes
+    menu: 衣類・アクセサリー
+  - key: vocabulary-daily-necessities
+    menu: 日用品
+  - key: vocabulary-stationery
+    menu: 文房具
+  - key: vocabulary-cosmetics
+    menu: 化粧品
+- key: place
+  menu: 建物・場所
+  subMenus:
+  - key: vocabulary-building
+    menu: 建物
+  - key: vocabulary-school
+    menu: 学校
+  - key: vocabulary-hotel
+    menu: ホテル
+  - key: vocabulary-restaurant
+    menu: レストラン・居酒屋
+  - key: vocabulary-company
+    menu: 会社
+  - key: vocabulary-airport
+    menu: 空港・機内・入国
+  - key: vocabulary-hospital
+    menu: 病院
+  - key: vocabulary-country
+    menu: 国
+- key: number
+  menu: 数字
+  subMenus:
+  - key: vocabulary-number
+    menu: 数字
+  - key: vocabulary-mathematics
+    menu: 算数・数学
+  - key: vocabulary-time
+    menu: 時間
+  - key: vocabulary-months-japanese
+    menu: 和風月名
+- key: home
+  menu: 家
+  subMenus:
+  - key: vocabulary-home
+    menu: 家・家具
+  - key: vocabulary-appliance
+    menu: 家電
+- key: others
+  menu: その他
+  subMenus:
+  - key: vocabulary-money
+    menu: お金
+  - key: vocabulary-color
+    menu: 色
+  - key: vocabulary-cleaning
+    menu: 掃除
+  - key: vocabulary-disease
+    menu: 病気・症状・怪我
+  - key: vocabulary-physiological-phenomena
+    menu: 生理現象
+  - key: vocabulary-direction
+    menu: 方向・方角
+  - key: vocabulary-language
+    menu: 言語
+  - key: vocabulary-symbol
+    menu: 記号
+  - key: vocabulary-sns
+    menu: SNS
+  - key: vocabulary-occupation
+    menu: 職業・仕事
+  - key: vocabulary-it
+    menu: コンピューター・IT
+  - key: vocabulary-book
+    menu: 本・読み物
+  - key: vocabulary-geography
+    menu: 地理
+  - key: vocabulary-baby-items
+    menu: ベビー用品
+  - key: vocabulary-society
+    menu: 政治・経済
+  - key: vocabulary-crime
+    menu: 犯罪
+  - key: vocabulary-disaster
+    menu: 災害

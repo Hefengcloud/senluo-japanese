@@ -1,0 +1,66 @@
+- en: stomach
+  group: 1. 臓器
+  jp: 胃（い）
+- en: liver
+  group: 1. 臓器
+  jp: 肝臓（かんぞう）
+- en: blood vessel
+  group: 1. 臓器
+  jp: 血管（けっかん）
+- en: duodenum
+  group: 1. 臓器
+  jp: 十二指腸（じゅうにしちょう）
+- en: small intestines
+  group: 1. 臓器
+  jp: 小腸（しょうちょう）
+- en: esophagus
+  group: 1. 臓器
+  jp: 食道（しょくどう）
+- en: heart
+  group: 1. 臓器
+  jp: 心臓（しんぞう）
+- en: kidney
+  group: 1. 臓器
+  jp: 腎臓（じんぞう）
+- en: pancreas
+  group: 1. 臓器
+  jp: すい臓（すいぞう）
+- en: organ
+  group: 1. 臓器
+  jp: 臓器（ぞうき）
+- en: large intestines
+  group: 1. 臓器
+  jp: 大腸（だいちょう）
+- en: intestines
+  group: 1. 臓器
+  jp: 腸（ちょう）
+- en: brain
+  group: 1. 臓器
+  jp: 脳（のう）
+- en: throat
+  group: 1. 臓器
+  jp: のど
+- en: lungs
+  group: 1. 臓器
+  jp: 肺（はい）
+- en: bladder
+  group: 1. 臓器
+  jp: 膀胱（ぼうこう）
+- en: appendix
+  group: 1. 臓器
+  jp: 盲腸（もうちょう）
+- en: skull
+  group: 2. 骨
+  jp: 頭蓋骨（ずがいこつ）
+- en: backbone
+  group: 2. 骨
+  jp: 背骨（せぼね）
+- en: cartilage
+  group: 2. 骨
+  jp: 軟骨（なんこつ）
+- en: bone
+  group: 2. 骨
+  jp: 骨（ほね）
+- en: rib
+  group: 2. 骨
+  jp: 肋骨（ろっこつ）

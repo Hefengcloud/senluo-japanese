@@ -1,0 +1,105 @@
+- en: cold
+  group: 1. 病気・症状：illness, symptom
+  jp: 風邪（かぜ）
+- en: fever
+  group: 1. 病気・症状：illness, symptom
+  jp: 熱（ねつ）
+- en: disease / illness
+  group: 1. 病気・症状：illness, symptom
+  jp: 病気（びょうき）
+- en: flu
+  group: 1. 病気・症状：illness, symptom
+  jp: インフルエンザ
+- en: cough
+  group: 1. 病気・症状：illness, symptom
+  jp: 咳（せき）
+- en: stomachache
+  group: 1. 病気・症状：illness, symptom
+  jp: 腹痛（ふくつう）
+- en: diarrhea
+  group: 1. 病気・症状：illness, symptom
+  jp: 下痢（げり）
+- en: headache
+  group: 1. 病気・症状：illness, symptom
+  jp: 頭痛（ずつう）
+- en: cancer
+  group: 1. 病気・症状：illness, symptom
+  jp: 癌（がん）
+- en: high blood pressure
+  group: 1. 病気・症状：illness, symptom
+  jp: 高血圧（こうけつあつ）
+- en: allergy
+  group: 1. 病気・症状：illness, symptom
+  jp: アレルギー
+- en: anemia
+  group: 1. 病気・症状：illness, symptom
+  jp: 貧血（ひんけつ）
+- en: eczema
+  group: 1. 病気・症状：illness, symptom
+  jp: 湿疹（しっしん）
+- en: myocardial infarction
+  group: 1. 病気・症状：illness, symptom
+  jp: 心筋梗塞（しんきんこうそく）
+- en: heart attack
+  group: 1. 病気・症状：illness, symptom
+  jp: 心臓発作（しんぞうほっさ）
+- en: hives
+  group: 1. 病気・症状：illness, symptom
+  jp: 蕁麻疹（じんましん）
+- en: cerebral infarction
+  group: 1. 病気・症状：illness, symptom
+  jp: 脳梗塞（のうこうそく）
+- en: pneumonia
+  group: 1. 病気・症状：illness, symptom
+  jp: 肺炎（はいえん）
+- en: hay fever
+  group: 1. 病気・症状：illness, symptom
+  jp: 花粉症（かふんしょう）
+- en: chicken pox
+  group: 1. 病気・症状：illness, symptom
+  jp: 水疱瘡（みずぼうそう）
+- en: cavity / tooth decay
+  group: 1. 病気・症状：illness, symptom
+  jp: 虫歯（むしば）
+- en: dizzy
+  group: 1. 病気・症状：illness, symptom
+  jp: 目眩（めまい）
+- en: scab
+  group: 2. 怪我：injury
+  jp: かさぶた
+- en: scratch
+  group: 2. 怪我：injury
+  jp: かすり傷（かすりきず）
+- en: injury
+  group: 2. 怪我：injury
+  jp: 怪我（けが）
+- en: wound
+  group: 2. 怪我：injury
+  jp: 傷（きず）
+- en: fracture a bone
+  group: 2. 怪我：injury
+  jp: 骨折（こっせつ）
+- en: scrape
+  group: 2. 怪我：injury
+  jp: 擦り傷（すりきず）
+- en: lump
+  group: 2. 怪我：injury
+  jp: たんこぶ
+- en: sprain
+  group: 2. 怪我：injury
+  jp: 捻挫（ねんざ）
+- en: burn
+  group: 2. 怪我：injury
+  jp: 火傷（やけど）
+- en: to hurt
+  group: 3. 動詞：verb
+  jp: 傷つける（きずつける）
+- en: to be hurt
+  group: 3. 動詞：verb
+  jp: 傷つく（きずつく）
+- en: to swell up
+  group: 3. 動詞：verb
+  jp: 腫れる（はれる）
+- en: to be infected
+  group: 3. 動詞：verb
+  jp: 感染する（かんせんする）

@@ -5,10 +5,10 @@ import 'package:senluo_japanese_cms/pages/gojuon/gojuon_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_page.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_panel_page.dart';
-import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_panel_page.dart';
+import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 
 import '../grammars/grammar_panel_page.dart';
-import '../kanji/kanji_panel_page.dart';
+import '../kanji/kanji_home_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,8 +23,8 @@ class _HomePageState extends State<HomePage> {
   final _pages = [
     const GojuonPanelPage(),
     const GrammarPanelPage(),
-    const VocabularyPanelPage(),
-    const KanjiPanelPage(),
+    const VocabularyHomePage(),
+    const KanjiHomePage(),
     const ProverbPanelPage(),
     const OnomatopoeiaPage(),
     const ExpressionPanelPage(),
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
     if (index < _pages.length) {
       return _pages[index];
     } else {
-      return Text('Invalid index: $index');
+      return Center(child: Text('Invalid index: $index'));
     }
   }
 }

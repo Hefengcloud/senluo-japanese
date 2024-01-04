@@ -1,0 +1,84 @@
+- en: company president
+  group: 1. 役職・会社の人
+  jp: 社長（しゃちょう）
+- en: vice president
+  group: 1. 役職・会社の人
+  jp: 副社長（ふくしゃちょう）
+- en: general manager / director
+  group: 1. 役職・会社の人
+  jp: 部長（ぶちょう）
+- en: section manager
+  group: 1. 役職・会社の人
+  jp: 課長（かちょう）
+- en: boss
+  group: 1. 役職・会社の人
+  jp: 上司（じょうし）
+- en: senior
+  group: 1. 役職・会社の人
+  jp: 先輩（せんぱい）
+- en: junior
+  group: 1. 役職・会社の人
+  jp: 後輩（こうはい）
+- en: colleague
+  group: 1. 役職・会社の人
+  jp: 同僚（どうりょう）
+- en: promotion
+  group: 1. 役職・会社の人
+  jp: 昇進（しょうしん）
+- en: full-time employee
+  group: 1. 役職・会社の人
+  jp: 正社員（せいしゃいん）
+- en: part-time worker
+  group: 1. 役職・会社の人
+  jp: パート
+- en: position
+  group: 1. 役職・会社の人
+  jp: 役職（やくしょく）
+- en: sales department
+  group: 2. 部署
+  jp: 営業部（えいぎょうぶ）
+- en: development department
+  group: 2. 部署
+  jp: 開発部（かいはつぶ）
+- en: accounting department
+  group: 2. 部署
+  jp: 経理部（けいりぶ）
+- en: public relations department / PR department
+  group: 2. 部署
+  jp: 広報部（こうほうぶ）
+- en: personnel department / HR department
+  group: 2. 部署
+  jp: 人事部（じんじぶ）
+- en: general affairs department
+  group: 2. 部署
+  jp: 総務部（そうむぶ）
+- en: manufacturing department
+  group: 2. 部署
+  jp: 製造部（せいぞうぶ）
+- en: department
+  group: 2. 部署
+  jp: 部署（ぶしょ）
+- en: legal department
+  group: 2. 部署
+  jp: 法務部（ほうむぶ）
+- en: marketing department
+  group: 2. 部署
+  jp: マーケティング部
+- en: salary
+  group: 3. その他
+  jp: 給料（きゅうりょう）
+- en: hourly wage
+  group: 3. その他
+  jp: 時給（じきゅう）
+- en: bonus
+  group: 3. その他
+  jp: ボーナス
+- en: day-off
+  group: 3. その他
+  jp: 休み（やすみ）
+- en: resume
+  group: 3. その他
+  jp: 履歴書（りれきしょ）
+- en: meeting
+  group: 3. その他
+  jp: 会議（かいぎ）

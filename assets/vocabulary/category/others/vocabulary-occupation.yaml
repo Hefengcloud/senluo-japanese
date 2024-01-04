@@ -1,0 +1,249 @@
+- en: part-time job
+  group: 1. 職業
+  jp: アルバイト
+- en: waiter
+  group: 1. 職業
+  jp: ウエイター
+- en: waitress
+  group: 1. 職業
+  jp: ウエイトレス
+- en: receptionist
+  group: 1. 職業
+  jp: 受付（うけつけ）
+- en: engineer
+  group: 1. 職業
+  jp: エンジニア
+- en: doctor
+  group: 1. 職業
+  jp: 医者（いしゃ）
+- en: astronaut
+  group: 1. 職業
+  jp: 宇宙飛行士（うちゅうひこうし）
+- en: driver
+  group: 1. 職業
+  jp: 運転手（うんてんしゅ）
+- en: nutritionist / dietician
+  group: 1. 職業
+  jp: 栄養士（えいようし）
+- en: station attendant
+  group: 1. 職業
+  jp: 駅員（えきいん）
+- en: accountant
+  group: 1. 職業
+  jp: 会計士（かいけいし）
+- en: scientist
+  group: 1. 職業
+  jp: 科学者（かがくしゃ）
+- en: caregiver
+  group: 1. 職業
+  jp: 介護士（かいごし）
+- en: employee
+  group: 1. 職業
+  jp: 会社員（かいしゃいん）/ サラリーマン
+- en: student
+  group: 1. 職業
+  jp: 学生（がくせい）
+- en: singer
+  group: 1. 職業
+  jp: 歌手（かしゅ）
+- en: nurse
+  group: 1. 職業
+  jp: 看護師（かんごし）
+- en: weather forecaster
+  group: 1. 職業
+  jp: 気象予報士（きしょうよほうし）
+- en: flight attendant / cabin crew
+  group: 1. 職業
+  jp: キャビンアテンダント
+- en: teacher
+  group: 1. 職業
+  jp: 教師（きょうし）
+- en: bank employee
+  group: 1. 職業
+  jp: 銀行員（ぎんこうん）
+- en: celebrity
+  group: 1. 職業
+  jp: 芸能人（げいのうじん）
+- en: police
+  group: 1. 職業
+  jp: 警察官（けいさつかん）
+- en: security guard
+  group: 1. 職業
+  jp: 警備員（けいびいん）
+- en: architect
+  group: 1. 職業
+  jp: 建築士（けんちくし）
+- en: public servant
+  group: 1. 職業
+  jp: 公務員（こうむいん）
+- en: judge
+  group: 1. 職業
+  jp: 裁判官（さいばんかん）
+- en: system engineer
+  group: 1. 職業
+  jp: システムエンジニア
+- en: office assistant
+  group: 1. 職業
+  jp: 事務（じむ）
+- en: photographer
+  group: 1. 職業
+  jp: 写真家（しゃしんか）/ フォトグラファー
+- en: (company) president
+  group: 1. 職業
+  jp: 社長（しゃちょう）
+- en: novelist
+  group: 1. 職業
+  jp: 小説家（しょうせつか）
+- en: firefighter
+  group: 1. 職業
+  jp: 消防士（しょうぼうし）
+- en: housewife
+  group: 1. 職業
+  jp: 主婦（しゅふ）
+- en: politician
+  group: 1. 職業
+  jp: 政治家（せいじか）
+- en: mechanic
+  group: 1. 職業
+  jp: 整備士（せいびし）
+- en: voice actor
+  group: 1. 職業
+  jp: 声優（せいゆう）
+- en: carpenter
+  group: 1. 職業
+  jp: 大工（だいく）
+- en: detective
+  group: 1. 職業
+  jp: 探偵（たんてい）
+- en: tour guide
+  group: 1. 職業
+  jp: ツアーガイド
+- en: interpreter
+  group: 1. 職業
+  jp: 通訳士（つうやくし）
+- en: shop clerk
+  group: 1. 職業
+  jp: 店員（てんいん）
+- en: farmer
+  group: 1. 職業
+  jp: 農家（のうか）
+- en: dentist
+  group: 1. 職業
+  jp: 歯医者（はいしゃ）
+- en: actor / actress
+  group: 1. 職業
+  jp: 俳優（はいゆう）
+- en: secretary
+  group: 1. 職業
+  jp: 秘書（ひしょ）
+- en: beautician / hair stylist
+  group: 1. 職業
+  jp: 美容師（びようし）
+- en: programmer
+  group: 1. 職業
+  jp: プログラマー
+- en: lawyer
+  group: 1. 職業
+  jp: 弁護士（べんごし）
+- en: childcare worker / nursery teacher
+  group: 1. 職業
+  jp: 保育士（ほいくし）
+- en: pastor
+  group: 1. 職業
+  jp: 牧師（ぼくし）
+- en: translator
+  group: 1. 職業
+  jp: 翻訳家（ほんやくか）
+- en: cartoonist
+  group: 1. 職業
+  jp: 漫画家（まんがか）
+- en: model
+  group: 1. 職業
+  jp: モデル
+- en: pharmacist
+  group: 1. 職業
+  jp: 薬剤師（やくざいし）
+- en: fisherman
+  group: 1. 職業
+  jp: 漁師（りょうし）
+- en: solo proprietorship
+  group: 1. 職業
+  jp: 個人事業主（こじんじぎょうぬし）
+- en: to work
+  group: 2. 仕事に関連する動詞
+  jp: 働く（はたらく） 勤務する（きんむする）
+- en: to look for (a job)
+  group: 2. 仕事に関連する動詞
+  jp: 探す（さがす）
+- en: to hire
+  group: 2. 仕事に関連する動詞
+  jp: 雇う（やとう）
+- en: ti skip
+  group: 2. 仕事に関連する動詞
+  jp: サボる
+- en: to fire
+  group: 2. 仕事に関連する動詞
+  jp: クビにする
+- en: to be fired
+  group: 2. 仕事に関連する動詞
+  jp: クビになる
+- en: to resign
+  group: 2. 仕事に関連する動詞
+  jp: 辞める（やめる） 退職する（たいしょくする）
+- en: to earn
+  group: 2. 仕事に関連する動詞
+  jp: 稼ぐ（かせぐ）
+- en: to recruit
+  group: 2. 仕事に関連する動詞
+  jp: 募集する（ぼしゅうする）
+- en: to get a full-time job
+  group: 2. 仕事に関連する動詞
+  jp: 就職する（しゅうしょくする）
+- en: to go on a business trip
+  group: 2. 仕事に関連する動詞
+  jp: 出張する（しゅっちょうする）
+- en: to work overtime
+  group: 2. 仕事に関連する動詞
+  jp: 残業する（ざんぎょうする）
+- en: to change jobs / to switch jobs
+  group: 2. 仕事に関連する動詞
+  jp: 転職する（てんしょくする）
+- en: to commute
+  group: 2. 仕事に関連する動詞
+  jp: 通勤する（つうきんする）
+- en: to go to work
+  group: 2. 仕事に関連する動詞
+  jp: 出勤する（しゅっきんする）
+- en: to transfer
+  group: 2. 仕事に関連する動詞
+  jp: 転勤する（てんきんする）
+- en: workplace
+  group: 3. その他
+  jp: 職場（しょくば）
+- en: salary
+  group: 3. その他
+  jp: 給料（きゅうりょう）
+- en: resume
+  group: 3. その他
+  jp: 履歴書（りれきしょ）
+- en: bonus
+  group: 3. その他
+  jp: ボーナス
+- en: transportation fee
+  group: 3. その他
+  jp: 交通費（こうつうひ）
+- en: job hunting
+  group: 3. その他
+  jp: 就職活動（しゅうしょくかつどう）
+- en: meeting
+  group: 3. その他
+  jp: 打ち合わせ（うちあわせ） ミーティング
+- en: task
+  group: 3. その他
+  jp: 作業（さぎょう）
+- en: project
+  group: 3. その他
+  jp: プロジェクト
+- en: plan
+  group: 3. その他
+  jp: 計画（けいかく）

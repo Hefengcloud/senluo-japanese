@@ -48,6 +48,7 @@ dependencies:
   sqflite: ^2.3.0
   path: ^1.8.3
   google_fonts: ^6.1.0
+  ruby_text: ^3.0.3
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +79,31 @@ flutter:
     - assets/data/
     - assets/images/
     - assets/images/proverbs/
+    - assets/kanji/
+    - assets/kanji/n1/
+    - assets/kanji/n2/
+    - assets/kanji/n3/
+    - assets/kanji/n4/
+    - assets/kanji/n5/
+    - assets/kanji/n0/
+    - assets/vocabulary/
+    - assets/vocabulary/category/
+    - assets/vocabulary/category/home/
+    - assets/vocabulary/category/cooking/
+    - assets/vocabulary/category/vehicle/
+    - assets/vocabulary/category/hobby/
+    - assets/vocabulary/category/others/
+    - assets/vocabulary/category/nature/
+    - assets/vocabulary/category/number/
+    - assets/vocabulary/category/thing/
+    - assets/vocabulary/category/star/
+    - assets/vocabulary/category/people/
+    - assets/vocabulary/category/food/
+    - assets/vocabulary/category/animal/
+    - assets/vocabulary/category/place/
+    - assets/vocabulary/jlpt/
+    - assets/vocabulary/textbook/
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

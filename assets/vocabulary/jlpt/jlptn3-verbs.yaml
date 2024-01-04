@@ -1,0 +1,522 @@
+- group: １グループ動詞 / U-Verbs
+  words:
+  - en: to be vacant
+    jp: 空く
+    reading: あく
+  - en: to look after
+    jp: 預かる
+    reading: あずかる
+  - en: to warm
+    jp: 暖まる
+    reading: あたたまる
+  - en: to hit
+    jp: 当たる
+    reading: あたる
+  - en: to handle
+    jp: 扱う
+    reading: あつかう
+  - en: to knit
+    jp: 編む
+    reading: あむ
+  - en: to indicate / to express
+    jp: 表す
+    reading: あらわす
+  - en: to celebrate
+    jp: 祝う
+    reading: いわう
+  - en: to float
+    jp: 浮く
+    reading: うく
+  - en: to move (something)
+    jp: 動かす
+    reading: うごかす
+  - en: to lose
+    jp: 失う
+    reading: うしなう
+  - en: to lose
+    jp: 失くす
+    reading: なくす
+  - en: to doubt
+    jp: 疑う
+    reading: うたがう
+  - en: to hid / to type
+    jp: 打つ
+    reading: うつ
+  - en: to move
+    jp: 移す
+    reading: うつす
+  - en: to reflect
+    jp: 映す
+    reading: うつす
+  - en: to be reflected
+    jp: 映る
+    reading: うつる
+  - en: to give birth
+    jp: 産む
+    reading: うむ
+  - en: to follow
+    jp: 追う
+    reading: おう
+  - en: to commit
+    jp: 犯す
+    reading: おかす
+  - en: to make up / to compensate
+    jp: 補う
+    reading: おぎなう
+  - en: to cause
+    jp: （問題を）起こす
+    reading: おこす
+  - en: to surprise
+    jp: 驚かす
+    reading: おどろかす
+  - en: to sparkle
+    jp: 輝く
+    reading: かがやく
+  - en: to smell
+    jp: 嗅ぐ
+    reading: かぐ
+  - en: to hide
+    jp: 隠す
+    reading: かくす
+  - en: to surround
+    jp: 囲む
+    reading: かこむ
+  - en: to mow
+    jp: 刈る
+    reading: かる
+  - en: to dry
+    jp: 乾かす
+    reading: かわかす
+  - en: to notice
+    jp: 気づく
+    reading: きづく
+  - en: to repeat
+    jp: 繰り返す
+    reading: くりかえす
+  - en: to join
+    jp: 加わる
+    reading: くわわる
+  - en: to freeze
+    jp: 凍る
+    reading: こおる
+  - en: to differ
+    jp: 異なる
+    reading: ことなる
+  - en: to prefer
+    jp: 好む
+    reading: このむ
+  - en: to spill
+    jp: '-'
+    reading: こぼす
+  - en: to fall down
+    jp: 転ぶ
+    reading: ころぶ
+  - en: to yell
+    jp: 叫ぶ
+    reading: さけぶ
+  - en: to stab
+    jp: 刺す
+    reading: さす
+  - en: to point
+    jp: 指す
+    reading: さす
+  - en: to let something cool
+    jp: 冷ます
+    reading: さます
+  - en: to make noise
+    jp: 騒ぐ
+    reading: さわぐ
+  - en: to sink
+    jp: 沈む
+    reading: しずむ
+  - en: to bind
+    jp: 縛る
+    reading: しばる
+  - en: to show / to indicate
+    jp: 示す
+    reading: しめす
+  - en: to save
+    jp: 救う
+    reading: すくう
+  - en: to spend
+    jp: 過ごす
+    reading: すごす
+  - en: to pour
+    jp: 注ぐ
+    reading: そそぐ
+  - en: to hug
+    jp: 抱く
+    reading: だく
+  - en: to be saved
+    jp: 助かる
+    reading: たすかる
+  - en: to fight / to battle
+    jp: 戦う
+    reading: たたかう
+  - en: to hit / to slap
+    jp: 叩く
+    reading: たたく
+  - en: to fold
+    jp: 畳む
+    reading: たたむ
+  - en: to be silent
+    jp: 黙る
+    reading: だまる
+  - en: to try
+    jp: 試す
+    reading: ためす
+  - en: to swear
+    jp: 誓う
+    reading: ちかう
+  - en: to shrink
+    jp: 縮む
+    reading: ちぢむ
+  - en: to grab
+    jp: 掴む
+    reading: つかむ
+  - en: to create / to build
+    jp: 造る
+    reading: つくる
+  - en: to connect
+    jp: 繋ぐ
+    reading: つなぐ
+  - en: to crush
+    jp: 潰す
+    reading: つぶす
+  - en: to load / to pile up
+    jp: 積む
+    reading: つむ
+  - en: to flush
+    jp: 流す
+    reading: ながす
+  - en: to desappear
+    jp: 無くなる
+    reading: なくなる
+  - en: to look good on
+    jp: 似合う
+    reading: にあう
+  - en: to smell
+    jp: 臭う
+    reading: におう
+  - en: to wish / to hope
+    jp: 願う
+    reading: ねがう
+  - en: to leave (food, message, etc)
+    jp: 残す
+    reading: のこす
+  - en: to remain
+    jp: 残る
+    reading: のこる
+  - en: to exclude
+    jp: 除く
+    reading: のぞく
+  - en: to postpone
+    jp: 延ばす
+    reading: のばす
+  - en: to remove
+    jp: 外す
+    reading: はずす
+  - en: to be popular
+    jp: 流行る
+    reading: はやる
+  - en: to pull
+    jp: 引く
+    reading: ひく
+  - en: to wipe
+    jp: 拭く
+    reading: ふく
+  - en: to include
+    jp: 含む
+    reading: ふくむ
+  - en: to prevent
+    jp: 防ぐ
+    reading: ふせぐ
+  - en: to bump
+    jp: '-'
+    reading: ぶつかる
+  - en: to increase
+    jp: 増やす
+    reading: ふやす
+  - en: to mix
+    jp: 混ぜる
+    reading: まぜる
+  - en: to protect
+    jp: 守る
+    reading: まもる
+  - en: to turn
+    jp: 回す
+    reading: まわす
+  - en: to tie
+    jp: 結ぶ
+    reading: むすぶ
+  - en: to stand out
+    jp: 目立つ
+    reading: めだつ
+  - en: to burn
+    jp: 燃やす
+    reading: もやす
+  - en: to forgive
+    jp: 許す
+    reading: ゆるす
+  - en: to get drunk
+    jp: 酔っぱらう
+    reading: よっぱらう
+  - en: to break
+    jp: 割る
+    reading: わる
+- group: ２グループ動詞 / Ru-Verbs
+  words:
+  - en: to deep-fly
+    jp: 揚げる
+    reading: あげる
+  - en: to raise
+    jp: 挙げる
+    reading: あげる
+  - en: to yearn
+    jp: 憧れる
+    reading: あこがれる
+  - en: to deposit / to put in someone's care
+    jp: 預ける
+    reading: あずける
+  - en: to give
+    jp: 与える
+    reading: あたえる
+  - en: to warm (something)
+    jp: 温める
+    reading: あたためる
+  - en: to appear
+    jp: 現れる
+    reading: あらわれる
+  - en: to adjust
+    jp: 合わせる
+    reading: あわせる
+  - en: to obtain
+    jp: 得る
+    reading: える
+  - en: to finish
+    jp: 終える
+    reading: おえる
+  - en: to change
+    jp: 変える
+    reading: かえる
+  - en: to pile
+    jp: 重ねる
+    reading: かさねる
+  - en: to feel
+    jp: 感じる
+    reading: かんじる
+  - en: to assemble
+    jp: 組み立てる
+    reading: くみたてる
+  - en: to add
+    jp: 加える
+    reading: くわえる
+  - en: to kick
+    jp: 蹴る
+    reading: ける
+  - en: to avoid
+    jp: 避ける
+    reading: さける
+  - en: to proceed
+    jp: 進める
+    reading: すすめる
+  - en: to stand (something)
+    jp: 立てる
+    reading: たてる
+  - en: to liken
+    jp: 例える
+    reading: たとえる
+  - en: to close
+    jp: 閉じる
+    reading: とじる
+  - en: to deliver
+    jp: 届ける
+    reading: とどける
+  - en: to gaze
+    jp: 眺める
+    reading: ながめる
+  - en: to flow
+    jp: 流れる
+    reading: ながれる
+  - en: to throw
+    jp: 投げる
+    reading: なげる
+  - en: to bend
+    jp: 曲げる
+    reading: まげる
+  - en: to admit
+    jp: 認める
+    reading: みとめる
+  - en: to divide
+    jp: 分ける
+    reading: わける
+- group: ３グループ動詞 / Irregular-Verbs
+  words:
+  - en: to be stable
+    jp: 安定する
+    reading: あんていする
+  - en: to play a prank
+    jp: 悪戯する
+    reading: いたずらする
+  - en: to tell rumors
+    jp: 噂をする
+    reading: うわさをする
+  - en: to influence
+    jp: 影響する
+    reading: えいきょうする
+  - en: to solve
+    jp: 解決する
+    reading: かいけつする
+  - en: to start
+    jp: 開始する
+    reading: かいしする
+  - en: to go out
+    jp: 外出する
+    reading: がいしゅつする
+  - en: to recover
+    jp: 回復する
+    reading: かいふくする
+  - en: to expand / to zoom
+    jp: 拡大する
+    reading: かくだいする
+  - en: to confirm
+    jp: 確認する
+    reading: かくにんする
+  - en: to be active
+    jp: 活動する
+    reading: かつどうする
+  - en: to bear / to endure / to put up with
+    jp: 我慢する
+    reading: がまんする
+  - en: to complete
+    jp: 完成する
+    reading: かんせいする
+  - en: to end
+    jp: 完了する
+    reading: かんりょうする
+  - en: to go back to my country
+    jp: 帰国する
+    reading: きこくする
+  - en: to have in common
+    jp: 共通する
+    reading: きょうつうする
+  - en: to record
+    jp: 記録する
+    reading: きろくする
+  - en: to devise
+    jp: 工夫する
+    reading: くふうする
+  - en: to distinguish
+    jp: 区別する
+    reading: くべつする
+  - en: to decide
+    jp: 決定する
+    reading: けっていする
+  - en: to inspect
+    jp: 検査する
+    reading: けんさする
+  - en: to act
+    jp: 行動する
+    reading: こうどうする
+  - en: to be confused
+    jp: 混乱する
+    reading: こんらんする
+  - en: to take a photo / to shoot a film
+    jp: 撮影する
+    reading: さつえいする
+  - en: to stimulate
+    jp: 刺激する
+    reading: しげきする
+  - en: to commit suicide
+    jp: 自殺する
+    reading: じさつする
+  - en: to prepare
+    jp: 支度する
+    reading: したくする
+  - en: to die
+    jp: 死亡する
+    reading: しぼうする
+  - en: to insist
+    jp: 主張する
+    reading: しゅちょうする
+  - en: to use
+    jp: 使用する
+    reading: しようする
+  - en: to prove
+    jp: 証明する
+    reading: しょうめいする
+  - en: to restrict / to limit
+    jp: 制限する
+    reading: せいげんする
+  - en: to organize
+    jp: 整理する
+    reading: せいりする
+  - en: to choose
+    jp: 選択する
+    reading: せんたくする
+  - en: to advertise
+    jp: 宣伝する
+    reading: せんでんする
+  - en: to imagine
+    jp: 想像する
+    reading: そうぞうする
+  - en: to respond
+    jp: 対応する
+    reading: たいおうする
+  - en: to pay attention
+    jp: 注目する
+    reading: ちゅうもくする
+  - en: to investigate
+    jp: 調査する
+    reading: ちょうさする
+  - en: to adjust
+    jp: 調整する
+    reading: ちょうせいする
+  - en: to challenge
+    jp: 挑戦する
+    reading: ちょうせんする
+  - en: to add
+    jp: 追加する
+    reading: ついかする
+  - en: to suggest
+    jp: 提案する
+    reading: ていあんする
+  - en: to accept / to understand
+    jp: 納得する
+    reading: なっとくする
+  - en: to discover / to find out
+    jp: 発見する
+    reading: はっけんする
+  - en: to develop
+    jp: 発達する
+    reading: はったつする
+  - en: to compare
+    jp: 比較する
+    reading: ひかくする
+  - en: to deny
+    jp: 否定する
+    reading: ひていする
+  - en: (something) change
+    jp: 変化する
+    reading: へんかする
+  - en: to change (schedule)
+    jp: 変更する
+    reading: へんこうする
+  - en: to preserve
+    jp: 保存する
+    reading: ほぞんする
+  - en: to be satisfied
+    jp: 満足する
+    reading: まんぞくする
+  - en: to ignore
+    jp: 無視する
+    reading: むしする
+  - en: to expect
+    jp: 予想する
+    reading: よそうする
+  - en: to prevent
+    jp: 予防する
+    reading: よぼうする
+  - en: to understand
+    jp: 理解する
+    reading: りかいする

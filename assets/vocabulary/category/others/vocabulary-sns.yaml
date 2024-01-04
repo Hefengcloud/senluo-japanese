@@ -1,0 +1,51 @@
+- en: like
+  group: 1. Facebook
+  jp: いいね
+- en: share
+  group: 1. Facebook
+  jp: シェア
+- en: to post
+  group: 1. Facebook
+  jp: 投稿する（とうこうする）
+- en: comment
+  group: 1. Facebook
+  jp: コメント
+- en: friend request
+  group: 1. Facebook
+  jp: 友達申請（ともだちしんせい）
+- en: unfriend
+  group: 1. Facebook
+  jp: 友達から削除（ともだちから　さくじょ）
+- en: mutual friend
+  group: 1. Facebook
+  jp: 共通の友達（きょうつうの　ともだち）
+- en: notification
+  group: 1. Facebook
+  jp: 通知（つうち） / お知らせ（おしらせ）
+- en: search
+  group: 1. Facebook
+  jp: 検索（けんさく）
+- en: Twitter
+  group: 2. Twitter
+  jp: ツイッター
+- en: tweet
+  group: 2. Twitter
+  jp: ツイート
+- en: follow
+  group: 2. Twitter
+  jp: フォロー
+- en: follower
+  group: 2. Twitter
+  jp: フォロワー
+- en: unfollow
+  group: 2. Twitter
+  jp: フォロー解除（フォローかいじょ）
+- en: like
+  group: 2. Twitter
+  jp: いいね
+- en: message
+  group: 2. Twitter
+  jp: メッセージ
+- en: retweet
+  group: 2. Twitter
+  jp: リツイート

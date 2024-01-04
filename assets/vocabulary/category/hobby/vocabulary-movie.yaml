@@ -1,0 +1,81 @@
+- en: action
+  group: 映画ジャンル
+  jp: アクション
+- en: anime / animation / cartoon
+  group: 映画ジャンル
+  jp: アニメ
+- en: adventure
+  group: 映画ジャンル
+  jp: アドベンチャー
+- en: comedy
+  group: 映画ジャンル
+  jp: コメディー
+- en: documentary
+  group: 映画ジャンル
+  jp: ドキュメンタリー
+- en: fantasy
+  group: 映画ジャンル
+  jp: ファンタジー
+- en: science fiction / SF
+  group: 映画ジャンル
+  jp: SF映画（エスエフえいが）
+- en: horror
+  group: 映画ジャンル
+  jp: ホラー
+- en: musical
+  group: 映画ジャンル
+  jp: ミュージカル
+- en: mystery
+  group: 映画ジャンル
+  jp: ミステリー
+- en: love romance
+  group: 映画ジャンル
+  jp: ラブロマンス / 恋愛映画（れんあいえいが）
+- en: romantic comedy
+  group: 映画ジャンル
+  jp: ラブコメ
+- en: suspense
+  group: 映画ジャンル
+  jp: サスペンス
+- en: war
+  group: 映画ジャンル
+  jp: 戦争映画（せんそうえいが）
+- en: teen movie / youth film
+  group: 映画ジャンル
+  jp: 青春映画（せいしゅんえいが）
+- en: movie / film
+  group: 映画・映画館
+  jp: 映画（えいが）
+- en: cinema / movie theater
+  group: 映画・映画館
+  jp: 映画館（えいがかん）
+- en: screen
+  group: 映画・映画館
+  jp: スクリーン
+- en: subtitles
+  group: 映画・映画館
+  jp: 字幕（じまく）
+- en: dubbed
+  group: 映画・映画館
+  jp: 吹き替え（ふきかえ）
+- en: trailer
+  group: 映画・映画館
+  jp: 予告編（よこくへん）
+- en: ticket
+  group: 映画・映画館
+  jp: チケット
+- en: 3D
+  group: 映画・映画館
+  jp: 3D（スリーディー）
+- en: popcorn
+  group: 映画・映画館
+  jp: ポップコーン
+- en: coke
+  group: 映画・映画館
+  jp: コーラ
+- en: to show / to play
+  group: 関連動詞
+  jp: 上映する（じょうえいする）
+- en: to shoot (a movie)
+  group: 関連動詞
+  jp: 撮影する（さつえいする）

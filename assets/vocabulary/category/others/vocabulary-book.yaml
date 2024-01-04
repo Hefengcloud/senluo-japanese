@@ -1,0 +1,75 @@
+- en: book
+  group: 1. 本・読み物の種類：Book
+  jp: 本（ほん）
+- en: picture book
+  group: 1. 本・読み物の種類：Book
+  jp: 絵本（えほん）
+- en: textbook
+  group: 1. 本・読み物の種類：Book
+  jp: 教科書（きょうかしょ）
+- en: reference book / textbook
+  group: 1. 本・読み物の種類：Book
+  jp: 参考書（さんこうしょ）
+- en: magazine
+  group: 1. 本・読み物の種類：Book
+  jp: 雑誌（ざっし）
+- en: novel
+  group: 1. 本・読み物の種類：Book
+  jp: 小説（しょうせつ）
+- en: comic
+  group: 1. 本・読み物の種類：Book
+  jp: 漫画（まんが）
+- en: dictionary
+  group: 1. 本・読み物の種類：Book
+  jp: 辞書（じしょ）
+- en: encyclopedia
+  group: 1. 本・読み物の種類：Book
+  jp: 百科事典（ひゃっかじてん）
+- en: photo album / photo book
+  group: 1. 本・読み物の種類：Book
+  jp: 写真集（しゃしんしゅう）
+- en: cook book
+  group: 1. 本・読み物の種類：Book
+  jp: 料理本（りょうりぼん）
+- en: E-book / electronic book / digital book
+  group: 1. 本・読み物の種類：Book
+  jp: 電子書籍（でんししょせき）
+- en: newspaper
+  group: 1. 本・読み物の種類：Book
+  jp: 新聞（しんぶん）
+- en: blog
+  group: 1. 本・読み物の種類：Book
+  jp: ブログ
+- en: article
+  group: 1. 本・読み物の種類：Book
+  jp: 記事（きじ）
+- en: biography
+  group: 1. 本・読み物の種類：Book
+  jp: 伝記（でんき）
+- en: author
+  group: 2. 本や読み物を書く人：Author
+  jp: 著者（ちょしゃ）
+- en: writer
+  group: 2. 本や読み物を書く人：Author
+  jp: 書き手（かきて）
+- en: writer
+  group: 2. 本や読み物を書く人：Author
+  jp: ライター
+- en: pen name
+  group: 2. 本や読み物を書く人：Author
+  jp: ペンネーム
+- en: to read
+  group: 3. 本に関連する動詞：Verb
+  jp: 読む（よむ）
+- en: to read aloud
+  group: 3. 本に関連する動詞：Verb
+  jp: 音読する（おんどくする）
+- en: to borrow
+  group: 3. 本に関連する動詞：Verb
+  jp: 借りる（かりる）
+- en: to publish
+  group: 3. 本に関連する動詞：Verb
+  jp: 出版する（しゅっぱんする）
+- en: to refer
+  group: 3. 本に関連する動詞：Verb
+  jp: 参照する（さんしょうする）

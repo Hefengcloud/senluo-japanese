@@ -1,0 +1,126 @@
+- en: check-in baggage
+  group: 1. 空港
+  jp: 預け入れ荷物（あずけいれにもつ）
+- en: carry-on baggage
+  group: 1. 空港
+  jp: 機内持ち込み手荷物（きないもちこみにもつ）
+- en: airport
+  group: 1. 空港
+  jp: 空港（くうこう）
+- en: airport bus
+  group: 1. 空港
+  jp: 空港バス（くうこうバス）
+- en: airline
+  group: 1. 空港
+  jp: 航空会社（こうくうがいしゃ）
+- en: flight ticket
+  group: 1. 空港
+  jp: 航空チケット（こうくうチケット）
+- en: international flight
+  group: 1. 空港
+  jp: 国際線（こくさいせん）
+- en: domestic flight
+  group: 1. 空港
+  jp: 国内線（こくないせん）
+- en: seat
+  group: 1. 空港
+  jp: 座席（ざせき）
+- en: seat reservation / seat assignment
+  group: 1. 空港
+  jp: 座席指定（ざせきしてい）
+- en: customs
+  group: 1. 空港
+  jp: 税関（ぜいかん）
+- en: terminal
+  group: 1. 空港
+  jp: ターミナル
+- en: aisle seat
+  group: 1. 空港
+  jp: 通路側の席（つうろがわのせき）
+- en: boarding pass
+  group: 1. 空港
+  jp: 搭乗券（とうじょうけん）
+- en: boarding gate
+  group: 1. 空港
+  jp: 搭乗口（とうじょうぐち）
+- en: check-in
+  group: 1. 空港
+  jp: 搭乗手続き（とうじょうてつづき）
+- en: immigration
+  group: 1. 空港
+  jp: 入国審査（にゅうこくしんさ）
+- en: transfer
+  group: 1. 空港
+  jp: 乗り換え（のりかえ）
+- en: passport
+  group: 1. 空港
+  jp: パスポート
+- en: visa
+  group: 1. 空港
+  jp: ビザ
+- en: window seat
+  group: 1. 空港
+  jp: 窓側の席（まどがわのせき）
+- en: in-flight meal
+  group: 2. 機内
+  jp: 機内食（きないしょく）
+- en: in-flight sales
+  group: 2. 機内
+  jp: 機内販売（きないはんばい）
+- en: flight attendant
+  group: 2. 機内
+  jp: 客室乗務員（きゃくしつじょうむいん）
+- en: life vest
+  group: 2. 機内
+  jp: 救命胴衣（きゅうめいどうい）
+- en: oxygen mask
+  group: 2. 機内
+  jp: 酸素マスク（さんそマスク）
+- en: seat belt
+  group: 2. 機内
+  jp: シートベルト
+- en: passenger
+  group: 2. 機内
+  jp: 乗客（じょうきゃく）
+- en: arrival time
+  group: 2. 機内
+  jp: 到着予定時刻（とうちゃくよていじこく）
+- en: arrival card / entry card / immigration card
+  group: 2. 機内
+  jp: 入国カード
+- en: blanket
+  group: 2. 機内
+  jp: ブランケット
+- en: last name
+  group: 3. 入国カード
+  jp: 姓 / 苗字（せい / みょうじ）
+- en: first name
+  group: 3. 入国カード
+  jp: 名（めい）
+- en: middle name
+  group: 3. 入国カード
+  jp: ミドルネーム
+- en: nationality
+  group: 3. 入国カード
+  jp: 国籍（こくせき）
+- en: address
+  group: 3. 入国カード
+  jp: 住所（じゅうしょ）
+- en: signature
+  group: 3. 入国カード
+  jp: 署名（しょめい）
+- en: gender / sex
+  group: 3. 入国カード
+  jp: 性別（せいべつ）
+- en: date of birth
+  group: 3. 入国カード
+  jp: 生年月日（せいねんがっぴ）
+- en: occupation
+  group: 3. 入国カード
+  jp: 職業（しょくぎょう）
+- en: contact number
+  group: 3. 入国カード
+  jp: 電話番号（でんわばんごう）
+- en: passport number
+  group: 3. 入国カード
+  jp: 旅券番号（りょけんばんごう）

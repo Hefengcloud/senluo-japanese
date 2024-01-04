@@ -1,0 +1,114 @@
+- en: money
+  group: 1. お金・費用
+  jp: お金（おかね）
+- en: change
+  group: 1. お金・費用
+  jp: お釣り（おつり）
+- en: coin / change
+  group: 1. お金・費用
+  jp: 小銭（こぜに）
+- en: bank account
+  group: 1. お金・費用
+  jp: 銀行口座（ぎんこうこうざ）
+- en: bankbook
+  group: 1. お金・費用
+  jp: 通帳（つうちょう）
+- en: remaining balance
+  group: 1. お金・費用
+  jp: 残高（ざんだか）
+- en: payment
+  group: 1. お金・費用
+  jp: 支払い（しはらい）
+- en: shipping fee / delivery cost 
+  group: 1. お金・費用
+  jp: 送料（そうりょう）
+- en: handling charge / service charge
+  group: 1. お金・費用
+  jp: 手数料（てすうりょう）
+- en: pension
+  group: 1. お金・費用
+  jp: 年金（ねんきん）
+- en: tax
+  group: 1. お金・費用
+  jp: 税金（ぜいきん）
+- en: debt
+  group: 1. お金・費用
+  jp: 借金（しゃっきん）
+- en: lot of money
+  group: 1. お金・費用
+  jp: 大金（たいきん）
+- en: income
+  group: 1. お金・費用
+  jp: 収入（しゅうにゅう）
+- en: expenditure
+  group: 1. お金・費用
+  jp: 支出（ししゅつ） 出費（しゅっぴ）
+- en: deficit
+  group: 1. お金・費用
+  jp: 赤字（あかじ）
+- en: surplus
+  group: 1. お金・費用
+  jp: 黒字（くろじ）
+- en: interest
+  group: 1. お金・費用
+  jp: 利子（りし）
+- en: salary
+  group: 1. お金・費用
+  jp: 給料（きゅうりょう）
+- en: bonus
+  group: 1. お金・費用
+  jp: ボーナス
+- en: net income
+  group: 1. お金・費用
+  jp: 手取り（てどり）
+- en: tuition
+  group: 1. お金・費用
+  jp: 授業料（じゅぎょうりょう） 学費（がくひ）
+- en: electricity bill
+  group: 1. お金・費用
+  jp: 電気代（でんきだい）
+- en: water bill
+  group: 1. お金・費用
+  jp: 水道代（すいどうだい）
+- en: gas bill
+  group: 1. お金・費用
+  jp: ガス代（ガスだい）
+- en: cost of living
+  group: 1. お金・費用
+  jp: 生活費（せいかつひ）
+- en: food expenses 
+  group: 1. お金・費用
+  jp: 食費（しょくひ）
+- en: labor costs
+  group: 1. お金・費用
+  jp: 人件費（じんけんひ）
+- en: medical expenses
+  group: 1. お金・費用
+  jp: 医療費（いりょうひ）
+- en: utility bill
+  group: 1. お金・費用
+  jp: 公共料金（こうきょうりょうきん）
+- en: entertainment expenses
+  group: 1. お金・費用
+  jp: 交際費（こうさいひ）
+- en: to pay
+  group: 2. お金・費用に関する動詞
+  jp: 払う（はらう）
+- en: to pay (tax)
+  group: 2. お金・費用に関する動詞
+  jp: 納める（おさめる）
+- en: to save money
+  group: 2. お金・費用に関する動詞
+  jp: お金を貯める（おかねをためる） 貯金する（ちょきんする）
+- en: to put money in a bank account
+  group: 2. お金・費用に関する動詞
+  jp: お金を預ける（おかねをあずける） 預金する（よきんする）
+- en: to withdraw
+  group: 2. お金・費用に関する動詞
+  jp: 下ろす（おろす） 引き出す（ひきだす）
+- en: to transfer (money)
+  group: 2. お金・費用に関する動詞
+  jp: 振り込む（ふりこむ）
+- en: to exchange (money)
+  group: 2. お金・費用に関する動詞
+  jp: 両替する（りょうがえする）

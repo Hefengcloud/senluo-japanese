@@ -1,0 +1,300 @@
+- en: zero
+  group: 0 〜10
+  item: '0'
+  jp: ゼロ / れい
+- en: one
+  group: 0 〜10
+  item: '1'
+  jp: 一（いち）
+- en: two
+  group: 0 〜10
+  item: '2'
+  jp: 二（に）
+- en: three
+  group: 0 〜10
+  item: '3'
+  jp: 三（さん）
+- en: four
+  group: 0 〜10
+  item: '4'
+  jp: 四（よん / し）
+- en: five
+  group: 0 〜10
+  item: '5'
+  jp: 五（ご）
+- en: six
+  group: 0 〜10
+  item: '6'
+  jp: 六（ろく）
+- en: seven
+  group: 0 〜10
+  item: '7'
+  jp: 七（しち / なな）
+- en: eight
+  group: 0 〜10
+  item: '8'
+  jp: 八（はち）
+- en: nine
+  group: 0 〜10
+  item: '9'
+  jp: 九（きゅう / く）
+- en: ten
+  group: 0 〜10
+  item: '10'
+  jp: 十（じゅう）
+- en: eleven
+  group: 11〜20
+  item: '11'
+  jp: 十一（じゅういち）
+- en: twelve
+  group: 11〜20
+  item: '12'
+  jp: 十二（じゅうに）
+- en: thirteen
+  group: 11〜20
+  item: '13'
+  jp: 十三（じゅうさん）
+- en: fourteen
+  group: 11〜20
+  item: '14'
+  jp: 十四（じゅうよん / じゅうし）
+- en: fifteen
+  group: 11〜20
+  item: '15'
+  jp: 十五（じゅうご）
+- en: sixteen
+  group: 11〜20
+  item: '16'
+  jp: 十六（じゅうろく）
+- en: seventeen
+  group: 11〜20
+  item: '17'
+  jp: 十七（じゅうしち / じゅうなな）
+- en: eighteen
+  group: 11〜20
+  item: '18'
+  jp: 十八（じゅうはち）
+- en: nineteen
+  group: 11〜20
+  item: '19'
+  jp: 十九（じゅうきゅう / じゅうく）
+- en: twenty
+  group: 11〜20
+  item: '20'
+  jp: 二十（にじゅう）
+- en: twenty one
+  group: 21〜30
+  item: '21'
+  jp: 二十一（にじゅういち）
+- en: twenty two
+  group: 21〜30
+  item: '22'
+  jp: 二十二（にじゅうに）
+- en: twenty three
+  group: 21〜30
+  item: '23'
+  jp: 二十三（にじゅうさん）
+- en: twenty four
+  group: 21〜30
+  item: '24'
+  jp: 二十四（にじゅうよん / にじゅうし）
+- en: twenty five
+  group: 21〜30
+  item: '25'
+  jp: 二十五（にじゅうご）
+- en: twenty six
+  group: 21〜30
+  item: '26'
+  jp: 二十六（にじゅうろく）
+- en: twenty seven
+  group: 21〜30
+  item: '27'
+  jp: 二十七（にじゅうしち / にじゅうなな）
+- en: twenty eight
+  group: 21〜30
+  item: '28'
+  jp: 二十八（にじゅうはち）
+- en: twenty nine
+  group: 21〜30
+  item: '29'
+  jp: 二十九（にじゅうきゅう / にじゅうく）
+- en: thirty
+  group: 21〜30
+  item: '30'
+  jp: 三十（さんじゅう）
+- en: thirty one
+  group: 31〜40
+  item: '31'
+  jp: 三十一（さんじゅういち）
+- en: thirty two
+  group: 31〜40
+  item: '32'
+  jp: 三十二（さんじゅうに）
+- en: thirty three
+  group: 31〜40
+  item: '33'
+  jp: 三十三（さんじゅうさん）
+- en: thirty four
+  group: 31〜40
+  item: '34'
+  jp: 三十四（さんじゅうよん / さんじゅうし）
+- en: thirty five
+  group: 31〜40
+  item: '35'
+  jp: 三十五（さんじゅうご）
+- en: thirty six
+  group: 31〜40
+  item: '36'
+  jp: 三十六（さんじゅうろく）
+- en: thirty seven
+  group: 31〜40
+  item: '37'
+  jp: 三十七（さんじゅうしち / さんじゅうなな）
+- en: thirty eight
+  group: 31〜40
+  item: '38'
+  jp: 三十八（さんじゅうはち）
+- en: thirty nine
+  group: 31〜40
+  item: '39'
+  jp: 三十九（さんじゅうきゅう / さんじゅうく）
+- en: fourty
+  group: 31〜40
+  item: '40'
+  jp: 四十（よんじゅう / しじゅう）
+- en: fifty
+  group: 50〜90
+  item: '50'
+  jp: 五十（ごじゅう）
+- en: sisty
+  group: 50〜90
+  item: '60'
+  jp: 六十（ろくじゅう）
+- en: seventy
+  group: 50〜90
+  item: '70'
+  jp: 七十（ななじゅう / しちじゅう）
+- en: eighty
+  group: 50〜90
+  item: '80'
+  jp: 八十（はちじゅう）
+- en: ninety
+  group: 50〜90
+  item: '90'
+  jp: 九十（きゅうじゅう）
+- en: one hundred
+  group: 100〜900
+  item: '100'
+  jp: 百（ひゃく）
+- en: two hundred
+  group: 100〜900
+  item: '200'
+  jp: 二百（にひゃく）
+- en: three hundred
+  group: 100〜900
+  item: '300'
+  jp: 三百（さんびゃく）
+- en: four hundred
+  group: 100〜900
+  item: '400'
+  jp: 四百（よんひゃく）
+- en: five hundred
+  group: 100〜900
+  item: '500'
+  jp: 五百（ごひゃく）
+- en: six hundred
+  group: 100〜900
+  item: '600'
+  jp: 六百（ろっぴゃく）
+- en: seven hundred
+  group: 100〜900
+  item: '700'
+  jp: 七百（ななひゃく）
+- en: eight hundred
+  group: 100〜900
+  item: '800'
+  jp: 八百（はっぴゃく）
+- en: nine hundred
+  group: 100〜900
+  item: '900'
+  jp: 九百（きゅうひゃく）
+- en: one thousand
+  group: 1,000 〜 9,000
+  item: 1,000
+  jp: 千（せん）
+- en: two thousand
+  group: 1,000 〜 9,000
+  item: 2,000
+  jp: 二千（にせん）
+- en: three thousand
+  group: 1,000 〜 9,000
+  item: 3,000
+  jp: 三千（さんぜん）
+- en: four thousand
+  group: 1,000 〜 9,000
+  item: 4,000
+  jp: 四千（よんせん）
+- en: five thousand
+  group: 1,000 〜 9,000
+  item: 5,000
+  jp: 五千（ごせん）
+- en: six thousand
+  group: 1,000 〜 9,000
+  item: 6,000
+  jp: 六千（ろくせん）
+- en: seven thousand
+  group: 1,000 〜 9,000
+  item: 7,000
+  jp: 七千（ななせん）
+- en: eight thousand
+  group: 1,000 〜 9,000
+  item: 8,000
+  jp: 八千（はっせん）
+- en: nine thousand
+  group: 1,000 〜 9,000
+  item: 9,000
+  jp: 九千（きゅうせん）
+- en: ten thousand
+  group: 10,000 〜 1,000,000
+  item: 10,000
+  jp: 一万（いちまん）
+- en: twenty thousand
+  group: 10,000 〜 1,000,000
+  item: 20,000
+  jp: 二万（にまん）
+- en: thiry thousand
+  group: 10,000 〜 1,000,000
+  item: 30,000
+  jp: 三万（さんまん）
+- en: fourty thousand
+  group: 10,000 〜 1,000,000
+  item: 40,000
+  jp: 四万（よんまん）
+- en: fifty thousand
+  group: 10,000 〜 1,000,000
+  item: 50,000
+  jp: 五万（ごまん）
+- en: sixty thousand
+  group: 10,000 〜 1,000,000
+  item: 60,000
+  jp: 六万（ろくまん）
+- en: seventy thousand
+  group: 10,000 〜 1,000,000
+  item: 70,000
+  jp: 七万（ななまん）
+- en: eighty thousand
+  group: 10,000 〜 1,000,000
+  item: 80,000
+  jp: 八万（はちまん）
+- en: ninety thousand
+  group: 10,000 〜 1,000,000
+  item: 90,000
+  jp: 九万（きゅうまん）
+- en: one hundred thousand
+  group: 10,000 〜 1,000,000
+  item: 100,000
+  jp: 十万（じゅうまん）
+- en: one million
+  group: 10,000 〜 1,000,000
+  item: 1,000,000
+  jp: 百万（ひゃくまん）

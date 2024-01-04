@@ -1,0 +1,1262 @@
+- group: Number
+  words:
+  - en: '1'
+    jp: いち
+    reading: ichi
+  - en: '2'
+    jp: に
+    reading: ni
+  - en: '3'
+    jp: さん
+    reading: san
+  - en: '4'
+    jp: よん / し
+    reading: yon / shi
+  - en: '5'
+    jp: ご
+    reading: go
+  - en: '6'
+    jp: ろく
+    reading: roku
+  - en: '7'
+    jp: なな / しち
+    reading: nana / shichi
+  - en: '8'
+    jp: はち
+    reading: hachi
+  - en: '9'
+    jp: きゅう / く
+    reading: kyū / ku
+  - en: '10'
+    jp: じゅう
+    reading: jū
+  - en: '11'
+    jp: じゅういち
+    reading: jūichi
+  - en: '12'
+    jp: じゅうに
+    reading: jūni
+  - en: '14'
+    jp: じゅうよん
+    reading: jūyon
+  - en: '20'
+    jp: にじゅう
+    reading: nijū
+  - en: '30'
+    jp: さんじゅう
+    reading: sanjū
+  - en: '31'
+    jp: さんじゅういち
+    reading: sanjūichi
+  - en: '100'
+    jp: ひゃく
+    reading: hyaku
+- group: Occupation
+  words:
+  - en: bank employee
+    jp: ぎんこういん
+    reading: ginkōin
+  - en: company employee
+    jp: かいしゃいん
+    reading: kaishain
+  - en: doctor
+    jp: いしゃ
+    reading: isha
+  - en: teacher
+    jp: せんせい
+    reading: sensē
+  - en: engineer
+    jp: エンジニア
+    reading: enjinia
+  - en: clerk
+    jp: てんいん
+    reading: tenin
+  - en: singer
+    jp: かしゅ
+    reading: kashu
+  - en: police man
+    jp: けいさつかん
+    reading: keisatsukan
+  - en: student
+    jp: がくせい
+    reading: gakusē
+  - en: housewife
+    jp: しゅふ
+    reading: shuhu
+- group: Country
+  words:
+  - en: country
+    jp: くに
+    reading: kuni
+  - en: Japan
+    jp: にほん
+    reading: Nihon
+  - en: Korea
+    jp: かんこく
+    reading: Kankoku
+  - en: China
+    jp: ちゅうごく
+    reading: Chūgoku
+  - en: Philippines
+    jp: フィリピン
+    reading: Filipin
+  - en: America
+    jp: アメリカ
+    reading: Amerika
+  - en: German
+    jp: ドイツ
+    reading: Doitsu
+  - en: The United Kingdom
+    jp: イギリス
+    reading: Igirisu
+- group: Language
+  words:
+  - en: Japanese language
+    jp: にほんご
+    reading: Nihongo
+  - en: Korean language
+    jp: かんこくご
+    reading: Kankokugo
+  - en: Chinese language
+    jp: ちゅうごくご
+    reading: Chūgokugo
+  - en: English
+    jp: えいご
+    reading: Ēgo
+- group: Places
+  words:
+  - en: bank
+    jp: ぎんこう
+    reading: ginkō
+  - en: post office
+    jp: ゆうびんきょく
+    reading: yūbinkyoku
+  - en: drug store
+    jp: くすりや or やっきょく
+    reading: kusuriya / yakkyoku
+  - en: hospital
+    jp: びょういん
+    reading: byōin
+  - en: company
+    jp: かいしゃ
+    reading: kaisha
+  - en: supermarket
+    jp: スーパー
+    reading: sūpā
+  - en: café
+    jp: きっさてん or カフェ
+    reading: kissaten / kafe
+  - en: restaurant
+    jp: レストラン
+    reading: resutoran
+  - en: department store
+    jp: デパート
+    reading: depāto
+  - en: cinema
+    jp: えいがかん
+    reading: ēgakan
+  - en: book store
+    jp: ほんや
+    reading: honya
+  - en: flower stop
+    jp: はなや
+    reading: hanaya
+  - en: cake shop
+    jp: ケーキや
+    reading: kēkiya
+  - en: ramen shop
+    jp: ラーメンや
+    reading: rāmenya
+  - en: curry shop
+    jp: カレーや
+    reading: karēya
+  - en: convenience store
+    jp: コンビニ
+    reading: konbini
+  - en: home
+    jp: うち
+    reading: uchi
+  - en: school
+    jp: がっこう
+    reading: gakkō
+  - en: university
+    jp: だいがく
+    reading: daigaku
+  - en: apartment
+    jp: アパート
+    reading: apaato
+  - en: toilet
+    jp: トイレ / おてあらい
+    reading: toire / otearai
+  - en: museum
+    jp: はくぶつかん
+    reading: hakubutsukan
+  - en: park
+    jp: こうえん
+    reading: kōen
+  - en: embassy
+    jp: たいしかん
+    reading: taishikan
+  - en: town
+    jp: まち
+    reading: machi
+  - en: north exit
+    jp: きたぐち
+    reading: kitaguchi
+  - en: south exit
+    jp: みなみぐち
+    reading: minamiguchi
+  - en: east exit
+    jp: ひがしぐち
+    reading: higashiguchi
+  - en: west exit
+    jp: にしぐち
+    reading: nishiguchi
+- group: Season
+  words:
+  - en: season
+    jp: きせつ
+    reading: kisetsu
+  - en: spring
+    jp: はる
+    reading: haru
+  - en: summer
+    jp: なつ
+    reading: natsu
+  - en: autumn
+    jp: あき
+    reading: aki
+  - en: winter
+    jp: ふゆ
+    reading: fuyu
+- group: People
+  words:
+  - en: family
+    jp: かぞく
+    reading: kazoku
+  - en: friend
+    jp: ともだち
+    reading: tomodachi
+  - en: (my) father
+    jp: ちち
+    reading: chichi
+  - en: (someone else's) father / dad
+    jp: おとうさん
+    reading: otousan
+  - en: (my) mother
+    jp: はは
+    reading: haha
+  - en: (someone else's) father / mom
+    jp: おかあさん
+    reading: okaasan
+  - en: (my) older brother
+    jp: あに
+    reading: ani
+  - en: (someone else's) older brother
+    jp: おにいさん
+    reading: oniisan
+  - en: (my) older sister
+    jp: あね
+    reading: ane
+  - en: (someone else's) older sister
+    jp: おねえさん
+    reading: oneesan
+  - en: younger brother
+    jp: おとうと
+    reading: otouto
+  - en: younger sister
+    jp: いもうと
+    reading: imouto
+  - en: sibling
+    jp: きょうだい
+    reading: kyoudai
+  - en: son
+    jp: むすこ
+    reading: musuko
+  - en: daughter
+    jp: むすめ
+    reading: musume
+  - en: man
+    jp: おとこ or だんせい
+    reading: otoko / dansē
+  - en: woman
+    jp: おんな or じょせい
+    reading: onna / josē
+  - en: (my) husband
+    jp: おっと
+    reading: otto
+  - en: (someone else's) husband
+    jp: ごしゅじん
+    reading: goshujin
+  - en: (my) wife
+    jp: つま
+    reading: tsuma
+  - en: (someone else's) wife
+    jp: おくさん
+    reading: okusan
+  - en: parents
+    jp: りょうしん
+    reading: ryōshin
+  - en: child
+    jp: こども
+    reading: kodomo
+  - en: (my) grandfather
+    jp: そふ
+    reading: sofu
+  - en: (someone else's) grandfather
+    jp: おじいさん
+    reading: ojiisan
+  - en: (my) grandmother
+    jp: そぼ
+    reading: sobo
+  - en: (someone else's) grandmother
+    jp: おばあさん
+    reading: obaasan
+  - en: uncle
+    jp: おじ
+    reading: oji
+  - en: aunt
+    jp: おば
+    reading: oba
+  - en: grandchild
+    jp: まご
+    reading: mago
+- group: Animals
+  words:
+  - en: animal
+    jp: どうぶつ
+    reading: dōbutsu
+  - en: dog
+    jp: いぬ
+    reading: inu
+  - en: cat
+    jp: ねこ
+    reading: neko
+  - en: pig
+    jp: ぶた
+    reading: buta
+  - en: cow
+    jp: うし
+    reading: ushi
+  - en: chicken
+    jp: にわとり
+    reading: niwatori
+  - en: bird
+    jp: とり
+    reading: tori
+- group: Clothing
+  words:
+  - en: clothes
+    jp: ふく
+    reading: fuku
+  - en: kimono
+    jp: きもの
+    reading: kimono
+  - en: hat / cap
+    jp: ぼうし
+    reading: chichi
+  - en: suit
+    jp: スーツ
+    reading: suutsu
+  - en: jacket
+    jp: ジャケット
+    reading: jaketto
+  - en: sweater
+    jp: セーター
+    reading: sētaa
+  - en: coat
+    jp: コート
+    reading: coto
+  - en: T-shirt
+    jp: Tシャツ
+    reading: T-shatsu
+  - en: dress
+    jp: ドレス
+    reading: doresu
+  - en: underwear
+    jp: したぎ
+    reading: shitagi
+  - en: earing
+    jp: イヤリング
+    reading: iyaringu
+  - en: belt
+    jp: ベルト
+    reading: beruto
+  - en: necktie
+    jp: ネクタイ
+    reading: nekutai
+  - en: glove / mitten
+    jp: てぶくろ
+    reading: tebukuro
+  - en: glasses
+    jp: めがね
+    reading: megane
+  - en: sunglasses
+    jp: サングラス
+    reading: sangurasu
+  - en: pants
+    jp: ズボン
+    reading: zubon
+  - en: skirt
+    jp: スカート
+    reading: sukaato
+  - en: socks
+    jp: くつした
+    reading: kutsushita
+  - en: shoes
+    jp: くつ
+    reading: kutsu
+  - en: sandals
+    jp: サンダル
+    reading: sandaru
+- group: Nature
+  words:
+  - en: sea
+    jp: うみ
+    reading: umi
+  - en: river
+    jp: かわ
+    reading: kawa
+  - en: mountain
+    jp: やま
+    reading: yama
+  - en: wind
+    jp: かぜ
+    reading: kaze
+  - en: tree
+    jp: き
+    reading: ki
+  - en: forest
+    jp: もり
+    reading: mori
+  - en: sky
+    jp: そら
+    reading: sora
+  - en: cloud
+    jp: くも
+    reading: kumo
+  - en: pond
+    jp: いけ
+    reading: ike
+  - en: flower
+    jp: はな
+    reading: hana
+  - en: grass
+    jp: くさ
+    reading: kusa
+- group: Body Parts
+  words:
+  - en: body
+    jp: からだ
+    reading: karada
+  - en: head
+    jp: あたま
+    reading: atama
+  - en: neck
+    jp: くび
+    reading: kubi
+  - en: arm
+    jp: うで
+    reading: ude
+  - en: finger
+    jp: ゆび
+    reading: yubi
+  - en: mouth
+    jp: くち
+    reading: kuchi
+  - en: ear
+    jp: みみ
+    reading: mimi
+  - en: eye
+    jp: め
+    reading: me
+  - en: nose
+    jp: はな
+    reading: hana
+  - en: hair
+    jp: かみ
+    reading: kami
+- group: Food
+  words:
+  - en: food
+    jp: たべもの
+    reading: tabemono
+  - en: cuisine / dish
+    jp: りょうり
+    reading: ryōri
+  - en: rice / meal
+    jp: ごはん
+    reading: gohan
+  - en: bread
+    jp: パン
+    reading: pan
+  - en: ramen
+    jp: ラーメン
+    reading: rāmen
+  - en: spaghetti
+    jp: スパゲッティ
+    reading: supagetthi
+  - en: curry and rice
+    jp: カレーライス
+    reading: karēraisu
+  - en: hamburger
+    jp: ハンバーガー
+    reading: hanbāgā
+  - en: sandwich
+    jp: サンドウィッチ
+    reading: sandowhicchi
+  - en: donut
+    jp: ドーナッツ
+    reading: dōnattsu
+  - en: lunch box
+    jp: べんとう
+    reading: bentō
+  - en: ice cream
+    jp: アイスクリーム
+    reading: aisukuriimu
+  - en: cake
+    jp: ケーキ
+    reading: kēki
+  - en: breakfast
+    jp: あさごはん
+    reading: asagohan
+  - en: lunch
+    jp: ひるごはん
+    reading: hirugohan
+  - en: dinner
+    jp: ばんごはん
+    reading: bangohan
+  - en: soup
+    jp: スープ
+    reading: sūpu
+  - en: udon
+    jp: うどん
+    reading: udon
+  - en: miso soup
+    jp: みそしる
+    reading: misoshiru
+  - en: pizza
+    jp: ピザ
+    reading: piza
+  - en: rice ball
+    jp: おにぎり
+    reading: onigiri
+  - en: fish
+    jp: さかな
+    reading: sakana
+  - en: beef
+    jp: ぎゅうにく
+    reading: gyūniku
+  - en: pork
+    jp: ぶたにく
+    reading: butaniku
+  - en: chicken
+    jp: とりにく
+    reading: toriniku
+  - en: egg
+    jp: たまご
+    reading: tamago
+- group: Beverage
+  words:
+  - en: water
+    jp: みず
+    reading: mizu
+  - en: milk
+    jp: ぎゅうにゅう
+    reading: gyūnyū
+  - en: beer
+    jp: ビール
+    reading: biiru
+  - en: tea
+    jp: おちゃ
+    reading: ocha
+  - en: coffee
+    jp: コーヒー
+    reading: kōhii
+  - en: wine
+    jp: ワイン
+    reading: wain
+  - en: juice
+    jp: ジュース
+    reading: jūsu
+  - en: liquor
+    jp: おさけ
+    reading: osake
+- group: Fruits
+  words:
+  - en: apple
+    jp: りんご
+    reading: ringo
+  - en: banana
+    jp: バナナ
+    reading: banana
+  - en: mandarin orange
+    jp: みかん
+    reading: mikan
+  - en: strawberry
+    jp: いちご
+    reading: ichigo
+- group: Vehicles
+  words:
+  - en: car
+    jp: くるま
+    reading: kuruma
+  - en: taxi
+    jp: タクシー
+    reading: takushii
+  - en: bus
+    jp: バス
+    reading: basu
+  - en: motorcycle
+    jp: バイク
+    reading: baiku
+  - en: bicycle
+    jp: じてんしゃ
+    reading: jitensha
+  - en: train
+    jp: でんしゃ
+    reading: densha
+  - en: subway
+    jp: ちかてつ
+    reading: chikatetsu
+  - en: airplane
+    jp: ひこうき
+    reading: hikōki
+  - en: ship
+    jp: ふね
+    reading: fune
+- group: Sports
+  words:
+  - en: tennis
+    jp: テニス
+    reading: tenisu
+  - en: soccer
+    jp: サッカー
+    reading: sakkā
+  - en: basketball
+    jp: バスケットボール
+    reading: basuketto bōru
+  - en: golf
+    jp: ゴルフ
+    reading: gorufu
+  - en: baseball
+    jp: やきゅう
+    reading: yakyū
+  - en: table tennis
+    jp: たっきゅう
+    reading: takkyū
+- group: Stationery
+  words:
+  - en: pencil
+    jp: えんぴつ
+    reading: enpitsu
+  - en: pen
+    jp: ペン
+    reading: pen
+  - en: ballpoint pen
+    jp: ボールペン
+    reading: bōrupen
+  - en: mechanical pencil
+    jp: シャーペン
+    reading: shāpen
+  - en: fountain pen
+    jp: まんねんひつ
+    reading: mannenhitsu
+  - en: eraser
+    jp: けしゴム
+    reading: keshigomu
+  - en: scissors
+    jp: はさみ
+    reading: hasami
+  - en: paper
+    jp: かみ
+    reading: kami
+  - en: notebook
+    jp: ノート
+    reading: nōto
+  - en: pencil case
+    jp: ふでばこ
+    reading: fudebako
+  - en: calculator
+    jp: けいさんき
+    reading: kēsanki
+- group: Home
+  words:
+  - en: home
+    jp: いえ / うち
+    reading: ie / uchi
+  - en: entrance hall
+    jp: げんかん
+    reading: genkan
+  - en: kitchen
+    jp: だいどころ
+    reading: daidokoro
+  - en: room
+    jp: へや
+    reading: heya
+  - en: door
+    jp: ドア / と
+    reading: doa / to
+  - en: table
+    jp: テーブル
+    reading: teeburu
+  - en: chair
+    jp: イス
+    reading: isu
+  - en: desk
+    jp: つくえ
+    reading: tsukue
+  - en: closet
+    jp: おしいれ
+    reading: oshiire
+  - en: bookshelf
+    jp: ほんだな
+    reading: hondana
+  - en: window
+    jp: まど
+    reading: mado
+  - en: stairs
+    jp: かいだん
+    reading: kaidan
+  - en: bed
+    jp: ベッド
+    reading: beddo
+  - en: vase
+    jp: かびん
+    reading: kabin
+  - en: roof
+    jp: やね
+    reading: yane
+  - en: kitchen
+    jp: キッチン
+    reading: kicchin
+  - en: air conditioner
+    jp: エアコン
+    reading: eakon
+- group: Day of the week
+  words:
+  - en: Sunday
+    jp: にちようび
+    reading: nichiyōbi
+  - en: Monday
+    jp: げつようび
+    reading: getsuyōbi
+  - en: Tuesday
+    jp: かようび
+    reading: kayōbi
+  - en: Wednesday
+    jp: すいようび
+    reading: suiyōbi
+  - en: Thursday
+    jp: もくようび
+    reading: mokuyōbi
+  - en: Friday
+    jp: きんようび
+    reading: kinyōbi
+  - en: Saturday
+    jp: どようび
+    reading: doyōbi
+- group: Date / Time
+  words:
+  - en: day before yesterday
+    jp: おととい
+    reading: ototoi
+  - en: yesterday
+    jp: きのう
+    reading: kinō
+  - en: today
+    jp: きょう
+    reading: kyō
+  - en: tomorrow
+    jp: あした
+    reading: ashita
+  - en: day after tomorrow
+    jp: あさって
+    reading: asatte
+  - en: last week
+    jp: せんしゅう
+    reading: senshū
+  - en: this week
+    jp: こんしゅう
+    reading: konshū
+  - en: next week
+    jp: らいしゅう
+    reading: raishū
+  - en: last month
+    jp: せんげつ
+    reading: sengetsu
+  - en: this month
+    jp: こんげつ
+    reading: kongetsu
+  - en: next month
+    jp: らいげつ
+    reading: raigetsu
+  - en: last year
+    jp: きょねん
+    reading: kyonen
+  - en: this year
+    jp: ことし
+    reading: kotoshi
+  - en: next year
+    jp: らいねん
+    reading: rainen
+  - en: every day
+    jp: まいにち
+    reading: mainichi
+  - en: every week
+    jp: まいしゅう
+    reading: maishū
+  - en: every night
+    jp: まいばん
+    reading: maiban
+  - en: this morning
+    jp: けさ
+    reading: kesa
+  - en: this evening
+    jp: こんばん
+    reading: konban
+  - en: last night
+    jp: きのうの よる
+    reading: kinōno yoru
+  - en: birthday
+    jp: たんじょうび
+    reading: tanjōbi
+- group: Music / Instrument
+  words:
+  - en: music
+    jp: おんがく
+    reading: ongaku
+  - en: piano
+    jp: ピアノ
+    reading: piano
+  - en: guitar
+    jp: ギター
+    reading: gitā
+  - en: karaoke
+    jp: カラオケ
+    reading: karaoke
+- group: Verb 1 (U-verbs)
+  words:
+  - en: to work
+    jp: はたらきます
+    reading: hatarakimasu
+  - en: to go
+    jp: いきます
+    reading: ikimasu
+  - en: to return / to go home
+    jp: かえります
+    reading: kaerimasu
+  - en: to drink
+    jp: のみます
+    reading: nomimasu
+  - en: to read
+    jp: よみます
+    reading: yomimasu
+  - en: to buy
+    jp: かいます
+    reading: kaimasu
+  - en: to listen
+    jp: ききます
+    reading: kikimasu
+  - en: to write
+    jp: かきます
+    reading: kakimasu
+  - en: to take (a picture)
+    jp: とります
+    reading: torimasu
+  - en: to meet
+    jp: あいます
+    reading: aimasu
+  - en: to smoke
+    jp: すいます
+    reading: suimasu
+  - en: to cut
+    jp: きります
+    reading: kirimasu
+  - en: to finish
+    jp: おわります
+    reading: owarimasu
+  - en: to learn
+    jp: ならいます
+    reading: naraimasu
+  - en: to lend
+    jp: かします
+    reading: kashimasu
+  - en: to receive
+    jp: もらいます
+    reading: moraimasu
+  - en: to laugh
+    jp: わらいます
+    reading: waraimasu
+  - en: to hand over
+    jp: わたします
+    reading: watashimasu
+  - en: to scold
+    jp: しかります
+    reading: shikarimasu
+  - en: to sing
+    jp: うたいます
+    reading: utaimasu
+  - en: to dance
+    jp: おどります
+    reading: odorimasu
+  - en: to play (piano, gitar)
+    jp: ひきます
+    reading: hikimasu
+  - en: to cry
+    jp: なきます
+    reading: nakimasu
+  - en: to get angry
+    jp: おこります
+    reading: okorimasu
+  - en: to say
+    jp: いいます
+    reading: iimasu
+  - en: to speak / to talk
+    jp: はなします
+    reading: hanashimasu
+  - en: to stand up
+    jp: たちます
+    reading: tachimasu
+  - en: to sit down
+    jp: すわります
+    reading: suwarimasu
+  - en: to put out
+    jp: だします
+    reading: dashimasu
+  - en: to live
+    jp: すみます
+    reading: sumimasu
+  - en: to make
+    jp: つくります
+    reading: tsukurimasu
+  - en: to sell
+    jp: うります
+    reading: urimasu
+  - en: to use
+    jp: つかいます
+    reading: tsukaimasu
+  - en: to play
+    jp: あそびます
+    reading: asobimasu
+  - en: to cost / to take (time)
+    jp: かかります
+    reading: kakarimasu
+  - en: to hurry
+    jp: いそぎます
+    reading: isogimasu
+  - en: to get hungry
+    jp: おなか がすく
+    reading: onakaga suku
+  - en: to get thirsty
+    jp: のどが かわく
+    reading: nodoga kawaku
+- group: Verb 2 (Ru-verbs)
+  words:
+  - en: to wake up
+    jp: おきます
+    reading: okimasu
+  - en: to sleep
+    jp: ねます
+    reading: nemasu
+  - en: to eat
+    jp: たべます
+    reading: tabemasu
+  - en: to watch / see / look
+    jp: みます
+    reading: mimasu
+  - en: to show
+    jp: みせます
+    reading: misemasu
+  - en: to go out
+    jp: でかける
+    reading: dekakeru
+  - en: to take (a shower)
+    jp: （シャワーを）あびます
+    reading: abimasu
+  - en: to make a call
+    jp: かけます
+    reading: kakemasu
+  - en: to start
+    jp: はじめます
+    reading: hajimemasu
+  - en: to teach
+    jp: おしえます
+    reading: oshiemasu
+  - en: to borrow
+    jp: かります
+    reading: karimasu
+  - en: to give
+    jp: あげます
+    reading: agemasu
+  - en: to put in
+    jp: いれます
+    reading: iremasu
+  - en: to be enough
+    jp: たります
+    reading: tarimasu
+  - en: to work for
+    jp: つとめます
+    reading: tsutomemasu
+  - en: to open
+    jp: あけます
+    reading: akemasu
+  - en: to close
+    jp: しめます
+    reading: shimemasu
+  - en: to turn on
+    jp: つけます
+    reading: tsukemasu
+  - en: to turn off
+    jp: けします
+    reading: keshimasu
+- group: Verb 3 (Irregular verbs)
+  words:
+  - en: to study
+    jp: べんきょうします
+    reading: benkyōshimasu
+  - en: to have a meal
+    jp: しょくじします
+    reading: shokujishimasu
+  - en: to come
+    jp: きます
+    reading: kimasu
+  - en: to play (sports)
+    jp: （sportsを）します
+    reading: (sports o) shimasu
+  - en: to play
+    jp: します
+    reading: shimasu
+  - en: to do
+    jp: します
+    reading: shimasu
+  - en: to practice
+    jp: れんしゅうします
+    reading: renshūshimasu
+  - en: to review
+    jp: ふくしゅうします
+    reading: fukushūshimasu
+  - en: to marry
+    jp: けっこんします
+    reading: kekkonshimasu
+- group: Adverbs
+  words:
+  - en: always
+    jp: いつも
+    reading: itsumo
+  - en: usually
+    jp: たいてい
+    reading: taitē
+  - en: often
+    jp: よく
+    reading: yoku
+  - en: sometimes
+    jp: ときどき
+    reading: tokidoki
+  - en: not very
+    jp: あまり
+    reading: amari
+  - en: not at all
+    jp: ぜんぜん
+    reading: zenzen
+  - en: very
+    jp: とても
+    reading: totemo
+  - en: more
+    jp: もっと
+    reading: motto
+  - en: a lot
+    jp: たくさん
+    reading: takusan
+  - en: a little
+    jp: すこし
+    reading: sukoshi
+  - en: slowly
+    jp: ゆっくり
+    reading: yukkuri
+  - en: already
+    jp: もう
+    reading: mou
+- group: i - Adjective
+  words:
+  - en: big
+    jp: おおきい
+    reading: ōkii
+  - en: small
+    jp: ちいさい
+    reading: chiisai
+  - en: high / tall / expensive
+    jp: たかい
+    reading: takai
+  - en: cheap
+    jp: やすい
+    reading: yasui
+  - en: low
+    jp: ひくい
+    reading: hikui
+  - en: good
+    jp: いい / よい
+    reading: ii / yoi
+  - en: bad
+    jp: わるい
+    reading: warui
+  - en: far
+    jp: とおい
+    reading: tōi
+  - en: near
+    jp: ちかい
+    reading: chikai
+  - en: new
+    jp: あたらしい
+    reading: atarashii
+  - en: old
+    jp: ふるい
+    reading: furui
+  - en: spicy
+    jp: からい
+    reading: karai
+  - en: sweet
+    jp: あまい
+    reading: amai
+  - en: bitter
+    jp: にがい
+    reading: nigai
+  - en: difficult
+    jp: むずかしい
+    reading: muzukashii
+  - en: young
+    jp: わかい
+    reading: wakai
+  - en: long
+    jp: ながい
+    reading: nagai
+  - en: short
+    jp: みじかい
+    reading: mijikai
+  - en: fast / early
+    jp: はやい
+    reading: hayai
+  - en: slow
+    jp: おそい
+    reading: osoi
+  - en: noisy
+    jp: うるさい
+    reading: urusai
+  - en: bright
+    jp: あかるい
+    reading: akarui
+  - en: dark
+    jp: くらい
+    reading: kurai
+  - en: dirty
+    jp: きたない
+    reading: kitanai
+  - en: interesting
+    jp: おもしろい
+    reading: omoshiroi
+  - en: boring
+    jp: つまらない
+    reading: tsumaranai
+  - en: happy
+    jp: うれしい
+    reading: ureshii
+  - en: sad
+    jp: かなしい
+    reading: kanashii
+  - en: fun
+    jp: たのしい
+    reading: tanoshii
+  - en: lonely
+    jp: さびしい
+    reading: sabishii
+  - en: scary
+    jp: こわい
+    reading: kowai
+  - en: hot
+    jp: あつい
+    reading: atsui
+  - en: cold (weather)
+    jp: さむい
+    reading: samui
+  - en: cold (objects)
+    jp: つめたい
+    reading: tsumetai
+  - en: warm
+    jp: あたたかい
+    reading: atatakai
+  - en: cool
+    jp: すずしい
+    reading: suzushii
+  - en: cold
+    jp: さむい
+    reading: samui
+  - en: narrow
+    jp: せまい
+    reading: semai
+  - en: wide
+    jp: ひろい
+    reading: hiroi
+  - en: busy
+    jp: いそがしい
+    reading: isogashii
+- group: na - Adjective
+  words:
+  - en: kind
+    jp: しんせつ
+    reading: shinsetsu
+  - en: easy
+    jp: かんたん
+    reading: kantan
+  - en: beautiful / clean
+    jp: きれい
+    reading: kirē
+  - en: famous
+    jp: ゆうめい
+    reading: yūmē
+  - en: handsome
+    jp: ハンサム
+    reading: hansamu
+  - en: lively
+    jp: にぎやか
+    reading: nigiyaka
+  - en: quiet
+    jp: しずか
+    reading: shizuka
+  - en: good at / skillful
+    jp: じょうずな
+    reading: jōzuna
+  - en: poor at / unskillful
+    jp: へたな
+    reading: hetana
+  - en: like / favorite
+    jp: すきな
+    reading: sukina
+  - en: dislike
+    jp: きらいな
+    reading: kiraina
+  - en: free
+    jp: ひまな
+    reading: himana
+- group: Interrogative
+  words:
+  - en: what
+    jp: なに / なん
+    reading: nani / nan
+  - en: which
+    jp: どれ / どの（Noun）
+    reading: dore / dono (Noun)
+  - en: who
+    jp: だれ
+    reading: dare
+  - en: whose
+    jp: だれの
+    reading: dareno
+  - en: when
+    jp: いつ
+    reading: itsu
+  - en: where
+    jp: どこ
+    reading: doko
+  - en: why
+    jp: どうして
+    reading: dōshite

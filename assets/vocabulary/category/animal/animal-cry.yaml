@@ -1,0 +1,52 @@
+- en: bow wow
+  group: 1. 動物
+  item: 犬
+  jp: ワンワン
+- en: moo
+  group: 1. 動物
+  item: 牛
+  jp: モー
+- en: neigh
+  group: 1. 動物
+  item: 馬
+  jp: ヒヒーン
+- en: meow
+  group: 1. 動物
+  item: 猫
+  jp: ニャー
+- en: squeak
+  group: 1. 動物
+  item: ネズミ
+  jp: チュー
+- en: oink - oink
+  group: 1. 動物
+  item: 豚
+  jp: ブーブー
+- en: roar
+  group: 1. 動物
+  item: ライオン
+  jp: ガオー
+- en: quack
+  group: 2. 鳥の泣き声
+  item: あひる
+  jp: ガーガー
+- en: cuckoo
+  group: 2. 鳥の泣き声
+  item: カッコウ
+  jp: カッコー
+- en: caw
+  group: 2. 鳥の泣き声
+  item: カラス
+  jp: カー
+- en: coo
+  group: 2. 鳥の泣き声
+  item: 鳩
+  jp: クックー
+- en: cheep / peep
+  group: 2. 鳥の泣き声
+  item: ひよこ
+  jp: ピヨピヨ
+- en: hoot
+  group: 2. 鳥の泣き声
+  item: フクロウ
+  jp: ホーホー

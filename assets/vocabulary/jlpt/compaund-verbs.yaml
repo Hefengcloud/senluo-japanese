@@ -1,0 +1,70 @@
+- group: 〜始める：start
+  words:
+  - 食べ始める
+  - 話し始める
+  - 読み始める
+- group: 〜終わる：finish
+  words:
+  - 食べ終わる
+  - 話し終わる
+  - 読み終わる
+- group: 〜続ける：continue
+  words:
+  - 使い続ける
+  - 努力し続ける
+  - 見続ける
+- group: 〜出す：begin / put out / jump out
+  words:
+  - 泣き出す
+  - 走り出す
+  - 歌い出す
+- group: 〜直す：do again
+  words:
+  - 書き直す
+  - 見直す
+  - やり直す
+- group: 〜合う：do together
+  words:
+  - 助け合う
+  - 話し合う
+  - 愛し合う
+- group: 〜込む：long time / put into
+  words:
+  - 煮込む
+  - 考え込む
+  - 駆け込む
+- group: 〜切る：complete
+  words:
+  - 食べ切る
+  - 走り切る
+  - 使い切る
+- group: 〜上げる：raise
+  words:
+  - 持ち上げる
+  - 引き上げる
+  - 打ち上げる
+- group: 〜返す： return
+  words:
+  - 言い返す
+  - 読み返す
+  - 奪い返す
+- group: 〜合わせる： combine
+  words:
+  - 待ち合わせる
+  - 組み合わせる
+  - 重ね合わせる
+- group: 見〜： see
+  words:
+  - 見通す
+  - 見守る
+  - 見極める
+- group: 受〜： receive
+  words:
+  - 受け取る
+  - 受け入れる
+  - 受け止める
+- group: 〜得る / 得ない：possible / impossible
+  words:
+  - 起こり得る
+  - 予測し得る
+  - あり得ない

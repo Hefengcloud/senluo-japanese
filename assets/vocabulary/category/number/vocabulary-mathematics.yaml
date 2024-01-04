@@ -1,0 +1,88 @@
+- en: mathematics / arithmetic
+  jp: 算数（さんすう）
+- en: mathematics
+  jp: 数学（すうがく）
+- en: area
+  jp: 面積（めんせき）
+- en: volume
+  jp: 体積（たいせき）
+- en: height
+  jp: 高さ（たかさ）
+- en: length
+  jp: 長さ（ながさ）
+- en: integer
+  jp: 整数（せいすう）
+- en: decimal
+  jp: 小数点（しょうすうてん）
+- en: fractions
+  jp: 分数（ぶんすう）
+- en: denominator
+  jp: 分母（ぶんぼ）
+- en: numerator
+  jp: 分子（ぶんし）
+- en: even number
+  jp: 偶数（ぐうすう）
+- en: odd number
+  jp: 奇数（きすう）
+- en: angle
+  jp: 角度（かくど）
+- en: probability
+  jp: 確率（かくりつ）
+- en: function
+  jp: 関数（かんすう）
+- en: variable
+  jp: 変数（へんすう）
+- en: square roots
+  jp: 平方根（へいほうこん）
+- en: equation
+  jp: 方程式（ほうていしき）
+- en: parenthesis
+  jp: 括弧（かっこ）
+- en: addition
+  group: 四則演算
+  jp: 足し算（たしざん）
+- en: subtraction
+  group: 四則演算
+  jp: 引き算（ひきざん）
+- en: multiplication
+  group: 四則演算
+  jp: かけ算（かけざん）
+- en: division
+  group: 四則演算
+  jp: 割り算（わりざん）
+- en: triangle
+  group: 図形
+  jp: 三角形（さんかっけい）
+- en: square
+  group: 図形
+  jp: 正方形（せいほうけい）
+- en: pentagon
+  group: 図形
+  jp: 五角形（ごかっけい）
+- en: hexagon
+  group: 図形
+  jp: 六角形（ろっかっけい）
+- en: trapezoid
+  group: 図形
+  jp: 台形（だいけい）
+- en: rectangle
+  group: 図形
+  jp: 長方形（ちょうほうけい）
+- en: isosceles triangle
+  group: 図形
+  jp: 二等辺三角形（にとうへんさんかっけい）
+- en: equilateral triangle
+  group: 図形
+  jp: 正三角形（せいさんかっけい）
+- en: circle
+  group: 図形
+  jp: 円（えん）
+- en: oval
+  group: 図形
+  jp: 楕円（だえん）
+- en: to calculate
+  group: 動詞
+  jp: 計算する（けいさんする）
+- en: to sum
+  group: 動詞
+  jp: 合計する（ごうけいする）

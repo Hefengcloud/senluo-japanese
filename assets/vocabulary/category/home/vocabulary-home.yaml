@@ -1,0 +1,159 @@
+- en: house
+  group: 1. 家
+  jp: 家（いえ）
+- en: apartment
+  group: 1. 家
+  jp: アパート
+- en: condominium
+  group: 1. 家
+  jp: マンション
+- en: mansion
+  group: 1. 家
+  jp: 豪邸（ごうてい）
+- en: entrance
+  group: 1. 家
+  jp: 玄関（げんかん）
+- en: door
+  group: 1. 家
+  jp: ドア
+- en: room
+  group: 1. 家
+  jp: 部屋（へや）
+- en: window
+  group: 1. 家
+  jp: 窓（まど）
+- en: shutter
+  group: 1. 家
+  jp: 雨戸（あまど）
+- en: screen door
+  group: 1. 家
+  jp: 網戸（あみど）
+- en: Japanese style room
+  group: 1. 家
+  jp: 和室（わしつ）
+- en: Western style room
+  group: 1. 家
+  jp: 洋室（ようしつ）
+- en: bathroom
+  group: 1. 家
+  jp: 浴室（よくしつ）/トイレ
+- en: bedroom
+  group: 1. 家
+  jp: 寝室（しんしつ）
+- en: study
+  group: 1. 家
+  jp: 書斎（しょさい）
+- en: dining room
+  group: 1. 家
+  jp: ダイニングルーム
+- en: living room
+  group: 1. 家
+  jp: リビングルーム
+- en: kitchen
+  group: 1. 家
+  jp: キッチン / 台所（だいどころ）
+- en: floor
+  group: 1. 家
+  jp: 床（ゆか）
+- en: washroom
+  group: 1. 家
+  jp: 洗面所（せんめんじょ）
+- en: strage
+  group: 1. 家
+  jp: 物置（ものおき）
+- en: chair
+  group: 2. 家具
+  jp: 椅子（いす）
+- en: sofa
+  group: 2. 家具
+  jp: ソファ
+- en: desk
+  group: 2. 家具
+  jp: 机（つくえ）
+- en: table
+  group: 2. 家具
+  jp: テーブル
+- en: shelf
+  group: 2. 家具
+  jp: 棚（たな）
+- en: bookshelf
+  group: 2. 家具
+  jp: 本棚（ほんだな）
+- en: cabinet
+  group: 2. 家具
+  jp: 戸棚（とだな）
+- en: cupboard
+  group: 2. 家具
+  jp: 食器棚（しょっきだな）
+- en: curtain
+  group: 2. 家具
+  jp: カーテン
+- en: chest
+  group: 2. 家具
+  jp: たんす
+- en: carpet
+  group: 2. 家具
+  jp: 絨毯（じゅうたん）
+- en: bedding
+  group: 3. 寝具
+  jp: 寝具（しんぐ）
+- en: bed
+  group: 3. 寝具
+  jp: ベッド
+- en: bed sheet
+  group: 3. 寝具
+  jp: ベッドシーツ
+- en: pillow
+  group: 3. 寝具
+  jp: 枕（まくら）
+- en: pillowcase
+  group: 3. 寝具
+  jp: 枕カバー（まくらカバー）
+- en: blanket
+  group: 3. 寝具
+  jp: 毛布（もうふ）
+- en: futon / comforter
+  group: 3. 寝具
+  jp: 布団（ふとん）
+- en: mattress
+  group: 3. 寝具
+  jp: マットレス
+- en: realtor
+  group: 4. 家探し
+  jp: 不動産屋（ふどうさんや）
+- en: floor plan
+  group: 4. 家探し
+  jp: 間取り（まどり）
+- en: facing south
+  group: 4. 家探し
+  jp: 南向き（みなみむき）
+- en: rent / lease
+  group: 4. 家探し
+  jp: 賃貸（ちんたい）
+- en: monthly rent
+  group: 4. 家探し
+  jp: 家賃（やちん）
+- en: security deposite
+  group: 4. 家探し
+  jp: 敷金（しききん）
+- en: key money
+  group: 4. 家探し
+  jp: 礼金（れいきん）
+- en: loan
+  group: 4. 家探し
+  jp: ローン
+- en: age of a building
+  group: 4. 家探し
+  jp: 築年数（ちくねんする）
+- en: to sign a contract
+  group: 4. 家探し
+  jp: 契約する（けいやくする）
+- en: to move into a house
+  group: 4. 家探し
+  jp: 入居する（にゅうきょする）
+- en: to move out of a house
+  group: 4. 家探し
+  jp: 退去する（たいきょする）
+- en: to renew
+  group: 4. 家探し
+  jp: 更新する（こうしんする）
