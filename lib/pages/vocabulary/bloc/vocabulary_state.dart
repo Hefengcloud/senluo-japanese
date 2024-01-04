@@ -17,4 +17,7 @@ final class VocabularyLoaded extends VocabularyState {
     required this.type2Menus,
     required this.wordList,
   });
+
+  @override
+  List<Object> get props => [type2Menus, wordList];
 }

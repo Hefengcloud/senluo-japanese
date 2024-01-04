@@ -58,8 +58,10 @@
 - examples:
   - en: The cat **meows**.
     jp: 猫が **ニャー** と鳴く。
+    zh: 猫发出喵的声音。
   - en: The kitten came up to me while **meowing**.
     jp: 子猫が **ニャーニャー** 鳴きながら近寄ってきた。
+    zh: 小猫边发出喵喵声，一边靠近我。
   key: nyaa
   meanings:
     en:
@@ -2448,11 +2450,13 @@
 - examples:
   - en: My body feels chilly because of a cold.
     jp: 風邪で体が **ゾクゾク** する。
+    zh: 感冒了，身体阵阵发冷。
   - en: I felt like someone was watching me, and I got scared and I trembled.
     jp: 誰かに見られている感じがして、怖くて **ゾクゾク** した。
-  - en: No one was supposed to be there, but I was horrified to hear the sound of
-      children's voices.
+    zh: 感觉有人在看着我，感到害怕，身体发抖。
+  - en: No one was supposed to be there, but I was horrified to hear the sound of children's voices.
     jp: 誰もいないはずなのに、子供の声が聞こえてきて **ゾクっ** とした。
+    zh: 本该没有人的，却听到孩子的声音，让我吓了一跳。
   key: zokuzoku
   meanings:
     en:
@@ -2461,6 +2465,9 @@
     jp:
     - 風邪や熱などで寒気がする様子
     - 恐怖や緊張、喜びなどで体が震える様子
+    zh:
+    - 因感冒或发烧而感到阵阵发冷、打寒战
+    - 因恐惧、紧张或喜悦而出现身体颤抖
   name: ぞくぞく / ぞくっ
 - examples:
   - en: Can you change the speech bubble here to a jagged one?

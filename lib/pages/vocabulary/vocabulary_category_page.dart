@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/vocabulary/views/menu_list_view.dart';
-import 'package:senluo_japanese_cms/repos/vocabulary/models/vocabulary_menu.dart';
-import 'package:senluo_japanese_cms/repos/vocabulary/vocabulary_repository.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_grid_view.dart';
 
-import '../../../common/models/word.dart';
-import '../bloc/vocabulary_bloc.dart';
+import '../../common/models/word.dart';
+import '../../constants/colors.dart';
+import '../../repos/vocabulary/models/vocabulary_menu.dart';
+import '../../repos/vocabulary/vocabulary_repository.dart';
+import '../kanji/constants/styles.dart';
+import 'bloc/vocabulary_bloc.dart';
+import 'views/menu_list_view.dart';
 
 class VocabularyCategoryPage extends StatelessWidget {
   const VocabularyCategoryPage({super.key});
@@ -51,10 +55,7 @@ class VocabularyCategoryPage extends StatelessWidget {
         .add(VocabularyWordListStarted(key: key));
   }
 
-  _buildRightPanel(List<Word> words) {
-    return GridView.count(
-      crossAxisCount: 8,
-      children: words.map<Text>((word) => Text(word.text)).toList(),
-    );
+  _buildRightPanel(List<Word> wordList) {
+    return VocabularyGridView(wordList: wordList);
   }
 }
