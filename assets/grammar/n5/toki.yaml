@@ -1,0 +1,18 @@
+pattern: 〜とき
+level: N5
+meanings:
+  jp:
+    - "「AときB」Bの状態、動作の時間をAで表す時に使われる。"
+    - "「AときB」のAの動詞（V1）の時制は、主文の時制つまり「AときB」のBの動詞の時制（V2）とは関係がない。そのため、英語から日本語訳を考えると、使い方を間違える学生がいるので要注意である。"
+    - "V1の時制の考え方はV2がV1より先に行われるか、後に行われるかで決まる。V1がV2より先に行われる場合、V1は過去形（タ形）、V2より後に行われる場合は、V1は現在形（辞書形）になる。"
+    - "(例)**"
+    - "When I leave the classroom, I turn off the light"
+    - "教室を **出る** とき、電気を消します。"
+    - "When I enter the classroom, I turn on the light."
+    - "教室に **入った** 時、電気をつけます。"
+  cn:
+conjugations:
+  - "V（普） + ときイAい + ときナAな + ときN + のとき"
+examples:
+  - jp: ""
+    cn: ""

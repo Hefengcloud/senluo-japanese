@@ -1,0 +1,26 @@
+pattern: 〜こと
+level: N3
+meanings:
+  jp:
+    - "～しなさい / ～してください"
+    - "指示や規則などを書いて伝えるときの表現。（口で伝えることもある。）"
+  cn:
+conjugations:
+  - "V（辞 / ナイ） + ことNの + こと※Nはする動詞のN"
+examples:
+  - jp: "テストのときは携帯電話はカバンの中にしまう **こと** 。"
+    cn: ""
+  - jp: "Put your cell phone in your bag when you take the test."
+    cn: ""
+  - jp: "明日は９時に教室前に集合の **こと** 。"
+    cn: ""
+  - jp: "Gather in front of the classroom at 9:00 a.m. tomorrow."
+    cn: ""
+  - jp: "レポートは来週の火曜日までに提出する **こと** 。"
+    cn: ""
+  - jp: "Submit your report by next Tuesday."
+    cn: ""
+  - jp: "お弁当は各自持ってくる **こと** 。"
+    cn: ""
+  - jp: "Bring your own lunch."
+    cn: ""

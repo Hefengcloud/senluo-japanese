@@ -1,0 +1,10 @@
+pattern: 〜こそ
+level: N3
+meanings:
+  jp:
+    - "強調を表す。"
+    - "プラスの意味で使われる。（マイナスの意味を強調する使い方はしない。）"
+  cn:
+conjugations:
+  - "N + こそV（辞）+ ことこそ普通形 + からこそ"
+examples:

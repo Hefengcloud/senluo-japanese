@@ -1,0 +1,28 @@
+pattern: 〜まい（否定の意志）
+level: N2
+meanings:
+  jp:
+    - "～しようと思わない"
+    - "強い否定の意志を表す。そのため、主語は１人称となる。"
+  cn:
+conjugations:
+  - "V（普） + まいイAく + あるまいナAでは + あるまいNでは + あるまい"
+examples:
+  - jp: "熱が徐々に下がり始めたので、心配しすぎる必要はある **まい** 。"
+    cn: ""
+  - jp: "The fever has started to go down slowly, so there's no need to worry too much."
+    cn: ""
+  - jp: "私はさっき幽霊を見たが、誰も信じ **まい** 。"
+    cn: ""
+  - jp: "I saw a ghost a while ago, but no one believes me."
+    cn: ""
+  - jp: "末期癌の父に対してできる限りのことをしたが、深刻な状況でこれ以上の回復は見込め **まい** とのことだ。"
+    cn: ""
+  - jp: "They have done all they can for my father, who has terminal cancer, but his"
+    cn: ""
+  - jp: "condition is so serious that he is not expected to recover any further."
+    cn: ""
+  - jp: "散々叱られたんだから、さすがにもう悪さをする **まい** 。"
+    cn: ""
+  - jp: "He's been scolded so much that he won't misbehave anymore."
+    cn: ""

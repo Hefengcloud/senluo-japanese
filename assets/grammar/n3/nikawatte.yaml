@@ -1,0 +1,45 @@
+pattern: 〜に代わって
+level: N3
+meanings:
+  jp:
+    - "〜と入れ替わって / 〜の代理として"
+  cn:
+conjugations:
+  - "N + にかわって"
+explanations:
+  - "後ろに名詞が来る場合は「〜代わるN」となる。"
+examples:
+  - jp: "今日は田中先生がインフルエンザで学校に来れないので、私が田中先生 **に代わって** 授業をします。"
+    cn: ""
+  - jp: "本日は部長が出張のため、部長 **に代わって** 私が会議の進行役をつとめます。"
+    cn: ""
+  - jp: "後輩 **に代わって** 、私が責任を取ることになった。"
+    cn: ""
+  - jp: "近い将来テクノロジーの発展により、人に **代わって** ロボットが仕事をするという時代が来るかもしれない。"
+    cn: ""
+  - jp: "最近はメール **に代わって** 、LINEやMessengerなどを連絡手段に使う人が増えた。"
+    cn: ""
+  - jp: "病気の母 **に代わって** 、私が兄弟の世話をしています。"
+    cn: ""
+  - jp: "本人 **に代わって** 、お詫び申し上げます。"
+    cn: ""
+  - jp: "彼 **に代わる** 人物はどこを探してもいないよ。"
+    cn: ""
+  - jp: "健康のために肉 **に代わって** 豆腐を使う料理が増えている。"
+    cn: ""
+  - jp: "月に **代わって** おしおきよ！"
+    cn: ""
+  - jp: "##  **類似文型**"
+    cn: ""
+  - jp: "[![【JLPT"
+    cn: ""
+  - jp: "N3】文法・例文：〜かわりに（代理・代用）](data:image/gif;base64,R0lGODdhAQABAPAAAN3d3QAAACwAAAAAAQABAAACAkQBADs=)"
+    cn: ""
+  - jp: "【JLPT N3】文法・例文：〜かわりに（代理・代用）2018.4.24文型：〜かわりに Vしないで、他のことをする。"
+    cn: ""
+  - jp: "N（人や物）ではなく他の（人や物）が・・・。 Instead of V (Instead of V, do another thing / Instead"
+    cn: ""
+  - jp: "of N(person or thing), another(person or thing))...](https://nihongokyoshi-"
+    cn: ""
+  - jp: "net.com/2018/04/24/jlptn3-grammar-kawarini/)"
+    cn: ""

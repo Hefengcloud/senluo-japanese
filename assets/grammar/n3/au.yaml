@@ -1,0 +1,33 @@
+pattern: 〜合う
+level: N3
+meanings:
+  jp:
+    - "お互いに〜する"
+  cn:
+conjugations:
+  - "V（ます形） ~~ます~~ + 合う"
+examples:
+  - jp: "困った時は助け **合いましょう** 。"
+    cn: ""
+  - jp: "When in trouble, help each other."
+    cn: ""
+  - jp: "隣の人と相談し **合って** 答えを考えてください。"
+    cn: ""
+  - jp: "Consult with the person beside you and think about the answer."
+    cn: ""
+  - jp: "問題が起きたときは、どうすべきかみんなで話し **合いましょう** 。"
+    cn: ""
+  - jp: "When a problem arises, let's discuss what we should do together."
+    cn: ""
+  - jp: "僕たちは愛し **合っています** 。"
+    cn: ""
+  - jp: "We love each other."
+    cn: ""
+  - jp: "テストの結果が返ってきて、点数を見せ **合った** 。"
+    cn: ""
+  - jp: "When the results of the test came back, we showed each other our scores."
+    cn: ""
+  - jp: "二人はいつも競い **合っている** 。"
+    cn: ""
+  - jp: "They are always competing with each other."
+    cn: ""

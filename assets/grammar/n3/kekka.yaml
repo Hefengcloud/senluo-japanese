@@ -1,0 +1,38 @@
+pattern: 〜結果
+level: N3
+meanings:
+  jp:
+    - "〜によって（・・・になった / 〜がわかった）"
+    - "前件の事柄によって、どうなったのかを後件で言う。"
+  cn:
+conjugations:
+  - "V（た形） + 結果Nの + 結果"
+examples:
+  - jp: "毎日、１０分シャドーイングの練習を続けた **結果** 、発音がよくなった気がする。"
+    cn: ""
+  - jp: "As a result of shadowing for 10 minutes every day, I feel my pronunciation has"
+    cn: ""
+  - jp: "improved."
+    cn: ""
+  - jp: "毎日ご飯の量を減らした **結果** 、２ヶ月で５キロ体重が減った。"
+    cn: ""
+  - jp: "As a result of reducing the amount of rice I eat every day, I lost five"
+    cn: ""
+  - jp: "kilograms in two months."
+    cn: ""
+  - jp: "無理をした **結果** 、体を壊して入院することになった。"
+    cn: ""
+  - jp: "As a result of pushing myself too hard, I got sick and had to be hospitalized."
+    cn: ""
+  - jp: "いろいろ考えた **結果** 、学校を卒業後、国へ帰ることにしました。"
+    cn: ""
+  - jp: "After much thought, I decided to return to my country after graduating from"
+    cn: ""
+  - jp: "school."
+    cn: ""
+  - jp: "アンケートの **結果** 、フリーランスとして働きたいと考えている若者が増加傾向にあることがわかった。"
+    cn: ""
+  - jp: "As a result of the survey, it was found that the number of young people who"
+    cn: ""
+  - jp: "want to work as freelancers is on the rise."
+    cn: ""

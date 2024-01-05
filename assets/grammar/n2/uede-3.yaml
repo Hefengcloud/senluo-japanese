@@ -1,0 +1,14 @@
+pattern: 〜上で
+level: N2
+meanings:
+  jp:
+    - "まず〜してから。"
+    - "単に「前件が起こる→後件が起こる」ではなく、前件は後件が起こるための前提条件であることを表す。"
+  cn:
+conjugations:
+  - "V（タ形） + 上でN + の上で"
+explanations:
+  - "接続する動詞は意志動詞のみ"
+examples:
+  - jp: ""
+    cn: ""

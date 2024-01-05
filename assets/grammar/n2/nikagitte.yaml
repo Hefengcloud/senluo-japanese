@@ -1,0 +1,12 @@
+pattern: 〜に限って
+level: N2
+meanings:
+  jp:
+    - "①〜の場合だけ、絶対に〜ない。"
+    - "②〜の場合だけ、特にそうである / 運悪くそうなる。"
+  cn:
+conjugations:
+  - "N + に限って"
+examples:
+  - jp: ""
+    cn: ""

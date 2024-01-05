@@ -1,0 +1,28 @@
+pattern: 〜に限らず
+level: N2
+meanings:
+  jp:
+    - "～だけでなく、・・・"
+    - "「・・・」には「～」よりも広い意味の言葉が来る。"
+  cn:
+conjugations:
+  - "N + に限らず"
+examples:
+  - jp: "この映画は子供 **に限らず** 、大人も楽しめます。"
+    cn: ""
+  - jp: "This movie can be enjoyed not only by children but also by adults."
+    cn: ""
+  - jp: "トムさんは今日 **に限らず** 、いつも明るい。"
+    cn: ""
+  - jp: "Mr. Tom is always cheerful, not just today."
+    cn: ""
+  - jp: "最近は女性 **に限らず** 、男性も育児を積極的にするようになった。"
+    cn: ""
+  - jp: "Recently, not only women but also men have been taking an active role in"
+    cn: ""
+  - jp: "childcare."
+    cn: ""
+  - jp: "東京は休日 **に限らず** 、毎日観光客が多い。"
+    cn: ""
+  - jp: "There are many tourists in Tokyo every day, not just on holidays."
+    cn: ""

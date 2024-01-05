@@ -2845,12 +2845,13 @@
 - examples:
   - en: My side is prickly and painful.
     jp: 脇腹が **チクチク** と痛む。
-  - en: 'I have a prickling pain in my fingers because the thorns of the cactus spike
-
-      stuck in my finger.'
+    zh: 侧腹发出刺痛感。
+  - en: 'I have a prickling pain in my fingers because the thorns of the cactus spike stuck in my finger.'
     jp: サボテンのとげが刺さって、 **チクチク** します。
+    zh: 被仙人掌刺到了，刺痛不已。
   - en: My wife is sarcastic.
     jp: 妻は **チクチク** と嫌味を言ってくる。
+    zh: 妻子一直说刺耳的话。
   key: chikuchiku
   meanings:
     en:
@@ -2859,6 +2860,9 @@
     jp:
     - 先の尖った物で刺されるような痛みを感じる様子
     - 心に突き刺さるような嫌味や皮肉などを繰り返して言う様子
+    zh:
+    - 感到像被尖锐物体扎了一下的刺痛感
+    - 反复说出刺痛人心的挖苦或讽刺话语
   name: チクチク
 - examples:
   - en: I was beaten up by my opponent in a boxing match.

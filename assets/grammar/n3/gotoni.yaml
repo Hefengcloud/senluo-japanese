@@ -1,0 +1,37 @@
+pattern: 〜ごとに
+level: N3
+meanings:
+  jp:
+    - "〜たびに / 〜単位で / 〜周期で"
+  cn:
+conjugations:
+  - "V（辞書形）+ ごとにN + ごとに"
+explanations:
+  - "「〜ごとに」は漢字にすると「〜毎に」となる。"
+examples:
+  - jp: "私が働くコンビニでは１時間 **ごとに** おでんやフライドチキンなど、食べ物の品質をチェックしている。"
+    cn: ""
+  - jp: "At the convenience store where I work, we check the quality of food such as"
+    cn: ""
+  - jp: "oden and fried chicken every hour."
+    cn: ""
+  - jp: "私の会社では２年 **ごとに** パソコンを新しいものに交換する。"
+    cn: ""
+  - jp: "In my company, computers are replaced with new ones every two years."
+    cn: ""
+  - jp: "オリンピックは４年 **ごとに** 開催される。"
+    cn: ""
+  - jp: "The Olympic Games are held every four years."
+    cn: ""
+  - jp: "このシステムは半年 **ごとに** アップデートされる。"
+    cn: ""
+  - jp: "This system is updated every six months."
+    cn: ""
+  - jp: "人は失敗する **ごとに** 成長していくものだ。"
+    cn: ""
+  - jp: "People grow everytime they make mistakes."
+    cn: ""
+  - jp: "それでは今からグループ **ごとに** 発表してもらいます。"
+    cn: ""
+  - jp: "Now, I will ask each group to make a presentation."
+    cn: ""

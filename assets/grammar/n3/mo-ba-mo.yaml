@@ -1,0 +1,37 @@
+pattern: 〜も〜ば、〜も
+level: N3
+meanings:
+  jp:
+    - "〜も・・・し、それから〜も・・・。"
+  cn:
+conjugations:
+  - "Nも + V（バ形）/ イAければ / ナAなら / Nなら + Nも"
+examples:
+  - jp: "本を読むのが好きな人 **も** いれ **ば** 、嫌いな人 **も** います。"
+    cn: ""
+  - jp: "Some people like to read books, and some don't."
+    cn: ""
+  - jp: "どこかへ旅行に行きたいけど、時間 **も** なけれ **ば** 、お金 **も** ない。"
+    cn: ""
+  - jp: "I want to travel somewhere, but I don't have the time nor the money."
+    cn: ""
+  - jp: "人生は楽しいこと **も** あれ **ば** 、苦しいこと **も** ある。"
+    cn: ""
+  - jp: "Life can be fun and it can also be painful."
+    cn: ""
+  - jp: "マンゴーには甘いもの **も** あれ **ば** 、酸っぱいもの **も** ある。"
+    cn: ""
+  - jp: "Some mangoes are sweet, some are sour."
+    cn: ""
+  - jp: "ジェシカさんは性格 **も** よけれ **ば** 、頭 **も** いい。"
+    cn: ""
+  - jp: "Jessica has a good personality and is very smart."
+    cn: ""
+  - jp: "田中さんは英語 **も** できれ **ば** 、中国語 **も** できる。"
+    cn: ""
+  - jp: "Mr. Tanaka can speak English and Chinese."
+    cn: ""
+  - jp: "私はタバコ **も** 吸わなけれ **ば** 、お酒 **も** 飲まない。"
+    cn: ""
+  - jp: "I neither smoke nor drink alcohol."
+    cn: ""
