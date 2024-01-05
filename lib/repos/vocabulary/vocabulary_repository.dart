@@ -2,7 +2,6 @@ import 'package:flutter/services.dart';
 import 'package:path/path.dart' as Path;
 import 'package:senluo_japanese_cms/common/models/meaning.dart';
 import 'package:senluo_japanese_cms/helpers/text_helper.dart';
-import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/repos/vocabulary/models/vocabulary_menu.dart';
 import 'package:yaml/yaml.dart';
 
@@ -53,7 +52,7 @@ class VocabularyRepository {
         text: parsed.text,
         reading: parsed.reading,
         meaning: Meaning(ens: [e['en']], jps: [], zhs: []),
-        category: e['group'].toString(),
+        category: e['group']?.toString() ?? '',
       );
       return word;
     }).toList();

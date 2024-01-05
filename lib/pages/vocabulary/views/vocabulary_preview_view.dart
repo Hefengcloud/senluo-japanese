@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../common/models/word.dart';
+import '../../kanji/constants/styles.dart';
 import '../../onomatopoeia/constants/colors.dart';
 import '../bloc/preview_bloc.dart';
 
@@ -57,13 +58,14 @@ class VocabularyPreviewView extends StatelessWidget {
               ),
             ),
             const Gap(8),
-            Text(
+            AutoSizeText(
               state.currentGroupKey,
               style: GoogleFonts.getFont(
-                'ZCOOL KuaiLe',
+                kKanjiFontName,
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
               ),
+              maxLines: 1,
             ),
             const Gap(18),
             Expanded(

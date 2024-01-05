@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/vocabulary/models/vocabulary_menu.dart';
 
-class MenuListView extends StatefulWidget {
+class VocabularyMenuListView extends StatefulWidget {
   final List<VocabularyMenu> menus;
   final Function(VocabularyMenu menu, VocabularyMenu subMenu) onMenuClicked;
 
-  const MenuListView({
+  const VocabularyMenuListView({
     super.key,
     required this.menus,
     required this.onMenuClicked,
   });
 
   @override
-  State<MenuListView> createState() => _MenuListViewState();
+  State<VocabularyMenuListView> createState() => _VocabularyMenuListViewState();
 }
 
-class _MenuListViewState extends State<MenuListView> {
+class _VocabularyMenuListViewState extends State<VocabularyMenuListView> {
   VocabularyMenu? _currentMenu;
 
   @override

@@ -9,6 +9,7 @@ import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_preview_vi
 import '../../../common/models/word.dart';
 import '../../../constants/colors.dart';
 import '../../kanji/constants/styles.dart';
+import '../bloc/vocabulary_bloc.dart';
 
 class VocabularyGridView extends StatefulWidget {
   final List<Word> wordList;
@@ -35,6 +36,18 @@ class _VocabularyGridViewState extends State<VocabularyGridView> {
   Widget build(BuildContext context) {
     final groupKeys =
         groupBy(widget.wordList, (word) => word.category).keys.toList();
+    return BlocListener<VocabularyBloc, VocabularyState>(
+      listenWhen: (previous, current) => previous != current,
+      listener: (context, state) {
+        setState(() {
+          _selectedGroupKeys = [];
+        });
+      },
+      child: _buildBody(groupKeys),
+    );
+  }
+
+  Stack _buildBody(List<String> groupKeys) {
     return Stack(
       children: [
         Column(

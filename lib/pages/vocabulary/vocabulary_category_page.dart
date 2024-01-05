@@ -9,7 +9,7 @@ import '../../repos/vocabulary/models/vocabulary_menu.dart';
 import '../../repos/vocabulary/vocabulary_repository.dart';
 import '../kanji/constants/styles.dart';
 import 'bloc/vocabulary_bloc.dart';
-import 'views/menu_list_view.dart';
+import 'views/vocabulary_menu_list_view.dart';
 
 class VocabularyCategoryPage extends StatelessWidget {
   const VocabularyCategoryPage({super.key});
@@ -26,7 +26,7 @@ class VocabularyCategoryPage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: MenuListView(
+                child: VocabularyMenuListView(
                   menus: menus ?? [],
                   onMenuClicked: (menu, subMenu) =>
                       _onMenuClicked(context, menu, subMenu),
