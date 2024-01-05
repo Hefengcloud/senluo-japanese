@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/pages/vocabulary/bloc/preview_bloc.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_preview_view.dart';
 
 import '../../../common/models/word.dart';
@@ -144,8 +146,10 @@ class _VocabularyGridViewState extends State<VocabularyGridView> {
         content: SizedBox(
           width: 800,
           height: 640,
-          child: VocabularyPreviewView(
-            words: widget.wordList,
+          child: BlocProvider(
+            create: (context) =>
+                PreviewBloc()..add(PreviewStarted(words: widget.wordList)),
+            child: const VocabularyPreviewView(),
           ),
         ),
       ),
