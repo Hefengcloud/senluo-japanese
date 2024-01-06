@@ -34,7 +34,7 @@ class KanjiPreviewPage extends StatelessWidget {
           return Row(
             children: [
               Expanded(
-                flex: 1,
+                flex: 2,
                 child: RepaintBoundary(
                   key: globalKey,
                   child: _buildImagePanel(context, snapshot.data!),

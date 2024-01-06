@@ -3631,14 +3631,18 @@
 - examples:
   - en: I feel sick to my stomach because I ate too much.
     jp: 食べすぎて、胃が **ムカムカ** する。
+    zh: 吃得太多，胃有点恶心。 
   - en: I feel sick to my stomach due to seasickness.
     jp: 船酔いで胸が **ムカムカ** する。
+    zh: 因晕船而感到胸闷恶心。
   key: mukamuka
   meanings:
     en:
-    - The feeling of throwing up.
+      - The feeling of throwing up.
     jp:
-    - 吐き気がする様子。
+      - 吐き気がする様子。
+    zh:
+      - 恶心，要吐，作呕
   name: ムカムカ
 - examples:
   - en: 'She was invited to a movie by a guy she was interested in, so she went to

@@ -42,7 +42,7 @@ class KanjiGridView extends StatelessWidget {
           return AlertDialog(
             content: SizedBox(
               child: KanjiPreviewPage(kanji: kanji),
-              width: 900,
+              width: 675,
               height: 600,
             ),
           );

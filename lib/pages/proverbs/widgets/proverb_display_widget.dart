@@ -9,6 +9,7 @@ import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
 import '../../../constants/texts.dart';
 import '../../../helpers/image_helper.dart';
+import '../../onomatopoeia/constants/colors.dart';
 
 class ProverbDisplayWidget extends StatefulWidget {
   final ProverbItem item;

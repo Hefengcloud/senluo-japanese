@@ -68,7 +68,7 @@ class GrammarRepository {
     final filePath = Path.join(_kGrammarDir, entry.level, "${entry.key}.yaml");
     final yamlString = await rootBundle.loadString(filePath);
     final yaml = loadYaml(yamlString);
-    return GrammarItem.fromYaml(yaml);
+    return GrammarItem.fromYaml(entry.key, yaml);
   }
 
   Future<bool> delItem(int id) async {

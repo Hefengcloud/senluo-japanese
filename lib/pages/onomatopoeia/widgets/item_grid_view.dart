@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
 import '../onomatopoeia_display_page.dart';
@@ -12,41 +14,49 @@ class ItemGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 6,
-      children: items.map((e) => ItemCardView(item: e)).toList(),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GridView.count(
+        crossAxisCount: 2,
+        childAspectRatio: 6,
+        mainAxisSpacing: 8,
+        crossAxisSpacing: 8,
+        children: items
+            .mapIndexed((index, item) => ItemCardView(index: index, item: item))
+            .toList(),
+      ),
     );
   }
 }
 
 class ItemCardView extends StatelessWidget {
+  final int index;
   final Onomatopoeia item;
 
-  const ItemCardView({super.key, required this.item});
+  const ItemCardView({
+    super.key,
+    required this.index,
+    required this.item,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: InkWell(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AutoSizeText(
-                item.name.split("/").join('\n'),
-                style: const TextStyle(
-                  fontSize: 24.0,
-                  color: kBrandColor,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
-            ],
-          ),
-        ),
-        onTap: () => _showDisplayDialog(context, item),
+    return ListTile(
+      tileColor: kBgColor,
+      trailing: Text(
+        (index + 1).toString(),
+        style: const TextStyle(fontSize: 24, color: Colors.grey),
       ),
+      title: AutoSizeText(
+        item.name.split("/").join('\n'),
+        style: const TextStyle(
+          fontSize: 24.0,
+          color: kBrandColor,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      subtitle: Text(item.meanings['zh']?.join(' / ') ?? ''),
+      onTap: () => _showDisplayDialog(context, item),
     );
   }
 

@@ -17,16 +17,7 @@ class GrammarItemBloc extends Bloc<GrammarItemEvent, GrammarItemState> {
 
   _onStarted(GrammarItemStarted event, Emitter<GrammarItemState> emit) async {
     final item = await repo.loadItem(event.entry);
-    final displayedItem = GrammarItem(
-      name: item.name,
-      level: item.level,
-      meaning: Meaning(
-        jps: List.from(item.meaning.jps),
-        zhs: List.from(item.meaning.zhs),
-        ens: List.from(item.meaning.ens),
-      ),
-      conjugations: List.from(item.conjugations),
-      explanations: List.from(item.explanations),
+    final displayedItem = item.copyWith(
       examples: List.from(item.examples.take(2)),
     );
     emit(GrammarItemLoaded(

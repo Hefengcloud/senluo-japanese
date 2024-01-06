@@ -17,14 +17,9 @@ import '../../helpers/image_helper.dart';
 import 'bloc/grammar_item_bloc.dart';
 
 class GrammarPreviewPage extends StatelessWidget {
-  GrammarPreviewPage({super.key}) {}
-
   final GlobalKey globalKey = GlobalKey();
 
-  final _conjugationTextStyle = const TextStyle(
-    color: Colors.white,
-    fontSize: 20,
-  );
+  GrammarPreviewPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +122,7 @@ class GrammarPreviewPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         ElevatedButton.icon(
-          onPressed: () => _onSaveImage(),
+          onPressed: () => _onSaveImage(state.item.key),
           icon: const Icon(Icons.save),
           label: const Text('Save Image'),
         ),
@@ -210,9 +205,10 @@ class GrammarPreviewPage extends StatelessWidget {
       item.meaning.jps.join('；'),
       textAlign: TextAlign.center,
       style: const TextStyle(
-        fontSize: 24,
+        fontSize: 20,
         color: kBrandColor,
       ),
+      maxFontSize: 20,
       maxLines: 1,
     );
   }
@@ -306,8 +302,8 @@ class GrammarPreviewPage extends StatelessWidget {
         .toList();
   }
 
-  _onSaveImage() async {
+  _onSaveImage(String fileName) async {
     final bytes = await captureWidget(globalKey);
-    saveImageToFile(bytes!, 'grammar.jpg');
+    saveImageToFile(bytes!, '$fileName.jpg');
   }
 }

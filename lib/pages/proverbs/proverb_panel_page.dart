@@ -1,10 +1,10 @@
 import 'dart:io';
 
+import 'package:collection/collection.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/constants/kanas.dart';
-import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_card_widget.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_widget.dart';
 import 'package:yaml/yaml.dart';
 
@@ -156,18 +156,36 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
   }
 
   _buildProverbGrid(BuildContext context, ProverbLoaded state) {
-    return GridView.count(
-      crossAxisCount: 6,
-      children: state.items
-          .map<Widget>(
-            (item) => InkWell(
-              onTap: () => _showProverbCard(context, item),
-              child: ProverbCardWidget(
-                item: item,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GridView.count(
+        crossAxisCount: 3,
+        childAspectRatio: 4,
+        crossAxisSpacing: 8,
+        mainAxisSpacing: 8,
+        children: state.items
+            .mapIndexed<Widget>(
+              (index, item) => InkWell(
+                onTap: () => _showProverbCard(context, item),
+                child: ListTile(
+                  trailing: Text(
+                    (index + 1).toString(),
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  tileColor: Colors.purple[50],
+                  title: Text(
+                    item.name,
+                    style: const TextStyle(fontSize: 20),
+                  ),
+                  subtitle: Text(item.meanings.join(';')),
+                ),
               ),
-            ),
-          )
-          .toList(),
+            )
+            .toList(),
+      ),
     );
   }
 

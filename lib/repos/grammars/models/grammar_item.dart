@@ -7,6 +7,7 @@ import '../../../common/models/models.dart';
 import '../../../database/grammars/models/grammar_item_model.dart';
 
 class GrammarItem extends Equatable {
+  final String key;
   final String name;
   final String level;
   final Meaning meaning;
@@ -15,6 +16,7 @@ class GrammarItem extends Equatable {
   final List<Example> examples;
 
   const GrammarItem({
+    required this.key,
     required this.name,
     required this.level,
     required this.meaning,
@@ -25,6 +27,7 @@ class GrammarItem extends Equatable {
 
   @override
   List<Object?> get props => [
+        key,
         name,
         level,
         meaning,
@@ -34,6 +37,7 @@ class GrammarItem extends Equatable {
       ];
 
   GrammarItem copyWith({
+    String? key,
     String? name,
     String? level,
     Meaning? meaning,
@@ -42,6 +46,7 @@ class GrammarItem extends Equatable {
     List<Example>? examples,
   }) {
     return GrammarItem(
+      key: key ?? this.key,
       name: name ?? this.name,
       level: level ?? this.level,
       meaning: meaning ?? this.meaning,
@@ -53,6 +58,7 @@ class GrammarItem extends Equatable {
 
   const GrammarItem.simple(int id, String name, String level)
       : this(
+          key: '',
           name: name,
           level: level,
           meaning: const Meaning(jps: [], zhs: [], ens: []),
@@ -61,10 +67,11 @@ class GrammarItem extends Equatable {
           examples: const [],
         );
 
-  factory GrammarItem.fromYaml(YamlMap yaml) {
+  factory GrammarItem.fromYaml(String key, YamlMap yaml) {
     final meaning = yaml['meanings'];
 
     return GrammarItem(
+      key: key,
       name: yaml['pattern'],
       level: yaml['level'],
       meaning: Meaning(
@@ -97,6 +104,7 @@ class GrammarItem extends Equatable {
         .map<Example>((e) => Example(jp: e['jp'], zh: e['cn'], en: e['en']))
         .toList();
     return GrammarItem(
+      key: '',
       name: model.name,
       level: model.level,
       meaning: Meaning(jps: jpMeanings, zhs: cnMeanings, ens: []),
@@ -108,6 +116,7 @@ class GrammarItem extends Equatable {
   }
 
   static const empty = GrammarItem(
+    key: '',
     name: '',
     level: '',
     meaning: Meaning.empty,

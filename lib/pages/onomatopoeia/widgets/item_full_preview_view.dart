@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/contants.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
-
-import '../../../widgets/everjapan_logo.dart';
 
 class ItemFullPreviewView extends StatelessWidget {
   final double fontSizeScaleFactor;
@@ -56,7 +53,7 @@ class ItemFullPreviewView extends StatelessWidget {
       style: GoogleFonts.getFont(
         'Rampart One',
         fontSize: fontSize,
-        color: kItemMainColor,
+        color: kBrandColor,
       ),
       maxLines: 1,
     );
