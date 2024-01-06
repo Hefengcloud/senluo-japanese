@@ -1,74 +1,128 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/constants/texts.dart';
+import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/grammars/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
-import '../../../constants/colors.dart';
-import '../../../helpers/image_helper.dart';
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
+import '../../helpers/image_helper.dart';
+import 'bloc/grammar_item_bloc.dart';
 
-class GrammarDisplayView extends StatelessWidget {
-  GrammarDisplayView({
-    super.key,
-    required this.item,
-    this.examples = const [],
-  }) {
-    _mainColor = kLevel2color[item.level]!;
-  }
+class GrammarPreviewPage extends StatelessWidget {
+  GrammarPreviewPage({super.key}) {}
+
+  final GlobalKey globalKey = GlobalKey();
 
   final _conjugationTextStyle = const TextStyle(
     color: Colors.white,
     fontSize: 20,
   );
 
-  final GlobalKey globalKey = GlobalKey();
-
-  final GrammarItem item;
-  final List<GrammarExample> examples;
-  late final Color _mainColor;
-
   @override
   Widget build(BuildContext context) {
+    return BlocBuilder<GrammarItemBloc, GrammarItemState>(
+      builder: (context, state) {
+        if (state is GrammarItemLoaded) {
+          return _buildBody(context, state);
+        } else {
+          return const Center(child: CircularProgressIndicator());
+        }
+      },
+    );
+  }
+
+  Widget _buildBody(BuildContext context, GrammarItemLoaded state) {
     return Row(
       children: [
         Expanded(
           flex: 3,
-          child: _buildImage(),
+          child: _buildImage(state.displayedItem),
         ),
         const Gap(16),
         Expanded(
           flex: 2,
           child: Stack(
             children: [
-              SelectableText(item.text),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 32),
+                child: _buildRightPanel(context, state),
+              ),
               Positioned.fill(
                 child: Align(
                   alignment: Alignment.bottomCenter,
-                  child: _buildBottomButtons(context),
+                  child: _buildBottomButtons(context, state),
                 ),
               ),
             ],
           ),
-          // child: SingleChildScrollView(
-          //   child: Column(
-          //     mainAxisSize: MainAxisSize.min,
-          //     children: [
-
-          //
-          //     ],
-          //   ),
-          // ),
         ),
       ],
     );
   }
 
-  _buildBottomButtons(BuildContext context) {
+  _buildRightPanel(
+    BuildContext context,
+    GrammarItemLoaded state,
+  ) {
+    final item = state.item;
+    final displayedItem = state.displayedItem;
+
+    return ListView(
+      children: [
+        ExpansionTile(
+          title: const Text(kTitleJpMeaning),
+          children:
+              item.meaning.jps.map((e) => ListTile(title: Text(e))).toList(),
+        ),
+        ExpansionTile(
+          title: const Text(kTitleZhMeaning),
+          children:
+              item.meaning.zhs.map((e) => ListTile(title: Text(e))).toList(),
+        ),
+        ExpansionTile(
+          title: const Text(kTitleEnMeaning),
+          children:
+              item.meaning.ens.map((e) => ListTile(title: Text(e))).toList(),
+        ),
+        ExpansionTile(
+          title: const Text(kTitleConjugations),
+          children:
+              item.conjugations.map((e) => ListTile(title: Text(e))).toList(),
+        ),
+        ExpansionTile(
+          title: const Text(kTitleExplanation),
+          children:
+              item.explanations.map((e) => ListTile(title: Text(e))).toList(),
+        ),
+        ExpansionTile(
+          initiallyExpanded: true,
+          title: const Text(kTitleExample),
+          children: item.examples
+              .map<ListTile>((e) => ListTile(
+                    title: Text(e.jp),
+                    subtitle: Text(e.zh),
+                    leading: displayedItem.examples.contains(e)
+                        ? const Icon(Icons.check)
+                        : null,
+                    onTap: () => BlocProvider.of<GrammarItemBloc>(context).add(
+                      GrammarExampleSelected(example: e),
+                    ),
+                  ))
+              .toList(),
+        ),
+      ],
+    );
+  }
+
+  _buildBottomButtons(BuildContext context, GrammarItemLoaded state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -81,7 +135,7 @@ class GrammarDisplayView extends StatelessWidget {
           icon: const Icon(Icons.abc),
           label: const Text('Copy Text'),
           onPressed: () async {
-            await Clipboard.setData(ClipboardData(text: item.text));
+            await Clipboard.setData(ClipboardData(text: state.item.text));
             // ignore: use_build_context_synchronously
             ScaffoldMessenger.of(context)
                 .showSnackBar(const SnackBar(content: Text('Copied')));
@@ -91,8 +145,8 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  RepaintBoundary _buildImage() {
-    final itemNameParts = _parseItemName(item.name);
+  RepaintBoundary _buildImage(GrammarItem item) {
+    final itemNameParts = item.parseName();
     final itemName = itemNameParts[0];
     final itemReading = itemNameParts.length > 1 ? itemNameParts[1] : null;
 
@@ -115,23 +169,23 @@ class GrammarDisplayView extends StatelessWidget {
           child: Column(
             children: [
               const Gap(16),
-              _buildTopLogo(),
+              _buildTopLogo(item),
               const Gap(16),
-              _buildItemName(itemName),
+              _buildItemName(itemName, item.level),
               if (itemReading != null) _buildItemReading(itemReading),
               const Gap(8),
-              _buildJpMeaning(),
+              _buildJpMeaning(item),
               const Gap(32),
-              _buildZhMeaning(),
+              _buildZhMeaning(item),
               const Gap(32),
-              _buildConjugation(),
+              _buildConjugation(item),
               const Gap(32),
               const Divider(
                 height: 0.5,
                 color: Colors.black12,
               ),
               const Gap(32),
-              ..._buildExamples(),
+              ..._buildExamples(item),
             ],
           ),
         ),
@@ -139,11 +193,11 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  Text _buildZhMeaning() {
+  Widget _buildZhMeaning(GrammarItem item) {
     return Text(
-      item.meaning.cn.join('；'),
+      item.meaning.zhs.join('；'),
       style: TextStyle(
-        color: _mainColor,
+        color: kLevel2color[item.level],
         fontSize: 24.0,
       ),
       textAlign: TextAlign.center,
@@ -151,9 +205,9 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  AutoSizeText _buildJpMeaning() {
+  AutoSizeText _buildJpMeaning(GrammarItem item) {
     return AutoSizeText(
-      item.meaning.jp.join('；'),
+      item.meaning.jps.join('；'),
       textAlign: TextAlign.center,
       style: const TextStyle(
         fontSize: 24,
@@ -163,7 +217,7 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  AutoSizeText _buildItemName(String itemName) {
+  AutoSizeText _buildItemName(String itemName, String level) {
     return AutoSizeText(
       itemName,
       maxLines: 1,
@@ -171,14 +225,14 @@ class GrammarDisplayView extends StatelessWidget {
         'Rampart One',
         fontSize: 72,
         fontWeight: FontWeight.bold,
-        color: _mainColor,
+        color: kLevel2color[level],
       ),
     );
   }
 
   _buildItemReading(String itemReading) {
     return Text(
-      "$itemReading",
+      itemReading,
       style: const TextStyle(
         color: Colors.grey,
         fontSize: 20,
@@ -186,7 +240,7 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  Container _buildConjugation() {
+  Container _buildConjugation(GrammarItem item) {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 16.0,
@@ -194,7 +248,7 @@ class GrammarDisplayView extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: _mainColor.withOpacity(0.9),
+        color: kLevel2color[item.level]!.withOpacity(0.9),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -214,27 +268,28 @@ class GrammarDisplayView extends StatelessWidget {
     );
   }
 
-  _buildTopLogo() {
+  _buildTopLogo(GrammarItem item) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const EverJapanLogo(),
         Chip(
           shape: RoundedRectangleBorder(
-            side: BorderSide(color: _mainColor),
+            side: BorderSide(color: kLevel2color[item.level]!),
             borderRadius: const BorderRadius.all(Radius.circular(16)),
           ),
           label: Text(
             'JLPT ${item.level.toUpperCase()}',
-            style: TextStyle(color: _mainColor),
+            style: TextStyle(color: kLevel2color[item.level]),
           ),
         ),
       ],
     );
   }
 
-  _buildExamples() {
-    final theExamples = examples.isNotEmpty ? examples : item.examples.take(2);
+  _buildExamples(GrammarItem item) {
+    final theExamples =
+        item.examples.isNotEmpty ? item.examples : item.examples.take(2);
     return theExamples
         .map((e) => Padding(
               padding: const EdgeInsets.only(
@@ -242,8 +297,8 @@ class GrammarDisplayView extends StatelessWidget {
               ),
               child: SentenceText(
                 fontSize: 24.0,
-                lines: [e.jp, e.cn],
-                emphasizedColor: _mainColor,
+                lines: [e.jp, e.zh],
+                emphasizedColor: kLevel2color[item.level]!,
                 textAlign: TextAlign.left,
                 multipleLines: false,
               ),
@@ -254,16 +309,5 @@ class GrammarDisplayView extends StatelessWidget {
   _onSaveImage() async {
     final bytes = await captureWidget(globalKey);
     saveImageToFile(bytes!, 'grammar.jpg');
-  }
-
-  List<String> _parseItemName(String itemName) {
-    RegExp regex = RegExp(r'（([^（）]+)）');
-    Match? match = regex.firstMatch(item.name);
-    final String itemName = item.name.replaceAll(regex, '');
-    if (match != null) {
-      return [itemName, match.group(1)!];
-    } else {
-      return [itemName];
-    }
   }
 }

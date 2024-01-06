@@ -1,476 +1,940 @@
-- keys:
-  - atteno
-  - ikan
-  - ikannikakawarazu
-  - katagata
-  - katawara
-  - gateara
-  - katoomoikiya
-  - gahayaika
-  - karaaru-karasuru-karano
-  - kare-kare
-  - kitteno
-  - kiraigaaru
-  - kiwamaru
-  - gotoki
-  - kototote
-  - shimatsuda
-  - zukume
-  - zuniwaokanai
-  - zuniwasumanai
-  - subeganai
-  - sura
-  - sobakara
-  - tada-nomi
-  - tatameshiganai
-  - tatokorode
-  - dani
-  - dano
-  - tahazumini
-  - tabundake
-  - tamadeda
-  - tarasaigo
-  - tara-tade
-  - taritomo-nai
-  - tarumono
-  - tsukusu
-  - tsu-tsu
-  - deare-deare
-  - tekaratoiumono
-  - dewaarumaishi
-  - temae
-  - teyamanai
-  - amatte
-  - toareba
-  - toii-toii
-  - toiedomo
-  - toiumono
-  - tokitara
-  - tokoro
-  - towaie
-  - tomoarou
-  - tomonaku
-  - tomonaruto-tomonareba
-  - nagara
-  - nakushitewa
-  - nakumonai
-  - nashini
-  - naradewa
-  - naimademo
-  - nari
-  - naritomo
-  - nari-nari
-  - narini
-  - niatte
-  - niitaru
-  - niiwasereba
-  - nikakattewa
-  - nikakawaru
-  - nikagittakotodewanai
-  - nikakotsukete
-  - nikatakunai
-  - nikamakete
-  - nishite
-  - nishinobinai
-  - nisokushite
-  - taeru-taenai
-  - nitaru
-  - nitodomarazu
-  - ninottotte
-  - niwaataranai
-  - niwaoyobanai
-  - niwamurigaaru
-  - nihikikae
-  - nimohodogaaru
-  - nimomashite
-  - wokasanete
-  - nebanaranai
-  - itari
-  - nokiwami
-  - noyara
-  - waoroka
-  - basoremadeda
-  - biru
-  - bekarazu
-  - beku
-  - hodonokotodehanai
-  - majiki
-  - madeda
-  - mademonai
-  - mamire
-  - meku
-  - mosarukotonagara
-  - mosokosokoni
-  - modouzenda
-  - monowo
-  - yainaya
-  - yueni
-  - you
-  - youga
-  - younimo-nai
-  - yori
-  - wa-wade
-  - wooite
-  - wooshite-wooshikitte
-  - kaerimizu
-  - wokagirini
-  - wokanete
-  - wokawakirini
-  - wokinjienai
-  - sakaini
-  - womotte
-  - womonotomosezu
-  - wofumaete
-  - hete
-  - woyoginakusareru
-  - woyosoni
-  - ngatameni
-  - nbakarini
-  level: N1文法
-- keys:
-  - ageku
-  - amari
-  - amarino-ni
-  - ijoowa
-  - ippode
-  - irai
-  - uede-3
-  - uede-2
-  - uewa
-  - uru
-  - orini
-  - kaigaatte
-  - kagiri-2
-  - kagiri
-  - gatai
-  - katoomouto
-  - ka-naikanouchini
-  - kanenai
-  - kaneru
-  - kanoyouda
-  - karaiuto
-  - karashite
-  - karasuruto
-  - karatoitte
-  - gimi
-  - kiri
-  - kuseni
-  - kurainara
-  - ge
-  - kotoda
-  - kotodashi
-  - kotonaku
-  - kotodarou
-  - kotoninaruto
-  - kotoni
-  - zaruoenai
-  - shidai
-  - shidaida
-  - sueni
-  - zujimai
-  - zuniwa-irarenai
-  - nishitewa
-  - sooninai
-  - dakeatte
-  - dakeni
-  - dakemashi
-  - tate
-  - tamonodewanai
-  - kkonai
-  - tsutsu
-  - tsutsuaru
-  - ppoi
-  - tekonokata
-  - tedemo
-  - tenaranai
-  - tewairarenai
-  - tenaranai
-  - temade
-  - temiseru
-  - toiumonodewanai
-  - toitta
-  - toittara
-  - tokade
-  - dokoroka
-  - tokorodatta
-  - dokorojanai
-  - toshite-nai
-  - totomoni
-  - tonaruto
-  - towa
-  - nikoshitakotowanai
-  - nikotaete
-  - nisaishite
-  - nikagitte
-  - nisouinai
-  - nite
-  - nominarazu
-  - ppanashi
-  - buru
-  - ppoi
-  - naikotowa-nai
-  - naikotowanai
-  - naidesumu
-  - naidemonai
-  - naitomokagiranai
-  - nagara
-  - nante
-  - niatari
-  - oujite
-  - nikagirazu
-  - kagiri
-  - nikagiri
-  - nikuwaete
-  - sakidatte
-  - nishitara
-  - nishitewa
-  - nisuginai
-  - nisotte
-  - nitsuki
-  - tomonatte
-  - nitsuki
-  - nitsukete
-  - nisuginai
-  - tomonatte
-  - hokanaranai
-  - nimokakawarazu
-  - motoduite
-  - nu
-  - nukinishite
-  - nuku
-  - nokotodakara
-  - nokotodakara
-  - mada-teinai
-  - motode
-  - bakarika
-  - bakarika
-  - bakarida
-  - bakarida
-  - bakarini
-  - sateoki
-  - tomokakutoshite
-  - madashimo
-  - madashimo
-  - motoyori
-  - hanmen
-  - mai
-  - mamani
-  - mamani
-  - kamawazu
-  - kamawazu
-  - moshinai
-  - moshinai
-  - monoka
-  - monoka
-  - monogaaru
-  - monogaaru
-  - monoda-kangai
-  - monoda-kangai
-  - monoda
-  - monoda
-  - monodakara
-  - monodakara
-  - mononara
-  - mononara
-  - monono
-  - mon
-  - yara-yara
-  - yara-yara
-  - youtoshiteiru
-  - youmononara
-  - keiki
-  - tayorini
-  - towazu
-  - nozoite
-  - hajime
-  - megutte
-  - motonishite
-  - nodakara
-  level: N2文法
-- keys:
-  - au
-  - ikura-temo
-  - ippooda
-  - ueni
-  - uchini
-  - okagede
-  - okini
-  - osoregaaru
-  - o-da
-  - kikkake
-  - kake
-  - gachi
-  - kana
-  - kara-nikakete
-  - karaniwa
-  - kawarini
-  - kawarini
-  - kiru
-  - kurai
-  - kekka
-  - koso
-  - koto
-  - gotoni
-  - kotokara
-  - kotoninatteiru
-  - kotowanai
-  - komu
-  - saichuuni
-  - sai
-  - sae
-  - sae-ba
-  - shikanai-hokanai
-  - janai
-  - zuni
-  - seide
-  - tagaru
-  - dake
-  - dakedenaku
-  - tatoe-temo
-  - tatokoro-2
-  - tabini
-  - tameni
-  - monoda
-  - darake
-  - darou
-  - daroo
-  - tsui
-  - tsuideni
-  - kke
-  - tsumorida
-  - teiru
-  - teirubaaijanai
-  - karadenaito
-  - teshikataganai
-  - desumu
-  - tamaranai
-  - tehaikenaikara
-  - tehajimete
-  - temokamawanai
-  - temoshikataganai
-  level: N3文法
-- keys:
-  - aida
-  - aidani
-  - owaru
-  - ka
-  - gasuru
-  - kadouka
-  - kamoshirenai
-  - kotogaaru
-  - kotonisuru
-  - kotoninaru
-  - sasetekudasai
-  - shika
-  - shi-shi
-  - sugiru
-  - adjective-suru
-  - soudesu-3
-  - soudesu
-  - soudesu-2
-  - dasu
-  - tabakari
-  - tameni
-  - taraiidesuka
-  - taradoodesuka
-  - tsudukeru
-  - tte
-  - tsumorida
-  - de
-  - tearu
-  - teiru
-  - teiku
-  - teoku
-  - teitadakemasenka
-  - tekuru-change
-  - tekuru
-  - teshimau
-  - deshou
-  - temiru
-  - temo
-  - to
-  - tokoroda
-  - toiu
-  - nakanaka-nai
-  - nasai
-  - nara
-  - nikui
-  - nisuru
-  - node
-  - noni
-  - nowa-desu
-  - ba
-  - wa-ga-wa
-  - bakari
-  - hazuda
-  - hajimeru
-  - hitsuyougaaru
-  - hougaii
-  - hodo-nai
-  - madeni
-  - mama
-  - mitaida
-  - mitaina
-  - mo
-  - nowa-desu
-  - yasui
-  - youda
-  - youtoomou
-  - youtoomotteiru
-  - youna
-  - yooni
-  - -younishiteiru
-  - younisuru
-  - youninaru-nakunaru
-  - yoteida
-  - rashii2
-  - rashii
-  level: N4文法
-- keys:
-  - atode
-  - amari-nai
-  - gaichiban
-  - kata
-  - gahoshii
-  - kara
-  - zehi
-  - dake
-  - de
-  - tekara
-  - deshou
-  - tewaikemasen
-  - temoiidesuka
-  - douyatte
-  - toomou
-  - toteomo
-  - donna
-  - tai
-  - taritari
-  - toki
-  - naide
-  - naidekudasai
-  - nagara
-  - nakutemoii
-  - nakerebanaranai
-  - naru
-  - niikimasu
-  - wadoudesuka
-  - yori
-  - maeni
-  - masho
-  - mashouka
-  - masenka
-  - mou-mashita
-  - wokudasai
-  level: N5文法
-- keys:
-  - jouno
-  - sugidesu
-  - demo
-  - durai
-  - totemo-nai
-  - nami
-  - nikaketemo
-  - makuru
-  - yatsu
-  level: JLPTに出ない？文型
+- entries:
+  - key: atteno
+    name: 〜あっての
+  - key: ikan
+    name: 〜いかんだ / 〜いかんでは / 〜いかんによっては
+  - key: ikannikakawarazu
+    name: 〜いかんに関わらず / 〜いかんによらず / 〜いかんを問わず
+  - key: katagata
+    name: 〜かたがた
+  - key: katawara
+    name: 〜かたわら
+  - key: gateara
+    name: 〜がてら
+  - key: katoomoikiya
+    name: 〜かと思いきや
+  - key: gahayaika
+    name: 〜が早いか
+  - key: karaaru-karasuru-karano
+    name: 〜からある / 〜からする / 〜からの
+  - key: kare-kare
+    name: 〜かれ〜かれ
+  - key: kitteno
+    name: 〜きっての
+  - key: kiraigaaru
+    name: 〜きらいがある
+  - key: kiwamaru
+    name: 〜極まる / 〜極まりない
+  - key: gotoki
+    name: 〜ごとき / ごとく / ごとし
+  - key: kototote
+    name: 〜こととて
+  - key: shimatsuda
+    name: 〜始末だ
+  - key: zukume
+    name: 〜ずくめ
+  - key: zuniwaokanai
+    name: 〜ずにはおかない / 〜ないではおかない
+  - key: zuniwasumanai
+    name: 〜ずにはすまない / 〜ないではすまない
+  - key: subeganai
+    name: 〜術がない
+  - key: sura
+    name: 〜すら
+  - key: sobakara
+    name: 〜そばから
+  - key: tada-nomi
+    name: ただ〜のみ
+  - key: tatameshiganai
+    name: 〜たためしがない
+  - key: tatokorode
+    name: 〜たところで
+  - key: dani
+    name: 〜だに
+  - key: dano
+    name: 〜だの〜だの
+  - key: tahazumini
+    name: 〜た弾みに / 〜た拍子に
+  - key: tabundake
+    name: 〜た分だけ
+  - key: tamadeda
+    name: 〜たまでだ / 〜たまでのことだ
+  - key: tarasaigo
+    name: 〜たら最後 / 〜たが最後
+  - key: tara-tade
+    name: 〜たら〜たで
+  - key: taritomo-nai
+    name: 〜たりとも〜ない
+  - key: tarumono
+    name: 〜たるもの
+  - key: tsukusu
+    name: 〜尽くす
+  - key: tsu-tsu
+    name: 〜つ〜つ
+  - key: deare-deare
+    name: 〜であれ〜であれ
+  - key: tekaratoiumono
+    name: 〜てからというもの
+  - key: dewaarumaishi
+    name: 〜ではあるまいし / 〜でもあるまいし
+  - key: temae
+    name: 〜てまえ
+  - key: teyamanai
+    name: 〜てやまない
+  - key: amatte
+    name: 〜と相まって
+  - key: toareba
+    name: 〜とあれば
+  - key: toii-toii
+    name: 〜といい〜といい
+  - key: toiedomo
+    name: 〜といえども
+  - key: toiumono
+    name: 〜というもの
+  - key: tokitara
+    name: 〜ときたら
+  - key: tokoro
+    name: 〜ところを
+  - key: towaie
+    name: 〜とはいえ
+  - key: tomoarou
+    name: 〜ともあろう
+  - key: tomonaku
+    name: '〜ともなく/〜ともなしに '
+  - key: tomonaruto-tomonareba
+    name: 〜ともなると / 〜ともなれば
+  - key: nagara
+    name: 〜ながら
+  - key: nakushitewa
+    name: 〜なくしては
+  - key: nakumonai
+    name: 〜なくもない
+  - key: nashini
+    name: 〜なしに /  〜なしで
+  - key: naradewa
+    name: 〜ならでは
+  - key: naimademo
+    name: '〜ないまでも '
+  - key: nari
+    name: 〜なり
+  - key: naritomo
+    name: 〜なりとも
+  - key: nari-nari
+    name: 〜なり〜なり
+  - key: narini
+    name: 〜なりに
+  - key: niatte
+    name: 〜にあって
+  - key: niitaru
+    name: 〜に至る / 〜に至るまで
+  - key: niiwasereba
+    name: 〜に言わせれば
+  - key: nikakattewa
+    name: 〜にかかっては / 〜にかかったら / 〜にかかると / 〜にかかれば
+  - key: nikakawaru
+    name: 〜に関わる
+  - key: nikagittakotodewanai
+    name: 〜に限ったことではない
+  - key: nikakotsukete
+    name: 〜にかこつけて
+  - key: nikatakunai
+    name: 〜にかたくない
+  - key: nikamakete
+    name: 〜にかまけて
+  - key: nishite
+    name: 〜にして
+  - key: nishinobinai
+    name: 〜に忍びない
+  - key: nisokushite
+    name: 〜に即して / 〜に則して
+  - key: taeru-taenai
+    name: 〜に堪える / 〜に堪えない
+  - key: nitaru
+    name: 〜に足る
+  - key: nitodomarazu
+    name: 〜にとどまらず
+  - key: ninottotte
+    name: 〜に則って
+  - key: niwaataranai
+    name: 〜にはあたらない
+  - key: niwaoyobanai
+    name: 〜には及ばない
+  - key: niwamurigaaru
+    name: 〜には無理がある
+  - key: nihikikae
+    name: 〜にひきかえ
+  - key: nimohodogaaru
+    name: 〜にもほどがある
+  - key: nimomashite
+    name: 〜にもまして
+  - key: wokasanete
+    name: 〜に〜を重ねて
+  - key: nebanaranai
+    name: 〜ねばならない
+  - key: itari
+    name: 〜の至り
+  - key: nokiwami
+    name: 〜の極み
+  - key: noyara
+    name: 〜のやら
+  - key: waoroka
+    name: 〜はおろか
+  - key: basoremadeda
+    name: 〜ばそれまでだ / 〜たらそれまでだ
+  - key: biru
+    name: 〜びる
+  - key: bekarazu
+    name: 〜べからず
+  - key: beku
+    name: 〜べく
+  - key: hodonokotodehanai
+    name: 〜ほどのことではない
+  - key: majiki
+    name: 〜まじき
+  - key: madeda
+    name: 〜までだ / 〜までのことだ
+  - key: mademonai
+    name: 〜までもない / 〜までもなく
+  - key: mamire
+    name: 〜まみれ
+  - key: meku
+    name: 〜めく
+  - key: mosarukotonagara
+    name: 〜もさることながら
+  - key: mosokosokoni
+    name: 〜もそこそこに
+  - key: modouzenda
+    name: 〜も同然だ
+  - key: monowo
+    name: 〜ものを
+  - key: yainaya
+    name: 〜や否や
+  - key: yueni
+    name: 〜ゆえに
+  - key: you
+    name: 〜よう / 〜ようによっては
+  - key: youga
+    name: 〜ようが / 〜ようと
+  - key: younimo-nai
+    name: 〜ようにも〜ない
+  - key: yori
+    name: 〜より
+  - key: wa-wade
+    name: 〜わ〜わで
+  - key: wooite
+    name: 〜をおいて
+  - key: wooshite-wooshikitte
+    name: 〜を押して / 〜を押し切って
+  - key: kaerimizu
+    name: 〜を顧みず / 〜も顧みず
+  - key: wokagirini
+    name: 〜を限りに
+  - key: wokanete
+    name: 〜を兼ねて
+  - key: wokawakirini
+    name: 〜を皮切りに / 〜を皮切りとして
+  - key: wokinjienai
+    name: 〜を禁じ得ない
+  - key: sakaini
+    name: 〜を境に
+  - key: womotte
+    name: 〜をもって（期限・手段・基準）
+  - key: womonotomosezu
+    name: 〜をものともせず
+  - key: wofumaete
+    name: 〜を踏まえて
+  - key: hete
+    name: 〜を経て
+  - key: woyoginakusareru
+    name: 〜を余儀なくされる
+  - key: woyosoni
+    name: 〜をよそに
+  - key: ngatameni
+    name: 〜んがために
+  - key: nbakarini
+    name: 〜んばかりに
+  level: N1
+- entries:
+  - key: ageku
+    name: 〜あげく
+  - key: amari
+    name: 〜あまり
+  - key: amarino-ni
+    name: あまりの〜に
+  - key: ijoowa
+    name: 〜以上は
+  - key: ippode
+    name: 〜一方で
+  - key: irai
+    name: 〜以来
+  - key: uede-3
+    name: 〜上で（〜てから）
+  - key: uede-2
+    name: 〜上で（目的）
+  - key: uewa
+    name: 〜上は
+  - key: uru
+    name: 〜得る / 〜得ない
+  - key: orini
+    name: 〜折に
+  - key: kaigaatte
+    name: 〜かいがあって / 〜かいもなく
+  - key: kagiri-2
+    name: 〜限り（限界）
+  - key: kagiri
+    name: 〜限り（条件の範囲）
+  - key: gatai
+    name: 〜がたい
+  - key: katoomouto
+    name: 〜かと思うと / 〜かと思ったら
+  - key: ka-naikanouchini
+    name: 〜か〜ないかのうちに
+  - key: kanenai
+    name: 〜かねない
+  - key: kaneru
+    name: 〜かねる
+  - key: kanoyouda
+    name: '〜かのようだ / 〜かのように '
+  - key: karaiuto
+    name: 〜からいうと / 〜からいって / 〜からいえば
+  - key: karashite
+    name: 〜からして
+  - key: karasuruto
+    name: 〜からすると
+  - key: karatoitte
+    name: 〜からといって
+  - key: gimi
+    name: 〜気味
+  - key: kiri
+    name: 〜きり
+  - key: kuseni
+    name: 〜くせに / 〜くせして
+  - key: kurainara
+    name: 〜くらいなら
+  - key: ge
+    name: 〜げ
+  - key: kotoda
+    name: 〜ことだ（助言・忠告）
+  - key: kotodashi
+    name: 〜ことだし
+  - key: kotonaku
+    name: 〜ことなく
+  - key: kotodarou
+    name: 〜ことだろう / 〜ことか
+  - key: kotoninaruto
+    name: 〜ことになると / こととなると
+  - key: kotoni
+    name: 〜ことに（は）
+  - key: zaruoenai
+    name: 〜ざるを得ない
+  - key: shidai
+    name: 〜次第
+  - key: shidaida
+    name: 〜次第だ / 〜次第で
+  - key: sueni
+    name: 〜末に / 〜末の
+  - key: zujimai
+    name: 〜ずじまい
+  - key: zuniwa-irarenai
+    name: 〜ずにはいられない/〜ないではいられない
+  - key: nishitewa
+    name: ''
+  - key: sooninai
+    name: 〜そうにない
+  - key: dakeatte
+    name: 〜だけあって / 〜だけのことはあって
+  - key: dakeni
+    name: 〜だけに
+  - key: dakemashi
+    name: 〜だけまし
+  - key: tate
+    name: 〜たて
+  - key: tamonodewanai
+    name: 〜たものではない
+  - key: kkonai
+    name: 〜っこない
+  - key: tsutsu
+    name: 〜つつ
+  - key: tsutsuaru
+    name: 〜つつある
+  - key: ppoi
+    name: 〜っぽい
+  - key: tekonokata
+    name: 〜てこのかた
+  - key: tedemo
+    name: 〜てでも
+  - key: tenaranai
+    name: 〜てならない
+  - key: tewairarenai
+    name: 〜てはいられない
+  - key: tenaranai
+    name: 〜てはならない
+  - key: temade
+    name: 〜てまで / 〜までして
+  - key: temiseru
+    name: 〜てみせる
+  - key: toiumonodewanai
+    name: 〜というものではない
+  - key: toitta
+    name: 〜といった
+  - key: toittara
+    name: 〜といったら
+  - key: tokade
+    name: 〜とかで
+  - key: dokoroka
+    name: 〜どころか
+  - key: tokorodatta
+    name: 〜ところだった
+  - key: dokorojanai
+    name: 〜どころではない
+  - key: toshite-nai
+    name: 〜として〜ない
+  - key: totomoni
+    name: 〜とともに（相関関係）
+  - key: tonaruto
+    name: 〜となると / 〜となれば / 〜となったら
+  - key: towa
+    name: 〜とは（定義）
+  - key: nikoshitakotowanai
+    name: 〜に越したことはない
+  - key: nikotaete
+    name: 〜に応えて
+  - key: nisaishite
+    name: 〜に際して
+  - key: nikagitte
+    name: 〜に限って
+  - key: nisouinai
+    name: 〜に相違ない
+  - key: nite
+    name: 〜にて
+  - key: nominarazu
+    name: 〜のみならず
+  - key: ppanashi
+    name: 〜ぱなし
+  - key: buru
+    name: 〜ぶる
+  - key: ppoi
+    name: ''
+  - key: naikotowa-nai
+    name: 〜ないことには〜ない
+  - key: naikotowanai
+    name: 〜ないことはない / 〜ないこともない
+  - key: naidesumu
+    name: 〜ないで済む / 〜ずに済む
+  - key: naidemonai
+    name: 〜ないでもない / 〜ないものでもない
+  - key: naitomokagiranai
+    name: '〜ないとも限らない '
+  - key: nagara
+    name: 〜ながら（逆説）
+  - key: nante
+    name: 〜なんて
+  - key: niatari
+    name: 〜にあたり / 〜にあたって
+  - key: oujite
+    name: 〜に応じて
+  - key: nikagirazu
+    name: 〜に限らず
+  - key: kagiri
+    name: ''
+  - key: nikagiri
+    name: 〜に限り（限定）
+  - key: nikuwaete
+    name: 〜に加えて
+  - key: sakidatte
+    name: 〜に先立って / 〜に先立ち
+  - key: nishitara
+    name: 〜にしたら / 〜にすれば / 〜にしてみたら
+  - key: nishitewa
+    name: 〜にしては
+  - key: nisuginai
+    name: 〜にすぎない
+  - key: nisotte
+    name: 〜に沿って
+  - key: nitsuki
+    name: ''
+  - key: tomonatte
+    name: ''
+  - key: nitsuki
+    name: 〜につき
+  - key: nitsukete
+    name: 〜につけて
+  - key: nisuginai
+    name: 〜にすぎない
+  - key: tomonatte
+    name: 〜にともなって
+  - key: hokanaranai
+    name: 〜にほかならない
+  - key: nimokakawarazu
+    name: 〜にも関わらず
+  - key: motoduite
+    name: 〜に基づいて
+  - key: nu
+    name: '〜ぬ '
+  - key: nukinishite
+    name: 〜ぬきにして / 〜ぬきで
+  - key: nuku
+    name: 〜ぬく
+  - key: nokotodakara
+    name: ''
+  - key: nokotodakara
+    name: 〜のことだから
+  - key: motode
+    name: 〜のもとで
+  - key: bakarika
+    name: ''
+  - key: bakarika
+    name: 〜ばかりか
+  - key: bakarida
+    name: ''
+  - key: bakarida
+    name: 〜ばかりだ
+  - key: bakarini
+    name: 〜ばかりに
+  - key: sateoki
+    name: 〜はさておき
+  - key: tomokakutoshite
+    name: 〜はともかくとして
+  - key: madashimo
+    name: ''
+  - key: madashimo
+    name: 〜はまだしも / 〜ならまだしも
+  - key: motoyori
+    name: 〜はもとより
+  - key: hanmen
+    name: 〜反面
+  - key: mai
+    name: 〜まい
+  - key: mamani
+    name: ''
+  - key: mamani
+    name: 〜ままに
+  - key: mada-teinai
+    name: まだ〜ていない
+  - key: kamawazu
+    name: ''
+  - key: kamawazu
+    name: 〜もかまわず
+  - key: moshinai
+    name: ''
+  - key: moshinai
+    name: 〜もしない
+  - key: monoka
+    name: ''
+  - key: monoka
+    name: 〜ものか / 〜ものですか
+  - key: monogaaru
+    name: ''
+  - key: monogaaru
+    name: 〜ものがある
+  - key: monoda-kangai
+    name: ''
+  - key: monoda-kangai
+    name: 〜ものだ（感慨）
+  - key: monoda
+    name: ''
+  - key: monoda
+    name: 〜ものだ（当然 / 忠告・義務）
+  - key: monodakara
+    name: ''
+  - key: monodakara
+    name: 〜ものだから
+  - key: mononara
+    name: ''
+  - key: mononara
+    name: 〜ものなら
+  - key: monono
+    name: 〜ものの
+  - key: mon
+    name: 〜もん / 〜んだもん
+  - key: yara-yara
+    name: ''
+  - key: yara-yara
+    name: 〜やら〜やら
+  - key: youtoshiteiru
+    name: 〜ようとしている
+  - key: youmononara
+    name: 〜ようものなら
+  - key: keiki
+    name: 〜を契機に / 〜を契機として
+  - key: tayorini
+    name: 〜を頼りに / 〜を頼りとして
+  - key: towazu
+    name: 〜を問わず
+  - key: nozoite
+    name: 〜を除いて / 〜を除き / 〜を除けば
+  - key: hajime
+    name: 〜をはじめ
+  - key: megutte
+    name: 〜をめぐって
+  - key: motonishite
+    name: 〜をもとに
+  - key: nodakara
+    name: 〜んだから / 〜のだから
+  level: N2
+- entries:
+  - key: au
+    name: 〜合う
+  - key: ikura-temo
+    name: いくら〜ても  / どんなに〜ても
+  - key: ippooda
+    name: 〜一方だ
+  - key: ueni
+    name: 〜上に
+  - key: uchini
+    name: 〜うちに
+  - key: okagede
+    name: 〜おかげで
+  - key: okini
+    name: 〜おきに
+  - key: osoregaaru
+    name: 〜おそれがある
+  - key: o-da
+    name: お〜だ
+  - key: kikkake
+    name: 〜がきっかけで
+  - key: kake
+    name: 〜かける / 〜かけの
+  - key: gachi
+    name: 〜がち
+  - key: kana
+    name: 〜かな(あ)
+  - key: kara-nikakete
+    name: 〜から〜にかけて
+  - key: karaniwa
+    name: 〜からには
+  - key: kawarini
+    name: 〜かわりに（代償・交換条件）
+  - key: kawarini
+    name: 〜かわりに（代理・代用）
+  - key: kiru
+    name: '〜きる '
+  - key: kurai
+    name: 〜くらい（軽視）
+  - key: kekka
+    name: 〜結果
+  - key: koso
+    name: 〜こそ
+  - key: koto
+    name: 〜こと
+  - key: gotoni
+    name: 〜ごとに
+  - key: kotokara
+    name: 〜ことから
+  - key: kotoninatteiru
+    name: 〜ことになっている
+  - key: kotowanai
+    name: 〜ことはない
+  - key: komu
+    name: 〜込む
+  - key: saichuuni
+    name: 〜最中に
+  - key: sai
+    name: 〜際に / 〜際の
+  - key: sae
+    name: 〜さえ
+  - key: sae-ba
+    name: 〜さえ〜ば
+  - key: shikanai-hokanai
+    name: 〜しかない / 〜ほかない
+  - key: janai
+    name: 〜じゃない？
+  - key: zuni
+    name: 〜ずに
+  - key: seide
+    name: 〜せいで
+  - key: tagaru
+    name: 〜たがる
+  - key: dake
+    name: 〜だけ
+  - key: dakedenaku
+    name: 〜だけでなく・・・も
+  - key: tatoe-temo
+    name: たとえ〜ても
+  - key: tatokoro-2
+    name: 〜たところ
+  - key: tabini
+    name: 〜たびに
+  - key: tameni
+    name: 〜ために（原因）
+  - key: monoda
+    name: 〜たものだ
+  - key: darake
+    name: 〜だらけ
+  - key: darou
+    name: 〜だろう
+  - key: daroo
+    name: （なんて）〜だろう
+  - key: tsui
+    name: つい〜てしまう
+  - key: tsuideni
+    name: ついでに
+  - key: kke
+    name: 〜っけ
+  - key: tsumorida
+    name: 〜つもりだ（実際とは異なる
+  - key: teiru
+    name: （移動動詞）ている
+  - key: teirubaaijanai
+    name: 〜ている場合じゃない
+  - key: karadenaito
+    name: 〜てからでないと
+  - key: teshikataganai
+    name: 〜てしかたがない / 〜てしょうがない
+  - key: desumu
+    name: 〜て済む
+  - key: tamaranai
+    name: 〜てたまらない
+  - key: tehaikenaikara
+    name: 〜てはいけないから / 〜といけないから
+  - key: tehajimete
+    name: 〜てはじめて
+  - key: temokamawanai
+    name: 〜ても構わない
+  - key: temoshikataganai
+    name: 〜てもしかたがない / 〜てもしょうがない
+  level: N3
+- entries:
+  - key: aida
+    name: 〜間
+  - key: aidani
+    name: 〜間に
+  - key: owaru
+    name: 〜終わる
+  - key: ka
+    name: （疑問詞）〜か
+  - key: gasuru
+    name: 〜がする
+  - key: kadouka
+    name: 〜かどうか
+  - key: kamoshirenai
+    name: 〜かもしれない
+  - key: kotogaaru
+    name: 〜ことがある
+  - key: kotonisuru
+    name: 〜ことにする
+  - key: kotoninaru
+    name: 〜ことになる
+  - key: sasetekudasai
+    name: 〜させてください
+  - key: shika
+    name: 〜しか〜ない
+  - key: shi-shi
+    name: 〜し、〜し
+  - key: sugiru
+    name: 〜すぎる
+  - key: adjective-suru
+    name: （形容詞）する
+  - key: soudesu-3
+    name: 〜そうです（直前）
+  - key: soudesu
+    name: 〜そうです（伝聞
+  - key: soudesu-2
+    name: 〜そうです（様態）
+  - key: dasu
+    name: 〜出す
+  - key: tabakari
+    name: 〜たばかり
+  - key: tameni
+    name: 〜ために
+  - key: taraiidesuka
+    name: 〜たらいいですか
+  - key: taradoodesuka
+    name: 〜たらどうですか
+  - key: tsudukeru
+    name: 〜続ける
+  - key: tte
+    name: 〜って
+  - key: tsumorida
+    name: 〜つもりだ
+  - key: de
+    name: 〜て（理由・原因）
+  - key: tearu
+    name: 〜てある
+  - key: teiru
+    name: （自動詞）ている
+  - key: teiku
+    name: 〜ていく
+  - key: teoku
+    name: 〜ておく
+  - key: teitadakemasenka
+    name: 〜ていただけませんか
+  - key: tekuru-change
+    name: 〜てくる（変化・移動）
+  - key: tekuru
+    name: 〜てくる（行って戻る）
+  - key: teshimau
+    name: 〜てしまう
+  - key: deshou
+    name: 〜でしょう
+  - key: temiru
+    name: 〜てみる
+  - key: temo
+    name: 〜ても
+  - key: to
+    name: 〜と
+  - key: tokoroda
+    name: 〜ところだ
+  - key: toiu
+    name: 〜という
+  - key: nakanaka-nai
+    name: なかなか〜ない
+  - key: nasai
+    name: 〜なさい
+  - key: nara
+    name: 〜なら
+  - key: nikui
+    name: 〜にくい
+  - key: nisuru
+    name: 〜にする
+  - key: node
+    name: 〜ので
+  - key: noni
+    name: '〜のに '
+  - key: nowa-desu
+    name: 〜のは〜です
+  - key: ba
+    name: '〜ば '
+  - key: wa-ga-wa
+    name: 〜は〜が、〜は（対比）
+  - key: bakari
+    name: 〜ばかり
+  - key: hazuda
+    name: 〜はずだ
+  - key: hajimeru
+    name: 〜始める
+  - key: hitsuyougaaru
+    name: 〜必要がある
+  - key: hougaii
+    name: 〜ほうがいい
+  - key: hodo-nai
+    name: 〜ほど〜ない（比較）
+  - key: madeni
+    name: 〜までに
+  - key: mama
+    name: 〜まま
+  - key: mitaida
+    name: 〜みたいだ（推量）
+  - key: mitaina
+    name: 〜みたいな / 〜みたいに（例示）
+  - key: mo
+    name: ' 数量 + も'
+  - key: nowa-desu
+    name: ''
+  - key: yasui
+    name: 〜やすい
+  - key: youda
+    name: 〜ようだ（推量）
+  - key: youtoomou
+    name: 〜ようと思う
+  - key: youtoomotteiru
+    name: 〜ようと思っている
+  - key: youna
+    name: 〜ような / 〜ように （例示）
+  - key: yooni
+    name: 〜ように（目標・期待）
+  - key: -younishiteiru
+    name: 〜ようにしている
+  - key: younisuru
+    name: 〜ようにする
+  - key: youninaru-nakunaru
+    name: 〜ようになる
+  - key: yoteida
+    name: 〜予定だ
+  - key: rashii2
+    name: 〜らしい（推量）
+  - key: rashii
+    name: 〜らしい（典型）
+  level: N4
+- entries:
+  - key: atode
+    name: 〜あとで
+  - key: amari-nai
+    name: 'あまり〜ない '
+  - key: gaichiban
+    name: 〜がいちばん
+  - key: kata
+    name: 〜方
+  - key: gahoshii
+    name: 〜が欲しい
+  - key: kara
+    name: 〜から
+  - key: zehi
+    name: ぜひ
+  - key: dake
+    name: 〜だけ
+  - key: de
+    name: 〜で（手段・方法）
+  - key: tekara
+    name: 〜てから
+  - key: deshou
+    name: 〜でしょう（確認・同意
+  - key: tewaikemasen
+    name: 〜てはいけない
+  - key: temoiidesuka
+    name: 〜てもいいですか
+  - key: douyatte
+    name: 〜どうやって
+  - key: toomou
+    name: 〜と思う
+  - key: toteomo
+    name: とても
+  - key: donna
+    name: どんな
+  - key: tai
+    name: 〜たい
+  - key: taritari
+    name: 〜たり〜たり
+  - key: toki
+    name: 〜とき
+  - key: naide
+    name: 〜ないで
+  - key: naidekudasai
+    name: 〜ないでください
+  - key: nagara
+    name: 〜ながら
+  - key: nakutemoii
+    name: 〜なくてもいい
+  - key: nakerebanaranai
+    name: 〜なければならない
+  - key: naru
+    name: 〜なる
+  - key: niikimasu
+    name: （目的）に行く / 来る / 帰る
+  - key: wadoudesuka
+    name: 〜はどうですか
+  - key: yori
+    name: 〜は〜より
+  - key: maeni
+    name: 〜前に
+  - key: masho
+    name: 〜ましょう
+  - key: mashouka
+    name: 〜ましょうか
+  - key: masenka
+    name: 〜ませんか
+  - key: mou-mashita
+    name: もう〜した
+  - key: wokudasai
+    name: 〜をください
+  level: N5
+- entries:
+  - key: jouno
+    name: 〜の上では / 〜上（じょう）の
+  - key: sugidesu
+    name: 〜すぎです
+  - key: demo
+    name: 〜でも
+  - key: durai
+    name: 〜づらい
+  - key: totemo-nai
+    name: とても〜ない
+  - key: nami
+    name: 〜並み
+  - key: nikaketemo
+    name: 〜にかけても
+  - key: makuru
+    name: 〜まくる
+  - key: yatsu
+    name: 〜やつ
+  level: N0

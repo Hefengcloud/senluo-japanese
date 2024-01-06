@@ -11,28 +11,28 @@ final class GrammarLoading extends GrammarState {
 }
 
 final class GrammarLoaded extends GrammarState {
-  final List<GrammarItem> items;
-  final GrammarItem currentItem;
-  final String? level;
-  final String? keyword;
+  final Map<String, List<GrammarEntry>> entryMap;
+  final String currentLevel;
 
   const GrammarLoaded({
-    this.items = const [],
-    this.currentItem = GrammarItem.empty,
-    this.level,
-    this.keyword,
+    this.entryMap = const {},
+    this.currentLevel = '',
   });
 
+  List<String> get levels => entryMap.keys.toList();
+
+  List<GrammarEntry> get entries => entryMap[currentLevel] ?? [];
+
   @override
-  List<Object?> get props => [items, currentItem, level, keyword];
+  List<Object?> get props => [entryMap, currentLevel];
 
   GrammarLoaded copyWith({
-    GrammarItem? currentItem,
-    List<GrammarItem>? items,
+    Map<String, List<GrammarEntry>>? entryMap,
+    String? currentLevel,
   }) =>
       GrammarLoaded(
-        currentItem: currentItem ?? this.currentItem,
-        items: items ?? this.items,
+        entryMap: entryMap ?? this.entryMap,
+        currentLevel: currentLevel ?? this.currentLevel,
       );
 }
 

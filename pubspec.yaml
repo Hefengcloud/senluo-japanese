@@ -80,6 +80,13 @@ flutter:
     - assets/data/
     - assets/images/
     - assets/images/proverbs/
+    - assets/grammar/
+    - assets/grammar/n1/
+    - assets/grammar/n2/
+    - assets/grammar/n3/
+    - assets/grammar/n4/
+    - assets/grammar/n5/
+    - assets/grammar/n0/
     - assets/kanji/
     - assets/kanji/n1/
     - assets/kanji/n2/

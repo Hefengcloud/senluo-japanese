@@ -7,7 +7,7 @@ import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_page.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 
-import '../grammars/grammar_panel_page.dart';
+import '../grammars/grammar_home_page.dart';
 import '../kanji/kanji_home_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
 
   final _pages = [
     const GojuonPanelPage(),
-    const GrammarPanelPage(),
+    const GrammarHomePage(),
     const VocabularyHomePage(),
     const KanjiHomePage(),
     const ProverbPanelPage(),
