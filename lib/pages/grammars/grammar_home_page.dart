@@ -64,6 +64,10 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
                 onLevelSelected: (level) =>
                     BlocProvider.of<GrammarBloc>(context)
                         .add(GrammarLevelChanged(level: level)),
+                level2Count: {
+                  for (var entry in state.entryMap.entries)
+                    entry.key: entry.value.length
+                },
               ),
             ),
             Expanded(

@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 import 'package:senluo_japanese_cms/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/texts.dart';
@@ -45,7 +46,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     return Row(
       children: [
         Expanded(
-          flex: 5,
+          flex: 3,
           child: _buildImage(state.displayedItem),
         ),
         const Gap(16),
@@ -242,7 +243,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     );
   }
 
-  AutoSizeText _buildItemName(String itemName, String level) {
+  AutoSizeText _buildItemName(String itemName, JLPTLevel level) {
     return AutoSizeText(
       itemName,
       maxLines: 1,
@@ -304,7 +305,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
             borderRadius: const BorderRadius.all(Radius.circular(16)),
           ),
           label: Text(
-            'JLPT ${item.level.toUpperCase()}',
+            'JLPT ${item.level.name.toUpperCase()}',
             style: TextStyle(color: kLevel2color[item.level]),
           ),
         ),

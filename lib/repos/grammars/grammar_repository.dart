@@ -36,7 +36,7 @@ class GrammarRepository {
       GrammarItemModel(
         id: 0,
         name: item.name,
-        level: item.level,
+        level: item.level.name,
         meaning: jsonEncode(item.meaning),
         conjugation: item.conjugations.join('#'),
         explanation: item.explanations.join('#'),

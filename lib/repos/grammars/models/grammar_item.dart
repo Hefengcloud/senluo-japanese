@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
+import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 import 'package:yaml/yaml.dart';
 
 import '../../../common/models/models.dart';
@@ -9,7 +10,7 @@ import '../../../database/grammars/models/grammar_item_model.dart';
 class GrammarItem extends Equatable {
   final String key;
   final String name;
-  final String level;
+  final JLPTLevel level;
   final Meaning meaning;
   final List<String> conjugations;
   final List<String> explanations;
@@ -39,7 +40,7 @@ class GrammarItem extends Equatable {
   GrammarItem copyWith({
     String? key,
     String? name,
-    String? level,
+    JLPTLevel? level,
     Meaning? meaning,
     List<String>? conjugations,
     List<String>? explanations,
@@ -56,11 +57,11 @@ class GrammarItem extends Equatable {
     );
   }
 
-  const GrammarItem.simple(int id, String name, String level)
+  GrammarItem.simple(int id, String name, String level)
       : this(
           key: '',
           name: name,
-          level: level,
+          level: JLPTLevel.fromString(level),
           meaning: const Meaning(jps: [], zhs: [], ens: []),
           conjugations: const [],
           explanations: const [],
@@ -73,7 +74,7 @@ class GrammarItem extends Equatable {
     return GrammarItem(
       key: key,
       name: yaml['pattern'],
-      level: yaml['level'],
+      level: JLPTLevel.fromString(yaml['level']),
       meaning: Meaning(
         jps: meaning['jp']?.map<String>((e) => e.toString()).toList() ?? [],
         zhs: meaning['cn']?.map<String>((e) => e.toString()).toList() ?? [],
@@ -106,7 +107,7 @@ class GrammarItem extends Equatable {
     return GrammarItem(
       key: '',
       name: model.name,
-      level: model.level,
+      level: JLPTLevel.fromString(model.level),
       meaning: Meaning(jps: jpMeanings, zhs: cnMeanings, ens: []),
       conjugations: model.conjugation.split('#'),
       explanations:
@@ -118,7 +119,7 @@ class GrammarItem extends Equatable {
   static const empty = GrammarItem(
     key: '',
     name: '',
-    level: '',
+    level: JLPTLevel.none,
     meaning: Meaning.empty,
     conjugations: [],
     explanations: [],
