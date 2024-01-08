@@ -27,7 +27,7 @@ class GrammarEntryGridView extends StatelessWidget {
             (index + 1).toString(),
             style: const TextStyle(fontSize: 20),
           ),
-          tileColor: kLevel2color[entry.level.toUpperCase()]?.withAlpha(20),
+          tileColor: kLevel2color[entry.level]?.withAlpha(20),
           title: Text(
             entry.name,
             maxLines: 1,

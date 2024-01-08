@@ -1,9 +1,10 @@
 import 'package:equatable/equatable.dart';
+import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 
 class GrammarEntry extends Equatable {
   final String name;
   final String key;
-  final String level;
+  final JLPTLevel level;
 
   const GrammarEntry({
     required this.name,

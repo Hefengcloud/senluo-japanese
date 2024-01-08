@@ -228,10 +228,9 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
       child: Container(
         decoration: BoxDecoration(
           color: _showBorder == true ? kBrandColor : Colors.white,
-          borderRadius: BorderRadius.circular(8),
         ),
         child: Container(
-          margin: const EdgeInsets.all(8),
+          margin: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(8),

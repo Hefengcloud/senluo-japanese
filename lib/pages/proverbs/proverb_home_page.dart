@@ -4,6 +4,7 @@ import 'package:collection/collection.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/constants/kanas.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_widget.dart';
 import 'package:yaml/yaml.dart';
@@ -11,14 +12,14 @@ import 'package:yaml/yaml.dart';
 import '../../repos/proverbs/models/proverb_item.dart';
 import 'bloc/proverb_bloc.dart';
 
-class ProverbPanelPage extends StatefulWidget {
-  const ProverbPanelPage({super.key});
+class ProverbHomePage extends StatefulWidget {
+  const ProverbHomePage({super.key});
 
   @override
-  State<ProverbPanelPage> createState() => _ProverbPanelPageState();
+  State<ProverbHomePage> createState() => _ProverbHomePageState();
 }
 
-class _ProverbPanelPageState extends State<ProverbPanelPage> {
+class _ProverbHomePageState extends State<ProverbHomePage> {
   ProverbCategory? _category;
 
   final TextEditingController _searchController = TextEditingController();
@@ -48,9 +49,14 @@ class _ProverbPanelPageState extends State<ProverbPanelPage> {
           appBar: _buildAppBar(context),
           body: Row(
             children: [
-              Expanded(flex: 1, child: _buildLeftPanel(context, state)),
+              SizedBox(
+                width: kMenuPanelWidth,
+                child: _buildLeftPanel(context, state),
+              ),
               const VerticalDivider(width: 1),
-              Expanded(flex: 3, child: _buildRightPanel(context, state)),
+              Expanded(
+                child: _buildRightPanel(context, state),
+              ),
             ],
           ),
           endDrawer: _buildDrawer(context),

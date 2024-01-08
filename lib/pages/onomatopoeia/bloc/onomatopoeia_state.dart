@@ -12,12 +12,14 @@ final class OnomatopoeiaLoading extends OnomatopoeiaState {}
 final class OnomatopoeiaLoaded extends OnomatopoeiaState {
   final List<OnomatopoeiaCategory> categories;
   final List<Onomatopoeia> items;
+  final OnomatopoeiaCategory currentCategory;
 
   const OnomatopoeiaLoaded({
     required this.items,
     required this.categories,
+    required this.currentCategory,
   });
 
   @override
-  List<Object> get props => [items, categories];
+  List<Object> get props => [items, categories, currentCategory];
 }

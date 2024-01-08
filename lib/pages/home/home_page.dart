@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart';
-import 'package:senluo_japanese_cms/pages/gojuon/gojuon_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_page.dart';
-import 'package:senluo_japanese_cms/pages/proverbs/proverb_panel_page.dart';
+import 'package:senluo_japanese_cms/pages/proverbs/proverb_home_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 
 import '../grammars/grammar_home_page.dart';
+import '../kana/kana_home_page.dart';
 import '../kanji/kanji_home_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,11 +21,11 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   final _pages = [
-    const GojuonPanelPage(),
+    const KanaHomePage(),
     const GrammarHomePage(),
     const VocabularyHomePage(),
     const KanjiHomePage(),
-    const ProverbPanelPage(),
+    const ProverbHomePage(),
     const OnomatopoeiaPage(),
     const ExpressionPanelPage(),
     const KeigoHomePage(),

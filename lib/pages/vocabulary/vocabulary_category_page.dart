@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_grid_view.dart';
 
 import '../../common/models/word.dart';
@@ -24,8 +25,8 @@ class VocabularyCategoryPage extends StatelessWidget {
           final menus = state.type2Menus[VocabularyType.category];
           return Row(
             children: [
-              Expanded(
-                flex: 1,
+              SizedBox(
+                width: kMenuPanelWidth,
                 child: VocabularyMenuListView(
                   menus: menus ?? [],
                   onMenuClicked: (menu, subMenu) =>
@@ -33,7 +34,6 @@ class VocabularyCategoryPage extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 3,
                 child: _buildRightPanel(state.wordList),
               ),
             ],

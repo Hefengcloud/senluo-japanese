@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_item_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/views/grammar_menu_list_view.dart';
@@ -56,16 +57,16 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
       GrammarError() => const Text('Something went wrong!'),
       GrammarLoaded() => Row(
           children: [
-            Expanded(
-              flex: 1,
+            SizedBox(
+              width: kMenuPanelWidth,
               child: GrammarMenuListView(
+                selectedLevel: state.currentLevel,
                 onLevelSelected: (level) =>
                     BlocProvider.of<GrammarBloc>(context)
-                        .add(GrammarLevelChanged(level: level.name)),
+                        .add(GrammarLevelChanged(level: level)),
               ),
             ),
             Expanded(
-              flex: 3,
               child: GrammarEntryGridView(
                 entries: state.entries,
                 onItemClicked: (GrammarEntry entry) =>

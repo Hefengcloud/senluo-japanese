@@ -1,10 +1,16 @@
 import 'package:equatable/equatable.dart';
 
-enum KanaType {
+enum KanaCategory {
   seion,
   dakuon,
   handakuon,
   yoon,
+}
+
+enum KanaType {
+  hiragana,
+  katakata,
+  none,
 }
 
 class Kana extends Equatable {

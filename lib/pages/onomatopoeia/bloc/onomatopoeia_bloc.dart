@@ -22,7 +22,11 @@ class OnomatopoeiaBloc extends Bloc<OnomatopoeiaEvent, OnomatopoeiaState> {
     emit(OnomatopoeiaLoading());
     final categories = await repo.loadCategories();
     final items = await repo.loadItems();
-    emit(OnomatopoeiaLoaded(items: items, categories: categories));
+    emit(OnomatopoeiaLoaded(
+      items: items,
+      categories: categories,
+      currentCategory: OnomatopoeiaCategory.empty,
+    ));
   }
 
   _onFiltered(
@@ -38,6 +42,7 @@ class OnomatopoeiaBloc extends Bloc<OnomatopoeiaEvent, OnomatopoeiaState> {
     }
     emit(OnomatopoeiaLoaded(
       items: items,
+      currentCategory: event.category,
       categories: theState.categories,
     ));
   }

@@ -2,55 +2,45 @@ import 'package:flutter/material.dart';
 
 import '../../../repos/onomatopoeia/models/category_model.dart';
 
-class CategoryListView extends StatefulWidget {
+class CategoryListView extends StatelessWidget {
   final int total;
   final List<OnomatopoeiaCategory> categories;
   final Function(OnomatopoeiaCategory category) onCategoryClicked;
+  final OnomatopoeiaCategory selectedCategory;
 
   const CategoryListView({
     super.key,
     required this.categories,
     required this.total,
     required this.onCategoryClicked,
+    required this.selectedCategory,
   });
-
-  @override
-  State<CategoryListView> createState() => _CategoryListViewState();
-}
-
-class _CategoryListViewState extends State<CategoryListView> {
-  OnomatopoeiaCategory _category = OnomatopoeiaCategory.empty;
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
         ListTile(
-          title: Text('Total: ${widget.total}'),
+          title: Text('Total: $total'),
         ),
         const Divider(),
         ListTile(
           title: const Text('全部'),
           trailing: Icon(
-            _category == OnomatopoeiaCategory.empty ? Icons.check : null,
+            selectedCategory == OnomatopoeiaCategory.empty ? Icons.check : null,
           ),
           onTap: () {
-            setState(() {
-              _category = OnomatopoeiaCategory.empty;
-            });
-            widget.onCategoryClicked(OnomatopoeiaCategory.empty);
+            onCategoryClicked(OnomatopoeiaCategory.empty);
           },
         ),
-        ...widget.categories
+        ...categories
             .map(
               (category) => ListTile(
                 title: Text(category.name),
-                trailing: Icon(_category == category ? Icons.check : null),
+                trailing:
+                    Icon(selectedCategory == category ? Icons.check : null),
                 onTap: () {
-                  setState(() {
-                    _category = category;
-                  });
-                  widget.onCategoryClicked(category);
+                  onCategoryClicked(category);
                 },
               ),
             )

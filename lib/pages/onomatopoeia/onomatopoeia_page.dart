@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_grid_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
@@ -33,9 +34,14 @@ class _OnomatopoeiaPageState extends State<OnomatopoeiaPage> {
   _buildBody(BuildContext context, OnomatopoeiaState state) {
     return Row(
       children: [
-        Expanded(flex: 1, child: _buildLeftPanel(context, state)),
+        SizedBox(
+          width: 200,
+          child: _buildLeftPanel(context, state),
+        ),
         const VerticalDivider(width: 1.0),
-        Expanded(flex: 3, child: _buildRightPanel(context, state)),
+        Expanded(
+          child: _buildRightPanel(context, state),
+        ),
       ],
     );
   }
@@ -50,6 +56,7 @@ class _OnomatopoeiaPageState extends State<OnomatopoeiaPage> {
         total: state.items.length,
         onCategoryClicked: (category) =>
             bloc.add(OnomatopoeiaFiltered(category: category)),
+        selectedCategory: state.currentCategory,
       );
     }
   }

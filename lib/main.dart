@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/gojuon/bloc/gojuon_bloc.dart';
 import 'package:senluo_japanese_cms/pages/home/home_page.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/bloc/onomatopoeia_bloc.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/bloc/vocabulary_bloc.dart';
-import 'package:senluo_japanese_cms/repos/gojuon/gojuon_repository.dart';
+import 'package:senluo_japanese_cms/repos/gojuon/kana_repository.dart';
 import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
 import 'package:senluo_japanese_cms/repos/kanji/kanji_repository.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/onomatopoeia_repository.dart';
@@ -14,6 +13,7 @@ import 'package:senluo_japanese_cms/repos/proverbs/proverb_repository.dart';
 import 'package:senluo_japanese_cms/repos/vocabulary/vocabulary_repository.dart';
 
 import 'pages/grammars/bloc/grammar_bloc.dart';
+import 'pages/kana/bloc/kana_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 
   final grammarRepo = GrammarRepository();
   final proverbRepo = ProverbRepository();
-  final gojuonRepo = GojuonRepository();
+  final kanaRepo = KanaRepository();
   final onomatopoeiaRepo = OnomatopoeiaRepository();
   final kanjiRepo = KanjiRepository();
   final vocabularyRepo = VocabularyRepository();
@@ -43,8 +43,7 @@ class MyApp extends StatelessWidget {
             ..add(ProverbStarted()),
         ),
         BlocProvider(
-          create: (_) =>
-              GojuonBloc(gojuonRepository: gojuonRepo)..add(GojuonStarted()),
+          create: (_) => KanaBloc(kanaRepo: kanaRepo)..add(KanaStarted()),
         ),
         BlocProvider(
           create: (_) =>
@@ -54,8 +53,8 @@ class MyApp extends StatelessWidget {
           create: (_) => KanjiBloc(kanjiRepo)..add(KanjiStarted()),
         ),
         BlocProvider(
-          create: (_) => VocabularyBloc(vocabularyRepo)
-            ..add(VocabularyStarted()),
+          create: (_) =>
+              VocabularyBloc(vocabularyRepo)..add(VocabularyStarted()),
         ),
       ],
       child: MaterialApp(

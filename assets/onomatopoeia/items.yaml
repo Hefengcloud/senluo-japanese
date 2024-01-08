@@ -110,12 +110,16 @@
 - examples:
   - en: I clapped my hands.
     jp: 手を **パチパチ** と叩いた。
+    zh: 我拍了拍手。
   - en: After the movie preview, the audience applauded.
     jp: 試写会が終わった後、観客が **パチパチ** と拍手をした。
+    zh: 电影预告结束后，观众鼓起掌来。
   - en: He is blinking his eyes repeatedly.
     jp: 彼は目を **パチパチ** させている。
+    zh: 他一直眨眼睛。
   - en: I wonder if he didn't quite understand what I was saying, his eyes fluttered.
     jp: 彼は私の言ったことがよく分からなかったのか、目を **パチパチ** させた。
+    zh: 我在想他是不是没太理解我说的话，他的眼睛眨巴着。
   key: pachipachi
   meanings:
     en:
@@ -131,10 +135,13 @@
 - examples:
   - en: This bread is very fluffy and delicious.
     jp: この食パン、とても **ふっくら** してて美味しいよ。
+    zh: 这个面包非常松软可口。
   - en: Freshly cooked rice is fluffy and delicious.
     jp: 炊き立てのご飯は **ふっくら** してて美味しい。
+    zh: 刚煮好的米饭又软又好吃。
   - en: I prefer a slightly plump figure to a skinny one.
     jp: ガリガリの体型よりも、少し **ふっくら** した体型の方が好みです。
+    zh: 我更喜欢稍微丰满一点的身材，而不是很瘦的。
   key: fukkura
   meanings:
     en:
@@ -147,10 +154,13 @@
 - examples:
   - en: I can't wear this dress anymore, it's **too tight**.
     jp: もうこの服、 **キツキツ** で着れないわ。
+    zh: 我不能再穿这件衣服了，太紧了。
   - en: My shoes are **too tight** , I have to buy new ones.
     jp: この靴はもう **キツキツ** だから新しいの買わなきゃ。
+    zh: 我的鞋太紧了，我得买双新的。
   - en: My schedule is **so tight** every day that I have no time to rest.
     jp: 毎日スケジュールが **キツキツ** で、休む暇もない。
+    zh: 我的日程每天都太满了，没有时间休息。
   key: kitsukitsu
   meanings:
     en:
@@ -167,14 +177,18 @@
 - examples:
   - en: The **spikes** of the rose stung my hand and hurt.
     jp: 薔薇の **トゲトゲ** が手に刺さって痛い。
+    zh: 玫瑰的刺刺进了我的手，很疼。
   - en: The **spiky** iron wires are called barbed wire.
     jp: '**トゲトゲ** の鉄の線を有刺鉄線と言います。'
+    zh: 多刺的铁丝被称为铁丝网。
   key: togetoge
   meanings:
     en:
-    - Indicates pointed objects that are lined up.
+      - Indicates pointed objects that are lined up.
     jp:
-    - 尖ったものが並んでいる様子。
+      - 尖ったものが並んでいる様子。
+    zh: 
+      - 排列着尖锐物体的样子
   name: とげとげ
 - examples:
   - en: When I opened the lid of the can, I heard a sound like "psst".
@@ -3678,17 +3692,21 @@
 - examples:
   - en: I'm not feeling well today, and my head is aching.
     jp: 今日は体調が悪く、頭も **ガンガン** する。
+    zh: 今天身体状况不好，头也疼得厉害。
   - en: My head is aching from lack of sleep.
     jp: 寝不足のせいか、頭が **ガンガン** する。
+    zh: 可能是睡眠不足的缘故，头痛得厉害。
   - en: I have a headache because I drank too much yesterday.
     jp: 昨日飲み過ぎたせいか、頭が **ガンガン** と痛む。
+    zh: 昨天喝得太多了，头痛得厉害。
   key: gangan
   meanings:
     en:
-    - A terrible pain in the head, as if a loud noise is being made or the feeling
-      of being hit in the head with something.
+      - A terrible pain in the head, as if a loud noise is being made or the feeling of being hit in the head with something.
     jp:
-    - 頭の中で大きな音が響くように、ひどく痛む様子。何かで頭を叩かれているようなひどい頭痛。
+      - 頭の中で大きな音が響くように、ひどく痛む様子。何かで頭を叩かれているようなひどい頭痛。
+    zh:
+      - 强烈的头痛（耳鸣声）
   name: ガンガン
 - examples:
   - en: Water is dripping from the faucet.

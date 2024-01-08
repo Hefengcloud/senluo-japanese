@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_entry.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';

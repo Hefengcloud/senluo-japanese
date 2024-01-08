@@ -16,10 +16,17 @@ import '../../constants/colors.dart';
 import '../../helpers/image_helper.dart';
 import 'bloc/grammar_item_bloc.dart';
 
-class GrammarPreviewPage extends StatelessWidget {
+class GrammarPreviewPage extends StatefulWidget {
+  const GrammarPreviewPage({super.key});
+
+  @override
+  State<GrammarPreviewPage> createState() => _GrammarPreviewPageState();
+}
+
+class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
   final GlobalKey globalKey = GlobalKey();
 
-  GrammarPreviewPage({super.key});
+  double _fontSizeScaleFactor = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +45,7 @@ class GrammarPreviewPage extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          flex: 3,
+          flex: 5,
           child: _buildImage(state.displayedItem),
         ),
         const Gap(16),
@@ -46,10 +53,7 @@ class GrammarPreviewPage extends StatelessWidget {
           flex: 2,
           child: Stack(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 32),
-                child: _buildRightPanel(context, state),
-              ),
+              _buildRightPanel(context, state),
               Positioned.fill(
                 child: Align(
                   alignment: Alignment.bottomCenter,
@@ -113,29 +117,54 @@ class GrammarPreviewPage extends StatelessWidget {
                   ))
               .toList(),
         ),
+        const Gap(32),
       ],
     );
   }
 
   _buildBottomButtons(BuildContext context, GrammarItemLoaded state) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        ElevatedButton.icon(
-          onPressed: () => _onSaveImage(state.item.key),
-          icon: const Icon(Icons.save),
-          label: const Text('Save Image'),
+        Row(
+          children: [
+            const Text('Font Size'),
+            Expanded(
+              child: Slider(
+                label: _fontSizeScaleFactor.toStringAsFixed(1),
+                value: _fontSizeScaleFactor,
+                max: 2,
+                min: 0.5,
+                divisions: 15,
+                onChanged: (value) {
+                  setState(() {
+                    _fontSizeScaleFactor = value;
+                  });
+                },
+              ),
+            ),
+          ],
         ),
-        ElevatedButton.icon(
-          icon: const Icon(Icons.abc),
-          label: const Text('Copy Text'),
-          onPressed: () async {
-            await Clipboard.setData(ClipboardData(text: state.item.text));
-            // ignore: use_build_context_synchronously
-            ScaffoldMessenger.of(context)
-                .showSnackBar(const SnackBar(content: Text('Copied')));
-          },
-        )
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ElevatedButton.icon(
+              onPressed: () => _onSaveImage(state.item.key),
+              icon: const Icon(Icons.save),
+              label: const Text('Save Image'),
+            ),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.abc),
+              label: const Text('Copy Text'),
+              onPressed: () async {
+                await Clipboard.setData(ClipboardData(text: state.item.text));
+                // ignore: use_build_context_synchronously
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(const SnackBar(content: Text('Copied')));
+              },
+            )
+          ],
+        ),
       ],
     );
   }
@@ -189,7 +218,7 @@ class GrammarPreviewPage extends StatelessWidget {
   }
 
   Widget _buildZhMeaning(GrammarItem item) {
-    return Text(
+    return AutoSizeText(
       item.meaning.zhs.join('；'),
       style: TextStyle(
         color: kLevel2color[item.level],
@@ -292,7 +321,7 @@ class GrammarPreviewPage extends StatelessWidget {
                 bottom: 0.0,
               ),
               child: SentenceText(
-                fontSize: 24.0,
+                fontSize: 24.0 * _fontSizeScaleFactor,
                 lines: [e.jp, e.zh],
                 emphasizedColor: kLevel2color[item.level]!,
                 textAlign: TextAlign.left,

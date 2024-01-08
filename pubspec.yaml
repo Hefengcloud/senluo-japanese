@@ -50,6 +50,7 @@ dependencies:
   google_fonts: ^6.1.0
   ruby_text: ^3.0.3
   collection: ^1.18.0
+  tuple: ^2.0.2
 
 dev_dependencies:
   flutter_test:

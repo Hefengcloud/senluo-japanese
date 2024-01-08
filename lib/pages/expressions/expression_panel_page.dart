@@ -16,7 +16,7 @@ class ExpressionPanelPage extends StatelessWidget {
             child: ExpressionCategoryListView(),
           ),
           Expanded(
-            flex: 3,
+            flex: 5,
             child: ExpressionItemGridView(),
           ),
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 import 'package:senluo_japanese_cms/pages/kanji/views/kanji_grid_view.dart';
 import 'package:senluo_japanese_cms/pages/kanji/views/kanji_navigation_view.dart';
@@ -25,12 +26,16 @@ class KanjiHomePage extends StatelessWidget {
   _buildBody(BuildContext context, KanjiState state) {
     return Row(
       children: [
-        Expanded(child: _buildLeftNavigation(context, state), flex: 1),
+        SizedBox(
+          width: kMenuPanelWidth,
+          child: _buildLeftNavigation(context, state),
+        ),
         if (state is KanjiLoaded)
-          Expanded(child: _buildRightPanel(context, state.kanjis), flex: 3),
+          Expanded(
+            child: _buildRightPanel(context, state.kanjis),
+          ),
         if (state is KanjiLoading)
           const Expanded(
-            flex: 3,
             child: Center(child: CircularProgressIndicator()),
           ),
       ],
