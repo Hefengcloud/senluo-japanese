@@ -5,7 +5,6 @@ import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_item_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/views/grammar_menu_list_view.dart';
 import 'package:senluo_japanese_cms/pages/grammars/views/grammar_entry_grid_view.dart';
-import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
 
 import '../../repos/grammars/models/grammar_entry.dart';
 import 'bloc/grammar_bloc.dart';

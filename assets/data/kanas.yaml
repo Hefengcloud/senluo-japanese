@@ -224,6 +224,15 @@ yoon:
   - h: きょ
     k: キョ
     r: kyo
+- - h: しゃ
+    k: シャ
+    r: sha
+  - h: しゅ
+    k: シュ
+    r: shu
+  - h: しょ
+    k: ショ
+    r: sho
 - - h: ちゃ
     k: チャ
     r: cha

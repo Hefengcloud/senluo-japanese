@@ -8,20 +8,31 @@ import '../../../repos/gojuon/models/models.dart';
 typedef KanaTapCallback = void Function(Kana kana);
 
 class KanaTableView extends StatelessWidget {
-  static const kRowLabels = [
-    '',
-    'k~',
-    's~',
-    't~',
-    'n~',
-    'h~',
-    'm~',
-    'y~',
-    'r~',
-    'r~',
-    'w~'
-  ];
-  static const kColumnLabels = ['', '~a', '~i', '~u', '~e', '~o'];
+  static const kColumnLabels = ['', 'a', 'i', 'u', 'e', 'o'];
+
+  static const kCategory2RowLabels = {
+    KanaCategory.seion: ['-', 'k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w', 'N'],
+    KanaCategory.dakuon: [
+      'g',
+      'z',
+      'd',
+      'b',
+      'p',
+    ],
+    KanaCategory.yoon: [
+      'ky',
+      'sh',
+      'ch',
+      'ny',
+      'hy',
+      'my',
+      'ry',
+      'gy',
+      'j',
+      'by',
+      'py',
+    ],
+  };
 
   static const _labelStyle = TextStyle(
     fontSize: 24,
@@ -29,44 +40,41 @@ class KanaTableView extends StatelessWidget {
     color: Colors.green,
   );
 
-  final KanaCategory kanaType;
+  final KanaCategory kanaCategory;
   final List<KanaRow> kanaRows;
   final KanaTapCallback onKanaTap;
 
   const KanaTableView({
     super.key,
-    required this.kanaType,
+    required this.kanaCategory,
     required this.kanaRows,
     required this.onKanaTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    final rows = kanaType == KanaCategory.seion ? _formateRows() : kanaRows;
+    final rows = _formateRows();
     return SingleChildScrollView(
       child: Table(
-        columnWidths: kanaType == KanaCategory.seion
-            ? {
-                0: FlexColumnWidth(1),
-                1: FlexColumnWidth(2),
-                2: FlexColumnWidth(2),
-                3: FlexColumnWidth(2),
-                4: FlexColumnWidth(2),
-                5: FlexColumnWidth(2),
-              }
-            : null,
+        columnWidths: const {
+          0: FlexColumnWidth(1),
+          1: FlexColumnWidth(2),
+          2: FlexColumnWidth(2),
+          3: FlexColumnWidth(2),
+          4: FlexColumnWidth(2),
+          5: FlexColumnWidth(2),
+        },
         children: [
-          if (kanaType == KanaCategory.seion)
-            TableRow(
-              children: kColumnLabels
-                  .map((e) => TableCell(
-                        child: Align(
-                          alignment: Alignment.center,
-                          child: Text(e, style: _labelStyle),
-                        ),
-                      ))
-                  .toList(),
-            ),
+          TableRow(
+            children: kColumnLabels
+                .map((e) => TableCell(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(e, style: _labelStyle),
+                      ),
+                    ))
+                .toList(),
+          ),
           ...rows
               .mapIndexed((index, kanas) => TableRow(
                     children: _buildTableRow(index, kanas),
@@ -81,21 +89,19 @@ class KanaTableView extends StatelessWidget {
     final cells = kanas
         .map<TableCell>((e) => TableCell(child: KanaPieceView(kana: e)))
         .toList();
-    if (kanaType == KanaCategory.seion) {
-      cells.insert(
-        0,
-        TableCell(
-          verticalAlignment: TableCellVerticalAlignment.middle,
-          child: Align(
-            alignment: Alignment.center,
-            child: Text(
-              kRowLabels[index],
-              style: _labelStyle,
-            ),
+    cells.insert(
+      0,
+      TableCell(
+        verticalAlignment: TableCellVerticalAlignment.middle,
+        child: Align(
+          alignment: Alignment.center,
+          child: Text(
+            kCategory2RowLabels[kanaCategory]![index],
+            style: _labelStyle,
           ),
         ),
-      );
-    }
+      ),
+    );
     return cells;
   }
 

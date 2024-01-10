@@ -1,7 +1,9 @@
 import 'dart:math' as math;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
+import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/helpers/image_helper.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/contants.dart';
@@ -49,7 +51,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   List<Example> _examples = [];
 
   double _fontSizeScaleFactor = 1;
-  bool? _showBorder = false;
+  DistributionChannel? _channel = DistributionChannel.none;
 
   @override
   Widget build(BuildContext context) {
@@ -159,15 +161,12 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
           ),
           Row(
             children: [
-              const Text('Show Border'),
-              Checkbox(
-                value: _showBorder,
-                onChanged: (value) => setState(() {
-                  _showBorder = value;
-                }),
-              ),
+              const Text('Channel'),
+              const Gap(16),
+              _buildDistributionChannelOptions(context),
             ],
           ),
+          const Gap(16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -227,7 +226,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
       aspectRatio: 3 / 4,
       child: Container(
         decoration: BoxDecoration(
-          color: _showBorder == true ? kBrandColor : Colors.white,
+          color: kChannel2Color[_channel],
         ),
         child: Container(
           margin: const EdgeInsets.all(16),
@@ -264,4 +263,23 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
       ),
     );
   }
+
+  _buildDistributionChannelOptions(BuildContext context) =>
+      DropdownButton<DistributionChannel>(
+        value: _channel,
+        onChanged: (DistributionChannel? value) {
+          // This is called when the user selects an item.
+          setState(() {
+            _channel = value!;
+          });
+        },
+        items: DistributionChannel.values
+            .map<DropdownMenuItem<DistributionChannel>>(
+                (DistributionChannel value) {
+          return DropdownMenuItem<DistributionChannel>(
+            value: value,
+            child: Text(value.text),
+          );
+        }).toList(),
+      );
 }

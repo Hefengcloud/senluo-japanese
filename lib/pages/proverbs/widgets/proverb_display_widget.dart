@@ -11,6 +11,9 @@ import '../../../constants/texts.dart';
 import '../../../helpers/image_helper.dart';
 import '../../onomatopoeia/constants/colors.dart';
 
+const _kBgColor = Color(0xFFEFE8D6);
+const _kMainColor = Color(0xFFBD1723);
+
 class ProverbDisplayWidget extends StatefulWidget {
   final ProverbItem item;
 
@@ -37,7 +40,7 @@ class _ProverbDisplayWidgetState extends State<ProverbDisplayWidget> {
             child: AspectRatio(
               aspectRatio: 3 / 4,
               child: Card(
-                color: kBgColor,
+                color: _kBgColor,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: _buildContent(context),
@@ -140,10 +143,10 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
           widget.item.name,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
-            'Yusei Magic',
+            'Shippori Mincho B1',
             textStyle: const TextStyle(
               fontSize: 48,
-              color: kBrandColor,
+              color: _kMainColor,
             ),
           ),
           maxLines: 1,
@@ -152,11 +155,8 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
           widget.item.reading,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
-            'Yusei Magic',
-            textStyle: const TextStyle(
-              fontSize: 32,
-              color: Colors.black54,
-            ),
+            'Shippori Mincho B1',
+            textStyle: const TextStyle(fontSize: 32),
           ),
           maxLines: 1,
         ),
@@ -173,7 +173,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
                 e,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
-                  'ZCOOL KuaiLe',
+                  'Ma Shan Zheng',
                   textStyle: const TextStyle(fontSize: 32.0),
                 ),
               ),
@@ -199,7 +199,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
       style: GoogleFonts.getFont(
         'Rampart One',
         fontSize: _currentSliderValue,
-        color: kBrandColor,
+        color: _kMainColor,
       ),
     );
   }

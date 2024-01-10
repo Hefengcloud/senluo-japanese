@@ -41,7 +41,7 @@ class KanaHomePage extends StatelessWidget {
               Expanded(
                 child: KanaTableView(
                   kanaRows: state.currentKanaRows(),
-                  kanaType: state.currentKanaType,
+                  kanaCategory: state.currentKanaType,
                   onKanaTap: (kana) {},
                 ),
               ),

@@ -29,6 +29,7 @@ class _VocabularyGridViewState extends State<VocabularyGridView> {
     Colors.cyan[50],
     Colors.blue[50],
     Colors.purple[50],
+    Colors.brown[50],
   ];
   List<String> _selectedGroupKeys = [];
 
