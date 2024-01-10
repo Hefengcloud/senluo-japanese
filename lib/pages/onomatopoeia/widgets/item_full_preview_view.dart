@@ -35,12 +35,15 @@ class ItemFullPreviewView extends StatelessWidget {
         ),
         const Gap(48),
         Expanded(
-          child: AutoSizeText(
-            item.meanings['zh']?.join('\n') ?? '',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 24 * fontSizeScaleFactor,
-              color: kBrandColor,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32),
+            child: AutoSizeText(
+              item.meanings['zh']?.join('\n') ?? '',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 24 * fontSizeScaleFactor,
+                color: kBrandColor,
+              ),
             ),
           ),
         ),

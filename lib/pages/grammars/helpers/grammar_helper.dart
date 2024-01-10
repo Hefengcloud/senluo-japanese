@@ -5,7 +5,7 @@ import '../constants/texts.dart';
 
 extension GrammarItemX on GrammarItem {
   get text => """
-$level文法 | $name
+${level.name.toUpperCase()}文法 | $name
 
 $kTitleJpMeaning
 $jpMeaningText

@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
 import '../../../constants/texts.dart';
 import '../../../helpers/image_helper.dart';
-import '../../onomatopoeia/constants/colors.dart';
 
 const _kBgColor = Color(0xFFEFE8D6);
 const _kMainColor = Color(0xFFBD1723);
@@ -206,6 +204,6 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
 
   _saveProverbAsImage() async {
     final bytes = await captureWidget(globalKey);
-    await saveImageToFile(bytes!, 'proverb.png');
+    await saveImageToFile(bytes!, '${widget.item.name}.png');
   }
 }
