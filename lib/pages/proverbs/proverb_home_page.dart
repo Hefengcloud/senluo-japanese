@@ -213,6 +213,7 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
       builder: (context) => AlertDialog(
         content: SizedBox(
           width: 1000,
+          height: 800,
           child: ProverbDisplayWidget(
             item: item,
           ),

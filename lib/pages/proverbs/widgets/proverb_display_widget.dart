@@ -51,49 +51,71 @@ class _ProverbDisplayWidgetState extends State<ProverbDisplayWidget> {
           flex: 2,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: _buildText(context),
+            child: Stack(
+              children: [
+                _buildRightPanel(context),
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: _buildBottomActions(
+                      context,
+                      _generateDisplayText(widget.item),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],
     );
   }
 
-  Column _buildText(BuildContext context) {
+  _buildRightPanel(BuildContext context) {
     final proverbText = _generateDisplayText(widget.item);
-
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return ListView(
       children: [
-        const Gap(8),
         SelectableText(
           proverbText,
           style: const TextStyle(fontSize: 18),
         ),
-        const Divider(),
-        _buildSlider(),
-        const Gap(8),
-        Row(
-          children: [
-            OutlinedButton(
-              onPressed: () => _saveProverbAsImage(),
-              child: const Text('Save Image'),
-            ),
-            const Gap(8),
-            OutlinedButton(
-              onPressed: () {
-                Clipboard.setData(ClipboardData(text: proverbText));
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(const SnackBar(content: Text('Copied')));
-              },
-              child: const Text('Copy Text'),
-            ),
-          ],
-        ),
+        // _buildBottomActions(context, proverbText),
       ],
     );
   }
+
+  _buildBottomActions(BuildContext context, String proverbText) => Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Divider(),
+          const Gap(8),
+          _buildSlider(),
+          const Gap(8),
+          Row(
+            children: [
+              OutlinedButton.icon(
+                icon: const Icon(Icons.image),
+                onPressed: () => _saveProverbAsImage(),
+                label: const Text('Save Image'),
+              ),
+              const Gap(8),
+              OutlinedButton.icon(
+                onPressed: () {
+                  Clipboard.setData(ClipboardData(text: proverbText));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Copyied'),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.copy),
+                label: const Text('Copy Text'),
+              ),
+            ],
+          ),
+        ],
+      );
 
   _buildSlider() => Row(
         children: [
