@@ -236,7 +236,9 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   }
 
   _copyText() async {
-    final text = generateFullText(widget.item);
+    final text = _mode == PreviewMode.single
+        ? generateChineseText(widget.item)
+        : generateFullText(widget.item);
     await Clipboard.setData(ClipboardData(text: text));
     // ignore: use_build_context_synchronously
     ScaffoldMessenger.of(context).showSnackBar(
