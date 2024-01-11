@@ -244,9 +244,10 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
   }
 
   AutoSizeText _buildItemName(String itemName, JLPTLevel level) {
+    final nameParts = itemName.split('/').map((e) => e.trim()).toList();
     return AutoSizeText(
-      itemName,
-      maxLines: 1,
+      nameParts.join('\n'),
+      maxLines: nameParts.length,
       style: GoogleFonts.getFont(
         'Rampart One',
         fontSize: 72,
@@ -279,19 +280,41 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
-        children: item.conjugations
-            .map(
-              (e) => Text(
-                e,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-              ),
-            )
-            .toList(),
+        children:
+            item.conjugations.map((e) => _buildConjugationText(e)).toList(),
       ),
     );
+  }
+
+  Widget _buildConjugationText(String text) {
+    RegExp pattern = RegExp(r'(.*?)(~~.*?~~)(.*)');
+    Match? match = pattern.firstMatch(text);
+    const style = TextStyle(
+      color: Colors.white,
+      fontSize: 20,
+    );
+
+    if (match != null) {
+      String textBefore = match.group(1) ?? "";
+      String textDeleted = match.group(2) ?? "";
+      String textAfter = match.group(3) ?? "";
+      return Text.rich(
+        TextSpan(children: [
+          TextSpan(text: textBefore, style: style),
+          TextSpan(
+            text: textDeleted.replaceAll('~', ''),
+            style: style.copyWith(
+              decoration: TextDecoration.lineThrough,
+              decorationColor: Colors.white,
+              decorationThickness: 2,
+            ),
+          ),
+          TextSpan(text: textAfter, style: style),
+        ]),
+      );
+    } else {
+      return Text(text, style: style);
+    }
   }
 
   _buildTopLogo(GrammarItem item) {

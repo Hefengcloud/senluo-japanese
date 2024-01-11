@@ -12,16 +12,16 @@ import '../../../helpers/image_helper.dart';
 const _kBgColor = Color(0xFFEFE8D6);
 const _kMainColor = Color(0xFFBD1723);
 
-class ProverbDisplayWidget extends StatefulWidget {
+class ProverbDisplayView extends StatefulWidget {
   final ProverbItem item;
 
-  const ProverbDisplayWidget({super.key, required this.item});
+  const ProverbDisplayView({super.key, required this.item});
 
   @override
-  State<ProverbDisplayWidget> createState() => _ProverbDisplayWidgetState();
+  State<ProverbDisplayView> createState() => _ProverbDisplayViewState();
 }
 
-class _ProverbDisplayWidgetState extends State<ProverbDisplayWidget> {
+class _ProverbDisplayViewState extends State<ProverbDisplayView> {
   final GlobalKey globalKey = GlobalKey();
 
   double _currentSliderValue = 96;
@@ -138,7 +138,7 @@ class _ProverbDisplayWidgetState extends State<ProverbDisplayWidget> {
       );
 
   String _generateDisplayText(ProverbItem item) {
-    return """
+    String text = """
 日语谚语 | ${item.name}
 
 🔈【读音】
@@ -146,10 +146,16 @@ ${item.reading}
 
 💡【意思】
 ${item.meanings.map((e) => '・ $e').toList().join('\n')}
+""";
+
+    if (item.examples.isNotEmpty) {
+      text += """
 
 $kTitleExample
 ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
 """;
+    }
+    return text;
   }
 
   Column _buildContent(BuildContext context) {

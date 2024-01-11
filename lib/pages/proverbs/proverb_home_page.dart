@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/constants/kanas.dart';
-import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_widget.dart';
+import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_view.dart';
 import 'package:yaml/yaml.dart';
 
 import '../../repos/proverbs/models/proverb_item.dart';
@@ -214,7 +214,7 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
         content: SizedBox(
           width: 1000,
           height: 800,
-          child: ProverbDisplayWidget(
+          child: ProverbDisplayView(
             item: item,
           ),
         ),
