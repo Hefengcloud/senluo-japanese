@@ -193,62 +193,83 @@
 - examples:
   - en: When I opened the lid of the can, I heard a sound like "psst".
     jp: 缶の蓋を開けると、 **プシュッ** と音がした。
+    zh: 打开罐子盖的时候，我听到了一声噗嗤一声。
   key: pushu
   meanings:
     en:
-    - The sound made when opening a can of soda or beer.
+      - The sound made when opening a can of soda or beer.
     jp:
-    - 炭酸ジュースやビールの缶を開ける時に出る音。
+      - 炭酸ジュースやビールの缶を開ける時に出る音。
+    zh:
+      - 噗嗤一声（打开碳酸饮料或啤酒罐时发出的声音）
   name: プシュッ
 - examples:
   - en: It's started to sprinkle.
     jp: 雨が **ポツポツ** と降ってきた。
+    zh: 雨开始淅淅沥沥地下起来了。
   - en: It's started to sprinkle, so we have to hurry home.
     jp: 雨が **ポツポツ** 降ってきたから急いで帰らないと。
+    zh: 因为雨开始淅淅沥沥地下起来了，所以我们要赶快回家。
   key: potsupotsu
   meanings:
     en:
-    - The state of small raindrops starting to fall.
+      - The state of small raindrops starting to fall.
     jp:
-    - 雨が小さな粒で降り始める様子。
+      - 雨が小さな粒で降り始める様子。
+    zh:
+      - 淅淅沥沥（小雨滴开始落下的样子）
   name: ポツポツ
 - examples:
   - en: Look! The chameleon is looking around.
     jp: 見て！カメレオンが、目を **ぎょろぎょろ** させてる。
+    zh: 看！变色龙正在饶有兴致地四处张望。
   - en: I don't like the bulging eyes of reptiles.
     jp: 爬虫類の、あの **ぎょろぎょろ** した目が苦手です。
+    zh: 我不喜欢爬行动物那种凸出来的大眼睛。
   key: gyorogyoro
   meanings:
     en:
-    - The way a human or an animal looks around or stares at something sharply
+      - The way a human or an animal looks around or stares at something sharply
     jp:
-    - 大きな目玉で鋭くあたりを見まわす様子。
+      - 大きな目玉で鋭くあたりを見まわす様子。
+    zh:
+      - 目光炯炯
+      - 睁大眼睛凝视，注视
   name: ぎょろぎょろ
 - examples:
   - en: This paper is a little rough on the back.
     jp: この紙は裏面が少し **ざらざら** している。
+    zh: 这张纸的背面有些粗糙。
   - en: Grandpa's hands are a little rough.
     jp: おじいちゃんの手は少し **ざらざら** している。
+    zh: 爷爷的手摸上去有些粗糙。
   key: zarazara
   meanings:
     en:
-    - The state of the texture being rough.
+      - The state of the texture being rough.
     jp:
-    - 手触りが粗く、滑らかではなく様子。
+      - 手触りが粗く、滑らかではなく様子。
+    zh: 
+      - 手感粗糙，粗涩，不光滑。
   name: ざらざら
 - examples:
   - en: A lot of garbage was floating in the sea.
     jp: 海にたくさんのゴミが **プカプカ** と浮かんでいた。
+    zh: 大海里漂浮着很多垃圾。
   - en: A big peach came floating down the stream.
     jp: 大きな桃が **プカプカ** と浮いて流れてきた。
+    zh: 一个大桃子随着水流漂浮了过来。
   - en: I want to float in the sea with a swimming ring and gaze blankly at the sky.
     jp: 浮き輪で **プカプカ** しながら空をぼーっと眺めていたいなぁ。
+    zh: 我想戴着漂浮圈在水面上飘着，闲看天空。
   key: pukapuka
   meanings:
     en:
     - the state of floating on the water
     jp:
     - 水に浮かんでいる様子を表す
+    zh: 
+    - 描述物体漂浮在水面上的样子
   name: プカプカ
 - examples:
   - en: I'm watching over my waddling son, hoping that he won't fall and hurt himself.
@@ -257,9 +278,7 @@
     jp: この映画のラストシーン、すごく **ハラハラ** しました。
   - en: I was nervously watching the tightrope walk in the circus.
     jp: サーカスの綱渡りを見ていて、とても **ハラハラ** しました。
-  - en: 'I was nervously watching the game yesterday because it was impossible to
-
-      predict which team would win until the end.'
+  - en: 'I was nervously watching the game yesterday because it was impossible to predict which team would win until the end.'
     jp: 昨日見た試合は、最後までどっちのチームが勝つのか予測不可能で、とても **ハラハラ** しました。
   key: harahara
   meanings:
@@ -4076,5 +4095,5 @@
       - 楽しそう、あるいは嬉しそうに笑みを浮かべる様子。
     zh:
       - 笑嘻嘻，笑眯眯
-      - 笑吟吟，微微笑。
+      - 笑吟吟，微微笑
   name: にこにこ

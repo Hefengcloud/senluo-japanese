@@ -101,6 +101,7 @@ class ItemMeaningView extends StatelessWidget {
             horizontal: 8.0,
             vertical: 20,
           ),
+          padding: const EdgeInsets.only(top: 16),
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(

@@ -17,8 +17,8 @@ class ItemGridView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GridView.count(
-        crossAxisCount: 2,
-        childAspectRatio: 6,
+        crossAxisCount: 3,
+        childAspectRatio: 4,
         mainAxisSpacing: 8,
         crossAxisSpacing: 8,
         children: items
@@ -42,16 +42,16 @@ class ItemCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      tileColor: kBgColor,
+      tileColor: kItemBgColor,
       trailing: Text(
         (index + 1).toString(),
         style: const TextStyle(fontSize: 24, color: Colors.grey),
       ),
       title: AutoSizeText(
-        item.name.split("/").join('\n'),
+        item.name,
         style: const TextStyle(
           fontSize: 24.0,
-          color: kBrandColor,
+          color: kItemMainColor,
           fontWeight: FontWeight.bold,
         ),
       ),

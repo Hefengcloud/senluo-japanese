@@ -1,12 +1,13 @@
 import 'dart:math' as math;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/helpers/image_helper.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/contants.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_concise_preview_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_examples_preview_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_examples_text_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_full_preview_view.dart';
@@ -26,6 +27,11 @@ enum PreviewType {
   final String value;
 
   const PreviewType({required this.value});
+}
+
+enum PreviewMode {
+  single,
+  multiple,
 }
 
 class ItemDisplayPage extends StatefulWidget {
@@ -51,7 +57,8 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   List<Example> _examples = [];
 
   double _fontSizeScaleFactor = 1;
-  DistributionChannel? _channel = DistributionChannel.none;
+  DistributionChannel _channel = DistributionChannel.none;
+  PreviewMode? _mode = PreviewMode.single;
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +68,12 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
           flex: 3,
           child: RepaintBoundary(
             key: globalKey,
-            child: _buildLeft(context),
+            child: AspectRatio(
+              aspectRatio: _channel.aspectRatio,
+              child: _mode == PreviewMode.single
+                  ? _buildSingleLeft(context)
+                  : _buildMultiLeft(context),
+            ),
           ),
         ),
         Expanded(flex: 2, child: _buildRight(context)),
@@ -69,7 +81,17 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
     );
   }
 
-  _buildLeft(BuildContext context) {
+  _buildSingleLeft(BuildContext context) {
+    return _buildPreviewView(
+      child: ItemConcisePreviewView(
+        item: widget.item,
+        examples: _examples,
+        fontScaleFactor: _fontSizeScaleFactor,
+      ),
+    );
+  }
+
+  _buildMultiLeft(BuildContext context) {
     final item = widget.item;
     switch (_currentType) {
       case PreviewType.full:
@@ -140,50 +162,57 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const Divider(),
+          _buildFontModifier(),
           Row(
             children: [
-              const Text('Font Size'),
-              Expanded(
-                child: Slider(
-                  label: _fontSizeScaleFactor.toStringAsFixed(1),
-                  value: _fontSizeScaleFactor,
-                  max: 2,
-                  min: 0.5,
-                  divisions: 15,
-                  onChanged: (value) {
-                    setState(() {
-                      _fontSizeScaleFactor = value;
-                    });
-                  },
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              const Text('Channel'),
+              const Text('Mode: '),
+              _buildPreviewModeOptions(context),
               const Gap(16),
+              const Text('Channel: '),
               _buildDistributionChannelOptions(context),
             ],
           ),
           const Gap(16),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton.icon(
                 onPressed: () => _saveImage(),
                 icon: const Icon(Icons.image),
                 label: const Text('Save Image'),
               ),
+              const Gap(8),
               ElevatedButton.icon(
                 onPressed: _currentType == PreviewType.full ? _copyText : null,
-                icon: const Icon(Icons.abc),
+                icon: const Icon(Icons.copy),
                 label: const Text('Copy Text'),
               ),
             ],
           ),
         ],
       ),
+    );
+  }
+
+  Row _buildFontModifier() {
+    return Row(
+      children: [
+        const Text('Font Size'),
+        Expanded(
+          child: Slider(
+            label: _fontSizeScaleFactor.toStringAsFixed(1),
+            value: _fontSizeScaleFactor,
+            max: 2,
+            min: 0.5,
+            divisions: 15,
+            onChanged: (value) {
+              setState(() {
+                _fontSizeScaleFactor = value;
+              });
+            },
+          ),
+        ),
+      ],
     );
   }
 
@@ -209,6 +238,13 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   _copyText() async {
     final text = generateFullText(widget.item);
     await Clipboard.setData(ClipboardData(text: text));
+    // ignore: use_build_context_synchronously
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Copyied'),
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
   }
 
   _saveImage() async {
@@ -222,43 +258,40 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   }
 
   _buildPreviewView({required Widget child}) {
-    return AspectRatio(
-      aspectRatio: 3 / 4,
+    return Container(
+      decoration: BoxDecoration(
+        color: kChannel2Color[_channel],
+      ),
       child: Container(
+        margin: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: kChannel2Color[_channel],
+          color: kItemBgColor,
+          borderRadius: BorderRadius.circular(8),
         ),
-        child: Container(
-          margin: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Stack(
-            children: [
-              Align(
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.center,
+              child: child,
+            ),
+            Positioned.fill(
+              right: 16,
+              child: Align(
                 alignment: Alignment.center,
-                child: child,
-              ),
-              Positioned.fill(
-                right: 16,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Opacity(
-                    opacity: 0.05,
-                    child: Transform.rotate(
-                      angle: -math.pi / 6,
-                      child: const EverJapanLogo(
-                        lang: LogoLang.zh,
-                        logoSize: 80,
-                        fontSize: 40,
-                      ),
+                child: Opacity(
+                  opacity: 0.05,
+                  child: Transform.rotate(
+                    angle: -math.pi / 6,
+                    child: const EverJapanLogo(
+                      lang: LogoLang.zh,
+                      logoSize: 80,
+                      fontSize: 40,
                     ),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -279,6 +312,23 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
           return DropdownMenuItem<DistributionChannel>(
             value: value,
             child: Text(value.text),
+          );
+        }).toList(),
+      );
+
+  _buildPreviewModeOptions(BuildContext context) => DropdownButton<PreviewMode>(
+        value: _mode,
+        onChanged: (PreviewMode? value) {
+          // This is called when the user selects an item.
+          setState(() {
+            _mode = value!;
+          });
+        },
+        items: PreviewMode.values
+            .map<DropdownMenuItem<PreviewMode>>((PreviewMode value) {
+          return DropdownMenuItem<PreviewMode>(
+            value: value,
+            child: Text(value.name),
           );
         }).toList(),
       );

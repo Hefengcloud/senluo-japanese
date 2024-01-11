@@ -10,6 +10,7 @@ import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_model
 class ItemFullPreviewView extends StatelessWidget {
   final double fontSizeScaleFactor;
   final Onomatopoeia item;
+
   const ItemFullPreviewView({
     super.key,
     required this.item,
@@ -21,7 +22,10 @@ class ItemFullPreviewView extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 128, bottom: 32),
+          padding: const EdgeInsets.only(
+            top: 128,
+            bottom: 32,
+          ),
           child: SizedBox(
             height: 250,
             child: Image.asset(
@@ -31,7 +35,9 @@ class ItemFullPreviewView extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: _buildItemTitle(fontSize: kItemMainTitleSize),
+          child: _buildItemTitle(
+            fontSize: kItemMainTitleSize,
+          ),
         ),
         const Gap(48),
         Expanded(
