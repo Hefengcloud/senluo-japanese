@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 
@@ -32,7 +33,7 @@ class _ProverbDisplayViewState extends State<ProverbDisplayView> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
-          flex: 3,
+          flex: kPreviewLeftFlex,
           child: RepaintBoundary(
             key: globalKey,
             child: AspectRatio(
@@ -48,7 +49,7 @@ class _ProverbDisplayViewState extends State<ProverbDisplayView> {
           ),
         ),
         Expanded(
-          flex: 2,
+          flex: kPreviewRightFlex,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Stack(

@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/pages/kana/kana_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/kana/views/kana_piece_view.dart';
 
 import '../../../repos/gojuon/kana_repository.dart';
@@ -77,7 +78,7 @@ class KanaTableView extends StatelessWidget {
           ),
           ...rows
               .mapIndexed((index, kanas) => TableRow(
-                    children: _buildTableRow(index, kanas),
+                    children: _buildTableRow(context, index, kanas),
                   ))
               .toList()
         ],
@@ -85,9 +86,18 @@ class KanaTableView extends StatelessWidget {
     );
   }
 
-  List<TableCell> _buildTableRow(int index, List<Kana> kanas) {
+  List<TableCell> _buildTableRow(
+    BuildContext context,
+    int index,
+    List<Kana> kanas,
+  ) {
     final cells = kanas
-        .map<TableCell>((e) => TableCell(child: KanaPieceView(kana: e)))
+        .map<TableCell>((e) => TableCell(
+              child: InkWell(
+                child: KanaPieceView(kana: e),
+                onTap: () => _showKanaPreviewDialog(context, e),
+              ),
+            ))
         .toList();
     cells.insert(
       0,
@@ -127,4 +137,15 @@ class KanaTableView extends StatelessWidget {
     }
     return theKanaRows;
   }
+
+  _showKanaPreviewDialog(BuildContext context, Kana kana) => showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          content: SizedBox(
+            width: 600,
+            height: 800,
+            child: KanaPreviewPage(kana: kana),
+          ),
+        ),
+      );
 }

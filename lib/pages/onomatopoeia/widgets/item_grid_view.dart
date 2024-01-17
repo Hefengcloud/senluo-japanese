@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 
@@ -64,8 +65,8 @@ class ItemCardView extends StatelessWidget {
         context: context,
         builder: (context) => AlertDialog(
           content: SizedBox(
-            width: 1000,
-            height: 800,
+            width: kPreviewDialogWidth,
+            height: kPreviewDialogHeight,
             child: ItemDisplayPage(item: item),
           ),
         ),

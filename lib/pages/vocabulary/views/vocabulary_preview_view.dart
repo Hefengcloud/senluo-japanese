@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 
 import '../../../common/models/word.dart';
 import '../../kanji/constants/styles.dart';
@@ -22,14 +23,14 @@ class VocabularyPreviewView extends StatelessWidget {
           return Row(
             children: [
               Expanded(
-                flex: 3,
+                flex: kPreviewLeftFlex,
                 child: AspectRatio(
                   aspectRatio: 3 / 4,
                   child: _buildImage(context, state),
                 ),
               ),
               Expanded(
-                flex: 2,
+                flex: kPreviewRightFlex,
                 child: _buildPanel(context, state),
               )
             ],

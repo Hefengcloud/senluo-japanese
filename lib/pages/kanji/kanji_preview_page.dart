@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 import 'package:senluo_japanese_cms/pages/kanji/constants/styles.dart';
@@ -34,14 +35,14 @@ class KanjiPreviewPage extends StatelessWidget {
           return Row(
             children: [
               Expanded(
-                flex: 2,
+                flex: kPreviewLeftFlex,
                 child: RepaintBoundary(
                   key: globalKey,
                   child: _buildImagePanel(context, snapshot.data!),
                 ),
               ),
               Expanded(
-                flex: 1,
+                flex: kPreviewRightFlex,
                 child: Stack(
                   children: [
                     Padding(

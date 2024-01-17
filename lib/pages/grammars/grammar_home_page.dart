@@ -89,9 +89,9 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
         content: BlocProvider(
           create: (context) =>
               GrammarItemBloc(repo)..add(GrammarItemStarted(entry: entry)),
-          child: SizedBox(
-            width: 1000,
-            height: 800,
+          child: const SizedBox(
+            width: kPreviewDialogWidth,
+            height: kPreviewDialogHeight,
             child: GrammarPreviewPage(),
           ),
         ),

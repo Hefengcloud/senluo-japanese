@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/helpers/image_helper.dart';
@@ -44,7 +45,7 @@ class ItemDisplayPage extends StatefulWidget {
 }
 
 class _ItemDisplayPageState extends State<ItemDisplayPage> {
-  final GlobalKey globalKey = GlobalKey();
+  final GlobalKey _globalKey = GlobalKey();
 
   final _previewTypes = <PreviewType>[
     PreviewType.full,
@@ -65,9 +66,9 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
     return Row(
       children: [
         Expanded(
-          flex: 3,
+          flex: kPreviewLeftFlex,
           child: RepaintBoundary(
-            key: globalKey,
+            key: _globalKey,
             child: AspectRatio(
               aspectRatio: _channel.aspectRatio,
               child: _mode == PreviewMode.single
@@ -76,7 +77,10 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
             ),
           ),
         ),
-        Expanded(flex: 2, child: _buildRight(context)),
+        Expanded(
+          flex: kPreviewRightFlex,
+          child: _buildRight(context),
+        ),
       ],
     );
   }
@@ -250,11 +254,14 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   }
 
   _saveImage() async {
-    final bytes = await captureWidget(globalKey);
+    final bytes = await captureWidget(_globalKey);
     if (bytes != null) {
+      final fileName = _mode == PreviewMode.single
+          ? widget.item.key
+          : '${widget.item.key}-${_currentType.value.toLowerCase()}';
       await saveImageToFile(
         bytes,
-        '${widget.item.key}-${_currentType.value.toLowerCase()}.jpg',
+        '$fileName.jpg',
       );
     }
   }
@@ -262,12 +269,16 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
   _buildPreviewView({required Widget child}) {
     return Container(
       decoration: BoxDecoration(
-        color: kChannel2Color[_channel],
+        color: _channel == DistributionChannel.zhiHu
+            ? Colors.white
+            : kChannel2Color[_channel],
       ),
       child: Container(
         margin: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: kItemBgColor,
+          color: _channel == DistributionChannel.zhiHu
+              ? Colors.white
+              : kItemBgColor,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Stack(

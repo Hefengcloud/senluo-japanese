@@ -1,9 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 import 'package:senluo_japanese_cms/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
@@ -15,6 +17,7 @@ import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
 import '../../constants/colors.dart';
 import '../../helpers/image_helper.dart';
+import '../../widgets/example_sentence_text.dart';
 import 'bloc/grammar_item_bloc.dart';
 
 class GrammarPreviewPage extends StatefulWidget {
@@ -25,7 +28,7 @@ class GrammarPreviewPage extends StatefulWidget {
 }
 
 class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
-  final GlobalKey globalKey = GlobalKey();
+  final GlobalKey _globalKey = GlobalKey();
 
   double _fontSizeScaleFactor = 1;
 
@@ -46,21 +49,19 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     return Row(
       children: [
         Expanded(
-          flex: 3,
+          flex: kPreviewLeftFlex,
           child: _buildImage(state.displayedItem),
         ),
         const Gap(16),
         Expanded(
-          flex: 2,
-          child: Stack(
+          flex: kPreviewRightFlex,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
             children: [
-              _buildRightPanel(context, state),
-              Positioned.fill(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: _buildBottomButtons(context, state),
-                ),
+              Expanded(
+                child: _buildRightPanel(context, state),
               ),
+              _buildBottomButtons(context, state),
             ],
           ),
         ),
@@ -68,15 +69,28 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     );
   }
 
-  _buildRightPanel(
-    BuildContext context,
-    GrammarItemLoaded state,
-  ) {
+  _buildRightPanel(BuildContext context, GrammarItemLoaded state) {
     final item = state.item;
     final displayedItem = state.displayedItem;
 
     return ListView(
       children: [
+        ExpansionTile(
+          initiallyExpanded: true,
+          title: const Text(kTitleExample),
+          children: item.examples
+              .map<ListTile>((e) => ListTile(
+                    title: Text(e.jp),
+                    subtitle: Text(e.zh),
+                    leading: displayedItem.examples.contains(e)
+                        ? const Icon(Icons.check)
+                        : null,
+                    onTap: () => BlocProvider.of<GrammarItemBloc>(context).add(
+                      GrammarExampleSelected(example: e),
+                    ),
+                  ))
+              .toList(),
+        ),
         ExpansionTile(
           title: const Text(kTitleJpMeaning),
           children:
@@ -102,23 +116,6 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
           children:
               item.explanations.map((e) => ListTile(title: Text(e))).toList(),
         ),
-        ExpansionTile(
-          initiallyExpanded: true,
-          title: const Text(kTitleExample),
-          children: item.examples
-              .map<ListTile>((e) => ListTile(
-                    title: Text(e.jp),
-                    subtitle: Text(e.zh),
-                    leading: displayedItem.examples.contains(e)
-                        ? const Icon(Icons.check)
-                        : null,
-                    onTap: () => BlocProvider.of<GrammarItemBloc>(context).add(
-                      GrammarExampleSelected(example: e),
-                    ),
-                  ))
-              .toList(),
-        ),
-        const Gap(32),
       ],
     );
   }
@@ -176,14 +173,11 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     final itemReading = itemNameParts.length > 1 ? itemNameParts[1] : null;
 
     return RepaintBoundary(
-      key: globalKey,
+      key: _globalKey,
       child: AspectRatio(
         aspectRatio: 3 / 4,
         child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 32,
-            vertical: 16,
-          ),
+          padding: const EdgeInsets.all(16),
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/grammar-bg.png'),
@@ -193,23 +187,23 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
           ),
           child: Column(
             children: [
-              const Gap(16),
               _buildTopLogo(item),
-              const Gap(16),
               _buildItemName(itemName, item.level),
               if (itemReading != null) _buildItemReading(itemReading),
-              const Gap(8),
               _buildJpMeaning(item),
-              const Gap(32),
-              _buildZhMeaning(item),
-              const Gap(32),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 16.0,
+                ),
+                child: _buildZhMeaning(item),
+              ),
               _buildConjugation(item),
-              const Gap(32),
+              const Gap(16),
               const Divider(
                 height: 0.5,
                 color: Colors.black12,
               ),
-              const Gap(32),
+              const Gap(16),
               ..._buildExamples(item),
             ],
           ),
@@ -223,7 +217,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       item.meaning.zhs.join('；'),
       style: TextStyle(
         color: kLevel2color[item.level],
-        fontSize: 24.0,
+        fontSize: 16.0,
       ),
       textAlign: TextAlign.center,
       maxLines: 1,
@@ -235,10 +229,10 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       item.meaning.jps.join('；'),
       textAlign: TextAlign.center,
       style: const TextStyle(
-        fontSize: 20,
+        fontSize: 14,
         color: kBrandColor,
       ),
-      maxFontSize: 20,
+      maxFontSize: 16,
       maxLines: 1,
     );
   }
@@ -250,7 +244,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       maxLines: nameParts.length,
       style: GoogleFonts.getFont(
         'Rampart One',
-        fontSize: 72,
+        fontSize: 64 - (nameParts.length - 1) * 8,
         fontWeight: FontWeight.bold,
         color: kLevel2color[level],
       ),
@@ -291,7 +285,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     Match? match = pattern.firstMatch(text);
     const style = TextStyle(
       color: Colors.white,
-      fontSize: 20,
+      fontSize: 16,
     );
 
     if (match != null) {
@@ -321,17 +315,23 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const EverJapanLogo(),
-        Chip(
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: kLevel2color[item.level]!),
+        Container(
+          decoration: BoxDecoration(
+            color: kLevel2color[item.level],
             borderRadius: const BorderRadius.all(Radius.circular(16)),
           ),
-          label: Text(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text(
             'JLPT ${item.level.name.toUpperCase()}',
-            style: TextStyle(color: kLevel2color[item.level]),
+            style: GoogleFonts.getFont(
+              'PT Sans Narrow',
+              color: Colors.white,
+              fontSize: 14,
+              fontStyle: FontStyle.italic,
+            ),
           ),
         ),
+        const EverJapanLogo(),
       ],
     );
   }
@@ -340,23 +340,28 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     final theExamples =
         item.examples.isNotEmpty ? item.examples : item.examples.take(2);
     return theExamples
-        .map((e) => Padding(
-              padding: const EdgeInsets.only(
-                bottom: 0.0,
-              ),
-              child: SentenceText(
-                fontSize: 24.0 * _fontSizeScaleFactor,
-                lines: [e.jp, e.zh],
-                emphasizedColor: kLevel2color[item.level]!,
-                textAlign: TextAlign.left,
-                multipleLines: false,
+        .mapIndexed((idx, e) => Container(
+              color: idx % 2 == 0 ? Colors.yellow : Colors.blue,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: ExampleSentenceText(
+                  lines: [e.jp, e.zh],
+                  emphasizedColor: kLevel2color[item.level]!,
+                  mainStyle: TextStyle(
+                    fontSize: 18.0 * _fontSizeScaleFactor,
+                  ),
+                  secondaryStyle: TextStyle(
+                    fontSize: 16.0 * _fontSizeScaleFactor,
+                    color: Colors.black54,
+                  ),
+                ),
               ),
             ))
         .toList();
   }
 
   _onSaveImage(String fileName) async {
-    final bytes = await captureWidget(globalKey);
+    final bytes = await captureWidget(_globalKey);
     saveImageToFile(bytes!, '$fileName.jpg');
   }
 }

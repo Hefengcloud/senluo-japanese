@@ -15,8 +15,8 @@ class EverJapanLogo extends StatelessWidget {
 
   const EverJapanLogo({
     super.key,
-    this.logoSize = 32,
-    this.fontSize = 16,
+    this.logoSize = 24,
+    this.fontSize = 12,
     this.lang = LogoLang.zh,
   });
 

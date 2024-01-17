@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/kanji/constants/styles.dart';
 import 'package:senluo_japanese_cms/pages/kanji/kanji_preview_page.dart';
@@ -41,9 +42,9 @@ class KanjiGridView extends StatelessWidget {
         builder: (BuildContext context) {
           return AlertDialog(
             content: SizedBox(
+              width: kPreviewDialogWidth,
+              height: kPreviewDialogHeight,
               child: KanjiPreviewPage(kanji: kanji),
-              width: 675,
-              height: 600,
             ),
           );
         },

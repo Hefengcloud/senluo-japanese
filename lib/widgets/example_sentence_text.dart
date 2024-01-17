@@ -36,7 +36,6 @@ class ExampleSentenceText extends StatelessWidget {
           if (multipleLines) const TextSpan(text: '\n\n'),
           _buildTranslatedText(
               "${multipleLines ? '' : '（'}${lines[1]}${multipleLines ? '' : '）'}"),
-          const TextSpan(text: '\n\n'),
           if (lines.length > 2) _buildTranslatedText(lines[2]),
         ],
       ),

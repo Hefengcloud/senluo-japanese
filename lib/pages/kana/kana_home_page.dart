@@ -14,6 +14,12 @@ class KanaHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('仮名'),
+        actions: [
+          Switch(
+            value: false,
+            onChanged: (value) {},
+          ),
+        ],
       ),
       body: _buildBody(context),
     );

@@ -274,33 +274,43 @@
 - examples:
   - en: I'm watching over my waddling son, hoping that he won't fall and hurt himself.
     jp: よちよち歩く息子を、転んで怪我をしないか、 **ハラハラ** と見守っている。
+    zh: 我在密切关注着蹒跚学步的儿子，希望他不会摔倒受伤。
   - en: The last scene of this movie was very harrowing.
     jp: この映画のラストシーン、すごく **ハラハラ** しました。
+    zh: 这部电影的最后一场景非常令人揪心。
   - en: I was nervously watching the tightrope walk in the circus.
     jp: サーカスの綱渡りを見ていて、とても **ハラハラ** しました。
+    zh: 我紧张地观看着马戏团的走钢丝表演。
   - en: 'I was nervously watching the game yesterday because it was impossible to predict which team would win until the end.'
     jp: 昨日見た試合は、最後までどっちのチームが勝つのか予測不可能で、とても **ハラハラ** しました。
+    zh: 昨天的比赛我一直紧张不安，因为到最后都无法预测哪支队伍会赢。
   key: harahara
   meanings:
     en:
-    - Seeing a dangerous situation and worrying that something bad or terrible will
-      happen.
+    - Seeing a dangerous situation and worrying that something bad or terrible will happen.
     jp:
     - 危険な状況を見て、悪いことや大変なことが起きないか心配する様子。
+    zh:
+    - 看到危险的情况，担心会发生不好或可怕的事情
   name: ハラハラ
 - examples:
   - en: The shoes I bought on the Internet don't fit properly and are **too big**.
     jp: インターネットで買った靴、サイズが合わず **ブカブカ** だ。
+    zh: 我在网上买的鞋尺寸不合适，太大了。
   - en: The jacket my brother gave me is **too big** and doesn't fit my figure.
     jp: 兄にもらったジャケットは **ブカブカ** で私の体型には合わない。
+    zh: 我哥给我的夹克太大了，不符合我的身形。
   - en: The coat he's wearing is **too big** and a little uncool.
     jp: 彼が着ているコート、 **ブカブカ** でちょっとかっこ悪いよね。
+    zh: 他穿的大衣太大，有点不好看。
   key: bukabuka
   meanings:
     en:
-    - The state of clothes being too large and looking loose.
+      - The state of clothes being too large and looking loose.
     jp:
-    - 衣類のサイズが大きすぎて、ゆるんでいる様子。
+      - 衣類のサイズが大きすぎて、ゆるんでいる様子。
+    zh:
+      - 衣物过大，看起来松松垮垮的样子
   name: ブカブカ
 - examples:
   - en: These donuts are chewy and delicious.
@@ -423,8 +433,10 @@
 - examples:
   - en: My radio-controlled car got hit by a car and **got** **flattened**.
     jp: 僕のラジコンカーが車に轢かれて **ぺちゃんこ** になった。
+    zh: 我的遥控车被一辆车撞到，被压扁了。
   - en: I **flattened** **out** the tissue box and threw it away.
     jp: ティッシュボックスを **ぺちゃんこ** にして捨てた。
+    zh: 我把纸巾盒捏扁后扔掉了。
   key: pechanko
   meanings:
     en:
@@ -433,6 +445,8 @@
     jp:
     - 押しつぶされて平たくなっている様子。
     - 薄く、平らで膨らみのない様子。
+    zh:
+    - 压扁，被压成扁平状。
   name: ぺちゃんこ / ぺしゃんこ
 - examples:
   - en: I prefer a **rich** ramen taste rather than a light one.
@@ -825,10 +839,13 @@
 - examples:
   - en: My classmate, Mr. Suzuki, is always **talking** to himself, which is creepy.
     jp: クラスメイトの鈴木君はいつも **ぶつぶつ** 独り言を言っていて、気味が悪い。
+    zh: 我的同学铃木先生总是嘟囔着自言自语，让人感到毛骨悚然。
   - en: He's been **complaining** about his boss for a while now.
     jp: 彼は上司のことでさっきから **ぶつぶつ** と文句を言っている。
+    zh: 他一直在抱怨他的老板。
   - en: Oh no, I’ve got a pimple-like **bump** on my back.
     jp: やだ。背中にニキビのような **ぶつぶつ** が出来てる。
+    zh: 哎呀，我的背上出现了像是粉刺一样的小颗粒。
   key: butsubutsu
   meanings:
     en:
@@ -839,6 +856,10 @@
     - 小声でつぶやく様子。
     - 不平や小言を言い続ける様子。
     - ニキビなどの粒状のものがたくさんある様子。
+    zh:
+    - 小声嘀咕，低声抱怨的样子
+    - 持续不断地抱怨或嘟囔的状态
+    - 皮肤上出现许多小颗粒或发炎，如粉刺等
   name: ぶつぶつ
 - examples:
   - en: He is fanning himself with a fan.
@@ -1198,10 +1219,13 @@
 - examples:
   - en: My son has an interview today, so he's been on edge since this morning.
     jp: 息子は今日、面接があるそうで、朝から **そわそわ** している。
+    zh: 我儿子今天有面试，所以从早上开始就心神不定。
   - en: 'The students who haven''t finished their presentation are waiting for the presentation and are getting nervous.'
     jp: まだ発表が終わっていない学生らは、発表待ちで **そわそわ** している。
+    zh: 还没有结束演讲的学生们在等待演讲，感到很紧张。
   - en: 'Today is the day for the announcement of university entrance exams, so my son has been anxiously waiting since this morning.'
     jp: 今日は大学入試の合格発表日なので、息子は朝から発表待ちで **そわそわ** している。
+    zh: 
   - en: "It seems he has a first date with someone he met on an app today, and he's been on edge ever since."
     jp: 彼は今日アプリで知り合った子と初デートらしく、さっきから **そわそわ** している。
   key: sowasowa
@@ -1602,14 +1626,18 @@
 - examples:
   - en: You look so cute in that **fuzzy** sweater. Where did you get it?
     jp: その **もこもこ** のセーターかわいいね。どこで買ったの？
+    zh: 你穿那件蓬松的毛衣真可爱。在哪里买的？
   - en: This **fluffy** down jacket is so warm.
     jp: この **もこもこ** のダウンジャケットすごく温かい。
+    zh: 这件蓬松的羽绒服非常暖和。
   key: mokomoko
   meanings:
     en:
     - The state of being puffy and thick.
     jp:
     - ふくらんで厚みがある様子。
+    zh:
+    - 蓬松、蓬乎乎的状态
   name: もこもこ
 - examples:
   - en: This dish is spicy and will make you eat a lot.
@@ -1660,8 +1688,10 @@
 - examples:
   - en: There are many big, rugged rocks ahead, so it's dangerous to go there.
     jp: この先は **ごつごつ** した大きな岩が多いので、行くのは危険です。
-  - en: His hands are big and rough
+    zh: 前面有很多体积大而且凹凸不平的岩石，所以去那里很危险。
+  - en: His hands are big and rough.
     jp: 彼の手は大きくて、 **ごつごつ** している。
+    zh: 他的手又大又粗糙。
   key: gotsugotsu
   meanings:
     en:
@@ -1670,6 +1700,9 @@
     jp:
     - 表面がなめらかでなく、 角ばっている様子。
     - 容姿や性格が荒削りであること。
+    zh:
+    - 不平滑，凹凸不平
+    - 生硬，粗鲁
   name: ごつごつ
 - examples:
   - en: The classroom is full of loud and rowdy students.
@@ -2500,14 +2533,18 @@
 - examples:
   - en: Can you change the speech bubble here to a jagged one?
     jp: ここの吹き出しを **ギザギザ** のものに変更してくれる？
+    zh: 你能把这里的对话框改成锯齿状的吗？
   - en: Please cut along this jagged line.
     jp: この **ギザギザ** の線に沿って切ってください。
+    zh: 请沿着这条锯齿状的线剪切。
   key: gizagiza
   meanings:
     en:
     - Sharp jagged notches like a saw or the state of its jaggedness continuing.
     jp:
     - のこぎりの歯のような鋭く尖った刻み目。また、その目が続いている様子。
+    zh:
+    - 锯齿状刻纹，呈锯齿状
   name: ギザギザ
 - examples:
   - en: The monkeys in the cage are **chattering**.
@@ -2538,16 +2575,18 @@
 - examples:
   - en: This road is very bumpy and difficult to drive on.
     jp: この道は **でこぼこ** しているので、走りにくい。
-  - en: 'I tried to make a cup at a pottery workshop, but I couldn''t make it smooth
-
-      like a professional, and it turned out to be bumpy.'
+    zh: 这条路很坑洼不平，开车很不方便。
+  - en: 'I tried to make a cup at a pottery workshop, but I couldn''t make it smooth like a professional, and it turned out to be bumpy.'
     jp: 陶芸体験でカップを作ってみたが、プロのように綺麗に作れず、 **でこぼこ** した物が出来上がった。
+    zh: 我在陶艺体验中试着做了一个杯子，但没有做成像专业人士那么漂亮的作品，出来的成品很不平滑。
   key: dekoboko
   meanings:
     en:
     - '"bumpy" The state of a surface being uneven and rough, not flat.'
     jp:
     - 表面に起伏があって平らでない状態。凹凸。
+    zh:
+    - 凹凸不平，坑洼不平
   name: でこぼこ
 - examples:
   - en: I was careless and forgot to take my medicine.
@@ -2895,10 +2934,13 @@
 - examples:
   - en: I was beaten up by my opponent in a boxing match.
     jp: ボクシングの試合で相手に **ボコボコ** にされた。
+    zh: 拳击比赛中被对手揍得很惨。
   - en: I squashed a pimple and my skin became bumpy.
     jp: ニキビを潰したら、肌が **ボコボコ** になった。
+    zh: 挤爆了痘痘，结果皮肤上全是凹坑。
   - en: Hot spring water gushes out.
     jp: 温泉が **ぼこぼこ** とわき出る。
+    zh: 温泉水咕嘟咕嘟冒着大泡泡涌出。
   key: bokoboko
   meanings:
     en:
@@ -2907,6 +2949,9 @@
     jp:
     - くぼみや穴がたくさんある様子。
     - 水中から大きな泡が連続してわき上がる様子や音
+    zh:
+    - 物体表面有许多凹坑或洞的状态
+    - 水下有大气泡持续冒出的样子和声音
   name: ぼこぼこ
 - examples:
   - en: Even **greasy** dirt can be cleaned with this detergent.
@@ -3174,17 +3219,24 @@
 - examples:
   - en: We're going down a **winding** road.
     jp: '**くねくね** とした道を進んでいく。'
+    zh: 沿着蜿蜒弯曲的道路前进。
   - en: She is **wiggling** her hips and dancing.
     jp: '**くねくね** と腰を振って踊ります。'
+    zh: 忸怩作态地摇晃着腰部跳舞。
   - en: The bodies of snakes and worms are **wiggly**.
     jp: 蛇やミミズの体は **くねくね** しています。
+    zh: 蛇和蚯蚓的身体弯弯曲曲的。
   key: kunekune
   meanings:
     en:
     - Bending the body to the left and right or to the front and back.
     - Bending to the right and left over and over again.
     jp:
-    - 体を柔らかく曲げる様子。 右に左に幾度も曲がって続く様子。
+    - 体を柔らかく曲げる様子。
+    - 右に左に幾度も曲がって続く様子。
+    zh:
+    - 弯弯曲曲，蜿蜒
+    - 忸怩作态
   name: くねくね
 - examples:
   - en: The sun’s scorching heat is burning me.

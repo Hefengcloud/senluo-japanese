@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,7 +45,7 @@ class ItemConcisePreviewView extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: kItemMainColor,
                   ),
-                  maxLines: 2,
+                  maxLines: item.name.split('/').length,
                   textAlign: TextAlign.start,
                 ),
               ),
