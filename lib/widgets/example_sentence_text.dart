@@ -8,11 +8,11 @@ class ExampleSentenceText extends StatelessWidget {
   final bool multipleLines;
 
   static const _kDefaultMainStyle = TextStyle(
-    fontSize: 32,
+    fontSize: 16,
   );
 
   static const _kDefaultSecondaryStyle = TextStyle(
-    fontSize: 24,
+    fontSize: 14,
     color: Colors.black54,
   );
 
@@ -23,7 +23,7 @@ class ExampleSentenceText extends StatelessWidget {
     this.mainStyle = _kDefaultMainStyle,
     this.secondaryStyle = _kDefaultSecondaryStyle,
     this.multipleLines = false,
-  }) : assert(lines.length >= 2);
+  }) : assert(lines.length >= 1);
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,10 @@ class ExampleSentenceText extends StatelessWidget {
       TextSpan(
         children: [
           ..._buildMainText(mainLine),
-          if (multipleLines) const TextSpan(text: '\n\n'),
-          _buildTranslatedText(
-              "${multipleLines ? '' : '（'}${lines[1]}${multipleLines ? '' : '）'}"),
+          if (multipleLines && lines.length > 1) const TextSpan(text: '\n\n'),
+          if (lines.length > 1)
+            _buildTranslatedText(
+                "${multipleLines ? '' : '（'}${lines[1]}${multipleLines ? '' : '）'}"),
           if (lines.length > 2) _buildTranslatedText(lines[2]),
         ],
       ),

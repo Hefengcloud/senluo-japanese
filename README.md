@@ -1,9 +1,4 @@
 # SENLUO JAPANESE
 
-## TODOs
+## 产品计划
 
-### 禅语
-
-### 假名
-
-- [ ] 
