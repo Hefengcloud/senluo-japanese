@@ -33,7 +33,7 @@ class ExampleSentenceText extends StatelessWidget {
       TextSpan(
         children: [
           ..._buildMainText(mainLine),
-          if (multipleLines && lines.length > 1) const TextSpan(text: '\n\n'),
+          if (multipleLines && lines.length > 1) const TextSpan(text: '\n'),
           if (lines.length > 1)
             _buildTranslatedText(
                 "${multipleLines ? '' : '（'}${lines[1]}${multipleLines ? '' : '）'}"),
@@ -44,7 +44,7 @@ class ExampleSentenceText extends StatelessWidget {
   }
 
   _buildTranslatedText(String text) => TextSpan(
-        text: text.replaceAll('**', ''),
+        text: "\n${text.replaceAll('**', '')}",
         style: secondaryStyle,
       );
 

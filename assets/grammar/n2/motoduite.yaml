@@ -1,47 +1,21 @@
-pattern: 〜に基づいて
+conjugations:
+- N + に基づいて
+examples:
+- jp: このドラマは事実 **に基づいて** 、作られたものです。
+  zh: 这部剧是以事实为依据制作而成的。
+- jp: アンケート結果 **に基づいて** 、新商品の方向性を決めるつもりだ。
+  zh: 打算基于调查问卷的结果，来决定新产品的方向。
+- jp: 自由と独立という考え **に基づいて** 、その憲法は作られたのだ。
+  zh: 那个宪法是基于自由和独立的思想所制定的。
+explanations: []
 level: N2
 meanings:
+  en:
+  - based on
   jp:
-    - "〜を基礎にして / 〜を根拠に"
-  cn:
-conjugations:
-  - "N + に基づいて"
-examples:
-  - jp: "アンケート結果 **に** **基づいて** 、新商品の方向性を決めるつもりだ。"
-    cn: ""
-  - jp: "I'm going to decide the direction of the new product based on the results of"
-    cn: ""
-  - jp: "the survey."
-    cn: ""
-  - jp: "このドラマは事実 **に基づいて** 、作られたものです。"
-    cn: ""
-  - jp: "This drama was created based on facts."
-    cn: ""
-  - jp: "これは実験データ **に基づいて** 立てた仮説でございます。"
-    cn: ""
-  - jp: "This is a hypothesis based on experimental data."
-    cn: ""
-  - jp: "警察は、男の子の証言 **に基づいて** 犯人を特定した。"
-    cn: ""
-  - jp: "The police identified the culprit based on the boy's testimony."
-    cn: ""
-  - jp: "成果 **に基づいて** 、適切な給与を支給した。"
-    cn: ""
-  - jp: "We paid him appropriately based on his performance."
-    cn: ""
-  - jp: "旅行で得たヒント **に基づいて** 、安藤百福はカップラーメンを発明した。"
-    cn: ""
-  - jp: "Momofuku Ando invented the cup ramen based on a hint he got on a trip."
-    cn: ""
-  - jp: "自由と独立という考え **に基づいて** 、その憲法は作られたのだ。"
-    cn: ""
-  - jp: "The constitution was created based on the idea of freedom and independence."
-    cn: ""
-  - jp: "音読みは中国語の発音 **に基づいて** 作られました。"
-    cn: ""
-  - jp: "The onyomi was created based on the Chinese pronunciation."
-    cn: ""
-  - jp: "彼が犯してしまった行為は法律 **に基づいて** 正しく処分されるだろう。"
-    cn: ""
-  - jp: "What he has done will be punished correctly according to the law."
-    cn: ""
+  - 〜を基礎にして / 〜を根拠に
+  zh:
+  - 基于...
+name: 〜に基づいて
+tags:
+- 基准

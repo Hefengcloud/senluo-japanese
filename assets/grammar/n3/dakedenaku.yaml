@@ -1,58 +1,25 @@
-pattern: 〜だけでなく〜も
+conjugations:
+- V（普通形） + だけでなく
+- イA（普通形） + だけでなく
+- ナAな / である+ だけでなく
+- N（である） + だけでなく
+examples:
+- jp: 図書館では本が借りられる **だけでなく** 、勉強もできる。
+  zh: 在图书馆不仅可以借书，还可以学习。
+- jp: ここのレストランはどれも安い **だけでなく** 、美味しい。
+  zh: 这里的餐厅不管哪间都很便宜，而且好吃。
+- jp: 彼は日本語が上手な **だけでなく** 、英語もペラペラだ。
+  zh: 他不仅擅长日语，英语也很流利。
+- jp: あの工場は、設備 **だけでなく** 周りの環境も素晴らしい。
+  zh: 那个工厂，不仅设备好，周围的环境也很好。
+explanations: []
 level: N3
 meanings:
+  en:
+  - not only....but also
   jp:
-    - "それだけではない。他にもある。"
-    - "範囲が〜より広く及ぶことを表す。"
-  cn:
-conjugations:
-  - "V（普通形） + だけでなくイA（普通形） + だけでなくナAな / である+ だけでなくN（である） + だけでなく"
-examples:
-  - jp: "肉 **だけじゃなく** 、野菜もしっかり食べなさい。"
-    cn: ""
-  - jp: "You should eat vegetables as well as meat."
-    cn: ""
-  - jp: "トムさんは日本語 **だけでなく** 、中国語も話せる。"
-    cn: ""
-  - jp: "Tom can speak Chinese as well as Japanese."
-    cn: ""
-  - jp: "ワンピースは日本 **だけじゃなく** 、海外でも人気の漫画だ。"
-    cn: ""
-  - jp: "One Piece is a popular manga not only in Japan but also in other countries."
-    cn: ""
-  - jp: "ここのレストランはどれも安い **だけでなく** 、美味しい。"
-    cn: ""
-  - jp: "All the food in this restaurant is not only cheap but also delicious."
-    cn: ""
-  - jp: "この映画はストリー **だけでなく** 、音楽も最高だ。"
-    cn: ""
-  - jp: "This movie has not only a great story but also great music."
-    cn: ""
-  - jp: "彼は勉強 **だけでなく** 、スポーツもできるし、女子からはモテモテだ。"
-    cn: ""
-  - jp: "He is not only smart, but also a good athlete, and he is popular among girls."
-    cn: ""
-  - jp: "津波のせいで、家 **だけでなく** 、家族も失った。"
-    cn: ""
-  - jp: "Because of the tsunami, I lost not only my house but also my family."
-    cn: ""
-  - jp: "彼女は国内 **だけでなく** 、海外でも活躍している。"
-    cn: ""
-  - jp: "She is active not only in Japan but also abroad."
-    cn: ""
-  - jp: "漢字は中国人 **だけでなく** 、日本人も使います。"
-    cn: ""
-  - jp: "Kanji is used not only by the Chinese but also by the Japanese."
-    cn: ""
-  - jp: "図書館では本が借りられる **だけでなく** 、勉強もできる。"
-    cn: ""
-  - jp: "In the library, not only can you borrow books but also study."
-    cn: ""
-  - jp: "今日はトムさん **だけでなく** 、ジェームスさんも遅れてきました。"
-    cn: ""
-  - jp: "Today, not only Tom but also James came late."
-    cn: ""
-  - jp: "漢字は書くのが難しい **だけでなく** 、読むのも難しいです。"
-    cn: ""
-  - jp: "Kanji are not only difficult to write, but also difficult to read."
-    cn: ""
+  - それだけではない。他にもある。
+  zh:
+  - 不但……而且(并列)
+name: 〜だけでなく〜も
+tags: []

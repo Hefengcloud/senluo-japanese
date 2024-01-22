@@ -1,45 +1,23 @@
-pattern: 〜からすると / 〜からすれば
+conjugations:
+- N + からすると
+examples:
+- jp: ネイティブの日本人 **からすると** 、ナヨンの日本語はまだまだです。
+  zh: 从本土日本人的角度来看，娜琏的日语只是普通普通。
+- jp: あの服装 **からすると** 、彼はおそらくデザイナーでしょう。
+  zh: 从那身打扮来看，他很可能是一名设计师。
+- jp: フィリピンでトイレットペーパーが流せないなんて、日本人 **からすると** 信じられないことかもしれない。
+  zh: '在菲律宾，卫生纸不能冲掉，这对日本人来说可能难以置信。 '
+- jp: 今度のJLPTですが、今の皆さんの実力 **からすると** 問題なく合格できるでしょう。
+  zh: 对于即将到来的JLPT，以大家现在的实力来看，应该可以顺利通过的。
+explanations: []
 level: N2
 meanings:
+  en:
+  - from the standpoint of 〜 / Judging form 〜
   jp:
-    - "〜の立場で考えると"
-  cn:
-conjugations:
-  - "N + からすると"
-examples:
-  - jp: "ネイティブの日本人 **からすると** 、トムさんの日本語はまだまだです。"
-    cn: ""
-  - jp: "Tom's Japanese is not good enough from the standpoint of a native Japanese"
-    cn: ""
-  - jp: "speaker."
-    cn: ""
-  - jp: "ラーメンを食べるときにに音を出す習慣は外国人 **からすると** 、考えられないことだそうです。"
-    cn: ""
-  - jp: "The custom of making a noise when eating ramen is unthinkable from the"
-    cn: ""
-  - jp: "standpoint of foreigners."
-    cn: ""
-  - jp: "あの服装 **からすると** 、彼はおそらくデザイナーでしょう。"
-    cn: ""
-  - jp: "He's probably a designer, judging by his clothes."
-    cn: ""
-  - jp: "今度のJLPTですが、今の皆さんの実力 **からすると** 問題なく合格できるでしょう。"
-    cn: ""
-  - jp: "I'm sure you can pass the upcoming JLPT without any problem, given your"
-    cn: ""
-  - jp: "current abilities."
-    cn: ""
-  - jp: "お金の持ちのトムさんを羨む人が多いですが、私 **からすると** 最低限生活できるお金があれば幸せなので、何とも思いません。"
-    cn: ""
-  - jp: "There are many people who envy Tom who has a lot of money, but from my point"
-    cn: ""
-  - jp: "of view, I'm happy as long as I have enough money to live on, so I don't think"
-    cn: ""
-  - jp: "anything of it."
-    cn: ""
-  - jp: "フィリピンでトイレットペーパーが流せないなんて、日本人 **からすると** 信じられないことかもしれない。"
-    cn: ""
-  - jp: "It may be hard for Japanese people to believe that toilet paper cannot be"
-    cn: ""
-  - jp: "flushed in the Philippines."
-    cn: ""
+  - 〜の立場で考えると
+  zh:
+  - 从...的立场考虑的话
+name: 〜からすると / 〜からすれば
+tags:
+- 判断の立场

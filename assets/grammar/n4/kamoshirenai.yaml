@@ -1,12 +1,32 @@
-pattern: 〜かもしれない
+conjugations:
+- V（普通形） + かもしれない
+- イA（普通形）+かもしれない
+- ナA（普通形） ~~だ~~ \+ かもしれない
+- N（普通形） ~~だ~~ \+ かもしれない
+examples:
+- jp: 午後から雨が **やむかもしれません** 。
+  zh: 下午之后雨应该会停吧。
+- jp: 走れば終電に **間に合うかもしれません** 。
+  zh: 跑的话，可能还赶得上末班车。
+- jp: このカバン、値段が書いていないけど、日本製だし、 **高いかもしれない** 。
+  zh: 这个包包虽然没有写价格，但它是日本制造的，说不定会很贵。
+- jp: 今、その国へ行くのは **危険かもしれない** よ。
+  zh: 现在去那个国家可能会很危险哦。
+- jp: うちのポチ、全然ご飯 食べないし、 **病気かもしれない** 。
+  zh: 我家狗狗(波奇)根本不吃东西，可能生病了。
+explanations: []
 level: N4
 meanings:
+  en:
+  - '"maybe / perhaps"'
+  - Indicates that there is a possibility.
+  - An expression in which the speaker says what he or she guesses. It is an
+  - uncertain guess with less basis for judgment than ”〜でしょう / 〜だろう”
   jp:
-    - "〜の可能性がある"
-    - "話し手が推測したことを言う表現。「〜でしょう / だろう」に比べ、判断の根拠が薄く、不確かな推量である。"
-  cn:
-conjugations:
-  - "V（普通形） + かもしれないイA（普通形）+かもしれないナA（普通形） ~~だ~~ + かもしれないN（普通形） ~~だ~~ + かもしれない"
-examples:
-  - jp: ""
-    cn: ""
+  - 〜の可能性がある
+  zh:
+  - 可能
+  - 说不定
+name: 〜かもしれない
+tags:
+- 推量

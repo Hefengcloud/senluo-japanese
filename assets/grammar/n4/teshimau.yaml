@@ -1,12 +1,25 @@
-pattern: 〜てしまう
+conjugations:
+- V（て形） + しまう
+examples:
+- jp: この映画のシリーズは１日で全部見 **てしまいました** 。
+  zh: 我在一天之内把这电影的整个系列给看完了。
+- jp: 明日までに、第第２５課まで終わらせ **てしまいましょう** 。
+  zh: 在明天之前，让我们完成第25课吧。
+- jp: 昨日は宿題をやらずに寝 **てしまった** 。
+  zh: 昨天我没有做作业就睡著了。
+- jp: 目覚まし時計をセットしたのに、朝寝坊し **てしまった** 。
+  zh: 我明明调了闹钟，早上还是睡过头了。
+explanations: []
 level: N4
 meanings:
+  en:
+  - ① the action has been completed.
+  - ② do negative action unintentionally. / something regrettable happens.
   jp:
-    - "①完了：ある行為を完全に完了することを表す。"
-    - "②後悔：意図せずある行為を行い、残念だ、後悔していると言いたい時に使う。"
-  cn:
-conjugations:
-  - "V（て形） + しまう"
-examples:
-  - jp: ""
-    cn: ""
+  - ①完了：ある行為を完全に完了することを表す。
+  - ②後悔：意図せずある行為を行い、残念だ、後悔していると言いたい時に使う。
+  zh:
+  - ❷ 表示遗憾
+  - 事与违愿的结果
+name: 〜てしまう
+tags: []

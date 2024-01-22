@@ -1,85 +1,25 @@
-pattern: 〜とおりに
+conjugations:
+- V（辞書形 / タ形）+ とおりに
+- N + のとおりに
+- N + どおりに
+examples:
+- jp: 私の言う **とおりに** しなさい！
+  zh: 请照我说的做！
+- jp: 私の思った **とおり** 、彼は朝寝坊して遅刻した。
+  zh: 如我所想，他睡过头所以迟到了。
+- jp: 説明書の **とおりに** 、組み立てました。
+  zh: 按说明书，进行了组装。
+- jp: 予想 **どおり** 、今年のJLPTのテストは難しかった。
+  zh: 跟预期的一样，今年的JLPT考试很难。
+explanations: []
 level: N3
 meanings:
+  en:
+  - as / same as
   jp:
-    - "〜と同じに"
-  cn:
-conjugations:
-  - "V（辞書形 / タ形）+ とおりにN + のとおりにN + どおりに"
-examples:
-  - jp: "私の言う **とおり** にしなさい！"
-    cn: ""
-  - jp: "Do as I say!"
-    cn: ""
-  - jp: "じゃ、私が見本を書きますから、私が書く **とおりに** 、みなさんもノートに書いてください。"
-    cn: ""
-  - jp: "Well, I'll write a sample, so please write in your notebooks as I write."
-    cn: ""
-  - jp: "天気予報 **のとおり** 、午後から雨が降り始めた。"
-    cn: ""
-  - jp: "It started to rain in the afternoon, just as the weather forecast said."
-    cn: ""
-  - jp: "私の思った **とおり** 、田中さんは朝寝坊して遅刻した。"
-    cn: ""
-  - jp: "As I expected, Mr. Tanaka overslept in the morning and was late."
-    cn: ""
-  - jp: "指示 **どおり** 、すみやかに行動してください。"
-    cn: ""
-  - jp: "Please act promptly as instructed."
-    cn: ""
-  - jp: "飛行機は予定 **どおり** 、出発した。"
-    cn: ""
-  - jp: "The plane departed as scheduled."
-    cn: ""
-  - jp: "このレシピの **とおり** に作ったら、誰でも美味しいハンバーグが作れます。"
-    cn: ""
-  - jp: "If you follow this recipe, anyone can make a delicious hamburger steak."
-    cn: ""
-  - jp: "図 **のとおり** に操作してください。"
-    cn: ""
-  - jp: "Please operate as shown in the figure."
-    cn: ""
-  - jp: "説明 **のとおり** に折ると、鶴が作れますよ。"
-    cn: ""
-  - jp: "If you follow the instructions, you can make a crane."
-    cn: ""
-  - jp: "言われた **とおりに** 、早くかばんの中にお金を詰めろ！"
-    cn: ""
-  - jp: "Do as you're told and quickly stuff the money in your bag!"
-    cn: ""
-  - jp: "先生の言う **とおりに** 勉強したら、本当にJLPT N1に合格できました。"
-    cn: ""
-  - jp: "I really passed the JLPT N1 exam after following the teacher's advice."
-    cn: ""
-  - jp: "思った **とおり** のことを自由に話してください。"
-    cn: ""
-  - jp: "Please feel free to talk about what you think."
-    cn: ""
-  - jp: "実際に生で見る大物女優は噂 **ど** **おり** 、とても美しかった。"
-    cn: ""
-  - jp: "The big shot actress I saw in person was as beautiful as they say."
-    cn: ""
-  - jp: "部長のおっしゃる **とおり** です。"
-    cn: ""
-  - jp: "It's exactly as the director said."
-    cn: ""
-  - jp: "作業は予定 **どおり** 進んでいます。"
-    cn: ""
-  - jp: "The work is proceeding as planned."
-    cn: ""
-  - jp: "僕の予想 **どおり** 、スペインが優勝したね！"
-    cn: ""
-  - jp: "As I predicted, Spain won!"
-    cn: ""
-  - jp: "予想 **どおり** 、今年のJLPTのテストは難しかった。"
-    cn: ""
-  - jp: "As I expected, this year's JLPT test was difficult."
-    cn: ""
-  - jp: "先輩のアドバイス **どおりに** 勉強したら、1発で試験に合格できた。"
-    cn: ""
-  - jp: "I followed the advice of my seniors and passed the exam in one shot."
-    cn: ""
-  - jp: "私の教え **どおりに** やれば、誰でも美味しいパスタが作れるのよ。"
-    cn: ""
-  - jp: "Anyone can make delicious pasta if they follow my instructions."
-    cn: ""
+  - 〜と同じに
+  zh:
+  - ❷ 按照……
+name: 〜とおりに
+tags:
+- 基准

@@ -315,24 +315,33 @@
 - examples:
   - en: These donuts are chewy and delicious.
     jp: このドーナツ、 **モチモチ** してて美味しい。
+    zh: 这个甜甜圈很软糯，吃起来很美味。
   - en: My dog's cheeks are so flexible that it feels good to stretch them.
     jp: 私の犬のほっぺは、 **モチモチ** してて摘むと気持ちがいいです。
+    zh: 我的狗的脸颊很软弹，捏起来手感很好。
   - en: This pasta has a chewy texture because it is hand-made and fresh
     jp: このパスタ、手打ち生パスタということもあって、 **モチモチ** した食感です。
+    zh: 这种意面是手工制作的新鲜意面，咬起来很有嚼劲。
   key: mochimochi
   meanings:
     en:
     - The state of being soft and elastic like a rice cake.
     jp:
     - 餅のように柔らかく弾力が感じられる様子。
+    zh:
+    - 软糯
+    - 柔软有弹性
   name: モチモチ
 - examples:
   - en: I cooked the bacon to a crisp.
     jp: ベーコンを **カリカリ** に焼いた。
+    zh: 我把培根煮得又脆又酥。
   - en: The toast was cooked to a crisp.
     jp: トーストが **カリカリ** に焼けた。
+    zh: 吐司烤得又脆又酥。
   - en: I like my dumplings better when they're crispy.
     jp: 餃子は **カリカリ** に焼いた方が好きだ。
+    zh: 我更喜欢饺子煎得又脆又酥。
   key: karikari
   meanings:
     en:
@@ -341,18 +350,25 @@
     jp:
     - 硬いもの、乾いた物を噛むときに出る軽い音。
     - 水分や脂肪分がなく、噛むと歯切れのいい状態。
+    zh:
+    - 咯吱咯吱
+    - 酥脆
   name: カリカリ
 - examples:
   - en: The elephant at the zoo is **munching** on an apple.
     jp: 動物園の象がりんごを **ムシャムシャ** と食べている。
+    zh: 动物园里的大象正在大口大口地吃苹果。
   - en: A panda is **munching** on a bamboo leaf.
     jp: パンダが笹の葉を **ムシャムシャ** と食べている。
+    zh: 熊猫正在大口大口地吃竹叶。
   key: mushamusha
   meanings:
     en:
     - The state of eating rudely and vigorously without manner.
     jp:
     - 無作法に勢いよく食べる様子。
+    zh:
+    - 狼吞虎咽地（吃），大口大口地（吃）
   name: ムシャムシャ
 - examples:
   - en: He is **shaking** the maracas.
@@ -369,6 +385,9 @@
     jp:
     - 小さい物、薄い布地などが触れ合うときに出る、乾いた音。
     - 素早く振る動作
+    zh:
+    - 沙沙作响
+    - 快速摇动的动作
   name: シャカシャカ
 - examples:
   - en: The rabbit is **jumping**.
@@ -385,10 +404,7 @@
     - 身軽に繰り返し飛び跳ねるたり、壁や障害物を跳び越える様子。
   name: ぴょんぴょん
 - examples:
-  - en: 'I''ve been so busy today that I haven''t eaten anything since this morning.
-      I
-
-      feel lightheaded.'
+  - en: 'I''ve been so busy today that I haven''t eaten anything since this morning. I feel lightheaded.'
     jp: 今日は忙しすぎて朝から何も食べてない。もう **ふらふら** だよ。
   - en: Oh, I feel light-headed. I wonder if I have a fever.
     jp: あー、何か **ふらふら** する。熱でもあるのかな。

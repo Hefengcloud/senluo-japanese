@@ -1,43 +1,22 @@
-pattern: 〜にて
+conjugations:
+- N + にて
+examples:
+- jp: 本日のイベントは１階の広場 **にて** 行います。
+  zh: 今天的活动在一楼广场举行。
+- jp: 当日 欠席される方は、メールまたは電話 **にて** ご連絡ください。
+  zh: 如果您当天缺席，请通过电子邮件或电话与我们联系。
+- jp: 試験の申し込みは3月3日 **にて** 締め切らせていただきます。
+  zh: 考试申请将于3月3日截止。
+- jp: 部長は本日、出張 **にて** 会議を欠席されるそうです。
+  zh: 部长今天出差，应该会缺席会议。
+explanations:
+- 硬い表現。文章や改まった場面で使われる
 level: N2
 meanings:
   jp:
-    - "〜で"
-    - "①場所"
-    - "②手段・方法"
-    - "③時間"
-    - "④原因・理由"
-  cn:
-conjugations:
-  - "N + にて"
-explanations:
-  - "硬い表現。文章や改まった場面で使われる"
-examples:
-  - jp: "本日のイベントは１階の広場 **にて** 行います。"
-    cn: ""
-  - jp: "Today's event will be held at the plaza on the first floor."
-    cn: ""
-  - jp: "雨の場合、スポーツ大会は体育館 **にて** 行います。"
-    cn: ""
-  - jp: "In case of rain, the sports event will be held in the gymnasium."
-    cn: ""
-  - jp: "最後のシーンは京都のお寺 **にて** 撮影されたそうです。"
-    cn: ""
-  - jp: "The last scene was shot at a temple in Kyoto."
-    cn: ""
-  - jp: "当日欠席される方は、メールまたは電話 **にて** ご連絡ください。"
-    cn: ""
-  - jp: "If you are going to be absent on the day of the event, please let us know by"
-    cn: ""
-  - jp: "e-mail or phone."
-    cn: ""
-  - jp: "それでは会場 **にて** 皆様のご参加をお待ちしております。"
-    cn: ""
-  - jp: "We are looking forward to your participation at the venue."
-    cn: ""
-  - jp: "部長は本日、出張 **にて** 会議を欠席されるそうです。"
-    cn: ""
-  - jp: "The general manager will be absent from the meeting today due to a business"
-    cn: ""
-  - jp: "trip."
-    cn: ""
+  - 〜で
+  zh:
+  - 在……；用……
+  - 以……；于……
+name: 〜にて
+tags: []

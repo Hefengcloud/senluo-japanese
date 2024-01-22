@@ -1,14 +1,25 @@
-pattern: 〜かわりに
+conjugations:
+- V（辞書形）+ かわりに
+- N + のかわりに
+examples:
+- jp: 日本語を教えてあげる **かわりに** 、私に英語を教えてね。
+  zh: 我教你说日语，作为交换请教我说英语。
+- jp: この辺は買い物などに不便な **代わりに** 、自然が豊かで気持ちがいい。
+  zh: 这附近虽然买东西什么的不太方便，但是自然风光丰富，心情很好。
+- jp: この仕事は給料が良い **かわりに** 、毎日たくさん仕事があって大変だ。
+  zh: 虽然这份工作薪水不错，但每天的工作量大，很辛苦。
+explanations:
+- 「Nのかわりに」は「Nにかわって」という言い方もある。
 level: N3
 meanings:
+  en:
+  - Instead of V
+  - (Instead of V, do another thing / Instead of N(person or thing),
+  - another(person or thing))
   jp:
-    - "Vしないで、他のことをする。"
-    - "N（人や物）ではなく他の（人や物）が・・・。"
-  cn:
-conjugations:
-  - "V（辞書形）+ かわりにN + のかわりに"
-explanations:
-  - "「Nのかわりに」は「Nにかわって」という言い方もある。[![【JLPTN3】文法・例文：〜に代わって](data:image/gif;base64,R0lGODdhAQABAPAAAN3d3QAAACwAAAAAAQABAAACAkQBADs=)【JLPTN3】文法・例文：〜に代わって2019.7.21文型：〜に代わって 〜と入れ替わって / 〜の代理として Instead of N + にかわって N3後ろに名詞が来る場合は「〜代わるN」となる。 例文 ・今日は田中先生がインフルエンザで学校に来れないので、私が田中先生に代わって授業をします。本日は部長が出張のため、部長に代わって私が会議の...](https://nihongokyoshi-net.com/2019/07/21/jlptn3-grammar-nikawatte/)"
-examples:
-  - jp: ""
-    cn: ""
+  - Vしないで、他のことをする。
+  - N（人や物）ではなく他の（人や物）が・・・。
+  zh:
+  - 作为一种代替、补偿 (対比)
+name: 〜かわりに
+tags: []

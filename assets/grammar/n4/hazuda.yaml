@@ -1,75 +1,25 @@
-pattern: 〜はずだ
+conjugations:
+- V（普通形）+ はずだ
+- イA（普通形）+ はずだ
+- ナA（普通形） + はずだ ※ ナAな + はずだ / ナAである + はずだ
+- N（普通形）+はずだ ※ Nの + はずだ / Nである + はずだ
+examples:
+- jp: ジェニは毎日買い物していますから、お金がたくさんある **はず** です。
+  zh: 珍妮每天都在购物，所以她应该很有钱。
+- jp: トムは２０年も日本に住んでいるから、日本語が上手な **はず** です。
+  zh: 汤姆在日本生活了20年，日文应该很擅长。
+- jp: 高いし、人が多いし、このレストランの料理は美味しい **はず** です。
+  zh: (价格)又贵，人又多，这家餐厅的食物应该很好吃。
+explanations:
+- 過去の計画について述べる時は「〜はずだった」
 level: N4
 meanings:
+  en:
+  - must / be supposed to be the case
   jp:
-    - "理由があって、絶対に〜だと思う。"
-  cn:
-conjugations:
-  - "V（普通形）+ はずだイA（普通形）+ はずだナA（普通形） + はずだ ※ ナAな + はずだ / ナAである + はずだN（普通形）+はずだ ※ Nの + はずだ / Nである + はずだ"
-explanations:
-  - "過去の計画について述べる時は「〜はずだった」"
-examples:
-  - jp: "高いし、人が多いし、このレストランの料理は美味しい **はずです** 。"
-    cn: ""
-  - jp: "It's expensive and crowded, so the food in this restaurant must be good."
-    cn: ""
-  - jp: "今日は日曜日だから、銀行は閉まっている **はずだ** 。"
-    cn: ""
-  - jp: "It's Sunday, so the banks must be closed."
-    cn: ""
-  - jp: "田中さんは東京大学を卒業したから、頭がいい **はずです** 。"
-    cn: ""
-  - jp: "Mr. Tanaka graduated from Tokyo University, so he must be very smart."
-    cn: ""
-  - jp: "トムさんは２０年も日本に住んでいるから、日本が上手な **はずです** 。"
-    cn: ""
-  - jp: "Tom has lived in Japan for 20 years, so he must be good at Japanese."
-    cn: ""
-  - jp: "彼はお金持ちですから、車をたくさん持っている **はずです** 。"
-    cn: ""
-  - jp: "He's rich, so he must have a lot of cars."
-    cn: ""
-  - jp: "佐藤さんはお酒が嫌いだといっていましたから 、ビールを飲まない **はずです** 。"
-    cn: ""
-  - jp: "Mr. Sato said he doesn't like to drink alcohol, so he must not drink beer."
-    cn: ""
-  - jp: "黒田さんは毎日ジョギングをしていますから、 ジョギングが好きな **はずです** 。"
-    cn: ""
-  - jp: "Mr. Kuroda jogs every day, so he must like jogging."
-    cn: ""
-  - jp: "山田さんは毎日買い物していますから、お金がたくさんある **はずです** 。"
-    cn: ""
-  - jp: "Yamada does shopping every day, so she must have a lot of money."
-    cn: ""
-  - jp: "太郎くんは１７歳ですから、お酒を飲まない **はずです** 。"
-    cn: ""
-  - jp: "Taro is 17 years old, so he shouldn't drink alcohol."
-    cn: ""
-  - jp: "リーさんと１時間前に電話したから、そろそろ着く **はずです** 。"
-    cn: ""
-  - jp: "I called Mr. Lee an hour ago, so he should be there soon."
-    cn: ""
-  - jp: "トムさんなら、JLPT N1に絶対合格できる **はずだ** 。"
-    cn: ""
-  - jp: "I'm sure Tom can pass the JLPT N1."
-    cn: ""
-  - jp: "ちゃんと考えた？マークさんなら答えはわかる **はずだよ** 。"
-    cn: ""
-  - jp: "Have you thought this through? I'm sure Mark will know the answer."
-    cn: ""
-  - jp: "確か、田中さんは帰国子女だから、英語がペラペラな **はずですよ** 。"
-    cn: ""
-  - jp: "I'm sure Tanaka-san is a returnee, so he should be fluent in English."
-    cn: ""
-  - jp: "確か、ジェシカさんは抹茶のチョコレートが好きな **はずだ** から、お土産はこれにしよう。"
-    cn: ""
-  - jp: "I'm sure Jessica likes green tea chocolates, so I'll bring her some as"
-    cn: ""
-  - jp: "souvenirs."
-    cn: ""
-  - jp: "昨日、面接を受ける **はずだった** が、台風のせいで延期になってしまった。"
-    cn: ""
-  - jp: "I was supposed to have an interview yesterday, but it was postponed because of"
-    cn: ""
-  - jp: "the typhoon."
-    cn: ""
+  - 理由があって、絶対に〜だと思う。
+  zh:
+  - 应该…一定(会)…
+name: 〜はずだ
+tags:
+- 推量

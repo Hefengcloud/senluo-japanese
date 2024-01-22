@@ -25,9 +25,7 @@ class _ItemExamplesTextViewState extends State<ItemExamplesTextView> {
   }
 
   _buildExamplesText(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return ListView(
       children: widget.examples
           .map((e) => ListTile(
                 title: Text(e['jp'] ?? ''),

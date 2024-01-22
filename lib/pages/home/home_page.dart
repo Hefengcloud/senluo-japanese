@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/pages/craftify/craftify_home_page.dart';
 import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart';
 import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_page.dart';
@@ -95,6 +96,18 @@ class _HomePageState extends State<HomePage> {
                 label: Text('敬語'),
               ),
             ],
+            trailing: Expanded(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: IconButton(
+                    icon: const Icon(Icons.text_format),
+                    onPressed: () => _gotoCraftifyPage(context),
+                  ),
+                ),
+              ),
+            ),
           ),
           const VerticalDivider(thickness: 1, width: 1),
           Expanded(
@@ -111,5 +124,13 @@ class _HomePageState extends State<HomePage> {
     } else {
       return Center(child: Text('Invalid index: $index'));
     }
+  }
+
+  _gotoCraftifyPage(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const CraftifyHomePage(),
+      ),
+    );
   }
 }

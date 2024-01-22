@@ -1,45 +1,26 @@
-pattern: Nがする
+conjugations:
+- N + がします
+examples:
+- jp: このお菓子、 **コーヒーの味がします** ね。
+  zh: 这糖果是咖啡味的。
+- jp: キッチンから、 **カレーの匂いがして** きます。
+  zh: 从厨房飘来咖哩的香味。
+- jp: 家の外で **大きな音がした** 。
+  zh: 屋外有很大的噪音。
+- jp: 遠くで、 **犬の声がします** ね。
+  zh: 远处可以听到狗的吠声。
+explanations: []
 level: N4
 meanings:
+  en:
+  - '"can hear / see / smell etc (noun)."'
+  - Used to express the notion that the speaker can perceive a sound, voice,
+  - taste, smell, fragrance or feeling.
   jp:
-    - "音、声、味、匂い、香り、感じなど感覚を表したいときの言い方。"
-  cn:
-conjugations:
-  - "N + がします"
-examples:
-  - jp: "どこかでいい匂い **がします** ね。"
-    cn: ""
-  - jp: "There's a good smell somewhere."
-    cn: ""
-  - jp: "キッチンから、カレーの匂い **がしてきます** 。"
-    cn: ""
-  - jp: "I can smell the curry cooking in the kitchen."
-    cn: ""
-  - jp: "ジェシーさんの髪からシャンプーのいい匂い **がします** 。"
-    cn: ""
-  - jp: "I can smell the shampoo from Mr. Jesse's hair."
-    cn: ""
-  - jp: "隣の部屋から変な音 **がします** 。何の音なんでしょう。"
-    cn: ""
-  - jp: "There's a strange sound coming from the next room. I wonder what it is."
-    cn: ""
-  - jp: "このお菓子、コーヒーの味 **がします** ね。"
-    cn: ""
-  - jp: "This candy tastes like coffee."
-    cn: ""
-  - jp: "この飴はりんごの味 **がします** 。"
-    cn: ""
-  - jp: "This candy tastes like apple."
-    cn: ""
-  - jp: "この景色を見ていると、なんだか夢のような感じ **がします** 。"
-    cn: ""
-  - jp: "When I look at this scenery, I feel like I'm in a dream."
-    cn: ""
-  - jp: "家の外で大きな音 **がした** 。"
-    cn: ""
-  - jp: "I heard a loud noise outside my house."
-    cn: ""
-  - jp: "遠くで、犬の声 **がします** ね。"
-    cn: ""
-  - jp: "I heard a dog's voice at a distance."
-    cn: ""
+  - 音、声、味、匂い、香り、感じなど感覚を表したいときの言い方。
+  zh:
+  - 觉得；(看)到、(听)到、(闻)到、(感)到
+name: Nがする
+tags:
+- 様子
+- 状态

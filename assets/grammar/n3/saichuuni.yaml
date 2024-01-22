@@ -1,34 +1,21 @@
-pattern: 最中に
+conjugations:
+- Vている + 最中に
+- Nの + 最中に
+examples:
+- jp: 〜途中に / 〜途中で」
+  zh: 类似文法：
+- jp: 今 **考えごとをしている最中** だから、あまり話しかけないでください。
+  zh: 现在正在思考中，所以请尽量不要交谈。
+- jp: 大事な **電話の最中に** 、急にお腹が痛くなってきた。
+  zh: 正在接一个重要电话时，肚子突然疼了起来。
+- jp: '**食事の最中に** 大きな地震が起こった。'
+  zh: 吃饭的时候发生了大地震。
+explanations: []
 level: N3
 meanings:
-  jp:
-  cn:
-conjugations:
-  - "Vている + 最中にNの + 最中に"
-examples:
-  - jp: "食事の **最中に** 大きな地震が起こった。"
-    cn: ""
-  - jp: "There was a big earthquake while we were eating."
-    cn: ""
-  - jp: "彼はよく会議の **最中に** 居眠りをする。"
-    cn: ""
-  - jp: "He often dozes off during meetings."
-    cn: ""
-  - jp: "来年度の予算案については、今、検討している **最中** です。"
-    cn: ""
-  - jp: "We are in the middle of discussing the budget plan for next year."
-    cn: ""
-  - jp: "今考えごとをしている **最中** だから、あまり話しかけないでください。"
-    cn: ""
-  - jp: "I'm in the middle of thinking, so please don't talk to me too much."
-    cn: ""
-  - jp: "試合の **最中に** 雨が降って、結局中止となった。"
-    cn: ""
-  - jp: "It rained during the game and it was eventually cancelled."
-    cn: ""
-  - jp: "その事件については現在、調べている **最中** でして、状況がわかりしだいお知らせいたします。"
-    cn: ""
-  - jp: "We are in the process of investigating the incident and will let you know as"
-    cn: ""
-  - jp: "soon as we know the situation."
-    cn: ""
+  en:
+  - in the middle of
+  zh:
+  - 正好处在...的过程中(时点・场面)
+name: 最中に
+tags: []

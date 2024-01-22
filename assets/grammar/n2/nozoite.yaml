@@ -1,42 +1,23 @@
-pattern: 〜を除いて / 〜を除き / 〜を除けば
+conjugations:
+- N + を除いて / を除き / を除けば
+examples:
+- jp: 店内は喫煙席 **を除き** 、禁煙です。
+  zh: 店内除了吸烟席外，严禁吸烟。
+- jp: 夫は美容師を仕事をしていて、月曜日 **を除いては** 毎日働いています。
+  zh: 丈夫是美容师，除了周一外每天都工作。
+- jp: 授業開始５分前なのに、教室には私 **を除いて** まだ２人しかいません。
+  zh: 上课开始前五分钟，但教室里除了我就只有两个人。
+- jp: タイ旅行は飛行機代 **を除けば** 、２ 万円で十分楽しめました。
+  zh: 泰国之旅不包括机票，只要2万日元就能充分玩乐。
+explanations: []
 level: N2
 meanings:
+  en:
+  - except
   jp:
-    - "〜を例外として / 〜以外"
-    - "グループの中から、一部を除外することを表す。"
-  cn:
-conjugations:
-  - "N + を除いて / を除き / を除けば"
-examples:
-  - jp: "店内は喫煙席 **を除き** 、禁煙です。"
-    cn: ""
-  - jp: "The restaurant is non-smoking, except for the smoking section."
-    cn: ""
-  - jp: "トムさん **を除けば** 、みんな来ています。"
-    cn: ""
-  - jp: "Everyone is here, except for Tom."
-    cn: ""
-  - jp: "月曜日 **を除けば** 、予定は空いています。"
-    cn: ""
-  - jp: "Except for Monday, my schedule is free."
-    cn: ""
-  - jp: "その問題 **を除けば** 、だいたい解決しました。"
-    cn: ""
-  - jp: "Except for that problem, it was mostly solved."
-    cn: ""
-  - jp: "夫は美容師を仕事をしていて、月曜日 **を除いては** 毎日働いています。"
-    cn: ""
-  - jp: "My husband is a hairdresser and he works every day except Monday."
-    cn: ""
-  - jp: "授業開始５分前なのに、教室には私 **を除いて** まだ２人しかいません。"
-    cn: ""
-  - jp: "It was five minutes before class started, but there were only two people in"
-    cn: ""
-  - jp: "the classroom excluding me."
-    cn: ""
-  - jp: "タイ旅行は飛行機代 **を除けば** 、２万円で十分楽しめました。"
-    cn: ""
-  - jp: "I was able to enjoy my trip to Thailand very much for 20,000 yen, except for"
-    cn: ""
-  - jp: "the airfare."
-    cn: ""
+  - 〜を例外として / 〜以外
+  zh:
+  - 除…之外
+name: 〜を除いて / 〜を除き / 〜を除けば
+tags:
+- 范囲

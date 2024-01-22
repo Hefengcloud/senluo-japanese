@@ -1,11 +1,17 @@
-pattern: （形容詞）する
+conjugations:
+- イAく + する
+- ナAに + する
+examples: []
+explanations: []
 level: N4
 meanings:
+  en:
+  - make it 形容詞
   jp:
-    - "対象をある状態に変化させることを表す文型"
-  cn:
-conjugations:
-  - "イAく + するナAに + する"
-examples:
-  - jp: ""
-    cn: ""
+  - 対象をある状態に変化させることを表す文型
+  zh:
+  - 表示人为地改变某种状态。
+name: （形容詞）する
+tags:
+- 変化
+- 不定

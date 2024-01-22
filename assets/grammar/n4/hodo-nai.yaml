@@ -1,55 +1,21 @@
-pattern: 〜ほど〜ない
+conjugations:
+- N + ほど〜ない
+examples:
+- jp: 今年は去年 **ほど** 寒くないですね。
+  zh: 今年没有去年那么冷。( = 这两年都很冷，但去年更冷。)
+- jp: トムはジョン **ほど** 背が高くないです。
+  zh: 汤姆没有约翰高。( = 两人都很高，但约翰更高。）
+- jp: 私がラーメンが好きだが、お好み焼き **ほど** 好きじゃありません。
+  zh: 我喜欢拉面，但不如大阪烧。 ( = 我都喜欢，但更喜欢大阪烧。)
+explanations: []
 level: N4
 meanings:
+  en:
+  - X is not as ~ as Y.
   jp:
-    - '"XはYほど〜ない"で、XもYも同じぐらい～であるが、比べるとXはYよりは程度が低いことを表す。'
-  cn:
-conjugations:
-  - "N + ほど〜ない"
-examples:
-  - jp: "トムさんはジョンさん **ほど** 背が高 **くないです** 。"
-    cn: ""
-  - jp: "（ = どちらも背が高いが、ジョンさんの方が高い。）"
-    cn: ""
-  - jp: "Mr. Tom is not as tall as Mr. John."
-    cn: ""
-  - jp: "私がラーメンが好きだが、お好み焼き **ほど** 好き **じゃありません** 。"
-    cn: ""
-  - jp: "( = どちらも好きだが、お好み焼きの方が好きです。)"
-    cn: ""
-  - jp: "I like ramen, but I don't like it as much as okonomiyaki."
-    cn: ""
-  - jp: "今年は去年 **ほど** 寒 **くないですね** 。"
-    cn: ""
-  - jp: "( = どちらの年も寒いが、去年の方が寒い。)"
-    cn: ""
-  - jp: "It's not as cold this year as last year."
-    cn: ""
-  - jp: "中国はカナダ **ほど** 大き **くないです** 。"
-    cn: ""
-  - jp: "( = どちらも大きいが、カナダの方が大きい。)"
-    cn: ""
-  - jp: "China is not as big as Canada."
-    cn: ""
-  - jp: "ジェシカさんは日本語が上手ですが、メアリーさん **ほどではありません** 。"
-    cn: ""
-  - jp: "( =どちらも日本語が上手だが、メアリーさんの方が上手です。)"
-    cn: ""
-  - jp: "Jessica speaks good Japanese, but not as good as Mary."
-    cn: ""
-  - jp: "私の部屋は普通の人の部屋より広いけど、ジェームスさんの部屋 **ほど** 広く **はありません** 。"
-    cn: ""
-  - jp: "( = 私の部屋もジェームさんの部屋も広いが、ジェームさんの部屋の方が広い。)"
-    cn: ""
-  - jp: "My room is bigger than most people's rooms, but not as big as James' room."
-    cn: ""
-  - jp: "トムさんはJLPT N1に合格したので、日本語を上手に話すが、スピーチコンテストで優勝したJLPT N2レベルのジェームスさん **ほど** 上手"
-    cn: ""
-  - jp: "**ではありません** 。"
-    cn: ""
-  - jp: "( =トムさんもジェースムさんも日本語が上手だが、ジェームスさんの方が上手だ。)"
-    cn: ""
-  - jp: "Tom passed JLPT N1, so he speaks Japanese very well, but not as well as James,"
-    cn: ""
-  - jp: "who won the speech contest and is at JLPT N2 level."
-    cn: ""
+  - '"XはYほど〜ない"で、XもYも同じぐらい～であるが、比べるとXはYよりは程度が低いことを表す。'
+  zh:
+  - …没有…那么
+name: 〜ほど〜ない
+tags:
+- 比较

@@ -1,49 +1,22 @@
-pattern: 〜という
+conjugations:
+- N1 + という + N2
+examples:
+- jp: 私はタマ **という** 猫を飼っています。
+  zh: 我饲养著一只名叫Tama的猫。
+- jp: ビビンバ **という** 韓国料理が好きです。
+  zh: 我喜欢叫“石锅拌饭”的韩国料理。
+- jp: 「鬼滅の刃」 **という** 漫画が、世界中で人気があるそうです。
+  zh: 「鬼灭之刃」的漫画，似乎在全世界都很受欢迎。
+explanations:
+- ・カジュアルな言い方は「〜っていう」
 level: N4
 meanings:
+  en:
+  - …called / …named
   jp:
-    - "聞き手が知らないであろう** 物・人・場所などの名前を言う時に使う。"
-  cn:
-conjugations:
-  - "N1 + という + N2"
-explanations:
-  - "カジュアルな言い方は「〜っていう」"
-examples:
-  - jp: "私はタマ **という** 猫を飼っています。"
-    cn: ""
-  - jp: "I have a cat named Tama."
-    cn: ""
-  - jp: "村上春樹 **という** 小説家を知っていますか？"
-    cn: ""
-  - jp: "Do you know a novelist named Haruki Murakami?"
-    cn: ""
-  - jp: "私はインドネシアのバンドン **という** 町から来ました。"
-    cn: ""
-  - jp: "I'm from a town called Bandung in Indonesia."
-    cn: ""
-  - jp: "ママルース **という** イタリアンレストランが美味しいらしいです。"
-    cn: ""
-  - jp: "I heard that the food in the Italian restaurant called Mama Lou’s is"
-    cn: ""
-  - jp: "delicious."
-    cn: ""
-  - jp: "「鬼滅の刃」 **という** 漫画が、世界中で人気があるそうです。"
-    cn: ""
-  - jp: "I heard that the manga called “Kimetsu no yaiba” is popular all over the"
-    cn: ""
-  - jp: "world."
-    cn: ""
-  - jp: "先ほど、木村さん **という** 方からお電話がありましたよ。"
-    cn: ""
-  - jp: "I just received a phone call from a person named Mr. Kimura."
-    cn: ""
-  - jp: "まっすぐ行くと、「来来亭」 **という** ラーメン屋がありますから、そこを右に曲がると病院があります。"
-    cn: ""
-  - jp: "「十人十色」 **という** 言葉を知っていますか。"
-    cn: ""
-  - jp: "私は日本語を勉強する時、「日本語NET」 **という** サイトを使っています。"
-    cn: ""
-  - jp: "フィリピンはシニガン **という** 料理が有名らしい。"
-    cn: ""
-  - jp: "I heard that the Philippines is famous for a dish called sinigang."
-    cn: ""
+  - '**聞き手が知らないであろう** 物・人・場所などの名前を言う時に使う。'
+  zh:
+  - 叫作…
+name: 〜という
+tags:
+- 名前の绍介

@@ -1,37 +1,21 @@
-pattern: 〜も〜ば、〜も
+conjugations:
+- Nも + V（バ形）/ イAければ / ナAなら / Nなら + Nも
+examples:
+- jp: 彼女は性格 **も** よければ、頭 **も** いい。
+  zh: 她为人善良，又聪明伶俐。
+- jp: 私はタバコ **も** 吸わなければ、お酒 **も** 飲まない。
+  zh: 我不抽烟，也不喝酒。
+- jp: 本を読むのが好きな人 **も** いれば、嫌いな人 **も** います。
+  zh: 有喜欢看书的人，也有讨厌的人。
+- jp: 歌 **も** 歌えば、ダンス **も** 上手だ。
+  zh: 唱歌和跳舞都擅长。
+explanations: []
 level: N3
 meanings:
   jp:
-    - "〜も・・・し、それから〜も・・・。"
-  cn:
-conjugations:
-  - "Nも + V（バ形）/ イAければ / ナAなら / Nなら + Nも"
-examples:
-  - jp: "本を読むのが好きな人 **も** いれ **ば** 、嫌いな人 **も** います。"
-    cn: ""
-  - jp: "Some people like to read books, and some don't."
-    cn: ""
-  - jp: "どこかへ旅行に行きたいけど、時間 **も** なけれ **ば** 、お金 **も** ない。"
-    cn: ""
-  - jp: "I want to travel somewhere, but I don't have the time nor the money."
-    cn: ""
-  - jp: "人生は楽しいこと **も** あれ **ば** 、苦しいこと **も** ある。"
-    cn: ""
-  - jp: "Life can be fun and it can also be painful."
-    cn: ""
-  - jp: "マンゴーには甘いもの **も** あれ **ば** 、酸っぱいもの **も** ある。"
-    cn: ""
-  - jp: "Some mangoes are sweet, some are sour."
-    cn: ""
-  - jp: "ジェシカさんは性格 **も** よけれ **ば** 、頭 **も** いい。"
-    cn: ""
-  - jp: "Jessica has a good personality and is very smart."
-    cn: ""
-  - jp: "田中さんは英語 **も** できれ **ば** 、中国語 **も** できる。"
-    cn: ""
-  - jp: "Mr. Tanaka can speak English and Chinese."
-    cn: ""
-  - jp: "私はタバコ **も** 吸わなけれ **ば** 、お酒 **も** 飲まない。"
-    cn: ""
-  - jp: "I neither smoke nor drink alcohol."
-    cn: ""
+  - 〜も・・・し、それから〜も・・・。
+  zh:
+  - 既...又...
+name: 〜も〜ば、〜も
+tags:
+- 条件

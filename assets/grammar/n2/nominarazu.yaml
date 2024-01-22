@@ -1,37 +1,25 @@
-pattern: 〜のみならず
+conjugations:
+- 普通形 \+ のみならず
+examples:
+- jp: 電子書籍の登場で雑誌 **のみならず** 、漫画も売れにくくなった。
+  zh: 随著电子书的出现，不仅是杂志，连漫画都变得难卖了。
+- jp: ファイナルファンタジーというゲームは日本 **のみならず** 、世界でも有名だ。
+  zh: 《Final Fantasy》这款游戏不仅在日本，在全世界都很有名。
+- jp: あの歌手は若い人 **のみならず** 、おじいさんやお婆さんにも人気がある。
+  zh: 那个歌手不仅年轻人，也受到爷爷奶奶的欢迎。
+- jp: 彼は一度 **のみならず** 、二度も報告を怠ったため上司からかなり怒られたようだ。
+  zh: 因为他不仅一次，而是两次疏忽报告，所以上司好像非常生气。
+- jp: '**「〜だけでなく〜も」**'
+  zh: ・「〜に限らず」・「〜にとどまらず」
+explanations: []
 level: N2
 meanings:
+  en:
+  - not only, but
   jp:
-    - "～だけでなく"
-  cn:
-conjugations:
-  - "普通形 + のみならず"
-examples:
-  - jp: "彼は英語 **のみならず** 、スペイン語も話せる。"
-    cn: ""
-  - jp: "He can speak not only English but also Spanish."
-    cn: ""
-  - jp: "ファイナルファンタジーというゲームは日本 **のみならず** 、世界でも有名だ。"
-    cn: ""
-  - jp: 'The game "Final Fantasy" is famous not only in Japan but also in the world.'
-    cn: ""
-  - jp: "あの歌手は若い人 **のみならず** 、おじいさんやお婆さんにも人気がある。"
-    cn: ""
-  - jp: "The singer is popular not only among young people but also among old people."
-    cn: ""
-  - jp: "電子書籍の登場で雑誌 **のみならず** 、漫画も売れにくくなった。"
-    cn: ""
-  - jp: "With the advent of e-books, it has become harder to sell not only magazines"
-    cn: ""
-  - jp: "but comics as well."
-    cn: ""
-  - jp: "トムさんは一度 **のみならず** 、二度も報告を怠ったため上司からかなり怒られたようだ。"
-    cn: ""
-  - jp: "Tom was scolded quite a bit by his boss for failing to report not once, but"
-    cn: ""
-  - jp: "twice."
-    cn: ""
-  - jp: "地震で家 **のみならず** 、家族も失った。"
-    cn: ""
-  - jp: "He lost not only his house but also his family in the earthquake."
-    cn: ""
+  - ～だけでなく
+  zh:
+  - 不只是
+name: 〜のみならず
+tags:
+- 非限定

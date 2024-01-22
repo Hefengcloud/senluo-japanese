@@ -1,76 +1,27 @@
-pattern: 〜によると / 〜よれば
+conjugations:
+- N + によると / によれば
+examples:
+- jp: 天気予報 **によると** 、明日は雨だそうです。
+  zh: 根据天气预报，明天好像会下雨。
+- jp: 噂 **によると** 、あの二人は付きっているそうだ。
+  zh: 据传闻，那两人好像正在交往。
+- jp: この資料 **によれば** 、経営状況は毎年悪化傾向にあることがわかる。
+  zh: 根据这份文件，可以看出经营状况逐年恶化。
+explanations:
+- ・伝聞表現とともに使われることが多い。
+- ・「〜によると」も「〜によれば」も意味は同じ。
+- ・「（Vタ）ところによると」、「（Vタ）ところによれば」という表現もある。
+- ・文末には「〜らしい」や「〜そうだ」が来ることが多い。
 level: N3
 meanings:
+  en:
+  - according to
   jp:
-    - "〜では"
-    - "情報源や判断の元を表す"
-  cn:
-conjugations:
-  - "N + によると / によれば"
-explanations:
-  - "伝聞表現とともに使われることが多い。「〜によると」も「〜によれば」も意味は同じ。「（Vタ）ところによると」、「（Vタ）ところによれば」という表現もある。文末には「〜らしい」や「〜そうだ」が来ることが多い。"
-examples:
-  - jp: "天気予報 **によると** 、明日は雨だそうです。"
-    cn: ""
-  - jp: "According to the weather forecast, it will rain tomorrow."
-    cn: ""
-  - jp: "田中さん **によると** 、もうすぐあの二人は結婚するそうです。"
-    cn: ""
-  - jp: "According to Mr. Tanaka, those two are going to get married soon."
-    cn: ""
-  - jp: "この資料 **によれば** 、経営状況は毎年悪化傾向にあることがわかる。"
-    cn: ""
-  - jp: "According to this document, the business situation is getting worse every"
-    cn: ""
-  - jp: "year."
-    cn: ""
-  - jp: "ニュース速報 **によると** 、指名手配されていた犯人が捕まったそうです。"
-    cn: ""
-  - jp: "According to the breaking news, the wanted criminal has been caught."
-    cn: ""
-  - jp: "専門家の話 **によると** 、今度も高齢化や年金問題といった社会問題はひどくなっていくということです。"
-    cn: ""
-  - jp: "According to the experts, social problems such as aging and pension problems"
-    cn: ""
-  - jp: "will continue to get worse in the future."
-    cn: ""
-  - jp: "私の記憶 **によると** 、この辺りに昔住んでいたマンションがあるはずなんだけど。"
-    cn: ""
-  - jp: "According to my memory, there should be an apartment building around here"
-    cn: ""
-  - jp: "where I used to live."
-    cn: ""
-  - jp: "噂 **によると** 、あの二人は付き合っているそうだ。"
-    cn: ""
-  - jp: "According to rumors, those two are dating."
-    cn: ""
-  - jp: "ニュース **によると** 、来年のセンター試験の形式が大きく変わるそうです。"
-    cn: ""
-  - jp: "According to the news, the format of next year's National Center Test for"
-    cn: ""
-  - jp: "University Admissions will change dramatically."
-    cn: ""
-  - jp: "先生の話 **によると** 、この文型はJLPTのテストに出る可能性は低いとのことだ。"
-    cn: ""
-  - jp: "According to the teacher, it's unlikely that this sentence pattern will appear"
-    cn: ""
-  - jp: "on the JLPT test."
-    cn: ""
-  - jp: "医者 **によると** 、１日３回、食後にこの薬を飲んでおけば大丈夫とのことだ。"
-    cn: ""
-  - jp: "According to the doctor, I should be fine as long as I take this medicine"
-    cn: ""
-  - jp: "three times a day after meals."
-    cn: ""
-  - jp: "聞いた話 **によると** 、鈴木先生が今学期でこの学校を辞めるそうだ。"
-    cn: ""
-  - jp: "According to what I heard, Mr. Suzuki will quit this school after this"
-    cn: ""
-  - jp: "semester."
-    cn: ""
-  - jp: "マレーシア人のプテラさん **によると** 、日本のコンビニはとても便利らしい。"
-    cn: ""
-  - jp: "According to Ms. Putera, a Malaysian, convenience stores in Japan are very"
-    cn: ""
-  - jp: "convenient."
-    cn: ""
+  - '"〜では"'
+  - 情報源や判断の元を表す
+  zh:
+  - 根据
+name: 〜によると / 〜よれば
+tags:
+- 手段
+- 媒介

@@ -1,83 +1,19 @@
-pattern: 〜にする
+conjugations:
+- N + にする
+examples:
+- jp: ：う〜ん、私はステーキ **にします** 。Bさんは？
+  zh: B：私はスパゲティにします。
+- jp: ：どっち **にしよう** かなあ。こっちはデザインがいいし。でも、こっちはセールで値段が安いし。
+  zh: B：欲しいのにしたら？A：うん、じゃあデザインがかっこいいのにする。
+explanations: []
 level: N4
 meanings:
+  en:
+  - '"decide on"'
+  - Used to decide on one out of the various options.
   jp:
-    - "色々ある選択肢の中から、１つを選んで決めるときに使う。"
-  cn:
-conjugations:
-  - "N + にする"
-examples:
-  - jp: "**【レストランで】**"
-    cn: ""
-  - jp: "A：う〜ん、私はステーキ **にします** 。Bさんは？"
-    cn: ""
-  - jp: "B：私はスパゲティ **にします** 。"
-    cn: ""
-  - jp: "**【In a restaurant】"
-    cn: ""
-  - jp: "**A: Hmm, I'll have the steak. How about Mr. B?"
-    cn: ""
-  - jp: "B: I'll have spaghetti."
-    cn: ""
-  - jp: "**【ホテルの受付で】**"
-    cn: ""
-  - jp: "A：お部屋はツインベットとダブルベット、どちら **になさいますか** 。"
-    cn: ""
-  - jp: "B：ダブルベッド **にします** 。"
-    cn: ""
-  - jp: "**【At the reception desk of the hotel】"
-    cn: ""
-  - jp: "**A: Would you like a twin bed or a double bed in your room?"
-    cn: ""
-  - jp: "B: I'll have a double bed."
-    cn: ""
-  - jp: "**【服屋で】**"
-    cn: ""
-  - jp: "A：どっち **にしよう** かなあ。こっちはデザインがいいし。でも、こっちはセールで値段が安いし。"
-    cn: ""
-  - jp: "B：欲しいの **にしたら** ？"
-    cn: ""
-  - jp: "A：うん、じゃあデザインがかっこいいの **にする** 。"
-    cn: ""
-  - jp: "**【At a clothing store】"
-    cn: ""
-  - jp: "**A: I wonder which one I should choose. This one has a better design, but"
-    cn: ""
-  - jp: "this one is on sale and has a lower price."
-    cn: ""
-  - jp: "B: Why don't you get the one you want?"
-    cn: ""
-  - jp: "A: Yeah, I'll go with the one with the cool design."
-    cn: ""
-  - jp: "**【授業中止の案内】**"
-    cn: ""
-  - jp: "大型の台風が近づいてきているので、今日は休み **にします** 。"
-    cn: ""
-  - jp: "**【Class Cancellation Notice】"
-    cn: ""
-  - jp: "**A big typhoon is approaching, so we're going to cancel today."
-    cn: ""
-  - jp: "**【予定を決める】**"
-    cn: ""
-  - jp: "A：来週の土曜日、USJに行かない？"
-    cn: ""
-  - jp: "B：いいね、行こう！"
-    cn: ""
-  - jp: "A：やったー。じゃあ、待ち合わせ場所はどこ **にする** ？"
-    cn: ""
-  - jp: "B：１０時に大阪駅はどう？"
-    cn: ""
-  - jp: "A：オッケー。"
-    cn: ""
-  - jp: "**【Decide on the schedule】"
-    cn: ""
-  - jp: "**A: Next Saturday, why don't we go to USJ?"
-    cn: ""
-  - jp: "B: Sounds good, let's go!"
-    cn: ""
-  - jp: "A: Yay! Then, where do you want to meet?"
-    cn: ""
-  - jp: "B: How about Osaka Station at 10:00?"
-    cn: ""
-  - jp: "A: Ok."
-    cn: ""
+  - 色々ある選択肢の中から、１つを選んで決めるときに使う。
+  zh:
+  - 决定
+name: 〜にする
+tags: []

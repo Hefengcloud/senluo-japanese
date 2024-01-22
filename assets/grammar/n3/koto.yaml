@@ -1,26 +1,24 @@
-pattern: 〜こと
+conjugations:
+- V（辞 / ナイ） \+ こと
+- Nの \+ こと
+- ※Nはする動詞のN
+examples:
+- jp: レポートは10日までに **提出すること** 。
+  zh: 10点之前把报告交上来。
+- jp: 明日は赤鉛筆を **忘れないこと** 。
+  zh: 明天别忘记带红色铅笔。
+- jp: 明日は９時に教室前に **集合のこと** 。
+  zh: 明天9点请在课室前集合。
+- jp: お弁当は各自 **持ってくること** 。
+  zh: 请自带午餐。
+explanations: []
 level: N3
 meanings:
+  en:
+  - you should
   jp:
-    - "～しなさい / ～してください"
-    - "指示や規則などを書いて伝えるときの表現。（口で伝えることもある。）"
-  cn:
-conjugations:
-  - "V（辞 / ナイ） + ことNの + こと※Nはする動詞のN"
-examples:
-  - jp: "テストのときは携帯電話はカバンの中にしまう **こと** 。"
-    cn: ""
-  - jp: "Put your cell phone in your bag when you take the test."
-    cn: ""
-  - jp: "明日は９時に教室前に集合の **こと** 。"
-    cn: ""
-  - jp: "Gather in front of the classroom at 9:00 a.m. tomorrow."
-    cn: ""
-  - jp: "レポートは来週の火曜日までに提出する **こと** 。"
-    cn: ""
-  - jp: "Submit your report by next Tuesday."
-    cn: ""
-  - jp: "お弁当は各自持ってくる **こと** 。"
-    cn: ""
-  - jp: "Bring your own lunch."
-    cn: ""
+  - ～しなさい / ～してください
+  zh:
+  - 意思相当于
+name: 〜こと
+tags: []

@@ -1,28 +1,24 @@
-pattern: 〜に限らず
+conjugations:
+- N + に限らず
+examples:
+- jp: この映画は子供 **に限らず** 、大人も楽しめます。
+  zh: 这部电影不仅是小孩，大人也可以欣赏。
+- jp: 東京は休日 **に限らず** 、毎日観光客が多い。
+  zh: 东京不仅是节假日，每天都有很多游客。
+- jp: 最近は女性 **に限らず** 、男性も育児を積極的にするようになった。
+  zh: 近来不仅女性，男性也开始积极育儿。
+- jp: トムは今日 **に限らず** 、いつも明るい。
+  zh: 汤姆不只是今天，一直总是很开朗。
+- jp: '**「〜だけでなく〜も」**'
+  zh: ・「〜のみならず」・「〜にとどまらず」
+explanations: []
 level: N2
 meanings:
   jp:
-    - "～だけでなく、・・・"
-    - "「・・・」には「～」よりも広い意味の言葉が来る。"
-  cn:
-conjugations:
-  - "N + に限らず"
-examples:
-  - jp: "この映画は子供 **に限らず** 、大人も楽しめます。"
-    cn: ""
-  - jp: "This movie can be enjoyed not only by children but also by adults."
-    cn: ""
-  - jp: "トムさんは今日 **に限らず** 、いつも明るい。"
-    cn: ""
-  - jp: "Mr. Tom is always cheerful, not just today."
-    cn: ""
-  - jp: "最近は女性 **に限らず** 、男性も育児を積極的にするようになった。"
-    cn: ""
-  - jp: "Recently, not only women but also men have been taking an active role in"
-    cn: ""
-  - jp: "childcare."
-    cn: ""
-  - jp: "東京は休日 **に限らず** 、毎日観光客が多い。"
-    cn: ""
-  - jp: "There are many tourists in Tokyo every day, not just on holidays."
-    cn: ""
+  - ～だけでなく、・・・
+  - 「・・・」には「～」よりも広い意味の言葉が来る。
+  zh:
+  - 不只〜
+name: 〜に限らず
+tags:
+- 非限定

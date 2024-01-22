@@ -25,7 +25,10 @@ class ItemCaptionTitle extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Text(
           title,
-          style: const TextStyle(fontSize: 20),
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       );
 }

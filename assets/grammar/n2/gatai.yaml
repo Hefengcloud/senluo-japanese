@@ -1,40 +1,27 @@
-pattern: 〜がたい
+conjugations:
+- V ~~ます~~ \+ がたい
+examples:
+- jp: 彼はいつも嘘ばかりつくので、今回の話も本当かどうか信じ **がたい** 。
+  zh: 他总是说谎，所以很难相信这次的话是真的还是假的。
+- jp: 彼はいつも怖い顔をしているし、静かだし、近寄り **がたい** よ。
+  zh: 他总是看起来很可怕，又安静，难以靠近。
+- jp: 弱い者をいじめるとは許し **がたい** 行為だ。
+  zh: 欺凌弱者是不可原谅的行为。
+- jp: '**「〜にくい」**'
+  zh: ・「〜づらい」
+explanations: []
 level: N2
 meanings:
+  en:
+  - '"difficult to do"'
+  - '**＊Not used to mean something can''t be done because of lack of ability.**'
   jp:
-    - "〜するのが難しい。"
-    - "「能力的にできない」ということには使わない。**"
-  cn:
-conjugations:
-  - "V ~~ます~~ + がたい"
-examples:
-  - jp: "彼はいつも嘘ばかりつくので、今回の話も本当かどうか信じ **がたい** 。"
-    cn: ""
-  - jp: "He's always lying, so it's hard to believe this story is true."
-    cn: ""
-  - jp: "まさか、彼女があの事故から奇跡的に生き延びた何て信じ **がたい** 話だ。"
-    cn: ""
-  - jp: "It's hard to believe that she miraculously survived the accident."
-    cn: ""
-  - jp: "２０代の男性がナイフで女性を刺したそうです。本当に許し **がたい** 行為だ。"
-    cn: ""
-  - jp: "I heard that a man in his twenties stabbed a woman with a knife. It's really"
-    cn: ""
-  - jp: "inexcusable."
-    cn: ""
-  - jp: "彼はいつも怖い顔をしているし、静かだし、近寄り **がたい** よ。"
-    cn: ""
-  - jp: "He always looks scary, he's quiet, and he's hard to get close to."
-    cn: ""
-  - jp: "大勢の人の前で馬鹿にされて、耐え **がたい** 屈辱を味わった。"
-    cn: ""
-  - jp: "I was made a fool of in front of many people and suffered unbearable"
-    cn: ""
-  - jp: "humiliation."
-    cn: ""
-  - jp: "## 誤用例"
-    cn: ""
-  - jp: "このソフトは機能が多すぎで、私には使いがたい。"
-    cn: ""
-  - jp: "→「使いにくい」を使う。"
-    cn: ""
+  - 〜するのが難しい。
+  - '**「能力的にできない」ということには使わない。**'
+  zh:
+  - 不容易
+  - 难于…
+name: 〜がたい
+tags:
+- 可能
+- 难易

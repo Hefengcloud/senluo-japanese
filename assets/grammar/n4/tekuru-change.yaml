@@ -1,12 +1,27 @@
-pattern: Vてくる（変化・移動）
+conjugations:
+- V（て形） + くる
+examples:
+- jp: あ〜、お腹が空い **てきた** 。
+  zh: 啊〜 肚子开始饿起来了。
+- jp: 以前よりも、日本語を学ぶ人が増え **てきました** 。
+  zh: 比起以前，学习日语的人越来越多了。
+- jp: 知らない男が、私のほうへ走っ **てきた** 。
+  zh: 一个不知名的男人，向著我跑了过来。
+- jp: 山田さんの荷物、持っ **てきました** よ。
+  zh: 山田的包裹，我带了过来哦。
+explanations: []
 level: N4
 meanings:
+  en:
+  - ① Used to show, based on the present situation, how things have changed from
+  - before until now.
+  - ② Used to indicate that the direction of V is towards the speaker.
   jp:
-    - "① 今を基準として、以前から今までの推移、変化を表す。"
-    - "② Vの方向が話し手の位置に向かっていることを表す。"
-  cn:
-conjugations:
-  - "V（て形） + くる"
-examples:
-  - jp: ""
-    cn: ""
+  - ① 今を基準として、以前から今までの推移、変化を表す。
+  - ② Vの方向が話し手の位置に向かっていることを表す。
+  zh:
+  - '...来、开始变得〜'
+name: Vてくる（変化・移動）
+tags:
+- 変化
+- 移动

@@ -1,72 +1,27 @@
-pattern: 〜について
+conjugations:
+- N + について
+examples:
+- jp: 日本の観光地 **について** 調べています。
+  zh: 关于日本的旅游景点，我正在搜索。
+- jp: 日本の宗教 **について** 教えてください。
+  zh: 有关日本的宗教，请告诉我。
+- jp: そのこと **について** 、もう一度考えてください。
+  zh: 关于那件事情，请重新考虑考虑吧。
+- jp: 昨日、日本語の勉強の仕方 **について** 先生と話し合いました。
+  zh: 昨天，关于如何学习日语，我和老师聊过了。
+- jp: '**「～に関して」**'
+  zh: ''
+explanations: []
 level: N3
 meanings:
+  en:
+  - about
   jp:
-    - "〜のことを"
-    - "話す・聞く・考える・書く・調べるなどの行為の対象を言う時に使う表現。"
-  cn:
-conjugations:
-  - "N + について"
-examples:
-  - jp: "タイの観光地 **について** 調べています。"
-    cn: ""
-  - jp: "I am researching tourist spots in Thailand."
-    cn: ""
-  - jp: "日本の宗教 **について** 教えてください。"
-    cn: ""
-  - jp: "Please tell me about religion in Japan."
-    cn: ""
-  - jp: "昨日、日本語の勉強の仕方 **について** 先生と話し合いました。"
-    cn: ""
-  - jp: "Yesterday, I had a discussion with my teacher about how to study Japanese."
-    cn: ""
-  - jp: "この問題 **について** どう思われますか。"
-    cn: ""
-  - jp: "What do you think about this problem?"
-    cn: ""
-  - jp: "文章を読んで、何 **について** 書いているか考えてください。"
-    cn: ""
-  - jp: "Read the text and think about what it’s about."
-    cn: ""
-  - jp: "日本語の発音 **について** 大学で研究しています。"
-    cn: ""
-  - jp: "I am doing research on Japanese pronunciation at the university."
-    cn: ""
-  - jp: "日本の歴史 **について** 詳しい人はいませんか。"
-    cn: ""
-  - jp: "Does anyone know much about Japanese history?"
-    cn: ""
-  - jp: "田中さんの意見 **について** 、反論のある方はいらっしゃいますか。"
-    cn: ""
-  - jp: "Does anyone have any objections to Mr. Tanaka's opinion?"
-    cn: ""
-  - jp: "レポートのために、日本の方言 **について** 調べています。"
-    cn: ""
-  - jp: "I am researching Japanese dialects for my report."
-    cn: ""
-  - jp: "あと２年で大学を卒業するし、将来 **について** もっと真剣に考えよう。"
-    cn: ""
-  - jp: "I'm going to graduate from university in two years, so I should think more"
-    cn: ""
-  - jp: "seriously about my future."
-    cn: ""
-  - jp: "この本は、YouTubeを使い方 **について** 書かれている。"
-    cn: ""
-  - jp: "This book is about how to use YouTube."
-    cn: ""
-  - jp: "先週受けたJLPT **について** 作文を書きました。"
-    cn: ""
-  - jp: "I wrote an essay about the JLPT I took last week."
-    cn: ""
-  - jp: "あ、先生から来週のパーティー **について** メールが来た。"
-    cn: ""
-  - jp: "Oh, I got an email from the teacher about the party next week."
-    cn: ""
-  - jp: "その事件 **について** 、知っていることを全部話してください。"
-    cn: ""
-  - jp: "Please tell me everything you know about the incident."
-    cn: ""
-  - jp: "転職 **について** 先輩に相談した。"
-    cn: ""
-  - jp: "I talked to my senior about changing jobs"
-    cn: ""
+  - 〜のことを
+  - 話す・聞く・考える・書く・調べるなどの行為の対象を言う時に使う表現。
+  zh:
+  - 关于
+name: 〜について
+tags:
+- 意図的行为
+- 动作の开始と终了

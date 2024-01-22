@@ -1,55 +1,25 @@
-pattern: 〜ような / ように（例示）
+conjugations:
+- V（普通形） + ような / ように
+- Nの + ような / ように
+examples:
+- jp: 彼が持っている **ような** 鞄が欲しいです。
+  zh: 我想要一个像他拿著那样的包。
+- jp: チョコレートの **ような** 甘い物が好きです。
+  zh: 我喜欢像巧克力之类的甜食。
+- jp: 彼の **ように** 英語が上手に話せる **ように** なりたい。
+  zh: 我想和他一样那么擅长说英语。
+- jp: 子供でもわかる **ように** 、わかりやすい言葉で説明してください。
+  zh: 请用孩子也能理解那样，易懂的词来说明。
+explanations:
+- 話し言葉では「〜みたいな」を使う
 level: N4
 meanings:
+  en:
+  - Used to explain something by showing an example.
   jp:
-    - "具体的な例を挙げる時に使う"
-  cn:
-conjugations:
-  - "V（普通形） + ような / ようにNの + ような / ように"
-explanations:
-  - "話し言葉では「〜みたいな」を使う"
-examples:
-  - jp: "彼が持っている **ような** 鞄が欲しいです。"
-    cn: ""
-  - jp: "I want a bag like the one he has."
-    cn: ""
-  - jp: "彼はまだ小学生なのに、大人が読む **ような** 難しい本を読んでいます。"
-    cn: ""
-  - jp: "He is still in elementary school, but he reads difficult books like adults."
-    cn: ""
-  - jp: "私は大阪の **ような** 賑やかな街が好きです。"
-    cn: ""
-  - jp: "I like bustling cities like Osaka."
-    cn: ""
-  - jp: "私は父の **ような** 真面目な人になりたいです。"
-    cn: ""
-  - jp: "I want to be a diligent person like my father."
-    cn: ""
-  - jp: "チョコレートの **ような** 甘い物が大好きです。"
-    cn: ""
-  - jp: "I love sweets like chocolate."
-    cn: ""
-  - jp: "彼の **ように** 日本語が上手に話せるようになりたい。"
-    cn: ""
-  - jp: "I want to be able to speak Japanese as well as he does."
-    cn: ""
-  - jp: "子供でもわかる **ように** 、わかりやすい言葉で説明してください。"
-    cn: ""
-  - jp: "Please explain in a simple manner that even a child can understand."
-    cn: ""
-  - jp: "一度でいいから、王様の **ような** 暮らしがしてみたい。"
-    cn: ""
-  - jp: "I want to live like a king, just once."
-    cn: ""
-  - jp: "## 比喩の「ようだ」と例示の「ようだ」の判別方法"
-    cn: ""
-  - jp: "「ようだ」よりも前に「まるで」と「たとえば」を置いてみる。"
-    cn: ""
-  - jp: "「まるで」が当てはまれば比喩、「たとえば」が当てはまれば例示。"
-    cn: ""
-  - jp: ""
-    cn: ""
-  - jp: "比喩： 彼は（まるで）日本人の **ように** 、流暢な日本語を話す。"
-    cn: ""
-  - jp: "例示：（例えば）トムさんの **ように** 日本語が上手に話せるようになりたい。"
-    cn: ""
+  - 具体的な例を挙げる時に使う
+  zh:
+  - 像…那样
+name: 〜ような / ように（例示）
+tags:
+- 例示

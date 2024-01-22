@@ -1,73 +1,24 @@
-pattern: 〜終わる
+conjugations:
+- V（ます形） ~~ます~~ \+ 終わる
+examples:
+- jp: やっと、レポートが **書き終わった** 。
+  zh: 终于写好了报告！
+- jp: この本 **読み終わった** んなら借りてもいいよね？
+  zh: 这本书读完了可以借给我吧？
+- jp: パソコンを **使い終わった** ら、電源は
+  zh: 切っておいてください。使用完笔电后，请把电源给关了。
+explanations:
+- 自然現象や生理現象には使うことができない。
+- 例：雨が降り終わる / 赤ん坊が泣き終わる
 level: N4
 meanings:
+  en:
+  - '"finish doing"'
+  - Indicates the end of an action.
   jp:
-    - "動作の終わりを表す。"
-  cn:
-conjugations:
-  - "V（ます形） ~~ます~~ + 終わる"
-explanations:
-  - "自然現象や生理現象には使うことができない。例：雨が降り終わる / 赤ん坊が泣き終わる"
-examples:
-  - jp: "今日はもう勉強し **終わった** ので、ゆっくり映画でも見ます。"
-    cn: ""
-  - jp: "I've finished studying today, so I'm going to watch a movie."
-    cn: ""
-  - jp: "この本読み **終わった** んなら借りてもいいよね？"
-    cn: ""
-  - jp: "If you've finished reading this book, I can borrow it, right?"
-    cn: ""
-  - jp: "作文が書き **終わった** 人から帰ってもいいです。"
-    cn: ""
-  - jp: "The person who has finished writing the essay can go home first."
-    cn: ""
-  - jp: "DVDを見 **終わった** ので、TSUTAYAに返しに行きます。"
-    cn: ""
-  - jp: "I've finished watching the DVD, so I'm going to return it to TSUTAYA."
-    cn: ""
-  - jp: "私が話 **終わって** から、質問してください。あとで、質問の時間をとりますから。"
-    cn: ""
-  - jp: "Please ask questions after I finish talking. I'll give you time for questions"
-    cn: ""
-  - jp: "later."
-    cn: ""
-  - jp: "アイロンをかけ **終わった** ら、棚にしまっておいて。"
-    cn: ""
-  - jp: "When you finish ironing, please put it away on the shelf."
-    cn: ""
-  - jp: "パソコンを使い **終わった** ら、電源は切っておいてください。"
-    cn: ""
-  - jp: "When you finish using the computer, please turn it off."
-    cn: ""
-  - jp: "食べ **終わった** んなら、食器を片ずけなさい。"
-    cn: ""
-  - jp: "If you've finished eating, please put away the dishes."
-    cn: ""
-  - jp: "飲み **終わった** ペットボトルはこちらに捨ててください。"
-    cn: ""
-  - jp: "Please throw away the plastic bottles if you have finished drinking."
-    cn: ""
-  - jp: "早く問題を解き **終わった** 人は間違いがないかもう一度チェックしてくださいね。"
-    cn: ""
-  - jp: "If you finish solving questions quickly, please check again if you have"
-    cn: ""
-  - jp: "mistakes."
-    cn: ""
-  - jp: "田中さんがこの曲を **終わった** ら、帰りましょう。"
-    cn: ""
-  - jp: "When Mr. Tanaka finishes singing this song, let's go home."
-    cn: ""
-  - jp: "部屋を掃除し **終わった** し、宿題もやったから遊びに行ってもいいよね？"
-    cn: ""
-  - jp: "I've finished cleaning my room and I've done my homework, so I can go play,"
-    cn: ""
-  - jp: "right?"
-    cn: ""
-  - jp: "やっと、レポートが書き **終わった** 。"
-    cn: ""
-  - jp: "I've finally finished writing my report."
-    cn: ""
-  - jp: "ハサミを使い **終わった** ら、もとの場所に戻しておいてください。"
-    cn: ""
-  - jp: "When you finish using the scissors, please put them back where they belong."
-    cn: ""
+  - 動作の終わりを表す。
+  zh:
+  - …完
+name: 〜終わる
+tags:
+- 动作的结束

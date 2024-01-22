@@ -1,69 +1,24 @@
-pattern: 〜ないでください
+conjugations:
+- V(ない形) + ないでください
+examples:
+- jp: そちらの絵に **触らないでください** 。
+  zh: 请不要触碰那里的画。
+- jp: ここではタバコを **吸わないでください** 。
+  zh: 请不要在这里吸烟。
+- jp: 部屋のかぎを **忘れないでください** 。
+  zh: 请别忘了房间的钥匙。
+- jp: 無理を **しないでください** 。
+  zh: 请不要勉强。
+explanations: []
 level: N5
 meanings:
+  en:
+  - '"please don''t do / giving warning not to do"'
+  - Used to ask someone not to do something.
   jp:
-    - "何かをしないように指示する表現。"
-  cn:
-conjugations:
-  - "V(ない形) + ないでくださいのむ → のまないでくださいたべる → たべないでくださいみる → みないでください"
-examples:
-  - jp: "そちらの絵に触らない **でください** 。"
-    cn: ""
-  - jp: "Please don't touch that picture."
-    cn: ""
-  - jp: "それは売り物ですから、座らない **でください** 。"
-    cn: ""
-  - jp: "It's for sale, so don't sit on it."
-    cn: ""
-  - jp: "映画館の中で写真を撮らない **でください** 。"
-    cn: ""
-  - jp: "Please don't take pictures in the theater."
-    cn: ""
-  - jp: "後で使いますから、コンピューターの電源は切らない **でください** 。"
-    cn: ""
-  - jp: "Please don’t turn off your computer as we will use it later."
-    cn: ""
-  - jp: "ここではタバコを吸わない **でください** 。"
-    cn: ""
-  - jp: "Please do not smoke in this area."
-    cn: ""
-  - jp: "動物にエサを与えない **でください** 。"
-    cn: ""
-  - jp: "Please do not feed the animals."
-    cn: ""
-  - jp: "ここにゴミを捨てない **でください** 。"
-    cn: ""
-  - jp: "Please do not throw garbage here."
-    cn: ""
-  - jp: "ここに自転車をとめない **でください** 。"
-    cn: ""
-  - jp: "Please do not park your bicycles here."
-    cn: ""
-  - jp: "授業中に寝ない **でください** 。"
-    cn: ""
-  - jp: "Please do not sleep during the class."
-    cn: ""
-  - jp: "すみません、窓を開けない **でください** 。"
-    cn: ""
-  - jp: "Please do not open the windows."
-    cn: ""
-  - jp: "今日はお風呂に入らない **でください** 。"
-    cn: ""
-  - jp: "Please don't take a bath today."
-    cn: ""
-  - jp: "ちょっと、押さない **でくださいよ** 。"
-    cn: ""
-  - jp: "Hey, don't push me."
-    cn: ""
-  - jp: "そこには入らない **でください** 。"
-    cn: ""
-  - jp: "Please don't go in there."
-    cn: ""
-  - jp: "図書館では食べたり、飲んだりしない **でください** 。"
-    cn: ""
-  - jp: "Please don't eat or drink in the library."
-    cn: ""
-  - jp: "図書館では、うるさくしない **でください** 。"
-    cn: ""
-  - jp: "Please don't be noisy in the library."
-    cn: ""
+  - 何かをしないように指示する表現。
+  zh:
+  - 请不要…
+name: 〜ないでください
+tags:
+- 否定

@@ -1,84 +1,26 @@
-pattern: 〜さえ・・・
+conjugations:
+- V（ます形） ~~ます~~ \+ さえ
+- N + さえ
+examples:
+- jp: １年も日本語を勉強したのに、 **ひらがなさえ** 書けない。
+  zh: 学了一年的日语，连平假名都不会写。
+- jp: トムさんは私のスマホを壊したのに、 **謝りさえ** しなかった。
+  zh: 汤姆把我的手机摔坏了，却连道歉都没有。
+- jp: 忙しすぎて、ご飯を **食べる時間さえ** ない。
+  zh: 太忙了，连吃饭的时间都没有。
+- jp: こんな **私でさえ** ９０点が取れたので、今回のテストは簡単だったのだろう。
+  zh: 连我都能考到90分，所以这次考试算是很简单吧。
+explanations:
+- 話し手の驚きやあきれた気持ちが含まれる。
+- マイナスに意味で使うことがほどんど。
 level: N3
 meanings:
+  en:
+  - even
   jp:
-    - "〜も"
-    - "「～もそうだから、他も当然そうだ。」ということを暗示する。"
-  cn:
-conjugations:
-  - "V（ます形） ~~ます~~ + さえN + さえ"
-explanations:
-  - "話し手の驚きやあきれた気持ちが含まれる。マイナスに意味で使うことがほどんど。"
-examples:
-  - jp: "ジョンさんは１年も日本語を勉強したのに、ひらがな **さえ** 書けない。"
-    cn: ""
-  - jp: "John had studied Japanese for a year, but he couldn't even write hiragana."
-    cn: ""
-  - jp: "食事すること **さえ** 忘れてしまうほど、彼は研究に熱中していた。"
-    cn: ""
-  - jp: "He was so absorbed in his research that he even forgot to eat."
-    cn: ""
-  - jp: "田中さんは親友に **さえ** 知らせず、海外へ移住してしまった。"
-    cn: ""
-  - jp: "Mr. Tanaka moved abroad without even informing his best friend."
-    cn: ""
-  - jp: "退職することを両親に **さえ** 相談せずに決めた。"
-    cn: ""
-  - jp: "I decided to retire without even consulting my parents."
-    cn: ""
-  - jp: "今年の新入社員は挨拶 **さえ** 、きちんとできなくて困っている。"
-    cn: ""
-  - jp: "This year's new employees can't even greet each other properly, which is a"
-    cn: ""
-  - jp: "problem for me."
-    cn: ""
-  - jp: "私の妻は、卵 **さえ** 割れないほど料理が下手だ。"
-    cn: ""
-  - jp: "My wife is such a bad cook that she can't even crack open an egg."
-    cn: ""
-  - jp: "忙しすぎて、ご飯を食べる時間 **さえ** ない。"
-    cn: ""
-  - jp: "I'm so busy, I don't even have time to eat."
-    cn: ""
-  - jp: "１年も一緒に働いているのに、彼女は私の名前 **さえ** 覚えてくれない。"
-    cn: ""
-  - jp: "She doesn't even remember my name even though we have been working together"
-    cn: ""
-  - jp: "for a year."
-    cn: ""
-  - jp: "こんな私で **さえ** ９０点が取れたので、今回のテストは簡単だったのだろう。"
-    cn: ""
-  - jp: "Even I was able to get 90 points, so this exam would have been easy."
-    cn: ""
-  - jp: "ミニマリストの田中さんの部屋には机 **さえ** ない。"
-    cn: ""
-  - jp: "Mr. Tanaka, a minimalist, doesn't even have a desk in his room."
-    cn: ""
-  - jp: "喉が痛くて、水 **さえ** 飲めない。"
-    cn: ""
-  - jp: "My throat is so sore I can't even drink water."
-    cn: ""
-  - jp: "私は彼のことが大嫌いなので、顔 **さえ** 見たくない。"
-    cn: ""
-  - jp: "I hate him so much that I don't even want to see his face."
-    cn: ""
-  - jp: "こんな簡単な問題 **さえ** 解けないのであれば、もう１年勉強し直した方がいいよ。"
-    cn: ""
-  - jp: "If you can't even solve a simple problem like this, you'd better study for"
-    cn: ""
-  - jp: "another year."
-    cn: ""
-  - jp: "来週、海外へ出張なのに、彼はまだホテルの予約 **さえ** していない。"
-    cn: ""
-  - jp: "He's going on a business trip abroad next week, but he hasn't even booked a"
-    cn: ""
-  - jp: "hotel room yet."
-    cn: ""
-  - jp: "トムさんは私のスマホを壊したのに、謝り **さえ** しなかった。"
-    cn: ""
-  - jp: "Tom broke my phone, but he didn't even apologize."
-    cn: ""
-  - jp: "お金持ちのジェームスさんは一人で電車に **さえ** 乗ったことがないらしい。"
-    cn: ""
-  - jp: "Mr. James, a rich man, has never even taken a train by himself."
-    cn: ""
+  - 〜も
+  - 「～もそうだから、他も当然そうだ。」ということを暗示する。
+  zh:
+  - 甚至连... (軽重の强调)
+name: 〜さえ・・・
+tags: []

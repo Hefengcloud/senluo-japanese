@@ -1,45 +1,22 @@
-pattern: 〜って
+conjugations:
+- N + って
+examples:
+- jp: これはビビンバ **っていう** 韓国の食べ物だよ。
+  zh: 这是叫做石锅拌饭的韩国料理哦。
+- jp: みんなの日本語 **っていう** 教科書が一番有名だよね。
+  zh: 叫《大家的日本语》的课本是最有名的吧。
+- jp: Hermes **っていう** 鞄が最近、人気があるらしいね。
+  zh: 爱马仕牌子的包包最近，好像很流行呢。
+explanations: []
 level: N4
 meanings:
+  en:
+  - named / called
   jp:
-    - "人や物の名前をいう時に使う表現。"
-    - "話し言葉。「〜っていう」とも言える。"
-    - "書き言葉は「〜という」。"
-  cn:
-conjugations:
-  - "N + って"
-examples:
-  - jp: "リュウさん、さっき田中さん **って** 人が探してたよ。"
-    cn: ""
-  - jp: "Mr. Ryu, a man named Mr. Tanaka was looking for you earlier."
-    cn: ""
-  - jp: "これはたこ焼き **っていう** 食べ物だよ。"
-    cn: ""
-  - jp: "This food is called takoyaki."
-    cn: ""
-  - jp: "夏目漱石 **って** 人が書いた本を読んだんけど、とても難しくてわからなかった。"
-    cn: ""
-  - jp: "I read a book written by a man named Soseki Natsume, but it was very difficult"
-    cn: ""
-  - jp: "to understand."
-    cn: ""
-  - jp: "マルイ **っていう** デパートに行ったことある？"
-    cn: ""
-  - jp: "Have you ever been to a department store called Marui?"
-    cn: ""
-  - jp: "みんなの日本語 **っていう** 教科書が一番有名だよね。"
-    cn: ""
-  - jp: "The most famous textbook is Minna no Nihongo, isn’t it?"
-    cn: ""
-  - jp: "ナルト **っていう** 漫画が面白いらしいよ。"
-    cn: ""
-  - jp: "I heard that a manga called Naruto is very interesting."
-    cn: ""
-  - jp: "anello **っていう** 鞄が最近、人気があるらしいね。"
-    cn: ""
-  - jp: "I heard that a bag called anello is very popular these days."
-    cn: ""
-  - jp: "これはじゃんけん **っていう** ゲームだよ。"
-    cn: ""
-  - jp: "This is a game called janken(rock, paper, scissors)."
-    cn: ""
+  - 人や物の名前をいう時に使う表現。
+  - 話し言葉。「〜っていう」とも言える。
+  zh:
+  - 说明名字
+name: 〜って
+tags:
+- 名前の绍介

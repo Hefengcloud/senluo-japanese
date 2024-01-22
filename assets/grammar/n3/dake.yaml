@@ -1,26 +1,25 @@
-pattern: 〜だけ
+conjugations:
+- 普通形（肯定形）＋ だけ
+- ※Nにはつかない。
+examples:
+- jp: あしたは **できるだけ** 早く来てください。
+  zh: 明早请尽可能早些来。
+- jp: '**わかっているだけ** のことはもう全部 話しました。'
+  zh: 把知道的已经尽可能全说了。
+- jp: どうぞ、 **好きなだけ** 食べてくださいね。
+  zh: 请，想吃多少就吃多少哦。
+- jp: 泣きたいときは、我慢せず **泣きたいだけ** 泣けばいいんですよ。
+  zh: 想哭的时候，不要忍住，想哭就哭吧。
+explanations: []
 level: N3
 meanings:
+  en:
+  - as much as
   jp:
-    - "～の範囲は全部て"
-    - "「～の範囲の限界まで～する」と言いたいときに使う。"
-  cn:
-conjugations:
-  - "普通形（肯定形）＋ だけ※Nにはつかない。"
-examples:
-  - jp: "できる **だけ** 水を飲むようにしてください。"
-    cn: ""
-  - jp: "Please try to drink water as much as possible."
-    cn: ""
-  - jp: "どうぞ、好きな **だけ** 食べてくださいね。"
-    cn: ""
-  - jp: "Please eat as much as you want."
-    cn: ""
-  - jp: "やれる **だけ** のことはやったので、もう後悔はありません。"
-    cn: ""
-  - jp: "I've done all I can do, so I have no regrets."
-    cn: ""
-  - jp: "泣きたいときは、我慢せず泣きたい **だけ** 泣けばいいんですよ。"
-    cn: ""
-  - jp: "If you want to cry, don't hold back, just cry as much as you want."
-    cn: ""
+  - ～の範囲は全部て
+  - 「～の範囲の限界まで～する」と言いたいときに使う。
+  zh:
+  - 在...范围内
+  - 尽可能(限界)
+name: 〜だけ
+tags: []

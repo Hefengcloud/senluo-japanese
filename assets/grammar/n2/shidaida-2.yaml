@@ -1,0 +1,21 @@
+conjugations:
+- V（普通形）+ 次第だ
+- イA（普通形）+ 次第だ
+- ナAである + 次第だ
+- Nである + 次第だ
+examples:
+- jp: 以上のような **次第で** 、来週の工場見学は中止にさせていただきます。
+  zh: 由于以上的问题，中止下周的工厂参观。
+explanations: []
+level: N2
+meanings:
+  en:
+  - depends on
+  jp:
+  - 〜わけだ / 〜という事情だ
+  zh:
+  - 因此
+name: 〜次第だ / 〜次第で
+tags:
+- 経过
+- 结末

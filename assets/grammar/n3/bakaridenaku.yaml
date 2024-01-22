@@ -1,33 +1,30 @@
-pattern: 〜ばかりでなく
+conjugations:
+- '**普通形 + ばかりでなく**'
+- ・V（普） \+ ばかりでなく
+- ・イA + ばかりでなく
+- ・ナA な + ばかりでなく
+- ・ナAである + ばかりでなく
+- ・N + ばかりでなく
+examples:
+- jp: ～だけでなく」
+  zh: ＝
+- jp: 昨日、鈴木さんにご馳走してもらった **ばかりでなく** 、お土産までいただきました。
+  zh: 昨天，铃木不仅请我吃饭，还送了我手信。
+- jp: 今日は頭が痛い **ばかりでなく** 、吐き気もするし、少々熱もあるんです。
+  zh: 我今天不仅头疼，还恶心，有点发烧。
+- jp: ジスは綺麗な **ばかりでなく** 、頭もいい。
+  zh: 智秀不仅长得漂亮，还很聪明。
+- jp: 彼は昨日 **ばかりでなく** 、今日も遅刻した。
+  zh: 他不仅昨天，今天也迟到了。
+explanations: []
 level: N3
 meanings:
+  en:
+  - not only, but
   jp:
-    - "～だけでなく"
-  cn:
-conjugations:
-  - "普通形 + ばかりでなく**・V（普） + ばかりでなく・イA + ばかりでなく・ナA な + ばかりでなく・ナAである + ばかりでなく・N + ばかりでなく"
-examples:
-  - jp: "彼女は英語 **ばかりでなく** 、韓国語も話せる。"
-    cn: ""
-  - jp: "She speaks not only English, but also Korean."
-    cn: ""
-  - jp: "トムさんは昨日 **ばかりでなく** 、今日も遅刻した。"
-    cn: ""
-  - jp: "Tom was late not only yesterday, but also today."
-    cn: ""
-  - jp: "ジェシカさんは綺麗な **ばかりでなく** 、頭もいい。"
-    cn: ""
-  - jp: "Jessica is not only beautiful but also smart."
-    cn: ""
-  - jp: "日本で生活をすると、日本語 **ばかりでなくなく** 日本の文化や習慣なども学ぶことができる。"
-    cn: ""
-  - jp: "When you live in Japan, you can learn not only Japanese language, but also"
-    cn: ""
-  - jp: "Japanese culture and customs."
-    cn: ""
-  - jp: "昨日、鈴木さんにご馳走してもらった **ばかりでなく** 、お土産までいただきました。"
-    cn: ""
-  - jp: "Yesterday, Mr. Suzuki not only treated me to a delicious meal, but also gave"
-    cn: ""
-  - jp: "me some souvenirs."
-    cn: ""
+  - ～だけでなく
+  zh:
+  - '不只是... '
+name: 〜ばかりでなく
+tags:
+- 非限定

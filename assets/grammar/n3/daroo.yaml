@@ -1,50 +1,19 @@
-pattern: （なんて）〜だろう
+conjugations:
+- 普通形 + だろう
+examples:
+- jp: '**なんて** 美味しい料理なんだろう。こんな料理なら毎日でも食べられるよ。'
+  zh: 多么美味的料理啊。 这样的料理，我可以每天都吃。
+- jp: iPhoneを初めて触った時、 **なんて** 素晴らしい発明だろうと思いました。
+  zh: 当我第一次接触 iPhone 时，觉得是个多么美妙的发明啊。
+- jp: '**なんて** 失礼な人なんだろう。'
+  zh: 多么无礼的人。
+explanations: []
 level: N3
 meanings:
   jp:
-    - "非常に〜だ"
-    - "感激したことや驚いたことを気持ちを込めて言う表現。"
-  cn:
-conjugations:
-  - "普通形 + だろう"
-examples:
-  - jp: "あぁ、 **なんて** 美しい人なん **だろう** 。あんなに綺麗な人に今まであったことがない。"
-    cn: ""
-  - jp: "Oh, what a beautiful person. I've never met anyone so beautiful in my life."
-    cn: ""
-  - jp: "**なんて** 美味しい料理なん **だろう** 。こんな料理なら毎日でも食べられるよ。"
-    cn: ""
-  - jp: "What delicious food. I could eat this kind of food every day."
-    cn: ""
-  - jp: "初めてインターネットを使った時、 **なんて** 便利なん **だろう** と思いました。"
-    cn: ""
-  - jp: "When I used the Internet for the first time, I thought how convenient it was."
-    cn: ""
-  - jp: "iPhoneを初めて触った時、 **なんて** 素晴らしい発明 **だろう** と思いました。"
-    cn: ""
-  - jp: "When I first touched the iPhone, I thought what a wonderful invention it was."
-    cn: ""
-  - jp: "わぁ、 **なんて** 軽いの **だろう** 。このノートパソコンなら持ち運びも楽チンだね。"
-    cn: ""
-  - jp: "Wow, how light it is. This laptop is so easy to carry around."
-    cn: ""
-  - jp: "**なんて** 恐ろしい話なん **だろう** 。"
-    cn: ""
-  - jp: "What a horrible story."
-    cn: ""
-  - jp: "あぁ、 **なんて** 素敵な人なん **だろう** 。あんな人にこれまで出会ったことがないわ。"
-    cn: ""
-  - jp: "Oh, what a wonderful person. I've never met anyone like him before."
-    cn: ""
-  - jp: "今日は **なんて** 素晴らしい日なん **だろう** 。"
-    cn: ""
-  - jp: "What a wonderful day."
-    cn: ""
-  - jp: "**なんて** 失礼な人なん **だろう** 。"
-    cn: ""
-  - jp: "What a rude person."
-    cn: ""
-  - jp: "**なんて** つまらない本なん **だろう** 。買って損したわ。"
-    cn: ""
-  - jp: "What a boring book. It's a waste of money"
-    cn: ""
+  - 非常に〜だ
+  zh:
+  - 非常...、多么…啊 
+name: （なんて）〜だろう
+tags:
+- 感叹

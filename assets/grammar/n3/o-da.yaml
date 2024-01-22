@@ -1,25 +1,19 @@
-pattern: お〜だ
+conjugations:
+- お+ V（ます形） ~~ます~~ \+ だ
+examples:
+- jp: どのようなお部屋を **お探しですか** 。
+  zh: 您要找怎么样的房间？
+- jp: 貸出カード（図書カード）を **お持ちですか** 。
+  zh: 您有借书卡（借阅证）吗？
+- jp: ロビーで木村さんが **お待ちです** 。
+  zh: 木村先生在大厅等您。
+explanations: []
 level: N3
 meanings:
   jp:
-    - "「〜ていらっしゃる」の簡潔な言い方"
-  cn:
-conjugations:
-  - "お+ V（ます形） ~~ます~~ + だ"
-examples:
-  - jp: "どのようなお部屋を **お探しですか** 。"
-    cn: ""
-  - jp: "What type of room are you looking for?"
-    cn: ""
-  - jp: "貸出カード（図書カード）を **お持ちですか** 。"
-    cn: ""
-  - jp: "Do you have a library card"
-    cn: ""
-  - jp: "部長、○○商事の木村様が **お見えです** 。"
-    cn: ""
-  - jp: "General Manager, Mr. Kimura from XX Corporation is here to see you."
-    cn: ""
-  - jp: "ロビーで木村様が **お待ちです** 。"
-    cn: ""
-  - jp: "Mr. Kimura is waiting for you in the lobby."
-    cn: ""
+  - 「〜ていらっしゃる」の簡潔な言い方
+  zh:
+  - 「〜ていらっしゃる」的简洁说法
+name: お〜だ
+tags:
+- 尊敬语

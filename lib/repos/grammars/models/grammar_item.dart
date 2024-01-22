@@ -73,11 +73,11 @@ class GrammarItem extends Equatable {
 
     return GrammarItem(
       key: key,
-      name: yaml['pattern'],
+      name: yaml['name'],
       level: JLPTLevel.fromString(yaml['level']),
       meaning: Meaning(
         jps: meaning['jp']?.map<String>((e) => e.toString()).toList() ?? [],
-        zhs: meaning['cn']?.map<String>((e) => e.toString()).toList() ?? [],
+        zhs: meaning['zh']?.map<String>((e) => e.toString()).toList() ?? [],
         ens: meaning['en']?.map<String>((e) => e.toString()).toList() ?? [],
       ),
       conjugations:
@@ -88,7 +88,7 @@ class GrammarItem extends Equatable {
           .map<Example>((e) => Example(
                 en: e['en'] ?? '',
                 jp: e['jp'] ?? '',
-                zh: e['cn'] ?? '',
+                zh: e['zh'] ?? '',
               ))
           .toList(),
     );
@@ -98,11 +98,11 @@ class GrammarItem extends Equatable {
     // Meanings
     final Map<String, dynamic> meaning = jsonDecode(model.meaning);
     final jpMeanings = meaning['jp'].map<String>((e) => e.toString()).toList();
-    final cnMeanings = meaning['cn'].map<String>((e) => e.toString()).toList();
+    final cnMeanings = meaning['zh'].map<String>((e) => e.toString()).toList();
 
     // Examples
     final examples = jsonDecode(model.example)
-        .map<Example>((e) => Example(jp: e['jp'], zh: e['cn'], en: e['en']))
+        .map<Example>((e) => Example(jp: e['jp'], zh: e['zh'], en: e['en']))
         .toList();
     return GrammarItem(
       key: '',

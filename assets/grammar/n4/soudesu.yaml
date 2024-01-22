@@ -1,11 +1,13 @@
-pattern: 〜そうです（伝聞）
+conjugations:
+- 普通形 + そうです
+examples: []
+explanations: []
 level: N4
 meanings:
+  en:
+  - '"I heard"'
+  - Expressions used to convey information you have seen or heard from others.
   jp:
-    - "見たり、聞いた情報を他の人に伝えるときに使われる表現。"
-  cn:
-conjugations:
-  - "普通形 + そうです"
-examples:
-  - jp: ""
-    cn: ""
+  - 見たり、聞いた情報を他の人に伝えるときに使われる表現。
+name: 〜そうです（伝聞）
+tags: []

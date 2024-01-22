@@ -1,52 +1,24 @@
-pattern: たとえ〜ても
+conjugations:
+- V（テ形）も
+- イAくても
+- ナAでも
+- Nでも / Nであっても
+examples:
+- jp: '**たとえ** 親に反対されても、私たちは結婚するつもりだ。'
+  zh: 即使父母反对，我们也要结婚。
+- jp: '**たとえ** 忙しくても、毎日恋人に連絡するようにしている。'
+  zh: 即使很忙，我也尽量每天联系我的爱人。
+- jp: '**たとえ** 困難でも、最後までがんばりたい。'
+  zh: 即使困难重重，我还是想努力到最后。
+- jp: '**たとえ** 彼のしたことが事実であったとしても、私が彼を嫌いになることはない。'
+  zh: 就算真的是他做的，我也不会讨厌他。
+explanations: []
 level: N3
 meanings:
   jp:
-    - "もし仮に〜という状況になったとしても"
-    - "前件の状況が成立したとしても 、後件に来る事柄に影響しないことを表す。"
-  cn:
-conjugations:
-  - "V（テ形）もイAくてもナAでもNでも / Nであっても"
-examples:
-  - jp: "**たとえ** 忙しく **ても** 、毎日恋人に連絡するようにしている。"
-    cn: ""
-  - jp: "I try to contact my girlfriend every day, even if I am busy."
-    cn: ""
-  - jp: "**たとえ** 冗談であったとし **ても** 、相手の傷つくことを言ってはいけない。"
-    cn: ""
-  - jp: "Don't say anything hurtful to the other person, even if it is a joke."
-    cn: ""
-  - jp: "**たとえ** 手術をしたとし **ても** 、助かる見込みはなかったでしょう。"
-    cn: ""
-  - jp: "Even if you had the surgery, there would have been no chance of survival."
-    cn: ""
-  - jp: "**たとえ** 受かる見込みがなく **ても** 、チャレンジすることは大切だ。"
-    cn: ""
-  - jp: "It's important to challenge even if you have no chance of passing"
-    cn: ""
-  - jp: "**たとえ** 親に反対され **ても** 、私たちは結婚するつもりだ。"
-    cn: ""
-  - jp: "We're going to get married even if our parents are against it."
-    cn: ""
-  - jp: "**たとえ** 余命１年だと言われ **ても** 、僕は最後まで諦めず、病気と戦うつもりだ。"
-    cn: ""
-  - jp: "Even if I am told that I have only one year to live, I will not give up and"
-    cn: ""
-  - jp: "will fight the disease until the end."
-    cn: ""
-  - jp: "**たとえ** 生活が苦しく **ても** 、僕たちは幸せに暮らしています。"
-    cn: ""
-  - jp: "Even if life is difficult, we are living happily together."
-    cn: ""
-  - jp: "**たとえ** 彼のしたことが事実であったとし **ても** 、私が彼を嫌いになることはない。"
-    cn: ""
-  - jp: "Even if what he has done is a fact, I will never hate him."
-    cn: ""
-  - jp: "**たとえ** ５分だけであったとし **ても** 、彼と電話ができて嬉しいです。"
-    cn: ""
-  - jp: "I'm glad to be on the phone with him, even if it's only for five minutes."
-    cn: ""
-  - jp: "**たとえ** 誰に頼まれ **ても** 、絶対にその仕事は引き受けません。"
-    cn: ""
-  - jp: "No matter who asks me to do something, I will never accept the job."
-    cn: ""
+  - '"もし仮に〜という状況になったとしても"'
+  - 前件の状況が成立したとしても 、後件に来る事柄に影響しないことを表す。
+  zh:
+  - 即使...也(逆接条件)
+name: たとえ〜ても
+tags: []

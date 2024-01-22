@@ -1,42 +1,19 @@
-pattern: 〜もの / 〜もん / 〜だもん
+conjugations:
+- V（普） \+ もん
+- ナAな \+ んだもん
+- Nな \+ んだもん
+examples: []
+explanations: []
 level: N2
 meanings:
+  en:
+  - because
   jp:
-    - "〜から"
-    - "くだけた話し言葉。子供がよく使う。"
-  cn:
-conjugations:
-  - "V（普） + もんナAな + んだもんNな + んだもん"
-examples:
-  - jp: "親：一口ちょうだい。"
-    cn: ""
-  - jp: "子：やだ、これ、私の大好物 **だもん** 。"
-    cn: ""
-  - jp: "Parent: Give me a bite."
-    cn: ""
-  - jp: "Child: No way, this is my favorite food."
-    cn: ""
-  - jp: "親：野菜もちゃんと食べなさい。"
-    cn: ""
-  - jp: "子：えー、だって嫌いな **んだもん** 。"
-    cn: ""
-  - jp: "Parent: You should eat your vegetables, too."
-    cn: ""
-  - jp: "Child: Eww, I don't like them."
-    cn: ""
-  - jp: "親：ちょっと、お菓子の食べすぎよ。"
-    cn: ""
-  - jp: "子：だって、美味しい **んだもん** 。"
-    cn: ""
-  - jp: "Parent: Hey, you eat too many sweets."
-    cn: ""
-  - jp: "Child: Because it's delicious."
-    cn: ""
-  - jp: "A：どうして、来なかったの？"
-    cn: ""
-  - jp: "B：だって、知らなかった **ん** **だもん**"
-    cn: ""
-  - jp: "A: Why didn't you come?"
-    cn: ""
-  - jp: "B: Because I didn't know."
-    cn: ""
+  - 〜から
+  - くだけた話し言葉。子供がよく使う。
+  zh:
+  - 因为
+name: 〜もの / 〜もん / 〜だもん
+tags:
+- 原因
+- 理由

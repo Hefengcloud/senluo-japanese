@@ -1,28 +1,24 @@
-pattern: 〜まい（否定の意志）
+conjugations:
+- V（普） \+ まい
+- イAく + あるまい
+- ナAでは + あるまい
+- Nでは + あるまい
+examples:
+- jp: もうあいつには二度と会う **まい** 。
+  zh: ' 再也不见那家伙了。'
+- jp: 料金は高いし、サービスは最悪だし、もう二度とあんな店に行く **まい** 。
+  zh: 价格高，服务又差，不会去那样的店第二次。
+- jp: 熱が徐々に下がり始めたので、心配しすぎる必要はある **まい** 。
+  zh: 发烧已经开始慢慢退了，所以不必太担心吧。
+- jp: 私はさっき幽霊を見たが、誰も信じ **まい** 。
+  zh: 我刚才见鬼了，谁也不会相信吧。
+explanations: []
 level: N2
 meanings:
   jp:
-    - "～しようと思わない"
-    - "強い否定の意志を表す。そのため、主語は１人称となる。"
-  cn:
-conjugations:
-  - "V（普） + まいイAく + あるまいナAでは + あるまいNでは + あるまい"
-examples:
-  - jp: "熱が徐々に下がり始めたので、心配しすぎる必要はある **まい** 。"
-    cn: ""
-  - jp: "The fever has started to go down slowly, so there's no need to worry too much."
-    cn: ""
-  - jp: "私はさっき幽霊を見たが、誰も信じ **まい** 。"
-    cn: ""
-  - jp: "I saw a ghost a while ago, but no one believes me."
-    cn: ""
-  - jp: "末期癌の父に対してできる限りのことをしたが、深刻な状況でこれ以上の回復は見込め **まい** とのことだ。"
-    cn: ""
-  - jp: "They have done all they can for my father, who has terminal cancer, but his"
-    cn: ""
-  - jp: "condition is so serious that he is not expected to recover any further."
-    cn: ""
-  - jp: "散々叱られたんだから、さすがにもう悪さをする **まい** 。"
-    cn: ""
-  - jp: "He's been scolded so much that he won't misbehave anymore."
-    cn: ""
+  - ～ないだろう
+  zh:
+  - ❷ 不会...吧
+name: 〜まい（否定の意志）
+tags:
+- 推量

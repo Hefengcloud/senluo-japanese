@@ -4,6 +4,7 @@ import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_caption_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_title_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
+import 'package:senluo_japanese_cms/widgets/example_sentence_text.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_text.dart';
 
 import '../../../constants/texts.dart';
@@ -74,14 +75,19 @@ class ItemExamplesPreviewView extends StatelessWidget {
             ),
             child: Align(
               alignment: Alignment.centerLeft,
-              child: SentenceText(
+              child: ExampleSentenceText(
                 lines: [
                   example['jp'] ?? '',
                   example['zh'] ?? '',
                   example['en'] ?? '',
                 ],
-                textAlign: TextAlign.left,
-                fontSize: kItemBodyTextSize * fontScaleFactor,
+                mainStyle: TextStyle(
+                  fontSize: kItemBodyTextSize * fontScaleFactor,
+                ),
+                secondaryStyle: TextStyle(
+                  fontSize: (kItemBodyTextSize - 2) * fontScaleFactor,
+                  color: Colors.black54,
+                ),
                 emphasizedColor: kItemMainColor,
                 multipleLines: true,
               ),

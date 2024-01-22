@@ -1,46 +1,19 @@
-pattern: 〜てでも
+conjugations:
+- V（テ形） + でも
+examples:
+- jp: 大好きなアーティストのコンサートなので、い金を払っ **てでも** 行きたい。
+  zh: 因为是我最爱的艺人的演唱会，所以就算花很多钱也想去。
+- jp: 仕事を休ん **ででも** 、オリンピックを見に行くつもりだ。
+  zh: 就算请假，我也要去看奥运会。
+- jp: この店のレビューは星５つで、口コミも良いことしか書かれていないので、長時間並ん **ででも** 食べてみたい。
+  zh: 这家店的评价是五星级，评论里口碑又好，所以即使要排很久也想吃看看。
+explanations: []
 level: N2
 meanings:
   jp:
-    - "〜という手段をとってでも"
-    - "何としてでも、どんな手段を使って実現したいという強い気持ちが含まれる。"
-  cn:
-conjugations:
-  - "V（テ形） + でも"
-examples:
-  - jp: "大好きなアーティストのコンサートなので、高い金を払っ **てでも** 行きたい。"
-    cn: ""
-  - jp: "It's a concert of my favorite artist, so I want to go even if I have to pay a"
-    cn: ""
-  - jp: "lot of money."
-    cn: ""
-  - jp: "決勝戦なので、怪我は少し痛むけど無理し **てでも** 出場したい。"
-    cn: ""
-  - jp: "It's the final game, so I want to participate even if I have to force myself"
-    cn: ""
-  - jp: "even though my injury hurts a little."
-    cn: ""
-  - jp: "この店のレビューは星５つで、口コミも良いことしか書かれていないので、長時間並ん **ででも** 食べてみたい。"
-    cn: ""
-  - jp: "I want to eat at this restaurant even if I have to wait in line for a long"
-    cn: ""
-  - jp: "time because the reviews are 5 stars and only good things have been written"
-    cn: ""
-  - jp: "about it."
-    cn: ""
-  - jp: "芸能人とデートできるなら、100万円払っ **てでも** したい。"
-    cn: ""
-  - jp: "If I could have a date with a celebrity, I would pay a million yen for it."
-    cn: ""
-  - jp: "納期が明日までなので、何とし **てでも** 今日中に終わらせる必要がある。"
-    cn: ""
-  - jp: "The deadline is tomorrow, so I need to finish it today no matter what."
-    cn: ""
-  - jp: "仕事を休ん **ででも** 、オリンピックを見に行くつもりだ。"
-    cn: ""
-  - jp: "I'm going to watch the Olympics even if I have to take a day off of work."
-    cn: ""
-  - jp: "彼は人を騙し **てでも** 、お金稼ぎがしたいと思っているようだ。"
-    cn: ""
-  - jp: "He seems to want to make money even if he has to cheat people."
-    cn: ""
+  - 〜という手段をとってでも
+  zh:
+  - 就算...也要
+name: 〜てでも
+tags:
+- 軽重の强调

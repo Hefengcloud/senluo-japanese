@@ -1,85 +1,25 @@
-pattern: 〜たびに
+conjugations:
+- V（辞書形）+ たびに
+- Nの + たびに
+examples:
+- jp: あの人は会う **たびに** 面白い話を聞かせてくれる。
+  zh: 每次见到那个人都会跟我说一些有趣的话。
+- jp: 父は外国に行く **たびに** 、たくさんおみやげを買ってきてくれる。
+  zh: 爸爸每次出国，都会给我买很多手信/礼物。
+- jp: YouTubeを見る **たびに** 、広告が表示されるのはうんざりだ。
+  zh: 每次看YouTube都会出现广告，好烦。
+explanations:
+- ・当然のこと、習慣的なことには使いにくい。
+- ・後件に否定文・形容詞文はこない。
 level: N3
 meanings:
+  en:
+  - '"whenever" , "every time ~".'
+  - It expresses admiration, frustration, and other such emotions about the same
+  - result occurring whenever a certain situation takes place.
   jp:
-    - "〜のときはいつも / 〜するといつも"
-  cn:
-conjugations:
-  - "V（辞書形）+ たびにNの + たびに"
-explanations:
-  - "当然のこと、習慣的なことには使いにくい。後件に否定文・形容詞文はこない。"
-examples:
-  - jp: "あの人は会う **たびに** 面白い話を聞かせてくれる。"
-    cn: ""
-  - jp: "Whenever I meet him, he always has something interesting to tell me."
-    cn: ""
-  - jp: "父は外国に行く **たびに** 、たくさんおみやげを買ってきてくれる。"
-    cn: ""
-  - jp: "My father brings me a lot of souvenirs every time he goes abroad."
-    cn: ""
-  - jp: "YouTubeを見る **たびに** 、広告が表示されるのはうんざりだ。"
-    cn: ""
-  - jp: "I'm sick of seeing ads on YouTube every time I watch it."
-    cn: ""
-  - jp: "ミスをする **たびに** 部長にしかられる。"
-    cn: ""
-  - jp: "Every time I make a mistake, my boss scolds me."
-    cn: ""
-  - jp: "引越しの **たびに** 荷物が増える。"
-    cn: ""
-  - jp: "Every time I move into a new house, my luggage gets bigger."
-    cn: ""
-  - jp: "あの二人は仲が悪くて、会う **たびに** 喧嘩している。"
-    cn: ""
-  - jp: "The two of them don't get along well and fight every time they meet."
-    cn: ""
-  - jp: "海外旅行する **たびに** 、お腹をこわす。"
-    cn: ""
-  - jp: "Every time I travel abroad, I get sick to my stomach."
-    cn: ""
-  - jp: "私は海外旅行 **のたびに** 、その国の人とできるだけコミュニケーションをとるようにしている。"
-    cn: ""
-  - jp: "Every time I travel abroad, I try to communicate as much as possible with the"
-    cn: ""
-  - jp: "people in the country."
-    cn: ""
-  - jp: "旅行 **のたびに** 、同僚や先輩、上司へのお土産を考えなければならないのは面倒だ。"
-    cn: ""
-  - jp: "I find it troublesome to have to think of souvenirs for my colleagues,"
-    cn: ""
-  - jp: "seniors, and boss every time I travel."
-    cn: ""
-  - jp: "彼は会う **たびに** 、違う女性と一緒にいる。"
-    cn: ""
-  - jp: "Every time I see him, he is with a different woman."
-    cn: ""
-  - jp: "この曲を聞く **たびに** 、彼のことを思い出す。"
-    cn: ""
-  - jp: "Every time I listen to this song, I remember him."
-    cn: ""
-  - jp: "その歌を歌う **たびに** 、幼いころのことを思い出す。"
-    cn: ""
-  - jp: "Every time I sing that song, I remember my childhood."
-    cn: ""
-  - jp: "彼女は会う **たびに** 、綺麗になっていく。"
-    cn: ""
-  - jp: "Every time I see her, she gets more beautiful."
-    cn: ""
-  - jp: "やっちゃん、会う **たびに** 大きくなってるねー。"
-    cn: ""
-  - jp: "Yacchan, you're getting bigger every time I see you."
-    cn: ""
-  - jp: "僕の妻はコンビニに行く **たびに** アイスクリームを買って帰る。"
-    cn: ""
-  - jp: "Every time my wife goes to the convenience store, she buys ice cream to take"
-    cn: ""
-  - jp: "home."
-    cn: ""
-  - jp: "## 誤用例"
-    cn: ""
-  - jp: "当然のこと、習慣的なことを言う場合は使いにくいので、次のような例文は不自然となる。"
-    cn: ""
-  - jp: "例文"
-    cn: ""
-  - jp: "❌ 学校へ行く **たびに** 、勉強します。"
-    cn: ""
+  - 〜のときはいつも / 〜するといつも
+  zh:
+  - 每次(関连・対応)
+name: 〜たびに
+tags: []

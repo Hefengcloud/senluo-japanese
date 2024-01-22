@@ -1,48 +1,20 @@
-pattern: どうやって
+conjugations: []
+examples:
+- jp: これは **どうやって** 使うの。
+  zh: 这个怎么用？
+- jp: 先生、 **どうやって** 漢字を覚えたらいいですか。
+  zh: 老师，我该怎么背汉字好呢？
+- jp: ：駅までは **どうやって** 行きますか。
+  zh: A：到车站怎么走？
+explanations: []
 level: N5
 meanings:
+  en:
+  - This is used to ask the way how to do it.
   jp:
-    - "方法を尋ねる表現。"
-  cn:
-conjugations:
-examples:
-  - jp: "駅まで **どうやって** 行きますか。"
-    cn: ""
-  - jp: "How do you get to the station?"
-    cn: ""
-  - jp: "これは **どうやって** 使いますか。"
-    cn: ""
-  - jp: "How do you use this?"
-    cn: ""
-  - jp: "これは **どうやって** 食べますか。"
-    cn: ""
-  - jp: "How do you eat this?"
-    cn: ""
-  - jp: "すみません、 **どうやって** 切符を買いますか。"
-    cn: ""
-  - jp: "Excuse me, how do you buy a ticket?"
-    cn: ""
-  - jp: "トムさんは毎日 **どうやって** 学校へ来ますか。"
-    cn: ""
-  - jp: "How does Tom come to school every day?"
-    cn: ""
-  - jp: "この文型、田中先生なら **どうやって** 教えますか。"
-    cn: ""
-  - jp: "How would Mr. Tanaka teach this sentence pattern?"
-    cn: ""
-  - jp: "昨日はとても酔っ払っていましたが、 **どうやって** 帰ったんですが？"
-    cn: ""
-  - jp: "How did you get home yesterday when you were so drunk?"
-    cn: ""
-  - jp: "**どうやって** お金をおろしたらいいですか。"
-    cn: ""
-  - jp: "How can I withdraw money?"
-    cn: ""
-  - jp: "先生、 **どうやって** 漢字を覚えたらいいですか。"
-    cn: ""
-  - jp: "Teacher, how can I memorize kanji?"
-    cn: ""
-  - jp: "**どうやって** 日本語を勉強しましたか。"
-    cn: ""
-  - jp: "How did you study Japanese?"
-    cn: ""
+  - 方法を尋ねる表現。
+  zh:
+  - 怎么…
+name: どうやって
+tags:
+- 接续词

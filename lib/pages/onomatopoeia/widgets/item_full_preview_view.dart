@@ -23,11 +23,11 @@ class ItemFullPreviewView extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(
-            top: 128,
+            top: 48,
             bottom: 32,
           ),
           child: SizedBox(
-            height: 250,
+            height: 200,
             child: Image.asset(
               'assets/onomatopoeia/images/${item.key}.png',
             ),

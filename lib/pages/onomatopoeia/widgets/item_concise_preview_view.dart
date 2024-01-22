@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,7 +14,7 @@ class ItemConcisePreviewView extends StatelessWidget {
 
   static const _kJpGoogleFont = 'Zen Maru Gothic';
   static const _kZhFont = 'JiYingHuiPianHeYuan';
-  static const _kBodyFontSize = 24.0;
+  static const _kBodyFontSize = 18.0;
 
   const ItemConcisePreviewView({
     super.key,
@@ -32,7 +31,7 @@ class ItemConcisePreviewView extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const Gap(48),
+          const Gap(32),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -50,8 +49,8 @@ class ItemConcisePreviewView extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 200,
-                height: 200,
+                width: 160,
+                height: 160,
                 child: Image.asset(
                   'assets/onomatopoeia/images/${item.key}.png',
                   fit: BoxFit.contain,
@@ -59,7 +58,7 @@ class ItemConcisePreviewView extends StatelessWidget {
               ),
             ],
           ),
-          const Gap(64),
+          const Gap(32),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -76,24 +75,27 @@ class ItemConcisePreviewView extends StatelessWidget {
               ),
             ],
           ),
-          const Gap(64),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildTitle('例句'),
-              const Gap(16),
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: (examples.isNotEmpty
-                          ? examples
-                          : item.examples.take(2).toList())
-                      .map<Widget>((e) => _buildExamples(e))
-                      .toList(),
+          const Gap(32),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 8),
+                  child: _buildTitle('例句'),
                 ),
-              ),
-            ],
+                const Gap(16),
+                Expanded(
+                  child: ListView(
+                    children: (examples.isNotEmpty
+                            ? examples
+                            : item.examples.take(2).toList())
+                        .map<Widget>((e) => _buildExamples(e))
+                        .toList(),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -101,20 +103,25 @@ class ItemConcisePreviewView extends StatelessWidget {
   }
 
   Widget _buildExamples(Example example) {
-    return ExampleSentenceText(
-      lines: [example['jp']!, example['zh']!],
-      mainStyle: GoogleFonts.getFont(
-        _kJpGoogleFont,
-        fontSize: _kBodyFontSize * fontScaleFactor,
-        fontWeight: FontWeight.bold,
+    return ListTile(
+      contentPadding: const EdgeInsets.all(0),
+      title: ExampleSentenceText(
+        lines: [example['jp']!],
+        mainStyle: GoogleFonts.getFont(
+          _kJpGoogleFont,
+          fontSize: _kBodyFontSize * fontScaleFactor,
+          fontWeight: FontWeight.bold,
+        ),
+        emphasizedColor: kItemMainColor,
       ),
-      secondaryStyle: TextStyle(
-        fontFamily: _kZhFont,
-        fontSize: _kBodyFontSize * fontScaleFactor - 4,
-        color: Colors.black54,
+      subtitle: Text(
+        example['zh']!,
+        style: TextStyle(
+          fontFamily: _kZhFont,
+          fontSize: _kBodyFontSize * fontScaleFactor - 2,
+          color: Colors.black54,
+        ),
       ),
-      multipleLines: true,
-      emphasizedColor: kItemMainColor,
     );
   }
 

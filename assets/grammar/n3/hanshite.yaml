@@ -1,59 +1,22 @@
-pattern: 〜に反して / 〜に反するN
+conjugations:
+- N + に反して
+- N1 + に反する + N2
+examples:
+- jp: 予想 **に反して** 試験はとても易しかったです。
+  zh: 与预想的相反，考试非常简单。
+- jp: 両親の意 **に反して** 、彼らは結婚した。
+  zh: 和父母的意愿相反，他们结婚了。
+- jp: 期待 **に反する** 結果。
+  zh: 与期待相反的结果。
+explanations: []
 level: N3
 meanings:
+  en:
+  - contrary to
   jp:
-    - "〜とは反対に、逆に"
-  cn:
-conjugations:
-  - "N + に反してN1 + に反する + N2"
-examples:
-  - jp: "予想 **に反して** 、試験はとても難しかった。"
-    cn: ""
-  - jp: "Contrary to expectations, the exam was very difficult."
-    cn: ""
-  - jp: "専門家の予想 **に反して** 、景気は回復し始めた。"
-    cn: ""
-  - jp: "Contrary to experts' expectations, the economy began to recover."
-    cn: ""
-  - jp: "両親の意 **に反して** 、彼らは結婚した。"
-    cn: ""
-  - jp: "Contrary to their parents' will, they got married."
-    cn: ""
-  - jp: "両親の期待 **に反して** 、彼は大学へ行かずアルバイトとして働いている。"
-    cn: ""
-  - jp: "Contrary to the expectations of his parents, he is working part-time instead"
-    cn: ""
-  - jp: "of going to college."
-    cn: ""
-  - jp: "周囲の反対意見 **に反して** 、マンション建設が進められた。"
-    cn: ""
-  - jp: "The construction of the condominium went ahead against the opposition of the"
-    cn: ""
-  - jp: "surrounding community."
-    cn: ""
-  - jp: "彼は校則 **に反して** 、こっそりタバコを吸っていた。"
-    cn: ""
-  - jp: "He smoked cigarettes secretly, against school rules."
-    cn: ""
-  - jp: "留学生は日本の法律 **に反して** 、長時間アルバイトをすると退学となり、国へ帰らなければいけません。"
-    cn: ""
-  - jp: "International students who work part-time for long hours in violation of"
-    cn: ""
-  - jp: "Japanese law will be expelled from school and must return to their home"
-    cn: ""
-  - jp: "countries."
-    cn: ""
-  - jp: "それは法律 **に反する** ことなので、私にはできません。"
-    cn: ""
-  - jp: "I cannot do that because it is against the law."
-    cn: ""
-  - jp: "私の希望 **に反して** 、海外支社への転勤を命じられた。"
-    cn: ""
-  - jp: "I was ordered to transfer to an overseas branch office against my wishes"
-    cn: ""
-  - jp: "期待 **に反する** 判決だったので、被告は控訴することにした。"
-    cn: ""
-  - jp: "Since the ruling was contrary to expectations, the defendant decided to"
-    cn: ""
-  - jp: "appeal."
-    cn: ""
+  - 〜とは反対に、逆に
+  zh:
+  - 与...相反
+name: 〜に反して / 〜に反するN
+tags:
+- 対比

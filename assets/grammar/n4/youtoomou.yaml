@@ -1,55 +1,22 @@
-pattern: 〜ようと思う
+conjugations:
+- V（意向形） + と思う
+examples:
+- jp: 今日は給料日なので、欲しかったカバンを **買おうと思います** 。
+  zh: 今天是发薪日，所以打算买我一直想要的包包。
+- jp: 明日は早く **起きようと思います** 。
+  zh: 我明天打算要早起。
+- jp: 授業が簡単すぎるので、もう少し難しい本を買って自分で **勉強しようと思います** 。
+  zh: 课太简单了，我想要买一本稍微难一点的书来自己学习。
+explanations: []
 level: N4
 meanings:
+  en:
+  - This sentence pattern is used to talk about the speaker’s determinations or
+  - plans.
   jp:
-    - "話し手が発話の時点で考えた計画や決心を述べる時に使う表現。"
-  cn:
-conjugations:
-  - "V（意向形） + と思う"
-examples:
-  - jp: "これから、図書館で **勉強しようと思います** 。"
-    cn: ""
-  - jp: "I'm going to study at the library."
-    cn: ""
-  - jp: "今日は給料日なので、欲しかったゲームを **買おうと思います** 。"
-    cn: ""
-  - jp: "Today is payday, so I'm going to buy the game I want."
-    cn: ""
-  - jp: "早く仕事が終わったので、ちょっと飲みに **行こうと思います** 。"
-    cn: ""
-  - jp: "I finished work early, so I'm going out for a drink."
-    cn: ""
-  - jp: "風邪を引いたので、今日はゆっくり家で **休もうと思います** 。"
-    cn: ""
-  - jp: "I caught a cold, so I'm going to take it easy at home today."
-    cn: ""
-  - jp: "明日は早く **起きようと思います** 。"
-    cn: ""
-  - jp: "I'm going to wake up early tomorrow."
-    cn: ""
-  - jp: "忘れ物をしたので、一度家に **帰ろうと思います** 。"
-    cn: ""
-  - jp: "I forgot something, so I'm going to go home once."
-    cn: ""
-  - jp: "夏休みはアルバイトを **増やそうと思います** 。"
-    cn: ""
-  - jp: "I'm going to get another part time job during the summer vacation."
-    cn: ""
-  - jp: "お年玉でゲームを **買おうと思います** 。"
-    cn: ""
-  - jp: "I'm going to buy a video game with my Otoshidama (New Year's allowance)."
-    cn: ""
-  - jp: "授業が簡単すぎるので、もう少し難しい本を買って自分で **勉強しようと思います 。**"
-    cn: ""
-  - jp: "I'm going to buy some more difficult books and study by myself because the"
-    cn: ""
-  - jp: "classes are too easy."
-    cn: ""
-  - jp: "来年はJLPTを受け **ようと思います** 。"
-    cn: ""
-  - jp: "I'm going to take the JLPT next year."
-    cn: ""
-  - jp: "体調が悪いので、今日はもう **帰ろうと思います** 。"
-    cn: ""
-  - jp: "I'm not feeling well, so I think I'll go home now."
-    cn: ""
+  - 話し手が発話の時点で考えた計画や決心を述べる時に使う表現。
+  zh:
+  - 想要...；打算...
+name: 〜ようと思う
+tags:
+- 意志

@@ -1,78 +1,28 @@
-pattern: 〜ことにする
+conjugations:
+- V（辞書形 / ナイ形）+ことにする
+examples:
+- jp: ダイエットのために、お菓子をやめる **ことにします** 。
+  zh: 为了减肥，我决定戒掉甜食。
+- jp: 健康のために、タバコとお酒をやめる **ことにしました** 。
+  zh: 为了健康，我决定戒烟戒酒。
+- jp: わからないことがあったら、まず自分で調べる **ことにします** 。
+  zh: 有什么不懂的时候，我都会先自己查看看。
+- jp: 今夜のパーティーには行かない **ことにしました** 。
+  zh: 我决定今晚不去参加聚会。
+explanations:
+- ・少し硬い表現に「〜こととする」という表現もある。
+- ・自分の意志に関係なく決まったことを言う場合は「〜ことになる」を使う。
 level: N4
 meanings:
+  en:
+  - decide to do
+  - Used to say that you have decided to do or not to do something of your own
+  - volition.
   jp:
-    - "〜すると決める"
-    - "自分の意志で** 〜する、〜しないと決めたことを言う時に使う。"
-  cn:
-conjugations:
-  - "V（辞書形 / ナイ形）+ことにする"
-explanations:
-  - "少し硬い表現に「〜こととする」という表現もある。自分の意志に関係なく決まったことを言う場合は「〜ことになる」を使う。"
-examples:
-  - jp: "明日から、毎日１０分ジョギングをする **ことにしました** 。"
-    cn: ""
-  - jp: "I've decided to start jogging for 10 minutes every day from tomorrow."
-    cn: ""
-  - jp: "次の夏休みは国へ帰る **ことにします** 。"
-    cn: ""
-  - jp: "I'll go back to my country during the next summer vacation."
-    cn: ""
-  - jp: "頭が痛いので、今日は早く寝る **ことにします** 。"
-    cn: ""
-  - jp: "I have a headache, so I'm going to bed early today."
-    cn: ""
-  - jp: "日本語学校を卒業したら、国へ帰って働く **ことにしました** 。"
-    cn: ""
-  - jp: "I've decided to go back to my country and work after graduating from Japanese"
-    cn: ""
-  - jp: "language school."
-    cn: ""
-  - jp: "みんなが真面目に勉強しないので、明後日テストをする **ことにします** 。"
-    cn: ""
-  - jp: "I will do the test the day after tomorrow since everyone does not study"
-    cn: ""
-  - jp: "diligently."
-    cn: ""
-  - jp: "浮気ばかりするから、彼とは別れる **ことにしました** 。"
-    cn: ""
-  - jp: "I've decided to break up with my boyfriend because he keeps cheating on me."
-    cn: ""
-  - jp: "自分の会社を作るために、１２月で会社を辞める **ことにしました** 。"
-    cn: ""
-  - jp: "I've decided to quit my job in December to start my own company."
-    cn: ""
-  - jp: "今夜のパーティーには行かない **ことにしました** 。"
-    cn: ""
-  - jp: "I've decided not to go to the party tonight."
-    cn: ""
-  - jp: "何度教えても、覚えてくれないから、ジョンさんにはもう教えない **ことにしました** 。"
-    cn: ""
-  - jp: "Mr. John would not learn it no matter how many times I taught it to him, so I"
-    cn: ""
-  - jp: "I decided not to teach him anymore."
-    cn: ""
-  - jp: "健康のために、タバコとお酒をやめる **ことにしました** 。"
-    cn: ""
-  - jp: "I've decided to quit smoking and drinking for my health."
-    cn: ""
-  - jp: "ダイエットのために、お菓子をやめる **ことにします** 。"
-    cn: ""
-  - jp: "I'll stop eating sweets to lose weight."
-    cn: ""
-  - jp: "わからないことがあったら、まず自分で調べる **ことにします** 。"
-    cn: ""
-  - jp: "If I don't understand something, I will look it up myself first."
-    cn: ""
-  - jp: "いくら調べてもわからないので、先生に聞く **ことにします** 。"
-    cn: ""
-  - jp: "No matter how much research I do, I can't figure it out, so I'll ask the"
-    cn: ""
-  - jp: "teacher."
-    cn: ""
-  - jp: "大学を卒業後は就職せずに、大学院に行く **ことにします** 。"
-    cn: ""
-  - jp: "After graduating from university, I will not get a job, but will go to"
-    cn: ""
-  - jp: "graduate school."
-    cn: ""
+  - '"〜すると決める"'
+  - '**自分の意志で** 〜する、〜しないと決めたことを言う時に使う。'
+  zh:
+  - 也可以说「Vる／Vないことに决めた」。
+name: 〜ことにする
+tags:
+- 决定

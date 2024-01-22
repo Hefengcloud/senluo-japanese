@@ -80,7 +80,7 @@ class ItemMeaningView extends StatelessWidget {
     required this.title,
     required this.meanings,
     required this.color,
-    this.fontSize = 20,
+    this.fontSize = 16,
   });
 
   @override

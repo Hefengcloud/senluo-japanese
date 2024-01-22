@@ -1,53 +1,23 @@
-pattern: どんな
+conjugations:
+- どんな + N
+examples:
+- jp: マレーシアは **どんな** 国ですか。
+  zh: 马来西亚是个什么样的国家？
+- jp: ' **どんな** 人が好きですが。'
+  zh: 你喜欢怎样的人？
+- jp: ' **どんな** 車が欲しいの？'
+  zh: 你想要什么样的车？
+explanations: []
 level: N5
 meanings:
+  en:
+  - '"what kind of / what sort of"'
+  - Used when you ask about the state or the character of a person, thing, etc.
   jp:
-    - "人や物、場所の特徴について尋ねる文型"
-  cn:
-conjugations:
-  - "どんな + N"
-examples:
-  - jp: "マレーシアは **どんな** 国ですか。"
-    cn: ""
-  - jp: "What is Malaysia like?"
-    cn: ""
-  - jp: "バンコクは **どんな** 街ですか。"
-    cn: ""
-  - jp: "What is Bangkok like?"
-    cn: ""
-  - jp: "納豆は **どんな** 食べ物ですか。"
-    cn: ""
-  - jp: "What kind of food is natto?"
-    cn: ""
-  - jp: "メアリーさんのお父さんは **どんな** 人ですか。"
-    cn: ""
-  - jp: "What is Mary's dad like?"
-    cn: ""
-  - jp: "キムさんは **どんな** 人は好きですか。"
-    cn: ""
-  - jp: "What type of girls/boys do you like, Kim?"
-    cn: ""
-  - jp: "トムさんは **どんな** 車が欲しいの？"
-    cn: ""
-  - jp: "What kind of car does Tom want?"
-    cn: ""
-  - jp: "マイケルさんのお父さんは **どんな** 人ですか？"
-    cn: ""
-  - jp: "What is Michael's dad like?"
-    cn: ""
-  - jp: "A：ジェームスさんは今何が欲しいですか。"
-    cn: ""
-  - jp: "B：パソコンが欲しいです。"
-    cn: ""
-  - jp: "A： **どんな** パソコンが欲しいですか。"
-    cn: ""
-  - jp: "B：Macが欲しいです。"
-    cn: ""
-  - jp: "A: What do you want, James?"
-    cn: ""
-  - jp: "B: I want a computer."
-    cn: ""
-  - jp: "A: What kind of computer do you want?"
-    cn: ""
-  - jp: "B: I want a Mac."
-    cn: ""
+  - 人や物、場所の特徴について尋ねる文型
+  zh:
+  - 怎样的
+  - 什么样的
+name: どんな
+tags:
+- 连体词

@@ -1,60 +1,29 @@
-pattern: 〜らしい（推量）
+conjugations:
+- V（普通形）＋らしい
+- イA（普通形）＋らしい
+- ナA（普通形）＋らしい ※ナA ~~だ~~ \+ らしい
+- N（普通形）+ らしい ※N ~~だ~~ \+ らしい
+examples:
+- jp: 「たぶん〜だ /  **〜だそうだ** 」
+  zh: 依据多方资讯而判断的推测，较客观。
+- jp: あのレストランのハンバーグはとっても美味しい **らしい** よ。
+  zh: 那家餐厅的汉堡牛排据说很好吃。
+- jp: キムさんによると、トムさんは最近、日本人の彼女ができた **らしい** 。
+  zh: 根据 Kim 的说法，Tom 最近好像有了日本人的女朋友。
+- jp: 来月、RADWIMPSの新曲が出る **らしい** よ。
+  zh: 下个月，RADWIMPS的新歌好像要发行了。
+- jp: 最近、仕事 大変 **らしい** ね。大丈夫？
+  zh: 最近工作很困难的样子呢。 你还好吗？
+explanations: []
 level: N4
 meanings:
+  en:
+  - It seems that
   jp:
-    - "たぶん〜だ / 〜だそうだ"
-    - "見たり聞いたりした情報から判断して「たぶん〜だ」と述べる推量表現。"
-  cn:
-conjugations:
-  - "V（普通形）＋らしいイA（普通形）＋らしいナA（普通形）＋らしい ※ナA ~~だ~~ + らしいN（普通形）+ らしい ※N ~~だ~~ + らしい"
-examples:
-  - jp: "あのレストランのハンバーグはとっても美味しい **らしい** よ。"
-    cn: ""
-  - jp: "I heard the hamburgers at that restaurant are really good."
-    cn: ""
-  - jp: "キムさんによると、トムさんは最近、日本人の彼女ができた **らしい** 。"
-    cn: ""
-  - jp: "According to Mr. Kim, Mr. Tom recently got a Japanese girlfriend."
-    cn: ""
-  - jp: "トムさんは大学を卒業したら、国へ帰る **らしい** よ。"
-    cn: ""
-  - jp: "Tom says he's going back to his country after he graduates from college."
-    cn: ""
-  - jp: "木村さん、来月で会社を辞める **らしい** よ。やっぱり仕事が辛かったのかな。"
-    cn: ""
-  - jp: "I heard that Mr. Kimura will quit his job next month. I wonder if the job was"
-    cn: ""
-  - jp: "too hard for him."
-    cn: ""
-  - jp: "来月、RADWIMPSの新曲が出る **らしい** よ。"
-    cn: ""
-  - jp: "I heard that RADWIMPS will release a new song next month."
-    cn: ""
-  - jp: "日本には他の国では見られない、少し変わった祭りがある **らしい** 。"
-    cn: ""
-  - jp: "I heard that Japan has a unique festival that is not celebrated in other"
-    cn: ""
-  - jp: "countries."
-    cn: ""
-  - jp: "最近、仕事大変 **らしい** ね。大丈夫？"
-    cn: ""
-  - jp: "I heard you've been having a hard time at work lately. How are you doing?"
-    cn: ""
-  - jp: "新しい先生は英語、中国語、韓国語がペラペラ **らしい** よ。"
-    cn: ""
-  - jp: "I heard that the new teacher is fluent in English, Chinese and Korean."
-    cn: ""
-  - jp: "週末、学校でパーティーがある **らしい** けど、キムさんは参加するの？"
-    cn: ""
-  - jp: "I heard that there is a party at the school this weekend, are you going to"
-    cn: ""
-  - jp: "attend?"
-    cn: ""
-  - jp: "A：どうしてあそこに人が集まっているんだろう。"
-    cn: ""
-  - jp: "B：どうやらバイクと車の事故があった **らしい** ですよ。"
-    cn: ""
-  - jp: "A: I wonder why there are so many people there."
-    cn: ""
-  - jp: "B: Apparently, there was an accident involving a motorcycle and a car."
-    cn: ""
+  - たぶん〜だ / 〜だそうだ
+  - 見たり聞いたりした情報から判断して「たぶん〜だ」と述べる推量表現。
+  zh:
+  - 据说…；好像…
+name: 〜らしい（推量）
+tags:
+- 推量

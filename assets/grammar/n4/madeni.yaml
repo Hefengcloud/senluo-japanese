@@ -1,79 +1,24 @@
-pattern: 〜までに
+conjugations:
+- V（辞書形）+ までに
+- N（時間 / 日付）+ までに
+examples:
+- jp: レポートは来週の水曜日 **までに** 出してください。
+  zh: 请在下周三之前提交报告。
+- jp: 死ぬ **までに** １度はカッパドキアに行ってみたいです。
+  zh: 想在死之前去一次卡帕多西亚。
+- jp: ’３０歳[‘になる **までに** 結婚したいです。
+  zh: 想在30岁之前结婚。
+explanations: []
 level: N4
 meanings:
+  en:
+  - “までに” indicates “time limit”.
+  - Used when talking about doing something within a given time period.
   jp:
-    - "その時間や日付が来る前に"
-  cn:
-conjugations:
-  - "V（辞書形）+ までにN（時間 / 日付）+ までに"
-examples:
-  - jp: "レポートは来週の水曜日 **までに** 出してください。"
-    cn: ""
-  - jp: "Please submit the report by next Wednesday."
-    cn: ""
-  - jp: "死ぬ **までに** １度はアフリカへ行ってみたいです。"
-    cn: ""
-  - jp: "I want to go to Africa at least once before I die."
-    cn: ""
-  - jp: "月末 **までに** 、きちんと家賃を払ってくださいね。"
-    cn: ""
-  - jp: "Please make sure you pay your rent by the end of the month."
-    cn: ""
-  - jp: "今日の５時 **までに** 、終わらせてください。"
-    cn: ""
-  - jp: "Please finish it by 5 o'clock today."
-    cn: ""
-  - jp: "参加したい人は、明日 **までに** 連絡ください。"
-    cn: ""
-  - jp: "If you want to participate, please contact me by tomorrow."
-    cn: ""
-  - jp: "イベントは朝９時からスタートしますから、８時 **までに** 学校に来てください。"
-    cn: ""
-  - jp: "The event starts at 9:00 a.m., so please be at the school by 8:00 a.m."
-    cn: ""
-  - jp: "３０歳になる **までに** 結婚したいです。"
-    cn: ""
-  - jp: "I want to get married before I turn 30."
-    cn: ""
-  - jp: "トムさんの分はないので、彼が来る **までに** 食べてしまってください。"
-    cn: ""
-  - jp: "We don't have enough for Tom, so please eat up before he gets here."
-    cn: ""
-  - jp: "この本、１５日 **までに** 返してくださいね。"
-    cn: ""
-  - jp: "Please return this book by the 15th."
-    cn: ""
-  - jp: "部長が出張から戻ってくる **までに** 、なんとかこの資料を完成させなければ。"
-    cn: ""
-  - jp: "I have to finish this document before the director comes back from his"
-    cn: ""
-  - jp: "business trip."
-    cn: ""
-  - jp: "大学を卒業する **までに** 、なんとか仕事を見つけたい。"
-    cn: ""
-  - jp: "I want to find a job before I graduate from college."
-    cn: ""
-  - jp: "日が暮れる **までに** 帰らないと、怒らちゃう。"
-    cn: ""
-  - jp: "I'll be scolded if I'm not home by sundown."
-    cn: ""
-  - jp: "シンデレラは夜１２時 **までに** 帰らないと魔法が解けるということで慌てて帰りました。"
-    cn: ""
-  - jp: "Cinderella was in a hurry to go home because the spell would be broken if she"
-    cn: ""
-  - jp: "didn't get home by midnight."
-    cn: ""
-  - jp: "[![](https://m.media-"
-    cn: ""
-  - jp: "amazon.com/images/I/51QxrILF3bL._SL160_.jpg)](https://www.amazon.co.jp/dp/4522480148?tag=studyjapane05-22&linkCode=ogi&th=1&psc=1)"
-    cn: ""
-  - jp: "[シンデレラ (ディズニー"
-    cn: ""
-  - jp: "プレミアム・コレクション)](https://www.amazon.co.jp/dp/4522480148?tag=studyjapane05-22&linkCode=ogi&th=1&psc=1)"
-    cn: ""
-  - jp: "* [Amazon](https://www.amazon.co.jp/dp/4522480148?tag=studyjapane05-22&linkCode=ogi&th=1&psc=1)"
-    cn: ""
-  - jp: "* [楽天市場](https://hb.afl.rakuten.co.jp/hgc/16781883.64066d33.16781884.4f333982/Rinker_o_20191117232544?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B7%25E3%2583%25B3%25E3%2583%2587%25E3%2583%25AC%25E3%2583%25A9%25E3%2580%2580%25E6%259C%25AC%2F%3Ff%3D1%26grp%3Dproduct&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B7%25E3%2583%25B3%25E3%2583%2587%25E3%2583%25AC%25E3%2583%25A9%25E3%2580%2580%25E6%259C%25AC%2F%3Ff%3D1%26grp%3Dproduct)"
-    cn: ""
-  - jp: "* [Yahooショッピング](https://shopping.yahoo.co.jp/search?p=%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%80%80%E6%9C%AC)"
-    cn: ""
+  - その時間や日付が来る前に
+  zh:
+  - 最迟……之前
+name: 〜までに
+tags:
+- 时点
+- 场面

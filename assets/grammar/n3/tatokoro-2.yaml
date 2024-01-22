@@ -1,38 +1,20 @@
-pattern: Vたところ
+conjugations:
+- V（タ形）\+ ところ
+examples:
+- jp: 留学したいと父に相談してみ **たところ** 、快く受け入れてくれた。
+  zh: 关于想留学事宜和爸爸商量之后，他欣然接受。
+- jp: お酒をやめてみ **たところ** 、体調がよくなった気がした。
+  zh: 戒酒后，身体感觉好多了。
+- jp: 友人のオススメの映画を見てみ **たところ** 、とても面白かったので、絶対見たほうがいいです。
+  zh: 试看朋友推荐的电影后，觉得很有趣，所以我非常推荐
+explanations: []
 level: N3
 meanings:
+  en:
+  - when
   jp:
-    - "～したら、～と言う結果になった / ～したら、～ということがわかった"
-    - "きっかけを言う表現。"
-  cn:
-conjugations:
-  - "V（タ形）+ ところ"
-examples:
-  - jp: "ノートパソコンの代わりにタブレットを買ってみ **たところ** 、思ったよりも使いやすかった。"
-    cn: ""
-  - jp: "I bought a tablet instead of a laptop and found it easier to use than I"
-    cn: ""
-  - jp: "expected."
-    cn: ""
-  - jp: "友人のオススメの映画を見てみ **たところ** 、とても面白かったので、絶対見たほうがいいです。"
-    cn: ""
-  - jp: "I saw a movie that my friend recommended, and it was very interesting, so you"
-    cn: ""
-  - jp: "should definitely see it"
-    cn: ""
-  - jp: "来週から海外旅行なので、天気を調べて見 **たところ** 、天気はあまりよくないようです。"
-    cn: ""
-  - jp: "I'm going to travel abroad next week, so I checked the weather and found out"
-    cn: ""
-  - jp: "that the weather is not so good."
-    cn: ""
-  - jp: "留学したいと父に相談してみ **たところ** 、快く受け入れてくれた。"
-    cn: ""
-  - jp: "I talked to my father about my desire to study abroad, and he happily"
-    cn: ""
-  - jp: "accepted."
-    cn: ""
-  - jp: "お酒をやめてみ **たところ** 、体調がよくなった気がした。"
-    cn: ""
-  - jp: "I tried to quit drinking alcohol, and I felt better."
-    cn: ""
+  - ～したら、～と言う結果になった / ～したら、～ということがわかった
+  zh:
+  - '...的结果(経过・结末)'
+name: Vたところ
+tags: []

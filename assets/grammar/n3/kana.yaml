@@ -1,12 +1,17 @@
-pattern: 〜かな / 〜かなあ
+conjugations:
+- 普通形 + かな（あ）
+examples:
+- jp: 〜でしょうか」
+  zh: 相当于的意思 。
+- jp: ：（WBを指して）これ、 **消してもいいかな** 。
+  zh: B：はい。
+explanations: []
 level: N3
 meanings:
   jp:
-    - "①疑問の気持ちを表す"
-    - "②依頼したり、許可を求めるときに使う"
-  cn:
-conjugations:
-  - "普通形 + かな（あ）"
-examples:
-  - jp: ""
-    cn: ""
+  - ①疑問の気持ちを表す
+  - ②依頼したり、許可を求めるときに使う
+  zh:
+  - '...吧(语气助词)'
+name: 〜かな / 〜かなあ
+tags: []

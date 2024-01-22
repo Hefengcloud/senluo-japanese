@@ -19,7 +19,7 @@ class GrammarRepository {
     Map<JLPTLevel, List<GrammarEntry>> dict = {};
     for (var yaml in yamlList) {
       final level = JLPTLevel.fromString(yaml['level']);
-      final entries = yaml['entries']
+      final entries = yaml['items']
           .map<GrammarEntry>((e) => GrammarEntry(
                 name: e['name'],
                 key: e['key'],

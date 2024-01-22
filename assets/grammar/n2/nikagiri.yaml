@@ -1,31 +1,21 @@
-pattern: 〜に限り
+conjugations:
+- N + に限り
+examples:
+- jp: 5時前にご来店の **に限り** 、ビール１杯無料でサービスします。
+  zh: 仅限5点前到店的顾客，免费获赠啤酒一杯。
+- jp: 応募は、日本在住の **に限ります** 。
+  zh: 申请仅限于居住在日本的人。
+- jp: 2,000円以上お買い上げのお客様 **に限り** 、今なら10%割引します。
+  zh: 现在购买2,000日元以上的顾客，即可享受10%的折扣。
+explanations: []
 level: N2
 meanings:
+  en:
+  - only for
   jp:
-    - "～にだけ特別に・・・する。"
-  cn:
-conjugations:
-  - "N + に限り"
-examples:
-  - jp: "2,000円以上お買い上げのお客様 **に限り** 、今なら10%割引します。"
-    cn: ""
-  - jp: "we now offer a 10% discount Only for customers who purchase more than 2,000"
-    cn: ""
-  - jp: "yen."
-    cn: ""
-  - jp: "5時前にご来店の方 **に限り** 、ビール１杯無料でサービスします。"
-    cn: ""
-  - jp: "Only those who arrive before 5:00 will receive one free beer."
-    cn: ""
-  - jp: "応募は、日本在住の方 **に限り** ます。"
-    cn: ""
-  - jp: "Only residents of Japan are eligible to apply."
-    cn: ""
-  - jp: "急用の場合 **に限り** 、電話での問い合わせを受け付けます。"
-    cn: ""
-  - jp: "Telephone inquiries will be accepted in cases of emergency only."
-    cn: ""
-  - jp: "女性の方 **に限り** 、コーヒー１杯無料です。"
-    cn: ""
-  - jp: "Only female customers will receive one free cup of coffee."
-    cn: ""
+  - ～にだけ特別に・・・する。
+  zh:
+  - 只限于
+name: 〜に限り
+tags:
+- 限定

@@ -1,69 +1,25 @@
-pattern: 〜ずに
+conjugations:
+- V(ない形) ~~ない~~ \+ ずに
+examples:
+- jp: 今朝、朝ごはんを **食べずに** 学校に来ました。
+  zh: 今天早上，我没有吃早餐就来学校了。
+- jp: 傘を **持たずに** 、出かけてしまった。
+  zh: 没有带伞就出门了。
+- jp: 込は普段、コーヒーに砂糖を **入れずに** 飲みます。
+  zh: 我通常喝不加糖的咖啡。
+- jp: 宿題を **せずに** 学校に行ったら先生に怒られました。
+  zh: 没做功课就去学校，结果被老师骂了。
+explanations: []
 level: N3
 meanings:
+  en:
+  - '"without doing "'
+  - It means the same as “～ないで,” but “～ずに” is a little more formal style.
   jp:
-    - "〜しないで"
-    - "「 **[〜ないで](https://nihongokyoshi-net.com/2018/04/20/jlptn5-grammar-naide/)**"
-    - "」と同じ意味だが、「〜ずに」の方が少し硬い。"
-  cn:
-conjugations:
-  - "V(ない形) ~~ない~~ + ずに（例）行かない → 行かずに飲まない → 飲まずに※「する」は「せずに」となる。"
-examples:
-  - jp: "今朝、朝ごはんを **食** **べずに** 学校に来ました。"
-    cn: ""
-  - jp: "This morning, I came to school without eating breakfast."
-    cn: ""
-  - jp: "傘を **持たずに** 、出かけてしまった。"
-    cn: ""
-  - jp: "I went out without an umbrella."
-    cn: ""
-  - jp: "私は普段、コーヒーに砂糖を **入れずに** 飲みます。"
-    cn: ""
-  - jp: "I usually drink my coffee without sugar in it."
-    cn: ""
-  - jp: "宿題を **せずに** 学校に行ったら先生に怒られました。"
-    cn: ""
-  - jp: "I went to school without doing my homework, and my teacher got angry with me."
-    cn: ""
-  - jp: "昨日、お風呂に **入** **らずに** 寝てしまった。"
-    cn: ""
-  - jp: "I fell asleep without taking a bath last night."
-    cn: ""
-  - jp: "友達にもらった本を **読まずに** 売ってしまった。"
-    cn: ""
-  - jp: "I sold the book that my friend gave me without reading it."
-    cn: ""
-  - jp: "明日は試験なので、今晩は **寝ないで** 勉強します。"
-    cn: ""
-  - jp: "I have an exam tomorrow, so I'm going to study without sleeping tonight."
-    cn: ""
-  - jp: "誰にも **習わず** に自分で日本語を勉強しました。"
-    cn: ""
-  - jp: "I studied Japanese on my own, without learning from anyone else."
-    cn: ""
-  - jp: "体調が悪い時は、無理 **せずに** 休んでください。"
-    cn: ""
-  - jp: "If you are not feeling well, please rest without straining yourself."
-    cn: ""
-  - jp: "わからないことがあれば、遠慮 **せずに** 聞いてください。"
-    cn: ""
-  - jp: "If you have any questions, please don't hesitate to ask."
-    cn: ""
-  - jp: "田中さんはみんなを **待たずに** 、先に帰ってしまった。"
-    cn: ""
-  - jp: "Mr. Tanaka left first without waiting for everyone."
-    cn: ""
-  - jp: "授業の後、トムさんは何も **言わずに** 一人で帰っていった。"
-    cn: ""
-  - jp: "After class, Tom left by himself without saying a word."
-    cn: ""
-  - jp: "**苦労せず** に日本語が上手になる方法なんてありませんよ。"
-    cn: ""
-  - jp: "There's no way to get good at Japanese without hard work."
-    cn: ""
-  - jp: "年末セールの広告を見て来てみたが、欲しいものがなかったので、何も **買わずに** 店を出た。"
-    cn: ""
-  - jp: "I came here because I saw an ad for the year-end sale, but I didn't find"
-    cn: ""
-  - jp: "anything I wanted, so I left the store without buying anything."
-    cn: ""
+  - 〜しないで
+  - 「 **[〜ないで](https://nihongokyoshi-net.com/2018/04/20/jlptn5-grammar-naide/)**
+  - 」と同じ意味だが、「〜ずに」の方が少し硬い。
+  zh:
+  - 没有、不(付帯状态・非付帯状态)
+name: 〜ずに
+tags: []

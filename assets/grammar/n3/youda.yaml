@@ -1,10 +1,30 @@
-pattern: まるで〜ようだ
+conjugations:
+- まるで + N + のようだ
+- まるで + N1 + のような + N2
+- まるで + N + のように + V / イA
+examples:
+- jp: まるで〜みたいだ」
+  zh: ※ 较随性的说法为。
+- jp: ひどい風。 **まるで** 嵐のようですね。
+  zh: 很大的风。 就像风暴一样。
+- jp: あのおじいさんは雪 **のような** 髪の毛をしています。
+  zh: 那位老爷爷有一头像雪一样白的白发。
+- jp: 彼は魚 **のように** 泳ぐのが上手だ。
+  zh: 他像鱼一样很善于游泳。
+- jp: 今月は山 **のように** 仕事がある。
+  zh: 这个月的工作像山一样多。
+explanations:
+- 「まるで」は省略して使うこともできる。
+- 「まるで〜みたい」と言うこともできるが、こちらは口語的。
 level: N3
 meanings:
+  en:
+  - as if it were like / as if it were similar to
+  - Used to like one thing to something else.
   jp:
-    - "他の物に例える表現（比喩）。"
-  cn:
-conjugations:
-explanations:
-  - "「まるで」は省略して使うこともできる。「まるで〜みたい」と言うこともできるが、こちらは口語的。"
-examples:
+  - 他の物に例える表現（比喩）。
+  zh:
+  - 宛如……、就好比……
+name: まるで〜ようだ 
+tags:
+- 比况
