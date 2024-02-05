@@ -15,6 +15,12 @@ class ProverbItem extends Equatable {
     this.examples = const [],
   });
 
+  static const empty = ProverbItem(
+    name: '',
+    reading: '',
+    meanings: [],
+  );
+
   @override
   List<Object?> get props => [name, reading, meanings, imgUrl, examples];
 }

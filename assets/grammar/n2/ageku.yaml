@@ -8,18 +8,15 @@ examples:
   zh: 与他多次争吵后，我们分手了。
 - jp: 毎日の残業の **あげく** 、田中さんは倒れて入院することになりました。
   zh: 每天加班的结果，田中先生晕倒住院了。
-- jp: '**「〜結果」**'
-  zh: ・「〜末に」
-explanations: []
+explanations:
+  - 色々努力したが、結局ダメだったという残念な気持ちが含まれる。
 level: N2
 meanings:
   en:
   - '"ended up"'
-  - It includes a sense of disappointment/regret that after all the efforts, it
-  - was not possible.
+  - It includes a sense of disappointment/regret that after all the efforts, it was not possible.
   jp:
-  - '"色々〜したけど、最終的に・・・。"'
-  - 色々努力したが、結局ダメだったという残念な気持ちが含まれる。
+  - '色々〜したけど、最終的に・・・。'
   zh:
   - 终究…
   - …之后

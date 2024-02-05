@@ -5,16 +5,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
-import '../../../widgets/example_sentence_text.dart';
+import '../../../../widgets/example_sentence_text.dart';
+import '../../constants/constants.dart';
 
 class ItemConcisePreviewView extends StatelessWidget {
   final Onomatopoeia item;
   final List<Example> examples;
   final double fontScaleFactor;
-
-  static const _kJpGoogleFont = 'Zen Maru Gothic';
-  static const _kZhFont = 'JiYingHuiPianHeYuan';
-  static const _kBodyFontSize = 18.0;
 
   const ItemConcisePreviewView({
     super.key,
@@ -37,9 +34,9 @@ class ItemConcisePreviewView extends StatelessWidget {
             children: [
               Expanded(
                 child: AutoSizeText(
-                  item.name.split('/').map<String>((e) => e.trim()).join('\n'),
+                  item.theName,
                   style: GoogleFonts.getFont(
-                    _kJpGoogleFont,
+                    kJpGoogleFont,
                     fontSize: 72,
                     fontWeight: FontWeight.bold,
                     color: kItemMainColor,
@@ -68,8 +65,8 @@ class ItemConcisePreviewView extends StatelessWidget {
                 child: Text(
                   item.meanings['zh']!.join('；'),
                   style: TextStyle(
-                    fontFamily: _kZhFont,
-                    fontSize: _kBodyFontSize * fontScaleFactor,
+                    fontFamily: kZhFont,
+                    fontSize: kBodyFontSize * fontScaleFactor,
                   ),
                 ),
               ),
@@ -108,8 +105,8 @@ class ItemConcisePreviewView extends StatelessWidget {
       title: ExampleSentenceText(
         lines: [example['jp']!],
         mainStyle: GoogleFonts.getFont(
-          _kJpGoogleFont,
-          fontSize: _kBodyFontSize * fontScaleFactor,
+          kJpGoogleFont,
+          fontSize: kBodyFontSize * fontScaleFactor,
           fontWeight: FontWeight.bold,
         ),
         emphasizedColor: kItemMainColor,
@@ -117,8 +114,8 @@ class ItemConcisePreviewView extends StatelessWidget {
       subtitle: Text(
         example['zh']!,
         style: TextStyle(
-          fontFamily: _kZhFont,
-          fontSize: _kBodyFontSize * fontScaleFactor - 2,
+          fontFamily: kZhFont,
+          fontSize: kBodyFontSize * fontScaleFactor - 2,
           color: Colors.black54,
         ),
       ),
@@ -129,9 +126,9 @@ class ItemConcisePreviewView extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        fontFamily: _kZhFont,
+        fontFamily: kZhFont,
         color: kItemMainColor,
-        fontSize: _kBodyFontSize * fontScaleFactor,
+        fontSize: kBodyFontSize * fontScaleFactor,
       ),
     );
   }

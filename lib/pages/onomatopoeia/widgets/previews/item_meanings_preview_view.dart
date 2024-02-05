@@ -1,21 +1,23 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/constants.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_caption_view.dart';
 
-import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
-import '../../grammars/constants/texts.dart';
-import 'item_title_view.dart';
+import '../../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
+import '../item_title_view.dart';
 
 class ItemMeaningsPreviewView extends StatelessWidget {
   final Onomatopoeia item;
-  final double fontSize;
+  final double fontSizeScaleFactor;
 
   const ItemMeaningsPreviewView({
     super.key,
     required this.item,
-    required this.fontSize,
+    required this.fontSizeScaleFactor,
   });
 
   @override
@@ -24,20 +26,8 @@ class ItemMeaningsPreviewView extends StatelessWidget {
       children: [
         _buildTitle(),
         const Gap(16),
-        _buildItemMeaning(
-          kTitleZhMeaning,
-          item.meanings['zh'] ?? [],
-          Colors.green,
-        ),
-        _buildItemMeaning(
-          kTitleEnMeaning,
-          item.meanings['en'] ?? [],
-          Colors.blue,
-        ),
-        _buildItemMeaning(
-          kTitleJpMeaning,
-          item.meanings['jp'] ?? [],
-          Colors.red,
+        Expanded(
+          child: _buildMeaningList(item.meanings),
         ),
       ],
     );
@@ -47,24 +37,38 @@ class ItemMeaningsPreviewView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16),
       child: ItemTitleView(
-        title: item.name,
+        title: item.theName,
+        subtitle: '意味',
         mainColor: kItemMainColor,
       ),
     );
   }
 
-  Expanded _buildItemMeaning(
-    String title,
-    List<String> meanings,
-    Color color,
-  ) {
-    return Expanded(
-      child: ItemMeaningView(
-        title: title,
-        meanings: meanings,
-        color: color,
-        fontSize: fontSize,
-      ),
+  _buildMeaningList(Meaning meanings) {
+    final zhMeanings = meanings['en'] ?? [];
+    return ListView(
+      children: meanings.entries.map(
+        (e) {
+          var textLines = e.value;
+          if (e.value.length > 1) {
+            textLines =
+                e.value.mapIndexed((idx, e) => "${idx + 1}) $e").toList();
+          }
+          return ListTile(
+            leading: Text(
+              e.key.toUpperCase(),
+            ),
+            title: Text(
+              textLines.join('\n'),
+              style: TextStyle(
+                fontFamily: kZhFont,
+                fontSize: kBodyFontSize * fontSizeScaleFactor,
+                color: kBrandColor,
+              ),
+            ),
+          );
+        },
+      ).toList(),
     );
   }
 }

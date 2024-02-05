@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/contants.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/constants.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
 class ItemFullPreviewView extends StatelessWidget {
@@ -23,7 +23,7 @@ class ItemFullPreviewView extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(
-            top: 48,
+            top: 32,
             bottom: 32,
           ),
           child: SizedBox(
@@ -47,7 +47,8 @@ class ItemFullPreviewView extends StatelessWidget {
               item.meanings['zh']?.join('\n') ?? '',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 24 * fontSizeScaleFactor,
+                fontFamily: kZhFont,
+                fontSize: kBodyFontSize * fontSizeScaleFactor,
                 color: kBrandColor,
               ),
             ),
@@ -58,14 +59,17 @@ class ItemFullPreviewView extends StatelessWidget {
   }
 
   AutoSizeText _buildItemTitle({double? fontSize}) {
+    final lineCount = item.theName.split('\n').length;
+
     return AutoSizeText(
-      item.name,
+      item.theName,
       style: GoogleFonts.getFont(
-        'Rampart One',
-        fontSize: fontSize,
+        kJpGoogleFont,
+        fontSize: lineCount < 2 ? fontSize : (fontSize ?? 32) - 8,
         color: kItemMainColor,
+        fontWeight: FontWeight.bold,
       ),
-      maxLines: 1,
+      maxLines: lineCount,
     );
   }
 }

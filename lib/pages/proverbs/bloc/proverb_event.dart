@@ -20,3 +20,15 @@ final class ProverbFiltered extends ProverbEvent {
 
   const ProverbFiltered({required this.kanaLine});
 }
+
+final class ProverbSelected extends ProverbEvent {
+  final ProverbItem item;
+
+  const ProverbSelected({required this.item});
+}
+
+final class ProverbChanged extends ProverbEvent {
+  final bool next;
+
+  const ProverbChanged({required this.next});
+}

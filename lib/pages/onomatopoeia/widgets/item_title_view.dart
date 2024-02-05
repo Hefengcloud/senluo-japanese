@@ -2,14 +2,18 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/constants.dart';
 
 class ItemTitleView extends StatelessWidget {
   final String title;
+  final String subtitle;
   final Color mainColor;
 
   const ItemTitleView({
     super.key,
     required this.title,
+    required this.subtitle,
     required this.mainColor,
   });
 
@@ -21,12 +25,25 @@ class ItemTitleView extends StatelessWidget {
         AutoSizeText(
           title,
           style: GoogleFonts.getFont(
-            'Rampart One',
+            kJpGoogleFont,
             color: mainColor,
-            fontSize: 56,
+            fontSize: title.contains('\n') ? 48 : 56,
+            fontWeight: FontWeight.bold,
           ),
         ),
         const Gap(8),
+        Container(
+          decoration: BoxDecoration(
+            color: kBrandColor,
+            borderRadius: BorderRadius.circular(16),
+          ),
+          margin: EdgeInsets.only(bottom: 16.0),
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text(
+            subtitle,
+            style: const TextStyle(color: Colors.white),
+          ),
+        ),
       ],
     );
   }

@@ -210,12 +210,13 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
   _showProverbCard(BuildContext context, ProverbItem item) {
     return showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        content: SizedBox(
-          width: 1000,
-          height: 800,
-          child: ProverbDisplayView(
-            item: item,
+      builder: (context) => BlocProvider(
+        create: (context) => BlocProvider.of<ProverbBloc>(context),
+        child: const AlertDialog(
+          content: SizedBox(
+            width: kPreviewDialogWidth,
+            height: kPreviewDialogHeight,
+            child: ProverbDisplayView(),
           ),
         ),
       ),

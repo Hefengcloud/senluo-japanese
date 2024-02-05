@@ -7,13 +7,12 @@ import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/constants/colors.dart';
 import 'package:senluo_japanese_cms/helpers/image_helper.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/contants.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_concise_preview_view.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_examples_preview_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/previews/item_concise_preview_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/previews/item_examples_preview_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_examples_text_view.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_full_preview_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/previews/item_full_preview_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_full_text_view.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meanings_preview_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/previews/item_meanings_preview_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meanings_text_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
@@ -63,6 +62,34 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
 
   @override
   Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Expanded(child: _buildContent(context)),
+        const Gap(16),
+        Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.image_outlined),
+              onPressed: () => _saveImage(),
+            ),
+            IconButton(
+              icon: const Icon(Icons.abc_outlined),
+              onPressed: _currentType == PreviewType.full ? _copyText : null,
+            ),
+            const Gap(16),
+            _buildPreviewModeOptions(context),
+            const Gap(16),
+            _buildDistributionChannelOptions(context),
+            const Gap(16),
+            _buildFontModifier(),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Row _buildContent(BuildContext context) {
     return Row(
       children: [
         Expanded(
@@ -109,7 +136,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
         return _buildPreviewView(
           child: ItemMeaningsPreviewView(
             item: item,
-            fontSize: kItemBodyTextSize * _fontSizeScaleFactor,
+            fontSizeScaleFactor: _fontSizeScaleFactor,
           ),
         );
       case PreviewType.examples:
@@ -151,72 +178,24 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
                     .toList(),
               ),
             ),
-            _buildBottomActions(),
           ],
         );
       }),
     );
   }
 
-  _buildBottomActions() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Divider(),
-          _buildFontModifier(),
-          Row(
-            children: [
-              const Text('Mode: '),
-              _buildPreviewModeOptions(context),
-              const Gap(16),
-              const Text('Channel: '),
-              _buildDistributionChannelOptions(context),
-            ],
-          ),
-          const Gap(16),
-          Row(
-            children: [
-              ElevatedButton.icon(
-                onPressed: () => _saveImage(),
-                icon: const Icon(Icons.image),
-                label: const Text('Save Image'),
-              ),
-              const Gap(8),
-              ElevatedButton.icon(
-                onPressed: _currentType == PreviewType.full ? _copyText : null,
-                icon: const Icon(Icons.copy),
-                label: const Text('Copy Text'),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Row _buildFontModifier() {
-    return Row(
-      children: [
-        const Text('Font Size'),
-        Expanded(
-          child: Slider(
-            label: _fontSizeScaleFactor.toStringAsFixed(1),
-            value: _fontSizeScaleFactor,
-            max: 2,
-            min: 0.5,
-            divisions: 15,
-            onChanged: (value) {
-              setState(() {
-                _fontSizeScaleFactor = value;
-              });
-            },
-          ),
-        ),
-      ],
+  _buildFontModifier() {
+    return DropdownButton<double>(
+      value: _fontSizeScaleFactor,
+      items: [0.8, 0.9, 1.0, 1.1, 1.2]
+          .map<DropdownMenuItem<double>>((e) => DropdownMenuItem(
+                value: e,
+                child: Text("Font Scale: ${e.toString()}"),
+              ))
+          .toList(),
+      onChanged: (value) => setState(() {
+        _fontSizeScaleFactor = value!;
+      }),
     );
   }
 
@@ -294,11 +273,11 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
                 child: Opacity(
                   opacity: 0.05,
                   child: Transform.rotate(
-                    angle: -math.pi / 6,
+                    angle: -math.pi / 9,
                     child: const EverJapanLogo(
                       lang: LogoLang.zh,
-                      logoSize: 80,
-                      fontSize: 40,
+                      logoSize: 48,
+                      fontSize: 24,
                     ),
                   ),
                 ),
@@ -324,7 +303,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
                 (DistributionChannel value) {
           return DropdownMenuItem<DistributionChannel>(
             value: value,
-            child: Text(value.text),
+            child: Text("Channel: ${value.text}"),
           );
         }).toList(),
       );
@@ -341,7 +320,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
             .map<DropdownMenuItem<PreviewMode>>((PreviewMode value) {
           return DropdownMenuItem<PreviewMode>(
             value: value,
-            child: Text(value.name),
+            child: Text("Mode: ${value.name}"),
           );
         }).toList(),
       );

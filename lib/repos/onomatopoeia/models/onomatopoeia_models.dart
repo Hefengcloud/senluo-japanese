@@ -17,6 +17,8 @@ class Onomatopoeia extends Equatable {
     required this.examples,
   });
 
+  String get theName => name.split('/').map<String>((e) => e.trim()).join('\n');
+
   factory Onomatopoeia.fromYamlMap(YamlMap yamlMap) {
     final key = yamlMap['key'];
     final name = yamlMap['name'];
@@ -29,7 +31,7 @@ class Onomatopoeia extends Equatable {
     final examples = yamlMap['examples']
         .map<Example>((e) => <String, String>{
               'jp': e['jp'].toString(),
-              'en': e['en'].toString(),
+              'en': e['en'].toString().replaceAll('**', ''),
               'zh': e['zh'].toString(),
             })
         .toList();

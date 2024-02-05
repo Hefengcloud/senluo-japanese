@@ -171,8 +171,8 @@
     - 服のサイズが小さすぎる様子。
     - 空間や時間に余裕がない様子。
     zh: 
-      - 衣服尺寸很小的样子
-      - 空间和时间不够的样子
+    - 衣服尺寸很小的样子
+    - 空间和时间不够的样子
   name: キツキツ
 - examples:
   - en: The **spikes** of the rose stung my hand and hurt.
@@ -373,10 +373,13 @@
 - examples:
   - en: He is **shaking** the maracas.
     jp: マラカスを **シャカシャカ** と振っている。
+    zh: 他正在用力摇响沙鼓。
   - en: It's cool to see him **shake** his cocktail shaker.
     jp: カクテルのシェーカーを **シャカシャカ** 振る姿がかっこいい。
+    zh: 他快速摇动鸡尾酒杯的样子很帅。
   - en: I want to eat McDonald's **shake-shake** fries.
     jp: あーマクドナルドの **シャカシャカ** ポテトが食べたいなあ。
+    zh: 啊，想吃麦当劳的沙沙脆薯条。
   key: shakashaka
   meanings:
     en:
@@ -392,24 +395,32 @@
 - examples:
   - en: The rabbit is **jumping**.
     jp: ウサギが **ぴょんぴょん** と跳ねている。
+    zh: 兔子一蹦一蹦地跳着。
   - en: The kangaroo is **jumping** up and down.
     jp: カンガルーが **ぴょんぴょん** と跳ねている。
+    zh: 袋鼠一蹦一蹦地跳着。
   - en: The child is **jumping** up and down on the sofa.
     jp: 子供がソファーの上で **ぴょんぴょん** と跳ねて遊んでいる。
+    zh: 孩子在沙发上一蹦一蹦地跳着玩。
   key: pyonpyon
   meanings:
     en:
     - To jump repeatedly and lightly, or to leap over walls, obstacles, etc.
     jp:
     - 身軽に繰り返し飛び跳ねるたり、壁や障害物を跳び越える様子。
+    zh:
+    - 一蹦一蹦地
   name: ぴょんぴょん
 - examples:
   - en: 'I''ve been so busy today that I haven''t eaten anything since this morning. I feel lightheaded.'
     jp: 今日は忙しすぎて朝から何も食べてない。もう **ふらふら** だよ。
+    zh: 我今天太忙了，从早上到现在什么都没吃。已经头晕眼花了。
   - en: Oh, I feel light-headed. I wonder if I have a fever.
     jp: あー、何か **ふらふら** する。熱でもあるのかな。
+    zh: 啊，有点头晕。不会是发烧了吧。
   - en: He's graduated from college, but he's still wandering around without a job.
     jp: 彼は大学を卒業しても、就職せずに **ふらふら** している。
+    zh: 他虽然大学毕业了，但还是无目标地游手好闲。
   key: furafura
   meanings:
     en:
@@ -419,32 +430,41 @@
     jp:
     - 目眩や疲れ、酔いなどで揺れ動いて体が安定しない様子。
     - はっきりした目的や考えがないまま行動する様子。
+    zh:
+    - 蹒跚，摇晃，晃荡
+    - （做事）稀里糊涂
   name: ふらふら
 - examples:
   - en: I **was moved to tears** at the last scene of the drama.
     jp: ドラマの最後のシーン、感動して **うるうる** しちゃった。
+    zh: 剧终场景太让人感动了。
   - en: I **was moved to tears** at my son's graduation ceremony.
     jp: 息子の卒業式で思わず **うるうる** してしまった。
+    zh: 在儿子的毕业典礼上，我忍不住眼眶湿润。
   key: uruuru
   meanings:
     en:
     - '"teary-eyed" A person’s eyes filling up with tears.'
     jp:
     - 目が涙でいっぱいになる様子。
+    zh:
+    - 眼泪汪汪的样子
   name: うるうる
 - examples:
   - en: I am going to simmer the beef stew.
     jp: ビーフシチューを **グツグツ** と煮込む。
-  - en: 'Be careful not to cook the beef fillet too long over high heat, or it will
-
-      become tough.'
+    zh: 我要把炖牛肉咕嘟咕嘟煮上一阵子。
+  - en: 'Be careful not to cook the beef fillet too long over high heat, or it will become tough.'
     jp: 牛ヒレ肉は強火で **グツグツ** 煮すぎると、固くなってしまうので気をつけてください。
+    zh: 小心不要在强火上把牛肉片炖得咕嘟咕嘟冒泡太久，不然会变老。
   key: gutsugutsu
   meanings:
     en:
     - The sound and state of simmering food.
     jp:
     - 料理が煮え立つ音やその様子。
+    zh:
+    - 咕嘟咕嘟（煮东西发出的声音）
   name: グツグツ
 - examples:
   - en: My radio-controlled car got hit by a car and **got** **flattened**.
@@ -462,24 +482,28 @@
     - 押しつぶされて平たくなっている様子。
     - 薄く、平らで膨らみのない様子。
     zh:
-    - 压扁，被压成扁平状。
+    - 压扁，被压成扁平状
   name: ぺちゃんこ / ぺしゃんこ
 - examples:
   - en: I prefer a **rich** ramen taste rather than a light one.
     jp: ラーメンはあっさりより **こってり** のほうが好きです。
+    zh: 我更喜欢浓稠的拉面，而不是清淡的。
   - en: It’s not good for your healthy if you only eat **rich tasting** food.
     jp: '**こってり** した物ばかり食べてると健康によくないよ。'
+    zh: 只吃味道浓重的食物不健康。
   key: kotteri
   meanings:
     en:
     - '"rich taste" Strong taste or powerful flavor.'
     jp:
     - 味が濃く、しつこい様子。
+    zh:
+    - 味浓，厚味，油腻
   name: こってり
 - examples:
   - en: I was diagnosed with thick blood, so I need to review my diet.
     jp: 血液が **ドロドロ** だと診断されたので、食生活を見直す必要がある。
-    zh: 因为被诊断出血液很 粘稠，所以需要重新审视饮食习惯。
+    zh: 因为被诊断出血液很粘稠，所以需要重新审视饮食习惯。
   - en: My son was playing in the mud at the park and came home all muddy.
     jp: 息子は公園で泥んこ遊びをしたそうで、 **ドロドロ** になって帰ってきた。
     zh: 儿子好像在公园玩泥巴，回来的时候弄得一身泥巴。
@@ -498,22 +522,29 @@
 - examples:
   - en: He always **smiles** when he talked about her.
     jp: 彼女の話になると、彼はいつも **ニヤニヤ** する。
+    zh: 一谈到她，他就总是露出微笑。
   - en: I remembered our date yesterday, and I **smiled**.
     jp: 昨日のデートを思い出して、 **ニヤニヤ** してしまった。
+    zh: 想起昨天的约会，我忍不住笑开了嘴。
   - en: He's always **smirking** , it's weird.
     jp: 彼はいつも **ニヤニヤ** してて、気持ち悪い。
+    zh: 他总是令人反感地冷笑着。
   key: niyaniya
   meanings:
     en:
     - '"to grin" The state of smiling with meaning.'
     jp:
     - 意味ありげに薄笑いを浮かべる様子
+    zh:
+    - 默默地笑，嗤笑，冷笑。
   name: ニヤニヤ
 - examples:
   - en: My feet are sinking into the mud.
     jp: 泥の中に **ずぶずぶ** と足が入っていく。
+    zh: 我的脚深深陷进了泥里。
   - en: Suddenly, it started to rain and my clothes got soaked.
     jp: 突然、雨が降ってきて服が **ずぶずぶ（ずぶ濡れ）** になった。
+    zh: 突然下雨了，我的衣服被淋得透湿。
   key: zubuzubu
   meanings:
     en:
@@ -522,16 +553,14 @@
     jp:
     - 水や泥などに深く沈み込んでいく様子。
     - ひどく濡れる様子。
+    zh:
+    - 深陷或者浸泡在液体里的样子
+    - 被淋得湿透的样子
   name: ずぶずぶ
 - examples:
-  - en: 'When you were a child, did you ever play with a straw to make bubbles when
-      you
-
-      drank Coke?'
+  - en: 'When you were a child, did you ever play with a straw to make bubbles when you drank Coke?'
     jp: 子供の頃、コーラを飲む時、ストローから息を吹きかけて、 **ブクブク** と泡を立てる遊びしたことある？
-  - en: 'When I was studying abroad, I didn''t exercise much and ate a lot of high-
-
-      calorie foods, so I gained a lot of weight.'
+  - en: 'When I was studying abroad, I didn''t exercise much and ate a lot of high-calorie foods, so I gained a lot of weight.'
     jp: 海外留学中、ろくに運動もせず、カロリーが高いものを食べてばかりいたので、 **ブクブク** 太ってしまった。
   key: bukubuku
   meanings:
@@ -541,112 +570,132 @@
     jp:
     - 泡が次々と出る様子や、音。
     - しまりなく、太っている様子。
+    zh:
+    - 冒泡
+    - 虚胖，胖乎乎
   name: ブクブク
 - examples:
   - en: I could hear the chirping of a Japanese nightingale.
     jp: ウグイスのホーホケキョと鳴く声が聞こえる。
+    zh: 我听到了黄莺啾啾的叫声。
   key: ho-hokekyo
   meanings:
     en:
     - The chirping sound of a Japanese nightingale.
     jp:
     - ウグイスの鳴き声
+    zh:
+    - 啾啾（黄莺的叫声）
   name: ホーホケキョ
 - examples:
-  - en: 'He couldn''t figure it out, so he **glanced at** the person next to him for
-      his
-
-      answer.'
+  - en: 'He couldn''t figure it out, so he **glanced at** the person next to him for his answer.'
     jp: どうしてもわからなかったので、隣の人の答えを **ちらっと** 見てしまった。
+    zh: 他实在想不出来，所以瞥了一眼旁边的人，想看看他的答案。
   - en: He **glanced at** her.
     jp: 彼は彼女のほうを **ちらっ** と見た。
+    zh: 他瞥了她一眼。
   key: chirari
   meanings:
     en:
-    - The state of looking momentarily so as not to be noticed by others or by one’s
-      surroundings
+    - "The state of looking momentarily so as not to be noticed by others or by one’s surroundings."
     jp:
     - 相手や周囲の人に気づかれないように、瞬間的に見る様子。
+    zh:
+    - 一闪，一晃
+    - 在短短的瞬间窥看某样事物
   name: ちらりと / ちらっと
 - examples:
   - en: The alarm clock is **ringing**.
     jp: 目覚まし時計が **リンリン** と鳴っている。
+    zh: 闹钟在叮铃叮铃地响。
   - en: The phone is **ringing**.
     jp: 電話が **リンリン** と鳴っている。
+    zh: 电话在叮铃叮铃地响。
   key: rinrin
   meanings:
     en:
     - The sound of a bell, an alarm clock, or something ringing.
     jp:
     - 鈴やベル、目覚まし時計などの鳴る音。
+    zh:
+    - 叮铃叮铃（铃响的声音）
   name: リンリン
 - examples:
   - en: When my friends saw me fall, they **laughed out loud**.
     jp: 私が転んだのを見て、友達は **ゲラゲラ** と笑った。
+    zh: 朋友看到我摔倒，咯咯地笑了起来。
   - en: My sister is watching TV and **laughing out loud**.
     jp: 姉はテレビを見ながら、 **ゲラゲラ** と笑っている。
-  - en: 'When I was in college, I used to go out for drinks with my friends and we
-      used
-
-      to **laugh and laugh** about stupid stories'
+    zh: 姐姐一边看电视，一边哈哈大笑。
+  - en: 'When I was in college, I used to go out for drinks with my friends and we used to **laugh and laugh** about stupid stories'
     jp: 大学の頃は、よく友達と飲みにいって、くだらない話で **ゲラゲラ** と笑い合ったなあ。
+    zh: 大学的时候，经常和朋友一起出去喝酒，听着无聊的故事，哈哈大笑。
   key: geragera
   meanings:
     en:
     - The state of laughing out loud.
     jp:
     - 大声で笑う様子。
+    zh:
+    - 哈哈大笑
   name: ゲラゲラ
 - examples:
-  - en: 'I was cleaning the balcony then I screamed because it was crawling with
-
-      insects.'
+  - en: 'I was cleaning the balcony then I screamed because it was crawling with insects.'
     jp: ベランダを掃除していたら、虫が **うじゃうじゃ** 出てきて叫んだ。
-  - en: 'While I was tending to my garden, I found it crawling with larvae of some
-
-      kind.'
+    zh: 我正在清理阳台，突然爬出了一堆虫子，吓得我尖叫起来。
+  - en: 'While I was tending to my garden, I found it crawling with larvae of some kind.'
     jp: 庭の手入れをしていたら、何かの幼虫が **うじゃうじゃ** 出てきた。
+    zh: "正在整理花园时，突然冒出了一些幼虫。"
   key: ujauja
   meanings:
     en:
     - The state of many small things such as insects gathering and crawling around.
     jp:
     - 虫などの小さいものがたくさん集まってうごめいている様子。
+    zh:
+    - 乱爬乱钻，密密麻麻乱动，蠕动
   name: うじゃうじゃ
 - examples:
-  - en: 'Tom is so tired from his part-time job that he often **dozes off** during
-
-      class.'
+  - en: 'Tom is so tired from his part-time job that he often **dozes off** during class.'
     jp: トムさんはバイトで疲れているのか、授業中に **うとうと** することが多い。
+    zh: "不知道汤姆先生是不是打工累的，上课时经常打瞌睡。"
   - en: I **dozed off** in the train because I was so tired.
     jp: 疲れていたせいで、電車の中で、 **うとうと** してしまった。
+    zh: "因为疲劳的原因，在火车上打了个盹。"
   - en: I **dozed off** in a meeting.
     jp: 会議中につい **うとうと** してしまった。
+    zh: "在会议中不小心打了个盹。"
   key: utouto
   meanings:
     en:
     - The state of being about to fall asleep or falling into a shallow sleep.
     jp:
     - 今にも眠りそうな様子。または、浅い眠りに落ちる様子。
+    zh:
+    - 迷迷糊糊，似睡非睡状
   name: うとうと
 - examples:
   - en: There's still plenty of time, don't worry.
     jp: 時間はまだ **たっぷり** ありますから、安心してください。
+    zh: 时间还很充裕，放心吧。
   - en: He has plenty of money.
     jp: 彼は **たっぷり** お金を持っている。
-  - en: 'The taiyakis(Japanese fish shaped cake) in this store are popular because
-      they
-
-      are filled with bean jam.'
+    zh: 他有很多钱。
+  - en: 'The taiyakis(Japanese fish shaped cake) in this store are popular because they are filled with bean jam.'
     jp: この店のたい焼きは中にあんこが **たっぷり** 入っているから人気があります。
+    zh: 这家的太焼很受欢迎，因为里面有很多馅料。
   - en: It's time to go, but there's still a lot of work left to do.
     jp: 定時になったが、まだまだ仕事が **たっぷり** 残っている。
+    zh: 虽然已经到了下班时间，但工作还有很多呢。
   key: tappuri
   meanings:
     en:
     - The state in which there is so much of something that it seems to overflow.
     jp:
     - あふれるほどたくさんある様子。
+    zh:
+    - 充分，足够，多
+    - 宽绰，绰绰有余
   name: たっぷり
 - examples:
   - en: I'm **excited** about tomorrow's excursion.
@@ -671,14 +720,15 @@
       - 因为期待、喜悦等感情而兴奋，情绪无法平静，内心激动
   name: ワクワク
 - examples:
-  - en: "A: Hey, Mr. Suzuki, there's a mess on your desk.  \nB: I'm sorry. I'll sort\
-      \ it out."
+  - en: "A: Hey, Mr. Suzuki, there's a mess on your desk.  \nB: I'm sorry. I'll sort it out."
     jp: "A：ちょっと鈴木さん、机の上が **ごちゃごちゃ** よ。  \nB：すみません。整理します。"
-  - en: "A: How about these clothes? Isn't the design cool?  \nB: Hmmmm, it's kind\
-      \ of messy, and I don't really like it."
+    zh:
+  - en: "A: How about these clothes? Isn't the design cool?  \nB: Hmmmm, it's kind of messy, and I don't really like it."
     jp: "A：この服どう？デザインがカッコよくない？  \nB：うーん、なんか **ごちゃごちゃ** してるし、私はあまり好きじゃないなぁ。"
+    zh:
   - en: You're really annoying.I get it now, don't mess with me anymore.
     jp: 本当に、うるさいなぁ。もうわかったから、これ以上 **ごちゃごちゃ** 言わないでよ。
+    zh:
   key: gochagocha
   meanings:
     en:
@@ -687,20 +737,28 @@
     jp:
     - 色々な物がまとまりなく混ざっている様子。
     - 文句や不満などを言う様子。
+    zh:
+    - 乱糟糟，乱七八糟的样子
+    - 抱怨或表达不满的样子
   name: ごちゃごちゃ
 - examples:
   - en: My grandpa is 70 years old, but his hair is still full of hair.
     jp: おじいちゃんは、７０歳なのに、髪の毛が **フサフサ** だ。
+    zh: 我的爷爷今年70岁，但他的头发仍然浓密丰富。
   - en: After a year of AGA treatment, my hair became thicker.
     jp: AGA治療を１年続けた結果、髪が **フサフサ** になった。
+    zh: 经过一年的AGA治疗，我的头发变得更加浓密。
   - en: This cat is cute and has fluffy hair.
     jp: この猫、毛が **フサフサ** で可愛い。
+    zh: 这只猫很可爱，毛发浓密丰盈。
   key: fusafusa
   meanings:
     en:
     - Indicates a lot of hair.
     jp:
     - 毛が多いことを表す。
+    zh:
+    - 毛发浓密
   name: フサフサ
 - examples:
   - en: My throat feels a little **itchy**. I wonder if I caught a cold.
@@ -718,38 +776,48 @@
 - examples:
   - en: He's always **madly in love** with Jessica.
     jp: 彼はいつもジェシカさんに **メロメロ** だ。
+    zh: 他一直被杰西卡迷得神魂颠倒。
   - en: 'Ms. Tanaka is **madly in love** with the man she met at the last party that she keeps in touch with him every day.'
     jp: 田中さんはこの前の合コンで出会った男性に **メロメロ** で、毎日のように連絡をとっているそうだ。
+    zh: 田中女士被上次聚会认识的那个男士迷得神魂颠倒，每天都要和他联系。
   key: meromero
   meanings:
     en:
-    - '"madly in love" The state of losing one''s sanity and ability to make normal
-      judgments due to a feeling of love.'
+    - '"madly in love" The state of losing one''s sanity and ability to make normal judgments due to a feeling of love.'
     jp:
     - 好きな気持で正気を失い、正常な判断能力を失っている様子を表す。
+    zh:
+    - 迷得神魂颠倒
   name: メロメロ
 - examples:
   - en: The children are swimming and **splashing around**.
     jp: 子供たちが **バシャバシャ** と泳いでいる。
-  - en: "A: That child is **splashing around** over there, but I think he is drowning.\
-      \  \nB: It's true! I'm going to go help her."
+    zh: 孩子们欢快地在水里游着泳。
+  - en: "A: That child is **splashing around** over there, but I think he is drowning. \nB: It's true! I'm going to go help her."
     jp: "A：あの子、あそこで **バシャバシャ** してるけど溺れているんじゃない？  \nB：本当だ！助けに行ってくる。"
+    zh: "A：那个孩子，在那里乱扑腾，该不会是在溺水吧？ \nB：是的！我去救他。"
   key: bashabasha
   meanings:
     en:
     - The state/sound of hitting the water repeatedly.
     jp:
     - 水を立て続けに打つ様子。または、その音。
+    zh:
+    - 吧唧吧唧地
   name: ばしゃばしゃ
 - examples:
   - en: I **massaged** my father on the shoulder.
     jp: 父の肩を **トントン** と叩いた。
+    zh: 嗵嗵捶父亲的肩膀。
   - en: I **knocked** **on** the door lightly.
     jp: ドアを **トントン** と叩いた。
+    zh: 嗵嗵地敲门。
   - en: The meeting **went well and very quickly.**
     jp: '**とんとん** 拍子に話が進んだ。'
+    zh: 事情进展地很顺利。
   - en: The ability of the two are **so close**.
     jp: 二人の実力は **とんとん** だ。
+    zh: 两个人的实力不相上下。
   key: tonton
   meanings:
     en:
@@ -760,19 +828,21 @@
     - 物を続けざまに軽く叩く音。
     - 物事が順調に進む様子。
     - 二つのものの差がほとんどなく、ちょうど同じぐらいであること。
+    zh:
+    - 扑通，嗵嗵
+    - 顺利，顺当
+    - 不相上下，差不多
   name: トントン
 - examples:
   - en: It's too hot and I'm already **thirsty**.
     jp: 暑すぎて、もう喉が **カラカラ** です。
-  - en: 'I haven''t taken care of the garden for a long time, so the plants are withered
-
-      and **parched**.'
+    zh: 太热了，我已经非常口渴了。
+  - en: "I haven't taken care of the garden for a long time, so the plants are withered and **parched**."
     jp: 長い間、庭の手入れをしていなかったので、植物は枯れ、 **カラカラ** になっていた。
-  - en: 'The washing machine made a **rattling sound** when I turned it on. I wonder
-      if
-
-      it''s broken.'
+    zh: 我很久没照顾花园了，所以植物都干枯了，变得干巴巴的。
+  - en: "The washing machine made a **rattling sound** when I turned it on. I wonder if it's broken."
     jp: 洗濯機を回すと **カラカラ** と音がなる。故障かなぁ。
+    zh: 我打开洗衣机时听到了咔啦咔啦的声音。不知道是不是坏了。
   key: karakara
   meanings:
     en:
@@ -781,16 +851,23 @@
     jp:
     - 乾いていて、水分が無い様子。
     - 堅い物が触れ合った時に出る軽い感じの音。
+    zh: 
+    - 干透，干巴巴
+    - 硬物互相接触时发出的轻微声响
   name: カラカラ
 - examples:
   - en: The stars are shining brightly.
     jp: 星が **ピカピカ** と輝いている。
+    zh: 星星闪闪发光。
   - en: I washed the car, so it's shiny.
     jp: 洗車したので、 **ピカピカ** だ。
+    zh: 我刚洗了车，现在车子像新的一样。
   - en: I polished the floor to a shine.
     jp: 床を **ピカピカ** に磨いた。
+    zh: 我把地板擦得一尘不染。
   - en: My son has just started elementary school and he is a shining first grader.
     jp: 息子は小学校に入学したばかりで、 **ピカピカ** の一年生だ。
+    zh: 我儿子刚进入小学，开启了全新的求学生涯。
   key: pikapika
   meanings:
     en:
@@ -799,14 +876,20 @@
     jp:
     - 光り輝く様子。
     - 真新しい様子。
+    zh:
+    - 闪闪发光
+    - 全新的
   name: ピカピカ
 - examples:
   - en: My brother is a growing child and eats a lot of food every day.
     jp: 兄は育ち盛りで、毎日ご飯を **もりもり** 食べる。
+    zh: 我弟弟正在长身体，每天吃得非常多。
   - en: He is a macho man.
     jp: 彼は筋肉 **モリモリ** だ。
+    zh: 他非常强壮，肌肉发达。
   - en: He is always full of energy.
     jp: 彼はいつも元気 **モリモリ** だ。
+    zh: 他总是充满活力。
   key: morimori
   meanings:
     en:
@@ -817,6 +900,10 @@
     - 食欲旺盛でどんどん食べる様子。
     - 勢いよく盛り上がったり、膨らんだりする様子。
     - 力や意欲がわく様子を表す。
+    zh:
+    - 食欲旺盛地
+    - 迅速膨胀地，迅猛地
+    - 精力旺盛地，拼命地
   name: もりもり
 - examples:
   - en: I am going to dismantle the computer.
@@ -894,12 +981,15 @@
 - examples:
   - en: The lion **roars**.
     jp: ライオンが **ガオー** と吠える。
+    zh: 狮子发出咆哮声。
   key: gaoo
   meanings:
     en:
     - The sound of a lion's roar.
     jp:
     - ライオンの鳴き声。
+    zh:
+    - 狮子的叫声
   name: ガオー
 - examples:
   - en: 'When I was shopping at the mall with my girlfriend, I **bumped into** my
@@ -1122,12 +1212,15 @@
 - examples:
   - en: The pig **oinks**.
     jp: 豚が **ブーブー** と鳴く。
+    zh: 猪发出噗噗的叫声。
   key: buubuu
   meanings:
     en:
     - The sound of a pig's oink.
     jp:
     - 豚の鳴き声。
+    zh:
+    - 猪叫声
   name: ブーブー
 - examples:
   - en: Oh, stop **flirting** during the class.
@@ -1278,8 +1371,7 @@
   key: kusukusu
   meanings:
     en:
-    - '"to giggle" The state/sound of trying to laugh silently so that others do not
-      hear'
+    - '"to giggle" The state/sound of trying to laugh silently so that others do not hear'
     jp:
     - 声を忍ばせるようにして笑う様子。また、その声。
   name: くすくす
@@ -1546,19 +1638,24 @@
 - examples:
   - en: He's kind of pissed off. I wonder what's wrong.
     jp: 彼、なんか **ぷんぷん** してるね。何かあったのかな。
+    zh: 他有点生气。不知道发生了什么事。
   - en: There's a bad smell coming from the drain.
     jp: 排水口からきつい臭いが **ぷんぷん** する。
+    zh: 排水口散发出难闻的气味。
   - en: I can smell something fishy from him.
     jp: 彼から怪しいにおいが **ぷんぷん** する。
+    zh: 从他身上散发出可疑的气味。
   key: punpun
   meanings:
     en:
     - The state of being very angry and bad-tempered.
-    - The state of a strong odor constantly stinging the nose or a constant pungent
-      smell.
+    - The state of a strong odor constantly stinging the nose or a constant pungent smell.
     jp:
     - ひどく怒って機嫌の悪い様子。
     - 強いにおいが鼻をつく様子。
+    zh:
+    - 怒气冲冲，气呼呼
+    - 冲鼻，冲天
   name: ぷんぷん
 - examples:
   - en: 'I wonder if the figure skaters don''t get dizzy when they **spin around**
@@ -1863,21 +1960,27 @@
 - examples:
   - en: I'm nervous and my heart is pounding.
     jp: 緊張で胸が **ドキドキ** する。
+    zh: 我感到紧张，心脏怦怦直跳。
   - en: Tomorrow is the day of the acceptance announcement. I'm so nervous.
     jp: 明日は合格発表日か。 **ドキドキ** するなぁ。
+    zh: 明天是录取通知的日子。我好紧张。
   - en: I nervously told my crush how I feel right now.
     jp: '**ドキドキ** しながら、好きな人に今の気持ちを伝えた。'
+    zh: 我紧张地告诉了我喜欢的人我现在的感受。
   - en: I can't sleep because my heart is pounding when I think about tomorrow's exam.
     jp: 明日の試験のことを考えると、胸が **ドキドキ** して寝られない。
+    zh: 一想到明天的考试，我的心就怦怦直跳，睡不着觉。
   - en: Whenever I talk to him, my heart always beats fast.
     jp: 彼と話すと、いつも胸が **ドキドキ** する。
+    zh: 每次和他说话，我的心脏总是跳得很快。
   key: dokidoki
   meanings:
     en:
-    - excited / nervous  など心臓が激しく鼓動していることを伝えたい場合は、 My heart is pounding. My heart
-      is beating so fast. のように言うことができる。
+    - excited / nervous  など心臓が激しく鼓動していることを伝えたい場合は、 My heart is pounding. My heart is beating so fast. のように言うことができる。
     jp:
     - 期待、不安、緊張、恐怖、激しい運動の直後などで心臓が激しく鼓動している様子や心臓の音を表す。
+    zh:
+    - 七上八下，忐忑不安
   name: ドキドキ
 - examples:
   - en: While I was driving, a child suddenly jumped out of the car and **scared the
@@ -2043,12 +2146,16 @@
 - examples:
   - en: It's so hot and I feel sticky. I'll go take a shower and freshen up.
     jp: あ〜、暑いし、ベトベトする。シャワーでも浴びて、 **さっぱり** して来よう。
+    zh: 天气太热，我感到黏黏的。我去冲个澡，清爽一下。
   - en: You cut your hair short, didn't you? It's nice and refreshing.
     jp: 髪短くしたんだね。 **さっぱり** してていいんじゃない。
+    zh: 你把头发剪短了，对吧？看起来很清爽。
   - en: I want to eat something refreshing on a hot summer day.
     jp: 夏の暑い日は、 **さっぱり** したものが食べたくなるね。
+    zh: 在炎热的夏天，我想吃点清爽的东西。
   - en: I have no idea what he's talking about.
     jp: 彼の言っていることは、 **さっぱり** わからない。
+    zh: 他说的东西，我完全听不懂。
   key: sappari
   meanings:
     en:
@@ -2061,28 +2168,30 @@
     - 身なり・衣服などが、すっきりしていて清潔な様子。
     - 味が薄くてしつこくない様子。
     - まったくだめな様子。
+    zh:
+    - 感觉爽快
+    - 整洁清爽
+    - 味道清淡不沉闷
+    - 完全没有、一点也不
   name: さっぱり
 - examples:
-  - en: 'I thought my senior was a good person, but I was **disappointed** when I
-      heard
-
-      about his story.'
+  - en: "I thought my senior was a good person, but I was **disappointed** when I heard about his story."
     jp: 先輩はいい人だと思っていたのに、その話を聞いて **がっかり** しました。
-  - en: 'I had high hopes for you, but you keep making mistakes at work and I''m
-
-      **disappointed**.'
+    zh: 我原以为我的前辈是个好人，但听到他的故事后感到很失望。
+  - en: "I had high hopes for you, but you keep making mistakes at work and I'm **disappointed**."
     jp: 君には、期待していたのに、仕事ではミスばかりするし **がっかり** だ。
-  - en: 'I spent 100,000 yen on lottery tickets, but I was **disappointed** that I
-
-      didn''t win any of them.'
+    zh: 我对你寄予了厚望，但你在工作中一直犯错误，让我感到很失望。
+  - en: "I spent 100,000 yen on lottery tickets, but I was **disappointed** that I didn't win any of them."
     jp: 宝くじに１０万円も使ったのに、１つも当たらなくて **がっかり** した。
+    zh: 我花了10万日元买彩票，但我一张都没中，感到很失望。
   key: gakkari
   meanings:
     en:
-    - '"disappointed" The state of being disappointed because things did not go as
-      expected.'
+    - '"disappointed" The state of being disappointed because things did not go as expected.'
     jp:
     - 思い通りにいかず、失望する様子。
+    zh:
+    - 失望
   name: がっかり
 - examples:
   - en: These donuts are chewy and delicious.
@@ -2092,7 +2201,7 @@
   key: puripuri
   meanings:
     en:
-    - The state of something being bouncy because it’s bursting with juiciness
+    - "The state of something being bouncy because it's bursting with juiciness."
     jp:
     - 弾力性に富んでいる様子。
   name: ぷりぷり
@@ -2511,18 +2620,24 @@
 - examples:
   - en: The air in Karuizawa is **cool** and comfortable even in the summer.
     jp: 軽井沢は夏でも空気が **ひんやり** してて気持ちいい。
+    zh: 轻井泽即使在夏天，空气也是清凉而宜人的。
   - en: The air at the top of the mountain was **cool** and comfortable.
     jp: 山頂は空気が **ひんやり** してて気持ちがよかった。
+    zh: 山顶的空气清凉舒适。
   - en: The wind is **cool** and comfortable today.
     jp: 今日は風が **ひんやり** としてて心地よい。
+    zh: 今天的风很凉爽宜人。
   - en: I ate some mint candies, so my mouth feels **cool**.
     jp: ミントのキャンディを食べたので、口の中が **ひんやり** します。
+    zh: 我吃了一些薄荷糖，所以我的嘴巴感觉很清凉。
   key: hinyari
   meanings:
     en:
     - Pleasant feeling of just the right amount of coldness.
     jp:
     - 気持ち良い程度に、冷たさを感じる様子。
+    zh:
+    - 凉爽宜人的
   name: ひんやり
 - examples:
   - en: My body feels chilly because of a cold.
@@ -2721,15 +2836,18 @@
 - examples:
   - en: The baked potatoes are delicious because they are freshly bought.
     jp: 焼き芋、買ったばかりだから **ホクホク** してて美味しいよ。
+    zh: 烤红薯很美味，因为它们刚刚购买所以很松软可口。
   - en: Freshly baked fish is delicious and the meat is juicy.
     jp: 焼き立ての魚は身が **ホクホク** で美味しい。
+    zh: 刚出炉的鱼肉鲜嫩多汁，非常美味。
   key: hokuhoku
   meanings:
     en:
-    - The state of something that’s soft and warm. Like something freshly baked or
-      steamed
+    - The state of something that’s soft and warm. Like something freshly baked or steamed
     jp:
     - 焼いたりふかしたりしたもの（芋や栗など）が、温かくて柔らかい様子。
+    zh:
+    - 松软热乎
   name: ホクホク
 - examples:
   - en: A cardboard box **full** of oranges was sent to me from my parents.
@@ -2762,14 +2880,19 @@
 - examples:
   - en: When I drink soup, my body feels warm.
     jp: スープを飲むと、体が **ポカポカ** します。
+    zh: 喝汤时，身体感到暖洋洋的。
   - en: I feel good when I get into a kotatsu.
     jp: こたつに入ると、 **ポカポカ** して気持ちいい。
+    zh: 坐在暖桌底下，感觉温暖又舒服。
   - en: It's nice and warm when I take a bath in a hot spring.
     jp: 温泉に入ると、 **ポカポカ** して気持ちがいい。
+    zh: 泡在温泉中，感觉暖洋洋的，非常舒适。
   - en: It's nice and warm today.
     jp: 今日は **ポカポカ** した天気で気持ちいい。
+    zh: 今天天气暖洋洋的，感觉很好。
   - en: He's banging his head.
     jp: 彼は自分の頭を **ポカポカ** と叩いています。
+    zh: 他在啪嚓啪嚓地打自己的头。
   key: pokapoka
   meanings:
     en:
@@ -2778,6 +2901,9 @@
     jp:
     - 心地よい程度に暖かいこと。
     - 頭を続けざまに叩く音や、様子。
+    zh:
+    - 暖煦煦的
+    - 啪嚓啪嚓
   name: ポカポカ
 - examples:
   - en: The steak is sizzling on the griddle.
@@ -2871,27 +2997,28 @@
 - examples:
   - en: You look sloppy and embarrassed when you wear such a **shabby** suit.
     jp: そんな **ヨレヨレ** のスーツ着てると、だらしなく見えるし、恥ずかしいよ。
+    zh: 你穿着这么一件破破烂烂的西装，显得邋遢又令人尴尬。
   - en: He always wears a **shabby** shirt.
     jp: 彼はいつも **ヨレヨレ** のシャツを着ている。
+    zh: 他总是穿着一件破破烂烂的衬衫。
   key: yoreyore
   meanings:
     en:
     - The state of clothes or paper becoming old and wrinkly or losing shape.
     jp:
     - 服や紙などが古くなって、形がくずれたり、しわが寄ったりしている状態。
+    zh:
+    - 破破烂烂
   name: ヨレヨレ
 - examples:
   - en: Since my quarrel with him, our relationship has been on the rocks.
     jp: 彼とけんかして以来、 **ギスギス** した関係が続いている。
-  - en: 'My wife and my mother often disagree with each other, and our relationship
-      is
-
-      on edge.'
+  - en: 'My wife and my mother often disagree with each other, and our relationship is on edge.'
     jp: 妻と私の母は意見が合わないことが多く、 **ギスギス** している。
   key: gisugisu
   meanings:
     en:
-    - Feelings don't mesh well and hard to get along with.
+    - Feelings don't mesh well and hard to get along with.
     jp:
     - 気持ちがうまく噛み合わず、親しみにくい様子。
   name: ぎすぎす
@@ -3004,28 +3131,37 @@
 - examples:
   - en: The skirt I bought last year is **too tight** to wear anymore.
     jp: 去年に買ったスカート、もう **ピチピチ** ではけない。
+    zh: 我去年买的裙子，现在已经紧绷绷的，穿不下了。
   - en: My favorite T-shirt is **too tigh** t to wear.
     jp: お気に入りのTシャツ、もう **ピチピチ** で着れない。
+    zh: 我最喜欢的T恤现在已经紧绷绷的，穿不了了。
   - en: My shirt is **too tight** and I can't button it up.
     jp: シャツが **ピチピチ** でボタンが留まらない。
+    zh: 我的衬衫太紧绷绷了，扣不上扣子。
   key: pichipichi
   meanings:
     en:
     - The state of clothes being tight and looks like it is about to burst.
     jp:
     - 衣類のサイズが小さく、はじけそうな様子。
+    zh:
+    - 紧绷绷
   name: ピチピチ
 - examples:
   - en: Don't rappers often wear **loose-fitting** clothes?
     jp: ラッパーの人って、よく **だぼだぼ** の服着てない？
+    zh: 不是说说看，说唱歌手不是经常穿宽松的服装吗？
   - en: I like **loose-fitting **clothes.
     jp: 私は **だぼだぼ** した服が好きです。
+    zh: 我喜欢宽松的衣服。
   key: dabodabo
   meanings:
     en:
     - The state of clothes being too large and do not seem to fit the body shape.
     jp:
     - 衣類のサイズが大きく、体型に合っていない様子。
+    zh:
+    - 衣服非常肥大的样子
   name: だぼだぼ
 - examples:
   - en: The cheese is melting.
@@ -3056,14 +3192,18 @@
 - examples:
   - en: The boss was **very upset**. Did you do something wrong?
     jp: 部長が **カンカン** に怒ってたけど、何かやらかしたの？
+    zh: 老板非常生气。你做错了什么吗？
   - en: I got a zero on the test, so my mom is **pissed**.
     jp: テストで０点だったので、母は **カンカン** だ。
+    zh: 我在考试中得了零分，所以我妈妈非常生气。
   key: kankan
   meanings:
     en:
     - '"furious" The state of being terribly angry.'
     jp:
     - ひどく怒っている様子。
+    zh:
+    - 极度生气或愤怒的状态
   name: カンカン
 - examples:
   - en: The man **threw** garbage on the roadside.
@@ -3199,18 +3339,21 @@
 - examples:
   - en: Oh, it's Christmas but I have a part-time job. I’m so sad
     jp: あー、今日はクリスマスなのにバイト。 **ぴえん** 。
+    zh: 哦，今天是圣诞节，但我要打工。呜呜。
   - en: I missed the last train. Just my luck
     jp: 終電逃したー。 **ぴえん** 。
+    zh: 我错过了末班车。真是倒霉。
   - en: I couldn't buy a ticket for the concert because it was sold out. Too bad
     jp: コンサートのチケット、完売で買えなかった。 **ぴえん** 。
+    zh: 演唱会的票已经售罄，我没能买到。真可惜。
   key: pien
   meanings:
     en:
-    - Expresses crying or a feeling of wanting to cry. It can be used in both sad
-      and happy situations. This is an abbreviation of "pieen" a crying sound, and
-      is mainly used in social media posts.
+    - Expresses crying or a feeling of wanting to cry. It can be used in both sad and happy situations. This is an abbreviation of "pieen" a crying sound, and is mainly used in social media posts.
     jp:
     - 泣いている様子や泣きたい気持ちを表す。悲しい時と嬉しい時のどちらの場合でも使える。泣き声の「ぴえーん」を省略したもので、主にSNSの書き込みで用いられる。
+    zh:
+    - 呜呜
   name: ぴえん
 - examples:
   - en: I clapped my hands.
@@ -3337,19 +3480,24 @@
 - examples:
   - en: I'm **annoyed** because my boss puts me to a lot of work every day.
     jp: あー、毎日、上司にたくさん仕事を押し付けられて **イライラ** する。
+    zh: '因为每天都被老板堆上很多工作，我感到很烦恼。'
   - en: I'm really **frustrated** because my senior is blaming me for his mistakes.
     jp: 先輩のミスなのに、僕のせいにされて、本当に **イライラ** する。
+    zh: '因为前辈把他的错误怪罪在我身上，我真的很沮丧。'
   - en: I'm really **irritated** because nothing I do goes well these Days.
     jp: 最近、何をやってもうまくいかなくて本当に **イライラ** する。
+    zh: '因为最近做什么都不顺利，我真的很烦躁。'
   - en: His way of speaking and attitude often **irritates** people around him.
     jp: 彼の話し方や態度は、よく周りの人を **イライラ** させます。
+    zh: '他的说话方式和态度经常让周围的人感到烦恼。'
   key: iraira
   meanings:
     en:
-    - '"be irritated" The state of being angry because things didn''t go your way
-      or were not what you expected.'
+    - '"be irritated" The state of being angry because things didn''t go your way or were not what you expected.'
     jp:
     - 自分の思い通りでなかったり、あるいは期待外れだったりして、苛立つ様子。
+    zh:
+    - 焦躁不安，心神不宁
   name: イライラ
 - examples:
   - en: I washed my t-shirt vigorously to remove the dirt from it.
@@ -3510,14 +3658,18 @@
 - examples:
   - en: An **ice-cold** beer is delicious.
     jp: '**キンキン** に冷えたビールは美味しい。'
+    zh: 冰镇啤酒很美味。
   - en: If you feel hot, there's **chilled** juice in the fridge, so drink it.
     jp: 暑かったら、冷蔵庫に **キンキン** に冷えたジュースがあるから、飲みなよ。
+    zh: 如果觉得热，冰箱里有冰果汁，随便喝。
   key: kinkin
   meanings:
     en:
     - Indicates a state of being very cold.
     jp:
     - しっかりと冷えている様子。
+    zh:
+    - 冰冰凉
   name: キンキン
 - examples:
   - en: Isn't it suspicious that the man standing there has been **looking around**?
@@ -3640,77 +3792,91 @@
     - 子供の泣き声、泣く様子。あるいは子供のように無邪気になく様子。
   name: えーん / うえーん
 - examples:
-  - en: 'Tomorrow, he is going on a date with his girlfriend for the first time, and
-      he
-
-      is very **excited**.'
+  - en: 'Tomorrow, he is going on a date with his girlfriend for the first time, and he is very **excited**.'
     jp: 明日、彼は初めて彼女とデートするそうで **ウキウキ** している。
+    zh: 明天，他将和女朋友第一次约会，他感到非常兴奋。
   - en: My husband is **excited** because something good happened to him today.
     jp: 夫は今日、何かいいことがあったのか **ウキウキ** している。
+    zh: 因为今天发生了一些好事，我的丈夫感到很兴奋。
   - en: My son is **excited** because he is going on a field trip tomorrow.
     jp: 息子は明日の遠足が楽しみで **ウキウキ** している。
-  - en: 'James said his parents are coming to Japan next month, and he is very
-
-      **excited**.'
+    zh: 因为明天要参加郊游，我的儿子感到很兴奋。
+  - en: 'James said his parents are coming to Japan next month, and he is very **excited**.'
     jp: ジェームスさんは来月、国の両親が日本に来ることになったそうで、 **ウキウキ** している。
+    zh: 詹姆斯说他的父母下个月要来日本，他感到非常兴奋。
   key: ukiuki
   meanings:
     en:
-    - Indicates a state of restlessness, as if one's heart is buzzing with happiness
-      and joy.
+    - Indicates a state of restlessness, as if one's heart is buzzing with happiness and joy.
     jp:
     - 嬉しさや楽しさ、心が弾んでいるいて、落ち着きの無い様子。
+    zh:
+    - 高兴，兴奋
   name: ウキウキ
 - examples:
   - en: My body **trembled** with fear.
     jp: 恐怖で体が **ガタガタ** と震えた。
+    zh: 我因为恐惧而感到身体发抖。
   - en: Desks and chests of drawers are **shaking** in an earthquake.
     jp: 地震で机やタンスが **ガタガタ** と揺れている。
+    zh: 在地震中，桌子和抽屉摇晃不已。
   - en: Windows are **shaking** because of the wind.
     jp: 風で窓が **ガタガタ** と揺れている。
+    zh: 窗户因为风的关系摇晃不已。
   key: gatagata
   meanings:
     en:
     - A violent shaking of the body due to cold or fear.
-    - The sound made when a hard object is shaken by a strong wind or an earthquake
-      or the state of vibrating
+    - The sound made when a hard object is shaken by a strong wind or an earthquake or the state of vibrating
     jp:
     - 寒さや恐怖で体が激しく震える様子。
     - 硬い物が強い風や地震などで揺れ動くときに出る音や、その様子。
+    zh:
+    - 因寒冷或恐惧而身体剧烈震动
+    - 硬物因强风或地震引起的摇晃
   name: ガタガタ
 - examples:
   - en: When I cut vegetables, I screamed because I saw a **slithering** insect.
     jp: 野菜を切ると、 **にょろにょろ** した虫が出てきて思わず叫んだ。
+    zh: 当我切菜时，看到了一只蠕动的昆虫，吓得我尖叫起来。
   - en: I hate **slithering** creatures like snakes.
     jp: 蛇のような **にょろにょろ** した生き物が大嫌いです。
+    zh: 我讨厌蛇一样蠕动的生物。
   key: nyoronyoro
   meanings:
     en:
     - The way something long and thin moves forward while twisting its body.
     jp:
     - 細長いものが、体をくねらせながら進む様子。
+    zh:
+    - 蠕动的样子
   name: にょろにょろ
 - examples:
   - en: I like the shutter sound of the camera.
     jp: カメラの **カシャッ** という音が好きです。
-  - en: 'I can hear a camera shutter sound somewhere, so I feel that someone is taking
-
-      my picture.'
+    zh: 我喜欢相机发出的咔沙的声音。
+  - en: 'I can hear a camera shutter sound somewhere, so I feel that someone is taking my picture.'
     jp: どこかで **カシャッ** という音が聞こえてくるし、誰かに写真を撮られている気がする。
+    zh: 我能在某处听到相机发出的咔沙的声音，所以感觉有人在给我拍照。
   key: kasha
   meanings:
     en:
     - The shutter sound of a camera.
     jp:
     - カメラのシャッター音。
+    zh:
+    - 咔沙（相机快门的声音）
   name: カシャッ / パシャッ
 - examples:
   - en: Because of the coronavirus, there are no people in the stores at all.
     jp: コロナのせいで、店は **ガラガラ** です。
+    zh: 因为冠状病毒，商店里 空空荡荡，几乎没有人。
   - en: There's hardly anyone on the train at this time of day.
     jp: この時間帯の電車は **ガラガラ** です。
+    zh: 这个时候的火车空空荡荡，几乎没有人。
   - en: I sang so much at karaoke that I had a raspy voice.
     jp: カラオケで歌いすぎて、 **ガラガラ** 声になった。
+    zh: 我在卡拉OK唱得太多，嗓子变得嘶哑。
   key: garagara
   meanings:
     en:
@@ -3723,6 +3889,11 @@
     - 人がおらず、空いている様子。
     - かすれた声。
     - 物が崩れ落ちたり、ぶつかった時に出る大きく響く音。
+    zh:
+    - 漱口时发出的声音
+    - 人烟稀少，空旷
+    - 声音嘶哑
+    - 物体崩塌或碰撞发出的响亮声音
   name: ガラガラ
 - examples:
   - en: I feel sick to my stomach because I ate too much.
@@ -3741,35 +3912,36 @@
       - 恶心，要吐，作呕
   name: ムカムカ
 - examples:
-  - en: 'She was invited to a movie by a guy she was interested in, so she went to
-      the
-
-      theater in a **happy mood**.'
+  - en: 'She was invited to a movie by a guy she was interested in, so she went to the theater in a **happy mood**.'
     jp: 彼女は気になる男性から映画に誘われたそうで、 **ルンルン** 気分で映画館へ向かった。
-  - en: 'He went back home after work in a **happy mood** , as if something good had
-
-      happened.'
+    zh: 她被一个她感兴趣的男生邀请去看电影，所以她心情愉快地去了电影院。
+  - en: 'He went back home after work in a **happy mood** , as if something good had happened.'
     jp: 彼は何かいいことでもあったのか、仕事が終わると **ルンルン** 気分で帰って行った。
+    zh: 他下班后心情愉快地回家，好像发生了什么好事一样。
   key: runrun
   meanings:
     en:
-    - The feeling of having one’s heart dancing because of happiness or excitement
+    - The feeling of having one's heart dancing because of happiness or excitement
     jp:
     - 嬉しいことや、楽しいことがあって心が踊る様子。
+    zh:
+    - 心情很好的样子
   name: ルンルン
 - examples:
-  - en: 'I like the **fizzing sound** that comes out of a glass of Coke when it is
-
-      poured.'
+  - en: 'I like the **fizzing sound** that comes out of a glass of Coke when it is poured.'
     jp: グラスにコーラを注いだ時に出る、 **しゅわしゅわ** という音が好きだ。
+    zh: 我喜欢往杯子里倒可乐时发出的嘶嘶声。
   - en: I'm not a fan of **fizzing** drinks like Coke or Sprite.
     jp: コーラやスプライトのような **しゅわしゅわ** の飲み物は苦手だ。
+    zh: 我不喜欢可乐或雪碧等碳酸饮料。
   key: shuwashuwa
   meanings:
     en:
     - The state/sound of bubbles forming continuously, like a carbonated drink.
     jp:
     - 炭酸など、細かい気泡が次々に発生する様子や音。
+    zh:
+    - 嘶嘶（气泡连续形成的状态或声音）
   name: しゅわしゅわ
 - examples:
   - en: I'm not feeling well today, and my head is aching.
@@ -3793,42 +3965,53 @@
 - examples:
   - en: Water is dripping from the faucet.
     jp: 蛇口から水が **ポタポタ** と落ちている。
+    zh: 水龙头在滴答滴答地滴水。
   - en: I live in a shabby apartment, so when it rains, water leaks from the ceiling.
     jp: ボロいアパートに住んでいるので、雨の日は天井から水が **ポタポタ** 落ちてくる。
+    zh: 我住在一间破旧的公寓，下雨时屋顶会漏水，水滴滴滴答答地往下落。
   - en: Tears dripped from my eyes.
     jp: 涙が **ポタポタ** と落ちた。
+    zh: 眼泪从我的眼睛中滴答滴答地落下。
   key: potapota
   meanings:
     en:
     - the sound / the state of water dripping.
     jp:
     - 水滴やしずくの、落ちる様子や音。
-  name: 'ポタポタ '
+    zh:
+    - 滴滴答答
+  name: ポタポタ
 - examples:
   - en: The goat **bleats**.
     jp: ヤギが **メェー** と鳴く。
+    zh: 山羊发出咩咩的叫声。
   - en: The sheep **bleats**.
     jp: 羊が **メェー** と鳴く。
+    zh: 绵羊发出咩咩的叫声。
   key: mee
   meanings:
     en:
     - The sound of a goat's/sheep's baa.
     jp:
     - やぎ/羊の鳴き声。
+    zh:
+    - 咩咩（羊的叫声）
   name: メェー
 - examples:
   - en: The elephant made a loud **trumpet sound**.
     jp: 象が大きな声で **パオーン** と鳴いた。
-  - en: 'The elephant in the circus made a loud **trumpet sound** in front of the
-
-      audience.'
+    zh: 大象发出一声响亮的象喇叭声。
+  - en: 'The elephant in the circus made a loud **trumpet sound** in front of the audience.'
     jp: サーカスの象が観客の前で **パオーン** と鳴いてみせた。
+    zh: 马戏团的大象在观众面前发出一声响亮的象喇叭声。
   key: paoon
   meanings:
     en:
     - The sound of an elephant's trumpet.
     jp:
     - 象の鳴き声。
+    zh:
+    - 大象叫声
   name: パオーン
 - examples:
   - en: My hit was not strong enough so the ball rolled towards the third base.
