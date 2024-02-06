@@ -1,4 +1,3 @@
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
@@ -15,8 +14,8 @@ import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_full_text_vi
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/previews/item_meanings_preview_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_meanings_text_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
+import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
-import '../../widgets/everjapan_logo.dart';
 import 'helpers/item_text_helper.dart';
 
 enum PreviewType {
@@ -260,31 +259,7 @@ class _ItemDisplayPageState extends State<ItemDisplayPage> {
               : kItemBgColor,
           borderRadius: BorderRadius.circular(8),
         ),
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.center,
-              child: child,
-            ),
-            Positioned.fill(
-              right: 16,
-              child: Align(
-                alignment: Alignment.center,
-                child: Opacity(
-                  opacity: 0.05,
-                  child: Transform.rotate(
-                    angle: -math.pi / 9,
-                    child: const EverJapanLogo(
-                      lang: LogoLang.zh,
-                      logoSize: 48,
-                      fontSize: 24,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+        child: EverjapanWatermark(child: child),
       ),
     );
   }

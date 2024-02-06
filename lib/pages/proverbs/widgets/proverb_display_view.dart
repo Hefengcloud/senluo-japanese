@@ -8,6 +8,7 @@ import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
+import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
 import '../../../constants/texts.dart';
 import '../../../helpers/image_helper.dart';
@@ -51,11 +52,11 @@ class _ProverbDisplayViewState extends State<ProverbDisplayView> {
     return Row(
       children: [
         IconButton(
-          onPressed: () => bloc.add(const ProverbChanged(next: true)),
+          onPressed: () => bloc.add(const ProverbChanged(next: false)),
           icon: const Icon(Icons.arrow_back_outlined),
         ),
         IconButton(
-          onPressed: () => bloc.add(const ProverbChanged(next: false)),
+          onPressed: () => bloc.add(const ProverbChanged(next: true)),
           icon: const Icon(Icons.arrow_forward_outlined),
         ),
         IconButton(
@@ -99,7 +100,9 @@ class _ProverbDisplayViewState extends State<ProverbDisplayView> {
         child: Container(
           color: _kBgColor,
           padding: const EdgeInsets.all(8.0),
-          child: _buildImageContent(context, item),
+          child: EverjapanWatermark(
+            child: _buildImageContent(context, item),
+          ),
         ),
       ),
     );
@@ -193,17 +196,12 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
                   'Ma Shan Zheng',
-                  textStyle: const TextStyle(fontSize: 28.0),
+                  textStyle: const TextStyle(fontSize: 24.0),
                 ),
               ),
             )
             .toList(),
         const Gap(32),
-        const Opacity(
-          opacity: 0.8,
-          child: EverJapanLogo(),
-        ),
-        const Gap(8),
       ],
     );
   }

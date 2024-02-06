@@ -1,13 +1,9 @@
-import 'dart:io';
-
 import 'package:collection/collection.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/constants/kanas.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_view.dart';
-import 'package:yaml/yaml.dart';
 
 import '../../repos/proverbs/models/proverb_item.dart';
 import 'bloc/proverb_bloc.dart';
@@ -58,13 +54,6 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
                 child: _buildRightPanel(context, state),
               ),
             ],
-          ),
-          endDrawer: _buildDrawer(context),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              _importFromYaml(context);
-            },
-            child: const Icon(Icons.file_open),
           ),
         );
       },
@@ -138,30 +127,8 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
     return const Center(child: CircularProgressIndicator());
   }
 
-  _buildDrawer(BuildContext context) {
-    return Drawer();
-  }
-
-  _buildFilters(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 4,
-      children: ProverbCategory.values
-          .map(
-            (category) => ChoiceChip(
-              label: Text(category.name),
-              selected: _category == category,
-              onSelected: (selected) {
-                setState(() {
-                  _category = selected ? category : null;
-                });
-              },
-            ),
-          )
-          .toList(),
-    );
-  }
-
   _buildProverbGrid(BuildContext context, ProverbLoaded state) {
+    final bloc = BlocProvider.of<ProverbBloc>(context);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GridView.count(
@@ -172,7 +139,10 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
         children: state.items
             .mapIndexed<Widget>(
               (index, item) => InkWell(
-                onTap: () => _showProverbCard(context, item),
+                onTap: () {
+                  bloc.add(ProverbSelected(item: item));
+                  _showProverbCard(context, item);
+                },
                 child: ListTile(
                   trailing: Text(
                     (index + 1).toString(),
@@ -195,29 +165,14 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
     );
   }
 
-  _importFromYaml(BuildContext context) async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      allowedExtensions: ['yaml', 'yml'],
-    );
-    if (result != null) {
-      File file = File(result.files.single.path!);
-      final yamlString = await file.readAsString();
-      final yamlMaps = loadYaml(yamlString);
-      setState(() {});
-    }
-  }
-
   _showProverbCard(BuildContext context, ProverbItem item) {
     return showDialog(
       context: context,
-      builder: (context) => BlocProvider(
-        create: (context) => BlocProvider.of<ProverbBloc>(context),
-        child: const AlertDialog(
-          content: SizedBox(
-            width: kPreviewDialogWidth,
-            height: kPreviewDialogHeight,
-            child: ProverbDisplayView(),
-          ),
+      builder: (context) => const AlertDialog(
+        content: SizedBox(
+          width: kPreviewDialogWidth,
+          height: kPreviewDialogHeight,
+          child: ProverbDisplayView(),
         ),
       ),
     );
