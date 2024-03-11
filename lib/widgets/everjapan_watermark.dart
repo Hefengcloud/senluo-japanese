@@ -17,13 +17,13 @@ class EverjapanWatermark extends StatelessWidget {
           child: child,
         ),
         Positioned.fill(
-          right: 16,
+          bottom: 100,
           child: Align(
-            alignment: Alignment.center,
+            alignment: Alignment.bottomCenter,
             child: Opacity(
               opacity: 0.05,
               child: Transform.rotate(
-                angle: -math.pi / 9,
+                angle: -math.pi / 18,
                 child: const EverJapanLogo(
                   lang: LogoLang.zh,
                   logoSize: 48,

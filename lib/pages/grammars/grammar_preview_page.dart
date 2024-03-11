@@ -13,6 +13,7 @@ import 'package:senluo_japanese_cms/pages/grammars/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
+import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
 import '../../constants/colors.dart';
 import '../../helpers/image_helper.dart';
@@ -183,27 +184,29 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
             ),
             color: Colors.white,
           ),
-          child: Column(
-            children: [
-              _buildTopLogo(item),
-              Gap(_gap),
-              _buildItemName(item.name, item.level),
-              _buildJpMeaning(item),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: _gap,
+          child: EverjapanWatermark(
+            child: Column(
+              children: [
+                _buildTopLogo(item),
+                Gap(_gap),
+                _buildItemName(item.name, item.level),
+                _buildJpMeaning(item),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: _gap,
+                  ),
+                  child: _buildZhMeaning(item),
                 ),
-                child: _buildZhMeaning(item),
-              ),
-              _buildConjugation(item),
-              Gap(_gap),
-              const Divider(
-                height: 0.5,
-                color: Colors.black12,
-              ),
-              const Gap(16),
-              Expanded(child: _buildExampleList(item)),
-            ],
+                _buildConjugation(item),
+                Gap(_gap),
+                const Divider(
+                  height: 0.5,
+                  color: Colors.black12,
+                ),
+                const Gap(16),
+                Expanded(child: _buildExampleList(item)),
+              ],
+            ),
           ),
         ),
       ),
@@ -224,14 +227,13 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
 
   AutoSizeText _buildJpMeaning(GrammarItem item) {
     return AutoSizeText(
-      item.meaning.jps.join('；'),
+      item.meaning.jps.join('\n'),
       textAlign: TextAlign.center,
       style: const TextStyle(
         fontSize: 14,
         color: kBrandColor,
       ),
       maxFontSize: 16,
-      maxLines: 1,
     );
   }
 

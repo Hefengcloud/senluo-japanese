@@ -561,8 +561,10 @@
 - examples:
   - en: 'When you were a child, did you ever play with a straw to make bubbles when you drank Coke?'
     jp: 子供の頃、コーラを飲む時、ストローから息を吹きかけて、 **ブクブク** と泡を立てる遊びしたことある？
+    zh: 当你还是个孩子的时候，你有没有用吸管在喝可乐时吹气，制造泡泡玩过？
   - en: 'When I was studying abroad, I didn''t exercise much and ate a lot of high-calorie foods, so I gained a lot of weight.'
     jp: 海外留学中、ろくに運動もせず、カロリーが高いものを食べてばかりいたので、 **ブクブク** 太ってしまった。
+    zh: 在留学期间，我没有多运动，吃了很多高热量的食物，所以体重增加了很多。
   key: bukubuku
   meanings:
     en:
@@ -909,12 +911,16 @@
 - examples:
   - en: I am going to dismantle the computer.
     jp: パソコンを **バラバラ** に解体します。
+    zh: 我要把电脑拆散开来。
   - en: Everyone's opinions are different, and no conclusion can be reached.
     jp: みんなの意見が **バラバラ** で、結論が出ない。
+    zh: 大家的意见五花八门，得不出结论。
   - en: The family was split up by the disaster.
     jp: 災害で家族が **バラバラ** になった。
+    zh: 这场灾难把这个家庭分散开了。
   - en: This document is not in order.
     jp: この資料、ページが **バラバラ** ですよ。
+    zh: 这个文件页码顺序都乱了。
   key: barabara
   meanings:
     en:
@@ -925,20 +931,30 @@
     - 一つにかたまらないで分散している様子。
     - 大勢の人がまとまりなく動く様子。
     - 散らばっている様子。
+    zh:
+    - 吧嗒吧嗒的，粒状物持续落下的声音
+    - 乱哄哄的，纷纷的
   name: バラバラ
 - examples:
   - en: He's sniffing the scent.
     jp: '**クンクン** とにおいを嗅いでいる。'
+    zh: 他正在闻嗅气味。
   - en: The dog is sniffing around on the ground, looking for food.
     jp: 犬が餌を探して、地面を **クンクン** かぎ回っている。
+    zh: 那条狗在地上闻嗅着寻找食物。
   - en: The dog is whimpering.
     jp: 犬が **クンクン** と鳴いている
+    zh: 那条狗在呜呜叫。
   key: kunkun
   meanings:
     en:
     - to sniff / to take a whiff
     jp:
-    - 1. においを嗅ぐ動作や様子 2. 犬などの動物が鼻を鳴らす時の声
+    - においを嗅ぐ動作や様子 
+    - 犬などの動物が鼻を鳴らす時の声
+    zh:
+    - 闻嗅的动作或状态
+    - 狗等动物用鼻子发出的声音
   name: クンクン
 - examples:
   - en: My classmate, Mr. Suzuki, is always **talking** to himself, which is creepy.
@@ -968,8 +984,10 @@
 - examples:
   - en: He is fanning himself with a fan.
     jp: 団扇で **ぱたぱた** とあおいでいる。
+    zh: 他正在用扇子扇风。
   - en: Butterflies are fluttering around in the air.
     jp: 蝶が **パタパタ** と飛んでいる。
+    zh: 蝴蝶在空中飘飘荡荡。
   key: patapata
   meanings:
     en:
@@ -978,6 +996,9 @@
     jp:
     - うちわや扇子などの薄いものであおぐ音や様子。
     - 羽を広げて飛ぶ様子。
+    zh:
+    - 用扇子等扇动的声音或状态
+    - 展开双翼飞的样子
   name: パタパタ
 - examples:
   - en: The lion **roars**.
@@ -993,46 +1014,53 @@
     - 狮子的叫声
   name: ガオー
 - examples:
-  - en: 'When I was shopping at the mall with my girlfriend, I **bumped into** my
-      ex-
-
-      girlfriend.'
+  - en: 'When I was shopping at the mall with my girlfriend, I **bumped into** my ex-girlfriend.'
     jp: 彼女とモールで買い物をしていたら、元カノに **ばったり** 会った。
+    zh: 我和女朋友在商场购物时，碰巧遇到了我的前女友。
   - en: I **bumped into** my co-worker at the supermarket.
     jp: スーパーで会社の同僚に **ばったり** 会った。
+    zh: 我在超市碰巧遇到了我的同事。
   key: battari
   meanings:
     en:
-    - '"bump into / run into" The state of meeting a person you know such as friend,
-      teacher and colleague by chance.'
+    - '"bump into / run into" 
+    - The state of meeting a person you know such as friend, teacher and colleague by chance.'
     jp:
     - 偶然に出会う様子。
+    zh:
+    - 碰巧遇到
   name: ばったり
 - examples:
   - en: It's a **gloomy** day today.
     jp: 今日は **どんより** した天気だ。
+    zh: 今天天气阴沉沉的。
   - en: The sky is **gloomy** now, so I better not go out.
     jp: 今、 **どんより** 曇っているので、外出はやめておこう。
+    zh: 现在天空阴沉沉的，所以最好不要出去了。
   key: donyori
   meanings:
     en:
     - The state of the sky being cloudy and grim.
     jp:
     - 空が曇っていて、重苦しく感じられる様子。
+    zh:
+    - 阴沉沉
   name: どんより
 - examples:
   - en: My son **banged** his head on the table and cried.
     jp: 息子はテーブルに頭を **ごつん** とぶつけて泣いた。
-  - en: 'When I was walking while playing with my smartphone, I **bumped into** a
-
-      utility pole.'
+    zh: 我儿子的头砰地一声撞在桌子上，然后哭了起来。
+  - en: 'When I was walking while playing with my smartphone, I **bumped into** a utility pole.'
     jp: スマホをいじりながら歩いていたら、 **ごつん** と電柱にぶつかった。
+    zh: 我一边玩手机一边走，结果砰地一声撞到了电线杆。
   key: gotsun
   meanings:
     en:
     - The state/sound of a hard and heavy object hitting something hard.
     jp:
     - かたくて重いものが強く当たること。または、その時の音。
+    zh:
+    - 砰一声，撞击声
   name: ごつん
 - examples:
   - en: The baby is punching and kicking while having tantrums.
@@ -1057,7 +1085,10 @@
     - 手足を激しく動かす様子。
     - 鳥の大きい羽音。
     - 物が風に激しくあおられる時に出る音
-    - 続けざまに落ちたり倒れたりする様子。 ⑤ あわただしく物事をする様子。
+    - 続けざまに落ちたり倒れたりする様子。 
+    - あわただしく物事をする様子。
+    zh:
+    - 
   name: バタバタ
 - examples:
   - en: I'm hungry and my stomach is **growling**.
@@ -1074,49 +1105,48 @@
 - examples:
   - en: It's starting to **drizzle**.
     jp: 雨が **パラパラ** と降ってきた。
+    zh: 雨开始淅淅沥沥下起来了。
   - en: It's still **drizzling** , so let's hurry home while we can.
     jp: まだ雨が **パラパラ** だから、今のうちに急いで帰ろう。
+    zh: 雨还在淅淅沥沥下着，我们赶紧趁现在赶回家吧。
   key: parapara
   meanings:
     en:
     - The state/sound of light rain or granular objects falling sparsely.
     jp:
     - 雨などの粒状のものがまばらに落ちてくる様子。またはその音。
+    zh:
+    - 淅淅沥沥（降落），沙沙地
   name: パラパラ
 - examples:
   - en: It’s **pouring**.
     jp: 雨が **ザーザー** と降っています。
+    zh: 雨在哗啦啦地下着。
   - en: It was starting to **pour** when I was on my way home.
     jp: 帰宅途中、雨が **ザーザー** 降ってきた。
+    zh: 回家途中，下起了倾盆大雨。
   key: zaa-zaa
   meanings:
     en:
     - The state of heavy rain or its sound.
     jp:
     - 雨が激しく降る様子。あるいはその音。
+    zh:
+    - 哗啦啦
   name: ザーザー
 - examples:
-  - en: 'Your refrigerator almost doesn’t have anything inside. How do you live like
-
-      this every day?'
+  - en: 'Your refrigerator almost doesn’t have anything inside. How do you live like this every day?'
     jp: 冷蔵庫の中身、 **スカスカ** じゃん。毎日どうやって暮らしてるの？
-  - en: 'I ordered a rather expensive lunch box, but when I opened the box, it was
-
-      almost empty.'
+  - en: 'I ordered a rather expensive lunch box, but when I opened the box, it was almost empty.'
     jp: ちょっと良い値段のお弁当を注文したが、箱を開けると中が **スカスカ** だった。
-  - en: I bought a sandwich at a convenience store but there’s not much inside of
-      it.
+  - en: I bought a sandwich at a convenience store but there’s not much inside of it.
     jp: コンビニでサンドイッチを買ったら、中身が **スカスカ** だった。
-  - en: 'Even though it was a holiday, there were only a few people on the train and
-      it
-
-      was almost empty.'
+  - en: 'Even though it was a holiday, there were only a few people on the train and it was almost empty.'
     jp: 休日にも関わらず、電車は人が少なく、 **スカスカ** だった。
   key: sukasuka
   meanings:
     en:
-    - The state of having many gaps in the contents of a thing or within a certain
-      range.
+    - The state of having many gaps in the contents of a thing or within a certain range.
     jp:
     - 物の中身や、ある範囲の中に、隙間がたくさんある様子。
   name: スカスカ
@@ -1867,16 +1897,18 @@
 - examples:
   - en: It's drizzling.
     jp: 雨が **シトシト** と降っている。
-  - en: 'The rain in Japan tends to fall more slowly and over a longer period of time
-
-      than in my country.'
+    zh: 雨在淅淅沥沥地下着。
+  - en: 'The rain in Japan tends to fall more slowly and over a longer period of time than in my country.'
     jp: 日本の雨は私の国に比べると **シトシト** と長い時間かけて降ることが多い。
+    zh: 日本的雨跟我的国家相比，往往会长时间淅淅沥沥地下。
   key: shitoshito
   meanings:
     en:
     - The state of light rain falling quietly.
     jp:
     - 雨が静かに降る様子。
+    zh:
+    - 淅淅沥沥，淅沥淅沥
   name: シトシト
 - examples:
   - en: He is the tallest boy in the class, but he looks frail and weak.
@@ -2029,23 +2061,23 @@
 - examples:
   - en: The wind is blowing **softly**.
     jp: 風が **そよそよ** と吹いている。
+    zh: 风轻轻地吹拂。
   - en: A **gentle** , comfortable breeze caressed my cheeks.
     jp: '**そよそよ** と心地よい風が、私の頬を撫でた。'
+    zh: 一阵轻轻的、舒适的微风拂过我的面颊。
   key: soyosoyo
   meanings:
     en:
     - The state of the wind blowing quietly and softly
     jp:
     - 風が静かに心地よく吹く様子。
+    zh:
+    - 和风吹拂，轻轻吹拂
   name: そよそよ
 - examples:
-  - en: 'To be honest, it is difficult for me to work with my senpai because he is
-
-      wishy-washy and slow in decision making.'
+  - en: 'To be honest, it is difficult for me to work with my senpai because he is wishy-washy and slow in decision making.'
     jp: 先輩は **いじいじ** した性格で、決断が遅いので、正直やりにくい。
-  - en: 'I get frustrated when I ask him for his opinion, because he is hesitant and
-
-      doesn''t say anything.'
+  - en: 'I get frustrated when I ask him for his opinion, because he is hesitant and doesn''t say anything.'
     jp: 彼に意見を聞いても、 **いじいじ** して何も言わないので、イライラする。
   key: ijiiji
   meanings:
