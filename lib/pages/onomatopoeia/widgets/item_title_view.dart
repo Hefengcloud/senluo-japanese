@@ -31,14 +31,13 @@ class ItemTitleView extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const Gap(8),
         Container(
           decoration: BoxDecoration(
             color: kBrandColor,
             borderRadius: BorderRadius.circular(16),
           ),
-          margin: EdgeInsets.only(bottom: 16.0),
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          margin: const EdgeInsets.only(bottom: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
             subtitle,
             style: const TextStyle(color: Colors.white),

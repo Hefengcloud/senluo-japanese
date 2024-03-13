@@ -80,7 +80,6 @@ flutter:
     - assets/onomatopoeia/images/
     - assets/data/
     - assets/images/
-    - assets/images/proverbs/
     - assets/grammar/
     - assets/grammar/n1/
     - assets/grammar/n2/
@@ -95,7 +94,6 @@ flutter:
     - assets/kanji/n4/
     - assets/kanji/n5/
     - assets/kanji/n0/
-    - assets/vocabulary/
     - assets/vocabulary/category/
     - assets/vocabulary/category/home/
     - assets/vocabulary/category/cooking/
@@ -111,7 +109,6 @@ flutter:
     - assets/vocabulary/category/animal/
     - assets/vocabulary/category/place/
     - assets/vocabulary/jlpt/
-    - assets/vocabulary/textbook/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
