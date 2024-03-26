@@ -18,7 +18,7 @@ Future<void> saveImageToFile(Uint8List bytes, String fileName) async {
   // Directory appDocDir = await getApplicationDocumentsDirectory();
   // String appDocPath = appDocDir.path;
   String? outputFile = await FilePicker.platform.saveFile(
-    dialogTitle: 'Please select an output file:',
+    dialogTitle: 'Save to:',
     fileName: fileName,
   );
 

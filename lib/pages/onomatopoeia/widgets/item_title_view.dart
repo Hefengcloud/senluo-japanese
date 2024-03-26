@@ -27,7 +27,7 @@ class ItemTitleView extends StatelessWidget {
           style: GoogleFonts.getFont(
             kJpGoogleFont,
             color: mainColor,
-            fontSize: title.contains('\n') ? 48 : 56,
+            fontSize: title.contains('\n') ? 48 : 52,
             fontWeight: FontWeight.bold,
           ),
         ),

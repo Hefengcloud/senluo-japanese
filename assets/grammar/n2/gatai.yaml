@@ -1,5 +1,5 @@
 conjugations:
-- V ~~ます~~ \+ がたい
+- V ~~ます~~ + がたい
 examples:
 - jp: 彼はいつも嘘ばかりつくので、今回の話も本当かどうか信じ **がたい** 。
   zh: 他总是说谎，所以很难相信这次的话是真的还是假的。
@@ -7,8 +7,6 @@ examples:
   zh: 他总是看起来很可怕，又安静，难以靠近。
 - jp: 弱い者をいじめるとは許し **がたい** 行為だ。
   zh: 欺凌弱者是不可原谅的行为。
-- jp: '**「〜にくい」**'
-  zh: ・「〜づらい」
 explanations: []
 level: N2
 meanings:
@@ -17,7 +15,7 @@ meanings:
   - '**＊Not used to mean something can''t be done because of lack of ability.**'
   jp:
   - 〜するのが難しい。
-  - '**「能力的にできない」ということには使わない。**'
+  - 「能力的にできない」ということには使わない。
   zh:
   - 不容易
   - 难于…

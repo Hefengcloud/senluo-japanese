@@ -725,13 +725,13 @@
 - examples:
   - en: "A: Hey, Mr. Suzuki, there's a mess on your desk.  \nB: I'm sorry. I'll sort it out."
     jp: "A：ちょっと鈴木さん、机の上が **ごちゃごちゃ** よ。  \nB：すみません。整理します。"
-    zh:
+    zh: "嘿，铃木先生，你桌上乱糟糟的。\nB: 对不起，我马上整理一下。"
   - en: "A: How about these clothes? Isn't the design cool?  \nB: Hmmmm, it's kind of messy, and I don't really like it."
     jp: "A：この服どう？デザインがカッコよくない？  \nB：うーん、なんか **ごちゃごちゃ** してるし、私はあまり好きじゃないなぁ。"
-    zh:
+    zh: "A: 这些衣服怎么样？设计不是很酷吗？\nB: 嗯，有点乱糟糟的，我不太喜欢。"
   - en: You're really annoying.I get it now, don't mess with me anymore.
     jp: 本当に、うるさいなぁ。もうわかったから、これ以上 **ごちゃごちゃ** 言わないでよ。
-    zh:
+    zh: "你真是很烦人啊。我现在明白了，别再絮絮叨叨地说这些了。"
   key: gochagocha
   meanings:
     en:
@@ -1711,10 +1711,13 @@
 - examples:
   - en: Would you like hot oden?
     jp: '**あつあつ** のおでんいかがですか。'
+    zh: 你想吃热腾腾的关东煮卖吗？
   - en: Please eat it while it's hot.
     jp: '**あつあつ** のうちに召し上がってください。'
+    zh: 请趁热吃。
   - en: Since they had just started dating, they were very lovey-dovey.
     jp: 二人は付き合ったばかりとあって、とても **アツアツ** だ。
+    zh: 他们刚刚开始恋爱，处于热恋期，相当热烈。
   key: atsuatsu
   meanings:
     en:
@@ -1723,6 +1726,9 @@
     jp:
     - 料理が出来立てで熱いこと。
     - カップル、夫婦が熱烈に愛し合っている様子。
+    zh:
+    - 火热
+    - 热恋
   name: あつあつ
 - examples:
   - en: 'I quietly placed the present on the bedside table so as not to wake the
@@ -1808,14 +1814,18 @@
 - examples:
   - en: It is easy to eat because of its light flavor.
     jp: '**あっさり** した味付けなので、食べやすいです。'
+    zh: 由于口味清淡，所以很容易吃下去。
   - en: I feel like eating something light right now.
     jp: 今は **あっさり** したものが食べたい気分。
+    zh: 我现在想吃点清淡的东西。
   key: assari
   meanings:
     en:
     - Light taste.
     jp:
     - 味が薄めで、しつこくない様子。
+    zh:
+    - （口味）清淡
   name: あっさり
 - examples:
   - en: I can hear the baby crying from the bedroom.
@@ -1981,14 +1991,18 @@
 - examples:
   - en: Maybe the dog was hungry since he was **gobbling up** the food.
     jp: 犬はお腹が空いていたのか、 **ガツガツ** と食べている。
+    zh: 那只狗饿极了，正狼吞虎咽地吃着食物。
   - en: It's a French restaurant, don't **gobble up** food like that.
     jp: フレンチレストランなんだし、そんなに **ガツガツ** 食べないでよ。
+    zh: 这可是法式餐厅，别那么狼吞虎咽地吃嘛。
   key: gatsugatsu
   meanings:
     en:
     - to gobble
     jp:
     - 食べ物をむさぼり食う様子。
+    zh:
+    - 贪婪地吃，狼吞虎咽地吃
   name: ガツガツ
 - examples:
   - en: I'm nervous and my heart is pounding.
@@ -2320,14 +2334,18 @@
 - examples:
   - en: The cabbage is **crispy** and delicious.
     jp: キャベツが **シャキシャキ** してて美味しいです。
+    zh: 这个卷心菜脆脆的，很美味。
   - en: These vegetables are fresh and **crisp**.
     jp: この野菜は新鮮で **シャキシャキ** しています。
+    zh: 这些蔬菜新鲜可口，脆脆的。
   key: shakishaki
   meanings:
     en:
     - The sound of chewing crunchy food, such as cabbage or celery.
     jp:
     - キャベツやセロリなど、歯ごたえのある食べ物を噛む時の音。
+    zh: 
+    - （吃起来）脆脆的
   name: シャキシャキ
 - examples:
   - en: Mom, I can hear the sirens of an ambulance buzzing " **PIIPO-PIIPO** " nearby.
@@ -2361,28 +2379,25 @@
 - examples:
   - en: The man drank the miso soup with a **slurping sound**.
     jp: 男性は味噌汁を **ズルズル** と飲んだ。
-  - en: 'Japanese people eat ramen noodles with a **slurping sound** , which seems
-      to
-
-      be offensive to some people in other countries.'
+    zh: 那个男人吸溜吸溜地喝着味增汤。
+  - en: 'Japanese people eat ramen noodles with a **slurping sound** , which seems to be offensive to some people in other countries.'
     jp: 日本人はラーメンを **ズルズル** と音を立てて食べるが、一部の国の人には、その音が不快なようだ。
+    zh: 日本人吸溜吸溜地吃拉面，这种声音在其他一些国家会让人感到不舒服。
   key: zuruzuru
   meanings:
     en:
     - The state of sipping/slurping noodles or soup with sound, or its sound.
     jp:
     - 麺や汁物などを音を立てて啜ったり、吸ったりする様子。または、その音。
+    zh:
+    - 吸溜吸溜
   name: ズルズル
 - examples:
   - en: My son was squirming as if he were trying to hold back a pee.
     jp: 息子がおしっこを我慢しているのか、 **もじもじ** している。
-  - en: 'It was the first time for me to speak in front of many people, so I was
-
-      nervous and I squirmed.'
+  - en: 'It was the first time for me to speak in front of many people, so I was nervous and I squirmed.'
     jp: 大勢の人の前で話すのは初めてだったので、緊張で **もじもじ** してしまった。
-  - en: 'I called my senior to confess my feelings to him, but I squirmed and I
-
-      couldn''t tell him how I felt in the end.'
+  - en: 'I called my senior to confess my feelings to him, but I squirmed and I couldn''t tell him how I felt in the end.'
     jp: 先輩に告白しようと、呼び出したものの **もじもじ** してしまい、結局自分の気持ちを伝えることができなかった。
   key: mojimoji
   meanings:
@@ -2395,26 +2410,34 @@
 - examples:
   - en: He gobbled up the snacks.
     jp: 彼はお菓子を **ばくばく** 食べた。
+    zh: 他狼吞虎咽地吃光了那些零食。
   - en: The dog was so hungry that when I fed it, it started to eat vigorously.
     jp: お腹が空いていたのか、餌をやると **ばくばく** と勢いよく食べ始めた。
+    zh: 狗狗似乎饿极了，一给它食物就狼吞虎咽大口大口地吃起来。
   key: bakubaku
   meanings:
     en:
     - The state of eating voraciously.
     jp:
     - 盛んに食べる様子。
+    zh:
+    - 大口大口吃东西的样子
   name: ばくばく
 - examples:
   - en: He is gulping water.
     jp: 水を **ゴクゴク** と飲んでいる。
+    zh: 他咕嘟咕嘟地喝着水。
   - en: He is gulping beer.
     jp: ビールを **ゴクゴク** と飲んでいる。
+    zh: 他咕嘟咕嘟地喝着啤酒。
   key: gokugoku
   meanings:
     en:
     - The sound of gulping while drinking something.
     jp:
     - 飲み物を飲む時に出る音。
+    zh:
+    - 咕嘟咕嘟
   name: ゴクゴク
 - examples:
   - en: 'Yesterday, I saw a friend of mine who I hadn''t seen in a long time, but
@@ -2565,14 +2588,18 @@
 - examples:
   - en: It is not good to make **chewing sounds** when eating.
     jp: '**くちゃくちゃ** と音を立てて食べるのは良くないです。'
+    zh: 吃东西时发出咕唧咕唧的声音不太好。
   - en: He is chewing gum with **chewing sounds**.
     jp: 彼は **くちゃくちゃ** とガムを噛んでいる。
+    zh: 他咕唧咕唧地嚼着口香糖
   key: kuchakucha
   meanings:
     en:
     - The sound of chewing.
     jp:
     - 口の中で物を噛むときの音。
+    zh:
+    - 咕唧咕唧
   name: くちゃくちゃ
 - examples:
   - en: The glass full of sake was brought to me.
@@ -3199,18 +3226,27 @@
 - examples:
   - en: The cheese is melting.
     jp: チーズが **トロトロ** と溶けている。
+    zh: 奶酪正在黏糊糊地融化。
   - en: I like the eggs in Oyakodon to be a little runny.
     jp: 親子丼の卵は固めより、少し **トロトロ** しているほうが好きだ。
+    zh: 亲子丼的蛋稍微溏心一些，比完全熟透的更好吃。
   - en: The car in front of me was driving so slow that I couldn't go further.
     jp: 前の車が **トロトロ** と走っているせいで、全然進まない。
+    zh: 前面的车开得太磨蹭了，以至于我完全无法前进。
   - en: What are you doing driving so slow?
     jp: 何、 **トロトロ** 走ってんだ！
+    zh: 你怎么开车这么磨蹭的！
   key: torotoro
   meanings:
     en:
-    - 1. melty / creamy / thick 2. slowly
+    - melty / creamy / thick 
+    - slowly
     jp:
-    - 1. とけて軟らかくなり、粘り気のある状態であるさま。 2. ゆっくりと進むこと。
+    - とけて軟らかくなり、粘り気のある状態であるさま。 
+    - ゆっくりと進むこと。
+    zh:
+    - 黏糊糊
+    - 慢吞吞
   name: トロトロ
 - examples:
   - en: I **stared at** my son's sleeping face.
