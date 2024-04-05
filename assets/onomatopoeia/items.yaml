@@ -2127,14 +2127,18 @@
 - examples:
   - en: I'm so sad, tears are **flowing**.
     jp: 悲しくて、涙が **どばどば** 出てくる。
+    zh: 我非常难过，眼泪止不住地往下流。
   - en: My son put **a lot of** ketchup on his rice omelette rice.
     jp: 息子はオムライスにケチャップを **どばどば** とかけた。
+    zh: 我儿子在炒蛋饭上浇了大量番茄酱。
   key: dobadoba
   meanings:
     en:
     - The state of a large number of things coming out in rapid succession.
     jp:
     - 大量のものが、勢いよく続けざまに出る様子。
+    zh:
+    - 大量湧出
   name: どばどば
 - examples:
   - en: I massaged my grandmother's shoulders.
