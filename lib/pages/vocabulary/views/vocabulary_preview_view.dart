@@ -6,12 +6,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 
 import '../../../common/models/word.dart';
+import '../../../helpers/image_helper.dart';
 import '../../kanji/constants/styles.dart';
 import '../../onomatopoeia/constants/colors.dart';
 import '../bloc/preview_bloc.dart';
 
 class VocabularyPreviewView extends StatelessWidget {
-  const VocabularyPreviewView({super.key});
+  VocabularyPreviewView({super.key});
+
+  final GlobalKey _globalKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +27,12 @@ class VocabularyPreviewView extends StatelessWidget {
             children: [
               Expanded(
                 flex: kPreviewLeftFlex,
-                child: AspectRatio(
-                  aspectRatio: 3 / 4,
-                  child: _buildImage(context, state),
+                child: RepaintBoundary(
+                  key: _globalKey,
+                  child: AspectRatio(
+                    aspectRatio: 3 / 4,
+                    child: _buildImage(context, state),
+                  ),
                 ),
               ),
               Expanded(
@@ -53,7 +59,7 @@ class VocabularyPreviewView extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.getFont(
                 'ZCOOL KuaiLe',
-                fontSize: 48,
+                fontSize: 36,
                 color: kItemMainColor,
                 fontWeight: FontWeight.bold,
               ),
@@ -63,7 +69,7 @@ class VocabularyPreviewView extends StatelessWidget {
               state.currentGroupKey,
               style: GoogleFonts.getFont(
                 kKanjiFontName,
-                fontSize: 32,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
               maxLines: 1,
@@ -166,10 +172,15 @@ class VocabularyPreviewView extends StatelessWidget {
         const Gap(16),
         ElevatedButton(
           child: const Text('Save Image'),
-          onPressed: () {},
+          onPressed: () => _onSaveImage("words.jpg"),
         ),
       ],
     );
+  }
+
+  _onSaveImage(String fileName) async {
+    final bytes = await captureWidget(_globalKey);
+    saveImageToFile(bytes!, '$fileName.jpg');
   }
 
   _buildWordListView(List<Word> words) => ListView(

@@ -163,7 +163,7 @@ class _VocabularyGridViewState extends State<VocabularyGridView> {
           child: BlocProvider(
             create: (context) =>
                 PreviewBloc()..add(PreviewStarted(words: widget.wordList)),
-            child: const VocabularyPreviewView(),
+            child: VocabularyPreviewView(),
           ),
         ),
       ),
