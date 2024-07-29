@@ -1,5 +1,6 @@
+name: ～ものではない
 conjugations:
-- V（辞書形）+ ものではない
+- V（辞書形）+ ものではない／もんじゃない
 examples:
 - jp: 無駄づかいをする **ものではない** 。お金は大切にしなさい。
   zh: 不应该乱花钱，要珍惜每一分钱。
@@ -15,10 +16,11 @@ explanations:
 - 「〜ものだ」的否定形
 level: N2
 meanings:
-  en: []
-  jp: []
+  en: 
+    - "cannot possibly ~."
+  jp:
+    - 〜しないほうがいい
   zh:
-  - 不应该...
-name: ～ものではない
+    - 不应该...
 tags:
-- 助言
+  - 助言

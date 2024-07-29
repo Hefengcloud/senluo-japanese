@@ -346,10 +346,15 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
   }
 
   Text _buildExampleSubtitle(String text) {
-    return Text.rich(TextSpan(
-      children: text.split('\\n').map((line) => TextSpan(text: line)).toList(),
-      text: '\n',
-    ));
+    final lines = text.split('\\n').map((line) => line.trim()).toList();
+    final spans = <TextSpan>[];
+    for (var i = 0; i < lines.length; i++) {
+      spans.add(TextSpan(text: lines[i]));
+      if (i < lines.length - 1) {
+        spans.add(const TextSpan(text: '\n'));
+      }
+    }
+    return Text.rich(TextSpan(children: spans));
   }
 
   _onSaveImage(String fileName) async {
