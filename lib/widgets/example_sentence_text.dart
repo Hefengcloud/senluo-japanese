@@ -4,16 +4,9 @@ class ExampleSentenceText extends StatelessWidget {
   final List<String> lines;
   final Color emphasizedColor;
   final TextStyle mainStyle;
-  final TextStyle secondaryStyle;
-  final bool multipleLines;
 
   static const _kDefaultMainStyle = TextStyle(
     fontSize: 16,
-  );
-
-  static const _kDefaultSecondaryStyle = TextStyle(
-    fontSize: 14,
-    color: Colors.black54,
   );
 
   const ExampleSentenceText({
@@ -21,37 +14,28 @@ class ExampleSentenceText extends StatelessWidget {
     required this.lines,
     required this.emphasizedColor,
     this.mainStyle = _kDefaultMainStyle,
-    this.secondaryStyle = _kDefaultSecondaryStyle,
-    this.multipleLines = false,
   }) : assert(lines.length >= 1);
 
   @override
-  Widget build(BuildContext context) {
-    final mainLine = lines.first;
-
+  build(BuildContext context) {
+    final List<InlineSpan> spans = [];
+    for (var i = 0; i < lines.length; i++) {
+      spans.addAll(_buildLine(lines[i].trim()));
+      if (i < lines.length - 1) {
+        spans.add(const TextSpan(text: '\n'));
+      }
+    }
     return Text.rich(
       TextSpan(
-        children: [
-          ..._buildMainText(mainLine),
-          if (multipleLines && lines.length > 1) const TextSpan(text: '\n'),
-          if (lines.length > 1)
-            _buildTranslatedText(
-                "${multipleLines ? '' : '（'}${lines[1]}${multipleLines ? '' : '）'}"),
-          if (lines.length > 2) _buildTranslatedText(lines[2]),
-        ],
+        children: spans,
       ),
     );
   }
 
-  _buildTranslatedText(String text) => TextSpan(
-        text: "\n${text.replaceAll('**', '')}",
-        style: secondaryStyle,
-      );
-
-  _buildMainText(String text) {
+  List<TextSpan> _buildLine(String text) {
     var parts = text.split('**');
     final emphasizedIndex = text.startsWith('**') ? 0 : 1;
-    final spans = [];
+    final spans = <TextSpan>[];
     if (emphasizedIndex == 0) {
       parts = parts.sublist(1);
     }

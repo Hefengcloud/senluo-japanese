@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/pages/craftify/dialogs/craftify_image_page.dart';
-import 'package:tuple/tuple.dart';
 
 class CraftifyHomePage extends StatelessWidget {
   const CraftifyHomePage({super.key});
-
-  static const _menus = [
-    Tuple2("生成图片", "image"),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +15,13 @@ class CraftifyHomePage extends StatelessWidget {
         childAspectRatio: 2,
         children: [
           InkWell(
-            child: Card(
+            child: const Card(
               child: Align(
                 alignment: Alignment.center,
                 child: Text('A vs B'),
               ),
             ),
-            onTap: () => _showDialog(context, CraftifyImageDialog()),
+            onTap: () => _showDialog(context, const CraftifyImageDialog()),
           ),
         ],
       ),

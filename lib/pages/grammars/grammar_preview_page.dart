@@ -32,9 +32,6 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
 
   double _gap = 16.0;
 
-  static const _kJpFont = 'Roboto';
-  static const _kZhFont = 'Roboto';
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<GrammarItemBloc, GrammarItemState>(
@@ -326,25 +323,34 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     );
   }
 
-  _buildExampleList(GrammarItem item) => ListView(
-        children: item.examples
-            .mapIndexed(
-              (index, e) => ListTile(
-                contentPadding: const EdgeInsets.symmetric(horizontal: 4),
-                leading: Icon(
-                  Icons.trip_origin,
-                  color: kLevel2color[item.level]!,
-                  size: 10,
-                ),
-                title: ExampleSentenceText(
-                  lines: [e.jp],
-                  emphasizedColor: kLevel2color[item.level]!,
-                ),
-                subtitle: e.zh.isNotEmpty ? Text(e.zh) : null,
+  _buildExampleList(GrammarItem item) {
+    return ListView(
+      children: item.examples
+          .mapIndexed(
+            (index, e) => ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 4),
+              leading: Icon(
+                Icons.trip_origin,
+                color: kLevel2color[item.level]!,
+                size: 10,
               ),
-            )
-            .toList(),
-      );
+              title: ExampleSentenceText(
+                lines: e.jp.split('\\n'),
+                emphasizedColor: kLevel2color[item.level]!,
+              ),
+              subtitle: e.zh.isNotEmpty ? _buildExampleSubtitle(e.zh) : null,
+            ),
+          )
+          .toList(),
+    );
+  }
+
+  Text _buildExampleSubtitle(String text) {
+    return Text.rich(TextSpan(
+      children: text.split('\\n').map((line) => TextSpan(text: line)).toList(),
+      text: '\n',
+    ));
+  }
 
   _onSaveImage(String fileName) async {
     final bytes = await captureWidget(_globalKey);

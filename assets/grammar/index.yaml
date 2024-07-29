@@ -994,7 +994,11 @@
     url: https://nihongokyoshi-net.com/2019/06/14/jlptn2-grammar-buru
     z_url: https://www.jsmori.com/grammar-n2-117/
   - key: mai
-    name: 〜まい
+    name: 〜まい（否定の意志）
+    url: https://nihongokyoshi-net.com/2019/02/21/jlptn2-grammar-mai
+    z_url: https://www.jsmori.com/grammar-n2-118/
+  - key: mai1
+    name: 〜まい（否定の推量）
     url: https://nihongokyoshi-net.com/2019/02/21/jlptn2-grammar-mai
     z_url: https://www.jsmori.com/grammar-n2-118/
   - key: mamani
