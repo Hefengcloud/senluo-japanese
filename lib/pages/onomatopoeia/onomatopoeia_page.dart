@@ -1,8 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_grid_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 

@@ -7,7 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
-import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
 import '../../../constants/texts.dart';
@@ -156,38 +155,35 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
 
   _buildImageContent(BuildContext context, ProverbItem item) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
+      mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Gap(32),
-        AutoSizeText(
-          item.name,
-          textAlign: TextAlign.center,
-          style: GoogleFonts.getFont(
-            'Shippori Mincho B1',
-            textStyle: const TextStyle(
-              fontSize: 40,
-              color: _kMainColor,
+        const Gap(16),
+        Chip(
+          label: Text(
+            'ことわざ',
+            style: GoogleFonts.getFont(
+              'Zen Kurenaido',
+              color: Colors.white,
             ),
           ),
-          maxLines: 1,
+          backgroundColor: _kMainColor,
+          shape: const StadiumBorder(
+            side: BorderSide(style: BorderStyle.none),
+          ),
         ),
+        const Gap(16),
         AutoSizeText(
           item.reading,
           textAlign: TextAlign.center,
           style: GoogleFonts.getFont(
-            'Shippori Mincho B1',
+            'RocknRoll One',
             textStyle: const TextStyle(fontSize: 28),
           ),
           maxLines: 1,
         ),
-        const Gap(16),
-        Expanded(
-          child: Center(
-            child: _buildIllustration(context, item),
-          ),
-        ),
+        _buildIllustration(context, item),
         const Gap(16),
         ...item.meanings
             .map<AutoSizeText>(
@@ -195,13 +191,13 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
                 e,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
-                  'Ma Shan Zheng',
+                  'ZCOOL KuaiLe',
                   textStyle: const TextStyle(fontSize: 24.0),
                 ),
               ),
             )
             .toList(),
-        const Gap(32),
+        const Gap(16),
       ],
     );
   }
@@ -214,7 +210,7 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
       item.name,
       textAlign: TextAlign.center,
       style: GoogleFonts.getFont(
-        'Rampart One',
+        'RocknRoll One',
         fontSize: _currentSliderValue,
         color: _kMainColor,
       ),
