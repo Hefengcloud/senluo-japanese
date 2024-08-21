@@ -54,7 +54,7 @@ class KanaHomePage extends StatelessWidget {
             ],
           );
         }
-        return Placeholder();
+        return const Placeholder();
       },
     );
   }

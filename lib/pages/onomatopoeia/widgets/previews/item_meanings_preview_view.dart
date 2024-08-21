@@ -45,7 +45,6 @@ class ItemMeaningsPreviewView extends StatelessWidget {
   }
 
   _buildMeaningList(Meaning meanings) {
-    final zhMeanings = meanings['en'] ?? [];
     return ListView(
       children: meanings.entries.map(
         (e) {
@@ -117,20 +116,18 @@ class ItemMeaningView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ...meanings
-                  .map(
-                    (e) => Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 4,
-                      ),
-                      child: AutoSizeText(
-                        e,
-                        style: TextStyle(fontSize: fontSize),
-                      ),
-                    ),
-                  )
-                  .toList()
+              ...meanings.map(
+                (e) => Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 4,
+                  ),
+                  child: AutoSizeText(
+                    e,
+                    style: TextStyle(fontSize: fontSize),
+                  ),
+                ),
+              )
             ],
           ),
         ),

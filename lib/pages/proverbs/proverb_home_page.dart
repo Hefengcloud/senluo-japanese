@@ -16,8 +16,6 @@ class ProverbHomePage extends StatefulWidget {
 }
 
 class _ProverbHomePageState extends State<ProverbHomePage> {
-  ProverbCategory? _category;
-
   final TextEditingController _searchController = TextEditingController();
 
   @override
@@ -90,7 +88,7 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
                   .add(ProverbFiltered(kanaLine: line));
             },
           );
-        }).toList(),
+        }),
       ],
     );
   }

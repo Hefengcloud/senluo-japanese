@@ -8,11 +8,11 @@ class ExpressionCategoryListView extends StatelessWidget {
     return ListView(
       children: [
         ListTile(
-          title: Text('Greetings'),
+          title: const Text('Greetings'),
           onTap: () {},
         ),
         ListTile(
-          title: Text('Hotel'),
+          title: const Text('Hotel'),
           onTap: () {},
         ),
       ],

@@ -52,7 +52,7 @@ class OnomatopoeiaCard extends StatelessWidget {
               ],
               emphasizedColor: kColorN1,
             );
-          }).toList(),
+          }),
         ],
       ),
     );

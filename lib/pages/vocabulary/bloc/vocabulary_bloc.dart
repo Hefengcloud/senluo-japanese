@@ -38,8 +38,7 @@ class VocabularyBloc extends Bloc<VocabularyEvent, VocabularyState> {
         type2Menus: theState.type2Menus,
         wordList: words,
       ));
-    } catch (e) {
-      print(e);
-    }
+      // ignore: empty_catches
+    } catch (e) {}
   }
 }

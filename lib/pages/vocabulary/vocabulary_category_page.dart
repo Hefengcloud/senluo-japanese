@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_grid_view.dart';
 
 import '../../common/models/word.dart';
-import '../../constants/colors.dart';
 import '../../repos/vocabulary/models/vocabulary_menu.dart';
 import '../../repos/vocabulary/vocabulary_repository.dart';
-import '../kanji/constants/styles.dart';
 import 'bloc/vocabulary_bloc.dart';
 import 'views/vocabulary_menu_list_view.dart';
 
@@ -39,7 +36,7 @@ class VocabularyCategoryPage extends StatelessWidget {
             ],
           );
         } else {
-          return Text('Error');
+          return const Text('Error');
         }
       },
     );

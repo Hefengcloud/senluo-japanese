@@ -7,6 +7,7 @@ import 'package:senluo_japanese_cms/database/grammars/models/grammar_item_model.
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_entry.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:yaml/yaml.dart';
+// ignore: library_prefixes
 import 'package:path/path.dart' as Path;
 
 class GrammarRepository {

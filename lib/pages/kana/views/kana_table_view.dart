@@ -76,11 +76,9 @@ class KanaTableView extends StatelessWidget {
                     ))
                 .toList(),
           ),
-          ...rows
-              .mapIndexed((index, kanas) => TableRow(
-                    children: _buildTableRow(context, index, kanas),
-                  ))
-              .toList()
+          ...rows.mapIndexed((index, kanas) => TableRow(
+                children: _buildTableRow(context, index, kanas),
+              )),
         ],
       ),
     );

@@ -21,11 +21,11 @@ class VocabularyHomePage extends StatelessWidget {
         body: TabBarView(
           children: types.map((type) {
             if (type == VocabularyType.category) {
-              return VocabularyCategoryPage();
+              return const VocabularyCategoryPage();
             } else if (type == VocabularyType.jlpt) {
-              return VocabularyJlptPage();
+              return const VocabularyJlptPage();
             } else if (type == VocabularyType.textbook) {
-              return VocabularyTextbookPage();
+              return const VocabularyTextbookPage();
             }
             return Text(type.text);
           }).toList(),

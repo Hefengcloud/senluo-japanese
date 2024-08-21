@@ -1,6 +1,5 @@
 part of 'grammar_bloc.dart';
 
-@immutable
 sealed class GrammarEvent extends Equatable {
   const GrammarEvent();
 }

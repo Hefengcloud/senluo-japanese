@@ -19,8 +19,8 @@ class _CraftifyImageDialogState extends State<CraftifyImageDialog> {
   );
 
   bool _rectangle = false;
-  String _leftText = '日本語文法';
-  String _rightText = '国語文法';
+  final String _leftText = '日本語文法';
+  final String _rightText = '国語文法';
 
   final GlobalKey _globalKey = GlobalKey();
 
@@ -47,11 +47,11 @@ class _CraftifyImageDialogState extends State<CraftifyImageDialog> {
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.abc),
+              icon: const Icon(Icons.abc),
             ),
             IconButton(
               onPressed: () => _saveImage(context),
-              icon: Icon(Icons.save),
+              icon: const Icon(Icons.save),
             ),
           ],
         ),
@@ -116,7 +116,7 @@ class _CraftifyImageDialogState extends State<CraftifyImageDialog> {
                 child: Container(
                   width: 340,
                   alignment: Alignment.center,
-                  decoration: BoxDecoration(color: kLeftColor),
+                  decoration: const BoxDecoration(color: kLeftColor),
                   child: Text(
                     _leftText,
                     style: _kSquareTextStyle,
@@ -127,7 +127,7 @@ class _CraftifyImageDialogState extends State<CraftifyImageDialog> {
                 child: Container(
                   width: 340,
                   alignment: Alignment.center,
-                  decoration: BoxDecoration(color: kRightColor),
+                  decoration: const BoxDecoration(color: kRightColor),
                   child: Text(
                     _rightText,
                     style: _kSquareTextStyle,
@@ -150,9 +150,9 @@ class _CraftifyImageDialogState extends State<CraftifyImageDialog> {
   Row _buildText() {
     return Row(
       children: [
-        _buildSideText('日本語文法', Color(0xFF6CAFFF), true),
+        _buildSideText('日本語文法', const Color(0xFF6CAFFF), true),
         _buildVersus(true),
-        _buildSideText('国語文法', Color(0xFFDB313E), false),
+        _buildSideText('国語文法', const Color(0xFFDB313E), false),
       ],
     );
   }
@@ -206,28 +206,6 @@ class _CraftifyImageDialogState extends State<CraftifyImageDialog> {
       ),
     );
   }
-
-  _showTextInput(BuildContext context) => showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text('Input text'),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                decoration: InputDecoration(hintText: 'left text'),
-              ),
-              TextField(
-                decoration: InputDecoration(hintText: 'right text'),
-              ),
-            ],
-          ),
-          actions: [
-            ElevatedButton(onPressed: () {}, child: Text('Cancel')),
-            ElevatedButton(onPressed: () {}, child: Text('OK')),
-          ],
-        ),
-      );
 }
 
 class CustomClipPath extends CustomClipper<Path> {

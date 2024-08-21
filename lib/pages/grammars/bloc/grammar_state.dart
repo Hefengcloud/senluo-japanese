@@ -1,6 +1,5 @@
 part of 'grammar_bloc.dart';
 
-@immutable
 sealed class GrammarState extends Equatable {
   const GrammarState();
 }

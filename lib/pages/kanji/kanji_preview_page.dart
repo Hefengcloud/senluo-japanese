@@ -127,21 +127,19 @@ class KanjiPreviewPage extends StatelessWidget {
             subtitle: word.meaning.en.isNotEmpty ? Text(word.meaning.en) : null,
             onTap: () {},
           );
-        }).toList(),
+        }),
         ...detail.proverbs.map((e) {
           return ListTile(
             leading: const Text('こと\nわざ'),
             title: Text(e),
             onTap: () {},
           );
-        }).toList(),
-        ...detail.idioms
-            .map((e) => ListTile(
-                  leading: const Text('四字\n熟語'),
-                  title: Text(e),
-                  onTap: () {},
-                ))
-            .toList(),
+        }),
+        ...detail.idioms.map((e) => ListTile(
+              leading: const Text('四字\n熟語'),
+              title: Text(e),
+              onTap: () {},
+            )),
       ],
     );
   }

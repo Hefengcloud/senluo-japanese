@@ -33,18 +33,15 @@ class CategoryListView extends StatelessWidget {
             onCategoryClicked(OnomatopoeiaCategory.empty);
           },
         ),
-        ...categories
-            .map(
-              (category) => ListTile(
-                title: Text(category.name),
-                trailing:
-                    Icon(selectedCategory == category ? Icons.check : null),
-                onTap: () {
-                  onCategoryClicked(category);
-                },
-              ),
-            )
-            .toList(),
+        ...categories.map(
+          (category) => ListTile(
+            title: Text(category.name),
+            trailing: Icon(selectedCategory == category ? Icons.check : null),
+            onTap: () {
+              onCategoryClicked(category);
+            },
+          ),
+        ),
       ],
     );
   }

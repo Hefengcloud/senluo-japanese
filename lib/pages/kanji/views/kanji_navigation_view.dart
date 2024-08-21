@@ -25,18 +25,14 @@ class KanjiNavigationView extends StatelessWidget {
             ),
           ),
         ),
-        ...JLPTLevel.values
-            .where((e) => e != JLPTLevel.none)
-            .toList()
-            .map(
+        ...JLPTLevel.values.where((e) => e != JLPTLevel.none).toList().map(
               (e) => ListTile(
                 leading: const Icon(Icons.arrow_right),
                 trailing: currentLevel == e ? const Icon(Icons.check) : null,
                 title: Text(e.name.toUpperCase()),
                 onTap: () => onLevelChanged(e),
               ),
-            )
-            .toList()
+            ),
       ],
     );
   }

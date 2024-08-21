@@ -185,18 +185,16 @@ ${item.examples.map((e) => "◎ ${e.jp}\n→ ${e.zh}").toList().join('\n')}
         ),
         _buildIllustration(context, item),
         const Gap(16),
-        ...item.meanings
-            .map<AutoSizeText>(
-              (e) => AutoSizeText(
-                e,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.getFont(
-                  'ZCOOL KuaiLe',
-                  textStyle: const TextStyle(fontSize: 24.0),
-                ),
-              ),
-            )
-            .toList(),
+        ...item.meanings.map<AutoSizeText>(
+          (e) => AutoSizeText(
+            e,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.getFont(
+              'ZCOOL KuaiLe',
+              textStyle: const TextStyle(fontSize: 24.0),
+            ),
+          ),
+        ),
         const Gap(16),
       ],
     );
