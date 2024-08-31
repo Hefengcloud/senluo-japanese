@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class ExampleSentenceText extends StatelessWidget {
   final List<String> lines;
@@ -30,6 +31,7 @@ class ExampleSentenceText extends StatelessWidget {
         children: spans,
       ),
     );
+    // return _buildHtmlContent();
   }
 
   List<TextSpan> _buildLine(String text) {
@@ -61,4 +63,22 @@ class ExampleSentenceText extends StatelessWidget {
     }
     return spans;
   }
+
+  _buildHtmlContent() => Html(
+        data: """
+<ruby>授業<rt>じゅぎょう</rt></ruby><ruby>の<rt></rt></ruby><ruby>終<rt>お</rt></ruby><ruby>わり<rt></rt></ruby><ruby>の<rt></rt></ruby><ruby>チャイム<rt></rt></ruby><ruby>が<rt></rt></ruby><ruby>鳴<rt>な</rt></ruby><ruby>る<rt></rt></ruby><span class="fancy"><ruby>が<rt></rt></ruby><ruby>早<rt>はや</rt></ruby><ruby>いか<rt></rt></ruby></span>、<ruby>彼<rt>かれ</rt></ruby><ruby>は<rt></rt></ruby><ruby>教室<rt>きょうしつ</rt></ruby><ruby>を<rt></rt></ruby><ruby>飛<rt>と</rt></ruby><ruby>び<rt></rt></ruby><ruby>出<rt>だ</rt></ruby><ruby>して<rt></rt></ruby><ruby>いった<rt></rt></ruby>
+        """,
+        extensions: [
+          TagExtension(
+            tagsToExtend: {"flutter"},
+            child: const FlutterLogo(),
+          ),
+        ],
+        style: {
+          "span.fancy": Style(
+            color: Colors.red,
+            fontWeight: FontWeight.bold,
+          ),
+        },
+      );
 }

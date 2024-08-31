@@ -51,6 +51,7 @@ dependencies:
   ruby_text: ^3.0.3
   collection: ^1.18.0
   tuple: ^2.0.2
+  flutter_html: ^3.0.0-beta.2
 
 dev_dependencies:
   flutter_test:
