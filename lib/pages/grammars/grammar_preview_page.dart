@@ -260,7 +260,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children:
             item.conjugations.map((e) => _buildConjugationText(e)).toList(),
       ),
