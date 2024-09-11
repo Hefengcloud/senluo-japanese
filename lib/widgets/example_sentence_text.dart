@@ -19,6 +19,7 @@ class ExampleSentenceText extends StatelessWidget {
 
   @override
   build(BuildContext context) {
+    return _buildHtmlContent(lines[0]);
     final List<InlineSpan> spans = [];
     for (var i = 0; i < lines.length; i++) {
       spans.addAll(_buildLine(lines[i].trim()));
@@ -31,7 +32,6 @@ class ExampleSentenceText extends StatelessWidget {
         children: spans,
       ),
     );
-    // return _buildHtmlContent();
   }
 
   List<TextSpan> _buildLine(String text) {
@@ -64,10 +64,8 @@ class ExampleSentenceText extends StatelessWidget {
     return spans;
   }
 
-  _buildHtmlContent() => Html(
-        data: """
-<ruby>授業<rt>じゅぎょう</rt></ruby><ruby>の<rt></rt></ruby><ruby>終<rt>お</rt></ruby><ruby>わり<rt></rt></ruby><ruby>の<rt></rt></ruby><ruby>チャイム<rt></rt></ruby><ruby>が<rt></rt></ruby><ruby>鳴<rt>な</rt></ruby><ruby>る<rt></rt></ruby><span class="fancy"><ruby>が<rt></rt></ruby><ruby>早<rt>はや</rt></ruby><ruby>いか<rt></rt></ruby></span>、<ruby>彼<rt>かれ</rt></ruby><ruby>は<rt></rt></ruby><ruby>教室<rt>きょうしつ</rt></ruby><ruby>を<rt></rt></ruby><ruby>飛<rt>と</rt></ruby><ruby>び<rt></rt></ruby><ruby>出<rt>だ</rt></ruby><ruby>して<rt></rt></ruby><ruby>いった<rt></rt></ruby>
-        """,
+  _buildHtmlContent(String text) => Html(
+        data: convertToHtml(text),
         extensions: [
           TagExtension(
             tagsToExtend: {"flutter"},
@@ -75,10 +73,70 @@ class ExampleSentenceText extends StatelessWidget {
           ),
         ],
         style: {
-          "span.fancy": Style(
+          "span.bold": Style(
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
+          "rt.fake": Style(
+            color: Colors.transparent,
+          )
         },
       );
+
+  // String _convertToRuby(String text) {
+  //   // First, handle the [kanji](kana) patterns
+  //   RegExp rubyExp = RegExp(r'\[([^\]]+)\]\(([^\)]+)\)');
+  //   String htmlText = text.replaceAllMapped(rubyExp, (Match m) {
+  //     String kanji = m.group(1)!;
+  //     String kana = m.group(2)!;
+  //     return '<ruby>$kanji<rt>$kana</rt></ruby>';
+  //   });
+
+  //   // Then, handle the **text** patterns
+  //   RegExp boldExp = RegExp(r'\*\*([^*]+)\*\*');
+  //   htmlText = htmlText.replaceAllMapped(boldExp, (Match m) {
+  //     String boldText = m.group(1)!;
+  //     return '<span class="fancy">$boldText</span>';
+  //   });
+
+  //   return '<p>$htmlText</p>';
+  // }
+
+  String convertToHtml(String text) {
+    List<String> parts = [];
+    RegExp rubyExp = RegExp(r'\[([^\]]+)\]\(([^\)]+)\)');
+    RegExp boldExp = RegExp(r'\*\*([^*]+)\*\*');
+
+    int lastIndex = 0;
+    for (Match match in rubyExp.allMatches(text)) {
+      if (match.start > lastIndex) {
+        parts.add(text.substring(lastIndex, match.start));
+      }
+      parts.add(match.group(0)!);
+      lastIndex = match.end;
+    }
+    if (lastIndex < text.length) {
+      parts.add(text.substring(lastIndex));
+    }
+
+    List<String> htmlParts = parts.map((part) {
+      if (rubyExp.hasMatch(part)) {
+        Match m = rubyExp.firstMatch(part)!;
+        String kanji = m.group(1)!;
+        String kana = m.group(2)!;
+        return '<ruby>$kanji<rt>$kana</rt></ruby>';
+      } else if (boldExp.hasMatch(part)) {
+        String boldText = boldExp.firstMatch(part)!.group(1)!;
+        return '<span class="bold">$boldText</span>';
+      } else {
+        return part
+            .split('')
+            .map((char) => '<ruby>$char<rt class="fake">$char</rt></ruby>')
+            .join('');
+      }
+    }).toList();
+
+    String htmlText = htmlParts.join('');
+    return '<p class="japanese-text">$htmlText</p>';
+  }
 }
