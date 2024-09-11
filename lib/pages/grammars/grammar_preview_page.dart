@@ -17,7 +17,7 @@ import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
 import '../../constants/colors.dart';
 import '../../helpers/image_helper.dart';
-import '../../widgets/example_sentence_text.dart';
+import '../../widgets/sentence_html_text.dart';
 import 'bloc/grammar_item_bloc.dart';
 
 class GrammarPreviewPage extends StatefulWidget {
@@ -324,37 +324,27 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
   }
 
   _buildExampleList(GrammarItem item) {
-    return ListView(
-      children: item.examples
-          .mapIndexed(
-            (index, e) => ListTile(
-              contentPadding: const EdgeInsets.symmetric(horizontal: 4),
-              leading: Icon(
-                Icons.trip_origin,
-                color: kLevel2color[item.level]!,
-                size: 10,
-              ),
-              title: ExampleSentenceText(
-                lines: e.jp.split('\\n'),
-                emphasizedColor: kLevel2color[item.level]!,
-              ),
-              subtitle: e.zh.isNotEmpty ? _buildExampleSubtitle(e.zh) : null,
-            ),
-          )
-          .toList(),
+    return ListView.separated(
+      itemBuilder: (BuildContext context, int index) {
+        final e = item.examples[index];
+        return ListTile(
+          minVerticalPadding: 0,
+          title: SentenceHtmlText(
+            original: e.jp,
+            formated: '◎ ${e.jp1}',
+            translated: '（${e.zh}）',
+            emphasizedColor: kLevel2color[item.level]!,
+          ),
+        );
+      },
+      itemCount: item.examples.length,
+      separatorBuilder: (BuildContext context, int index) {
+        return Divider(
+          height: 1,
+          color: Colors.grey[50],
+        );
+      },
     );
-  }
-
-  Text _buildExampleSubtitle(String text) {
-    final lines = text.split('\\n').map((line) => line.trim()).toList();
-    final spans = <TextSpan>[];
-    for (var i = 0; i < lines.length; i++) {
-      spans.add(TextSpan(text: lines[i]));
-      if (i < lines.length - 1) {
-        spans.add(const TextSpan(text: '\n'));
-      }
-    }
-    return Text.rich(TextSpan(children: spans));
   }
 
   _onSaveImage(String fileName) async {

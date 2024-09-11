@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 
 class ExampleSentenceText extends StatelessWidget {
   final List<String> lines;
@@ -19,7 +18,6 @@ class ExampleSentenceText extends StatelessWidget {
 
   @override
   build(BuildContext context) {
-    return _buildHtmlContent(lines[0]);
     final List<InlineSpan> spans = [];
     for (var i = 0; i < lines.length; i++) {
       spans.addAll(_buildLine(lines[i].trim()));
@@ -62,81 +60,5 @@ class ExampleSentenceText extends StatelessWidget {
       }
     }
     return spans;
-  }
-
-  _buildHtmlContent(String text) => Html(
-        data: convertToHtml(text),
-        extensions: [
-          TagExtension(
-            tagsToExtend: {"flutter"},
-            child: const FlutterLogo(),
-          ),
-        ],
-        style: {
-          "span.bold": Style(
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-          ),
-          "rt.fake": Style(
-            color: Colors.transparent,
-          )
-        },
-      );
-
-  // String _convertToRuby(String text) {
-  //   // First, handle the [kanji](kana) patterns
-  //   RegExp rubyExp = RegExp(r'\[([^\]]+)\]\(([^\)]+)\)');
-  //   String htmlText = text.replaceAllMapped(rubyExp, (Match m) {
-  //     String kanji = m.group(1)!;
-  //     String kana = m.group(2)!;
-  //     return '<ruby>$kanji<rt>$kana</rt></ruby>';
-  //   });
-
-  //   // Then, handle the **text** patterns
-  //   RegExp boldExp = RegExp(r'\*\*([^*]+)\*\*');
-  //   htmlText = htmlText.replaceAllMapped(boldExp, (Match m) {
-  //     String boldText = m.group(1)!;
-  //     return '<span class="fancy">$boldText</span>';
-  //   });
-
-  //   return '<p>$htmlText</p>';
-  // }
-
-  String convertToHtml(String text) {
-    List<String> parts = [];
-    RegExp rubyExp = RegExp(r'\[([^\]]+)\]\(([^\)]+)\)');
-    RegExp boldExp = RegExp(r'\*\*([^*]+)\*\*');
-
-    int lastIndex = 0;
-    for (Match match in rubyExp.allMatches(text)) {
-      if (match.start > lastIndex) {
-        parts.add(text.substring(lastIndex, match.start));
-      }
-      parts.add(match.group(0)!);
-      lastIndex = match.end;
-    }
-    if (lastIndex < text.length) {
-      parts.add(text.substring(lastIndex));
-    }
-
-    List<String> htmlParts = parts.map((part) {
-      if (rubyExp.hasMatch(part)) {
-        Match m = rubyExp.firstMatch(part)!;
-        String kanji = m.group(1)!;
-        String kana = m.group(2)!;
-        return '<ruby>$kanji<rt>$kana</rt></ruby>';
-      } else if (boldExp.hasMatch(part)) {
-        String boldText = boldExp.firstMatch(part)!.group(1)!;
-        return '<span class="bold">$boldText</span>';
-      } else {
-        return part
-            .split('')
-            .map((char) => '<ruby>$char<rt class="fake">$char</rt></ruby>')
-            .join('');
-      }
-    }).toList();
-
-    String htmlText = htmlParts.join('');
-    return '<p class="japanese-text">$htmlText</p>';
   }
 }

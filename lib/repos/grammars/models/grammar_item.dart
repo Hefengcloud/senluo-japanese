@@ -88,6 +88,7 @@ class GrammarItem extends Equatable {
           .map<Example>((e) => Example(
                 en: e['en'] ?? '',
                 jp: e['jp'] ?? '',
+                jp1: e['jp1'] ?? '',
                 zh: e['zh'] ?? '',
               ))
           .toList(),
@@ -102,7 +103,12 @@ class GrammarItem extends Equatable {
 
     // Examples
     final examples = jsonDecode(model.example)
-        .map<Example>((e) => Example(jp: e['jp'], zh: e['zh'], en: e['en']))
+        .map<Example>((e) => Example(
+              jp: e['jp'],
+              jp1: e['jp1'],
+              zh: e['zh'],
+              en: e['en'],
+            ))
         .toList();
     return GrammarItem(
       key: '',
