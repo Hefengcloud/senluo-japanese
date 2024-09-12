@@ -260,7 +260,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children:
             item.conjugations.map((e) => _buildConjugationText(e)).toList(),
       ),
@@ -331,8 +331,8 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
           minVerticalPadding: 0,
           title: SentenceHtmlText(
             original: e.jp,
-            formated: '◎ ${e.jp1}',
-            translated: '（${e.zh}）',
+            formated: e.jp1,
+            translated: e.zh,
             emphasizedColor: kLevel2color[item.level]!,
           ),
         );

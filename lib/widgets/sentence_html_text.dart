@@ -25,9 +25,9 @@ class SentenceHtmlText extends StatelessWidget {
   @override
   build(BuildContext context) {
     var html = formated.isNotEmpty
-        ? convertFormatedTextToHtml(formated)
-        : convertOrginalTextToHtml(original);
-    html += '<span class="translated">$translated</span>';
+        ? convertFormatedTextToHtml('◎ $formated')
+        : convertOrginalTextToHtml('◎ $original');
+    html += '<span class="translated">（$translated）</span>';
     return _buildHtmlContent(html);
   }
 
