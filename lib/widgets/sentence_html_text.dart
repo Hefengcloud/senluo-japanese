@@ -66,32 +66,77 @@ class SentenceHtmlText extends StatelessWidget {
   }
 
   String convertFormatedTextToHtml(String text) {
-    // Convert [kanji](reading) to <ruby>kanji<rt>reading</rt></ruby>
+    var htmlText = '';
+    final indexes = getAllIndexesOfDoubleAsterisk(text);
+
+    final firstIndex = indexes[0];
+    var subtext = text.substring(0, firstIndex);
+    if (subtext.isNotEmpty) {
+      htmlText += _parseRubyTags(subtext);
+    }
+
+    for (var i = 0; i < indexes.length; i += 2) {
+      subtext = text.substring(indexes[i] + 2, indexes[i + 1]);
+      subtext = _parseRubyTags(subtext);
+      htmlText += '<span class="bold">$subtext</span>';
+    }
+
+    subtext = text.substring(indexes[indexes.length - 1] + 2, text.length);
+    subtext = _parseRubyTags(subtext);
+    htmlText += subtext;
+
+    return htmlText;
+  }
+
+  String _parseRubyTags(String text) {
+    // First, convert markdown-style ruby annotations to HTML ruby tags
     text = text.replaceAllMapped(
       RegExp(r'\[(.*?)\]\((.*?)\)'),
       (match) => '<ruby>${match.group(1)}<rt>${match.group(2)}</rt></ruby>',
     );
 
-    // Convert **text** to bold
-    text = text.replaceAllMapped(
-      RegExp(r'\*\*(.*?)\*\*'),
-      (match) =>
-          '<span class="bold"><ruby>${match.group(1)}<rt class="fake">${match.group(1)}</rt></ruby></span>',
-    );
+    // Then, wrap remaining text in ruby tags, but preserve existing ruby tags
+    final buffer = StringBuffer();
+    final existingRubyPattern = RegExp(r'<ruby>.*?<\/ruby>');
+    var lastEnd = 0;
 
-    // Wrap remaining text in ruby tags
-    text = text.replaceAllMapped(
-      RegExp(r'(?<=^|<\/ruby>|<\/span>)([^<]+?)(?=<ruby|<\/ruby>|<span|$)',
-          multiLine: true, dotAll: true),
-      (match) =>
-          match
-              .group(1)
-              ?.split('')
-              .map((ch) => '<ruby>$ch<rt class="fake">$ch</rt></ruby>')
-              .join('') ??
-          '',
-    );
+    for (final match in existingRubyPattern.allMatches(text)) {
+      if (match.start > lastEnd) {
+        // Process text between ruby tags
+        final betweenTags = text.substring(lastEnd, match.start);
+        buffer.write(betweenTags
+            .split('')
+            .map((ch) => '<ruby>$ch<rt class="fake">$ch</rt></ruby>')
+            .join(''));
+      }
+      // Keep existing ruby tag as is
+      buffer.write(match.group(0));
+      lastEnd = match.end;
+    }
 
-    return '$text';
+    // Process any remaining text after the last ruby tag
+    if (lastEnd < text.length) {
+      final remainingText = text.substring(lastEnd);
+      buffer.write(remainingText
+          .split('')
+          .map((ch) => '<ruby>$ch<rt class="fake">$ch</rt></ruby>')
+          .join(''));
+    }
+
+    return buffer.toString();
+  }
+
+  // Function to get all the indexes of "**"
+  List<int> getAllIndexesOfDoubleAsterisk(String str) {
+    List<int> indexes = [];
+    int index = str.indexOf('**');
+
+    while (index != -1) {
+      indexes.add(index);
+      // Move to the next occurrence after the current one
+      index = str.indexOf('**', index + 2);
+    }
+
+    return indexes;
   }
 }
