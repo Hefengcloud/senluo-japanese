@@ -327,6 +327,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       itemBuilder: (BuildContext context, int index) {
         final e = item.examples[index];
         return ListTile(
+          contentPadding: EdgeInsets.zero,
           minVerticalPadding: 0,
           title: SentenceHtmlText(
             original: e.jp,
