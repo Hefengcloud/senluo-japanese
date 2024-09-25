@@ -24,11 +24,20 @@ class SentenceHtmlText extends StatelessWidget {
 
   @override
   build(BuildContext context) {
-    var html = formated.isNotEmpty
+    final isFormated = formated.isNotEmpty;
+    var html = isFormated
         ? convertFormatedTextToHtml('◎ $formated')
         : convertOrginalTextToHtml('◎ $original');
-    html += '<span class="translated">（$translated）</span>';
+    html +=
+        '<span class="translated">${isFormated ? _formatTranslatedText("（$translated）") : "（$translated）"}</span>';
     return _buildHtmlContent(html);
+  }
+
+  _formatTranslatedText(String text) {
+    return text
+        .split('')
+        .map<String>((ch) => "<ruby>$ch<rt class='fake'>$ch</rt></ruby>")
+        .join();
   }
 
   _buildHtmlContent(String data) => Html(
@@ -45,8 +54,7 @@ class SentenceHtmlText extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           ".translated": Style(
-            color: Colors.black54,
-            fontSize: FontSize.medium,
+            color: Colors.black38,
           ),
           "rt": Style(
             color: Colors.black54,
