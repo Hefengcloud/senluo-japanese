@@ -1,18 +1,18 @@
 conjugations: []
 examples:
-- jp: ' **YouTubeで** 日本語を勉強します。'
+- jp: '**YouTubeで** 日本語を勉強します。'
   zh: 用YouTube学习日语。
-- jp: ' **箸で** ご飯を食べます。'
+- jp: '**箸で** ご飯を食べます。'
   zh: 用筷子吃饭。
-- jp: ' **タクシーで** レストランに行きます。'
+- jp: '**タクシーで** レストランに行きます。'
   zh: 打车去餐厅。
-- jp: ' **はさみで** 紙を切ります。'
+- jp: '**はさみで** 紙を切ります。'
   zh: 用剪刀剪纸。
 explanations: []
 level: N5
 meanings:
   en:
-  - '"by"'
+  - by
   - Indicates methods or means
   jp:
   - 手段・方法を表す。
