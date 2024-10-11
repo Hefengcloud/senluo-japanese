@@ -50,11 +50,11 @@ class SentenceHtmlText extends StatelessWidget {
         ],
         style: {
           "span.bold": Style(
-            color: Colors.red,
+            color: emphasizedColor,
             fontWeight: FontWeight.bold,
           ),
           ".translated": Style(
-            color: Colors.black38,
+            color: Colors.black54,
           ),
           "rt": Style(
             color: Colors.black54,
