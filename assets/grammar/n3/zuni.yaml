@@ -1,11 +1,11 @@
 conjugations:
-- V(ない形) ~~ない~~ \+ ずに
+- V(ない形) ~~ない~~ + ずに
 examples:
 - jp: 今朝、朝ごはんを **食べずに** 学校に来ました。
   zh: 今天早上，我没有吃早餐就来学校了。
 - jp: 傘を **持たずに** 、出かけてしまった。
   zh: 没有带伞就出门了。
-- jp: 込は普段、コーヒーに砂糖を **入れずに** 飲みます。
+- jp: わたしは普段、コーヒーに砂糖を **入れずに** 飲みます。
   zh: 我通常喝不加糖的咖啡。
 - jp: 宿題を **せずに** 学校に行ったら先生に怒られました。
   zh: 没做功课就去学校，结果被老师骂了。
@@ -13,12 +13,11 @@ explanations: []
 level: N3
 meanings:
   en:
-  - '"without doing "'
+  - without doing
   - It means the same as “～ないで,” but “～ずに” is a little more formal style.
   jp:
   - 〜しないで
-  - 「 **[〜ないで](https://nihongokyoshi-net.com/2018/04/20/jlptn5-grammar-naide/)**
-  - 」と同じ意味だが、「〜ずに」の方が少し硬い。
+  - 「〜ないで」と同じ意味だが、「〜ずに」の方が少し硬い。
   zh:
   - 没有、不(付帯状态・非付帯状态)
 name: 〜ずに

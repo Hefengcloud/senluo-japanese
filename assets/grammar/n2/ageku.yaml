@@ -1,6 +1,7 @@
 conjugations:
 - V（タ形） + あげく
-- Nの + あげく ※Nはする動詞のN
+- Nの + あげく 
+- ※Nはする動詞のN
 examples:
 - jp: 人気のラーメン店に２時間も並んだ **あげく** 、売り切れで食べられなかった。
   jp1: '[人気](にんき)のラーメン[店](てん)に２[時間](じかん)も[並ん](ならん)だ **あげく** 、[売り切れ](うりきれ)で[食べ](たべ)られなかった。'
@@ -16,9 +17,8 @@ explanations:
 level: N2
 meanings:
   en:
-  - '"ended up"'
-  - It includes a sense of disappointment/regret that after all the efforts, it was
-    not possible.
+  - ended up
+  - It includes a sense of disappointment/regret that after all the efforts, it was not possible.
   jp:
   - 色々〜したけど、最終的に・・・。
   zh:
