@@ -10,7 +10,7 @@ class SentenceHtmlText extends StatelessWidget {
   final TextStyle mainStyle;
 
   static const _kDefaultMainStyle = TextStyle(
-    fontSize: 16,
+    fontSize: 14,
   );
 
   const SentenceHtmlText({
