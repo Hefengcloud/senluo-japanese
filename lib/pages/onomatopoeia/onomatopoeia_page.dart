@@ -6,14 +6,14 @@ import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_model
 import 'bloc/onomatopoeia_bloc.dart';
 import 'widgets/category_list_view.dart';
 
-class OnomatopoeiaPage extends StatefulWidget {
-  const OnomatopoeiaPage({super.key});
+class OnomatopoeiaHomePage extends StatefulWidget {
+  const OnomatopoeiaHomePage({super.key});
 
   @override
-  State<OnomatopoeiaPage> createState() => _OnomatopoeiaPageState();
+  State<OnomatopoeiaHomePage> createState() => _OnomatopoeiaHomePageState();
 }
 
-class _OnomatopoeiaPageState extends State<OnomatopoeiaPage> {
+class _OnomatopoeiaHomePageState extends State<OnomatopoeiaHomePage> {
   Onomatopoeia? onomatopoeia;
 
   @override
