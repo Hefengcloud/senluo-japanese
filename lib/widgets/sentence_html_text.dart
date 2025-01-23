@@ -26,8 +26,8 @@ class SentenceHtmlText extends StatelessWidget {
   build(BuildContext context) {
     final isFormated = formated.isNotEmpty;
     var html = isFormated
-        ? convertFormatedTextToHtml('◎ $formated')
-        : convertOrginalTextToHtml('◎ $original');
+        ? convertFormatedTextToHtml('⚪️ $formated')
+        : convertOrginalTextToHtml('️️️⚪️ $original');
     html +=
         '<span class="translated">${isFormated ? _formatTranslatedText("（$translated）") : "（$translated）"}</span>';
     return _buildHtmlContent(html);
