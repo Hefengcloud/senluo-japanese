@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/craftify/craftify_home_page.dart';
-import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart';
-import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_page.dart';
-import 'package:senluo_japanese_cms/pages/proverbs/proverb_home_page.dart';
-import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
-
-import '../grammars/grammar_home_page.dart';
-import '../kana/kana_home_page.dart';
-import '../kanji/kanji_home_page.dart';
+import 'package:senluo_japanese_cms/pages/home/helpers/navigation_helper.dart';
+import 'package:senluo_japanese_cms/pages/home/views/title_text_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,16 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  final _pages = [
-    const KanaHomePage(),
-    const GrammarHomePage(),
-    const VocabularyHomePage(),
-    const KanjiHomePage(),
-    const ProverbHomePage(),
-    const OnomatopoeiaPage(),
-    const ExpressionPanelPage(),
-    const KeigoHomePage(),
-  ];
+  final _navItems = buildNavigationItems();
 
   @override
   Widget build(BuildContext context) {
@@ -39,14 +22,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           NavigationRail(
             selectedIndex: _selectedIndex,
-            leading: Text(
-              '森罗\n日语',
-              style: GoogleFonts.getFont(
-                'Zhi Mang Xing',
-                fontSize: 20,
-                color: Colors.purple,
-              ),
-            ),
+            leading: AppTitle(),
             groupAlignment: -1,
             labelType: NavigationRailLabelType.all,
             onDestinationSelected: (int index) {
@@ -54,48 +30,14 @@ class _HomePageState extends State<HomePage> {
                 _selectedIndex = index;
               });
             },
-            destinations: const <NavigationRailDestination>[
-              NavigationRailDestination(
-                icon: Icon(Icons.explore_outlined),
-                selectedIcon: Icon(Icons.explore),
-                label: Text('假名'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.view_module_outlined),
-                selectedIcon: Icon(Icons.view_module),
-                label: Text('文法'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.thumb_up_outlined),
-                selectedIcon: Icon(Icons.thumb_up),
-                label: Text('単語'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.fmd_good_outlined),
-                selectedIcon: Icon(Icons.fmd_good),
-                label: Text('漢字'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.donut_small_outlined),
-                selectedIcon: Icon(Icons.donut_small),
-                label: Text('慣用語'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.adb_outlined),
-                selectedIcon: Icon(Icons.adb),
-                label: Text('オノマトペ'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.speaker_outlined),
-                selectedIcon: Icon(Icons.speaker),
-                label: Text('表現'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.account_box_outlined),
-                selectedIcon: Icon(Icons.account_box),
-                label: Text('敬語'),
-              ),
-            ],
+            destinations: _navItems
+                .map<NavigationRailDestination>(
+                  (e) => NavigationRailDestination(
+                      icon: e.icon,
+                      selectedIcon: e.selectedIcon,
+                      label: Text(e.label)),
+                )
+                .toList(),
             trailing: Expanded(
               child: Align(
                 alignment: Alignment.bottomCenter,
@@ -119,8 +61,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildPanel(int index) {
-    if (index < _pages.length) {
-      return _pages[index];
+    if (index < _navItems.length) {
+      return _navItems[index].page;
     } else {
       return Center(child: Text('Invalid index: $index'));
     }

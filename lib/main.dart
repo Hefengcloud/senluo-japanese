@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
+import 'package:senluo_japanese_cms/pages/home/home_mobile_page.dart';
 import 'package:senluo_japanese_cms/pages/home/home_page.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/bloc/onomatopoeia_bloc.dart';
@@ -58,13 +60,14 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-          title: 'SENLUO JAPANESE',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            useMaterial3: true,
-          ),
-          debugShowCheckedModeBanner: false,
-          home: const HomePage()),
+        title: 'SENLUO JAPANESE',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: Device.get().isPhone ? const HomeMobilePage() : const HomePage(),
+      ),
     );
   }
 }
