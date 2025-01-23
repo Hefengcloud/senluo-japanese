@@ -11,27 +11,25 @@ final class GrammarLoading extends GrammarState {
 
 final class GrammarLoaded extends GrammarState {
   final Map<JLPTLevel, List<GrammarEntry>> entryMap;
-  final JLPTLevel currentLevel;
+  final GrammarItem currentItem;
 
   const GrammarLoaded({
     this.entryMap = const {},
-    this.currentLevel = JLPTLevel.none,
+    this.currentItem = GrammarItem.empty,
   });
 
   List<JLPTLevel> get levels => entryMap.keys.toList();
 
-  List<GrammarEntry> get entries => entryMap[currentLevel] ?? [];
-
   @override
-  List<Object?> get props => [entryMap, currentLevel];
+  List<Object?> get props => [entryMap, currentItem];
 
   GrammarLoaded copyWith({
     Map<JLPTLevel, List<GrammarEntry>>? entryMap,
-    JLPTLevel? currentLevel,
+    GrammarItem? currentItem,
   }) =>
       GrammarLoaded(
         entryMap: entryMap ?? this.entryMap,
-        currentLevel: currentLevel ?? this.currentLevel,
+        currentItem: currentItem ?? this.currentItem,
       );
 }
 

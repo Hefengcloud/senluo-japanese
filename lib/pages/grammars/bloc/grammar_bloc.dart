@@ -11,7 +11,7 @@ part 'grammar_state.dart';
 class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
   GrammarBloc({required this.grammarRepository}) : super(GrammarLoading()) {
     on<GrammarStarted>(_onStarted);
-    on<GrammarLevelChanged>(_onLevelChanged);
+    on<GrammarEntryChanged>(_onEntryChanged);
   }
 
   final GrammarRepository grammarRepository;
@@ -37,11 +37,12 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     emit(GrammarLoaded(entryMap: level2entries));
   }
 
-  Future<void> _onLevelChanged(
-    GrammarLevelChanged event,
+  Future<void> _onEntryChanged(
+    GrammarEntryChanged event,
     Emitter<GrammarState> emit,
   ) async {
     final theState = state as GrammarLoaded;
-    emit(theState.copyWith(currentLevel: event.level));
+    final item = await grammarRepository.loadItem(event.entry);
+    emit(theState.copyWith(currentItem: item));
   }
 }

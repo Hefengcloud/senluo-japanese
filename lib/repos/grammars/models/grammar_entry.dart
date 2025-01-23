@@ -12,6 +12,12 @@ class GrammarEntry extends Equatable {
     required this.level,
   });
 
+  static const empty = GrammarEntry(
+    name: '',
+    key: '',
+    level: JLPTLevel.none,
+  );
+
   @override
   List<Object?> get props => [name, key, level];
 }

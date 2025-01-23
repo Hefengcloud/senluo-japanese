@@ -19,37 +19,27 @@ import '../../helpers/image_helper.dart';
 import '../../widgets/sentence_html_text.dart';
 import 'bloc/grammar_item_bloc.dart';
 
-class GrammarPreviewPage extends StatefulWidget {
-  const GrammarPreviewPage({super.key});
+class GrammarPreviewView extends StatefulWidget {
+  final GrammarItem item;
+
+  GrammarPreviewView({super.key, required this.item});
 
   @override
-  State<GrammarPreviewPage> createState() => _GrammarPreviewPageState();
+  State<GrammarPreviewView> createState() => _GrammarPreviewViewState();
 }
 
-class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
+class _GrammarPreviewViewState extends State<GrammarPreviewView> {
   final GlobalKey _globalKey = GlobalKey();
 
   double _gap = 16.0;
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GrammarItemBloc, GrammarItemState>(
-      builder: (context, state) {
-        if (state is GrammarItemLoaded) {
-          return _buildBody(context, state);
-        } else {
-          return const Center(child: CircularProgressIndicator());
-        }
-      },
-    );
-  }
-
-  Widget _buildBody(BuildContext context, GrammarItemLoaded state) {
     return Row(
       children: [
         Expanded(
           flex: kPreviewLeftFlex,
-          child: _buildImage(state.displayedItem),
+          child: _buildImage(widget.item),
         ),
         const Gap(16),
         Expanded(
@@ -58,9 +48,9 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                child: _buildRightPanel(context, state),
+                child: _buildRightPanel(context),
               ),
-              _buildBottomButtons(context, state),
+              _buildBottomButtons(context),
             ],
           ),
         ),
@@ -68,20 +58,17 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     );
   }
 
-  _buildRightPanel(BuildContext context, GrammarItemLoaded state) {
-    final item = state.item;
-    final displayedItem = state.displayedItem;
-
+  _buildRightPanel(BuildContext context) {
     return ListView(
       children: [
         ExpansionTile(
           initiallyExpanded: true,
           title: const Text(kTitleExample),
-          children: item.examples
+          children: widget.item.examples
               .map<ListTile>((e) => ListTile(
                     title: Text(e.jp),
                     subtitle: Text(e.zh),
-                    leading: displayedItem.examples.contains(e)
+                    leading: widget.item.examples.contains(e)
                         ? const Icon(Icons.check)
                         : null,
                     onTap: () => BlocProvider.of<GrammarItemBloc>(context).add(
@@ -92,34 +79,39 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
         ),
         ExpansionTile(
           title: const Text(kTitleJpMeaning),
-          children:
-              item.meaning.jps.map((e) => ListTile(title: Text(e))).toList(),
+          children: widget.item.meaning.jps
+              .map((e) => ListTile(title: Text(e)))
+              .toList(),
         ),
         ExpansionTile(
           title: const Text(kTitleZhMeaning),
-          children:
-              item.meaning.zhs.map((e) => ListTile(title: Text(e))).toList(),
+          children: widget.item.meaning.zhs
+              .map((e) => ListTile(title: Text(e)))
+              .toList(),
         ),
         ExpansionTile(
           title: const Text(kTitleEnMeaning),
-          children:
-              item.meaning.ens.map((e) => ListTile(title: Text(e))).toList(),
+          children: widget.item.meaning.ens
+              .map((e) => ListTile(title: Text(e)))
+              .toList(),
         ),
         ExpansionTile(
           title: const Text(kTitleConjugations),
-          children:
-              item.conjugations.map((e) => ListTile(title: Text(e))).toList(),
+          children: widget.item.conjugations
+              .map((e) => ListTile(title: Text(e)))
+              .toList(),
         ),
         ExpansionTile(
           title: const Text(kTitleExplanation),
-          children:
-              item.explanations.map((e) => ListTile(title: Text(e))).toList(),
+          children: widget.item.explanations
+              .map((e) => ListTile(title: Text(e)))
+              .toList(),
         ),
       ],
     );
   }
 
-  _buildBottomButtons(BuildContext context, GrammarItemLoaded state) {
+  _buildBottomButtons(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -146,7 +138,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             ElevatedButton.icon(
-              onPressed: () => _onSaveImage(state.item.key),
+              onPressed: () => _onSaveImage(widget.item.key),
               icon: const Icon(Icons.save),
               label: const Text('Save Image'),
             ),
@@ -154,7 +146,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
               icon: const Icon(Icons.abc),
               label: const Text('Copy Text'),
               onPressed: () async {
-                await Clipboard.setData(ClipboardData(text: state.item.text));
+                await Clipboard.setData(ClipboardData(text: widget.item.text));
                 // ignore: use_build_context_synchronously
                 ScaffoldMessenger.of(context)
                     .showSnackBar(const SnackBar(content: Text('Copied')));

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
-import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_item_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/views/grammar_menu_list_view.dart';
-import 'package:senluo_japanese_cms/pages/grammars/views/grammar_entry_grid_view.dart';
+import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
+import '../../common/enums/enums.dart';
 import '../../repos/grammars/models/grammar_entry.dart';
 import 'bloc/grammar_bloc.dart';
 
@@ -40,12 +41,7 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
   Widget build(BuildContext context) {
     return BlocBuilder<GrammarBloc, GrammarState>(
       builder: (context, state) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Text('JLPT 文法'),
-          ),
-          body: _buildBody(context, state),
-        );
+        return _buildBody(context, state);
       },
     );
   }
@@ -54,48 +50,30 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
     return switch (state) {
       GrammarLoading() => const CircularProgressIndicator(),
       GrammarError() => const Text('Something went wrong!'),
-      GrammarLoaded() => Row(
-          children: [
-            SizedBox(
-              width: kMenuPanelWidth,
-              child: GrammarMenuListView(
-                selectedLevel: state.currentLevel,
-                onLevelSelected: (level) =>
-                    BlocProvider.of<GrammarBloc>(context)
-                        .add(GrammarLevelChanged(level: level)),
-                level2Count: {
-                  for (var entry in state.entryMap.entries)
-                    entry.key: entry.value.length
-                },
-              ),
+      GrammarLoaded() => Device.get().isPhone
+          ? _buildMenu(context, state.entryMap)
+          : Row(
+              children: [
+                SizedBox(
+                  width: kMenuPanelWidth,
+                  child: _buildMenu(context, state.entryMap),
+                ),
+                if (state.currentItem != GrammarItem.empty)
+                  Expanded(
+                    child: GrammarPreviewView(item: state.currentItem),
+                  ),
+              ],
             ),
-            Expanded(
-              child: GrammarEntryGridView(
-                entries: state.entries,
-                onItemClicked: (GrammarEntry entry) =>
-                    _showPreviewDialog(context, entry),
-              ),
-            ),
-          ],
-        ),
     };
   }
 
-  _showPreviewDialog(BuildContext context, GrammarEntry entry) {
-    final repo = BlocProvider.of<GrammarBloc>(context).grammarRepository;
-    return showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        content: BlocProvider(
-          create: (context) =>
-              GrammarItemBloc(repo)..add(GrammarItemStarted(entry: entry)),
-          child: const SizedBox(
-            width: kPreviewDialogWidth,
-            height: kPreviewDialogHeight,
-            child: GrammarPreviewPage(),
-          ),
-        ),
-      ),
-    );
-  }
+  _buildMenu(
+    BuildContext context,
+    Map<JLPTLevel, List<GrammarEntry>> entryMap,
+  ) =>
+      GrammarMenuListView(
+        onEntrySelected: (entry) => BlocProvider.of<GrammarBloc>(context)
+            .add(GrammarEntryChanged(entry: entry)),
+        grammarsByLevel: entryMap,
+      );
 }
