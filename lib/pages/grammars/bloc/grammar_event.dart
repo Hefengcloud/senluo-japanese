@@ -9,15 +9,15 @@ class GrammarStarted extends GrammarEvent {
   List<Object?> get props => [];
 }
 
-class GrammarLevelChanged extends GrammarEvent {
-  final JLPTLevel level;
+class GrammarEntryChanged extends GrammarEvent {
+  final GrammarEntry entry;
 
-  const GrammarLevelChanged({
-    required this.level,
+  const GrammarEntryChanged({
+    required this.entry,
   });
 
   @override
-  List<Object> get props => [level];
+  List<Object> get props => [entry];
 }
 
 class GrammarKeywordChanged extends GrammarEvent {
