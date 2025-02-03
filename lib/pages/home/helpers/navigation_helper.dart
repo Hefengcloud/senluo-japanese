@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/pages/business/business_page.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_item.dart';
 
 import '../../expressions/expression_panel_page.dart';
@@ -11,6 +12,12 @@ import '../../proverbs/proverb_home_page.dart';
 import '../../vocabulary/vocabulary_home_page.dart';
 
 List<NavigationItem> buildNavigationItems() => [
+      NavigationItem(
+        icon: const Icon(Icons.business),
+        selectedIcon: const Icon(Icons.business_outlined),
+        label: 'ビジネス',
+        page: const BusinessPage(),
+      ),
       NavigationItem(
         icon: const Icon(Icons.explore_outlined),
         selectedIcon: const Icon(Icons.explore),
