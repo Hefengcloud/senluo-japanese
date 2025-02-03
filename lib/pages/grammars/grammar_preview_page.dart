@@ -22,7 +22,7 @@ import 'bloc/grammar_item_bloc.dart';
 class GrammarPreviewView extends StatefulWidget {
   final GrammarItem item;
 
-  GrammarPreviewView({super.key, required this.item});
+  const GrammarPreviewView({super.key, required this.item});
 
   @override
   State<GrammarPreviewView> createState() => _GrammarPreviewViewState();
