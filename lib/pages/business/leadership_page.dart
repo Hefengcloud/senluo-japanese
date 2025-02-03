@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/business_constants.dart';
 
 class LeadershipPage extends StatelessWidget {
@@ -6,6 +7,21 @@ class LeadershipPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Device.get().isPhone
+        ? _buildMobileBody(context)
+        : _buildContent(context);
+  }
+
+  _buildMobileBody(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Leadership'),
+      ),
+      body: _buildContent(context),
+    );
+  }
+
+  _buildContent(BuildContext context) {
     return ListView(
       children: [
         _buildTextPanel(
@@ -80,11 +96,7 @@ class LeadershipPage extends StatelessWidget {
                 ?.copyWith(color: Colors.white54),
           ),
           const SizedBox(height: 8),
-          GridView.count(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            childAspectRatio: 6,
-            crossAxisCount: 2,
+          Wrap(
             children: BusinessConstants.values
                 .map(
                   (value) => Container(
