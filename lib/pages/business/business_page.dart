@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/pages/business/cashflow_page.dart';
 import 'package:senluo_japanese_cms/pages/business/leadership_page.dart';
 import 'package:senluo_japanese_cms/pages/business/marketing_page.dart';
@@ -8,6 +8,8 @@ import 'package:senluo_japanese_cms/pages/business/products_page.dart';
 import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
 
 import 'constants/business_constants.dart';
+
+typedef BizPartTapCallback = void Function(BusinessPart part);
 
 class BusinessPage extends StatefulWidget {
   const BusinessPage({super.key});
@@ -21,29 +23,48 @@ class _BusinessPageState extends State<BusinessPage> {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBoy();
+    return Device.get().isPhone ? _buildMobileBody() : _buildBody();
   }
 
-  Widget _buildBoy() {
+  Widget _buildBody() {
     return Row(
       children: [
         SizedBox(
-          width: kMenuPanelWidth,
-          child: ListView(
-            children: BusinessPart.values
-                .map<ListTile>(
-                  (e) => ListTile(
-                    title: Text(e.value),
-                    onTap: () => setState(() {
-                      _thePart = e;
-                    }),
-                  ),
-                )
-                .toList(),
+          // width: kMenuPanelWidth,
+          width: 40,
+          child: _buildMenuList(
+            (part) => setState(() {
+              _thePart = part;
+            }),
           ),
         ),
         Expanded(child: _buildDestPage(_thePart)),
       ],
+    );
+  }
+
+  Widget _buildMenuList(BizPartTapCallback callback) {
+    return ListView(
+      children: BusinessPart.values
+          .map<ListTile>(
+            (e) => ListTile(
+              title: Text(e.value),
+              onTap: () => callback(e),
+            ),
+          )
+          .toList(),
+    );
+  }
+
+  _buildMobileBody() {
+    return _buildMenuList(
+      (part) {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => _buildDestPage(part),
+          ),
+        );
+      },
     );
   }
 
