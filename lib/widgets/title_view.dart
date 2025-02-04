@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 
 class TitleView extends StatelessWidget {
   final String title;
@@ -6,9 +7,12 @@ class TitleView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Text(
       title,
-      style: Theme.of(context).textTheme.headlineLarge,
+      style: Device.get().isPhone
+          ? textTheme.headlineSmall
+          : textTheme.headlineLarge,
     );
   }
 }

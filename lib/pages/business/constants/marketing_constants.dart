@@ -8,26 +8,36 @@ enum CustomerPersona {
 }
 
 enum SocialMedia {
-  everjapanWebsite(
-    'everjapan.com',
-    'https://www.everjapan.com',
-    'https://www.everjapan.com',
-  ),
   xiaohongshu(
     '小红书',
     'https://www.xiaohongshu.com/user/profile/642b0b6f000000001400eda2',
-    '',
   ),
-  bilibili('B站', '', ''),
-  ximalaya('喜马拉雅', '', ''),
-  douyin('抖音', '', ''),
-  weibo('微博', '', ''),
-  zhihu('知乎', '', '');
+  bilibili(
+    'B站',
+    'https://space.bilibili.com/481782510',
+  ),
+  ximalaya(
+    '喜马拉雅',
+    'https://www.ximalaya.com/zhubo/210189066',
+  ),
+  douyin(
+    '抖音',
+    'https://www.douyin.com/user/MS4wLjABAAAA1ZxYZLzx2yD9HCxvA5fLQSmA_L2AntzHulU2RfMsDOM',
+  ),
+  weibo(
+    '微博',
+    'https://weibo.com/u/7861984943',
+  ),
+  zhihu(
+    '知乎',
+    'https://www.zhihu.com/column/everjapan',
+  ),
 
-  const SocialMedia(this.name, this.url, this.mobileUrl);
+  gongzhonghao('微信公众号', '');
+
+  const SocialMedia(this.name, this.url);
 
   final String url;
-  final String mobileUrl;
   final String name;
 }
 

@@ -44,15 +44,18 @@ class _BusinessPageState extends State<BusinessPage> {
   }
 
   Widget _buildMenuList(BizPartTapCallback callback) {
-    return ListView(
-      children: BusinessPart.values
-          .map<ListTile>(
-            (e) => ListTile(
-              title: Text(e.value),
-              onTap: () => callback(e),
-            ),
-          )
-          .toList(),
+    return ListView.separated(
+      itemCount: BusinessPart.values.length,
+      separatorBuilder: (BuildContext context, int index) =>
+          const Divider(height: 1),
+      itemBuilder: (context, index) {
+        final part = BusinessPart.values[index];
+        return ListTile(
+          title: Text(part.value),
+          onTap: () => callback(part),
+          trailing: const Icon(Icons.arrow_forward),
+        );
+      },
     );
   }
 
