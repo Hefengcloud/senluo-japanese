@@ -35,6 +35,8 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
   double _gap = 16.0;
   double _imageWidth = 480.0;
 
+  List<bool> _checkedItems = [false, false, false]; // 复选框状态
+
   @override
   Widget build(BuildContext context) {
     _examples = widget.item.examples;
@@ -44,14 +46,12 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
         title: Text(widget.item.name),
         actions: [
           IconButton(
-            onPressed: () {
-              _onSaveImage(widget.item.key);
-            },
-            icon: Icon(Icons.image),
+            onPressed: () {},
+            icon: const Icon(Icons.image),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.settings),
+            icon: const Icon(Icons.settings),
           ),
         ],
       ),
@@ -60,7 +60,11 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
           : _buildBody(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        elevation: null,
+        child: const Icon(Icons.play_arrow),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endContained,
+      bottomNavigationBar: _buildBottomAppBar(),
     );
   }
 
@@ -89,14 +93,14 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
         ExpansionTile(
           title: const Text(kTitleSettings),
           children: [
-            Row(
+            const Row(
               children: [
                 Text('Aspect Ratio: 4/3'),
               ],
             ),
             Row(
               children: [
-                Text('Image Width'),
+                const Text('Image Width'),
                 Slider(
                   min: 360,
                   max: 720,
@@ -202,12 +206,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
             ElevatedButton.icon(
               icon: const Icon(Icons.abc),
               label: const Text('Copy Text'),
-              onPressed: () async {
-                await Clipboard.setData(ClipboardData(text: widget.item.text));
-                // ignore: use_build_context_synchronously
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(const SnackBar(content: Text('Copied')));
-              },
+              onPressed: () async {},
             )
           ],
         ),
@@ -374,32 +373,153 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
   }
 
   _buildExampleList(GrammarItem item) {
-    return ListView.separated(
-      itemBuilder: (BuildContext context, int index) {
-        final e = item.examples[index];
-        return ListTile(
-          contentPadding: EdgeInsets.zero,
-          minVerticalPadding: 0,
-          title: SentenceHtmlText(
-            original: e.jp,
-            formated: e.jp1,
-            translated: e.zh,
-            emphasizedColor: kLevel2color[item.level]!,
-          ),
-        );
+    return InkWell(
+      onLongPress: () {
+        _showExampleList();
       },
-      itemCount: item.examples.length,
-      separatorBuilder: (BuildContext context, int index) {
-        return Divider(
-          height: 1,
-          color: Colors.grey[50],
-        );
-      },
+      child: ListView.separated(
+        itemBuilder: (BuildContext context, int index) {
+          final e = item.examples[index];
+          return ListTile(
+            contentPadding: EdgeInsets.zero,
+            minVerticalPadding: 0,
+            title: SentenceHtmlText(
+              original: e.jp,
+              formated: e.jp1,
+              translated: e.zh,
+              emphasizedColor: kLevel2color[item.level]!,
+            ),
+          );
+        },
+        itemCount: item.examples.length,
+        separatorBuilder: (BuildContext context, int index) {
+          return Divider(
+            height: 1,
+            color: Colors.grey[50],
+          );
+        },
+      ),
     );
   }
 
   _onSaveImage(String fileName) async {
     final bytes = await captureWidget(_globalKey);
     saveImageToFile(bytes!, '$fileName.jpg');
+  }
+
+  _onCopyText() async {
+    await Clipboard.setData(ClipboardData(text: widget.item.text));
+    // ignore: use_build_context_synchronously
+    ScaffoldMessenger.of(context)
+        .showSnackBar(const SnackBar(content: Text('Copied')));
+  }
+
+  _showExampleList() {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: 200,
+          color: Colors.amber,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Text('Modal BottomSheet'),
+                ElevatedButton(
+                  child: const Text('Close BottomSheet'),
+                  onPressed: () => Navigator.pop(context),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void _showExamples(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Container(
+              decoration: BoxDecoration(
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(16)), // 圆角
+              ),
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min, // 适应内容大小
+                children: [
+                  const Text(
+                    "选择例句",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const Divider(),
+                  ..._examples.map<CheckboxListTile>(
+                    (e) => CheckboxListTile(
+                      title: Text(e.jp),
+                      onChanged: (bool? value) {
+                        setState(() {
+                          _checkedItems[0] = value!;
+                        });
+                      },
+                      value: true,
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text("确定"),
+                  )
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  _buildBottomAppBar() {
+    return BottomAppBar(
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            tooltip: 'Save as image',
+            icon: const Icon(Icons.image_outlined),
+            onPressed: () {
+              _onSaveImage(widget.item.key);
+            },
+          ),
+          IconButton(
+            tooltip: 'Copy Text',
+            icon: const Icon(Icons.copy),
+            onPressed: () {
+              _onCopyText();
+            },
+          ),
+          IconButton(
+            tooltip: 'Choose examples',
+            icon: const Icon(Icons.list),
+            onPressed: () {
+              _showExamples(context);
+            },
+          ),
+          IconButton(
+            tooltip: 'Layout settings',
+            icon: const Icon(Icons.settings_outlined),
+            onPressed: () {},
+          ),
+        ],
+      ),
+    );
   }
 }
