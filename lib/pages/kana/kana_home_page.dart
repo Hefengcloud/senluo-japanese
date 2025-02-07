@@ -1,61 +1,86 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
+import 'package:senluo_japanese_cms/pages/kana/views/kana_table_yoon_view.dart';
+import 'package:senluo_japanese_cms/repos/gojuon/models/kana_models.dart';
 
 import 'bloc/kana_bloc.dart';
-import 'views/kana_category_list_view.dart';
 import 'views/kana_table_view.dart';
 
-class KanaHomePage extends StatelessWidget {
+class KanaHomePage extends StatefulWidget {
   const KanaHomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('仮名'),
-        actions: [
-          Switch(
-            value: false,
-            onChanged: (value) {},
-          ),
-        ],
-      ),
-      body: _buildBody(context),
-    );
+  State<KanaHomePage> createState() => _KanaHomePageState();
+}
+
+class _KanaHomePageState extends State<KanaHomePage>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
   }
 
-  _buildBody(BuildContext context) {
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return _buildBody(context);
+  }
+
+  _buildBody(BuildContext ctx) {
     return BlocBuilder<KanaBloc, KanaState>(
       builder: (context, state) {
-        final bloc = BlocProvider.of<KanaBloc>(context);
         if (state is KanaLoading) {
           return _buildLoading(context);
         } else if (state is KanaLoaded) {
-          return Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: kMenuPanelWidth,
-                child: KanaCategoryListView(
-                  selectedType: state.currentKanaType,
-                  onKanaTypeSelected: (type) {
-                    bloc.add(KanaCategoryChanged(category: type));
-                  },
-                ),
-              ),
-              Expanded(
-                child: KanaTableView(
-                  kanaRows: state.currentKanaRows(),
-                  kanaCategory: state.currentKanaType,
-                  onKanaTap: (kana) {},
-                ),
-              ),
-            ],
-          );
+          return _buildKanaTable(context, state);
         }
         return const Placeholder();
       },
+    );
+  }
+
+  _buildKanaTable(BuildContext context, KanaLoaded state) {
+    return Column(
+      children: [
+        TabBar(
+          controller: _tabController,
+          tabs: const [
+            Tab(text: '清音'),
+            Tab(text: '濁音'),
+            Tab(text: '拗音'),
+          ],
+        ),
+        // TabBarView takes remaining space
+        Expanded(
+          child: TabBarView(
+            controller: _tabController,
+            children: [
+              KanaTableView(
+                kanaRows: state.seion,
+                kanaCategory: KanaCategory.seion,
+                onKanaTap: (kana) {},
+              ),
+              KanaTableView(
+                kanaRows: [...state.dakuon, ...state.handakuon],
+                kanaCategory: KanaCategory.dakuon,
+                onKanaTap: (kana) {},
+              ),
+              KanaTableYoonView(
+                kanaRows: state.yoon,
+                onKanaTap: (kana) {},
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 

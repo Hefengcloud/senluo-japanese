@@ -9,8 +9,8 @@ import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
-import '../../../constants/texts.dart';
-import '../../../helpers/image_helper.dart';
+import '../../../common/constants/texts.dart';
+import '../../../common/helpers/image_helper.dart';
 
 const _kBgColor = Color(0xFFEFE8D6);
 const _kMainColor = Color(0xFFBD1723);

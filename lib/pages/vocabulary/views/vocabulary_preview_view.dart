@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 
 import '../../../common/models/word.dart';
-import '../../../helpers/image_helper.dart';
+import '../../../common/helpers/image_helper.dart';
 import '../../kanji/constants/styles.dart';
 import '../../onomatopoeia/constants/colors.dart';
 import '../bloc/preview_bloc.dart';

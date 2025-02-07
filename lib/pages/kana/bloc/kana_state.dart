@@ -11,23 +11,19 @@ final class KanaLoading extends KanaState {}
 
 final class KanaLoaded extends KanaState {
   final Map<KanaCategory, List<KanaRow>> kanaTable;
-  final KanaCategory currentKanaType;
 
   const KanaLoaded({
     required this.kanaTable,
-    required this.currentKanaType,
   });
 
-  List<KanaRow> currentKanaRows() {
-    if (currentKanaType == KanaCategory.dakuon) {
-      return [
-        ...(kanaTable[KanaCategory.dakuon] ?? []),
-        ...(kanaTable[KanaCategory.handakuon] ?? []),
-      ];
-    }
-    return kanaTable[currentKanaType] ?? [];
-  }
+  get seion => kanaTable[KanaCategory.seion];
+
+  get dakuon => kanaTable[KanaCategory.dakuon];
+
+  get handakuon => kanaTable[KanaCategory.handakuon];
+
+  get yoon => kanaTable[KanaCategory.yoon];
 
   @override
-  List<Object> get props => [kanaTable, currentKanaType];
+  List<Object> get props => [kanaTable];
 }

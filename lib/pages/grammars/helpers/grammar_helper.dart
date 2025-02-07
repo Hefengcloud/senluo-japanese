@@ -1,6 +1,6 @@
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
-import '../../../constants/texts.dart';
+import '../../../common/constants/texts.dart';
 import '../constants/texts.dart';
 
 extension GrammarItemX on GrammarItem {

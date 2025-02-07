@@ -4,13 +4,13 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
-import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/common/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 import 'package:senluo_japanese_cms/pages/kanji/constants/styles.dart';
 
 import '../../common/models/word.dart';
-import '../../helpers/image_helper.dart';
-import '../../helpers/text_helper.dart';
+import '../../common/helpers/image_helper.dart';
+import '../../common/helpers/text_helper.dart';
 import '../../repos/kanji/models/kanji_model.dart';
 
 class KanjiPreviewPage extends StatelessWidget {

@@ -1,5 +1,5 @@
-import '../common/models/meaning.dart';
-import '../common/models/word.dart';
+import '../models/meaning.dart';
+import '../models/word.dart';
 
 Word parseMeaning(String str) {
   // Split the string by the separator '（' and '）' to extract the substring between them

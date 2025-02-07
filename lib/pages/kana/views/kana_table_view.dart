@@ -8,39 +8,41 @@ import '../../../repos/gojuon/models/models.dart';
 
 typedef KanaTapCallback = void Function(Kana kana);
 
+const kColumnLabels = ['', 'a', 'i', 'u', 'e', 'o'];
+const kKanaYoonColumnLabels = ['', 'a', 'u', 'o'];
+
+const kCategory2RowLabels = {
+  KanaCategory.seion: ['-', 'k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w', 'N'],
+  KanaCategory.dakuon: [
+    'g',
+    'z',
+    'd',
+    'b',
+    'p',
+  ],
+};
+
+const kKanaYoonRowLabels = {
+  'ky',
+  'sh',
+  'ch',
+  'ny',
+  'hy',
+  'my',
+  'ry',
+  'gy',
+  'j',
+  'by',
+  'py'
+};
+
+const kKanaLabelStyle = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.bold,
+  color: Colors.black26,
+);
+
 class KanaTableView extends StatelessWidget {
-  static const kColumnLabels = ['', 'a', 'i', 'u', 'e', 'o'];
-
-  static const kCategory2RowLabels = {
-    KanaCategory.seion: ['-', 'k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w', 'N'],
-    KanaCategory.dakuon: [
-      'g',
-      'z',
-      'd',
-      'b',
-      'p',
-    ],
-    KanaCategory.yoon: [
-      'ky',
-      'sh',
-      'ch',
-      'ny',
-      'hy',
-      'my',
-      'ry',
-      'gy',
-      'j',
-      'by',
-      'py',
-    ],
-  };
-
-  static const _labelStyle = TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
-    color: Colors.green,
-  );
-
   final KanaCategory kanaCategory;
   final List<KanaRow> kanaRows;
   final KanaTapCallback onKanaTap;
@@ -57,23 +59,30 @@ class KanaTableView extends StatelessWidget {
     final rows = _formateRows();
     return SingleChildScrollView(
       child: Table(
-        columnWidths: const {
-          0: FlexColumnWidth(1),
-          1: FlexColumnWidth(2),
-          2: FlexColumnWidth(2),
-          3: FlexColumnWidth(2),
-          4: FlexColumnWidth(2),
-          5: FlexColumnWidth(2),
-        },
+        columnWidths: kanaCategory == KanaCategory.yoon
+            ? const {}
+            : const {
+                0: FlexColumnWidth(1),
+                1: FlexColumnWidth(2),
+                2: FlexColumnWidth(2),
+                3: FlexColumnWidth(2),
+                4: FlexColumnWidth(2),
+                5: FlexColumnWidth(2),
+              },
         children: [
           TableRow(
             children: kColumnLabels
-                .map((e) => TableCell(
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Text(e, style: _labelStyle),
+                .map(
+                  (e) => TableCell(
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        e,
+                        style: kKanaLabelStyle,
                       ),
-                    ))
+                    ),
+                  ),
+                )
                 .toList(),
           ),
           ...rows.mapIndexed((index, kanas) => TableRow(
@@ -90,12 +99,16 @@ class KanaTableView extends StatelessWidget {
     List<Kana> kanas,
   ) {
     final cells = kanas
-        .map<TableCell>((e) => TableCell(
+        .map<TableCell>(
+          (e) => TableCell(
+            child: Card(
               child: InkWell(
                 child: KanaPieceView(kana: e),
                 onTap: () => _showKanaPreviewDialog(context, e),
               ),
-            ))
+            ),
+          ),
+        )
         .toList();
     cells.insert(
       0,
@@ -105,7 +118,7 @@ class KanaTableView extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             kCategory2RowLabels[kanaCategory]![index],
-            style: _labelStyle,
+            style: kKanaLabelStyle,
           ),
         ),
       ),
@@ -118,8 +131,7 @@ class KanaTableView extends StatelessWidget {
     for (KanaRow row in kanaRows) {
       final List<Kana> theRow;
       if (row.length == 1) {
-        theRow = List.from(row)
-          ..addAll([Kana.empty, Kana.empty, Kana.empty, Kana.empty]);
+        theRow = [Kana.empty, Kana.empty, row[0], Kana.empty, Kana.empty];
       } else if (row.length == 2) {
         theRow = List.from(row)
           ..insertAll(1, [Kana.empty, Kana.empty, Kana.empty]);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/helpers/image_helper.dart';
+import 'package:senluo_japanese_cms/common/helpers/image_helper.dart';
 
 class CraftifyImageDialog extends StatefulWidget {
   const CraftifyImageDialog({super.key});

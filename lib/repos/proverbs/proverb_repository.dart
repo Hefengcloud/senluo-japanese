@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:senluo_japanese_cms/constants/kanas.dart';
+import 'package:senluo_japanese_cms/common/constants/kanas.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:yaml/yaml.dart';
 

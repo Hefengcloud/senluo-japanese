@@ -11,7 +11,6 @@ class KanaBloc extends Bloc<KanaEvent, KanaState> {
   final KanaRepository kanaRepo;
   KanaBloc({required this.kanaRepo}) : super(KanaLoading()) {
     on<KanaStarted>(_onStarted);
-    on<KanaCategoryChanged>(_onCategoryChanged);
   }
 
   _onStarted(
@@ -20,22 +19,6 @@ class KanaBloc extends Bloc<KanaEvent, KanaState> {
   ) async {
     emit(KanaLoading());
     final kanaTable = await kanaRepo.loadKanaTable();
-    emit(KanaLoaded(
-      kanaTable: kanaTable,
-      currentKanaType: KanaCategory.seion,
-    ));
-  }
-
-  _onCategoryChanged(
-    KanaCategoryChanged event,
-    Emitter<KanaState> emit,
-  ) async {
-    final theState = state as KanaLoaded;
-    emit(
-      KanaLoaded(
-        kanaTable: theState.kanaTable,
-        currentKanaType: event.category,
-      ),
-    );
+    emit(KanaLoaded(kanaTable: kanaTable));
   }
 }

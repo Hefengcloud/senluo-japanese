@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
-import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/common/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/kanji/constants/styles.dart';
 import 'package:senluo_japanese_cms/pages/kanji/kanji_preview_page.dart';
 
