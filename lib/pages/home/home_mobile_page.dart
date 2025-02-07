@@ -17,11 +17,11 @@ class _HomeMobilePageState extends State<HomeMobilePage> {
   final _navItems =
       List<NavigationItem>.from(buildNavigationItems().getRange(0, 4))
         ..add(
-          NavigationItem(
-            icon: const Icon(Icons.more_horiz_outlined),
-            selectedIcon: const Icon(Icons.more_horiz),
+          const NavigationItem(
+            icon: Icon(Icons.more_horiz_outlined),
+            selectedIcon: Icon(Icons.more_horiz),
             label: "更多",
-            page: const NavPage(),
+            page: NavPage(),
           ),
         );
 
