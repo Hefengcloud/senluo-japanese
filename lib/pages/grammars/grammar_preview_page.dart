@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
@@ -29,16 +30,14 @@ class GrammarPreviewView extends StatefulWidget {
 class _GrammarPreviewViewState extends State<GrammarPreviewView> {
   final GlobalKey _globalKey = GlobalKey();
 
-  late final GrammarItem _item;
-  late final List<Example> _examples;
+  late List<Example> _examples;
 
   double _gap = 16.0;
   double _imageWidth = 480.0;
 
   @override
   Widget build(BuildContext context) {
-    _item = widget.item;
-    _examples = _item.examples;
+    _examples = widget.item.examples;
 
     return Scaffold(
       appBar: AppBar(
@@ -46,34 +45,43 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
         actions: [
           IconButton(
             onPressed: () {
-              _onSaveImage(_item.key);
+              _onSaveImage(widget.item.key);
             },
             icon: Icon(Icons.image),
           ),
-        ],
-      ),
-      body: Row(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              border: Border.all(),
-            ),
-            width: _imageWidth,
-            child: _buildImage(widget.item),
-          ),
-          Expanded(
-            child: _buildRightPanel(context),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.settings),
           ),
         ],
       ),
+      body: Device.get().isPhone
+          ? _buildImageContainer(context)
+          : _buildBody(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
       ),
     );
   }
+
+  _buildBody(BuildContext context) => Row(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: _buildImageContainer(context),
+          ),
+          Expanded(
+            child: _buildRightPanel(context),
+          ),
+        ],
+      );
+
+  _buildImageContainer(BuildContext context) => Container(
+        padding: const EdgeInsets.all(16),
+        width: double.infinity,
+        child: _buildImage(widget.item),
+      );
 
   _buildRightPanel(BuildContext context) {
     return ListView(
@@ -225,7 +233,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
             child: Column(
               children: [
                 _buildTopLogo(item),
-                Gap(_gap),
+                const Gap(8),
                 _buildItemName(item.name, item.level),
                 _buildJpMeaning(item),
                 Padding(
@@ -255,7 +263,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
       item.meaning.zhs.join('；'),
       style: TextStyle(
         color: kLevel2color[item.level],
-        fontSize: 20.0,
+        fontSize: 16.0,
       ),
       textAlign: TextAlign.center,
       maxLines: 1,
@@ -281,7 +289,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
       maxLines: nameParts.length,
       style: GoogleFonts.getFont(
         'Klee One',
-        fontSize: 64 - (nameParts.length - 1) * 8,
+        fontSize: 60 - (nameParts.length - 1) * 8,
         fontWeight: FontWeight.bold,
         color: kLevel2color[level],
       ),
@@ -312,7 +320,8 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
     Match? match = pattern.firstMatch(text);
     const style = TextStyle(
       color: Colors.white,
-      fontSize: 16,
+      fontVariations: [FontVariation.weight(700)],
+      fontSize: 14,
     );
 
     if (match != null) {
@@ -353,7 +362,8 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
             style: GoogleFonts.getFont(
               'Montserrat',
               color: Colors.white,
-              fontSize: 14,
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
               fontStyle: FontStyle.italic,
             ),
           ),
