@@ -55,9 +55,11 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
           ),
         ],
       ),
-      body: Device.get().isPhone
-          ? _buildImageContainer(context)
-          : _buildBody(context),
+      body: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(8.0),
+        child: _buildImageContainer(context),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         elevation: null,
@@ -81,9 +83,10 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
         ],
       );
 
-  _buildImageContainer(BuildContext context) => Container(
-        padding: const EdgeInsets.all(16),
-        width: double.infinity,
+  _buildImageContainer(BuildContext context) => ConstrainedBox(
+        constraints: const BoxConstraints(
+          maxWidth: 480,
+        ),
         child: _buildImage(widget.item),
       );
 
