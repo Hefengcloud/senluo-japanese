@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:senluo_japanese_cms/constants/kanas.dart';
+import 'package:senluo_japanese_cms/common/constants/kanas.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/proverb_repository.dart';
 
 import '../../../repos/proverbs/models/proverb_item.dart';

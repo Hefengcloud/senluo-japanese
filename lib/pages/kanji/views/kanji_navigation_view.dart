@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
-import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/common/constants/colors.dart';
 
 class KanjiNavigationView extends StatelessWidget {
   final Function(JLPTLevel level) onLevelChanged;

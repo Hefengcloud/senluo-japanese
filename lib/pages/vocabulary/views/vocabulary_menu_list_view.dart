@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/common/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/vocabulary/models/vocabulary_menu.dart';
 
 class VocabularyMenuListView extends StatefulWidget {

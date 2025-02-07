@@ -1,12 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
-import 'package:senluo_japanese_cms/constants/texts.dart';
+import 'package:senluo_japanese_cms/common/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
@@ -14,10 +12,10 @@ import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
-import '../../constants/colors.dart';
-import '../../helpers/image_helper.dart';
+import '../../common/constants/colors.dart';
+import '../../common/helpers/image_helper.dart';
+import '../../common/models/models.dart';
 import '../../widgets/sentence_html_text.dart';
-import 'bloc/grammar_item_bloc.dart';
 
 class GrammarPreviewView extends StatefulWidget {
   final GrammarItem item;
@@ -31,30 +29,49 @@ class GrammarPreviewView extends StatefulWidget {
 class _GrammarPreviewViewState extends State<GrammarPreviewView> {
   final GlobalKey _globalKey = GlobalKey();
 
+  late final GrammarItem _item;
+  late final List<Example> _examples;
+
   double _gap = 16.0;
+  double _imageWidth = 480.0;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex: kPreviewLeftFlex,
-          child: _buildImage(widget.item),
-        ),
-        const Gap(16),
-        Expanded(
-          flex: kPreviewRightFlex,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Expanded(
-                child: _buildRightPanel(context),
-              ),
-              _buildBottomButtons(context),
-            ],
+    _item = widget.item;
+    _examples = _item.examples;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.item.name),
+        actions: [
+          IconButton(
+            onPressed: () {
+              _onSaveImage(_item.key);
+            },
+            icon: Icon(Icons.image),
           ),
-        ),
-      ],
+        ],
+      ),
+      body: Row(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              border: Border.all(),
+            ),
+            width: _imageWidth,
+            child: _buildImage(widget.item),
+          ),
+          Expanded(
+            child: _buildRightPanel(context),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
     );
   }
 
@@ -62,19 +79,51 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
     return ListView(
       children: [
         ExpansionTile(
+          title: const Text(kTitleSettings),
+          children: [
+            Row(
+              children: [
+                Text('Aspect Ratio: 4/3'),
+              ],
+            ),
+            Row(
+              children: [
+                Text('Image Width'),
+                Slider(
+                  min: 360,
+                  max: 720,
+                  divisions: 36,
+                  value: _imageWidth,
+                  onChanged: (value) {
+                    setState(() {
+                      _imageWidth = value;
+                    });
+                  },
+                ),
+                Text("$_imageWidth"),
+              ],
+            ),
+          ],
+        ),
+        ExpansionTile(
           initiallyExpanded: true,
           title: const Text(kTitleExample),
-          children: widget.item.examples
-              .map<ListTile>((e) => ListTile(
+          children: _examples
+              .map<ListTile>(
+                (e) => ListTile(
                     title: Text(e.jp),
                     subtitle: Text(e.zh),
                     leading: widget.item.examples.contains(e)
                         ? const Icon(Icons.check)
                         : null,
-                    onTap: () => BlocProvider.of<GrammarItemBloc>(context).add(
-                      GrammarExampleSelected(example: e),
-                    ),
-                  ))
+                    onTap: () {
+                      if (_examples.contains(e)) {
+                        _examples.remove(e);
+                      } else {
+                        _examples.add(e);
+                      }
+                    }),
+              )
               .toList(),
         ),
         ExpansionTile(

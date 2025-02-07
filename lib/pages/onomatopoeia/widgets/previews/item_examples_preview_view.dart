@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/constants/colors.dart';
+import 'package:senluo_japanese_cms/common/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_title_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';

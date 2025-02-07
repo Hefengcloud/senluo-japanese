@@ -7,7 +7,7 @@ import 'package:senluo_japanese_cms/pages/vocabulary/bloc/preview_bloc.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_preview_view.dart';
 
 import '../../../common/models/word.dart';
-import '../../../constants/colors.dart';
+import '../../../common/constants/colors.dart';
 import '../../kanji/constants/styles.dart';
 import '../bloc/vocabulary_bloc.dart';
 

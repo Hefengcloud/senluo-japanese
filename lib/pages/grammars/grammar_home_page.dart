@@ -39,9 +39,21 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GrammarBloc, GrammarState>(
+    return BlocConsumer<GrammarBloc, GrammarState>(
       builder: (context, state) {
         return _buildBody(context, state);
+      },
+      listener: (BuildContext context, GrammarState state) {
+        if (Device.get().isPhone) {
+          if (state is GrammarLoaded &&
+              state.currentItem != GrammarItem.empty) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => GrammarPreviewView(item: state.currentItem),
+              ),
+            );
+          }
+        }
       },
     );
   }

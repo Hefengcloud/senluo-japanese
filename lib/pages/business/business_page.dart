@@ -7,6 +7,7 @@ import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart'
 import 'package:senluo_japanese_cms/pages/business/products_page.dart';
 import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
 
+import '../../common/constants/constants.dart';
 import 'constants/business_constants.dart';
 
 typedef BizPartTapCallback = void Function(BusinessPart part);
@@ -30,8 +31,7 @@ class _BusinessPageState extends State<BusinessPage> {
     return Row(
       children: [
         SizedBox(
-          // width: kMenuPanelWidth,
-          width: 40,
+          width: kMenuPanelWidth,
           child: _buildMenuList(
             (part) => setState(() {
               _thePart = part;

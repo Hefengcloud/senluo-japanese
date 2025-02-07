@@ -5,6 +5,7 @@ enum KanaCategory {
   dakuon,
   handakuon,
   yoon,
+  all,
 }
 
 enum KanaType {

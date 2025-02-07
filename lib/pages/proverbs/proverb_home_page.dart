@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
-import 'package:senluo_japanese_cms/constants/kanas.dart';
+import 'package:senluo_japanese_cms/common/constants/kanas.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_view.dart';
 
 import '../../repos/proverbs/models/proverb_item.dart';

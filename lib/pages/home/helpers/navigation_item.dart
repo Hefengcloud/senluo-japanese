@@ -6,7 +6,7 @@ class NavigationItem {
   final String label;
   final Widget page;
 
-  NavigationItem({
+  const NavigationItem({
     required this.icon,
     required this.selectedIcon,
     required this.label,
