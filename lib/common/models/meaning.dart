@@ -10,8 +10,8 @@ class Meaning {
   });
 
   String get en => ens.join(' / ');
-  String get zh => ens.join(' / ');
-  String get jp => ens.join(' / ');
+  String get zh => zhs.join(' / ');
+  String get jp => jps.join(' / ');
 
   static const empty = Meaning(jps: [], ens: [], zhs: []);
 }

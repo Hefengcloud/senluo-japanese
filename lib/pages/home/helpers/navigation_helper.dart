@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_item.dart';
+import 'package:senluo_japanese_cms/pages/zengo/zengo_home_page.dart';
 
 import '../../expressions/expression_panel_page.dart';
 import '../../grammars/grammar_home_page.dart';
@@ -66,5 +67,11 @@ List<NavigationItem> buildNavigationItems() => const [
         selectedIcon: const Icon(Icons.account_box),
         label: '敬語',
         page: const KeigoHomePage(),
+      ),
+      NavigationItem(
+        icon: const Icon(Icons.account_box_outlined),
+        selectedIcon: const Icon(Icons.account_box),
+        label: 'ZEN',
+        page: const ZengoHomePage(),
       ),
     ];

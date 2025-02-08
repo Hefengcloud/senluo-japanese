@@ -43,29 +43,12 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.item.name),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.image),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.settings),
-          ),
-        ],
       ),
       body: Container(
         alignment: Alignment.center,
         padding: const EdgeInsets.all(8.0),
         child: _buildImageContainer(context),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        elevation: null,
-        child: const Icon(Icons.play_arrow),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endContained,
-      bottomNavigationBar: _buildBottomAppBar(),
     );
   }
 
@@ -432,41 +415,6 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
           },
         );
       },
-    );
-  }
-
-  _buildBottomAppBar() {
-    return BottomAppBar(
-      child: Row(
-        children: <Widget>[
-          IconButton(
-            tooltip: 'Save as image',
-            icon: const Icon(Icons.image_outlined),
-            onPressed: () {
-              _onSaveImage(widget.item.key);
-            },
-          ),
-          IconButton(
-            tooltip: 'Copy Text',
-            icon: const Icon(Icons.copy),
-            onPressed: () {
-              _onCopyText();
-            },
-          ),
-          IconButton(
-            tooltip: 'Choose examples',
-            icon: const Icon(Icons.list),
-            onPressed: () {
-              _showExamples(context);
-            },
-          ),
-          IconButton(
-            tooltip: 'Layout settings',
-            icon: const Icon(Icons.settings_outlined),
-            onPressed: () {},
-          ),
-        ],
-      ),
     );
   }
 }
