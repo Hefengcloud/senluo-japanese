@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
-import 'package:senluo_japanese_cms/pages/home/home_mobile_page.dart';
 import 'package:senluo_japanese_cms/pages/home/home_page.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/bloc/onomatopoeia_bloc.dart';
@@ -66,7 +64,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
-        home: Device.get().isPhone ? const HomeMobilePage() : const HomePage(),
+        home: const HomePage(),
       ),
     );
   }

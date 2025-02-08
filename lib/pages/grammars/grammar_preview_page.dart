@@ -1,7 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
@@ -35,7 +34,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
   double _gap = 16.0;
   double _imageWidth = 480.0;
 
-  List<bool> _checkedItems = [false, false, false]; // 复选框状态
+  final List<bool> _checkedItems = [false, false, false]; // 复选框状态
 
   @override
   Widget build(BuildContext context) {
@@ -69,19 +68,6 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
       bottomNavigationBar: _buildBottomAppBar(),
     );
   }
-
-  _buildBody(BuildContext context) => Row(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-            child: _buildImageContainer(context),
-          ),
-          Expanded(
-            child: _buildRightPanel(context),
-          ),
-        ],
-      );
 
   _buildImageContainer(BuildContext context) => ConstrainedBox(
         constraints: const BoxConstraints(
@@ -170,48 +156,6 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
           children: widget.item.explanations
               .map((e) => ListTile(title: Text(e)))
               .toList(),
-        ),
-      ],
-    );
-  }
-
-  _buildBottomButtons(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Row(
-          children: [
-            const Text('Gap'),
-            Expanded(
-              child: Slider(
-                label: _gap.toStringAsFixed(0),
-                value: _gap,
-                max: 48,
-                min: 8,
-                divisions: 5,
-                onChanged: (value) {
-                  setState(() {
-                    _gap = value;
-                  });
-                },
-              ),
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            ElevatedButton.icon(
-              onPressed: () => _onSaveImage(widget.item.key),
-              icon: const Icon(Icons.save),
-              label: const Text('Save Image'),
-            ),
-            ElevatedButton.icon(
-              icon: const Icon(Icons.abc),
-              label: const Text('Copy Text'),
-              onPressed: () async {},
-            )
-          ],
         ),
       ],
     );
@@ -449,9 +393,9 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
         return StatefulBuilder(
           builder: (BuildContext context, StateSetter setState) {
             return Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius:
-                    const BorderRadius.vertical(top: Radius.circular(16)), // 圆角
+                    BorderRadius.vertical(top: Radius.circular(16)), // 圆角
               ),
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -480,7 +424,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: Text("确定"),
+                    child: const Text("确定"),
                   )
                 ],
               ),

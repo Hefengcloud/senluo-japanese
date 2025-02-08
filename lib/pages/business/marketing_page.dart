@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/common/helpers/url_helper.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/marketing_constants.dart';
 import 'package:senluo_japanese_cms/pages/business/story_brand_framework_page.dart';
@@ -10,19 +9,15 @@ class MarketingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Device.get().isPhone ? _buildBody(context) : _buildContent(context);
-  }
-
-  _buildBody(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Marketing'),
       ),
-      body: _buildContent(context),
+      body: _buildBody(context),
     );
   }
 
-  _buildContent(BuildContext context) {
+  _buildBody(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ListView(
@@ -43,13 +38,11 @@ class MarketingPage extends StatelessWidget {
             title: const Text('The StoryBrand Seven-Part Framework'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
-              if (Device.get().isPhone) {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const StoryBrandFrameworkPage(),
-                  ),
-                );
-              }
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const StoryBrandFrameworkPage(),
+                ),
+              );
             },
           ),
         ],

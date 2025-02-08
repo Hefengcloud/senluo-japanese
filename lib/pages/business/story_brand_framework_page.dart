@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 
 import 'constants/marketing_constants.dart';
 
@@ -16,7 +15,12 @@ class _StoryBrandFrameworkPageState extends State<StoryBrandFrameworkPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Device.get().isPhone ? _buildContent(context) : _buildBody(context);
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('StoryBrand'),
+      ),
+      body: _buildBody(context),
+    );
   }
 
   _buildBody(BuildContext context) => Stepper(
@@ -54,12 +58,5 @@ class _StoryBrandFrameworkPageState extends State<StoryBrandFrameworkPage> {
               ),
             )
             .toList(),
-      );
-
-  _buildContent(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('StoryBrand'),
-        ),
-        body: _buildBody(context),
       );
 }

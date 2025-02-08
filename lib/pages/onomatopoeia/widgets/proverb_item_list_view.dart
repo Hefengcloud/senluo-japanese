@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
@@ -7,34 +6,31 @@ import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
 import '../onomatopoeia_display_page.dart';
 
-class ItemGridView extends StatelessWidget {
+class ProverbItemListView extends StatelessWidget {
   final List<Onomatopoeia> items;
 
-  const ItemGridView({super.key, required this.items});
+  const ProverbItemListView({super.key, required this.items});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: GridView.count(
-        crossAxisCount: 3,
-        childAspectRatio: 4,
-        mainAxisSpacing: 8,
-        crossAxisSpacing: 8,
-        children: items
-            .mapIndexed((index, item) => ItemCardView(index: index, item: item))
-            .toList(),
+      child: ListView.separated(
+        itemBuilder: (BuildContext context, int index) =>
+            _ItemCard(index: index, item: items[index]),
+        separatorBuilder: (BuildContext context, int index) =>
+            const Divider(height: 1),
+        itemCount: items.length,
       ),
     );
   }
 }
 
-class ItemCardView extends StatelessWidget {
+class _ItemCard extends StatelessWidget {
   final int index;
   final Onomatopoeia item;
 
-  const ItemCardView({
-    super.key,
+  const _ItemCard({
     required this.index,
     required this.item,
   });
@@ -42,11 +38,6 @@ class ItemCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      tileColor: kItemBgColor,
-      trailing: Text(
-        (index + 1).toString(),
-        style: const TextStyle(fontSize: 24, color: Colors.grey),
-      ),
       title: AutoSizeText(
         item.name,
         style: const TextStyle(

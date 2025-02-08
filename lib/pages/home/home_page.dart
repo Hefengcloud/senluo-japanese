@@ -1,6 +1,8 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/craftify/craftify_home_page.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_helper.dart';
+import 'package:senluo_japanese_cms/pages/home/helpers/navigation_item.dart';
 import 'package:senluo_japanese_cms/pages/home/views/title_text_view.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,66 +15,71 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  final _navItems = buildNavigationItems();
+  final allEntries = buildNavigationItems();
 
   @override
   Widget build(BuildContext context) {
+    final moreEntries = allEntries.sublist(4);
+
+    final _navItems = List<NavigationItem>.from(allEntries.getRange(0, 4))
+      ..add(
+        NavigationItem(
+          icon: const Icon(Icons.more_horiz_outlined),
+          selectedIcon: const Icon(Icons.more_horiz),
+          label: "更多",
+          page: _NavPage(moreEntries),
+        ),
+      );
     return Scaffold(
-      body: Row(
-        children: <Widget>[
-          NavigationRail(
-            selectedIndex: _selectedIndex,
-            leading: AppTitle(),
-            groupAlignment: -1,
-            labelType: NavigationRailLabelType.all,
-            onDestinationSelected: (int index) {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-            destinations: _navItems
-                .map<NavigationRailDestination>(
-                  (e) => NavigationRailDestination(
-                      icon: e.icon,
-                      selectedIcon: e.selectedIcon,
-                      label: Text(e.label)),
-                )
-                .toList(),
-            trailing: Expanded(
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: IconButton(
-                    icon: const Icon(Icons.text_format),
-                    onPressed: () => _gotoCraftifyPage(context),
-                  ),
-                ),
+      appBar: AppBar(
+        title: AppTitle(),
+      ),
+      body: _navItems[_selectedIndex].page,
+      bottomNavigationBar: NavigationBar(
+        onDestinationSelected: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        selectedIndex: _selectedIndex,
+        destinations: _navItems
+            .map<NavigationDestination>(
+              (e) => NavigationDestination(
+                icon: e.icon,
+                selectedIcon: e.selectedIcon,
+                label: e.label,
               ),
-            ),
-          ),
-          const VerticalDivider(thickness: 1, width: 1),
-          Expanded(
-            child: _buildPanel(_selectedIndex),
-          ),
-        ],
+            )
+            .toList(),
+      ),
+    );
+  }
+}
+
+class _NavPage extends StatelessWidget {
+  final List<NavigationItem> items;
+
+  const _NavPage(this.items);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListView(
+        children: items
+            .map<ListTile>(
+              (e) => ListTile(
+                title: Text(e.label),
+                trailing: const Icon(Icons.arrow_forward_ios),
+                onTap: () => _onNavigate(context, e),
+              ),
+            )
+            .toList(),
       ),
     );
   }
 
-  Widget _buildPanel(int index) {
-    if (index < _navItems.length) {
-      return _navItems[index].page;
-    } else {
-      return Center(child: Text('Invalid index: $index'));
-    }
-  }
-
-  _gotoCraftifyPage(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const CraftifyHomePage(),
-      ),
-    );
+  _onNavigate(BuildContext context, NavigationItem item) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) => item.page));
   }
 }

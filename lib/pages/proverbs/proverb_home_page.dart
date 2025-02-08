@@ -40,60 +40,59 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
     return BlocBuilder<ProverbBloc, ProverbState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: _buildAppBar(context),
-          body: Row(
-            children: [
-              SizedBox(
-                width: kMenuPanelWidth,
-                child: _buildLeftPanel(context, state),
-              ),
-              const VerticalDivider(width: 1),
-              Expanded(
-                child: _buildRightPanel(context, state),
-              ),
-            ],
-          ),
+          appBar: _buildAppBar(),
+          body: _buildBody(state),
+          drawer: state is ProverbLoaded ? _buildDrawer(state) : null,
         );
       },
     );
   }
 
-  _buildRightPanel(BuildContext context, ProverbState state) {
-    if (state is ProverbLoading) {
-      return _buildLoading(context);
-    } else if (state is ProverbLoaded) {
-      return _buildProverbGrid(context, state);
-    }
-  }
-
-  _buildLeftPanel(BuildContext context, ProverbState state) {
-    int? totalCount;
-    var currentKanaLine = KanaLine.none;
-
-    if (state is ProverbLoaded) {
-      totalCount = state.items.length;
-      currentKanaLine = state.currentKanaLine;
-    }
-
-    return ListView(
-      children: [
-        if (totalCount != null) ListTile(title: Text('Total: $totalCount')),
-        const Divider(),
-        ...KanaLine.values.map<ListTile>((line) {
-          return ListTile(
-            trailing: line == currentKanaLine ? const Icon(Icons.check) : null,
-            title: Text("${line != KanaLine.none ? line.name : '全部'} 行"),
-            onTap: () {
-              BlocProvider.of<ProverbBloc>(context)
-                  .add(ProverbFiltered(kanaLine: line));
-            },
-          );
-        }),
-      ],
+  _buildDrawer(ProverbLoaded state) {
+    return Drawer(
+      child: ListView(
+        // Important: Remove any padding from the ListView.
+        padding: EdgeInsets.zero,
+        children: [
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+            ),
+            child: const Text('ことわざ'),
+          ),
+          ...KanaLine.values.map<ListTile>((line) {
+            return ListTile(
+              trailing: line == state.currentKanaLine
+                  ? const Icon(Icons.check)
+                  : null,
+              title: Text("${line != KanaLine.none ? line.name : '全部'} 行"),
+              onTap: () {
+                BlocProvider.of<ProverbBloc>(context)
+                    .add(ProverbFiltered(kanaLine: line));
+                Navigator.of(context).pop();
+              },
+            );
+          }),
+        ],
+      ),
     );
   }
 
-  _buildAppBar(BuildContext context) {
+  _buildBody(ProverbState state) {
+    if (state is ProverbLoading) {
+      return _buildLoading(context);
+    } else if (state is ProverbLoaded) {
+      return _buildProverbList(context, state);
+    }
+  }
+
+  _buildAppBar() {
+    return AppBar(
+      title: const Text("ことわざ"),
+    );
+  }
+
+  _buildSearchAppBar() {
     return AppBar(
       flexibleSpace: Container(
         decoration: BoxDecoration(
@@ -125,15 +124,11 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
     return const Center(child: CircularProgressIndicator());
   }
 
-  _buildProverbGrid(BuildContext context, ProverbLoaded state) {
+  _buildProverbList(BuildContext context, ProverbLoaded state) {
     final bloc = BlocProvider.of<ProverbBloc>(context);
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: GridView.count(
-        crossAxisCount: 3,
-        childAspectRatio: 4,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 8,
+      child: ListView(
         children: state.items
             .mapIndexed<Widget>(
               (index, item) => InkWell(

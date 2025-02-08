@@ -17,8 +17,7 @@ class KanjiBloc extends Bloc<KanjiEvent, KanjiState> {
   }
 
   _onStarted(KanjiStarted event, Emitter<KanjiState> emit) async {
-    final kanjis = await kanjiRepository.loadJlptKanjis(JLPTLevel.n1);
-    emit(KanjiLoaded(kanjis: kanjis, jlptLevel: JLPTLevel.n1));
+    emit(const KanjiLoaded(kanjis: [], jlptLevel: JLPTLevel.none));
   }
 
   _onLevelChanged(KanjiLevelChanged event, Emitter<KanjiState> emit) async {

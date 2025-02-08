@@ -18,18 +18,19 @@ class KanaTableYoonView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: kanaRows
-            .map<Row>(
+            .map(
               (row) => Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: row
                     .map(
-                      (kana) => Card(
-                        child: InkWell(
-                          child: KanaPieceView(kana: kana),
-                          onTap: () => onKanaTap(kana),
+                      (kana) => Expanded(
+                        child: Card(
+                          child: InkWell(
+                            child: KanaPieceView(kana: kana),
+                            onTap: () => onKanaTap(kana),
+                          ),
                         ),
                       ),
                     )
