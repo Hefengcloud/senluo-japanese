@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
-import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_grid_view.dart';
+import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_word_list_page.dart';
 
-import '../../common/models/word.dart';
 import '../../repos/vocabulary/models/vocabulary_menu.dart';
 import '../../repos/vocabulary/vocabulary_repository.dart';
 import 'bloc/vocabulary_bloc.dart';
@@ -14,29 +12,32 @@ class VocabularyCategoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<VocabularyBloc, VocabularyState>(
+    return BlocConsumer<VocabularyBloc, VocabularyState>(
       builder: (context, state) {
         if (state is VocabularyLoading) {
           return const Center(child: CircularProgressIndicator());
         } else if (state is VocabularyLoaded) {
           final menus = state.type2Menus[VocabularyType.category];
-          return Row(
-            children: [
-              SizedBox(
-                width: kMenuPanelWidth,
-                child: VocabularyMenuListView(
-                  menus: menus ?? [],
-                  onMenuClicked: (menu, subMenu) =>
-                      _onMenuClicked(context, menu, subMenu),
-                ),
-              ),
-              Expanded(
-                child: _buildRightPanel(state.wordList),
-              ),
-            ],
+          return VocabularyMenuListView(
+            menus: menus ?? [],
+            onMenuClicked: (menu, subMenu) =>
+                _onMenuClicked(context, menu, subMenu),
           );
         } else {
           return const Text('Error');
+        }
+      },
+      listener: (BuildContext context, VocabularyState state) {
+        if (state is VocabularyLoaded) {
+          if (state.wordList.isNotEmpty) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => VocabularyWordListPage(
+                  wordList: state.wordList,
+                ),
+              ),
+            );
+          }
         }
       },
     );
@@ -50,9 +51,5 @@ class VocabularyCategoryPage extends StatelessWidget {
     final key = "category/${menu.key}/${subMenu.key}";
     BlocProvider.of<VocabularyBloc>(context)
         .add(VocabularyWordListStarted(key: key));
-  }
-
-  _buildRightPanel(List<Word> wordList) {
-    return VocabularyGridView(wordList: wordList);
   }
 }

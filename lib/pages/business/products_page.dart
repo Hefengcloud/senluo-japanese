@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/product_constants.dart';
 
 class ProductsPage extends StatelessWidget {
@@ -7,10 +6,6 @@ class ProductsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Device.get().isPhone ? _buildContent(context) : _buildBody(context);
-  }
-
-  _buildContent(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Products'),

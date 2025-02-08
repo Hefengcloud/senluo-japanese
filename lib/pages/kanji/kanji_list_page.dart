@@ -1,11 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
-import 'package:senluo_japanese_cms/common/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/kanji/constants/styles.dart';
-import 'package:senluo_japanese_cms/pages/kanji/kanji_preview_page.dart';
 
-import '../../../repos/kanji/models/kanji_model.dart';
+import '../../common/constants/colors.dart';
+import '../../common/constants/constants.dart';
+import '../../repos/kanji/models/kanji_model.dart';
+import 'constants/styles.dart';
+import 'kanji_preview_page.dart';
+
+class KanjiListPage extends StatefulWidget {
+  final List<Kanji> kanjis;
+
+  const KanjiListPage({super.key, required this.kanjis});
+
+  @override
+  State<KanjiListPage> createState() => _KanjiListPageState();
+}
+
+class _KanjiListPageState extends State<KanjiListPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Kanjis'),
+      ),
+      body: KanjiGridView(kanjis: widget.kanjis),
+    );
+  }
+}
 
 class KanjiGridView extends StatelessWidget {
   final List<Kanji> kanjis;
@@ -14,7 +35,7 @@ class KanjiGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 8,
+      crossAxisCount: 5,
       children: kanjis
           .map<Widget>((kanji) => _buildKanjiCard(context, kanji))
           .toList(),

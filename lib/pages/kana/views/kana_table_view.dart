@@ -8,17 +8,28 @@ import '../../../repos/gojuon/models/models.dart';
 
 typedef KanaTapCallback = void Function(Kana kana);
 
-const kColumnLabels = ['', 'a', 'i', 'u', 'e', 'o'];
-const kKanaYoonColumnLabels = ['', 'a', 'u', 'o'];
+const kColumnLabels = ['', '-a', '-i', '-u', '-e', '-o'];
 
 const kCategory2RowLabels = {
-  KanaCategory.seion: ['-', 'k', 's', 't', 'n', 'h', 'm', 'y', 'r', 'w', 'N'],
+  KanaCategory.seion: [
+    '-',
+    'k-',
+    's-',
+    't-',
+    'n-',
+    'h-',
+    'm-',
+    'y-',
+    'r-',
+    'w-',
+    'N-'
+  ],
   KanaCategory.dakuon: [
-    'g',
-    'z',
-    'd',
-    'b',
-    'p',
+    'g-',
+    'z-',
+    'd-',
+    'b-',
+    'p-',
   ],
 };
 
@@ -37,8 +48,7 @@ const kKanaYoonRowLabels = {
 };
 
 const kKanaLabelStyle = TextStyle(
-  fontSize: 16,
-  fontWeight: FontWeight.bold,
+  fontSize: 14,
   color: Colors.black26,
 );
 

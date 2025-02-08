@@ -6,21 +6,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/bloc/preview_bloc.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/views/vocabulary_preview_view.dart';
 
-import '../../../common/models/word.dart';
-import '../../../common/constants/colors.dart';
-import '../../kanji/constants/styles.dart';
-import '../bloc/vocabulary_bloc.dart';
+import '../../common/models/word.dart';
+import '../../common/constants/colors.dart';
+import '../kanji/constants/styles.dart';
 
-class VocabularyGridView extends StatefulWidget {
+class VocabularyWordListPage extends StatefulWidget {
   final List<Word> wordList;
 
-  const VocabularyGridView({super.key, required this.wordList});
+  const VocabularyWordListPage({super.key, required this.wordList});
 
   @override
-  State<VocabularyGridView> createState() => _VocabularyGridViewState();
+  State<VocabularyWordListPage> createState() => _VocabularyWordListPageState();
 }
 
-class _VocabularyGridViewState extends State<VocabularyGridView> {
+class _VocabularyWordListPageState extends State<VocabularyWordListPage> {
   static final _kGroupColors = [
     Colors.red[50],
     Colors.orange[50],
@@ -37,58 +36,55 @@ class _VocabularyGridViewState extends State<VocabularyGridView> {
   Widget build(BuildContext context) {
     final groupKeys =
         groupBy(widget.wordList, (word) => word.category).keys.toList();
-    return BlocListener<VocabularyBloc, VocabularyState>(
-      listenWhen: (previous, current) => previous != current,
-      listener: (context, state) {
-        setState(() {
-          _selectedGroupKeys = [];
-        });
-      },
-      child: _buildBody(groupKeys),
-    );
+    return _buildContent(groupKeys);
   }
 
-  Stack _buildBody(List<String> groupKeys) {
-    return Stack(
-      children: [
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 16, bottom: 8),
-              child: _buildTopFilter(groupKeys.toList()),
-            ),
-            Expanded(
-              child: GridView.count(
-                crossAxisCount: 6,
-                childAspectRatio: 2,
-                children: _selectedGroupKeys.isNotEmpty
-                    ? widget.wordList
-                        .where((word) =>
-                            _selectedGroupKeys.contains(word.category))
-                        .map<Widget>((word) => _buildWordCard(
-                              word,
-                              _kGroupColors[groupKeys.indexOf(word.category)]!,
-                            ))
-                        .toList()
-                    : widget.wordList
-                        .map<Widget>((word) => _buildWordCard(
-                              word,
-                              _kGroupColors[groupKeys.indexOf(word.category)]!,
-                            ))
-                        .toList(),
+  _buildContent(List<String> groupKeys) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Words'),
+      ),
+      body: Stack(
+        children: [
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildTopFilter(groupKeys.toList()),
+              Expanded(
+                child: GridView.count(
+                  crossAxisCount: 3,
+                  childAspectRatio: 1,
+                  children: _selectedGroupKeys.isNotEmpty
+                      ? widget.wordList
+                          .where((word) =>
+                              _selectedGroupKeys.contains(word.category))
+                          .map<Widget>((word) => _buildWordCard(
+                                word,
+                                _kGroupColors[
+                                    groupKeys.indexOf(word.category)]!,
+                              ))
+                          .toList()
+                      : widget.wordList
+                          .map<Widget>((word) => _buildWordCard(
+                                word,
+                                _kGroupColors[
+                                    groupKeys.indexOf(word.category)]!,
+                              ))
+                          .toList(),
+                ),
               ),
-            ),
-          ],
-        ),
-        Positioned.fill(
-          bottom: 32,
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: _buildBottomActions(),
+            ],
           ),
-        ),
-      ],
+          Positioned.fill(
+            bottom: 32,
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: _buildBottomActions(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 

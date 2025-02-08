@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/pages/business/cashflow_page.dart';
 import 'package:senluo_japanese_cms/pages/business/leadership_page.dart';
 import 'package:senluo_japanese_cms/pages/business/marketing_page.dart';
@@ -7,7 +6,6 @@ import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart'
 import 'package:senluo_japanese_cms/pages/business/products_page.dart';
 import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
 
-import '../../common/constants/constants.dart';
 import 'constants/business_constants.dart';
 
 typedef BizPartTapCallback = void Function(BusinessPart part);
@@ -20,27 +18,9 @@ class BusinessPage extends StatefulWidget {
 }
 
 class _BusinessPageState extends State<BusinessPage> {
-  BusinessPart _thePart = BusinessPart.leadership;
-
   @override
   Widget build(BuildContext context) {
-    return Device.get().isPhone ? _buildMobileBody() : _buildBody();
-  }
-
-  Widget _buildBody() {
-    return Row(
-      children: [
-        SizedBox(
-          width: kMenuPanelWidth,
-          child: _buildMenuList(
-            (part) => setState(() {
-              _thePart = part;
-            }),
-          ),
-        ),
-        Expanded(child: _buildDestPage(_thePart)),
-      ],
-    );
+    return _buildMobileBody();
   }
 
   Widget _buildMenuList(BizPartTapCallback callback) {

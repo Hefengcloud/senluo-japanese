@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/business_constants.dart';
 
 class LeadershipPage extends StatelessWidget {
@@ -7,21 +6,15 @@ class LeadershipPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Device.get().isPhone
-        ? _buildMobileBody(context)
-        : _buildContent(context);
-  }
-
-  _buildMobileBody(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Leadership'),
       ),
-      body: _buildContent(context),
+      body: _buildBody(context),
     );
   }
 
-  _buildContent(BuildContext context) {
+  _buildBody(BuildContext context) {
     return ListView(
       children: [
         _buildTextPanel(

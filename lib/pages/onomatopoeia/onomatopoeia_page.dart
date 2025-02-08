@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/item_grid_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/proverb_item_list_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
 import 'bloc/onomatopoeia_bloc.dart';
@@ -22,47 +22,33 @@ class _OnomatopoeiaHomePageState extends State<OnomatopoeiaHomePage> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(title: const Text('オノマトペ')),
-          body: _buildBody(context, state),
+          drawer: state is OnomatopoeiaLoaded ? _buildDrawer(state) : null,
+          body: _buildBody(state),
         );
       },
     );
   }
 
-  _buildBody(BuildContext context, OnomatopoeiaState state) {
-    return Row(
-      children: [
-        SizedBox(
-          width: 200,
-          child: _buildLeftPanel(context, state),
-        ),
-        const VerticalDivider(width: 1.0),
-        Expanded(
-          child: _buildRightPanel(context, state),
-        ),
-      ],
+  _buildDrawer(OnomatopoeiaLoaded state) {
+    return Drawer(
+      child: CategoryListView(
+        categories: state.categories,
+        total: state.items.length,
+        onCategoryClicked: (category) {
+          BlocProvider.of<OnomatopoeiaBloc>(context)
+              .add(OnomatopoeiaFiltered(category: category));
+          Navigator.of(context).pop();
+        },
+        selectedCategory: state.currentCategory,
+      ),
     );
   }
 
-  _buildLeftPanel(BuildContext context, OnomatopoeiaState state) {
+  _buildBody(OnomatopoeiaState state) {
     if (state is OnomatopoeiaLoading) {
       return const Center(child: CircularProgressIndicator());
     } else if (state is OnomatopoeiaLoaded) {
-      final bloc = BlocProvider.of<OnomatopoeiaBloc>(context);
-      return CategoryListView(
-        categories: state.categories,
-        total: state.items.length,
-        onCategoryClicked: (category) =>
-            bloc.add(OnomatopoeiaFiltered(category: category)),
-        selectedCategory: state.currentCategory,
-      );
-    }
-  }
-
-  _buildRightPanel(BuildContext context, OnomatopoeiaState state) {
-    if (state is OnomatopoeiaLoading) {
-      return const Center(child: CircularProgressIndicator());
-    } else if (state is OnomatopoeiaLoaded) {
-      return ItemGridView(items: state.items);
+      return ProverbItemListView(items: state.items);
     }
   }
 }

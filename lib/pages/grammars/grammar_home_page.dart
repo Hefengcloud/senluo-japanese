@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/views/grammar_menu_list_view.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
@@ -44,15 +42,12 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
         return _buildBody(context, state);
       },
       listener: (BuildContext context, GrammarState state) {
-        if (Device.get().isPhone) {
-          if (state is GrammarLoaded &&
-              state.currentItem != GrammarItem.empty) {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => GrammarPreviewView(item: state.currentItem),
-              ),
-            );
-          }
+        if (state is GrammarLoaded && state.currentItem != GrammarItem.empty) {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => GrammarPreviewView(item: state.currentItem),
+            ),
+          );
         }
       },
     );
@@ -62,20 +57,7 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
     return switch (state) {
       GrammarLoading() => const CircularProgressIndicator(),
       GrammarError() => const Text('Something went wrong!'),
-      GrammarLoaded() => Device.get().isPhone
-          ? _buildMenu(context, state.entryMap)
-          : Row(
-              children: [
-                SizedBox(
-                  width: kMenuPanelWidth,
-                  child: _buildMenu(context, state.entryMap),
-                ),
-                if (state.currentItem != GrammarItem.empty)
-                  Expanded(
-                    child: GrammarPreviewView(item: state.currentItem),
-                  ),
-              ],
-            ),
+      GrammarLoaded() => _buildMenu(context, state.entryMap)
     };
   }
 
