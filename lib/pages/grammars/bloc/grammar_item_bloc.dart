@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:senluo_japanese_cms/common/models/models.dart';
 import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
-import 'package:senluo_japanese_cms/repos/grammars/models/grammar_entry.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
 part 'grammar_item_event.dart';
@@ -16,14 +15,12 @@ class GrammarItemBloc extends Bloc<GrammarItemEvent, GrammarItemState> {
   }
 
   _onStarted(GrammarItemStarted event, Emitter<GrammarItemState> emit) async {
-    final item = await repo.loadItem(event.entry);
+    final item = event.item;
+
     final displayedItem = item.copyWith(
-      examples: List.from(item.examples.take(2)),
+      examples: List.from(item.examples.take(3)),
     );
-    emit(GrammarItemLoaded(
-      item: item,
-      displayedItem: displayedItem,
-    ));
+    emit(GrammarItemLoaded(item: item, displayedItem: displayedItem));
   }
 
   _onExampleSelected(

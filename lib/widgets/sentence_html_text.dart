@@ -7,11 +7,8 @@ class SentenceHtmlText extends StatelessWidget {
   final String translated;
 
   final Color emphasizedColor;
-  final TextStyle mainStyle;
 
-  static const _kDefaultMainStyle = TextStyle(
-    fontSize: 14,
-  );
+  final double fontSize;
 
   const SentenceHtmlText({
     super.key,
@@ -19,7 +16,7 @@ class SentenceHtmlText extends StatelessWidget {
     required this.formated,
     required this.translated,
     required this.emphasizedColor,
-    this.mainStyle = _kDefaultMainStyle,
+    this.fontSize = 14.0,
   });
 
   @override
@@ -50,7 +47,7 @@ class SentenceHtmlText extends StatelessWidget {
         ],
         style: {
           "*": Style(
-            fontSize: FontSize(12.0),
+            fontSize: FontSize(fontSize),
           ),
           "span.bold": Style(
             color: emphasizedColor,
@@ -58,11 +55,9 @@ class SentenceHtmlText extends StatelessWidget {
           ),
           ".translated": Style(
             color: Colors.black54,
-            fontSize: FontSize(10),
           ),
           "rt": Style(
             color: Colors.black54,
-            fontSize: FontSize(8),
           ),
           "rt.fake": Style(
             color: Colors.transparent,

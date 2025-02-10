@@ -8,12 +8,12 @@ sealed class GrammarItemEvent extends Equatable {
 }
 
 final class GrammarItemStarted extends GrammarItemEvent {
-  final GrammarEntry entry;
+  final GrammarItem item;
 
-  const GrammarItemStarted({required this.entry});
+  const GrammarItemStarted({required this.item});
 
   @override
-  List<Object> get props => [entry];
+  List<Object> get props => [item];
 }
 
 final class GrammarExampleSelected extends GrammarItemEvent {

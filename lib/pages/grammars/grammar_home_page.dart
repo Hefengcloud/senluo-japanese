@@ -45,7 +45,11 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
         if (state is GrammarLoaded && state.currentItem != GrammarItem.empty) {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (_) => GrammarDetailsPage(item: state.currentItem),
+              builder: (_) => RepositoryProvider(
+                create: (BuildContext context) =>
+                    BlocProvider.of<GrammarBloc>(context).grammarRepository,
+                child: GrammarDetailsPage(item: state.currentItem),
+              ),
             ),
           );
         }
