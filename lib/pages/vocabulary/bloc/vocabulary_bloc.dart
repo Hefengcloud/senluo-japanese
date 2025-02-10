@@ -24,7 +24,11 @@ class VocabularyBloc extends Bloc<VocabularyEvent, VocabularyState> {
     final type2Menus = {
       VocabularyType.category: menus,
     };
-    emit(VocabularyLoaded(type2Menus: type2Menus, wordList: const []));
+    emit(VocabularyLoaded(
+      type2Menus: type2Menus,
+      wordList: const [],
+      currentPath: '',
+    ));
   }
 
   _onWordListStarted(
@@ -34,10 +38,13 @@ class VocabularyBloc extends Bloc<VocabularyEvent, VocabularyState> {
     final theState = state as VocabularyLoaded;
     try {
       final words = await repo.loadWords(event.key);
-      emit(VocabularyLoaded(
-        type2Menus: theState.type2Menus,
-        wordList: words,
-      ));
+      emit(
+        VocabularyLoaded(
+          type2Menus: theState.type2Menus,
+          wordList: words,
+          currentPath: event.key,
+        ),
+      );
       // ignore: empty_catches
     } catch (e) {}
   }

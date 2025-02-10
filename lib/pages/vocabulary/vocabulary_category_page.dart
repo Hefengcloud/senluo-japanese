@@ -33,6 +33,7 @@ class VocabularyCategoryPage extends StatelessWidget {
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (_) => VocabularyWordListPage(
+                  title: state.getCurrentMenu().name,
                   wordList: state.wordList,
                 ),
               ),

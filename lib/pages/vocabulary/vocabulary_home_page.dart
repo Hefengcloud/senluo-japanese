@@ -38,9 +38,7 @@ class _VocabularyHomePageState extends State<VocabularyHomePage>
         TabBar(
           tabs: VocabularyType.values
               .map<Tab>(
-                (e) => Tab(
-                  text: e.text,
-                ),
+                (e) => Tab(text: e.text),
               )
               .toList(),
           controller: _tabController,
