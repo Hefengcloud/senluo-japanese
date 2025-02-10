@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
+import 'package:senluo_japanese_cms/pages/grammars/views/grammar_share_view.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/constants.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/example_sentence_text.dart';
@@ -21,10 +22,10 @@ class GrammarDetailsPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         elevation: null,
-        child: const Icon(Icons.play_arrow),
+        child: const Icon(Icons.card_membership),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endContained,
-      bottomNavigationBar: _buildBottomAppBar(),
+      bottomNavigationBar: _buildBottomAppBar(context),
     );
   }
 
@@ -42,11 +43,24 @@ class GrammarDetailsPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
             ),
+            const Gap(8),
             _Subtitle(text: "意味", level: item.level),
-            Text("🇯🇵 ${item.meaning.jp}"),
-            Text("🇨🇳 ${item.meaning.zh}"),
-            Text("🇬🇧 ${item.meaning.en}"),
-            const Gap(16),
+            if (item.meaning.jp.isNotEmpty) Text("🇯🇵 ${item.meaning.jp}"),
+            if (item.meaning.zh.isNotEmpty) Text("🇨🇳 ${item.meaning.zh}"),
+            if (item.meaning.en.isNotEmpty) Text("🇬🇧 ${item.meaning.en}"),
+            _Subtitle(text: "接続", level: item.level),
+            ...item.conjugations.map(
+              (c) => Text(c),
+            ),
+            const Gap(8),
+            if (item.explanations.isNotEmpty) ...[
+              _Subtitle(text: "備考", level: item.level),
+              if (item.explanations.isNotEmpty)
+                ...item.explanations.map(
+                  (e) => Text(e),
+                ),
+              const Gap(8),
+            ],
             _Subtitle(text: "例文", level: item.level),
             ...item.examples.map(
               (e) => ExampleSentenceText(
@@ -63,31 +77,30 @@ class GrammarDetailsPage extends StatelessWidget {
     );
   }
 
-  _buildBottomAppBar() {
+  _buildBottomAppBar(BuildContext context) {
     return BottomAppBar(
       child: Row(
         children: <Widget>[
           IconButton(
-            tooltip: 'Save as image',
-            icon: const Icon(Icons.image_outlined),
-            onPressed: () {},
+            tooltip: 'Share',
+            icon: const Icon(Icons.share_outlined),
+            onPressed: () => _onShare(context),
           ),
           IconButton(
             tooltip: 'Copy Text',
             icon: const Icon(Icons.copy),
             onPressed: () {},
           ),
-          IconButton(
-            tooltip: 'Choose examples',
-            icon: const Icon(Icons.list),
-            onPressed: () {},
-          ),
-          IconButton(
-            tooltip: 'Layout settings',
-            icon: const Icon(Icons.settings_outlined),
-            onPressed: () {},
-          ),
         ],
+      ),
+    );
+  }
+
+  _onShare(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => Dialog(
+        child: GrammarShareView(item: item),
       ),
     );
   }

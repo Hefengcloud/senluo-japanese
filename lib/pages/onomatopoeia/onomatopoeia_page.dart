@@ -22,7 +22,7 @@ class _OnomatopoeiaHomePageState extends State<OnomatopoeiaHomePage> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(title: const Text('オノマトペ')),
-          drawer: state is OnomatopoeiaLoaded ? _buildDrawer(state) : null,
+          endDrawer: state is OnomatopoeiaLoaded ? _buildDrawer(state) : null,
           body: _buildBody(state),
         );
       },

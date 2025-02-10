@@ -49,15 +49,20 @@ class SentenceHtmlText extends StatelessWidget {
           ),
         ],
         style: {
+          "*": Style(
+            fontSize: FontSize(12.0),
+          ),
           "span.bold": Style(
             color: emphasizedColor,
             fontWeight: FontWeight.bold,
           ),
           ".translated": Style(
             color: Colors.black54,
+            fontSize: FontSize(10),
           ),
           "rt": Style(
             color: Colors.black54,
+            fontSize: FontSize(8),
           ),
           "rt.fake": Style(
             color: Colors.transparent,

@@ -42,7 +42,7 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
         return Scaffold(
           appBar: _buildAppBar(),
           body: _buildBody(state),
-          drawer: state is ProverbLoaded ? _buildDrawer(state) : null,
+          endDrawer: state is ProverbLoaded ? _buildDrawer(state) : null,
         );
       },
     );
