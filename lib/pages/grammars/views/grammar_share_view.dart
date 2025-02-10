@@ -4,145 +4,53 @@ import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
-import 'package:senluo_japanese_cms/common/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/grammars/constants/texts.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
-import '../../common/constants/colors.dart';
-import '../../common/helpers/image_helper.dart';
-import '../../common/models/models.dart';
-import '../../widgets/sentence_html_text.dart';
+import '../../../common/constants/colors.dart';
+import '../../../common/helpers/image_helper.dart';
+import '../../../common/models/models.dart';
+import '../../../widgets/sentence_html_text.dart';
 
-class GrammarPreviewView extends StatefulWidget {
+class GrammarShareView extends StatefulWidget {
   final GrammarItem item;
 
-  const GrammarPreviewView({super.key, required this.item});
+  const GrammarShareView({super.key, required this.item});
 
   @override
-  State<GrammarPreviewView> createState() => _GrammarPreviewViewState();
+  State<GrammarShareView> createState() => _GrammarShareViewState();
 }
 
-class _GrammarPreviewViewState extends State<GrammarPreviewView> {
+class _GrammarShareViewState extends State<GrammarShareView> {
   final GlobalKey _globalKey = GlobalKey();
 
   late List<Example> _examples;
 
-  double _gap = 16.0;
-  double _imageWidth = 480.0;
+  double _dividerGap = 0.0; // 分割线高度
 
   final List<bool> _checkedItems = [false, false, false]; // 复选框状态
 
   @override
   Widget build(BuildContext context) {
     _examples = widget.item.examples;
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.item.name),
-      ),
-      body: Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.all(8.0),
-        child: _buildImageContainer(context),
-      ),
-    );
+    return _buildImageContainer(context);
   }
 
   _buildImageContainer(BuildContext context) => ConstrainedBox(
         constraints: const BoxConstraints(
           maxWidth: 480,
         ),
-        child: _buildImage(widget.item),
-      );
-
-  _buildRightPanel(BuildContext context) {
-    return ListView(
-      children: [
-        ExpansionTile(
-          title: const Text(kTitleSettings),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            const Row(
-              children: [
-                Text('Aspect Ratio: 4/3'),
-              ],
-            ),
-            Row(
-              children: [
-                const Text('Image Width'),
-                Slider(
-                  min: 360,
-                  max: 720,
-                  divisions: 36,
-                  value: _imageWidth,
-                  onChanged: (value) {
-                    setState(() {
-                      _imageWidth = value;
-                    });
-                  },
-                ),
-                Text("$_imageWidth"),
-              ],
-            ),
+            _buildImage(widget.item),
+            _buildBottomActions(context),
           ],
         ),
-        ExpansionTile(
-          initiallyExpanded: true,
-          title: const Text(kTitleExample),
-          children: _examples
-              .map<ListTile>(
-                (e) => ListTile(
-                    title: Text(e.jp),
-                    subtitle: Text(e.zh),
-                    leading: widget.item.examples.contains(e)
-                        ? const Icon(Icons.check)
-                        : null,
-                    onTap: () {
-                      if (_examples.contains(e)) {
-                        _examples.remove(e);
-                      } else {
-                        _examples.add(e);
-                      }
-                    }),
-              )
-              .toList(),
-        ),
-        ExpansionTile(
-          title: const Text(kTitleJpMeaning),
-          children: widget.item.meaning.jps
-              .map((e) => ListTile(title: Text(e)))
-              .toList(),
-        ),
-        ExpansionTile(
-          title: const Text(kTitleZhMeaning),
-          children: widget.item.meaning.zhs
-              .map((e) => ListTile(title: Text(e)))
-              .toList(),
-        ),
-        ExpansionTile(
-          title: const Text(kTitleEnMeaning),
-          children: widget.item.meaning.ens
-              .map((e) => ListTile(title: Text(e)))
-              .toList(),
-        ),
-        ExpansionTile(
-          title: const Text(kTitleConjugations),
-          children: widget.item.conjugations
-              .map((e) => ListTile(title: Text(e)))
-              .toList(),
-        ),
-        ExpansionTile(
-          title: const Text(kTitleExplanation),
-          children: widget.item.explanations
-              .map((e) => ListTile(title: Text(e)))
-              .toList(),
-        ),
-      ],
-    );
-  }
+      );
 
   RepaintBoundary _buildImage(GrammarItem item) {
     return RepaintBoundary(
@@ -150,7 +58,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
       child: AspectRatio(
         aspectRatio: 3 / 4,
         child: Container(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(8),
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/grammar-bg.png'),
@@ -162,22 +70,14 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
             child: Column(
               children: [
                 _buildTopLogo(item),
-                const Gap(8),
+                const Gap(4),
                 _buildItemName(item.name, item.level),
                 _buildJpMeaning(item),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: _gap,
-                  ),
-                  child: _buildZhMeaning(item),
-                ),
+                const Gap(4),
+                _buildZhMeaning(item),
+                const Gap(4),
                 _buildConjugation(item),
-                Gap(_gap),
-                const Divider(
-                  height: 0.5,
-                  color: Colors.black12,
-                ),
-                const Gap(16),
+                _buildDivider(context),
                 Expanded(child: _buildExampleList(item)),
               ],
             ),
@@ -187,14 +87,27 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
     );
   }
 
+  _buildDivider(BuildContext context) => Container(
+        width: 48,
+        margin: EdgeInsets.only(
+          top: 8 + _dividerGap,
+          bottom: _dividerGap,
+        ),
+        child: const Divider(
+          height: 0.5,
+          color: Colors.black12,
+        ),
+      );
+
   Widget _buildZhMeaning(GrammarItem item) {
     return AutoSizeText(
       item.meaning.zhs.join('；'),
       style: TextStyle(
         color: kLevel2color[item.level],
-        fontSize: 16.0,
+        fontSize: 10,
       ),
       textAlign: TextAlign.center,
+      maxFontSize: 12,
       maxLines: 1,
     );
   }
@@ -204,10 +117,10 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
       item.meaning.jps.join('\n'),
       textAlign: TextAlign.center,
       style: const TextStyle(
-        fontSize: 14,
+        fontSize: 10,
         color: kBrandColor,
       ),
-      maxFontSize: 16,
+      maxFontSize: 12,
     );
   }
 
@@ -218,7 +131,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
       maxLines: nameParts.length,
       style: GoogleFonts.getFont(
         'Klee One',
-        fontSize: 60 - (nameParts.length - 1) * 8,
+        fontSize: 48 - (nameParts.length - 1) * 8,
         fontWeight: FontWeight.bold,
         color: kLevel2color[level],
       ),
@@ -228,8 +141,8 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
   Container _buildConjugation(GrammarItem item) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        horizontal: 16.0,
-        vertical: 8.0,
+        horizontal: 8.0,
+        vertical: 4.0,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
@@ -250,7 +163,7 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
     const style = TextStyle(
       color: Colors.white,
       fontVariations: [FontVariation.weight(700)],
-      fontSize: 14,
+      fontSize: 12,
     );
 
     if (match != null) {
@@ -283,9 +196,9 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
         Container(
           decoration: BoxDecoration(
             color: kLevel2color[item.level],
-            borderRadius: const BorderRadius.all(Radius.circular(16)),
+            borderRadius: const BorderRadius.all(Radius.circular(8)),
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
           child: Text(
             'JLPT ${item.level.name.toUpperCase()}',
             style: GoogleFonts.getFont(
@@ -304,30 +217,18 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
 
   _buildExampleList(GrammarItem item) {
     return InkWell(
-      onLongPress: () {
-        _showExampleList();
-      },
-      child: ListView.separated(
+      onLongPress: () => _onSelectExamples(context),
+      child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
           final e = item.examples[index];
-          return ListTile(
-            contentPadding: EdgeInsets.zero,
-            minVerticalPadding: 0,
-            title: SentenceHtmlText(
-              original: e.jp,
-              formated: e.jp1,
-              translated: e.zh,
-              emphasizedColor: kLevel2color[item.level]!,
-            ),
+          return SentenceHtmlText(
+            original: e.jp,
+            formated: e.jp1,
+            translated: e.zh,
+            emphasizedColor: kLevel2color[item.level]!,
           );
         },
         itemCount: item.examples.length,
-        separatorBuilder: (BuildContext context, int index) {
-          return Divider(
-            height: 1,
-            color: Colors.grey[50],
-          );
-        },
       ),
     );
   }
@@ -344,32 +245,33 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
         .showSnackBar(const SnackBar(content: Text('Copied')));
   }
 
-  _showExampleList() {
+  _onSetLayout() {
     showModalBottomSheet(
       context: context,
-      builder: (BuildContext context) {
-        return Container(
-          height: 200,
-          color: Colors.amber,
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                const Text('Modal BottomSheet'),
-                ElevatedButton(
-                  child: const Text('Close BottomSheet'),
-                  onPressed: () => Navigator.pop(context),
+      builder: (context) {
+        return Column(
+          children: [
+            Row(
+              children: [
+                const Text('Divider Height:'),
+                Slider(
+                  value: _dividerGap,
+                  min: 0,
+                  max: 10,
+                  divisions: 10,
+                  onChanged: (value) => setState(() {
+                    _dividerGap = value;
+                  }),
                 ),
               ],
-            ),
-          ),
+            )
+          ],
         );
       },
     );
   }
 
-  void _showExamples(BuildContext context) {
+  void _onSelectExamples(BuildContext context) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -387,14 +289,17 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
                   const Text(
                     "选择例句",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   const Divider(),
                   ..._examples.map<CheckboxListTile>(
                     (e) => CheckboxListTile(
-                      title: Text(e.jp),
+                      title: Text(
+                        e.jp,
+                        style: const TextStyle(fontSize: 12),
+                      ),
                       onChanged: (bool? value) {
                         setState(() {
                           _checkedItems[0] = value!;
@@ -403,18 +308,40 @@ class _GrammarPreviewViewState extends State<GrammarPreviewView> {
                       value: true,
                     ),
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text("确定"),
-                  )
                 ],
               ),
             );
           },
         );
       },
+    );
+  }
+
+  _buildBottomActions(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        IconButton(
+          tooltip: 'Show examples',
+          icon: const Icon(Icons.list_outlined),
+          onPressed: () => _onSelectExamples(context),
+        ),
+        IconButton(
+          tooltip: 'Set layout',
+          icon: const Icon(Icons.margin_outlined),
+          onPressed: () => _onSetLayout(),
+        ),
+        IconButton(
+          tooltip: 'Save image',
+          icon: const Icon(Icons.save_outlined),
+          onPressed: () => _onSelectExamples(context),
+        ),
+        IconButton(
+          tooltip: 'Copy Text',
+          icon: const Icon(Icons.copy_outlined),
+          onPressed: _onCopyText,
+        ),
+      ],
     );
   }
 }
