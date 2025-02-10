@@ -13,6 +13,8 @@ final class GrammarItemLoaded extends GrammarItemState {
   final GrammarItem item;
   final GrammarItem displayedItem;
 
+  bool isExampleDisplayed(Example e) => displayedItem.examples.contains(e);
+
   const GrammarItemLoaded({
     required this.item,
     required this.displayedItem,

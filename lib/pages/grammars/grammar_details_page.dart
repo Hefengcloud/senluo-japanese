@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
+import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
-import 'package:senluo_japanese_cms/pages/grammars/views/grammar_share_view.dart';
+import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/constants.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/example_sentence_text.dart';
@@ -19,12 +21,6 @@ class GrammarDetailsPage extends StatelessWidget {
         title: Text("JLPT ${item.level.name.toUpperCase()} 文法"),
       ),
       body: _buildBody(context),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        elevation: null,
-        child: const Icon(Icons.card_membership),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endContained,
       bottomNavigationBar: _buildBottomAppBar(context),
     );
   }
@@ -79,31 +75,51 @@ class GrammarDetailsPage extends StatelessWidget {
 
   _buildBottomAppBar(BuildContext context) {
     return BottomAppBar(
+      shape: const CircularNotchedRectangle(),
       child: Row(
         children: <Widget>[
           IconButton(
-            tooltip: 'Share',
-            icon: const Icon(Icons.share_outlined),
-            onPressed: () => _onShare(context),
+            tooltip: 'Previous',
+            icon: const Icon(Icons.arrow_back_outlined),
+            onPressed: () {},
           ),
           IconButton(
-            tooltip: 'Copy Text',
-            icon: const Icon(Icons.copy),
+            tooltip: 'Next',
+            icon: const Icon(Icons.arrow_forward_outlined),
             onPressed: () {},
+          ),
+          const Spacer(),
+          IconButton(
+            icon: const Icon(Icons.animation_outlined),
+            onPressed: () {
+              _onGenerateAnimation(context);
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.image_outlined),
+            onPressed: () {
+              _onGenerateImage(context);
+            },
           ),
         ],
       ),
     );
   }
 
-  _onShare(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) => Dialog(
-        child: GrammarShareView(item: item),
+  _onGenerateImage(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => RepositoryProvider(
+          create: (BuildContext context) {
+            return context.read<GrammarBloc>().grammarRepository;
+          },
+          child: GrammarPreviewPage(item: item),
+        ),
       ),
     );
   }
+
+  _onGenerateAnimation(BuildContext context) {}
 }
 
 class _Subtitle extends StatelessWidget {
