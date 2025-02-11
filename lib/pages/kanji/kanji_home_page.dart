@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 import 'package:senluo_japanese_cms/pages/kanji/kanji_list_page.dart';
 
-import '../../common/constants/colors.dart';
 import 'bloc/kanji_bloc.dart';
 
 class KanjiHomePage extends StatefulWidget {
@@ -13,18 +12,36 @@ class KanjiHomePage extends StatefulWidget {
   State<KanjiHomePage> createState() => _KanjiHomePageState();
 }
 
-class _KanjiHomePageState extends State<KanjiHomePage> {
+class _KanjiHomePageState extends State<KanjiHomePage>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 1, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<KanjiBloc, KanjiState>(
       builder: (context, state) {
-        return _buildNavigation(context, state);
+        return _buildContent(context, state);
       },
       listener: (BuildContext context, KanjiState state) {
         if (state is KanjiLoaded && state.jlptLevel != JLPTLevel.none) {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (_) => KanjiListPage(kanjis: state.kanjis),
+              builder: (_) => KanjiListPage(
+                kanjis: state.kanjis,
+                level: state.jlptLevel,
+              ),
             ),
           );
         }
@@ -32,15 +49,34 @@ class _KanjiHomePageState extends State<KanjiHomePage> {
     );
   }
 
-  _buildNavigation(BuildContext context, KanjiState state) {
+  _buildContent(BuildContext context, KanjiState state) {
     var currentLevel = JLPTLevel.none;
     if (state is KanjiLoaded) {
       currentLevel = state.jlptLevel;
     }
-    return KanjiNavigationView(
-      currentLevel: currentLevel,
-      onLevelChanged: (level) =>
-          BlocProvider.of<KanjiBloc>(context).add(KanjiLevelChanged(level)),
+    return Column(
+      children: [
+        TabBar(
+          controller: _tabController,
+          tabs: const [
+            Tab(
+              child: Text('JLPT 漢字'),
+            ),
+          ],
+        ),
+        Expanded(
+          child: TabBarView(
+            controller: _tabController,
+            children: [
+              KanjiNavigationView(
+                currentLevel: currentLevel,
+                onLevelChanged: (level) => BlocProvider.of<KanjiBloc>(context)
+                    .add(KanjiLevelChanged(level)),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -58,25 +94,18 @@ class KanjiNavigationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: [
-        const ListTile(
-          title: Text(
-            'JLPT',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: kBrandColor,
+      children: JLPTLevel.values
+          .where((e) => e != JLPTLevel.none)
+          .toList()
+          .map(
+            (e) => ListTile(
+              trailing: const Icon(Icons.arrow_right),
+              // trailing: currentLevel == e ? const Icon(Icons.check) : null,
+              title: Text(e.name.toUpperCase()),
+              onTap: () => onLevelChanged(e),
             ),
-          ),
-        ),
-        ...JLPTLevel.values.where((e) => e != JLPTLevel.none).toList().map(
-              (e) => ListTile(
-                leading: const Icon(Icons.arrow_right),
-                trailing: currentLevel == e ? const Icon(Icons.check) : null,
-                title: Text(e.name.toUpperCase()),
-                onTap: () => onLevelChanged(e),
-              ),
-            ),
-      ],
+          )
+          .toList(),
     );
   }
 }

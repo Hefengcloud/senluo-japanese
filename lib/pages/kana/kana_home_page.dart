@@ -15,6 +15,7 @@ class KanaHomePage extends StatefulWidget {
 
 class _KanaHomePageState extends State<KanaHomePage>
     with SingleTickerProviderStateMixin {
+
   late TabController _tabController;
 
   @override
