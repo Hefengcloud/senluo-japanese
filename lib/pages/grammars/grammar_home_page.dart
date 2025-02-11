@@ -15,13 +15,16 @@ class GrammarHomePage extends StatefulWidget {
   State<GrammarHomePage> createState() => _GrammarHomePageState();
 }
 
-class _GrammarHomePageState extends State<GrammarHomePage> {
+class _GrammarHomePageState extends State<GrammarHomePage>
+    with SingleTickerProviderStateMixin {
   final TextEditingController _searchController = TextEditingController();
+  late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
 
+    _tabController = TabController(length: 1, vsync: this);
     _searchController.addListener(() {
       final keyword = _searchController.text.trim();
       BlocProvider.of<GrammarBloc>(context)
@@ -33,6 +36,7 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
   void dispose() {
     super.dispose();
     _searchController.dispose();
+    _tabController.dispose();
   }
 
   @override
@@ -59,19 +63,35 @@ class _GrammarHomePageState extends State<GrammarHomePage> {
 
   _buildBody(BuildContext context, GrammarState state) {
     return switch (state) {
-      GrammarLoading() => const CircularProgressIndicator(),
+      GrammarLoading() => const Center(child: CircularProgressIndicator()),
       GrammarError() => const Text('Something went wrong!'),
-      GrammarLoaded() => _buildMenu(context, state.entryMap)
+      GrammarLoaded() => _buildContent(context, state.entryMap)
     };
   }
 
-  _buildMenu(
-    BuildContext context,
-    Map<JLPTLevel, List<GrammarEntry>> entryMap,
-  ) =>
-      GrammarMenuListView(
-        onEntrySelected: (entry) => BlocProvider.of<GrammarBloc>(context)
-            .add(GrammarEntryChanged(entry: entry)),
-        grammarsByLevel: entryMap,
-      );
+  _buildContent(context, Map<JLPTLevel, List<GrammarEntry>> entryMap) {
+    return Column(
+      children: [
+        TabBar(
+          controller: _tabController,
+          tabs: const [
+            Tab(text: 'JLPT文法'),
+          ],
+        ),
+        Expanded(
+          child: TabBarView(
+            controller: _tabController,
+            children: [
+              GrammarMenuListView(
+                onEntrySelected: (entry) =>
+                    BlocProvider.of<GrammarBloc>(context)
+                        .add(GrammarEntryChanged(entry: entry)),
+                grammarsByLevel: entryMap,
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }

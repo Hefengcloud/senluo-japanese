@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/enums/enums.dart';
 
 import '../../common/constants/colors.dart';
 import '../../common/constants/constants.dart';
@@ -9,8 +10,13 @@ import 'kanji_preview_page.dart';
 
 class KanjiListPage extends StatefulWidget {
   final List<Kanji> kanjis;
+  final JLPTLevel level;
 
-  const KanjiListPage({super.key, required this.kanjis});
+  const KanjiListPage({
+    super.key,
+    required this.level,
+    required this.kanjis,
+  });
 
   @override
   State<KanjiListPage> createState() => _KanjiListPageState();
@@ -21,7 +27,7 @@ class _KanjiListPageState extends State<KanjiListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Kanjis'),
+        title: Text(widget.level.name.toUpperCase()),
       ),
       body: KanjiGridView(kanjis: widget.kanjis),
     );
