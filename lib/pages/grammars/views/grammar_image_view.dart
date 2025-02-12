@@ -181,18 +181,16 @@ class GrammarImageView extends StatelessWidget {
   }
 
   _buildExampleList(GrammarItem item) {
-    return ListView.builder(
-      itemBuilder: (BuildContext context, int index) {
-        final e = item.examples[index];
-        return SentenceHtmlText(
-          original: e.jp,
-          formated: e.jp1,
-          translated: e.zh,
-          emphasizedColor: kLevel2color[item.level]!,
-          fontSize: exampleFontSize,
-        );
-      },
-      itemCount: item.examples.length,
+    return Column(
+      children: item.examples
+          .map((e) => SentenceHtmlText(
+                original: e.jp,
+                formated: e.jp1,
+                translated: e.zh,
+                emphasizedColor: kLevel2color[item.level]!,
+                fontSize: exampleFontSize,
+              ))
+          .toList(),
     );
   }
 }

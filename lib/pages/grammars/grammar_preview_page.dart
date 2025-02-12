@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_item_bloc.dart';
-import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:senluo_japanese_cms/pages/grammars/views/grammar_image_view.dart';
 import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
@@ -83,21 +82,14 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
   _buildImage(BuildContext context, GrammarItemLoaded state) {
     return Align(
       alignment: Alignment.topCenter,
-      child: Container(
-        width: 480.0,
-        padding: const EdgeInsets.all(4),
-        decoration: BoxDecoration(
-          color: kLevel2color[widget.item.level],
-        ),
-        child: RepaintBoundary(
-          key: _globalKey,
-          child: AspectRatio(
-            aspectRatio: 3 / 4,
-            child: GrammarImageView(
-              item: state.displayedItem,
-              dividerGap: _dividerGap,
-              exampleFontSize: _exampleFontSize,
-            ),
+      child: RepaintBoundary(
+        key: _globalKey,
+        child: AspectRatio(
+          aspectRatio: 3 / 4,
+          child: GrammarImageView(
+            item: state.displayedItem,
+            dividerGap: _dividerGap,
+            exampleFontSize: _exampleFontSize,
           ),
         ),
       ),

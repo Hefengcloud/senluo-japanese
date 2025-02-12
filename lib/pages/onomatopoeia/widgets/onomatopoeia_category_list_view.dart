@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../../repos/onomatopoeia/models/category_model.dart';
 
-class CategoryListView extends StatelessWidget {
+class OnomatopoeiaCategoryListView extends StatelessWidget {
   final int total;
   final List<OnomatopoeiaCategory> categories;
   final Function(OnomatopoeiaCategory category) onCategoryClicked;
   final OnomatopoeiaCategory selectedCategory;
 
-  const CategoryListView({
+  const OnomatopoeiaCategoryListView({
     super.key,
     required this.categories,
     required this.total,

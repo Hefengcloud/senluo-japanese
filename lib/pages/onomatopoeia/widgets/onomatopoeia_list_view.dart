@@ -1,15 +1,14 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
-import '../onomatopoeia_display_page.dart';
+import '../onomatopoeia_preview_page.dart';
 
-class ProverbItemListView extends StatelessWidget {
+class OnomatopoeiaListView extends StatelessWidget {
   final List<Onomatopoeia> items;
 
-  const ProverbItemListView({super.key, required this.items});
+  const OnomatopoeiaListView({super.key, required this.items});
 
   @override
   Widget build(BuildContext context) {
@@ -48,17 +47,16 @@ class _ItemCard extends StatelessWidget {
       ),
       subtitle: Text(item.meanings['zh']?.join(' / ') ?? ''),
       onTap: () => _showDisplayDialog(context, item),
+      trailing: const Icon(Icons.arrow_right),
     );
   }
 
-  _showDisplayDialog(BuildContext context, Onomatopoeia item) => showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          content: SizedBox(
-            width: kPreviewDialogWidth,
-            height: kPreviewDialogHeight,
-            child: ItemDisplayPage(item: item),
-          ),
+  _showDisplayDialog(BuildContext context, Onomatopoeia item) =>
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) {
+            return OnomatopoeiaPreviewPage(item: item);
+          },
         ),
       );
 }

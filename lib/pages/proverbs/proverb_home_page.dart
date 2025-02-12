@@ -1,9 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/common/constants/kanas.dart';
-import 'package:senluo_japanese_cms/pages/proverbs/widgets/proverb_display_view.dart';
+import 'package:senluo_japanese_cms/pages/proverbs/proverb_details_page.dart';
 
 import '../../repos/proverbs/models/proverb_item.dart';
 import 'bloc/proverb_bloc.dart';
@@ -134,22 +133,15 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
               (index, item) => InkWell(
                 onTap: () {
                   bloc.add(ProverbSelected(item: item));
-                  _showProverbCard(context, item);
+                  _showProverbDetails(context, item);
                 },
                 child: ListTile(
-                  trailing: Text(
-                    (index + 1).toString(),
-                    style: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  tileColor: Colors.purple[50],
                   title: Text(
                     item.name,
                     style: const TextStyle(fontSize: 20),
                   ),
                   subtitle: Text(item.meanings.join(';')),
+                  trailing: const Icon(Icons.arrow_right),
                 ),
               ),
             )
@@ -158,16 +150,9 @@ class _ProverbHomePageState extends State<ProverbHomePage> {
     );
   }
 
-  _showProverbCard(BuildContext context, ProverbItem item) {
-    return showDialog(
-      context: context,
-      builder: (context) => const AlertDialog(
-        content: SizedBox(
-          width: kPreviewDialogWidth,
-          height: kPreviewDialogHeight,
-          child: ProverbDisplayView(),
-        ),
-      ),
+  _showProverbDetails(BuildContext context, ProverbItem item) {
+    return Navigator.of(context).push(
+      MaterialPageRoute(builder: (ctx) => ProverbDetailsPage(proverb: item)),
     );
   }
 }
