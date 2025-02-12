@@ -18,7 +18,7 @@ class GrammarItemBloc extends Bloc<GrammarItemEvent, GrammarItemState> {
     final item = event.item;
 
     final displayedItem = item.copyWith(
-      examples: List.from(item.examples.take(3)),
+      examples: List.from(item.examples.take(2)),
     );
     emit(GrammarItemLoaded(item: item, displayedItem: displayedItem));
   }

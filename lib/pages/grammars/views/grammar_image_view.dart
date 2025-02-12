@@ -128,6 +128,7 @@ class GrammarImageView extends StatelessWidget {
     Match? match = pattern.firstMatch(text);
     const style = TextStyle(
       color: Colors.white,
+      fontWeight: FontWeight.bold,
       fontVariations: [FontVariation.weight(700)],
     );
 

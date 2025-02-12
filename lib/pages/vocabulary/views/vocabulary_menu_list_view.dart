@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/common/constants/colors.dart';
+import 'package:senluo_japanese_cms/common/constants/themes.dart';
 import 'package:senluo_japanese_cms/repos/vocabulary/models/vocabulary_menu.dart';
 
 class VocabularyMenuListView extends StatefulWidget {
@@ -26,10 +27,7 @@ class _VocabularyMenuListViewState extends State<VocabularyMenuListView> {
           .map((menu) => ExpansionTile(
                 title: Text(
                   menu.name,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: kBrandColor,
-                  ),
+                  style: kHomeNavTextStyle,
                 ),
                 children: menu.subMenus
                     .map((subMenu) => ListTile(
