@@ -5,9 +5,10 @@ import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/constants.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
-import 'package:senluo_japanese_cms/widgets/example_sentence_text.dart';
+import 'package:senluo_japanese_cms/widgets/sentence_plain_text.dart';
+
+import '../../common/constants/fonts.dart';
 
 class GrammarDetailsPage extends StatelessWidget {
   final GrammarItem item;
@@ -59,7 +60,7 @@ class GrammarDetailsPage extends StatelessWidget {
             ],
             _Subtitle(text: "例文", level: item.level),
             ...item.examples.map(
-              (e) => ExampleSentenceText(
+              (e) => SentencePlainText(
                 mainStyle: const TextStyle(
                   fontFamily: kZhFont,
                 ),
@@ -109,6 +110,7 @@ class GrammarDetailsPage extends StatelessWidget {
   _onGenerateImage(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
+        fullscreenDialog: true,
         builder: (_) => RepositoryProvider(
           create: (BuildContext context) {
             return context.read<GrammarBloc>().grammarRepository;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ExampleSentenceText extends StatelessWidget {
+class SentencePlainText extends StatelessWidget {
   final List<String> lines;
   final Color emphasizedColor;
   final TextStyle mainStyle;
@@ -9,7 +9,7 @@ class ExampleSentenceText extends StatelessWidget {
     fontSize: 16,
   );
 
-  const ExampleSentenceText({
+  const SentencePlainText({
     super.key,
     required this.lines,
     required this.emphasizedColor,
@@ -22,7 +22,9 @@ class ExampleSentenceText extends StatelessWidget {
     for (var i = 0; i < lines.length; i++) {
       spans.addAll(_buildLine(lines[i].trim()));
       if (i < lines.length - 1) {
-        spans.add(const TextSpan(text: '\n'));
+        spans.add(
+          const TextSpan(text: '\n'),
+        );
       }
     }
     return Text.rich(

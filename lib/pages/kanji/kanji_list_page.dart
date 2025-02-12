@@ -29,22 +29,27 @@ class _KanjiListPageState extends State<KanjiListPage> {
       appBar: AppBar(
         title: Text(widget.level.name.toUpperCase()),
       ),
-      body: KanjiGridView(kanjis: widget.kanjis),
+      body: _GridView(kanjis: widget.kanjis),
     );
   }
 }
 
-class KanjiGridView extends StatelessWidget {
+class _GridView extends StatelessWidget {
   final List<Kanji> kanjis;
-  const KanjiGridView({super.key, required this.kanjis});
+  const _GridView({required this.kanjis});
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 5,
-      children: kanjis
-          .map<Widget>((kanji) => _buildKanjiCard(context, kanji))
-          .toList(),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GridView.count(
+        crossAxisCount: 4,
+        mainAxisSpacing: 8,
+        crossAxisSpacing: 8,
+        children: kanjis
+            .map<Widget>((kanji) => _buildKanjiCard(context, kanji))
+            .toList(),
+      ),
     );
   }
 
@@ -64,16 +69,11 @@ class KanjiGridView extends StatelessWidget {
         ),
       );
 
-  _showKanjiPreview(BuildContext context, Kanji kanji) => showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            content: SizedBox(
-              width: kPreviewDialogWidth,
-              height: kPreviewDialogHeight,
-              child: KanjiPreviewPage(kanji: kanji),
-            ),
-          );
-        },
-      );
+  _showKanjiPreview(BuildContext context, Kanji kanji) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => KanjiPreviewPage(kanji: kanji),
+      ),
+    );
+  }
 }

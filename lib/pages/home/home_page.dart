@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/common/constants/themes.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_helper.dart';
@@ -22,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final moreEntries = allEntries.sublist(4);
 
-    final _navItems = List<NavigationItem>.from(allEntries.getRange(0, 4))
+    final navItems = List<NavigationItem>.from(allEntries.getRange(0, 4))
       ..add(
         NavigationItem(
           icon: const Icon(Icons.more_horiz_outlined),
@@ -35,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: AppTitle(),
       ),
-      body: _navItems[_selectedIndex].page,
+      body: navItems[_selectedIndex].page,
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (index) {
           setState(() {
@@ -43,7 +41,7 @@ class _HomePageState extends State<HomePage> {
           });
         },
         selectedIndex: _selectedIndex,
-        destinations: _navItems
+        destinations: navItems
             .map<NavigationDestination>(
               (e) => NavigationDestination(
                 icon: e.icon,
@@ -70,6 +68,7 @@ class _NavPage extends StatelessWidget {
         children: items
             .map<ListTile>(
               (e) => ListTile(
+                leading: e.icon,
                 title: Text(e.label, style: kHomeNavTextStyle),
                 trailing: const Icon(Icons.arrow_right),
                 onTap: () => _onNavigate(context, e),

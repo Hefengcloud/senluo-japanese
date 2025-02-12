@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
-import 'package:senluo_japanese_cms/common/constants/number_constants.dart';
 import 'package:senluo_japanese_cms/common/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 import 'package:senluo_japanese_cms/pages/kanji/constants/styles.dart';
@@ -29,51 +28,54 @@ class KanjiPreviewPage extends StatelessWidget {
     final bloc = BlocProvider.of<KanjiBloc>(context);
     final repo = bloc.kanjiRepository;
 
+    KanjiDetail? detail;
+
     return FutureBuilder<KanjiDetail>(
+      future: repo.loadKanjiDetail(kanji),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Row(
-            children: [
-              Expanded(
-                flex: kPreviewLeftFlex,
-                child: RepaintBoundary(
-                  key: globalKey,
-                  child: _buildImagePanel(context, snapshot.data!),
-                ),
-              ),
-              Expanded(
-                flex: kPreviewRightFlex,
-                child: Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 32),
-                      child: _buildTextPanel(context, snapshot.data!),
-                    ),
-                    Positioned.fill(
-                      left: 16,
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: _buildBottomActions(),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+          detail = snapshot.data!;
+          return Scaffold(
+            appBar: AppBar(title: const Text('漢字')),
+            body: _buildBody(context, snapshot.data!),
+            bottomNavigationBar: BottomAppBar(child: _buildBottomActions()),
+            endDrawer: _buildDrawer(context, detail!),
           );
         } else {
-          return const Center(child: CircularProgressIndicator());
+          return const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
         }
       },
-      future: repo.loadKanjiDetail(kanji),
+    );
+  }
+
+  _buildBody(BuildContext context, KanjiDetail detail) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: RepaintBoundary(
+        key: globalKey,
+        child: _buildImagePanel(context, detail),
+      ),
     );
   }
 
   _buildBottomActions() => Row(
         children: [
-          ElevatedButton(
+          const Text('Scale:'),
+          Expanded(
+            child: Slider(
+              value: 0.8,
+              min: 0.8,
+              max: 2,
+              onChanged: (value) {},
+            ),
+          ),
+          IconButton(
             onPressed: () => _saveKanjiAsImage(kanji.key),
-            child: const Text('Save Image'),
+            icon: const Icon(Icons.save_outlined),
           ),
         ],
       );
@@ -113,34 +115,6 @@ class KanjiPreviewPage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  _buildTextPanel(BuildContext context, KanjiDetail detail) {
-    return ListView(
-      children: [
-        ...detail.words.map((e) {
-          final word = parseMeaning(e);
-          return ListTile(
-            leading: const Text('言葉'),
-            title: Text("${word.text}（${word.reading}）"),
-            subtitle: word.meaning.en.isNotEmpty ? Text(word.meaning.en) : null,
-            onTap: () {},
-          );
-        }),
-        ...detail.proverbs.map((e) {
-          return ListTile(
-            leading: const Text('こと\nわざ'),
-            title: Text(e),
-            onTap: () {},
-          );
-        }),
-        ...detail.idioms.map((e) => ListTile(
-              leading: const Text('四字\n熟語'),
-              title: Text(e),
-              onTap: () {},
-            )),
-      ],
     );
   }
 
@@ -245,5 +219,37 @@ class KanjiPreviewPage extends StatelessWidget {
   _saveKanjiAsImage(String name) async {
     final bytes = await captureWidget(globalKey);
     await saveImageToFile(bytes!, '$name.png');
+  }
+
+  _buildDrawer(BuildContext context, KanjiDetail detail) {
+    return Drawer(
+      child: ListView(
+        children: [
+          const ListTile(title: Text('語彙リスト')),
+          ...detail.words.map((e) {
+            final word = parseMeaning(e);
+            return ListTile(
+              leading: const Text('言葉'),
+              title: Text("${word.text}（${word.reading}）"),
+              subtitle:
+                  word.meaning.en.isNotEmpty ? Text(word.meaning.en) : null,
+              onTap: () {},
+            );
+          }),
+          ...detail.proverbs.map((e) {
+            return ListTile(
+              leading: const Text('こと\nわざ'),
+              title: Text(e),
+              onTap: () {},
+            );
+          }),
+          ...detail.idioms.map((e) => ListTile(
+                leading: const Text('四字\n熟語'),
+                title: Text(e),
+                onTap: () {},
+              )),
+        ],
+      ),
+    );
   }
 }

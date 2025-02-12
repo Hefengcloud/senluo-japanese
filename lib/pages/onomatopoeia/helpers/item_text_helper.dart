@@ -19,18 +19,3 @@ $kTitleExample
 ${item.examples.map((e) => "◎ ${e['jp']}\n→ ${e['zh']}\n→ ${e['en']}\n").toList().join('\n')}
 """;
 }
-
-String generateChineseText(Onomatopoeia item) {
-  return """
-拟声拟态词 | ${item.name}
-
-$kTitleZhMeaning
-${item.meanings['zh']?.map((e) => '- $e').toList().join('\n')}
-
-$kTitleJpMeaning
-${item.meanings['jp']?.map((e) => '- $e').toList().join('\n')}
-
-$kTitleExample
-${item.examples.map((e) => "◎ ${e['jp']}\n→ ${e['zh']}\n").toList().join('\n')}
-""";
-}

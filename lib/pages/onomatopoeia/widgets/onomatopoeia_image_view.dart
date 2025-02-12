@@ -5,15 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
-import '../../../../widgets/example_sentence_text.dart';
-import '../../constants/constants.dart';
+import '../../../common/constants/fonts.dart';
+import '../../../widgets/sentence_plain_text.dart';
+import '../constants/onomatopoeia_fonts.dart';
 
-class ItemConcisePreviewView extends StatelessWidget {
+class OnomatopoeiaImageView extends StatelessWidget {
   final Onomatopoeia item;
   final List<Example> examples;
   final double fontScaleFactor;
 
-  const ItemConcisePreviewView({
+  const OnomatopoeiaImageView({
     super.key,
     required this.item,
     required this.examples,
@@ -22,42 +23,19 @@ class ItemConcisePreviewView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      color: kItemBgColor,
       padding: const EdgeInsets.symmetric(
         horizontal: 16,
       ),
       child: Column(
         children: [
-          const Gap(32),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: AutoSizeText(
-                  item.theName,
-                  style: GoogleFonts.getFont(
-                    kJpGoogleFont,
-                    fontSize: 72,
-                    fontWeight: FontWeight.bold,
-                    color: kItemMainColor,
-                  ),
-                  maxLines: item.name.split('/').length,
-                  textAlign: TextAlign.start,
-                ),
-              ),
-              SizedBox(
-                width: 160,
-                height: 160,
-                child: Image.asset(
-                  'assets/onomatopoeia/images/${item.key}.png',
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: _Header(item: item),
           ),
-          const Gap(32),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _buildTitle('意思'),
               const Gap(16),
@@ -66,7 +44,7 @@ class ItemConcisePreviewView extends StatelessWidget {
                   item.meanings['zh']!.join('；'),
                   style: TextStyle(
                     fontFamily: kZhFont,
-                    fontSize: kBodyFontSize * fontScaleFactor,
+                    fontSize: kOnomatopoeiaBodyFontSize * fontScaleFactor,
                   ),
                 ),
               ),
@@ -83,7 +61,7 @@ class ItemConcisePreviewView extends StatelessWidget {
                 ),
                 const Gap(16),
                 Expanded(
-                  child: ListView(
+                  child: Column(
                     children: (examples.isNotEmpty
                             ? examples
                             : item.examples.take(2).toList())
@@ -102,11 +80,11 @@ class ItemConcisePreviewView extends StatelessWidget {
   Widget _buildExamples(Example example) {
     return ListTile(
       contentPadding: const EdgeInsets.all(0),
-      title: ExampleSentenceText(
+      title: SentencePlainText(
         lines: [example['jp']!],
         mainStyle: GoogleFonts.getFont(
           kJpGoogleFont,
-          fontSize: kBodyFontSize * fontScaleFactor,
+          fontSize: kOnomatopoeiaBodyFontSize * fontScaleFactor,
           fontWeight: FontWeight.bold,
         ),
         emphasizedColor: kItemMainColor,
@@ -115,7 +93,7 @@ class ItemConcisePreviewView extends StatelessWidget {
         example['zh']!,
         style: TextStyle(
           fontFamily: kZhFont,
-          fontSize: kBodyFontSize * fontScaleFactor - 2,
+          fontSize: kOnomatopoeiaBodyFontSize * fontScaleFactor - 2,
           color: Colors.black54,
         ),
       ),
@@ -123,13 +101,58 @@ class ItemConcisePreviewView extends StatelessWidget {
   }
 
   _buildTitle(String text) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontFamily: kZhFont,
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: const BoxDecoration(
         color: kItemMainColor,
-        fontSize: kBodyFontSize * fontScaleFactor,
+        borderRadius: BorderRadius.all(Radius.circular(16)),
       ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontFamily: kZhFont,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+class _Header extends StatelessWidget {
+  const _Header({
+    required this.item,
+  });
+
+  final Onomatopoeia item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Expanded(
+          child: AutoSizeText(
+            item.theName,
+            style: GoogleFonts.getFont(
+              kJpGoogleFont,
+              fontSize: 72,
+              fontWeight: FontWeight.bold,
+              color: kItemMainColor,
+            ),
+            maxLines: item.name.split('/').length,
+            textAlign: TextAlign.start,
+          ),
+        ),
+        const Gap(8),
+        SizedBox(
+          width: 120,
+          height: 120,
+          child: Image.asset(
+            'assets/onomatopoeia/images/${item.key}.png',
+            fit: BoxFit.contain,
+          ),
+        ),
+      ],
     );
   }
 }

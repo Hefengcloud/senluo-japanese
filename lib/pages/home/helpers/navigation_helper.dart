@@ -9,7 +9,7 @@ import '../../grammars/grammar_home_page.dart';
 import '../../kana/kana_home_page.dart';
 import '../../kanji/kanji_home_page.dart';
 import '../../keigo/keigo_home_page.dart';
-import '../../onomatopoeia/onomatopoeia_page.dart';
+import '../../onomatopoeia/onomatopoeia_home_page.dart';
 import '../../proverbs/proverb_home_page.dart';
 import '../../vocabulary/vocabulary_home_page.dart';
 
@@ -21,8 +21,8 @@ List<NavigationItem> buildNavigationItems() => const [
       //   page: const BusinessPage(),
       // ),
       NavigationItem(
-        icon: const Icon(Icons.explore_outlined),
-        selectedIcon: const Icon(Icons.explore),
+        icon: const Icon(Icons.translate_outlined),
+        selectedIcon: const Icon(Icons.translate),
         label: '假名',
         page: const KanaHomePage(),
       ),

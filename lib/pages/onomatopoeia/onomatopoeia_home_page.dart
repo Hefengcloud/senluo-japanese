@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/proverb_item_list_view.dart';
+import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/onomatopoeia_list_view.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
 
 import 'bloc/onomatopoeia_bloc.dart';
-import 'widgets/category_list_view.dart';
+import 'widgets/onomatopoeia_category_list_view.dart';
 
 class OnomatopoeiaHomePage extends StatefulWidget {
   const OnomatopoeiaHomePage({super.key});
@@ -31,7 +31,7 @@ class _OnomatopoeiaHomePageState extends State<OnomatopoeiaHomePage> {
 
   _buildDrawer(OnomatopoeiaLoaded state) {
     return Drawer(
-      child: CategoryListView(
+      child: OnomatopoeiaCategoryListView(
         categories: state.categories,
         total: state.items.length,
         onCategoryClicked: (category) {
@@ -48,7 +48,7 @@ class _OnomatopoeiaHomePageState extends State<OnomatopoeiaHomePage> {
     if (state is OnomatopoeiaLoading) {
       return const Center(child: CircularProgressIndicator());
     } else if (state is OnomatopoeiaLoaded) {
-      return ProverbItemListView(items: state.items);
+      return OnomatopoeiaListView(items: state.items);
     }
   }
 }
