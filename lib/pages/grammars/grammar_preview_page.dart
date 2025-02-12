@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gap/gap.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_item_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
@@ -36,19 +36,6 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
         return Scaffold(
           appBar: AppBar(
             title: const Text('Preview'),
-            actions: [
-              IconButton(
-                tooltip: 'Save image',
-                icon: const Icon(Icons.save_outlined),
-                onPressed: () => _onSaveImage(
-                    "${widget.item.level.name}-${widget.item.key}"),
-              ),
-              IconButton(
-                tooltip: 'Copy Text',
-                icon: const Icon(Icons.copy_outlined),
-                onPressed: () => _onCopyText(),
-              ),
-            ],
           ),
           body: state is GrammarItemLoaded
               ? _buildImage(context, state)
@@ -65,45 +52,32 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     return BottomAppBar(
       child: Row(
         children: [
-          Text('Margin:'),
-          Slider(
-            min: 0,
-            max: 24,
-            divisions: 12,
-            value: _dividerGap,
-            onChanged: (double value) {
-              setState(() {
-                _dividerGap = value;
-              });
-            },
+          const Text('Space: '),
+          Expanded(
+            child: Slider(
+                min: 4,
+                max: 24,
+                value: _dividerGap,
+                onChanged: (value) {
+                  setState(() {
+                    _dividerGap = value;
+                  });
+                }),
           ),
-          const Gap(8),
-          Text('FontSize:'),
-          Slider(
-            min: 12,
-            max: 18,
-            divisions: 6,
-            value: _exampleFontSize,
-            onChanged: (double value) {
-              setState(
-                () {
-                  _exampleFontSize = value;
-                },
-              );
-            },
-          ),
-          const Spacer(),
           IconButton(
-            icon: const Icon(Icons.list_outlined),
-            onPressed: () => _showExampleList(context),
+            tooltip: 'Copy Text',
+            icon: const Icon(Icons.copy_outlined),
+            onPressed: () => _onCopyText(),
+          ),
+          IconButton(
+            tooltip: 'Save image',
+            icon: const Icon(Icons.save_outlined),
+            onPressed: () => _onSaveImage(
+                context, "${widget.item.level.name}-${widget.item.key}"),
           ),
         ],
       ),
     );
-  }
-
-  _showExampleList(BuildContext context) async {
-    final bloc = context.read<GrammarItemBloc>();
   }
 
   _buildImage(BuildContext context, GrammarItemLoaded state) {
@@ -136,12 +110,21 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
 
   _buildDrawer(BuildContext context, GrammarItemLoaded state) {
     return Drawer(
+      backgroundColor: Colors.white.withValues(alpha: 0.4),
       child: ListView(
         children: [
-          const ListTile(title: Text('[例文]')),
+          const ListTile(
+            title: Text(
+              '[例文]',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
           ...state.item.examples.map<CheckboxListTile>(
             (e) => CheckboxListTile(
-              title: Text(e.jp),
+              title: Text(
+                e.jp,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
               onChanged: (bool? value) {
                 context
                     .read<GrammarItemBloc>()
@@ -150,20 +133,44 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
               value: state.isExampleDisplayed(e),
             ),
           ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Divider(height: 1),
+          ),
+          const ListTile(title: Text('[フォントサイズ]')),
+          Slider(
+            min: 12,
+            max: 18,
+            value: _exampleFontSize,
+            onChanged: (double value) {
+              setState(() {
+                _exampleFontSize = value;
+              });
+            },
+          ),
         ],
       ),
     );
   }
 
-  _onSaveImage(String fileName) async {
+  _onSaveImage(BuildContext context, String fileName) async {
+    final device = Device.get();
     final bytes = await captureWidget(_globalKey);
-    saveImageToFile(bytes!, '$fileName.jpg');
+    if (device.isPhone) {
+      final result = await saveImageToGallery(bytes!);
+      // ignore: use_build_context_synchronously
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Image ${result ? "" : "NOT "} Saved!')),
+      );
+    } else {
+      saveImageToFile(bytes!, '$fileName.jpg');
+    }
   }
 
   _onCopyText() async {
     await Clipboard.setData(ClipboardData(text: widget.item.text));
     // ignore: use_build_context_synchronously
     ScaffoldMessenger.of(context)
-        .showSnackBar(const SnackBar(content: Text('Copied')));
+        .showSnackBar(const SnackBar(content: Text('Text Copied')));
   }
 }

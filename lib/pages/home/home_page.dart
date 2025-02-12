@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/common/constants/themes.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_helper.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_item.dart';
 import 'package:senluo_japanese_cms/pages/home/views/title_text_view.dart';
@@ -69,8 +70,8 @@ class _NavPage extends StatelessWidget {
         children: items
             .map<ListTile>(
               (e) => ListTile(
-                title: Text(e.label),
-                trailing: const Icon(Icons.arrow_forward_ios),
+                title: Text(e.label, style: kHomeNavTextStyle),
+                trailing: const Icon(Icons.arrow_right),
                 onTap: () => _onNavigate(context, e),
               ),
             )

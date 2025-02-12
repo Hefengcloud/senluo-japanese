@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/common/constants/themes.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 import 'package:senluo_japanese_cms/pages/kanji/kanji_list_page.dart';
 
@@ -101,7 +102,7 @@ class KanjiNavigationView extends StatelessWidget {
             (e) => ListTile(
               trailing: const Icon(Icons.arrow_right),
               // trailing: currentLevel == e ? const Icon(Icons.check) : null,
-              title: Text(e.name.toUpperCase()),
+              title: Text(e.name.toUpperCase(), style: kHomeNavTextStyle),
               onTap: () => onLevelChanged(e),
             ),
           )

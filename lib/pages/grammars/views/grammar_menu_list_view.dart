@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:senluo_japanese_cms/common/constants/themes.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
 
 import '../../../repos/grammars/models/grammar_entry.dart';
@@ -21,12 +22,12 @@ class GrammarMenuListView extends StatelessWidget {
           .where((e) => e != JLPTLevel.none)
           .map<ExpansionTile>(
             (level) => ExpansionTile(
-                title: Text(level.name.toUpperCase()),
+                title: Text(level.name.toUpperCase(), style: kHomeNavTextStyle),
                 initiallyExpanded: false,
                 children: (grammarsByLevel[level] ?? [])
                     .map<ListTile>((e) => ListTile(
-                          leading: const Icon(Icons.arrow_right),
                           title: Text(e.name),
+                          trailing: const Icon(Icons.arrow_right),
                           onTap: () => onEntrySelected(e),
                         ))
                     .toList()),
