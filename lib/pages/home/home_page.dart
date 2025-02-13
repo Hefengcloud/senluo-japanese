@@ -30,9 +30,6 @@ class _HomePageState extends State<HomePage> {
         ),
       );
     return Scaffold(
-      appBar: AppBar(
-        title: AppTitle(),
-      ),
       body: navItems[_selectedIndex].page,
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (index) {
@@ -62,19 +59,21 @@ class _NavPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ListView(
-        children: items
-            .map<ListTile>(
-              (e) => ListTile(
-                leading: e.icon,
-                title: Text(e.label, style: kHomeNavTextStyle),
-                trailing: const Icon(Icons.arrow_right),
-                onTap: () => _onNavigate(context, e),
-              ),
-            )
-            .toList(),
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: items
+              .map<ListTile>(
+                (e) => ListTile(
+                  leading: e.icon,
+                  title: Text(e.label, style: kHomeNavTextStyle),
+                  trailing: const Icon(Icons.arrow_right),
+                  onTap: () => _onNavigate(context, e),
+                ),
+              )
+              .toList(),
+        ),
       ),
     );
   }
