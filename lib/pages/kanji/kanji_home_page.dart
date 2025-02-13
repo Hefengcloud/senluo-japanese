@@ -55,29 +55,31 @@ class _KanjiHomePageState extends State<KanjiHomePage>
     if (state is KanjiLoaded) {
       currentLevel = state.jlptLevel;
     }
-    return Column(
-      children: [
-        TabBar(
-          controller: _tabController,
-          tabs: const [
-            Tab(
-              child: Text('JLPT 漢字'),
-            ),
-          ],
-        ),
-        Expanded(
-          child: TabBarView(
+    return SafeArea(
+      child: Column(
+        children: [
+          TabBar(
             controller: _tabController,
-            children: [
-              KanjiNavigationView(
-                currentLevel: currentLevel,
-                onLevelChanged: (level) => BlocProvider.of<KanjiBloc>(context)
-                    .add(KanjiLevelChanged(level)),
+            tabs: const [
+              Tab(
+                child: Text('JLPT 漢字'),
               ),
             ],
           ),
-        ),
-      ],
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                KanjiNavigationView(
+                  currentLevel: currentLevel,
+                  onLevelChanged: (level) => BlocProvider.of<KanjiBloc>(context)
+                      .add(KanjiLevelChanged(level)),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

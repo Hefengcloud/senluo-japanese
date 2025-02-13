@@ -15,7 +15,6 @@ class KanaHomePage extends StatefulWidget {
 
 class _KanaHomePageState extends State<KanaHomePage>
     with SingleTickerProviderStateMixin {
-
   late TabController _tabController;
 
   @override
@@ -51,6 +50,7 @@ class _KanaHomePageState extends State<KanaHomePage>
   _buildKanaTable(BuildContext context, KanaLoaded state) {
     return Column(
       children: [
+        AppBar(title: const Text('五十音図')),
         TabBar(
           controller: _tabController,
           tabs: const [

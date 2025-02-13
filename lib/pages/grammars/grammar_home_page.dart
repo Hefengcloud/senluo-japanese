@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_details_page.dart';
+import 'package:senluo_japanese_cms/pages/grammars/grammar_tutorial_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/views/grammar_menu_list_view.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
@@ -24,7 +25,7 @@ class _GrammarHomePageState extends State<GrammarHomePage>
   void initState() {
     super.initState();
 
-    _tabController = TabController(length: 1, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
     _searchController.addListener(() {
       final keyword = _searchController.text.trim();
       BlocProvider.of<GrammarBloc>(context)
@@ -70,28 +71,32 @@ class _GrammarHomePageState extends State<GrammarHomePage>
   }
 
   _buildContent(context, Map<JLPTLevel, List<GrammarEntry>> entryMap) {
-    return Column(
-      children: [
-        TabBar(
-          controller: _tabController,
-          tabs: const [
-            Tab(text: 'JLPT文法'),
-          ],
-        ),
-        Expanded(
-          child: TabBarView(
+    return SafeArea(
+      child: Column(
+        children: [
+          TabBar(
             controller: _tabController,
-            children: [
-              GrammarMenuListView(
-                onEntrySelected: (entry) =>
-                    BlocProvider.of<GrammarBloc>(context)
-                        .add(GrammarEntryChanged(entry: entry)),
-                grammarsByLevel: entryMap,
-              ),
+            tabs: const [
+              Tab(text: 'JLPT文法'),
+              Tab(text: '文法入門'),
             ],
           ),
-        ),
-      ],
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                GrammarMenuListView(
+                  onEntrySelected: (entry) =>
+                      BlocProvider.of<GrammarBloc>(context)
+                          .add(GrammarEntryChanged(entry: entry)),
+                  grammarsByLevel: entryMap,
+                ),
+                const GrammarTutorialPage(),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
