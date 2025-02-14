@@ -57,6 +57,8 @@ dependencies:
   image_gallery_saver: ^2.0.3
   permission_handler: ^11.3.1
   gal: ^2.3.1
+  animated_toggle_switch: ^0.8.4
+  font_awesome_flutter: ^10.8.0
 
 dev_dependencies:
   flutter_test:

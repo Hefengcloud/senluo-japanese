@@ -6,8 +6,6 @@ import 'package:senluo_japanese_cms/pages/kana/views/kana_piece_view.dart';
 import '../../../repos/gojuon/kana_repository.dart';
 import '../../../repos/gojuon/models/models.dart';
 
-typedef KanaTapCallback = void Function(Kana kana);
-
 const kColumnLabels = ['', '-a', '-i', '-u', '-e', '-o'];
 
 const kCategory2RowLabels = {
@@ -57,7 +55,7 @@ const kTableBottomMargin = 64.0;
 class KanaTableView extends StatelessWidget {
   final KanaCategory kanaCategory;
   final List<KanaRow> kanaRows;
-  final KanaTapCallback onKanaTap;
+  final ValueChanged<Kana> onKanaTap;
   final KanaType kanaType;
 
   const KanaTableView({
@@ -121,7 +119,7 @@ class KanaTableView extends StatelessWidget {
             child: Card(
               child: InkWell(
                 child: KanaPieceView(kana: e, type: kanaType),
-                onTap: () => _showKanaPreviewDialog(context, e),
+                onTap: () => onKanaTap(e),
               ),
             ),
           ),
@@ -164,23 +162,12 @@ class KanaTableView extends StatelessWidget {
     }
     return theKanaRows;
   }
-
-  _showKanaPreviewDialog(BuildContext context, Kana kana) => showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          content: SizedBox(
-            width: 600,
-            height: 800,
-            child: KanaPreviewPage(kana: kana),
-          ),
-        ),
-      );
 }
 
 class KanaTableYoonView extends StatelessWidget {
   final List<KanaRow> kanaRows;
   final KanaType kanaType;
-  final KanaTapCallback onKanaTap;
+  final ValueChanged<Kana> onKanaTap;
 
   const KanaTableYoonView({
     super.key,
