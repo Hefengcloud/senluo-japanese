@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_japanese_cms/pages/kana/views/kana_switcher.dart';
 import 'package:senluo_japanese_cms/pages/kana/views/kana_table_yoon_view.dart';
 import 'package:senluo_japanese_cms/repos/gojuon/models/kana_models.dart';
 
@@ -15,6 +16,7 @@ class KanaHomePage extends StatefulWidget {
 
 class _KanaHomePageState extends State<KanaHomePage>
     with SingleTickerProviderStateMixin {
+  bool _isHiragana = false;
   late TabController _tabController;
 
   @override
@@ -48,37 +50,54 @@ class _KanaHomePageState extends State<KanaHomePage>
   }
 
   _buildKanaTable(BuildContext context, KanaLoaded state) {
-    return Column(
+    return Stack(
       children: [
-        AppBar(title: const Text('五十音図')),
-        TabBar(
-          controller: _tabController,
-          tabs: const [
-            Tab(text: '清音'),
-            Tab(text: '濁音'),
-            Tab(text: '拗音'),
+        Column(
+          children: [
+            AppBar(title: const Text('五十音図')),
+            TabBar(
+              controller: _tabController,
+              tabs: const [
+                Tab(text: '清音'),
+                Tab(text: '濁音'),
+                Tab(text: '拗音'),
+              ],
+            ),
+            // TabBarView takes remaining space
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  KanaTableView(
+                    kanaRows: state.seion,
+                    kanaCategory: KanaCategory.seion,
+                    onKanaTap: (kana) {},
+                  ),
+                  KanaTableView(
+                    kanaRows: [...state.dakuon, ...state.handakuon],
+                    kanaCategory: KanaCategory.dakuon,
+                    onKanaTap: (kana) {},
+                  ),
+                  KanaTableYoonView(
+                    kanaRows: state.yoon,
+                    onKanaTap: (kana) {},
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
-        // TabBarView takes remaining space
-        Expanded(
-          child: TabBarView(
-            controller: _tabController,
-            children: [
-              KanaTableView(
-                kanaRows: state.seion,
-                kanaCategory: KanaCategory.seion,
-                onKanaTap: (kana) {},
-              ),
-              KanaTableView(
-                kanaRows: [...state.dakuon, ...state.handakuon],
-                kanaCategory: KanaCategory.dakuon,
-                onKanaTap: (kana) {},
-              ),
-              KanaTableYoonView(
-                kanaRows: state.yoon,
-                onKanaTap: (kana) {},
-              ),
-            ],
+        Positioned(
+          left: 0,
+          right: 0,
+          bottom: 0,
+          child: KanaSwitcher(
+            isHiragana: _isHiragana,
+            onChanged: (value) {
+              setState(() {
+                _isHiragana = value;
+              });
+            },
           ),
         ),
       ],
