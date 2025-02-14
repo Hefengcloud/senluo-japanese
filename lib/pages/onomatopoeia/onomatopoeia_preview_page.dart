@@ -74,7 +74,7 @@ class _OnomatopoeiaPreviewPageState extends State<OnomatopoeiaPreviewPage> {
   _buildDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: [],
+        children: const [],
       ),
     );
   }

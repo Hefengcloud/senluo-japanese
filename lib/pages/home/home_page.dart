@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/common/constants/themes.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_helper.dart';
 import 'package:senluo_japanese_cms/pages/home/helpers/navigation_item.dart';
-import 'package:senluo_japanese_cms/pages/home/views/title_text_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
