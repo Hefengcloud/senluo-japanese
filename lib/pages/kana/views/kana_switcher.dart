@@ -1,46 +1,57 @@
 import 'package:flutter/material.dart';
 
+import '../../../repos/gojuon/models/models.dart';
+
 class KanaSwitcher extends StatelessWidget {
-  final bool isHiragana;
-  final ValueChanged<bool> onChanged;
+  final KanaType selectedType;
+  final ValueChanged<KanaType> onChanged;
 
   const KanaSwitcher({
     super.key,
-    required this.isHiragana,
+    required this.selectedType,
     required this.onChanged,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(4),
+      height: 32, // 固定高度使按钮更小
+      width: 180, // 适合三个按钮的宽度
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: .1),
-            blurRadius: 4,
-            offset: const Offset(0, 1),
-          ),
-        ],
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.white.withValues(alpha: .9),
+        border: Border.all(color: Colors.grey.shade200),
       ),
       child: Row(
-        mainAxisSize: MainAxisSize.min, // 让Row更紧凑
+        mainAxisSize: MainAxisSize.min,
         children: [
           _buildToggleButton(
             text: '平仮名',
-            isSelected: isHiragana,
-            onTap: () => onChanged(true),
+            isSelected: selectedType == KanaType.hiragana,
+            onTap: () => onChanged(KanaType.hiragana),
           ),
-          const SizedBox(width: 1),
+          _buildDivider(),
           _buildToggleButton(
             text: '片仮名',
-            isSelected: !isHiragana,
-            onTap: () => onChanged(false),
+            isSelected: selectedType == KanaType.katakana,
+            onTap: () => onChanged(KanaType.katakana),
+          ),
+          _buildDivider(),
+          _buildToggleButton(
+            text: '全部',
+            isSelected: selectedType == KanaType.all,
+            onTap: () => onChanged(KanaType.all),
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildDivider() {
+    return Container(
+      width: 1,
+      height: 16,
+      color: Colors.grey.shade200,
     );
   }
 
@@ -51,21 +62,19 @@ class KanaSwitcher extends StatelessWidget {
   }) {
     return Expanded(
       child: Material(
-        color: isSelected ? Colors.indigo.shade100 : Colors.grey.shade100,
-        borderRadius: BorderRadius.circular(16),
+        color: Colors.transparent,
         child: InkWell(
           onTap: onTap,
           borderRadius: BorderRadius.circular(16),
           child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 8), // 减小垂直内边距
             alignment: Alignment.center,
             child: Text(
               text,
               style: TextStyle(
-                fontSize: 14, // 减小字体大小
+                fontSize: 12,
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
                 color:
-                    isSelected ? Colors.indigo.shade700 : Colors.grey.shade700,
+                    isSelected ? Colors.indigo.shade700 : Colors.grey.shade600,
               ),
             ),
           ),

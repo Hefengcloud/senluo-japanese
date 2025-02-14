@@ -10,8 +10,8 @@ enum KanaCategory {
 
 enum KanaType {
   hiragana,
-  katakata,
-  none,
+  katakana,
+  all,
 }
 
 class Kana extends Equatable {

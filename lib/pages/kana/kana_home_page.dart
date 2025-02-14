@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/pages/kana/views/kana_switcher.dart';
-import 'package:senluo_japanese_cms/pages/kana/views/kana_table_yoon_view.dart';
 import 'package:senluo_japanese_cms/repos/gojuon/models/kana_models.dart';
 
 import 'bloc/kana_bloc.dart';
@@ -16,8 +15,8 @@ class KanaHomePage extends StatefulWidget {
 
 class _KanaHomePageState extends State<KanaHomePage>
     with SingleTickerProviderStateMixin {
-  bool _isHiragana = false;
   late TabController _tabController;
+  var _selectedType = KanaType.all;
 
   @override
   void initState() {
@@ -69,17 +68,20 @@ class _KanaHomePageState extends State<KanaHomePage>
                 controller: _tabController,
                 children: [
                   KanaTableView(
+                    kanaType: _selectedType,
                     kanaRows: state.seion,
                     kanaCategory: KanaCategory.seion,
                     onKanaTap: (kana) {},
                   ),
                   KanaTableView(
+                    kanaType: _selectedType,
                     kanaRows: [...state.dakuon, ...state.handakuon],
                     kanaCategory: KanaCategory.dakuon,
                     onKanaTap: (kana) {},
                   ),
                   KanaTableYoonView(
                     kanaRows: state.yoon,
+                    kanaType: _selectedType,
                     onKanaTap: (kana) {},
                   ),
                 ],
@@ -88,16 +90,18 @@ class _KanaHomePageState extends State<KanaHomePage>
           ],
         ),
         Positioned(
+          bottom: MediaQuery.of(context).padding.bottom + 16,
           left: 0,
           right: 0,
-          bottom: 0,
-          child: KanaSwitcher(
-            isHiragana: _isHiragana,
-            onChanged: (value) {
-              setState(() {
-                _isHiragana = value;
-              });
-            },
+          child: Center(
+            child: KanaSwitcher(
+              selectedType: _selectedType,
+              onChanged: (type) {
+                setState(() {
+                  _selectedType = type;
+                });
+              },
+            ),
           ),
         ),
       ],

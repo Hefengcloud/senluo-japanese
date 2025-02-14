@@ -52,53 +52,60 @@ const kKanaLabelStyle = TextStyle(
   color: Colors.black26,
 );
 
+const kTableBottomMargin = 64.0;
+
 class KanaTableView extends StatelessWidget {
   final KanaCategory kanaCategory;
   final List<KanaRow> kanaRows;
   final KanaTapCallback onKanaTap;
+  final KanaType kanaType;
 
   const KanaTableView({
     super.key,
     required this.kanaCategory,
     required this.kanaRows,
     required this.onKanaTap,
+    required this.kanaType,
   });
 
   @override
   Widget build(BuildContext context) {
     final rows = _formateRows();
     return SingleChildScrollView(
-      child: Table(
-        columnWidths: kanaCategory == KanaCategory.yoon
-            ? const {}
-            : const {
-                0: FlexColumnWidth(1),
-                1: FlexColumnWidth(2),
-                2: FlexColumnWidth(2),
-                3: FlexColumnWidth(2),
-                4: FlexColumnWidth(2),
-                5: FlexColumnWidth(2),
-              },
-        children: [
-          TableRow(
-            children: kColumnLabels
-                .map(
-                  (e) => TableCell(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        e,
-                        style: kKanaLabelStyle,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: kTableBottomMargin),
+        child: Table(
+          columnWidths: kanaCategory == KanaCategory.yoon
+              ? const {}
+              : const {
+                  0: FlexColumnWidth(1),
+                  1: FlexColumnWidth(2),
+                  2: FlexColumnWidth(2),
+                  3: FlexColumnWidth(2),
+                  4: FlexColumnWidth(2),
+                  5: FlexColumnWidth(2),
+                },
+          children: [
+            TableRow(
+              children: kColumnLabels
+                  .map(
+                    (e) => TableCell(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          e,
+                          style: kKanaLabelStyle,
+                        ),
                       ),
                     ),
-                  ),
-                )
-                .toList(),
-          ),
-          ...rows.mapIndexed((index, kanas) => TableRow(
-                children: _buildTableRow(context, index, kanas),
-              )),
-        ],
+                  )
+                  .toList(),
+            ),
+            ...rows.mapIndexed((index, kanas) => TableRow(
+                  children: _buildTableRow(context, index, kanas),
+                )),
+          ],
+        ),
       ),
     );
   }
@@ -113,7 +120,7 @@ class KanaTableView extends StatelessWidget {
           (e) => TableCell(
             child: Card(
               child: InkWell(
-                child: KanaPieceView(kana: e),
+                child: KanaPieceView(kana: e, type: kanaType),
                 onTap: () => _showKanaPreviewDialog(context, e),
               ),
             ),
@@ -168,4 +175,45 @@ class KanaTableView extends StatelessWidget {
           ),
         ),
       );
+}
+
+class KanaTableYoonView extends StatelessWidget {
+  final List<KanaRow> kanaRows;
+  final KanaType kanaType;
+  final KanaTapCallback onKanaTap;
+
+  const KanaTableYoonView({
+    super.key,
+    required this.kanaRows,
+    required this.onKanaTap,
+    required this.kanaType,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: kanaRows
+            .map(
+              (row) => Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                children: row
+                    .map(
+                      (kana) => Expanded(
+                        child: Card(
+                          child: InkWell(
+                            child: KanaPieceView(kana: kana, type: kanaType),
+                            onTap: () => onKanaTap(kana),
+                          ),
+                        ),
+                      ),
+                    )
+                    .toList(),
+              ),
+            )
+            .toList(),
+      ),
+    );
+  }
 }
