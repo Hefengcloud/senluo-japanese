@@ -1,5 +1,8 @@
+import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:senluo_japanese_cms/pages/kana/kana_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/kana/views/kana_switcher.dart';
 import 'package:senluo_japanese_cms/repos/gojuon/models/kana_models.dart';
 
@@ -17,6 +20,7 @@ class _KanaHomePageState extends State<KanaHomePage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   var _selectedType = KanaType.all;
+  bool _isPronunciationMode = false;
 
   @override
   void initState() {
@@ -53,7 +57,12 @@ class _KanaHomePageState extends State<KanaHomePage>
       children: [
         Column(
           children: [
-            AppBar(title: const Text('五十音図')),
+            AppBar(
+              title: const Text('五十音図'),
+              actions: [
+                _buildModeToggle(context),
+              ],
+            ),
             TabBar(
               controller: _tabController,
               tabs: const [
@@ -71,18 +80,18 @@ class _KanaHomePageState extends State<KanaHomePage>
                     kanaType: _selectedType,
                     kanaRows: state.seion,
                     kanaCategory: KanaCategory.seion,
-                    onKanaTap: (kana) {},
+                    onKanaTap: (kana) => _onKanaTap(context, kana),
                   ),
                   KanaTableView(
                     kanaType: _selectedType,
                     kanaRows: [...state.dakuon, ...state.handakuon],
                     kanaCategory: KanaCategory.dakuon,
-                    onKanaTap: (kana) {},
+                    onKanaTap: (kana) => _onKanaTap(context, kana),
                   ),
                   KanaTableYoonView(
                     kanaRows: state.yoon,
                     kanaType: _selectedType,
-                    onKanaTap: (kana) {},
+                    onKanaTap: (kana) => _onKanaTap(context, kana),
                   ),
                 ],
               ),
@@ -105,6 +114,28 @@ class _KanaHomePageState extends State<KanaHomePage>
           ),
         ),
       ],
+    );
+  }
+
+  _onKanaTap(BuildContext context, Kana kana) {
+    if (_isPronunciationMode) {
+    } else {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (_) => KanaPreviewPage(kana: kana)),
+      );
+    }
+  }
+
+  _buildModeToggle(BuildContext context) {
+    return IconButton(
+      icon: _isPronunciationMode
+          ? const FaIcon(FontAwesomeIcons.volumeLow)
+          : const FaIcon(FontAwesomeIcons.volumeXmark),
+      onPressed: () {
+        setState(() {
+          _isPronunciationMode = !_isPronunciationMode;
+        });
+      },
     );
   }
 
