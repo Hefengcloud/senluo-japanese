@@ -32,9 +32,12 @@ Future<void> saveImageToFile(Uint8List bytes, String fileName) async {
 Future<bool> saveImageToGallery(Uint8List bytes) async {
   // Check for access premission
   final hasAccess = await Gal.hasAccess();
-  if (hasAccess) {
-    await Gal.putImageBytes(bytes);
-    return true;
+  if (!hasAccess) {
+    final requested = await Gal.requestAccess();
+    if (!requested) {
+      return false;
+    }
   }
-  return false;
+  await Gal.putImageBytes(bytes);
+  return true;
 }
