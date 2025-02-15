@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/kana/kana_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/kana/views/kana_piece_view.dart';
 
 import '../../../repos/gojuon/kana_repository.dart';
