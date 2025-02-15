@@ -34,7 +34,7 @@ class ProverbDetailsPage extends StatelessWidget {
             Text(
               proverb.name,
               style: GoogleFonts.getFont(
-                kJpGoogleFont,
+                kGoogleJPFont,
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
                 color: kProverbMainColor,
