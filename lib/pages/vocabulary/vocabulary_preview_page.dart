@@ -123,7 +123,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
               widget.title,
               textAlign: TextAlign.center,
               style: GoogleFonts.getFont(
-                kJpGoogleFont,
+                kGoogleJPFont,
                 color: kItemMainColor,
                 fontSize: 24 * _fontScale,
                 fontWeight: FontWeight.bold,
@@ -134,7 +134,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
               widget.subtitle,
               textAlign: TextAlign.center,
               style: GoogleFonts.getFont(
-                kJpGoogleFont,
+                kGoogleJPFont,
                 fontSize: 24 * _fontScale,
                 fontWeight: FontWeight.bold,
               ),
@@ -163,13 +163,13 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
                   word.text,
                   ruby: word.reading,
                   style: GoogleFonts.getFont(
-                    kJpGoogleFont,
+                    kGoogleJPFont,
                     fontSize: 20 * _fontScale,
                     fontWeight: FontWeight.bold,
                     color: kItemMainColor,
                   ),
                   rubyStyle: GoogleFonts.getFont(
-                    kJpGoogleFont,
+                    kGoogleJPFont,
                     color: Colors.black45,
                   ),
                 ),

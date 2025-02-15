@@ -62,7 +62,7 @@ class GrammarDetailsPage extends StatelessWidget {
             ...item.examples.map(
               (e) => SentencePlainText(
                 mainStyle: const TextStyle(
-                  fontFamily: kZhFont,
+                  fontFamily: kLocalZHFont,
                 ),
                 lines: [e.jp, e.zh, e.en],
                 emphasizedColor: kLevel2color[item.level] ?? Colors.black,

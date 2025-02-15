@@ -142,7 +142,7 @@ class KanjiPreviewPage extends StatelessWidget {
     return Text(
       detail.char,
       style: GoogleFonts.getFont(
-        kJpGoogleFont,
+        kGoogleJPFont,
         fontSize: 128,
         color: kBrandColor,
       ),

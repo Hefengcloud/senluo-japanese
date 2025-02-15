@@ -92,7 +92,7 @@ class _VocabularyWordListPageState extends State<VocabularyWordListPage> {
           title: Text(
             words[index].text,
             style: GoogleFonts.getFont(
-              kJpGoogleFont,
+              kGoogleJPFont,
               fontSize: 16,
               color: kBrandColor,
             ),

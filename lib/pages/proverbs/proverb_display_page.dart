@@ -126,7 +126,7 @@ class _ProverbDisplayPageState extends State<ProverbDisplayPage> {
       item.name,
       textAlign: TextAlign.center,
       style: GoogleFonts.getFont(
-        kJpGoogleFont,
+        kGoogleJPFont,
         fontSize: _currentSliderValue,
         fontWeight: FontWeight.bold,
         color: kProverbMainColor,
@@ -173,7 +173,7 @@ class _ProverbReadingView extends StatelessWidget {
       item.reading,
       textAlign: TextAlign.center,
       style: GoogleFonts.getFont(
-        kJpGoogleFont,
+        kGoogleJPFont,
         textStyle: const TextStyle(fontSize: 28),
       ),
       maxLines: 1,
@@ -190,7 +190,7 @@ class _ProverbLabel extends StatelessWidget {
       label: Text(
         'ことわざ',
         style: GoogleFonts.getFont(
-          kJpGoogleFont,
+          kGoogleJPFont,
           color: Colors.white,
           fontWeight: FontWeight.bold,
         ),

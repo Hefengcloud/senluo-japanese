@@ -43,7 +43,7 @@ class OnomatopoeiaImageView extends StatelessWidget {
                 child: Text(
                   item.meanings['zh']!.join('；'),
                   style: TextStyle(
-                    fontFamily: kZhFont,
+                    fontFamily: kLocalZHFont,
                     fontSize: kOnomatopoeiaBodyFontSize * fontScaleFactor,
                   ),
                 ),
@@ -83,7 +83,7 @@ class OnomatopoeiaImageView extends StatelessWidget {
       title: SentencePlainText(
         lines: [example['jp']!],
         mainStyle: GoogleFonts.getFont(
-          kJpGoogleFont,
+          kGoogleJPFont,
           fontSize: kOnomatopoeiaBodyFontSize * fontScaleFactor,
           fontWeight: FontWeight.bold,
         ),
@@ -92,7 +92,7 @@ class OnomatopoeiaImageView extends StatelessWidget {
       subtitle: Text(
         example['zh']!,
         style: TextStyle(
-          fontFamily: kZhFont,
+          fontFamily: kLocalZHFont,
           fontSize: kOnomatopoeiaBodyFontSize * fontScaleFactor - 2,
           color: Colors.black54,
         ),
@@ -110,7 +110,7 @@ class OnomatopoeiaImageView extends StatelessWidget {
       child: Text(
         text,
         style: const TextStyle(
-          fontFamily: kZhFont,
+          fontFamily: kLocalZHFont,
           color: Colors.white,
         ),
       ),
@@ -134,7 +134,7 @@ class _Header extends StatelessWidget {
           child: AutoSizeText(
             item.theName,
             style: GoogleFonts.getFont(
-              kJpGoogleFont,
+              kGoogleJPFont,
               fontSize: 72,
               fontWeight: FontWeight.bold,
               color: kItemMainColor,

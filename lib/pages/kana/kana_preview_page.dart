@@ -131,8 +131,8 @@ class KanaPreviewPage extends StatelessWidget {
               AutoSizeText(
                 kana.hiragana,
                 style: GoogleFonts.getFont(
-                  kJpGoogleFont,
-                  fontSize: 160,
+                  kGoogleJPFont,
+                  fontSize: 140,
                   fontWeight: FontWeight.bold,
                 ),
               ),
