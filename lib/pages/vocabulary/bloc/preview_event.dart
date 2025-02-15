@@ -13,12 +13,6 @@ class PreviewStarted extends PreviewEvent {
   const PreviewStarted({required this.words});
 }
 
-class PreviewGroupChanged extends PreviewEvent {
-  final String groupKey;
-
-  const PreviewGroupChanged({required this.groupKey});
-}
-
 class PreviewPageChanged extends PreviewEvent {
   final int page;
 

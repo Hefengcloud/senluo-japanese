@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/common/constants/fonts.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
 
 import '../../common/constants/colors.dart';
 import '../../repos/kanji/models/kanji_model.dart';
-import 'constants/styles.dart';
 import 'kanji_preview_page.dart';
 
 class KanjiListPage extends StatefulWidget {
@@ -58,7 +58,7 @@ class _GridView extends StatelessWidget {
             child: Text(
               kanji.char,
               style: GoogleFonts.getFont(
-                kKanjiFontName,
+                kJpGoogleFont,
                 fontSize: 48,
                 color: kBrandColor,
               ),

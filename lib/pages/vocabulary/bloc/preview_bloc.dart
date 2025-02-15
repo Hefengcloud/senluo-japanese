@@ -12,33 +12,14 @@ const kWordCountPerPage = 9;
 class PreviewBloc extends Bloc<PreviewEvent, PreviewState> {
   PreviewBloc() : super(PreviewLoading()) {
     on<PreviewStarted>(_onStarted);
-    on<PreviewGroupChanged>(_onGroupChanged);
     on<PreviewPageChanged>(_onPageChanged);
   }
 
   _onStarted(PreviewStarted event, Emitter<PreviewState> emit) async {
-    final groups = groupBy(event.words, (word) => word.category);
-    final String currentGroupKey = groups.keys.first;
-
-    int pageCount = _caculatePageCount(groups, currentGroupKey);
+    int pageCount = _caculatePageCount(event.words);
     emit(PreviewLoaded(
-      group2words: groups,
-      currentGroupKey: currentGroupKey,
+      words: event.words,
       pageCount: pageCount,
-    ));
-  }
-
-  _onGroupChanged(PreviewGroupChanged event, Emitter<PreviewState> emit) async {
-    final groupKey = event.groupKey;
-    final theState = state as PreviewLoaded;
-
-    int pageCount = _caculatePageCount(theState.group2words, groupKey);
-    int currentPage = 0;
-
-    emit(theState.copyWith(
-      currentGroupKey: groupKey,
-      pageCount: pageCount,
-      currentPage: currentPage,
     ));
   }
 
@@ -48,8 +29,7 @@ class PreviewBloc extends Bloc<PreviewEvent, PreviewState> {
     emit(theState.copyWith(currentPage: page));
   }
 
-  int _caculatePageCount(Map<String, List<Word>> groups, String groupKey) {
-    final words = groups[groupKey]!;
+  int _caculatePageCount(List<Word> words) {
     int wordCount = words.length;
     int pageCount = wordCount ~/ kWordCountPerPage;
     if (wordCount % kWordCountPerPage > 0) {

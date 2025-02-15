@@ -10,21 +10,16 @@ sealed class PreviewState extends Equatable {
 final class PreviewLoading extends PreviewState {}
 
 final class PreviewLoaded extends PreviewState {
-  final Map<String, List<Word>> group2words;
-  final String currentGroupKey;
+  final List<Word> words;
 
   final int pageCount;
   final int currentPage;
 
   const PreviewLoaded({
-    required this.group2words,
-    this.currentGroupKey = '',
+    this.words = const [],
     this.pageCount = 0,
     this.currentPage = 0,
   });
-
-  List<Word> get words =>
-      currentGroupKey.isNotEmpty ? group2words[currentGroupKey] ?? [] : [];
 
   List<Word> get displayedWords => words
       .whereIndexed((index, _) =>
@@ -33,8 +28,7 @@ final class PreviewLoaded extends PreviewState {
       .toList();
 
   @override
-  List<Object> get props =>
-      [group2words, currentGroupKey, pageCount, currentPage];
+  List<Object> get props => [words, pageCount, currentPage];
 
   PreviewLoaded copyWith({
     String? currentGroupKey,
@@ -42,8 +36,7 @@ final class PreviewLoaded extends PreviewState {
     int? currentPage,
   }) {
     return PreviewLoaded(
-      group2words: group2words,
-      currentGroupKey: currentGroupKey ?? this.currentGroupKey,
+      words: words,
       pageCount: pageCount ?? this.pageCount,
       currentPage: currentPage ?? this.currentPage,
     );

@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
 import 'package:senluo_japanese_cms/common/constants/colors.dart';
+import 'package:senluo_japanese_cms/common/constants/fonts.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
-import 'package:senluo_japanese_cms/pages/kanji/constants/styles.dart';
 
 import '../../common/models/word.dart';
 import '../../common/helpers/image_helper.dart';
@@ -142,7 +142,7 @@ class KanjiPreviewPage extends StatelessWidget {
     return Text(
       detail.char,
       style: GoogleFonts.getFont(
-        kKanjiFontName,
+        kJpGoogleFont,
         fontSize: 128,
         color: kBrandColor,
       ),
