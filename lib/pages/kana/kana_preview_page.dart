@@ -20,22 +20,79 @@ class KanaPreviewPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            _buildKanaCard(context),
-            const Gap(16),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text("「${kana.hiragana}」を含む言葉："),
-            ),
-            _buildRelatedWords(context),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              _buildKanaCard(context),
+              const Gap(8),
+              _buildSubtitle(context, "由来"),
+              const Gap(8),
+              _buildOrigins(context),
+              const Gap(8),
+              _buildSubtitle(context, "言葉"),
+              const Gap(8),
+              _buildRelatedWords(context),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => _showStrokeDialog(context),
         child: const FaIcon(FontAwesomeIcons.pen),
+      ),
+    );
+  }
+
+  _showStrokeDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text("筆順"),
+          content: Image.asset("assets/kana/strokes/h0a.gif"),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text("閉じる"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Container _buildSubtitle(BuildContext context, String text) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      child: Text(
+        text,
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+      ),
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        borderRadius: BorderRadius.circular(16),
+      ),
+    );
+  }
+
+  _buildOrigins(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset("assets/kana/origins/a-2.png", width: 80),
+              Icon(Icons.arrow_right),
+              Image.asset("assets/kana/origins/a-1.png", width: 80),
+              Icon(Icons.arrow_right),
+              Image.asset("assets/kana/origins/a-0.png", width: 80),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -50,6 +107,8 @@ class KanaPreviewPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               RubyText([RubyTextData("愛", ruby: 'あい')]),
+              RubyText([RubyTextData("青", ruby: 'あお')]),
+              RubyText([RubyTextData("青", ruby: 'あお')]),
               RubyText([RubyTextData("青", ruby: 'あお')]),
               RubyText([RubyTextData("甘", ruby: 'あま'), RubyTextData("い")]),
             ],

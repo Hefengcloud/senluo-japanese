@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/pages/kana/kana_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/kana/views/kana_switcher.dart';
 import 'package:senluo_japanese_cms/repos/gojuon/models/kana_models.dart';
@@ -126,16 +126,32 @@ class _KanaHomePageState extends State<KanaHomePage>
   }
 
   _buildModeToggle(BuildContext context) {
-    return IconButton(
-      icon: _isPronunciationMode
-          ? const FaIcon(FontAwesomeIcons.volumeLow)
-          : const FaIcon(FontAwesomeIcons.volumeXmark),
-      onPressed: () {
-        setState(() {
-          _isPronunciationMode = !_isPronunciationMode;
-        });
-      },
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const Text('発音\nモード', textAlign: TextAlign.center),
+        const Gap(8),
+        Switch(
+          value: _isPronunciationMode,
+          onChanged: (value) {
+            setState(() {
+              _isPronunciationMode = value;
+            });
+          },
+        ),
+        const Gap(8),
+      ],
     );
+    // return IconButton(
+    //   icon: _isPronunciationMode
+    //       ? const FaIcon(FontAwesomeIcons.volumeLow)
+    //       : const FaIcon(FontAwesomeIcons.volumeXmark),
+    //   onPressed: () {
+    //     setState(() {
+    //       _isPronunciationMode = !_isPronunciationMode;
+    //     });
+    //   },
+    // );
   }
 
   _buildLoading(BuildContext context) => const Center(

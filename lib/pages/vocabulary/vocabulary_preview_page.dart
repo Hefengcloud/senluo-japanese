@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -47,6 +46,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
             ),
             body: state is PreviewLoaded
                 ? Column(
+                    mainAxisSize: MainAxisSize.max,
                     children: [
                       RepaintBoundary(
                         key: _globalKey,
@@ -55,12 +55,12 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
                           child: _buildImage(context, state),
                         ),
                       ),
-                      Positioned(
-                        child: _buildPageChoices(context, state),
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                      )
+                      // Positioned(
+                      //   child: _buildPageChoices(context, state),
+                      //   left: 0,
+                      //   right: 0,
+                      //   bottom: 0,
+                      // ),
                     ],
                   )
                 : const Center(child: LinearProgressIndicator()),
