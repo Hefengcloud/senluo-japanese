@@ -21,3 +21,12 @@ class KanaDisplayStarted extends KanaDisplayEvent {
   @override
   List<Object> get props => [kana, type, category];
 }
+
+class KanaDisplayRowChanged extends KanaDisplayEvent {
+  final bool isNext;
+
+  const KanaDisplayRowChanged(this.isNext);
+
+  @override
+  List<Object> get props => [isNext];
+}

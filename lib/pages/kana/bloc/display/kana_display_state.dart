@@ -16,15 +16,19 @@ final class KanaDisplayLoaded extends KanaDisplayState {
   final KanaRow row;
   final Kana kana;
   final KanaType type;
+  final KanaCategory category;
 
   const KanaDisplayLoaded({
     required this.kana,
     required this.row,
     required this.type,
+    required this.category,
   });
 
+  bool get isHiragana => type == KanaType.hiragana;
+
   @override
-  List<Object> get props => [kana, row, type];
+  List<Object> get props => [kana, row, type, category];
 }
 
 final class KanaDisplayError extends KanaDisplayState {
