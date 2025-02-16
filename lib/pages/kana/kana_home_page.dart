@@ -58,6 +58,7 @@ class _KanaHomePageState extends State<KanaHomePage>
           children: [
             AppBar(
               title: const Text('五十音図'),
+              centerTitle: false,
               actions: [
                 _buildModeToggle(context),
               ],
@@ -79,18 +80,30 @@ class _KanaHomePageState extends State<KanaHomePage>
                     kanaType: _selectedType,
                     kanaRows: state.seion,
                     kanaCategory: KanaCategory.seion,
-                    onKanaTap: (kana) => _onKanaTap(context, kana),
+                    onKanaTap: (kana) => _onKanaTap(
+                      context,
+                      kana,
+                      KanaCategory.seion,
+                    ),
                   ),
                   KanaTableView(
                     kanaType: _selectedType,
                     kanaRows: [...state.dakuon, ...state.handakuon],
                     kanaCategory: KanaCategory.dakuon,
-                    onKanaTap: (kana) => _onKanaTap(context, kana),
+                    onKanaTap: (kana) => _onKanaTap(
+                      context,
+                      kana,
+                      KanaCategory.dakuon,
+                    ),
                   ),
                   KanaTableYoonView(
                     kanaRows: state.yoon,
                     kanaType: _selectedType,
-                    onKanaTap: (kana) => _onKanaTap(context, kana),
+                    onKanaTap: (kana) => _onKanaTap(
+                      context,
+                      kana,
+                      KanaCategory.yoon,
+                    ),
                   ),
                 ],
               ),
@@ -116,11 +129,19 @@ class _KanaHomePageState extends State<KanaHomePage>
     );
   }
 
-  _onKanaTap(BuildContext context, Kana kana) {
+  _onKanaTap(BuildContext context, Kana kana, KanaCategory category) {
+    context.read<KanaBloc>().add(
+          KanaSelected(
+            category: category,
+            kana: kana,
+          ),
+        );
     if (_isPronunciationMode) {
     } else {
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (_) => KanaPreviewPage(kana: kana)),
+        MaterialPageRoute(
+          builder: (_) => const KanaPreviewPage(),
+        ),
       );
     }
   }
@@ -129,7 +150,7 @@ class _KanaHomePageState extends State<KanaHomePage>
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const Text('発音\nモード', textAlign: TextAlign.center),
+        const Text('発音モード', textAlign: TextAlign.center),
         const Gap(8),
         Switch(
           value: _isPronunciationMode,

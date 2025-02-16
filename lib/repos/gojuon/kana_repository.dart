@@ -8,7 +8,12 @@ typedef KanaRow = List<Kana>;
 class KanaRepository {
   static const kYamlFilePath = 'assets/data/kanas.yaml';
 
+  Map<KanaCategory, List<KanaRow>> kanaTable = {};
+
   Future<Map<KanaCategory, List<KanaRow>>> loadKanaTable() async {
+    if (kanaTable.isNotEmpty) {
+      return kanaTable;
+    }
     String yamlString = await rootBundle.loadString(kYamlFilePath);
     final yaml = loadYaml(yamlString);
     final seion = yaml['seion'].map<List<Kana>>(lineMapper).toList();
@@ -16,12 +21,23 @@ class KanaRepository {
     final handakuon = yaml['handakuon'].map<List<Kana>>(lineMapper).toList();
     final yoon = yaml['yoon'].map<List<Kana>>(lineMapper).toList();
 
-    return {
+    kanaTable = {
       KanaCategory.seion: seion,
       KanaCategory.dakuon: dakuon,
       KanaCategory.handakuon: handakuon,
       KanaCategory.yoon: yoon,
     };
+
+    return kanaTable;
+  }
+
+  Future<KanaRow> loadKanaRow(Kana kana, KanaCategory category) async {
+    if (kanaTable.isEmpty) {
+      kanaTable = await loadKanaTable();
+    }
+    final kanaRows = kanaTable[category]!;
+    final kanaIndex = kanaRows.indexWhere((row) => row.contains(kana));
+    return kanaRows[kanaIndex];
   }
 
   List<Kana> lineMapper(line) {

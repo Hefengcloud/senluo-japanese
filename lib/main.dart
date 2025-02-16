@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
             ..add(ProverbStarted()),
         ),
         BlocProvider(
-          create: (_) => KanaBloc(kanaRepo: kanaRepo)..add(KanaStarted()),
+          create: (_) => KanaBloc(kanaRepo: kanaRepo)..add(const KanaStarted()),
         ),
         BlocProvider(
           create: (_) =>

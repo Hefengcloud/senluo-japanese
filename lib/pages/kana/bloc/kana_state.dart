@@ -11,10 +11,16 @@ final class KanaLoading extends KanaState {}
 
 final class KanaLoaded extends KanaState {
   final Map<KanaCategory, List<KanaRow>> kanaTable;
+  final KanaCategory category;
+  final Kana kana;
 
   const KanaLoaded({
     required this.kanaTable,
+    required this.category,
+    this.kana = Kana.empty,
   });
+
+  get row => kanaTable[category]!.firstWhere((row) => row.contains(kana));
 
   get seion => kanaTable[KanaCategory.seion];
 
@@ -24,6 +30,17 @@ final class KanaLoaded extends KanaState {
 
   get yoon => kanaTable[KanaCategory.yoon];
 
+  KanaLoaded copyWith({
+    Map<KanaCategory, List<KanaRow>>? kanaTable,
+    KanaCategory? category,
+    Kana? kana,
+  }) =>
+      KanaLoaded(
+        kanaTable: kanaTable ?? this.kanaTable,
+        category: category ?? this.category,
+        kana: kana ?? this.kana,
+      );
+
   @override
-  List<Object> get props => [kanaTable];
+  List<Object> get props => [kanaTable, category, kana];
 }
