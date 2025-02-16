@@ -3,7 +3,6 @@ import 'package:equatable/equatable.dart';
 enum KanaCategory {
   seion,
   dakuon,
-  handakuon,
   yoon,
   all,
 }

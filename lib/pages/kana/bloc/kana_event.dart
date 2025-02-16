@@ -19,18 +19,8 @@ final class KanaCategoryChanged extends KanaEvent {
   const KanaCategoryChanged({required this.category});
 }
 
-final class KanaSelected extends KanaEvent {
-  final KanaCategory category;
-  final Kana kana;
+final class KanaTypeChanged extends KanaEvent {
+  final KanaType type;
 
-  const KanaSelected({
-    required this.category,
-    required this.kana,
-  });
-}
-
-final class KanaChanged extends KanaEvent {
-  final bool isNext;
-
-  const KanaChanged({required this.isNext});
+  const KanaTypeChanged({required this.type});
 }

@@ -17,29 +17,24 @@ class KanaHomePage extends StatefulWidget {
 
 class _KanaHomePageState extends State<KanaHomePage>
     with SingleTickerProviderStateMixin {
-  late TabController _tabController;
-  var _selectedType = KanaType.all;
+  late TabController _categoryTabController;
   bool _isPronunciationMode = false;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _categoryTabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
-    _tabController.dispose();
+    _categoryTabController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return _buildBody(context);
-  }
-
-  _buildBody(BuildContext ctx) {
-    return BlocBuilder<KanaBloc, KanaState>(
+    return BlocConsumer<KanaBloc, KanaState>(
       builder: (context, state) {
         if (state is KanaLoading) {
           return _buildLoading(context);
@@ -48,10 +43,29 @@ class _KanaHomePageState extends State<KanaHomePage>
         }
         return const Placeholder();
       },
+      listener: (BuildContext context, KanaState state) {
+        if (state is KanaLoaded) {
+          if (_isPronunciationMode) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(state.kana.hiragana),
+              ),
+            );
+          }
+        }
+      },
     );
   }
 
   _buildKanaTable(BuildContext context, KanaLoaded state) {
+    _categoryTabController.addListener(() {
+      context.read<KanaBloc>().add(
+            KanaCategoryChanged(
+              category: KanaCategory.values[_categoryTabController.index],
+            ),
+          );
+    });
+
     return Stack(
       children: [
         Column(
@@ -64,7 +78,7 @@ class _KanaHomePageState extends State<KanaHomePage>
               ],
             ),
             TabBar(
-              controller: _tabController,
+              controller: _categoryTabController,
               tabs: const [
                 Tab(text: '清音'),
                 Tab(text: '濁音'),
@@ -74,36 +88,24 @@ class _KanaHomePageState extends State<KanaHomePage>
             // TabBarView takes remaining space
             Expanded(
               child: TabBarView(
-                controller: _tabController,
+                controller: _categoryTabController,
                 children: [
                   KanaTableView(
-                    kanaType: _selectedType,
+                    kanaType: state.type,
                     kanaRows: state.seion,
                     kanaCategory: KanaCategory.seion,
-                    onKanaTap: (kana) => _onKanaTap(
-                      context,
-                      kana,
-                      KanaCategory.seion,
-                    ),
+                    onKanaTap: (kana) => _onKanaTap(context, kana),
                   ),
                   KanaTableView(
-                    kanaType: _selectedType,
-                    kanaRows: [...state.dakuon, ...state.handakuon],
+                    kanaType: state.type,
+                    kanaRows: state.dakuon,
                     kanaCategory: KanaCategory.dakuon,
-                    onKanaTap: (kana) => _onKanaTap(
-                      context,
-                      kana,
-                      KanaCategory.dakuon,
-                    ),
+                    onKanaTap: (kana) => _onKanaTap(context, kana),
                   ),
                   KanaTableYoonView(
                     kanaRows: state.yoon,
-                    kanaType: _selectedType,
-                    onKanaTap: (kana) => _onKanaTap(
-                      context,
-                      kana,
-                      KanaCategory.yoon,
-                    ),
+                    kanaType: state.type,
+                    onKanaTap: (kana) => _onKanaTap(context, kana),
                   ),
                 ],
               ),
@@ -116,11 +118,9 @@ class _KanaHomePageState extends State<KanaHomePage>
           right: 0,
           child: Center(
             child: KanaSwitcher(
-              selectedType: _selectedType,
+              selectedType: state.type,
               onChanged: (type) {
-                setState(() {
-                  _selectedType = type;
-                });
+                context.read<KanaBloc>().add(KanaTypeChanged(type: type));
               },
             ),
           ),
@@ -129,18 +129,30 @@ class _KanaHomePageState extends State<KanaHomePage>
     );
   }
 
-  _onKanaTap(BuildContext context, Kana kana, KanaCategory category) {
-    context.read<KanaBloc>().add(
-          KanaSelected(
-            category: category,
-            kana: kana,
-          ),
-        );
+  _onKanaTap(BuildContext context, Kana kana) {
+    final state = context.read<KanaBloc>().state as KanaLoaded;
+
     if (_isPronunciationMode) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(kana.hiragana),
+        ),
+      );
     } else {
+      final index = state.kanaTable[state.category]!
+          .firstWhere((row) => row.contains(kana))
+          .indexOf(kana);
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (_) => const KanaPreviewPage(),
+          builder: (context) => RepositoryProvider(
+            create: (context) => context.read<KanaBloc>().kanaRepo,
+            child: KanaPreviewPage(
+              initialIndex: index,
+              kana: kana,
+              type: state.type,
+              category: state.category,
+            ),
+          ),
         ),
       );
     }
@@ -163,16 +175,6 @@ class _KanaHomePageState extends State<KanaHomePage>
         const Gap(8),
       ],
     );
-    // return IconButton(
-    //   icon: _isPronunciationMode
-    //       ? const FaIcon(FontAwesomeIcons.volumeLow)
-    //       : const FaIcon(FontAwesomeIcons.volumeXmark),
-    //   onPressed: () {
-    //     setState(() {
-    //       _isPronunciationMode = !_isPronunciationMode;
-    //     });
-    //   },
-    // );
   }
 
   _buildLoading(BuildContext context) => const Center(
