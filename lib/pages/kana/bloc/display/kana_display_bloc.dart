@@ -22,7 +22,7 @@ class KanaDisplayBloc extends Bloc<KanaDisplayEvent, KanaDisplayState> {
     try {
       final row = await kanaRepository.loadKanaRow(event.kana, event.category);
       emit(KanaDisplayLoaded(
-        kana: event.kana,
+        initialKana: event.kana,
         row: row,
         type: event.type,
         category: event.category,
@@ -41,22 +41,22 @@ class KanaDisplayBloc extends Bloc<KanaDisplayEvent, KanaDisplayState> {
     try {
       if (isNext) {
         final row = await kanaRepository.loadNextKanaRow(
-          theState.kana,
+          theState.initialKana,
           theState.category,
         );
         emit(KanaDisplayLoaded(
-          kana: row.first,
+          initialKana: row.first,
           row: row,
           type: theState.type,
           category: theState.category,
         ));
       } else {
         final row = await kanaRepository.loadPreviousKanaRow(
-          theState.kana,
+          theState.initialKana,
           theState.category,
         );
         emit(KanaDisplayLoaded(
-          kana: row.first,
+          initialKana: row.first,
           row: row,
           type: theState.type,
           category: theState.category,

@@ -61,15 +61,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
       child: BlocBuilder<KanaDisplayBloc, KanaDisplayState>(
         builder: (context, state) {
           return Scaffold(
-            appBar: AppBar(
-              title: Text(
-                state is KanaDisplayLoaded
-                    ? state.isHiragana
-                        ? state.kana.hiragana
-                        : state.kana.katakana
-                    : 'Loading',
-              ),
-            ),
+            appBar: _buildAppBar(state),
             body: state is KanaDisplayLoaded
                 ? _buildBody(context, state)
                 : const Center(child: CircularProgressIndicator()),
@@ -80,6 +72,20 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
           );
         },
       ),
+    );
+  }
+
+  AppBar _buildAppBar(KanaDisplayState state) {
+    var title = "Loading";
+
+    if (state is KanaDisplayLoaded) {
+      final kana = state.isHiragana
+          ? state.leadingKana.hiragana
+          : state.leadingKana.katakana;
+      title = "「$kana」行";
+    }
+    return AppBar(
+      title: Text(title),
     );
   }
 
@@ -112,11 +118,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
   }
 
   void _updateCurrentPageIndex(int index) {
-    _pageViewController.animateToPage(
-      index,
-      duration: const Duration(milliseconds: 400),
-      curve: Curves.easeInOut,
-    );
+    _pageViewController.jumpToPage(index);
   }
 
   _showStrokeDialog(BuildContext context) {
@@ -146,13 +148,13 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
           children: [
             _buildKanaCard(context, kana),
             const Gap(8),
-            const _Subtitle(text: "由来"),
-            const Gap(8),
-            _buildOrigins(context),
-            const Gap(8),
             const _Subtitle(text: "言葉"),
             const Gap(8),
             _buildRelatedWords(context),
+            const Gap(8),
+            const _Subtitle(text: "由来"),
+            const Gap(8),
+            _buildOrigins(context),
           ],
         ),
       ),
@@ -226,17 +228,15 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               AutoSizeText(
-                state.type == KanaType.hiragana
-                    ? state.kana.hiragana
-                    : state.kana.katakana,
+                state.type == KanaType.hiragana ? kana.hiragana : kana.katakana,
                 style: GoogleFonts.kleeOne(
                   fontSize: 140,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Gap(16),
-              const FaIcon(FontAwesomeIcons.volumeHigh, size: 16),
               const Gap(8),
+              const FaIcon(FontAwesomeIcons.volumeHigh, size: 16),
+              const Gap(4),
               Text(kana.romaji, style: const TextStyle(fontSize: 18)),
               const Gap(32),
             ],
@@ -326,6 +326,7 @@ class _KanaPageIndicator extends StatelessWidget {
             splashRadius: 16.0,
             padding: EdgeInsets.zero,
             onPressed: () {
+              onUpdateCurrentPageIndex(0);
               context
                   .read<KanaDisplayBloc>()
                   .add(const KanaDisplayRowChanged(false));
@@ -352,6 +353,7 @@ class _KanaPageIndicator extends StatelessWidget {
             splashRadius: 16.0,
             padding: EdgeInsets.zero,
             onPressed: () {
+              onUpdateCurrentPageIndex(0);
               context
                   .read<KanaDisplayBloc>()
                   .add(const KanaDisplayRowChanged(true));
