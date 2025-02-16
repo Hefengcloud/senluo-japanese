@@ -14,21 +14,23 @@ final class KanaDisplayLoading extends KanaDisplayState {
 
 final class KanaDisplayLoaded extends KanaDisplayState {
   final KanaRow row;
-  final Kana kana;
+  final Kana initialKana;
   final KanaType type;
   final KanaCategory category;
 
   const KanaDisplayLoaded({
-    required this.kana,
+    required this.initialKana,
     required this.row,
     required this.type,
     required this.category,
   });
 
+  Kana get leadingKana => row.first;
+
   bool get isHiragana => type == KanaType.hiragana;
 
   @override
-  List<Object> get props => [kana, row, type, category];
+  List<Object> get props => [initialKana, row, type, category];
 }
 
 final class KanaDisplayError extends KanaDisplayState {

@@ -149,7 +149,7 @@ class _KanaHomePageState extends State<KanaHomePage>
             child: KanaPreviewPage(
               initialIndex: index,
               kana: kana,
-              type: state.type,
+              type: state.type == KanaType.all ? KanaType.hiragana : state.type,
               category: state.category,
             ),
           ),
