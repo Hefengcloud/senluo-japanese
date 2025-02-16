@@ -38,6 +38,30 @@ class KanaRepository {
     return kanaRows[kanaIndex];
   }
 
+  Future<KanaRow> loadNextKanaRow(Kana kana, KanaCategory category) async {
+    if (kanaTable.isEmpty) {
+      kanaTable = await loadKanaTable();
+    }
+    final kanaRows = kanaTable[category]!;
+    final kanaIndex = kanaRows.indexWhere((row) => row.contains(kana));
+    if (kanaIndex == kanaRows.length - 1) {
+      return kanaRows[0];
+    }
+    return kanaRows[kanaIndex + 1];
+  }
+
+  Future<KanaRow> loadPreviousKanaRow(Kana kana, KanaCategory category) async {
+    if (kanaTable.isEmpty) {
+      kanaTable = await loadKanaTable();
+    }
+    final kanaRows = kanaTable[category]!;
+    final kanaIndex = kanaRows.indexWhere((row) => row.contains(kana));
+    if (kanaIndex == 0) {
+      return kanaRows[kanaRows.length - 1];
+    }
+    return kanaRows[kanaIndex - 1];
+  }
+
   List<Kana> lineMapper(line) {
     return line.map<Kana>(kanaMapper).toList();
   }

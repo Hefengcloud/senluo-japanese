@@ -63,7 +63,11 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
           return Scaffold(
             appBar: AppBar(
               title: Text(
-                state is KanaDisplayLoaded ? state.kana.hiragana : 'Loading',
+                state is KanaDisplayLoaded
+                    ? state.isHiragana
+                        ? state.kana.hiragana
+                        : state.kana.katakana
+                    : 'Loading',
               ),
             ),
             body: state is KanaDisplayLoaded
@@ -210,6 +214,8 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
   }
 
   _buildKanaCard(BuildContext context, Kana kana) {
+    final state = context.read<KanaDisplayBloc>().state as KanaDisplayLoaded;
+
     return SizedBox(
       width: double.infinity,
       child: Card(
@@ -220,7 +226,9 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               AutoSizeText(
-                kana.hiragana,
+                state.type == KanaType.hiragana
+                    ? state.kana.hiragana
+                    : state.kana.katakana,
                 style: GoogleFonts.kleeOne(
                   fontSize: 140,
                   fontWeight: FontWeight.bold,
@@ -307,6 +315,8 @@ class _KanaPageIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final state = context.read<KanaDisplayBloc>().state as KanaDisplayLoaded;
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -316,10 +326,9 @@ class _KanaPageIndicator extends StatelessWidget {
             splashRadius: 16.0,
             padding: EdgeInsets.zero,
             onPressed: () {
-              if (currentPageIndex == 0) {
-                return;
-              }
-              onUpdateCurrentPageIndex(currentPageIndex - 1);
+              context
+                  .read<KanaDisplayBloc>()
+                  .add(const KanaDisplayRowChanged(false));
             },
             icon: const Icon(Icons.arrow_left_rounded, size: 32.0),
           ),
@@ -329,7 +338,9 @@ class _KanaPageIndicator extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 4),
                 child: _KanaIndicator(
                   isLarge: index == currentPageIndex,
-                  text: kana.hiragana,
+                  text: state.type == KanaType.hiragana
+                      ? kana.hiragana
+                      : kana.katakana,
                 ),
               ),
               onTap: () {
@@ -341,10 +352,9 @@ class _KanaPageIndicator extends StatelessWidget {
             splashRadius: 16.0,
             padding: EdgeInsets.zero,
             onPressed: () {
-              if (currentPageIndex == kanaRow.length - 1) {
-                return;
-              }
-              onUpdateCurrentPageIndex(currentPageIndex + 1);
+              context
+                  .read<KanaDisplayBloc>()
+                  .add(const KanaDisplayRowChanged(true));
             },
             icon: const Icon(Icons.arrow_right_rounded, size: 32.0),
           ),
