@@ -9,13 +9,24 @@ import 'package:ruby_text/ruby_text.dart';
 
 import '../../repos/gojuon/kana_repository.dart';
 import '../../repos/gojuon/models/models.dart';
-import 'bloc/kana_bloc.dart';
+import 'bloc/display/kana_display_bloc.dart';
 
 class KanaPreviewPage extends StatefulWidget {
   static const kWordStyle = TextStyle(fontSize: 16);
   static const kOriginImageWidth = 48.0;
 
-  const KanaPreviewPage({super.key});
+  final int initialIndex;
+  final Kana kana;
+  final KanaType type;
+  final KanaCategory category;
+
+  const KanaPreviewPage({
+    super.key,
+    required this.initialIndex,
+    required this.kana,
+    required this.type,
+    required this.category,
+  });
 
   @override
   State<KanaPreviewPage> createState() => _KanaPreviewPageState();
@@ -23,12 +34,13 @@ class KanaPreviewPage extends StatefulWidget {
 
 class _KanaPreviewPageState extends State<KanaPreviewPage> {
   late PageController _pageViewController;
-  var _currentPageIndex = 1;
+  late int _currentPageIndex;
 
   @override
   void initState() {
     super.initState();
-    _pageViewController = PageController(initialPage: 0);
+    _currentPageIndex = widget.initialIndex;
+    _pageViewController = PageController(initialPage: _currentPageIndex);
   }
 
   @override
@@ -39,25 +51,35 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<KanaBloc, KanaState>(
-      builder: (context, state) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text(state is KanaLoaded ? state.kana.hiragana : 'Loading'),
-          ),
-          body: state is KanaLoaded
-              ? _buildBody(context, state)
-              : const Center(child: CircularProgressIndicator()),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () => _showStrokeDialog(context),
-            child: const FaIcon(FontAwesomeIcons.pen),
-          ),
-        );
-      },
+    return BlocProvider<KanaDisplayBloc>(
+      create: (context) => KanaDisplayBloc(context.read<KanaRepository>())
+        ..add(KanaDisplayStarted(
+          kana: widget.kana,
+          type: widget.type,
+          category: widget.category,
+        )),
+      child: BlocBuilder<KanaDisplayBloc, KanaDisplayState>(
+        builder: (context, state) {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text(
+                state is KanaDisplayLoaded ? state.kana.hiragana : 'Loading',
+              ),
+            ),
+            body: state is KanaDisplayLoaded
+                ? _buildBody(context, state)
+                : const Center(child: CircularProgressIndicator()),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () => _showStrokeDialog(context),
+              child: const FaIcon(FontAwesomeIcons.pen),
+            ),
+          );
+        },
+      ),
     );
   }
 
-  Widget _buildBody(BuildContext context, KanaLoaded state) {
+  Widget _buildBody(BuildContext context, KanaDisplayLoaded state) {
     return Stack(
       children: [
         _KanaPageIndicator(
@@ -146,12 +168,12 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
                 "assets/kana/origins/a-2.png",
                 width: KanaPreviewPage.kOriginImageWidth,
               ),
-              Icon(Icons.arrow_right),
+              const Icon(Icons.arrow_right),
               Image.asset(
                 "assets/kana/origins/a-1.png",
                 width: KanaPreviewPage.kOriginImageWidth,
               ),
-              Icon(Icons.arrow_right),
+              const Icon(Icons.arrow_right),
               Image.asset(
                 "assets/kana/origins/a-0.png",
                 width: KanaPreviewPage.kOriginImageWidth,

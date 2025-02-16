@@ -11,8 +11,8 @@ class KanaBloc extends Bloc<KanaEvent, KanaState> {
   final KanaRepository kanaRepo;
   KanaBloc({required this.kanaRepo}) : super(KanaLoading()) {
     on<KanaStarted>(_onStarted);
-    on<KanaSelected>(_onKanaSelected);
-    on<KanaChanged>(_onKanaChanged);
+    on<KanaCategoryChanged>(_onCategoryChanged);
+    on<KanaTypeChanged>(_onKanaTypeChanged);
   }
 
   _onStarted(
@@ -24,48 +24,19 @@ class KanaBloc extends Bloc<KanaEvent, KanaState> {
     emit(KanaLoaded(kanaTable: kanaTable, category: event.category));
   }
 
-  _onKanaSelected(
-    KanaSelected event,
+  _onCategoryChanged(
+    KanaCategoryChanged event,
     Emitter<KanaState> emit,
   ) async {
     final theState = state as KanaLoaded;
-    emit(theState.copyWith(kana: event.kana));
+    emit(theState.copyWith(category: event.category));
   }
 
-  _onKanaChanged(
-    KanaChanged event,
+  _onKanaTypeChanged(
+    KanaTypeChanged event,
     Emitter<KanaState> emit,
   ) async {
     final theState = state as KanaLoaded;
-    final row = theState.row;
-    final kanaTable = theState.kanaTable[theState.category]!;
-
-    final kanaIndex = row.indexOf(theState.kana);
-
-    if (event.isNext) {
-      if (kanaIndex < row.length - 1) {
-        final nextKana = row[kanaIndex + 1];
-        emit(theState.copyWith(kana: nextKana));
-      } else if (kanaIndex == row.length - 1) {
-        final currentRowIndex =
-            kanaTable.indexWhere((row) => row.contains(theState.kana));
-        if (currentRowIndex < kanaTable.length - 1) {
-          final nextRow = kanaTable[currentRowIndex + 1];
-          emit(theState.copyWith(kana: nextRow.first));
-        }
-      }
-    } else {
-      if (kanaIndex > 0) {
-        final prevKana = row[kanaIndex - 1];
-        emit(theState.copyWith(kana: prevKana));
-      } else if (kanaIndex == 0) {
-        final currentRowIndex =
-            kanaTable.indexWhere((row) => row.contains(theState.kana));
-        if (currentRowIndex > 0) {
-          final prevRow = kanaTable[currentRowIndex - 1];
-          emit(theState.copyWith(kana: prevRow.last));
-        }
-      }
-    }
+    emit(theState.copyWith(type: event.type));
   }
 }

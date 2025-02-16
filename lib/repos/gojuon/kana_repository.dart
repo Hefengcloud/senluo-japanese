@@ -18,13 +18,11 @@ class KanaRepository {
     final yaml = loadYaml(yamlString);
     final seion = yaml['seion'].map<List<Kana>>(lineMapper).toList();
     final dakuon = yaml['dakuon'].map<List<Kana>>(lineMapper).toList();
-    final handakuon = yaml['handakuon'].map<List<Kana>>(lineMapper).toList();
     final yoon = yaml['yoon'].map<List<Kana>>(lineMapper).toList();
 
     kanaTable = {
       KanaCategory.seion: seion,
       KanaCategory.dakuon: dakuon,
-      KanaCategory.handakuon: handakuon,
       KanaCategory.yoon: yoon,
     };
 
