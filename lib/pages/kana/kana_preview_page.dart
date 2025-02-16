@@ -1,46 +1,95 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
-import 'package:senluo_japanese_cms/common/constants/fonts.dart';
 
+import '../../repos/gojuon/kana_repository.dart';
 import '../../repos/gojuon/models/models.dart';
+import 'bloc/kana_bloc.dart';
 
-class KanaPreviewPage extends StatelessWidget {
-  final Kana kana;
-  const KanaPreviewPage({super.key, required this.kana});
+class KanaPreviewPage extends StatefulWidget {
+  static const kWordStyle = TextStyle(fontSize: 16);
+  static const kOriginImageWidth = 48.0;
+
+  const KanaPreviewPage({super.key});
+
+  @override
+  State<KanaPreviewPage> createState() => _KanaPreviewPageState();
+}
+
+class _KanaPreviewPageState extends State<KanaPreviewPage> {
+  late PageController _pageViewController;
+  var _currentPageIndex = 1;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageViewController = PageController(initialPage: 0);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _pageViewController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(kana.hiragana),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              _buildKanaCard(context),
-              const Gap(8),
-              _buildSubtitle(context, "由来"),
-              const Gap(8),
-              _buildOrigins(context),
-              const Gap(8),
-              _buildSubtitle(context, "言葉"),
-              const Gap(8),
-              _buildRelatedWords(context),
-            ],
+    return BlocBuilder<KanaBloc, KanaState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(state is KanaLoaded ? state.kana.hiragana : 'Loading'),
+          ),
+          body: state is KanaLoaded
+              ? _buildBody(context, state)
+              : const Center(child: CircularProgressIndicator()),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () => _showStrokeDialog(context),
+            child: const FaIcon(FontAwesomeIcons.pen),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildBody(BuildContext context, KanaLoaded state) {
+    return Stack(
+      children: [
+        _KanaPageIndicator(
+          kanaRow: state.row,
+          currentPageIndex: _currentPageIndex,
+          onUpdateCurrentPageIndex: _updateCurrentPageIndex,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 56),
+          child: PageView(
+            controller: _pageViewController,
+            onPageChanged: _handlePageViewChanged,
+            children: state.row.map<Widget>((kana) {
+              return _buildKanaPage(context, kana);
+            }).toList(),
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => _showStrokeDialog(context),
-        child: const FaIcon(FontAwesomeIcons.pen),
-      ),
+      ],
+    );
+  }
+
+  void _handlePageViewChanged(int currentPageIndex) {
+    setState(() {
+      _currentPageIndex = currentPageIndex;
+    });
+  }
+
+  void _updateCurrentPageIndex(int index) {
+    _pageViewController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOut,
     );
   }
 
@@ -62,16 +111,24 @@ class KanaPreviewPage extends StatelessWidget {
     );
   }
 
-  Container _buildSubtitle(BuildContext context, String text) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      child: Text(
-        text,
-        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-      ),
-      decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-        borderRadius: BorderRadius.circular(16),
+  Widget _buildKanaPage(BuildContext context, Kana kana) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            _buildKanaCard(context, kana),
+            const Gap(8),
+            const _Subtitle(text: "由来"),
+            const Gap(8),
+            _buildOrigins(context),
+            const Gap(8),
+            const _Subtitle(text: "言葉"),
+            const Gap(8),
+            _buildRelatedWords(context),
+          ],
+        ),
       ),
     );
   }
@@ -85,11 +142,20 @@ class KanaPreviewPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset("assets/kana/origins/a-2.png", width: 80),
+              Image.asset(
+                "assets/kana/origins/a-2.png",
+                width: KanaPreviewPage.kOriginImageWidth,
+              ),
               Icon(Icons.arrow_right),
-              Image.asset("assets/kana/origins/a-1.png", width: 80),
+              Image.asset(
+                "assets/kana/origins/a-1.png",
+                width: KanaPreviewPage.kOriginImageWidth,
+              ),
               Icon(Icons.arrow_right),
-              Image.asset("assets/kana/origins/a-0.png", width: 80),
+              Image.asset(
+                "assets/kana/origins/a-0.png",
+                width: KanaPreviewPage.kOriginImageWidth,
+              ),
             ],
           ),
         ),
@@ -106,7 +172,10 @@ class KanaPreviewPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              RubyText([RubyTextData("愛", ruby: 'あい')]),
+              RubyText(
+                [RubyTextData("愛", ruby: 'あい')],
+                style: TextStyle(fontSize: 16),
+              ),
               RubyText([RubyTextData("青", ruby: 'あお')]),
               RubyText([RubyTextData("青", ruby: 'あお')]),
               RubyText([RubyTextData("青", ruby: 'あお')]),
@@ -118,7 +187,7 @@ class KanaPreviewPage extends StatelessWidget {
     );
   }
 
-  _buildKanaCard(BuildContext context) {
+  _buildKanaCard(BuildContext context, Kana kana) {
     return SizedBox(
       width: double.infinity,
       child: Card(
@@ -130,20 +199,134 @@ class KanaPreviewPage extends StatelessWidget {
             children: [
               AutoSizeText(
                 kana.hiragana,
-                style: GoogleFonts.getFont(
-                  kGoogleJPFont,
+                style: GoogleFonts.kleeOne(
                   fontSize: 140,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const Gap(16),
-              const FaIcon(FontAwesomeIcons.volumeHigh),
+              const FaIcon(FontAwesomeIcons.volumeHigh, size: 16),
               const Gap(8),
               Text(kana.romaji, style: const TextStyle(fontSize: 18)),
               const Gap(32),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _Subtitle extends StatelessWidget {
+  const _Subtitle({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 56,
+      alignment: Alignment.center,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+}
+
+class _KanaIndicator extends StatelessWidget {
+  const _KanaIndicator({required this.text, this.isLarge = false});
+
+  final String text;
+  final bool isLarge;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      width: isLarge ? 40 : 32,
+      height: isLarge ? 40 : 32,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        borderRadius: BorderRadius.circular(isLarge ? 20 : 16),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+          fontSize: isLarge ? 20 : 16,
+        ),
+      ),
+    );
+  }
+}
+
+class _KanaPageIndicator extends StatelessWidget {
+  const _KanaPageIndicator({
+    required this.kanaRow,
+    required this.currentPageIndex,
+    required this.onUpdateCurrentPageIndex,
+  });
+
+  final int currentPageIndex;
+  final KanaRow kanaRow;
+  final void Function(int) onUpdateCurrentPageIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(
+            splashRadius: 16.0,
+            padding: EdgeInsets.zero,
+            onPressed: () {
+              if (currentPageIndex == 0) {
+                return;
+              }
+              onUpdateCurrentPageIndex(currentPageIndex - 1);
+            },
+            icon: const Icon(Icons.arrow_left_rounded, size: 32.0),
+          ),
+          ...kanaRow.mapIndexed<Widget>(
+            (index, kana) => GestureDetector(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: _KanaIndicator(
+                  isLarge: index == currentPageIndex,
+                  text: kana.hiragana,
+                ),
+              ),
+              onTap: () {
+                onUpdateCurrentPageIndex(index);
+              },
+            ),
+          ),
+          IconButton(
+            splashRadius: 16.0,
+            padding: EdgeInsets.zero,
+            onPressed: () {
+              if (currentPageIndex == kanaRow.length - 1) {
+                return;
+              }
+              onUpdateCurrentPageIndex(currentPageIndex + 1);
+            },
+            icon: const Icon(Icons.arrow_right_rounded, size: 32.0),
+          ),
+        ],
       ),
     );
   }

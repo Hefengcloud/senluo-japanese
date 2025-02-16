@@ -57,8 +57,7 @@ class _GridView extends StatelessWidget {
           child: Center(
             child: Text(
               kanji.char,
-              style: GoogleFonts.getFont(
-                kGoogleJPFont,
+              style: GoogleFonts.kleeOne(
                 fontSize: 48,
                 color: kBrandColor,
               ),
