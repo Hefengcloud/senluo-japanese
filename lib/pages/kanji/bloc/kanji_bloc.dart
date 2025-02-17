@@ -14,6 +14,8 @@ class KanjiBloc extends Bloc<KanjiEvent, KanjiState> {
   KanjiBloc(this.kanjiRepository) : super(KanjiLoading()) {
     on<KanjiStarted>(_onStarted);
     on<KanjiLevelChanged>(_onLevelChanged);
+    on<KanjiDetailStarted>(_onDetailStarted);
+    on<KanjiDetailChanged>(_onDetailChanged);
   }
 
   _onStarted(KanjiStarted event, Emitter<KanjiState> emit) async {
@@ -24,5 +26,33 @@ class KanjiBloc extends Bloc<KanjiEvent, KanjiState> {
     final level = event.level;
     final kanjis = await kanjiRepository.loadJlptKanjis(level);
     emit(KanjiLoaded(kanjis: kanjis, jlptLevel: level));
+  }
+
+  _onDetailStarted(KanjiDetailStarted event, Emitter<KanjiState> emit) async {
+    final detail = await kanjiRepository.loadKanjiDetail(event.kanji);
+    emit((state as KanjiLoaded).copyWith(currentKanjiDetail: detail));
+  }
+
+  _onDetailChanged(KanjiDetailChanged event, Emitter<KanjiState> emit) async {
+    final theState = state as KanjiLoaded;
+    var index = theState.kanjis
+        .indexWhere((kanji) => kanji.key == theState.currentKanjiDetail.key);
+    if (event.previous) {
+      index = index - 1;
+      if (index <= 0) {
+        index = theState.kanjis.length - 1;
+      }
+    } else {
+      index = index + 1;
+      if (index > theState.kanjis.length - 1) {
+        index = 0;
+      }
+    }
+
+    final kanji = theState.kanjis[index];
+
+    final kanjiDetail = await kanjiRepository.loadKanjiDetail(kanji);
+
+    emit(theState.copyWith(currentKanjiDetail: kanjiDetail));
   }
 }
