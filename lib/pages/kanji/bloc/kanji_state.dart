@@ -12,26 +12,31 @@ final class KanjiLoading extends KanjiState {}
 final class KanjiLoaded extends KanjiState {
   final JLPTLevel jlptLevel;
   final List<Kanji> kanjis;
-  final KanjiDetail currentKanjiDetail;
+
+  final int currentIndex;
+  final KanjiDetail currentDetail;
 
   const KanjiLoaded({
     required this.kanjis,
     required this.jlptLevel,
-    this.currentKanjiDetail = KanjiDetail.empty,
+    this.currentIndex = -1,
+    this.currentDetail = KanjiDetail.empty,
   });
 
   KanjiLoaded copyWith({
     JLPTLevel? jlptLevel,
     List<Kanji>? kanjis,
-    KanjiDetail? currentKanjiDetail,
+    int? currentIndex,
+    KanjiDetail? currentDetail,
   }) {
     return KanjiLoaded(
       kanjis: kanjis ?? this.kanjis,
       jlptLevel: jlptLevel ?? this.jlptLevel,
-      currentKanjiDetail: currentKanjiDetail ?? this.currentKanjiDetail,
+      currentIndex: currentIndex ?? this.currentIndex,
+      currentDetail: currentDetail ?? this.currentDetail,
     );
   }
 
   @override
-  List<Object?> get props => [kanjis, jlptLevel, currentKanjiDetail];
+  List<Object?> get props => [kanjis, jlptLevel, currentDetail];
 }

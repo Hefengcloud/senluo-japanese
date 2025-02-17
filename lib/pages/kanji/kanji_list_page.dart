@@ -62,14 +62,16 @@ class _GridView extends StatelessWidget {
               ),
             ),
           ),
-          onTap: () => _showKanjiPreview(context, kanji),
+          onTap: () => _showKanjiPreview(context, kanjis.indexOf(kanji)),
         ),
       );
 
-  _showKanjiPreview(BuildContext context, Kanji kanji) {
+  _showKanjiPreview(BuildContext context, int index) {
+    context.read<KanjiBloc>().add(KanjiDetailStarted(index: index));
+
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => KanjiPreviewPage(kanji: kanji),
+        builder: (_) => KanjiPreviewPage(index: index),
       ),
     );
   }

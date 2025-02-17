@@ -16,13 +16,19 @@ class KanjiLevelChanged extends KanjiEvent {
 }
 
 class KanjiDetailStarted extends KanjiEvent {
-  final Kanji kanji;
+  final int index;
 
-  const KanjiDetailStarted({required this.kanji});
+  const KanjiDetailStarted({required this.index});
 }
 
-class KanjiDetailChanged extends KanjiEvent {
+class KanjiIndexChanged extends KanjiEvent {
+  final int index;
+
+  const KanjiIndexChanged({required this.index});
+}
+
+class KanjiDetailRequested extends KanjiEvent {
   final bool previous;
 
-  const KanjiDetailChanged({required this.previous});
+  const KanjiDetailRequested({required this.previous});
 }
