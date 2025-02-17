@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/constants/themes.dart';
 import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
+import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/kanji/kanji_list_page.dart';
 
 import 'bloc/kanji_bloc.dart';
@@ -97,16 +99,30 @@ class KanjiNavigationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return GridView.count(
+      crossAxisCount: 2,
+      mainAxisSpacing: 8,
+      crossAxisSpacing: 8,
+      padding: const EdgeInsets.all(8),
       children: JLPTLevel.values
           .where((e) => e != JLPTLevel.none)
           .toList()
           .map(
-            (e) => ListTile(
-              trailing: const Icon(Icons.arrow_right),
-              // trailing: currentLevel == e ? const Icon(Icons.check) : null,
-              title: Text(e.name.toUpperCase(), style: kHomeNavTextStyle),
-              onTap: () => onLevelChanged(e),
+            (e) => Card(
+              child: InkWell(
+                child: Center(
+                  child: Text(
+                    e.name.toUpperCase(),
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.kleeOne(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                      color: kLevel2color[e],
+                    ),
+                  ),
+                ),
+                onTap: () => onLevelChanged(e),
+              ),
             ),
           )
           .toList(),

@@ -6,7 +6,7 @@ import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import '../../common/constants/colors.dart';
 import '../../repos/kanji/models/kanji_model.dart';
 import 'bloc/kanji_bloc.dart';
-import 'kanji_preview_page.dart';
+import 'kanji_detail_page.dart';
 
 class KanjiListPage extends StatelessWidget {
   final JLPTLevel level;
@@ -19,9 +19,10 @@ class KanjiListPage extends StatelessWidget {
 
     return BlocBuilder<KanjiBloc, KanjiState>(
       builder: (context, state) {
+        final total = state is KanjiLoaded ? (state).kanjis.length : 0;
         return Scaffold(
           appBar: AppBar(
-            title: Text(level.name.toUpperCase()),
+            title: Text("${level.name.toUpperCase()} ($total)"),
           ),
           body: state is KanjiLoaded && state.kanjis.isNotEmpty
               ? _GridView(kanjis: state.kanjis)
@@ -39,7 +40,7 @@ class _GridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: GridView.count(
         crossAxisCount: 4,
         mainAxisSpacing: 8,
@@ -71,7 +72,7 @@ class _GridView extends StatelessWidget {
 
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => KanjiPreviewPage(index: index),
+        builder: (_) => KanjiDetailPage(index: index),
       ),
     );
   }
