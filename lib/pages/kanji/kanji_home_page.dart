@@ -36,16 +36,7 @@ class _KanjiHomePageState extends State<KanjiHomePage>
         return _buildContent(context, state);
       },
       listener: (BuildContext context, KanjiState state) {
-        if (state is KanjiLoaded && state.jlptLevel != JLPTLevel.none) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (_) => KanjiListPage(
-                kanjis: state.kanjis,
-                level: state.jlptLevel,
-              ),
-            ),
-          );
-        }
+        if (state is KanjiLoaded && state.jlptLevel != JLPTLevel.none) {}
       },
     );
   }
@@ -72,13 +63,23 @@ class _KanjiHomePageState extends State<KanjiHomePage>
               children: [
                 KanjiNavigationView(
                   currentLevel: currentLevel,
-                  onLevelChanged: (level) => BlocProvider.of<KanjiBloc>(context)
-                      .add(KanjiLevelChanged(level)),
+                  onLevelChanged: (level) => _onLevelSelected(context, level),
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  _onLevelSelected(BuildContext context, JLPTLevel level) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => RepositoryProvider.value(
+          value: context.read<KanjiBloc>().kanjiRepository,
+          child: KanjiListPage(level: level),
+        ),
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
-import 'package:senluo_japanese_cms/common/constants/fonts.dart';
 
 import '../../common/models/word.dart';
 import '../../common/helpers/image_helper.dart';
@@ -122,8 +121,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
             Text(
               widget.title,
               textAlign: TextAlign.center,
-              style: GoogleFonts.getFont(
-                kGoogleJPFont,
+              style: GoogleFonts.notoSansJp(
                 color: kItemMainColor,
                 fontSize: 24 * _fontScale,
                 fontWeight: FontWeight.bold,
@@ -133,8 +131,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
             Text(
               widget.subtitle,
               textAlign: TextAlign.center,
-              style: GoogleFonts.getFont(
-                kGoogleJPFont,
+              style: GoogleFonts.notoSansJp(
                 fontSize: 24 * _fontScale,
                 fontWeight: FontWeight.bold,
               ),
@@ -162,14 +159,12 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
                 RubyTextData(
                   word.text,
                   ruby: word.reading,
-                  style: GoogleFonts.getFont(
-                    kGoogleJPFont,
+                  style: GoogleFonts.notoSansJp(
                     fontSize: 20 * _fontScale,
                     fontWeight: FontWeight.bold,
                     color: kItemMainColor,
                   ),
-                  rubyStyle: GoogleFonts.getFont(
-                    kGoogleJPFont,
+                  rubyStyle: GoogleFonts.notoSansJp(
                     color: Colors.black45,
                   ),
                 ),

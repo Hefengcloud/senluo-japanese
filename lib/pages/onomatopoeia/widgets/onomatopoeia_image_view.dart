@@ -82,8 +82,7 @@ class OnomatopoeiaImageView extends StatelessWidget {
       contentPadding: const EdgeInsets.all(0),
       title: SentencePlainText(
         lines: [example['jp']!],
-        mainStyle: GoogleFonts.getFont(
-          kGoogleJPFont,
+        mainStyle: GoogleFonts.notoSansJp(
           fontSize: kOnomatopoeiaBodyFontSize * fontScaleFactor,
           fontWeight: FontWeight.bold,
         ),
@@ -133,8 +132,7 @@ class _Header extends StatelessWidget {
         Expanded(
           child: AutoSizeText(
             item.theName,
-            style: GoogleFonts.getFont(
-              kGoogleJPFont,
+            style: GoogleFonts.notoSansJp(
               fontSize: 72,
               fontWeight: FontWeight.bold,
               color: kItemMainColor,

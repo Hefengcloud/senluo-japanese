@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_display_page.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 
-import '../../common/constants/fonts.dart';
 import '../../widgets/sentence_plain_text.dart';
 import 'constants/proverb_colors.dart';
 
@@ -33,8 +32,7 @@ class ProverbDetailsPage extends StatelessWidget {
           children: [
             Text(
               proverb.name,
-              style: GoogleFonts.getFont(
-                kGoogleJPFont,
+              style: GoogleFonts.notoSansJp(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
                 color: kProverbMainColor,
