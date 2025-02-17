@@ -5,6 +5,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:gal/gal.dart';
 
 Future<Uint8List?> captureWidget(GlobalKey globalKey) async {
@@ -13,6 +14,14 @@ Future<Uint8List?> captureWidget(GlobalKey globalKey) async {
   final image = await boundary.toImage(pixelRatio: 3.0);
   final byteData = await image.toByteData(format: ImageByteFormat.png);
   return byteData?.buffer.asUint8List();
+}
+
+Future<void> saveImage(Uint8List bytes, String fileName) async {
+  if (Device.get().isPhone) {
+    saveImageToGallery(bytes);
+  } else {
+    saveImageToFile(bytes, fileName);
+  }
 }
 
 Future<void> saveImageToFile(Uint8List bytes, String fileName) async {

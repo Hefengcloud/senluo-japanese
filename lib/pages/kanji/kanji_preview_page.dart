@@ -12,32 +12,25 @@ import '../../common/helpers/text_helper.dart';
 import '../../repos/kanji/models/kanji_model.dart';
 
 class KanjiPreviewPage extends StatefulWidget {
-  final Kanji kanji;
+  final int index;
 
-  const KanjiPreviewPage({super.key, required this.kanji});
+  const KanjiPreviewPage({super.key, required this.index});
 
   @override
   State<KanjiPreviewPage> createState() => _KanjiPreviewPageState();
 }
 
 class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
-  final _grayTitleStyle = const TextStyle(
-    color: Colors.grey,
-  );
-
   final GlobalKey globalKey = GlobalKey();
 
   double _fontScale = 1.0;
 
   @override
   Widget build(BuildContext context) {
-    context.read<KanjiBloc>().add(KanjiDetailStarted(kanji: widget.kanji));
-
     return BlocBuilder<KanjiBloc, KanjiState>(
       builder: (context, state) {
-        if (state is KanjiLoaded &&
-            state.currentKanjiDetail != KanjiDetail.empty) {
-          return _buildKanjiDetail(context, state.currentKanjiDetail);
+        if (state is KanjiLoaded && state.currentIndex >= 0) {
+          return _buildKanjiDetail(context, state);
         } else {
           return _buildLoading(context);
         }
@@ -54,52 +47,69 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
     );
   }
 
-  _buildKanjiDetail(BuildContext context, KanjiDetail kanji) {
+  _buildKanjiDetail(BuildContext context, KanjiLoaded state) {
     return Scaffold(
       appBar: AppBar(title: const Text('漢字')),
-      body: _buildBody(context, kanji),
-      endDrawer: _buildDrawer(context, kanji),
-      bottomNavigationBar: BottomAppBar(child: _buildBottomActions(kanji)),
+      body: _buildBody(context, state),
+      endDrawer: _buildDrawer(context, state.currentDetail),
+      bottomNavigationBar:
+          BottomAppBar(child: _buildBottomActions(state.currentDetail)),
     );
   }
 
-  _buildBody(BuildContext context, KanjiDetail detail) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: RepaintBoundary(
+  _buildBody(BuildContext context, KanjiLoaded state) {
+    return GestureDetector(
+      onHorizontalDragEnd: (DragEndDetails details) {
+        final bloc = context.read<KanjiBloc>();
+        if (details.primaryVelocity! > 0) {
+          bloc.add(const KanjiDetailRequested(previous: true));
+        } else if (details.primaryVelocity! < 0) {
+          bloc.add(const KanjiDetailRequested(previous: false));
+        }
+      },
+      child: Column(
+        children: [
+          RepaintBoundary(
             key: globalKey,
-            child: _buildImagePanel(context, detail),
+            child: AspectRatio(
+              aspectRatio: 3 / 4,
+              child: _buildImagePanel(context, state.currentDetail),
+            ),
           ),
-        ),
-        const Spacer(),
-        _buildPageNavigators(context),
-        const Spacer(),
-      ],
+          const Spacer(),
+          _buildPageNavigators(context, state),
+          const Spacer(),
+        ],
+      ),
     );
   }
 
-  _buildPageNavigators(BuildContext context) {
+  _buildPageNavigators(BuildContext context, KanjiLoaded state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          iconSize: 32,
+          iconSize: 48,
           onPressed: () {
             context
                 .read<KanjiBloc>()
-                .add(const KanjiDetailChanged(previous: true));
+                .add(const KanjiDetailRequested(previous: true));
           },
           icon: const Icon(Icons.arrow_left),
         ),
-        const Gap(16),
+        SizedBox(
+          width: 100,
+          child: Text(
+            "${state.currentIndex + 1} / ${state.kanjis.length}",
+            textAlign: TextAlign.center,
+          ),
+        ),
         IconButton(
-          iconSize: 32,
+          iconSize: 48,
           onPressed: () {
             context
                 .read<KanjiBloc>()
-                .add(const KanjiDetailChanged(previous: false));
+                .add(const KanjiDetailRequested(previous: false));
           },
           icon: const Icon(Icons.arrow_right),
         ),
@@ -131,39 +141,35 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
       );
 
   _buildImagePanel(BuildContext context, KanjiDetail detail) {
-    return AspectRatio(
-      aspectRatio: 3 / 4,
-      child: Container(
-        decoration: BoxDecoration(
-          color: kBgColor,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                _buildKanji(detail),
-                const Gap(32),
-                _buildReadings(detail),
-              ],
-            ),
-            const Gap(32),
-            _buildMeaning(detail),
-            const Gap(32),
-            _buildVocabulary('言葉', detail.words.take(8).toList()),
-            if (detail.idioms.isNotEmpty) ...[
-              const Gap(16),
-              _buildVocabulary('四字熟語', detail.idioms.take(4).toList())
+    return Container(
+      decoration: const BoxDecoration(
+        color: kBgColor,
+      ),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              _buildKanji(detail),
+              const Gap(32),
+              _buildReadings(detail),
             ],
-            if (detail.proverbs.isNotEmpty) ...[
-              const Gap(16),
-              _buildVocabulary('ことわざ', detail.proverbs.take(4).toList())
-            ],
+          ),
+          const Gap(32),
+          _buildMeaning(detail),
+          const Gap(32),
+          _buildVocabulary('言葉', detail.words.take(8).toList()),
+          if (detail.idioms.isNotEmpty) ...[
+            const Gap(16),
+            _buildVocabulary('四字熟語', detail.idioms.take(4).toList())
           ],
-        ),
+          if (detail.proverbs.isNotEmpty) ...[
+            const Gap(16),
+            _buildVocabulary('ことわざ', detail.proverbs.take(4).toList())
+          ],
+        ],
       ),
     );
   }
@@ -181,9 +187,9 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildReadingText('訓読み  ', detail.kunyomis),
+        _buildReadingText('訓読み', detail.kunyomis),
         const Gap(8),
-        _buildReadingText('音読み  ', detail.onyomis),
+        _buildReadingText('音読み', detail.onyomis),
       ],
     );
   }
@@ -200,10 +206,12 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
   }
 
   _buildMeaning(KanjiDetail detail) {
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Text('意味', style: _grayTitleStyle.copyWith(fontSize: 14 * _fontScale)),
-        const Gap(16),
+        const _Subtitle('意味'),
+        const Gap(8),
         Text(
           detail.meaning,
           style: TextStyle(fontSize: 14 * _fontScale),
@@ -216,10 +224,7 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          '$title  ',
-          style: _grayTitleStyle.copyWith(fontSize: 14 * _fontScale),
-        ),
+        _Subtitle(title),
         const Gap(8),
         Wrap(
           children: words.map<Widget>((e) {
@@ -254,10 +259,7 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
 
   _buildReadingText(String title, List<String> readings) => Row(
         children: [
-          Text(
-            title,
-            style: _grayTitleStyle.copyWith(fontSize: 14 * _fontScale),
-          ),
+          _Subtitle(title),
           const Gap(16),
           Column(
             mainAxisSize: MainAxisSize.min,
@@ -283,7 +285,7 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
 
   _saveKanjiAsImage(String name) async {
     final bytes = await captureWidget(globalKey);
-    await saveImageToFile(bytes!, '$name.png');
+    await saveImage(bytes!, '$name.png');
   }
 
   _buildDrawer(BuildContext context, KanjiDetail detail) {
@@ -314,6 +316,29 @@ class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
                 onTap: () {},
               )),
         ],
+      ),
+    );
+  }
+}
+
+class _Subtitle extends StatelessWidget {
+  final String text;
+  const _Subtitle(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: kBrandColor.withAlpha(33),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: kBrandColor,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
