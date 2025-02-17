@@ -4,7 +4,6 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
 import 'package:senluo_japanese_cms/common/constants/colors.dart';
-import 'package:senluo_japanese_cms/common/constants/fonts.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 
 import '../../common/models/word.dart';
@@ -141,8 +140,7 @@ class KanjiPreviewPage extends StatelessWidget {
   Text _buildKanjiCard(KanjiDetail detail) {
     return Text(
       detail.char,
-      style: GoogleFonts.getFont(
-        kGoogleJPFont,
+      style: GoogleFonts.kleeOne(
         fontSize: 128,
         color: kBrandColor,
       ),

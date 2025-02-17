@@ -9,7 +9,6 @@ import 'package:senluo_japanese_cms/pages/proverbs/helpers/proverb_text_helper.d
 import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
 
-import '../../common/constants/fonts.dart';
 import '../../common/helpers/image_helper.dart';
 
 class ProverbDisplayPage extends StatefulWidget {
@@ -125,8 +124,7 @@ class _ProverbDisplayPageState extends State<ProverbDisplayPage> {
     return AutoSizeText(
       item.name,
       textAlign: TextAlign.center,
-      style: GoogleFonts.getFont(
-        kGoogleJPFont,
+      style: GoogleFonts.notoSansJp(
         fontSize: _currentSliderValue,
         fontWeight: FontWeight.bold,
         color: kProverbMainColor,
@@ -172,8 +170,7 @@ class _ProverbReadingView extends StatelessWidget {
     return AutoSizeText(
       item.reading,
       textAlign: TextAlign.center,
-      style: GoogleFonts.getFont(
-        kGoogleJPFont,
+      style: GoogleFonts.notoSansJp(
         textStyle: const TextStyle(fontSize: 28),
       ),
       maxLines: 1,
@@ -189,8 +186,7 @@ class _ProverbLabel extends StatelessWidget {
     return Chip(
       label: Text(
         'ことわざ',
-        style: GoogleFonts.getFont(
-          kGoogleJPFont,
+        style: GoogleFonts.notoSansJp(
           color: Colors.white,
           fontWeight: FontWeight.bold,
         ),
