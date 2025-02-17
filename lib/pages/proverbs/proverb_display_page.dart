@@ -106,8 +106,7 @@ class _ProverbDisplayPageState extends State<ProverbDisplayPage> {
             (e) => AutoSizeText(
               e,
               textAlign: TextAlign.center,
-              style: GoogleFonts.getFont(
-                'Ma Shan Zheng',
+              style: GoogleFonts.maShanZheng(
                 textStyle: const TextStyle(fontSize: 24.0),
               ),
             ),

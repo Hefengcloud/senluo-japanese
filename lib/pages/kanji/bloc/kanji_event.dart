@@ -14,3 +14,15 @@ class KanjiLevelChanged extends KanjiEvent {
 
   const KanjiLevelChanged(this.level);
 }
+
+class KanjiDetailStarted extends KanjiEvent {
+  final Kanji kanji;
+
+  const KanjiDetailStarted({required this.kanji});
+}
+
+class KanjiDetailChanged extends KanjiEvent {
+  final bool previous;
+
+  const KanjiDetailChanged({required this.previous});
+}

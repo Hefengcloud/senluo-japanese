@@ -2,38 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
-import 'package:senluo_japanese_cms/repos/kanji/kanji_repository.dart';
 
 import '../../common/constants/colors.dart';
 import '../../repos/kanji/models/kanji_model.dart';
+import 'bloc/kanji_bloc.dart';
 import 'kanji_preview_page.dart';
 
-class KanjiListPage extends StatefulWidget {
+class KanjiListPage extends StatelessWidget {
   final JLPTLevel level;
 
   const KanjiListPage({super.key, required this.level});
 
   @override
-  State<KanjiListPage> createState() => _KanjiListPageState();
-}
-
-class _KanjiListPageState extends State<KanjiListPage> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.level.name.toUpperCase()),
-      ),
-      body: FutureBuilder<List<Kanji>>(
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return _GridView(kanjis: snapshot.data!);
-          } else {
-            return const Center(child: CircularProgressIndicator());
-          }
-        },
-        future: context.read<KanjiRepository>().loadJlptKanjis(widget.level),
-      ),
+    context.read<KanjiBloc>().add(KanjiLevelChanged(level));
+
+    return BlocBuilder<KanjiBloc, KanjiState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(level.name.toUpperCase()),
+          ),
+          body: state is KanjiLoaded && state.kanjis.isNotEmpty
+              ? _GridView(kanjis: state.kanjis)
+              : const Center(child: CircularProgressIndicator()),
+        );
+      },
     );
   }
 }

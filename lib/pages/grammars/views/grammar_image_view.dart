@@ -95,8 +95,7 @@ class GrammarImageView extends StatelessWidget {
     return AutoSizeText(
       nameParts.join('\n'),
       maxLines: nameParts.length,
-      style: GoogleFonts.getFont(
-        'Klee One',
+      style: GoogleFonts.kleeOne(
         fontSize: 60 - (nameParts.length - 1) * 8,
         fontWeight: FontWeight.bold,
         color: kLevel2color[level],
@@ -167,8 +166,7 @@ class GrammarImageView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 4.0),
           child: Text(
             'JLPT ${item.level.name.toUpperCase()}',
-            style: GoogleFonts.getFont(
-              'Montserrat',
+            style: GoogleFonts.montserrat(
               color: Colors.white,
               fontWeight: FontWeight.bold,
               fontStyle: FontStyle.italic,

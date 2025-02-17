@@ -5,8 +5,7 @@ class AppTitle extends Text {
   AppTitle({super.key})
       : super(
           '森罗日语',
-          style: GoogleFonts.getFont(
-            'Zhi Mang Xing',
+          style: GoogleFonts.zhiMangXing(
             fontSize: 20,
             color: Colors.purple,
           ),

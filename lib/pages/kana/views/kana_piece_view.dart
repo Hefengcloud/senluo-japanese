@@ -49,8 +49,7 @@ class KanaPieceView extends StatelessWidget {
         if (type == KanaType.hiragana || type == KanaType.all)
           Text(
             kana.hiragana,
-            style: GoogleFonts.getFont(
-              _kHiraganaFont,
+            style: GoogleFonts.kleeOne(
               fontSize: _kanaFontSize,
               fontWeight: FontWeight.bold,
             ),
@@ -58,8 +57,7 @@ class KanaPieceView extends StatelessWidget {
         if (type == KanaType.katakana || type == KanaType.all)
           Text(
             kana.katakana,
-            style: GoogleFonts.getFont(
-              _kKatakanaFont,
+            style: GoogleFonts.kleeOne(
               fontSize: _kanaFontSize,
               fontWeight: FontWeight.bold,
               color: type == KanaType.all ? Colors.black54 : Colors.black,
