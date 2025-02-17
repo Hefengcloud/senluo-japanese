@@ -11,16 +11,16 @@ import '../../common/helpers/image_helper.dart';
 import '../../common/helpers/text_helper.dart';
 import '../../repos/kanji/models/kanji_model.dart';
 
-class KanjiPreviewPage extends StatefulWidget {
+class KanjiDetailPage extends StatefulWidget {
   final int index;
 
-  const KanjiPreviewPage({super.key, required this.index});
+  const KanjiDetailPage({super.key, required this.index});
 
   @override
-  State<KanjiPreviewPage> createState() => _KanjiPreviewPageState();
+  State<KanjiDetailPage> createState() => _KanjiDetailPageState();
 }
 
-class _KanjiPreviewPageState extends State<KanjiPreviewPage> {
+class _KanjiDetailPageState extends State<KanjiDetailPage> {
   final GlobalKey globalKey = GlobalKey();
 
   double _fontScale = 1.0;
