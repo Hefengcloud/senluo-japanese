@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
@@ -31,6 +32,35 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
   final GlobalKey _globalKey = GlobalKey();
 
   var _fontScale = 1.0;
+  double volume = 1.0;
+  double pitch = 1.0;
+  double rate = 0.5;
+  bool isPlaying = false;
+
+  final FlutterTts flutterTts = FlutterTts();
+
+  @override
+  void initState() {
+    super.initState();
+    _initTTS();
+  }
+
+  Future<void> _initTTS() async {
+    // Set language to Japanese
+    await flutterTts.setLanguage("ja-JP");
+
+    // Initialize other settings
+    await flutterTts.setVolume(volume);
+    await flutterTts.setPitch(pitch);
+    await flutterTts.setSpeechRate(rate);
+
+    // Set completed handler
+    flutterTts.setCompletionHandler(() {
+      setState(() {
+        isPlaying = false;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -151,30 +181,39 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
   _buildWordCard(Word word) => Card(
         color: Colors.white,
         shadowColor: Colors.transparent,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Column(
-            children: [
-              RubyText([
-                RubyTextData(
-                  word.text,
-                  ruby: word.reading,
-                  style: GoogleFonts.notoSansJp(
-                    fontSize: 20 * _fontScale,
-                    fontWeight: FontWeight.bold,
-                    color: kItemMainColor,
+        child: InkWell(
+          onTap: () async {
+            await flutterTts.setLanguage("ja-JP");
+            await flutterTts.speak(word.text);
+            await Future.delayed(Duration(seconds: 1));
+            await flutterTts.setLanguage("en");
+            await flutterTts.speak(word.meaning.en);
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Column(
+              children: [
+                RubyText([
+                  RubyTextData(
+                    word.text,
+                    ruby: word.reading,
+                    style: GoogleFonts.notoSansJp(
+                      fontSize: 20 * _fontScale,
+                      fontWeight: FontWeight.bold,
+                      color: kItemMainColor,
+                    ),
+                    rubyStyle: GoogleFonts.notoSansJp(
+                      color: Colors.black45,
+                    ),
                   ),
-                  rubyStyle: GoogleFonts.notoSansJp(
-                    color: Colors.black45,
-                  ),
+                ]),
+                const Spacer(),
+                Text(
+                  word.meaning.en,
+                  textAlign: TextAlign.center,
                 ),
-              ]),
-              const Spacer(),
-              Text(
-                word.meaning.en,
-                textAlign: TextAlign.center,
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       );

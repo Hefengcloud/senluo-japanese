@@ -12,6 +12,11 @@
 	<string>We need access to save medias</string>
 	<!-- gal: Required for ios < 14 or saving to album -->
 
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>This application uses speech recognition to convert your speech to text</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This application needs to access your microphone</string>
+
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
