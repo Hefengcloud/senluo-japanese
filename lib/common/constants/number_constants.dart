@@ -3,3 +3,11 @@ const kPreviewLeftFlex = 4;
 const kPreviewRightFlex = 3;
 const kPreviewDialogHeight = 600.0;
 const kPreviewDialogWidth = 787.5; // 600 / 3 * (3 + 2) = 750
+
+const maruNumbers = [
+  "❶",
+  "❷",
+  "❸",
+  "❹",
+  "❺",
+];
