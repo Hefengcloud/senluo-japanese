@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:markdown/markdown.dart' as md;
 
 class SentenceHtmlText extends StatelessWidget {
   final String original;
@@ -23,11 +24,29 @@ class SentenceHtmlText extends StatelessWidget {
   build(BuildContext context) {
     final isFormated = formated.isNotEmpty;
     var html = isFormated
-        ? convertFormatedTextToHtml('⚪️ $formated')
+        ? markdownToHtml(preprocessMarkdown('⚪️ $formated'))
         : convertOrginalTextToHtml('️️️⚪️ $original');
     html +=
         '<span class="translated">${isFormated ? _formatTranslatedText("（$translated）") : "（$translated）"}</span>';
     return _buildHtmlContent(html);
+  }
+
+  String preprocessMarkdown(String markdownText) {
+    // 首先处理 Ruby 标记 [kanji](furigana)
+    String processedText = _parseRubyTags(markdownText);
+
+    // 确保 ** 标记保持为 Markdown 格式，不需要额外处理，因为 markdown 包会自动转换
+    return processedText;
+  }
+
+  String markdownToHtml(String markdownText) {
+    // 预处理 Markdown 文本
+    String preprocessed = preprocessMarkdown(markdownText);
+    // 使用 markdown 包转换为 HTML
+    var html = md.markdownToHtml(preprocessed,
+        extensionSet: md.ExtensionSet.gitHubFlavored);
+
+    return html;
   }
 
   _formatTranslatedText(String text) {
@@ -45,25 +64,37 @@ class SentenceHtmlText extends StatelessWidget {
             child: const FlutterLogo(),
           ),
         ],
-        style: {
-          "*": Style(
-            fontSize: FontSize(fontSize),
-          ),
-          "span.bold": Style(
-            color: emphasizedColor,
-            fontWeight: FontWeight.bold,
-          ),
-          ".translated": Style(
-            color: Colors.black54,
-          ),
-          "rt": Style(
-            color: Colors.black54,
-          ),
-          "rt.fake": Style(
-            color: Colors.transparent,
-          )
-        },
+        style: _buildStyle(),
       );
+
+  _buildStyle() => {
+        'body': Style(
+          fontSize: FontSize(fontSize),
+          fontFamily: 'NotoSansJP', // 使用支持日文的字体
+          lineHeight: LineHeight(1.5), // 调整行高，确保对齐
+        ),
+        'span.bold': Style(
+          color: emphasizedColor,
+          fontWeight: FontWeight.bold,
+        ),
+        '.translated': Style(
+          color: Colors.black54,
+        ),
+        'ruby': Style(
+          display: Display.inlineBlock, // 确保 Ruby 作为内联块元素
+          verticalAlign: VerticalAlign.middle, // 调整垂直对齐
+          fontSize: FontSize(fontSize), // 汉字大小
+        ),
+        'rt': Style(
+          fontSize: FontSize(fontSize / 1.5), // 假名较小（约 2/3 汉字大小）
+          color: Colors.grey,
+          verticalAlign: VerticalAlign.top, // 假名顶部对齐
+          lineHeight: LineHeight(0.5), // 调整假名行高，减少高度影响
+        ),
+        'rt.fake': Style(
+          color: Colors.transparent,
+        ),
+      };
 
   String convertOrginalTextToHtml(String text) {
     text = text.replaceAllMapped(
@@ -114,7 +145,8 @@ class SentenceHtmlText extends StatelessWidget {
         final betweenTags = text.substring(lastEnd, match.start);
         buffer.write(betweenTags
             .split('')
-            .map((ch) => '<ruby>$ch<rt class="fake">$ch</rt></ruby>')
+            .map((ch) =>
+                ch != '*' ? '<ruby>$ch<rt class="fake">$ch</rt></ruby>' : ch)
             .join(''));
       }
       // Keep existing ruby tag as is
@@ -127,7 +159,8 @@ class SentenceHtmlText extends StatelessWidget {
       final remainingText = text.substring(lastEnd);
       buffer.write(remainingText
           .split('')
-          .map((ch) => '<ruby>$ch<rt class="fake">$ch</rt></ruby>')
+          .map((ch) =>
+              ch != '*' ? '<ruby>$ch<rt class="fake">$ch</rt></ruby>' : ch)
           .join(''));
     }
 
