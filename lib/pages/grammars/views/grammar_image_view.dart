@@ -12,55 +12,72 @@ import 'package:senluo_japanese_cms/widgets/japanese_sentence.dart';
 import '../../../common/constants/colors.dart';
 import 'grammar_conjugation_text.dart';
 
-class GrammarImageView extends StatelessWidget {
+class GrammarImageView extends StatefulWidget {
   final GrammarItem item;
 
-  final double dividerGap;
-  final double exampleFontSize;
+  final double fontScale;
 
   const GrammarImageView({
     super.key,
     required this.item,
-    required this.dividerGap,
-    required this.exampleFontSize,
+    this.fontScale = 1.0,
   });
 
   @override
+  State<GrammarImageView> createState() => _GrammarImageViewState();
+}
+
+class _GrammarImageViewState extends State<GrammarImageView> {
+  double _spacing = 10.0; // Initial spacing between items
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/grammar-bg.png'),
-          fit: BoxFit.cover,
+    return GestureDetector(
+      onVerticalDragUpdate: _updateSpacing,
+      child: Container(
+        padding: const EdgeInsets.all(8),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/grammar-bg.png'),
+            fit: BoxFit.cover,
+          ),
+          color: Colors.white,
         ),
-        color: Colors.white,
-      ),
-      child: EverjapanWatermark(
-        child: Column(
-          children: [
-            _buildTopLogo(item),
-            const Gap(8),
-            _buildItemName(item.name, item.level),
-            const Gap(16),
-            _buildJpMeaning(item),
-            const Gap(8),
-            _buildZhMeaning(item),
-            const Gap(16),
-            _buildConjugation(item),
-            _buildDivider(context),
-            Expanded(child: _buildExampleList(item)),
-          ],
+        child: EverjapanWatermark(
+          child: Column(
+            children: [
+              _buildTopLogo(widget.item),
+              const Gap(8),
+              _buildItemName(widget.item.name, widget.item.level),
+              const Gap(16),
+              _buildJpMeaning(widget.item),
+              const Gap(8),
+              _buildZhMeaning(widget.item),
+              const Gap(16),
+              _buildConjugation(widget.item),
+              _buildDivider(context),
+              Expanded(child: _buildExampleList(widget.item)),
+            ],
+          ),
         ),
       ),
     );
   }
 
+  void _updateSpacing(DragUpdateDetails details) {
+    setState(() {
+      // Adjust spacing based on vertical drag delta
+      _spacing += details.delta.dy / 10;
+      // Clamp the spacing to avoid negative or extreme values
+      _spacing = _spacing.clamp(0.0, 32.0);
+    });
+  }
+
   _buildDivider(BuildContext context) => Container(
         width: 48,
         margin: EdgeInsets.only(
-          top: 8 + dividerGap,
-          bottom: dividerGap,
+          top: 8 + _spacing,
+          bottom: _spacing,
         ),
         child: const Divider(
           height: 0.5,
@@ -97,7 +114,7 @@ class GrammarImageView extends StatelessWidget {
       nameParts.join('\n'),
       maxLines: nameParts.length,
       style: GoogleFonts.kleeOne(
-        fontSize: 60 - (nameParts.length - 1) * 8,
+        fontSize: (60 - (nameParts.length - 1) * 8) * widget.fontScale,
         fontWeight: FontWeight.bold,
         color: kLevel2color[level],
       ),
@@ -162,7 +179,7 @@ class GrammarImageView extends StatelessWidget {
                 japanese: e.jp1.isNotEmpty ? e.jp1 : e.jp,
                 translation: e.zh,
                 emphasizedColor: kLevel2color[item.level]!,
-                fontSize: exampleFontSize,
+                fontSize: 14 * widget.fontScale,
                 prefix: '',
               ))
           .toList(),
