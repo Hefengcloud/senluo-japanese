@@ -26,8 +26,8 @@ class GrammarMenuListView extends StatelessWidget {
                 initiallyExpanded: false,
                 children: (grammarsByLevel[level] ?? [])
                     .map<ListTile>((e) => ListTile(
+                          leading: const Icon(Icons.arrow_right),
                           title: Text(e.name),
-                          trailing: const Icon(Icons.arrow_right),
                           onTap: () => onEntrySelected(e),
                         ))
                     .toList()),

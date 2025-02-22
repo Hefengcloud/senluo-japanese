@@ -20,6 +20,15 @@ class GrammarEntryChanged extends GrammarEvent {
   List<Object> get props => [entry];
 }
 
+class GrammarItemChanged extends GrammarEvent {
+  final bool previous;
+
+  const GrammarItemChanged({required this.previous});
+
+  @override
+  List<Object?> get props => [previous];
+}
+
 class GrammarKeywordChanged extends GrammarEvent {
   final String? keyword;
 

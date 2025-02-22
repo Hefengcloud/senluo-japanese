@@ -47,17 +47,7 @@ class _GrammarHomePageState extends State<GrammarHomePage>
         return _buildBody(context, state);
       },
       listener: (BuildContext context, GrammarState state) {
-        if (state is GrammarLoaded && state.currentItem != GrammarItem.empty) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (_) => RepositoryProvider(
-                create: (BuildContext context) =>
-                    BlocProvider.of<GrammarBloc>(context).grammarRepository,
-                child: GrammarDetailsPage(item: state.currentItem),
-              ),
-            ),
-          );
-        }
+        if (state is GrammarLoaded && state.currentItem != GrammarItem.empty) {}
       },
     );
   }
@@ -86,9 +76,7 @@ class _GrammarHomePageState extends State<GrammarHomePage>
               controller: _tabController,
               children: [
                 GrammarMenuListView(
-                  onEntrySelected: (entry) =>
-                      BlocProvider.of<GrammarBloc>(context)
-                          .add(GrammarEntryChanged(entry: entry)),
+                  onEntrySelected: (entry) => _forwardToDetail(context, entry),
                   grammarsByLevel: entryMap,
                 ),
                 const GrammarTutorialPage(),
@@ -96,6 +84,20 @@ class _GrammarHomePageState extends State<GrammarHomePage>
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  _forwardToDetail(BuildContext context, GrammarEntry entry) {
+    BlocProvider.of<GrammarBloc>(context)
+        .add(GrammarEntryChanged(entry: entry));
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => RepositoryProvider(
+          create: (BuildContext context) =>
+              BlocProvider.of<GrammarBloc>(context).grammarRepository,
+          child: GrammarDetailsPage(entry: entry),
+        ),
       ),
     );
   }
