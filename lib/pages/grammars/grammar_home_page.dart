@@ -96,7 +96,7 @@ class _GrammarHomePageState extends State<GrammarHomePage>
         builder: (_) => RepositoryProvider(
           create: (BuildContext context) =>
               BlocProvider.of<GrammarBloc>(context).grammarRepository,
-          child: GrammarDetailsPage(entry: entry),
+          child: GrammarDetailsPage(entry: entry,),
         ),
       ),
     );

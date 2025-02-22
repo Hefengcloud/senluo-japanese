@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:ruby_text/ruby_text.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_slide_page.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
+import 'package:senluo_japanese_cms/widgets/sentence_html_text.dart';
 import 'package:senluo_japanese_cms/widgets/sentence_plain_text.dart';
 
 import '../../common/constants/fonts.dart';
+import '../../common/models/models.dart';
 import '../../repos/grammars/models/grammar_entry.dart';
+import '../../widgets/sentence_ruby_text.dart';
 
 class GrammarDetailsPage extends StatelessWidget {
   final GrammarEntry entry;
@@ -148,15 +152,18 @@ class GrammarDetailsPage extends StatelessWidget {
         ],
         _Subtitle(text: "例文", level: item.level),
         ...item.examples.map(
-          (e) => SentencePlainText(
-            mainStyle: const TextStyle(
-              fontFamily: kLocalZHFont,
-            ),
-            lines: [e.jp, e.zh, e.en],
-            emphasizedColor: kLevel2color[item.level] ?? Colors.black,
-          ),
+          (e) => _buildExampleText(context, e, item.level),
         ),
       ],
+    );
+  }
+
+  _buildExampleText(BuildContext context, Example e, JLPTLevel level) {
+    return SentenceHtmlText(
+      original: e.jp,
+      formated: e.jp1,
+      translated: e.zh,
+      emphasizedColor: kLevel2color[level]!,
     );
   }
 
