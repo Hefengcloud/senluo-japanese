@@ -34,7 +34,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
           builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Preview'),
+            title: const Text('画像'),
           ),
           body: state is GrammarItemLoaded
               ? _buildImage(context, state)
@@ -62,11 +62,6 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
                     _dividerGap = value;
                   });
                 }),
-          ),
-          IconButton(
-            tooltip: 'Copy Text',
-            icon: const Icon(Icons.copy_outlined),
-            onPressed: () => _onCopyText(),
           ),
           IconButton(
             tooltip: 'Save image',
@@ -157,12 +152,5 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
     } else {
       saveImageToFile(bytes!, '$fileName.jpg');
     }
-  }
-
-  _onCopyText() async {
-    await Clipboard.setData(ClipboardData(text: widget.item.text));
-    // ignore: use_build_context_synchronously
-    ScaffoldMessenger.of(context)
-        .showSnackBar(const SnackBar(content: Text('Text Copied')));
   }
 }
