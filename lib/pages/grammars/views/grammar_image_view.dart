@@ -69,7 +69,7 @@ class GrammarImageView extends StatelessWidget {
 
   Widget _buildZhMeaning(GrammarItem item) {
     return AutoSizeText(
-      item.meaning.zhs.join(' '),
+      item.meaning.zhs.join(' / '),
       style: TextStyle(
         color: kLevel2color[item.level],
         fontWeight: FontWeight.w600,

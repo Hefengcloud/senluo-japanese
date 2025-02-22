@@ -18,7 +18,12 @@ final class GrammarLoaded extends GrammarState {
     this.currentItem = GrammarItem.empty,
   });
 
+  int get currentIndex => entryMap[currentItem.level]!
+      .indexWhere((entry) => entry.key == currentItem.key);
+
   List<JLPTLevel> get levels => entryMap.keys.toList();
+
+  List<GrammarEntry> get entries => entryMap[currentItem.level]!;
 
   @override
   List<Object?> get props => [entryMap, currentItem];

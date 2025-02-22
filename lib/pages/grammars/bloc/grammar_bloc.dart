@@ -12,6 +12,7 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
   GrammarBloc({required this.grammarRepository}) : super(GrammarLoading()) {
     on<GrammarStarted>(_onStarted);
     on<GrammarEntryChanged>(_onEntryChanged);
+    on<GrammarItemChanged>(_onItemChanged);
   }
 
   final GrammarRepository grammarRepository;
@@ -44,5 +45,31 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     final theState = state as GrammarLoaded;
     final item = await grammarRepository.loadItem(event.entry);
     emit(theState.copyWith(currentItem: item));
+  }
+
+  Future<void> _onItemChanged(
+    GrammarItemChanged event,
+    Emitter<GrammarState> emit,
+  ) async {
+    final theState = state as GrammarLoaded;
+    final theIndex = theState.currentIndex;
+    int newIndex = theIndex;
+
+    if (event.previous) {
+      if (theIndex > 0) {
+        newIndex--;
+      } else {
+        newIndex = theState.entries.length - 1;
+      }
+    } else {
+      if (theIndex < theState.entries.length - 1) {
+        newIndex++;
+      } else {
+        newIndex = 0;
+      }
+    }
+
+    final newEntry = theState.entries[newIndex];
+    add(GrammarEntryChanged(entry: newEntry));
   }
 }
