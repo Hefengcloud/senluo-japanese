@@ -1,3 +1,7 @@
+import 'package:collection/collection.dart';
+
+import '../constants/number_constants.dart';
+
 class Meaning {
   final List<String> jps;
   final List<String> ens;
@@ -10,8 +14,12 @@ class Meaning {
   });
 
   String get en => ens.join(' / ');
-  String get zh => zhs.join(' / ');
-  String get jp => jps.join(' / ');
+  String get zh => zhs.length > 1
+      ? zhs.mapIndexed((idx, e) => "${maruNumbers[idx]}$e").join(' ')
+      : zhs.first;
+  String get jp => jps.length > 1
+      ? jps.mapIndexed((idx, e) => "${maruNumbers[idx]}$e").join(' ')
+      : jps.first;
 
   static const empty = Meaning(jps: [], ens: [], zhs: []);
 }

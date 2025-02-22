@@ -25,12 +25,11 @@ class GrammarDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<GrammarBloc, GrammarState>(
       builder: (context, state) {
-        final levelStr = entry.level.name.toUpperCase();
         return Scaffold(
           appBar:
               state is GrammarLoaded && state.currentItem != GrammarItem.empty
                   ? AppBar(
-                      title: Text("$levelStr "),
+                      title: Text(state.currentItem.key),
                       actions: _buildGeneratingActions(context, state),
                     )
                   : AppBar(title: Text(entry.level.name.toUpperCase())),
