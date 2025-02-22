@@ -1,0 +1,2 @@
+/Users/liangfei/Source/hefengcloud/senluo_japanese/senluo_japanese_cms/android/app/.cxx/Debug/124p2g5u/x86_64/CMakeFiles/edit_cache.dir
+/Users/liangfei/Source/hefengcloud/senluo_japanese/senluo_japanese_cms/android/app/.cxx/Debug/124p2g5u/x86_64/CMakeFiles/rebuild_cache.dir

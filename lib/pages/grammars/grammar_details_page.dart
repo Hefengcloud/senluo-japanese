@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:ruby_text/ruby_text.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_slide_page.dart';
+import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
+import 'package:senluo_japanese_cms/pages/grammars/views/grammar_conjugation_text.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
-import 'package:senluo_japanese_cms/widgets/sentence_html_text.dart';
-import 'package:senluo_japanese_cms/widgets/sentence_plain_text.dart';
+import 'package:senluo_japanese_cms/widgets/japanese_sentence.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import '../../common/constants/fonts.dart';
 import '../../common/models/models.dart';
 import '../../repos/grammars/models/grammar_entry.dart';
-import '../../widgets/sentence_ruby_text.dart';
 
 class GrammarDetailsPage extends StatelessWidget {
   final GrammarEntry entry;
@@ -37,10 +37,6 @@ class GrammarDetailsPage extends StatelessWidget {
           body: state is GrammarLoaded && state.currentItem != GrammarItem.empty
               ? _buildBody(context, state)
               : const Center(child: CircularProgressIndicator()),
-          bottomNavigationBar:
-              state is GrammarLoaded && state.currentItem != GrammarItem.empty
-                  ? _buildBottomAppBar(context, state)
-                  : null,
         );
       },
     );
@@ -48,6 +44,18 @@ class GrammarDetailsPage extends StatelessWidget {
 
   _buildGeneratingActions(BuildContext context, GrammarLoaded state) {
     return [
+      IconButton(
+        icon: const Icon(Icons.edit_outlined),
+        onPressed: () {
+          _onEditItem(context, state.currentItem);
+        },
+      ),
+      IconButton(
+        icon: const Icon(Icons.copy_outlined),
+        onPressed: () {
+          _onCopyText(context, state.currentItem);
+        },
+      ),
       IconButton(
         icon: const Icon(Icons.animation_outlined),
         onPressed: () {
@@ -64,11 +72,19 @@ class GrammarDetailsPage extends StatelessWidget {
   }
 
   _buildBody(BuildContext context, GrammarLoaded state) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: _buildGrammarDetails(context, state.currentItem),
-      ),
+    return Stack(
+      children: [
+        _buildGrammarDetails(context, state.currentItem),
+        Positioned(
+          left: 0,
+          right: 0,
+          bottom: 32,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: _buildIndicators(context, state),
+          ),
+        ),
+      ],
     );
   }
 
@@ -122,60 +138,52 @@ class GrammarDetailsPage extends StatelessWidget {
   }
 
   _buildGrammarDetails(BuildContext context, GrammarItem item) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return ListView(
       children: [
-        Text(
-          item.name,
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                color: kLevel2color[item.level],
-                fontWeight: FontWeight.bold,
-              ),
+        const Gap(16),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Text(
+            item.name.split("/").join("\n"),
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                  color: kLevel2color[item.level],
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ),
-        const Gap(8),
         _Subtitle(text: "意味", level: item.level),
-        if (item.meaning.jp.isNotEmpty) Text("🇯🇵 ${item.meaning.jp}"),
-        if (item.meaning.zh.isNotEmpty) Text("🇨🇳 ${item.meaning.zh}"),
-        if (item.meaning.en.isNotEmpty) Text("🇬🇧 ${item.meaning.en}"),
+        if (item.meaning.jp.isNotEmpty)
+          ListTile(title: Text("🇯🇵 ${item.meaning.jp}")),
+        if (item.meaning.zh.isNotEmpty)
+          ListTile(title: Text("🇨🇳 ${item.meaning.zh}")),
+        if (item.meaning.en.isNotEmpty)
+          ListTile(title: Text("🇬🇧 ${item.meaning.en}")),
         _Subtitle(text: "接続", level: item.level),
         ...item.conjugations.map(
-          (c) => Text(c),
+          (c) => ListTile(title: GrammarConjugationText(text: c)),
         ),
-        const Gap(8),
         if (item.explanations.isNotEmpty) ...[
           _Subtitle(text: "備考", level: item.level),
           if (item.explanations.isNotEmpty)
             ...item.explanations.map(
-              (e) => Text(e),
+              (e) => ListTile(title: Text(e)),
             ),
-          const Gap(8),
         ],
         _Subtitle(text: "例文", level: item.level),
         ...item.examples.map(
-          (e) => _buildExampleText(context, e, item.level),
+          (e) => ListTile(title: _buildExampleText(context, e, item.level)),
         ),
+        const Gap(48),
       ],
     );
   }
 
   _buildExampleText(BuildContext context, Example e, JLPTLevel level) {
-    return SentenceHtmlText(
-      original: e.jp,
-      formated: e.jp1,
-      translated: e.zh,
+    return JapaneseSentence(
+      japanese: e.jp1.isNotEmpty ? e.jp1 : e.jp,
+      translation: e.zh,
+      fontSize: 16,
       emphasizedColor: kLevel2color[level]!,
-    );
-  }
-
-  _buildBottomAppBar(BuildContext context, GrammarLoaded state) {
-    return BottomAppBar(
-      shape: const CircularNotchedRectangle(),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          _buildIndicators(context, state),
-        ],
-      ),
     );
   }
 
@@ -203,6 +211,24 @@ class GrammarDetailsPage extends StatelessWidget {
       ),
     );
   }
+
+  _onCopyText(BuildContext context, GrammarItem item) async {
+    await Clipboard.setData(ClipboardData(text: item.text));
+    // ignore: use_build_context_synchronously
+    ScaffoldMessenger.of(context)
+        .showSnackBar(const SnackBar(content: Text('Text Copied')));
+  }
+
+  _onEditItem(BuildContext context, GrammarItem item) async {
+    const baseUrl =
+        'github://Hefengcloud/senluo_japanese_cms/tree/main/assets/grammar';
+    final Uri url =
+        Uri.parse('$baseUrl/${item.level.name.toLowerCase()}/${item.key}.yaml');
+    print(url);
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
 }
 
 class _Subtitle extends StatelessWidget {
@@ -215,17 +241,16 @@ class _Subtitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: kLevel2color[level],
+        color: kLevel2color[level]?.withAlpha(30),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-      margin: const EdgeInsets.only(top: 16, bottom: 8),
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Text(
-        text,
+        "[$text]",
         style: Theme.of(context)
             .textTheme
-            .bodyMedium
-            ?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+            .bodyLarge
+            ?.copyWith(fontWeight: FontWeight.bold),
       ),
     );
   }

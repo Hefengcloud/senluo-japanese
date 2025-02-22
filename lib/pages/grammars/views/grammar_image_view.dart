@@ -7,9 +7,10 @@ import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_logo.dart';
 import 'package:senluo_japanese_cms/widgets/everjapan_watermark.dart';
+import 'package:senluo_japanese_cms/widgets/japanese_sentence.dart';
 
 import '../../../common/constants/colors.dart';
-import '../../../widgets/sentence_html_text.dart';
+import 'grammar_conjugation_text.dart';
 
 class GrammarImageView extends StatelessWidget {
   final GrammarItem item;
@@ -116,42 +117,18 @@ class GrammarImageView extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
-        children:
-            item.conjugations.map((e) => _buildConjugationText(e)).toList(),
+        children: item.conjugations
+            .map((e) => GrammarConjugationText(
+                  text: e,
+                  textStyle: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontVariations: [FontVariation.weight(700)],
+                  ),
+                ))
+            .toList(),
       ),
     );
-  }
-
-  Widget _buildConjugationText(String text) {
-    RegExp pattern = RegExp(r'(.*?)(~~.*?~~)(.*)');
-    Match? match = pattern.firstMatch(text);
-    const style = TextStyle(
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-      fontVariations: [FontVariation.weight(700)],
-    );
-
-    if (match != null) {
-      String textBefore = match.group(1) ?? "";
-      String textDeleted = match.group(2) ?? "";
-      String textAfter = match.group(3) ?? "";
-      return Text.rich(
-        TextSpan(children: [
-          TextSpan(text: textBefore, style: style),
-          TextSpan(
-            text: textDeleted.replaceAll('~', ''),
-            style: style.copyWith(
-              decoration: TextDecoration.lineThrough,
-              decorationColor: Colors.white,
-              decorationThickness: 2,
-            ),
-          ),
-          TextSpan(text: textAfter, style: style),
-        ]),
-      );
-    } else {
-      return Text(text, style: style);
-    }
   }
 
   _buildTopLogo(GrammarItem item) {
@@ -181,12 +158,12 @@ class GrammarImageView extends StatelessWidget {
   _buildExampleList(GrammarItem item) {
     return Column(
       children: item.examples
-          .map((e) => SentenceHtmlText(
-                original: e.jp,
-                formated: e.jp1,
-                translated: e.zh,
+          .map((e) => JapaneseSentence(
+                japanese: e.jp1.isNotEmpty ? e.jp1 : e.jp,
+                translation: e.zh,
                 emphasizedColor: kLevel2color[item.level]!,
                 fontSize: exampleFontSize,
+                prefix: '',
               ))
           .toList(),
     );
