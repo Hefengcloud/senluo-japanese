@@ -223,7 +223,6 @@ class GrammarDetailsPage extends StatelessWidget {
         'github://Hefengcloud/senluo_japanese_cms/tree/main/assets/grammar';
     final Uri url =
         Uri.parse('$baseUrl/${item.level.name.toLowerCase()}/${item.key}.yaml');
-    print(url);
     if (!await launchUrl(url)) {
       throw Exception('Could not launch $url');
     }
