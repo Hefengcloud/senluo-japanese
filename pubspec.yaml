@@ -121,6 +121,8 @@ flutter:
     - assets/vocabulary/jlpt/
     - assets/kana/origins/
     - assets/kana/strokes/
+    - assets/kana/words/
+
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
+import 'package:senluo_japanese_cms/pages/kana/bloc/kana_bloc.dart';
 
 import '../../repos/gojuon/kana_repository.dart';
 import '../../repos/gojuon/models/models.dart';
@@ -148,13 +149,13 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
           children: [
             _buildKanaCard(context, kana),
             const Gap(8),
-            const _Subtitle(text: "言葉"),
-            const Gap(8),
-            _buildRelatedWords(context, kana),
-            const Gap(8),
             const _Subtitle(text: "由来"),
             const Gap(8),
             _buildOrigins(context, kana),
+            const Gap(8),
+            const _Subtitle(text: "言葉"),
+            const Gap(8),
+            _buildRelatedWords(context, kana),
           ],
         ),
       ),
@@ -193,27 +194,69 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
   }
 
   _buildRelatedWords(BuildContext context, Kana kana) {
-    return const SizedBox(
-      width: double.infinity,
-      child: Card(
-        child: Padding(
-          padding: EdgeInsets.all(16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              RubyText(
-                [RubyTextData("愛", ruby: 'あい')],
-                style: TextStyle(fontSize: 16),
+    final repo = context.read<KanaBloc>().kanaRepo;
+
+    return FutureBuilder<List<String>>(
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return const Text('なし');
+        }
+        final words = snapshot.data!;
+        return SizedBox(
+          width: double.infinity,
+          child: Card(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: words
+                    .take(4)
+                    .map((e) => RubyText(
+                          _parseWordList(e),
+                          style: const TextStyle(fontSize: 18),
+                        ))
+                    .toList(),
               ),
-              RubyText([RubyTextData("青", ruby: 'あお')]),
-              RubyText([RubyTextData("青", ruby: 'あお')]),
-              RubyText([RubyTextData("青", ruby: 'あお')]),
-              RubyText([RubyTextData("甘", ruby: 'あま'), RubyTextData("い")]),
-            ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
+      future: repo.loadKanaWords(kana.hiragana),
     );
+  }
+
+  List<RubyTextData> _parseWordList(String word) {
+    final rubyDataList = <RubyTextData>[];
+    final line = word;
+    // Remove the leading "- " if present
+    final trimmedLine = line.replaceFirst(RegExp(r'^- '), '').trim();
+    if (trimmedLine.isEmpty) return [];
+
+    // Check if the line contains parentheses (indicating kanji and furigana)
+    if (trimmedLine.contains('（') && trimmedLine.contains('）')) {
+      final parts = trimmedLine.split('（');
+      final furigana = parts[0].trim();
+      final kanjiPart = parts[1].replaceAll('）', '').trim();
+
+      // Handle cases with multiple kanji separated by " / "
+      if (kanjiPart.contains(' / ')) {
+        final kanjiOptions = kanjiPart.split(' / ');
+        for (var i = 0; i < kanjiOptions.length; i++) {
+          rubyDataList
+              .add(RubyTextData(kanjiOptions[i].trim(), ruby: furigana));
+          if (i < kanjiOptions.length - 1) {
+            rubyDataList.add(const RubyTextData(' / '));
+          }
+        }
+      } else {
+        rubyDataList.add(RubyTextData(kanjiPart, ruby: furigana));
+      }
+    } else {
+      // No parentheses, just plain text (hiragana or katakana)
+      rubyDataList.add(RubyTextData(trimmedLine));
+    }
+
+    return rubyDataList;
   }
 
   _buildKanaCard(BuildContext context, Kana kana) {

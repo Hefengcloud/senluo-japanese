@@ -7,8 +7,11 @@ typedef KanaRow = List<Kana>;
 
 class KanaRepository {
   static const kYamlFilePath = 'assets/data/kanas.yaml';
+  static const kRelatedWordsPath = 'assets/kana/words/kana_words.yaml';
 
   Map<KanaCategory, List<KanaRow>> kanaTable = {};
+
+  Map<String, List<String>> kanaWords = {};
 
   Future<Map<KanaCategory, List<KanaRow>>> loadKanaTable() async {
     if (kanaTable.isNotEmpty) {
@@ -27,6 +30,20 @@ class KanaRepository {
     };
 
     return kanaTable;
+  }
+
+  Future<List<String>> loadKanaWords(String kana) async {
+    if (kanaWords.isEmpty) {
+      String yamlString = await rootBundle.loadString(kRelatedWordsPath);
+      final yaml = loadYaml(yamlString);
+
+      // Convert YamlMap to a regular Dart Map<String, List<String>>
+      kanaWords = (yaml as Map).map<String, List<String>>(
+        (key, value) => MapEntry(key.toString(), List<String>.from(value)),
+      );
+    }
+
+    return kanaWords[kana]!;
   }
 
   Future<KanaRow> loadKanaRow(Kana kana, KanaCategory category) async {
