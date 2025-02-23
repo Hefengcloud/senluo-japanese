@@ -10,7 +10,7 @@ class SentenceRubyText extends StatelessWidget {
   Widget build(BuildContext context) {
     return RubyText(
       _buildRubyTextData(),
-      style: TextStyle(fontSize: 16, fontFamily: 'NotoSansJP'), // 使用日文字体
+      style: const TextStyle(fontSize: 16, fontFamily: 'NotoSansJP'), // 使用日文字体
     );
   }
 
@@ -49,7 +49,7 @@ class SentenceRubyText extends StatelessWidget {
           RubyTextData(
             kanji,
             ruby: furigana,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontFamily: 'NotoSansJP', // 确保日文显示正确
             ),
@@ -63,7 +63,7 @@ class SentenceRubyText extends StatelessWidget {
         data.add(
           RubyTextData(
             boldText,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold, // 加粗
               color: Colors.red, // 红色强调
               backgroundColor: Color(0x4DFFFF00), // 淡黄色背景

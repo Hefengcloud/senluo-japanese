@@ -104,7 +104,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
     return BottomAppBar(
       child: Row(
         children: [
-          Text('Font'),
+          const Text('Font'),
           Slider(
               value: _fontScale,
               min: 0.8,
@@ -114,7 +114,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
                   _fontScale = value;
                 });
               }),
-          Spacer(),
+          const Spacer(),
           IconButton(onPressed: () {}, icon: const Icon(Icons.save))
         ],
       ),
@@ -185,7 +185,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
           onTap: () async {
             await flutterTts.setLanguage("ja-JP");
             await flutterTts.speak(word.text);
-            await Future.delayed(Duration(seconds: 1));
+            await Future.delayed(const Duration(seconds: 1));
             await flutterTts.setLanguage("en");
             await flutterTts.speak(word.meaning.en);
           },

@@ -150,18 +150,19 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             const Gap(8),
             const _Subtitle(text: "言葉"),
             const Gap(8),
-            _buildRelatedWords(context),
+            _buildRelatedWords(context, kana),
             const Gap(8),
             const _Subtitle(text: "由来"),
             const Gap(8),
-            _buildOrigins(context),
+            _buildOrigins(context, kana),
           ],
         ),
       ),
     );
   }
 
-  _buildOrigins(BuildContext context) {
+  _buildOrigins(BuildContext context, Kana kana) {
+    String kanaKey = kana.romaji.split('/')[0];
     return SizedBox(
       width: double.infinity,
       child: Card(
@@ -171,17 +172,17 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset(
-                "assets/kana/origins/a-2.png",
+                "assets/kana/origins/${kanaKey}0.png",
                 width: KanaPreviewPage.kOriginImageWidth,
               ),
               const Icon(Icons.arrow_right),
               Image.asset(
-                "assets/kana/origins/a-1.png",
+                "assets/kana/origins/${kanaKey}1.png",
                 width: KanaPreviewPage.kOriginImageWidth,
               ),
               const Icon(Icons.arrow_right),
               Image.asset(
-                "assets/kana/origins/a-0.png",
+                "assets/kana/origins/${kanaKey}2.png",
                 width: KanaPreviewPage.kOriginImageWidth,
               ),
             ],
@@ -191,7 +192,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
     );
   }
 
-  _buildRelatedWords(BuildContext context) {
+  _buildRelatedWords(BuildContext context, Kana kana) {
     return const SizedBox(
       width: double.infinity,
       child: Card(
