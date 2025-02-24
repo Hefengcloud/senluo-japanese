@@ -24,6 +24,8 @@ class Kana extends Equatable {
     required this.romaji,
   });
 
+  String get key => romaji.split('/').first;
+
   static const empty = Kana(hiragana: '', katakana: '', romaji: '');
 
   @override

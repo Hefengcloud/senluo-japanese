@@ -1,7 +1,9 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -37,24 +39,25 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
   late PageController _pageViewController;
   late int _currentPageIndex;
 
+  final FlutterTts _tts = FlutterTts();
+  final AudioPlayer _player = AudioPlayer();
+
   @override
   void initState() {
     super.initState();
+    _initTTS();
     _currentPageIndex = widget.initialIndex;
     _pageViewController = PageController(initialPage: _currentPageIndex);
-    _pageViewController.addListener(_onPageScrolled);
+  }
+
+  void _initTTS() async {
+    await _tts.setLanguage("ja-JP");
   }
 
   @override
   void dispose() {
     super.dispose();
     _pageViewController.dispose();
-  }
-
-  void _onPageScrolled() {
-    if (_pageViewController.page == 4) {
-      context.read<KanaDisplayBloc>().add(const KanaDisplayRowChanged(true));
-    }
   }
 
   @override
@@ -218,10 +221,15 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: words
                     .take(4)
-                    .map((e) => RubyText(
+                    .map(
+                      (e) => InkWell(
+                        onTap: () => _tts.speak(e),
+                        child: RubyText(
                           _parseWordList(e),
                           style: const TextStyle(fontSize: 18),
-                        ))
+                        ),
+                      ),
+                    )
                     .toList(),
               ),
             ),
@@ -273,7 +281,14 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
       width: double.infinity,
       child: Card(
         child: InkWell(
-          onTap: () {},
+          onTap: () async {
+            final audioPath = 'kana/audios/${kana.key}.m4a';
+            try {
+              await _player.play(AssetSource(audioPath)); // For assets
+            } catch (e) {
+              print('Error playing audio: $e');
+            }
+          },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
