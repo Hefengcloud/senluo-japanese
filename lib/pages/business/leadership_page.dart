@@ -6,12 +6,7 @@ class LeadershipPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Leadership'),
-      ),
-      body: _buildBody(context),
-    );
+    return _buildBody(context);
   }
 
   _buildBody(BuildContext context) {

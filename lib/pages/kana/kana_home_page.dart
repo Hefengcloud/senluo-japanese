@@ -38,12 +38,11 @@ class _KanaHomePageState extends State<KanaHomePage>
   Widget build(BuildContext context) {
     return BlocBuilder<KanaBloc, KanaState>(
       builder: (context, state) {
-        if (state is KanaLoading) {
-          return _buildLoading(context);
-        } else if (state is KanaLoaded) {
-          return _buildKanaTable(context, state);
-        }
-        return const Placeholder();
+        return Scaffold(
+          body: state is KanaLoaded
+              ? _buildKanaTable(context, state)
+              : _buildLoading(context),
+        );
       },
     );
   }

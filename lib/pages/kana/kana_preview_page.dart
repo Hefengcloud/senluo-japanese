@@ -285,6 +285,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             title: Text("「${kana.hiragana}」を含む言葉"),
             content: Container(
               width: double.maxFinite,
+              height: 360,
               child: ListView.builder(
                 itemCount: words.length,
                 itemBuilder: (BuildContext context, int index) {

@@ -9,12 +9,7 @@ class MarketingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Marketing'),
-      ),
-      body: _buildBody(context),
-    );
+    return _buildBody(context);
   }
 
   _buildBody(BuildContext context) {

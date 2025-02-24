@@ -1,0 +1,6 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- “ひ”的曲线 -->
+  <path d="M5 18 Q10 6 19 14" stroke="black" stroke-width="1.5" fill="none"/>
+  <!-- 小“カ”的简化形状 -->
+  <path d="M14 4 L18 4 L16 8" stroke="black" stroke-width="1.5" fill="none"/>
+</svg>
