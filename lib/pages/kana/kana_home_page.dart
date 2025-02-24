@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -19,6 +20,7 @@ class _KanaHomePageState extends State<KanaHomePage>
     with SingleTickerProviderStateMixin {
   late TabController _categoryTabController;
   bool _isPronunciationMode = false;
+  final AudioPlayer _player = AudioPlayer();
 
   @override
   void initState() {
@@ -129,15 +131,16 @@ class _KanaHomePageState extends State<KanaHomePage>
     );
   }
 
-  _onKanaTap(BuildContext context, Kana kana) {
+  _onKanaTap(BuildContext context, Kana kana) async {
     final state = context.read<KanaBloc>().state as KanaLoaded;
 
     if (_isPronunciationMode) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(kana.hiragana),
-        ),
-      );
+      final audioPath = 'kana/audios/${kana.key}.m4a';
+      try {
+        await _player.play(AssetSource(audioPath)); // For assets
+      } catch (e) {
+        print('Error playing audio: $e');
+      }
     } else {
       final index = state.kanaTable[state.category]!
           .firstWhere((row) => row.contains(kana))

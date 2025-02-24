@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:gap/gap.dart';
 import 'package:senluo_japanese_cms/common/enums/enums.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
@@ -19,7 +20,9 @@ import '../../repos/grammars/models/grammar_entry.dart';
 class GrammarDetailsPage extends StatelessWidget {
   final GrammarEntry entry;
 
-  const GrammarDetailsPage({super.key, required this.entry});
+  final FlutterTts _tts = FlutterTts();
+
+  GrammarDetailsPage({super.key, required this.entry});
 
   @override
   Widget build(BuildContext context) {
@@ -170,7 +173,15 @@ class GrammarDetailsPage extends StatelessWidget {
         ],
         _Subtitle(text: "例文", level: item.level),
         ...item.examples.map(
-          (e) => ListTile(title: _buildExampleText(context, e, item.level)),
+          (e) => ListTile(
+            title: _buildExampleText(context, e, item.level),
+            onTap: () {
+              _tts.setLanguage("ja-JP");
+              _tts.speak(e.jp);
+              _tts.setLanguage("zh-CN");
+              _tts.speak(e.zh);
+            },
+          ),
         ),
         const Gap(48),
       ],
@@ -240,9 +251,10 @@ class _Subtitle extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: kLevel2color[level]?.withAlpha(30),
+        borderRadius: BorderRadius.circular(8),
       ),
       margin: const EdgeInsets.all(8),
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       child: Text(
         "[$text]",
         style: Theme.of(context)
