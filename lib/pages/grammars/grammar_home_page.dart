@@ -44,7 +44,12 @@ class _GrammarHomePageState extends State<GrammarHomePage>
   Widget build(BuildContext context) {
     return BlocConsumer<GrammarBloc, GrammarState>(
       builder: (context, state) {
-        return _buildBody(context, state);
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('文法'),
+          ),
+          body: _buildBody(context, state),
+        );
       },
       listener: (BuildContext context, GrammarState state) {
         if (state is GrammarLoaded && state.currentItem != GrammarItem.empty) {}
@@ -96,7 +101,9 @@ class _GrammarHomePageState extends State<GrammarHomePage>
         builder: (_) => RepositoryProvider(
           create: (BuildContext context) =>
               BlocProvider.of<GrammarBloc>(context).grammarRepository,
-          child: GrammarDetailsPage(entry: entry,),
+          child: GrammarDetailsPage(
+            entry: entry,
+          ),
         ),
       ),
     );
