@@ -17,17 +17,6 @@ import '../kanji/kanji_home_page.dart';
 import '../proverbs/proverb_home_page.dart';
 import '../zengo/zengo_home_page.dart';
 
-class AppTitle extends Text {
-  AppTitle({super.key})
-      : super(
-          '森罗日语',
-          style: GoogleFonts.zhiMangXing(
-            fontSize: 20,
-            color: Colors.purple,
-          ),
-        );
-}
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -73,9 +62,16 @@ class _HomePageState extends State<HomePage> {
   _buildDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
+        padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            child: AppTitle(),
+            child: Text(
+              "森罗日语",
+              style: GoogleFonts.zhiMangXing(
+                fontSize: 48,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
           ),
           ListTile(
             title: const Text('仮名'),
