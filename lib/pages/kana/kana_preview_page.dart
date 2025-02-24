@@ -42,12 +42,19 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
     super.initState();
     _currentPageIndex = widget.initialIndex;
     _pageViewController = PageController(initialPage: _currentPageIndex);
+    _pageViewController.addListener(_onPageScrolled);
   }
 
   @override
   void dispose() {
     super.dispose();
     _pageViewController.dispose();
+  }
+
+  void _onPageScrolled() {
+    if (_pageViewController.page == 4) {
+      context.read<KanaDisplayBloc>().add(const KanaDisplayRowChanged(true));
+    }
   }
 
   @override
