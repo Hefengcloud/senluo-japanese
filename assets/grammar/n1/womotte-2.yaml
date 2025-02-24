@@ -20,9 +20,11 @@ explanations:
 level: N1
 meanings:
   jp:
-    - 〜で / 〜を基準に
+    - 〜で
+    - 〜を基準に
   zh:
-    - 以... / 用...
+    - 以…
+    - 用…
 name: 〜をもって
 tags:
 - 手段

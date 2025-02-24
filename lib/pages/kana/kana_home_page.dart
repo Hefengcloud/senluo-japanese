@@ -36,7 +36,7 @@ class _KanaHomePageState extends State<KanaHomePage>
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<KanaBloc, KanaState>(
+    return BlocBuilder<KanaBloc, KanaState>(
       builder: (context, state) {
         if (state is KanaLoading) {
           return _buildLoading(context);
@@ -44,17 +44,6 @@ class _KanaHomePageState extends State<KanaHomePage>
           return _buildKanaTable(context, state);
         }
         return const Placeholder();
-      },
-      listener: (BuildContext context, KanaState state) {
-        if (state is KanaLoaded) {
-          if (_isPronunciationMode) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text(state.kana.hiragana),
-              ),
-            );
-          }
-        }
       },
     );
   }

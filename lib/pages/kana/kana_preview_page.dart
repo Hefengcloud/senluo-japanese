@@ -76,15 +76,39 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             body: state is KanaDisplayLoaded
                 ? _buildBody(context, state)
                 : const Center(child: CircularProgressIndicator()),
-            floatingActionButton: FloatingActionButton(
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.miniCenterDocked,
+            floatingActionButton: FloatingActionButton.small(
               onPressed: () => _showStrokeDialog(context),
               child: const FaIcon(FontAwesomeIcons.pen),
+            ),
+            bottomNavigationBar: BottomAppBar(
+              child: Row(
+                children: [
+                  TextButton.icon(
+                    icon: Icon(Icons.arrow_left),
+                    onPressed: () {},
+                    label: Text('か行'),
+                  ),
+                  Spacer(),
+                  Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: TextButton.icon(
+                      onPressed: null,
+                      icon: Icon(Icons.arrow_left),
+                      label: Text("さ行"),
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         },
       ),
     );
   }
+
+  _buildBottomAppBar(KanaDisplayLoaded state) {}
 
   AppBar _buildAppBar(KanaDisplayState state) {
     var title = "Loading";
@@ -114,7 +138,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             controller: _pageViewController,
             onPageChanged: _handlePageViewChanged,
             children: state.row.map<Widget>((kana) {
-              return _buildKanaPage(context, kana);
+              return _buildKana(context, kana);
             }).toList(),
           ),
         ),
@@ -150,7 +174,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
     );
   }
 
-  Widget _buildKanaPage(BuildContext context, Kana kana) {
+  Widget _buildKana(BuildContext context, Kana kana) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: SingleChildScrollView(
@@ -219,18 +243,30 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
               padding: const EdgeInsets.all(16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: words
-                    .take(4)
-                    .map(
-                      (e) => InkWell(
-                        onTap: () => _tts.speak(e),
-                        child: RubyText(
-                          _parseWordList(e),
-                          style: const TextStyle(fontSize: 18),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ...words.take(4).map(
+                        (e) => Expanded(
+                          child: InkWell(
+                            onTap: () => _tts.speak(e),
+                            child: Center(
+                              child: RubyText(
+                                _parseWordList(e),
+                                style: GoogleFonts.kleeOne(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                    )
-                    .toList(),
+                  IconButton(
+                    onPressed: () =>
+                        _showMoreRelatedWords(context, kana, words),
+                    icon: const Icon(Icons.more_vert_outlined),
+                  ),
+                ],
               ),
             ),
           ),
@@ -238,6 +274,40 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
       },
       future: repo.loadKanaWords(kana.hiragana),
     );
+  }
+
+  _showMoreRelatedWords(BuildContext context, Kana kana, List<String> words) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            actionsOverflowAlignment: OverflowBarAlignment.center,
+            title: Text("「${kana.hiragana}」を含む言葉"),
+            content: Container(
+              width: double.maxFinite,
+              child: ListView.builder(
+                itemCount: words.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final word = words[index];
+                  return ListTile(
+                    title: Text(word),
+                    trailing: Icon(Icons.volume_up_outlined),
+                    onTap: () {
+                      _tts.speak(word);
+                    },
+                  );
+                },
+              ),
+            ),
+            actions: [
+              TextButton.icon(
+                onPressed: () => Navigator.of(context).pop(),
+                label: const Text('閉じる'),
+                icon: const Icon(Icons.close_outlined),
+              )
+            ],
+          );
+        });
   }
 
   List<RubyTextData> _parseWordList(String word) {
@@ -296,7 +366,8 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
               AutoSizeText(
                 state.type == KanaType.hiragana ? kana.hiragana : kana.katakana,
                 style: GoogleFonts.kleeOne(
-                  fontSize: 140,
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 120,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -320,19 +391,20 @@ class _Subtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return Container(
       width: 56,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
+        color: colorScheme.secondaryContainer,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Text(
         text,
-        style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
+        style: TextStyle(
+          color: colorScheme.primary,
         ),
       ),
     );
@@ -353,16 +425,17 @@ class _KanaIndicator extends StatelessWidget {
       height: isLarge ? 40 : 32,
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).colorScheme.secondaryContainer,
         borderRadius: BorderRadius.circular(isLarge ? 20 : 16),
       ),
       child: Text(
         text,
-        style: TextStyle(
-          color: Colors.white,
+        style: GoogleFonts.kleeOne(
+          color: Theme.of(context).primaryColor,
           fontWeight: FontWeight.bold,
           fontSize: isLarge ? 20 : 16,
         ),
+        textAlign: TextAlign.center,
       ),
     );
   }
