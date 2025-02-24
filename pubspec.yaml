@@ -121,7 +121,8 @@ flutter:
     - assets/vocabulary/category/place/
     - assets/vocabulary/jlpt/
     - assets/kana/origins/
-    - assets/kana/strokes/
+    - assets/kana/strokes/hiragana
+    - assets/kana/strokes/katakana
     - assets/kana/words/
     - assets/kana/audios/
 
