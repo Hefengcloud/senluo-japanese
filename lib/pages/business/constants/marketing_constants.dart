@@ -1,3 +1,5 @@
+import 'package:senluo_japanese_cms/pages/business/data/marketing_channel.dart';
+
 enum CustomerPersona {
   newbies('日语初学者'),
   jlptCandidates('JLPT备考者');
@@ -7,19 +9,35 @@ enum CustomerPersona {
   const CustomerPersona(this.name);
 }
 
+const kEverjapanChannles = [
+  MarketingChannel(
+    name: "日系生活家",
+    type: "小红书",
+    url: "https://www.xiaohongshu.com/user/profile/642b0b6f000000001400eda2",
+  ),
+  MarketingChannel(
+    name: "日系生活家",
+    type: "Bibibili",
+    url: "https://space.bilibili.com/481782510",
+  ),
+  MarketingChannel(
+    name: "日系生活家",
+    type: "喜马拉雅",
+    url: "https://www.ximalaya.com/zhubo/210189066",
+  ),
+  MarketingChannel(
+    name: "日系生活家",
+    type: "Bibibili",
+    url: "https://space.bilibili.com/481782510",
+  ),
+  MarketingChannel(
+    name: "日系生活家",
+    type: "Bibibili",
+    url: "https://space.bilibili.com/481782510",
+  ),
+];
+
 enum SocialMedia {
-  xiaohongshu(
-    '小红书',
-    'https://www.xiaohongshu.com/user/profile/642b0b6f000000001400eda2',
-  ),
-  bilibili(
-    'B站',
-    'https://space.bilibili.com/481782510',
-  ),
-  ximalaya(
-    '喜马拉雅',
-    'https://www.ximalaya.com/zhubo/210189066',
-  ),
   douyin(
     '抖音',
     'https://www.douyin.com/user/MS4wLjABAAAA1ZxYZLzx2yD9HCxvA5fLQSmA_L2AntzHulU2RfMsDOM',

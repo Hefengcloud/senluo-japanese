@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/product_constants.dart';
+import 'package:senluo_japanese_cms/pages/kana/kana_home_page.dart';
+
+import '../grammars/grammar_home_page.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({super.key});
@@ -14,6 +17,18 @@ class ProductsPage extends StatelessWidget {
 
     return ListView.separated(
       itemBuilder: (ctx, idx) => ListTile(
+        onTap: () {
+          switch (idx) {
+            case 0:
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (ctx) => const KanaHomePage()),
+              );
+            case 1:
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (ctx) => const GrammarHomePage()),
+              );
+          }
+        },
         leading: Icon(
           products[idx].type.icon,
           color: Colors.green,

@@ -15,6 +15,7 @@ import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 import '../grammars/grammar_home_page.dart';
 import '../kanji/kanji_home_page.dart';
 import '../proverbs/proverb_home_page.dart';
+import '../tools/tools_home_page.dart';
 import '../zengo/zengo_home_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -75,77 +76,53 @@ class _HomePageState extends State<HomePage> {
           ),
           ListTile(
             title: const Text('仮名'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => KanaHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const KanaHomePage()),
           ),
           ListTile(
             title: const Text('文法'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => GrammarHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const GrammarHomePage()),
           ),
           ListTile(
             title: const Text('語彙'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => VocabularyHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const VocabularyHomePage()),
           ),
           ListTile(
             title: const Text('漢字'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => KanjiHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const KanjiHomePage()),
           ),
           ListTile(
             title: const Text('慣用語'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => ProverbHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const ProverbHomePage()),
           ),
           ListTile(
             title: const Text('オノマトペ'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => OnomatopoeiaHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const OnomatopoeiaHomePage()),
           ),
           ListTile(
             title: const Text('表現'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => ExpressionHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const ExpressionHomePage()),
           ),
           ListTile(
             title: const Text('敬語'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => KeigoHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const KeigoHomePage()),
           ),
           ListTile(
             title: const Text('禅語'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => ZengoHomePage(),
-              ),
-            ),
+            onTap: () => _goto(const ZengoHomePage()),
+          ),
+          ListTile(
+            title: const Text('ツール'),
+            onTap: () => _goto(const ToolsHomePage()),
           ),
         ],
+      ),
+    );
+  }
+
+  _goto(Widget page) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => page,
       ),
     );
   }

@@ -11,6 +11,7 @@ class LeadershipPage extends StatelessWidget {
 
   _buildBody(BuildContext context) {
     return ListView(
+      padding: const EdgeInsets.all(8),
       children: [
         _buildTextPanel(
           context,
