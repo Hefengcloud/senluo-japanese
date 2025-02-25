@@ -47,8 +47,9 @@ class _KanjiHomePageState extends State<KanjiHomePage>
     if (state is KanjiLoaded) {
       currentLevel = state.jlptLevel;
     }
-    return SafeArea(
-      child: Column(
+    return Scaffold(
+      appBar: AppBar(title: const Text("漢字")),
+      body: Column(
         children: [
           TabBar(
             controller: _tabController,
