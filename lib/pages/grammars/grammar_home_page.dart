@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/grammars/grammar_details_page.dart';
+import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_japanese_cms/pages/grammars/grammar_list_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_tutorial_page.dart';
-import 'package:senluo_japanese_cms/pages/grammars/views/grammar_menu_list_view.dart';
 import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
 import '../../common/enums/enums.dart';
-import '../../repos/grammars/models/grammar_entry.dart';
 import 'bloc/grammar_bloc.dart';
 
 class GrammarHomePage extends StatefulWidget {
@@ -45,9 +45,6 @@ class _GrammarHomePageState extends State<GrammarHomePage>
     return BlocConsumer<GrammarBloc, GrammarState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text('文法'),
-          ),
           body: _buildBody(context, state),
         );
       },
@@ -58,52 +55,117 @@ class _GrammarHomePageState extends State<GrammarHomePage>
   }
 
   _buildBody(BuildContext context, GrammarState state) {
-    return switch (state) {
-      GrammarLoading() => const Center(child: CircularProgressIndicator()),
-      GrammarError() => const Text('Something went wrong!'),
-      GrammarLoaded() => _buildContent(context, state.entryMap)
-    };
-  }
-
-  _buildContent(context, Map<JLPTLevel, List<GrammarEntry>> entryMap) {
     return SafeArea(
-      child: Column(
+      child: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         children: [
-          TabBar(
-            controller: _tabController,
-            tabs: const [
-              Tab(text: 'JLPT文法'),
-              Tab(text: '文法入門'),
-            ],
-          ),
-          Expanded(
-            child: TabBarView(
-              controller: _tabController,
-              children: [
-                GrammarMenuListView(
-                  onEntrySelected: (entry) => _forwardToDetail(context, entry),
-                  grammarsByLevel: entryMap,
-                ),
-                const GrammarTutorialPage(),
-              ],
+          const Gap(64),
+          Text(
+            "文法辞書",
+            textAlign: TextAlign.center,
+            style: GoogleFonts.yuseiMagic(
+              fontSize: 64,
+              color: Theme.of(context).primaryColor,
             ),
           ),
+          const Gap(16),
+          _buildSearchInput(),
+          const Gap(16),
+          _buildTutorialEntry(context),
+          const Gap(16),
+          if (state is GrammarLoaded) _buildLevelEntries(context, state),
         ],
       ),
     );
   }
 
-  _forwardToDetail(BuildContext context, GrammarEntry entry) {
-    BlocProvider.of<GrammarBloc>(context)
-        .add(GrammarEntryChanged(entry: entry));
+  _buildTutorialEntry(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32),
+      child: TextButton(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (ctx) => const GrammarTutorialPage()),
+          );
+        },
+        child: Text.rich(
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 20),
+          TextSpan(children: [
+            const TextSpan(text: "👉 "),
+            TextSpan(
+              text: "日本語文法入門",
+              style: GoogleFonts.yuseiMagic(
+                fontSize: 20,
+                decoration: TextDecoration.underline,
+              ),
+            ),
+            const TextSpan(text: " 👈"),
+          ]),
+        ),
+      ),
+    );
+  }
+
+  _buildLevelEntries(BuildContext context, GrammarLoaded state) {
+    return GridView.count(
+      mainAxisSpacing: 8,
+      crossAxisSpacing: 8,
+      crossAxisCount: 3,
+      childAspectRatio: 2,
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: JLPTLevel.values
+          .take(6)
+          .map(
+            (e) => InkWell(
+              onTap: () => _onEntryChanged(context, e),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: e.color.withAlpha(30),
+                ),
+                child: Center(
+                  child: Text(
+                    e.name.toUpperCase(),
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.yuseiMagic(
+                      color: e.color,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
+          .toList(),
+    );
+  }
+
+  _onEntryChanged(BuildContext context, JLPTLevel level) {
+    context.read<GrammarBloc>().add(GrammarLevelChanged(level: level));
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => RepositoryProvider(
-          create: (BuildContext context) =>
-              BlocProvider.of<GrammarBloc>(context).grammarRepository,
-          child: GrammarDetailsPage(
-            entry: entry,
-          ),
+        builder: (ctx) => const GrammarListPage(),
+      ),
+    );
+  }
+
+  _buildSearchInput() {
+    return TextField(
+      controller: _searchController,
+      decoration: InputDecoration(
+        hintText: '検索...',
+        prefixIcon: const Icon(Icons.search),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        // Clear button
+        suffixIcon: IconButton(
+          icon: const Icon(Icons.clear),
+          onPressed: () {
+            _searchController.clear();
+          },
         ),
       ),
     );

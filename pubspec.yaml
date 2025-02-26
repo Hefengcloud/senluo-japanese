@@ -62,6 +62,7 @@ dependencies:
   flutter_tts: ^4.2.2
   markdown: ^7.3.0
   audioplayers: ^6.2.0
+  tiktoklikescroller: ^0.2.8
 
 dev_dependencies:
   flutter_test:

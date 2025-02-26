@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
           ),
           ListTile(
             title: const Text('禅語'),
-            onTap: () => _goto(const ZengoHomePage()),
+            onTap: () => _goto(ZengoHomePage()),
           ),
           ListTile(
             title: const Text('ツール'),

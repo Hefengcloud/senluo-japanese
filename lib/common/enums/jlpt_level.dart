@@ -1,3 +1,5 @@
+import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
+
 enum JLPTLevel {
   n1,
   n2,
@@ -13,4 +15,6 @@ enum JLPTLevel {
       orElse: () => JLPTLevel.n0,
     );
   }
+
+  get color => kLevel2color[this];
 }

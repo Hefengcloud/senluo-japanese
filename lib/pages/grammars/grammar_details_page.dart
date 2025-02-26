@@ -76,7 +76,10 @@ class GrammarDetailsPage extends StatelessWidget {
   _buildBody(BuildContext context, GrammarLoaded state) {
     return Stack(
       children: [
-        _buildGrammarDetails(context, state.currentItem),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 32),
+          child: _buildGrammarDetails(context, state.currentItem),
+        ),
         Positioned(
           left: 0,
           right: 0,
@@ -114,7 +117,7 @@ class GrammarDetailsPage extends StatelessWidget {
           SizedBox(
             width: 72,
             child: Text(
-              "${state.currentIndex + 1} / ${state.entries.length}",
+              "${state.currentItemIndex + 1} / ${state.currentLevelEntries.length}",
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
@@ -141,6 +144,7 @@ class GrammarDetailsPage extends StatelessWidget {
 
   _buildGrammarDetails(BuildContext context, GrammarItem item) {
     return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       children: [
         const Gap(16),
         Padding(
