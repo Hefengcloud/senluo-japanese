@@ -15,11 +15,15 @@ class ZengoRepository {
     final categories = loadYaml(yamlString);
     final items = categories.map<ZengoCategory>((category) {
       final name = category["category"];
-      final words = category["list"].map<Zengo>((e) => Zengo(
-            lines: e["zen"].map<String>((e) => e.toString()).toList(),
-            readings: e["yomi"].map<String>((e) => e.toString()).toList(),
-            meaning: e["imi"].toString(),
-          ));
+      final words = category["list"]
+          .map<Zengo>(
+            (e) => Zengo(
+              lines: e["zen"].map<String>((e) => e.toString()).toList(),
+              readings: e["yomi"].map<String>((e) => e.toString()).toList(),
+              meaning: e["imi"].toString(),
+            ),
+          )
+          .toList();
 
       return ZengoCategory(name: name, items: words);
     }).toList();
