@@ -86,17 +86,17 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
               child: Row(
                 children: [
                   TextButton.icon(
-                    icon: Icon(Icons.arrow_left),
+                    icon: const Icon(Icons.arrow_left),
                     onPressed: () {},
-                    label: Text('か行'),
+                    label: const Text('か行'),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Directionality(
                     textDirection: TextDirection.rtl,
                     child: TextButton.icon(
                       onPressed: null,
-                      icon: Icon(Icons.arrow_left),
-                      label: Text("さ行"),
+                      icon: const Icon(Icons.arrow_left),
+                      label: const Text("さ行"),
                     ),
                   ),
                 ],
@@ -283,7 +283,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
           return AlertDialog(
             actionsOverflowAlignment: OverflowBarAlignment.center,
             title: Text("「${kana.hiragana}」を含む言葉"),
-            content: Container(
+            content: SizedBox(
               width: double.maxFinite,
               height: 360,
               child: ListView.builder(
@@ -292,7 +292,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
                   final word = words[index];
                   return ListTile(
                     title: Text(word),
-                    trailing: Icon(Icons.volume_up_outlined),
+                    trailing: const Icon(Icons.volume_up_outlined),
                     onTap: () {
                       _tts.speak(word);
                     },

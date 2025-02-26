@@ -11,6 +11,7 @@ part 'grammar_state.dart';
 class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
   GrammarBloc({required this.grammarRepository}) : super(GrammarLoading()) {
     on<GrammarStarted>(_onStarted);
+    on<GrammarLevelChanged>(_onLevelChanged);
     on<GrammarEntryChanged>(_onEntryChanged);
     on<GrammarItemChanged>(_onItemChanged);
   }
@@ -38,6 +39,14 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     emit(GrammarLoaded(entryMap: level2entries));
   }
 
+  Future<void> _onLevelChanged(
+    GrammarLevelChanged event,
+    Emitter<GrammarState> emit,
+  ) async {
+    final theState = state as GrammarLoaded;
+    emit(theState.copyWith(currentLevel: event.level));
+  }
+
   Future<void> _onEntryChanged(
     GrammarEntryChanged event,
     Emitter<GrammarState> emit,
@@ -52,24 +61,24 @@ class GrammarBloc extends Bloc<GrammarEvent, GrammarState> {
     Emitter<GrammarState> emit,
   ) async {
     final theState = state as GrammarLoaded;
-    final theIndex = theState.currentIndex;
+    final theIndex = theState.currentItemIndex;
     int newIndex = theIndex;
 
     if (event.previous) {
       if (theIndex > 0) {
         newIndex--;
       } else {
-        newIndex = theState.entries.length - 1;
+        newIndex = theState.currentLevelEntries.length - 1;
       }
     } else {
-      if (theIndex < theState.entries.length - 1) {
+      if (theIndex < theState.currentLevelEntries.length - 1) {
         newIndex++;
       } else {
         newIndex = 0;
       }
     }
 
-    final newEntry = theState.entries[newIndex];
+    final newEntry = theState.currentLevelEntries[newIndex];
     add(GrammarEntryChanged(entry: newEntry));
   }
 }
