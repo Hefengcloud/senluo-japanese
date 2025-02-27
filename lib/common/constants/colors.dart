@@ -44,14 +44,14 @@ class SenluoTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       primaryColor: const Color.fromRGBO(76, 175, 80, 1), // 主色
-      colorScheme: ColorScheme.light(
+      colorScheme: const ColorScheme.light(
         primary: SenluoColors.primary,
         secondary: SenluoColors.secondary,
         tertiary: SenluoColors.accent,
         background: SenluoColors.background,
       ),
       scaffoldBackgroundColor: SenluoColors.background, // 页面背景
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: SenluoColors.primary, // 导航栏背景
         titleTextStyle: TextStyle(
           color: SenluoColors.textPrimary, // 导航栏文字颜色

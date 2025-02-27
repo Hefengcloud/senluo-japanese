@@ -37,7 +37,7 @@ class _VocabularyHomePageState extends State<VocabularyHomePage>
       length: VocabularyType.values.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("語彙"),
+          title: const Text("語彙"),
           bottom: TabBar(
             tabs: VocabularyType.values
                 .map<Tab>(

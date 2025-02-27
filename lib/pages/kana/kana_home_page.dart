@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -127,7 +129,7 @@ class _KanaHomePageState extends State<KanaHomePage>
       try {
         await _player.play(AssetSource(audioPath)); // For assets
       } catch (e) {
-        print('Error playing audio: $e');
+        log('Error playing audio: $e');
       }
     } else {
       final index = state.kanaTable[state.category]!
