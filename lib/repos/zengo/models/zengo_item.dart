@@ -24,6 +24,8 @@ class Zengo extends Equatable {
     required this.meaning,
   });
 
+  static const empty = Zengo(lines: [], readings: [], meaning: '');
+
   @override
   List<Object?> get props => [lines, readings, meaning];
 }

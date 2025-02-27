@@ -63,6 +63,7 @@ dependencies:
   markdown: ^7.3.0
   audioplayers: ^6.2.0
   tiktoklikescroller: ^0.2.8
+  unsplash_client: ^2.2.0
 
 dev_dependencies:
   flutter_test:

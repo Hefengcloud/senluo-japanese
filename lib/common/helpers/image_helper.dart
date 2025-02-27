@@ -7,6 +7,15 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:gal/gal.dart';
+import 'package:unsplash_client/unsplash_client.dart';
+
+final unsplashClient = UnsplashClient(
+  settings: const ClientSettings(
+    credentials: AppCredentials(
+        accessKey: 'd-i9E1tPZHVotRUma2Nh8rncfU5J6JTsEQmFUVFcsKQ',
+        secretKey: 'rpYml2PR5nhwaOtftymCYM5l-Jc25xrwjT1GbsQUq2g'),
+  ),
+);
 
 Future<Uint8List?> captureWidget(GlobalKey globalKey) async {
   final boundary =
