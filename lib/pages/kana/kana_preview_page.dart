@@ -78,10 +78,12 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
                 : const Center(child: CircularProgressIndicator()),
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.miniCenterDocked,
-            floatingActionButton: FloatingActionButton.small(
-              onPressed: () => _showStrokeDialog(context),
-              child: const FaIcon(FontAwesomeIcons.pen),
-            ),
+            floatingActionButton: state is KanaDisplayLoaded
+                ? FloatingActionButton.small(
+                    onPressed: () => _showStrokeDialog(context, state),
+                    child: const FaIcon(FontAwesomeIcons.pen),
+                  )
+                : null,
             bottomNavigationBar: BottomAppBar(
               child: Row(
                 children: [
@@ -156,17 +158,42 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
     _pageViewController.jumpToPage(index);
   }
 
-  _showStrokeDialog(BuildContext context) {
-    showDialog(
+  _showStrokeDialog(BuildContext context, KanaDisplayLoaded state) {
+    final kana = state.row[_currentPageIndex];
+    final isH = state.isHiragana;
+
+    final imgPath =
+        "assets/kana/strokes/${isH ? 'hiragana' : 'katakana'}/${kana.romaji}.gif";
+
+    showModalBottomSheet(
       context: context,
+      enableDrag: false,
       builder: (context) {
-        return AlertDialog(
-          title: const Text("筆順"),
-          content: Image.asset("assets/kana/strokes/h0a.gif"),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Text("閉じる"),
+        return Stack(
+          children: [
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Gap(16),
+                Text(
+                  '「${isH ? kana.hiragana : kana.katakana}」の筆順',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Divider(),
+                ),
+                Image.asset(imgPath, width: 260, height: 260, fit: BoxFit.fill),
+                const Gap(48),
+              ],
+            ),
+            Positioned(
+              right: 8,
+              top: 8,
+              child: IconButton(
+                icon: const Icon(Icons.close_rounded),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
             ),
           ],
         );
