@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/marketing_constants.dart';
 import 'package:senluo_japanese_cms/pages/business/marketing/content_marketing_page.dart';
 import 'package:senluo_japanese_cms/pages/business/marketing/story_brand_framework_page.dart';
+
+import '../../repos/business/business_repository.dart';
 
 class MarketingPage extends StatelessWidget {
   const MarketingPage({super.key});
@@ -56,7 +59,9 @@ class MarketingPage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const ContentMarketingPage(),
+                    builder: (_) => ContentMarketingPage(
+                      repo: context.read<BusinessRepository>(),
+                    ),
                   ),
                 );
               },

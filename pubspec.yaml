@@ -129,6 +129,7 @@ flutter:
     - assets/kana/strokes/katakana/
     - assets/kana/words/
     - assets/kana/audios/
+    - assets/business/
 
     
 

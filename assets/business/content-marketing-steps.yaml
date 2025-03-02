@@ -1,0 +1,43 @@
+- step: Goal Setting
+  desc: What do you want to achieve with this content-marketing campaign?
+  details:
+    - brand-building objective
+    - sales-growth objective
+- step: Audience Mapping
+  desc: Who are your customers and what are their anxieties and desires?
+  details:
+    - customer profiling and persona
+    - customer anxieties and desires
+- step: Content Ideation & Planning
+  desc: What is the overall content theme and what is the content roadmap?
+  details:
+    - content theme
+    - content formats and mix
+    - content storyline and calendar
+- step: Content Creation
+  desc: Who creates the content and when?
+  details:
+    - "content creators: in-house or agencies"
+    - content production schedule
+- step: Content Distribution
+  desc: Where do you want to distribute the content assets?
+  details:
+    - Owned channel
+    - Paied channel
+    - Earned channel
+- step: Content Amplification
+  desc: How do you plan to leverage content assets and interact with customers?
+  details:
+    - Creating conversation around content
+    - Use of buzzers and influencers
+- step: Content-marketing Evaluation
+  desc: How successful is your content-marketing campaign?
+  details:
+    - Content-marketing matrics
+    - Overall objective achievements
+- step: Content-marketing Improvement
+  desc: How do you improve existing content marketing?
+  details:
+    - Content theme change
+    - Content improvement
+    - Content distribution and amplification improvement
