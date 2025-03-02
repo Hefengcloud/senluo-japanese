@@ -16,7 +16,9 @@ extension ProductTypeIcon on ProductType {
       case ProductType.onlineCourse:
         return Icons.school_outlined;
       case ProductType.paidNewsletter:
-        return Icons.paid;
+        return Icons.paid_outlined;
+      case ProductType.podcast:
+        return Icons.podcasts_outlined;
     }
   }
 }
@@ -69,5 +71,11 @@ const kMyProducts = [
     desc: '生活中常用的实用日语',
     type: ProductType.paidNewsletter,
     url: 'https://senluoshe/tutorials/concise-bunpo',
+  ),
+  ProductItem(
+    name: "聊聊日语【Postcast】",
+    desc: "口述日语学习",
+    type: ProductType.podcast,
+    url: "",
   ),
 ];

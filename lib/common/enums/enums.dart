@@ -8,4 +8,5 @@ enum ProductType {
   eBook,
   onlineCourse,
   paidNewsletter,
+  podcast,
 }

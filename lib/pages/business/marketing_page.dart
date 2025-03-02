@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/marketing_constants.dart';
-import 'package:senluo_japanese_cms/pages/business/story_brand_framework_page.dart';
+import 'package:senluo_japanese_cms/pages/business/marketing/content_marketing_page.dart';
+import 'package:senluo_japanese_cms/pages/business/marketing/story_brand_framework_page.dart';
 
 class MarketingPage extends StatelessWidget {
   const MarketingPage({super.key});
@@ -45,6 +46,17 @@ class MarketingPage extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (_) => const StoryBrandFrameworkPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Step-by-Step Content Marketing'),
+              leading: const Icon(Icons.arrow_right_outlined),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const ContentMarketingPage(),
                   ),
                 );
               },
