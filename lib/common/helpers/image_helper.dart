@@ -41,10 +41,8 @@ Future<void> saveImageToFile(Uint8List bytes, String fileName) async {
     fileName: fileName,
   );
 
-  if (outputFile != null) {
-    File file = File(outputFile);
-    file.writeAsBytes(bytes);
-  }
+  File file = File(outputFile!);
+  file.writeAsBytes(bytes);
 }
 
 Future<bool> saveImageToGallery(Uint8List bytes) async {

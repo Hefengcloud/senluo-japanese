@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'constants/marketing_constants.dart';
+import '../constants/marketing_constants.dart';
 
 class StoryBrandFrameworkPage extends StatefulWidget {
   const StoryBrandFrameworkPage({super.key});
