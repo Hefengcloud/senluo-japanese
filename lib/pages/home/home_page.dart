@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/business/cashflow_page.dart';
 import 'package:senluo_japanese_cms/pages/business/leadership_page.dart';
@@ -12,6 +13,7 @@ import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_home_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 
+import '../../repos/business/business_repository.dart';
 import '../grammars/grammar_home_page.dart';
 import '../kanji/kanji_home_page.dart';
 import '../proverbs/proverb_home_page.dart';
@@ -28,34 +30,37 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 6,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('SENLUO JAPANESE'),
-          bottom: const TabBar(
-            isScrollable: true,
-            tabs: [
-              Tab(child: Text("Leadership")),
-              Tab(child: Text("Products")),
-              Tab(child: Text("Marketing")),
-              Tab(child: Text("Sales")),
-              Tab(child: Text("Overhead Operation")),
-              Tab(child: Text("Cashflow")),
+    return RepositoryProvider(
+      create: (context) => BusinessRepository(),
+      child: DefaultTabController(
+        length: 6,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text('SENLUO JAPANESE'),
+            bottom: const TabBar(
+              isScrollable: true,
+              tabs: [
+                Tab(child: Text("Leadership")),
+                Tab(child: Text("Products")),
+                Tab(child: Text("Marketing")),
+                Tab(child: Text("Sales")),
+                Tab(child: Text("Overhead Operation")),
+                Tab(child: Text("Cashflow")),
+              ],
+            ),
+          ),
+          body: const TabBarView(
+            children: [
+              LeadershipPage(),
+              ProductsPage(),
+              MarketingPage(),
+              SalesPage(),
+              OverheadOperationPage(),
+              CashflowPage(),
             ],
           ),
+          drawer: _buildDrawer(context),
         ),
-        body: const TabBarView(
-          children: [
-            LeadershipPage(),
-            ProductsPage(),
-            MarketingPage(),
-            SalesPage(),
-            OverheadOperationPage(),
-            CashflowPage(),
-          ],
-        ),
-        drawer: _buildDrawer(context),
       ),
     );
   }
