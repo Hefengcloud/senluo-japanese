@@ -13,60 +13,29 @@ class MarketingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        // Customer Persona
-        ExpansionTile(
-          title: const Text('Customer Persona'),
-          children: CustomerPersona.values
-              .map<ListTile>(
-                (e) => ListTile(
-                  leading: const Icon(Icons.arrow_right_outlined),
-                  title: Text(e.name),
+        ListTile(
+          title: const Text('Content Marketing'),
+          trailing: const Icon(Icons.arrow_forward_outlined),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ContentMarketingPage(
+                  repo: context.read<BusinessRepository>(),
                 ),
-              )
-              .toList(),
+              ),
+            );
+          },
         ),
-        ExpansionTile(
-          title: const Text('Social Media'),
-          children: [
-            ExpansionTile(
-              title: const Text("日系生活家"),
-              children: kEverjapanChannles
-                  .map<ListTile>((e) => ListTile(title: Text(e.name)))
-                  .toList(),
-            ),
-          ],
-        ),
-        // Social Media
-        const SizedBox(height: 8),
-
-        ExpansionTile(
-          title: const Text('Tools'),
-          children: [
-            ListTile(
-              title: const Text('The StoryBrand Seven-Part Framework'),
-              leading: const Icon(Icons.arrow_right_outlined),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const StoryBrandFrameworkPage(),
-                  ),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Step-by-Step Content Marketing'),
-              leading: const Icon(Icons.arrow_right_outlined),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => ContentMarketingPage(
-                      repo: context.read<BusinessRepository>(),
-                    ),
-                  ),
-                );
-              },
-            )
-          ],
+        ListTile(
+          title: const Text('The StoryBrand Seven-Part Framework'),
+          trailing: const Icon(Icons.arrow_forward_outlined),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const StoryBrandFrameworkPage(),
+              ),
+            );
+          },
         ),
       ],
     );
