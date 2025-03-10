@@ -1,0 +1,2 @@
+/Users/liangfei/Source/hefengcloud/senluo_japanese_cms/android/app/.cxx/RelWithDebInfo/f4v2g5n6/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/liangfei/Source/hefengcloud/senluo_japanese_cms/android/app/.cxx/RelWithDebInfo/f4v2g5n6/arm64-v8a/CMakeFiles/rebuild_cache.dir
