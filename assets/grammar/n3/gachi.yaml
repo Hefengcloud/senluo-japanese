@@ -1,5 +1,5 @@
 conjugations:
-- V（ます形） ~~ます~~ \+ がち
+- V（ます形） ~~ます~~ + がち
 - N + がち
 examples:
 - jp: 冬は **風邪をひきがちだ** 。
@@ -18,8 +18,15 @@ explanations: []
 level: N3
 meanings:
   en:
-  - apt to / liable to/ tend to
+  - apt to 
+  - liable to
+  - tend to
   zh:
-  - 容易…；往往会… (倾向)
+  - 容易…
+  - 往往会… 
+  jp:
+  - よく～になる
+  - ～状態になることが多い
+  - ～する回数が多い
 name: 〜がち
 tags: []
