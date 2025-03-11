@@ -203,16 +203,18 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
 
   Widget _buildKana(BuildContext context, Kana kana) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             _buildKanaCard(context, kana),
             const Gap(8),
-            const _Subtitle(text: "由来"),
-            const Gap(8),
-            _buildOrigins(context, kana),
+            if (widget.category == KanaCategory.seion) ...[
+              const _Subtitle(text: "由来"),
+              const Gap(8),
+              _buildOrigins(context, kana),
+            ],
             const Gap(8),
             const _Subtitle(text: "言葉"),
             const Gap(8),
@@ -270,7 +272,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
               padding: const EdgeInsets.all(16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   ...words.take(4).map(
                         (e) => Expanded(
@@ -280,7 +282,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
                               child: RubyText(
                                 _parseWordList(e),
                                 style: GoogleFonts.kleeOne(
-                                  fontSize: 20,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -395,7 +397,7 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
                 state.type == KanaType.hiragana ? kana.hiragana : kana.katakana,
                 style: GoogleFonts.kleeOne(
                   color: Theme.of(context).primaryColor,
-                  fontSize: 120,
+                  fontSize: 100,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -460,8 +462,8 @@ class _KanaIndicator extends StatelessWidget {
         text,
         style: GoogleFonts.kleeOne(
           color: Theme.of(context).primaryColor,
-          fontWeight: FontWeight.bold,
-          fontSize: isLarge ? 20 : 16,
+          fontWeight: isLarge ? FontWeight.bold : null,
+          fontSize: isLarge ? 20 : 14,
         ),
         textAlign: TextAlign.center,
       ),
