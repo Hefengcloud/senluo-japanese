@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../repos/gojuon/models/models.dart';
 
 class KanaPieceView extends StatelessWidget {
-  static const _kanaFontSize = 28.0;
+  static const _kanaFontSize = 24.0;
 
   final Kana kana;
   final KanaType type;
@@ -35,13 +35,14 @@ class KanaPieceView extends StatelessWidget {
   Text _buildRomaji() {
     return Text(
       kana.romaji,
-      style: const TextStyle(fontSize: 16, color: Colors.black26),
+      style: const TextStyle(fontSize: 14, color: Colors.black26),
     );
   }
 
   Row _buildKana() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         if (type == KanaType.hiragana || type == KanaType.all)
           Text(
@@ -55,7 +56,8 @@ class KanaPieceView extends StatelessWidget {
           Text(
             kana.katakana,
             style: GoogleFonts.kleeOne(
-              fontSize: _kanaFontSize,
+              fontSize:
+                  type == KanaType.all ? _kanaFontSize - 4 : _kanaFontSize,
               fontWeight: type == KanaType.katakana
                   ? FontWeight.bold
                   : FontWeight.normal,

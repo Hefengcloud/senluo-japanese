@@ -45,7 +45,7 @@ const kKanaYoonRowLabels = {
 };
 
 const kKanaLabelStyle = TextStyle(
-  fontSize: 14,
+  fontSize: 10,
   color: Colors.black26,
 );
 
@@ -108,10 +108,7 @@ class KanaTableView extends StatelessWidget {
   }
 
   List<TableCell> _buildTableRow(
-    BuildContext context,
-    int index,
-    List<Kana> kanas,
-  ) {
+      BuildContext context, int index, List<Kana> kanas) {
     final cells = kanas
         .map<TableCell>(
           (e) => TableCell(
@@ -178,27 +175,30 @@ class KanaTableYoonView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: kanaRows
-            .map(
-              (row) => Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: row
-                    .map(
-                      (kana) => Expanded(
-                        child: Card(
-                          child: InkWell(
-                            child: KanaPieceView(kana: kana, type: kanaType),
-                            onTap: () => onKanaTap(kana),
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: kTableBottomMargin),
+        child: Column(
+          children: kanaRows
+              .map(
+                (row) => Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: row
+                      .map(
+                        (kana) => Expanded(
+                          child: Card(
+                            child: InkWell(
+                              child: KanaPieceView(kana: kana, type: kanaType),
+                              onTap: () => onKanaTap(kana),
+                            ),
                           ),
                         ),
-                      ),
-                    )
-                    .toList(),
-              ),
-            )
-            .toList(),
+                      )
+                      .toList(),
+                ),
+              )
+              .toList(),
+        ),
       ),
     );
   }
