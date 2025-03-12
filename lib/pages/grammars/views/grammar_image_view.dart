@@ -50,7 +50,10 @@ class _GrammarImageViewState extends State<GrammarImageView> {
               const Gap(8),
               _buildItemName(widget.item.name, widget.item.level),
               const Gap(16),
-              _buildJpMeaning(widget.item),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _buildJpMeaning(widget.item),
+              ),
               const Gap(8),
               _buildZhMeaning(widget.item),
               const Gap(16),
