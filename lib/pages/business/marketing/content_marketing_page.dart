@@ -1,9 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/business/marketing/content_marketing_slide_page.dart';
 import 'package:senluo_japanese_cms/repos/business/business_repository.dart';
-
-import '../../../common/constants/constants.dart';
 
 class ContentMarketingPage extends StatelessWidget {
   final BusinessRepository repo;
