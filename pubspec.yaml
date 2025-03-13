@@ -56,6 +56,8 @@ dependencies:
   url_launcher: ^6.3.1
   image_gallery_saver:
     path: ../image_gallery_saver
+  senluo_common:
+    path: ../senluo_common
   permission_handler: ^11.4.0
   gal: ^2.3.1
   animated_toggle_switch: ^0.8.4

@@ -32,50 +32,11 @@ class GrammarRepository {
     return dict;
   }
 
-  Future<void> addItem(GrammarItem item) async {
-    await DatabaseHelper().insertGrammarItem(
-      GrammarItemModel(
-        id: 0,
-        name: item.name,
-        level: item.level.name,
-        meaning: jsonEncode(item.meaning),
-        conjugation: item.conjugations.join('#'),
-        explanation: item.explanations.join('#'),
-        example: jsonEncode(item.examples),
-      ),
-    );
-  }
-
-  Future<List<GrammarItem>> loadItems() async {
-    final models = await DatabaseHelper().loadGrammarItems();
-    return models
-        .map((e) => GrammarItem.simple(e.id, e.name, e.level))
-        .toList();
-  }
-
-  Future<List<GrammarItem>> searchItems({
-    String? keyword,
-    String? level,
-  }) async {
-    final models = await DatabaseHelper().loadGrammarItems(
-      keyword: keyword,
-      level: level,
-    );
-    return models
-        .map((e) => GrammarItem.simple(e.id, e.name, e.level))
-        .toList();
-  }
-
   Future<GrammarItem> loadItem(GrammarEntry entry) async {
     final filePath = Path.join(
         _kGrammarDir, entry.level.name.toLowerCase(), "${entry.key}.yaml");
     final yamlString = await rootBundle.loadString(filePath);
     final yaml = loadYaml(yamlString);
     return GrammarItem.fromYaml(entry.key, yaml);
-  }
-
-  Future<bool> delItem(int id) async {
-    final count = await DatabaseHelper().delGrammarItem(id);
-    return count > 0;
   }
 }
