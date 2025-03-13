@@ -1,19 +1,18 @@
 conjugations:
 - 普通形 + かな（あ）
 examples:
-- jp: 〜でしょうか」
-  jp1: 〜でしょうか」
-  zh: 相当于的意思 。
-- jp: ：（WBを指して）これ、 **消してもいいかな** 。
-  jp1: ：（WBを[指し](さし)て）これ、 **[消し](けし)てもいいかな** 。
-  zh: B：はい。
+- jp: あと、３０分でコンサートが始まっちゃう。電車が遅れてるし、間に合うかなあ。
+  zh: ''
+- jp: A：田中くん、悪いんだけど明日までにプレゼンの資料を用意してくれるかな。 \nB：はい、かしこまりました。
+  zh: ''
 explanations: []
 level: N3
 meanings:
   jp:
-  - ①疑問の気持ちを表す
-  - ②依頼したり、許可を求めるときに使う
-  zh:
-  - '...吧(语气助词)'
+  - 疑問の気持ちを表す
+  - 依頼したり、許可を求めるときに使う
+  en:
+  - To express a sense of doubt
+  - To use when making requests or seeking permission
 name: 〜かな / 〜かなあ
 tags: []
