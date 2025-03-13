@@ -15,7 +15,7 @@ class Meaning {
 
   String get en => ens.join(' / ');
   String get zh => zhs.length > 1
-      ? zhs.mapIndexed((idx, e) => "${maruNumbers[idx]}$e").join(' ')
+      ? zhs.mapIndexed((idx, e) => "${solidMaruNumbers[idx]}$e").join(' ')
       : zhs.first;
   String get jp => jps.length > 1
       ? jps.mapIndexed((idx, e) => "${maruNumbers[idx]}$e").join(' ')

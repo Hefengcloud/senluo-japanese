@@ -45,7 +45,7 @@ class ContentMarketingPage extends StatelessWidget {
                       children: e.details
                           .mapIndexed<ListTile>(
                             (idx, d) => ListTile(
-                              leading: Text(maruNumbers[idx]),
+                              leading: Text(solidMaruNumbers[idx]),
                               title: Text(d),
                             ),
                           )
