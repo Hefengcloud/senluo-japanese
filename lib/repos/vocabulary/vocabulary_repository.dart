@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 // ignore: library_prefixes
 import 'package:path/path.dart' as Path;
-import 'package:senluo_japanese_cms/common/models/meaning.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
 import 'package:senluo_japanese_cms/common/helpers/text_helper.dart';
 import 'package:senluo_japanese_cms/repos/vocabulary/models/vocabulary_menu.dart';
 import 'package:yaml/yaml.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:yaml/yaml.dart';
 
 import 'models/kanji_model.dart';

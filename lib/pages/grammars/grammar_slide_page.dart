@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
 
 class GrammarSlidePage extends StatelessWidget {
   final GrammarItem item;

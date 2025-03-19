@@ -1,4 +1,4 @@
-import 'package:senluo_japanese_cms/common/models/meaning.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
 
 class Word {
   final String text;

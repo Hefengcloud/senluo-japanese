@@ -3,19 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_japanese_cms/common/enums/enums.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
-import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_slide_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
-import 'package:senluo_japanese_cms/pages/grammars/views/grammar_conjugation_text.dart';
-import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
-import 'package:senluo_japanese_cms/widgets/japanese_sentence.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import '../../common/models/models.dart';
-import '../../repos/grammars/models/grammar_entry.dart';
 
 class GrammarDetailsPage extends StatelessWidget {
   final GrammarEntry entry;

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
-import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/kanji/kanji_list_page.dart';
 
 import 'bloc/kanji_bloc.dart';

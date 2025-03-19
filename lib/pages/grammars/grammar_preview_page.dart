@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_item_bloc.dart';
-import 'package:senluo_japanese_cms/pages/grammars/views/grammar_image_view.dart';
-import 'package:senluo_japanese_cms/repos/grammars/grammar_repository.dart';
-import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
 
 import '../../common/helpers/image_helper.dart';
 

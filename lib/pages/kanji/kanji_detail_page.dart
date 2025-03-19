@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
-import 'package:senluo_japanese_cms/common/constants/colors.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
 
 import '../../common/models/word.dart';

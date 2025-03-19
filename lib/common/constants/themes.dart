@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/common/constants/colors.dart';
+import 'package:senluo_common/senluo_common.dart';
 
 const kHomeNavTextStyle = TextStyle(
   fontWeight: FontWeight.bold,

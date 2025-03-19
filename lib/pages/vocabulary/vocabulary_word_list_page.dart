@@ -2,10 +2,10 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_preview_page.dart';
 
 import '../../common/models/word.dart';
-import '../../common/constants/colors.dart';
 
 class VocabularyWordListPage extends StatefulWidget {
   final String title;
