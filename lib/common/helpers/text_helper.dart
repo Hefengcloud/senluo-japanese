@@ -1,4 +1,5 @@
-import '../models/meaning.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
+
 import '../models/word.dart';
 
 Word parseMeaning(String str) {

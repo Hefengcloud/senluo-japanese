@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/common/constants/themes.dart';
-import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
-
-import '../../../repos/grammars/models/grammar_entry.dart';
 
 class GrammarMenuListView extends StatelessWidget {
   final Map<JLPTLevel, List<GrammarEntry>> grammarsByLevel;

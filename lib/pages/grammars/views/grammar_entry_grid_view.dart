@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/grammars/constants/colors.dart';
-import 'package:senluo_japanese_cms/repos/grammars/models/grammar_entry.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
+import 'package:senluo_common/senluo_common.dart';
 
 class GrammarEntryGridView extends StatelessWidget {
   final List<GrammarEntry> entries;

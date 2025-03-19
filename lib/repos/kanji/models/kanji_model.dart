@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
+import 'package:senluo_common/senluo_common.dart';
 
 class Kanji extends Equatable {
   final String char;

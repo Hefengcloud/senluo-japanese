@@ -1,4 +1,4 @@
-import 'package:senluo_japanese_cms/repos/grammars/models/grammar_item.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
 
 import '../../../common/constants/texts.dart';
 import '../constants/texts.dart';

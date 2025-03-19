@@ -1,11 +1,10 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/common/enums/jlpt_level.dart';
+import 'package:senluo_bunpo/senluo_bunpo.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_details_page.dart';
-
-import '../../repos/grammars/models/grammar_entry.dart';
 
 class GrammarListPage extends StatelessWidget {
   const GrammarListPage({super.key});
