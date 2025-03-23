@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_tts/flutter_tts.dart';
-import 'package:gap/gap.dart';
 import 'package:senluo_bunpo/senluo_bunpo.dart';
-import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_slide_page.dart';
@@ -14,9 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 class GrammarDetailsPage extends StatelessWidget {
   final GrammarEntry entry;
 
-  final FlutterTts _tts = FlutterTts();
-
-  GrammarDetailsPage({super.key, required this.entry});
+  const GrammarDetailsPage({super.key, required this.entry});
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +67,7 @@ class GrammarDetailsPage extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 32),
-          child: _buildGrammarDetails(context, state.currentItem),
+          child: GrammarDetailView(item: state.currentItem),
         ),
         Positioned(
           left: 0,
@@ -136,65 +131,6 @@ class GrammarDetailsPage extends StatelessWidget {
     );
   }
 
-  _buildGrammarDetails(BuildContext context, GrammarItem item) {
-    return ListView(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      children: [
-        const Gap(16),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            item.name.split("/").join("\n"),
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: kLevel2color[item.level],
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-        ),
-        _Subtitle(text: "意味", level: item.level),
-        if (item.meaning.jp.isNotEmpty)
-          ListTile(title: Text("🇯🇵 ${item.meaning.jp}")),
-        if (item.meaning.zh.isNotEmpty)
-          ListTile(title: Text("🇨🇳 ${item.meaning.zh}")),
-        if (item.meaning.en.isNotEmpty)
-          ListTile(title: Text("🇬🇧 ${item.meaning.en}")),
-        _Subtitle(text: "接続", level: item.level),
-        ...item.conjugations.map(
-          (c) => ListTile(title: GrammarConjugationText(text: c)),
-        ),
-        if (item.explanations.isNotEmpty) ...[
-          _Subtitle(text: "備考", level: item.level),
-          if (item.explanations.isNotEmpty)
-            ...item.explanations.map(
-              (e) => ListTile(title: Text(e)),
-            ),
-        ],
-        _Subtitle(text: "例文", level: item.level),
-        ...item.examples.map(
-          (e) => ListTile(
-            title: _buildExampleText(context, e, item.level),
-            onTap: () {
-              _tts.setLanguage("ja-JP");
-              _tts.speak(e.jp);
-              _tts.setLanguage("zh-CN");
-              _tts.speak(e.zh);
-            },
-          ),
-        ),
-        const Gap(48),
-      ],
-    );
-  }
-
-  _buildExampleText(BuildContext context, Example e, JLPTLevel level) {
-    return JapaneseSentence(
-      japanese: e.jp1.isNotEmpty ? e.jp1 : e.jp,
-      translation: e.zh,
-      fontSize: 16,
-      emphasizedColor: kLevel2color[level]!,
-    );
-  }
-
   _onGenerateImage(BuildContext context, GrammarItem item) {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -235,31 +171,5 @@ class GrammarDetailsPage extends StatelessWidget {
     if (!await launchUrl(url)) {
       throw Exception('Could not launch $url');
     }
-  }
-}
-
-class _Subtitle extends StatelessWidget {
-  final String text;
-  final JLPTLevel level;
-
-  const _Subtitle({required this.text, required this.level});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: kLevel2color[level]?.withAlpha(30),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      margin: const EdgeInsets.all(8),
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-      child: Text(
-        "[$text]",
-        style: Theme.of(context)
-            .textTheme
-            .bodyLarge
-            ?.copyWith(fontWeight: FontWeight.bold),
-      ),
-    );
   }
 }
