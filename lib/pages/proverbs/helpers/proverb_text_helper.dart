@@ -1,4 +1,4 @@
-import 'package:senluo_japanese_cms/common/constants/texts.dart';
+import 'package:senluo_common/senluo_common.dart';
 
 import '../../../repos/proverbs/models/proverb_item.dart';
 

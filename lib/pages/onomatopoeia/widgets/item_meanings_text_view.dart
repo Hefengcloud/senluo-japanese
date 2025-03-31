@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
-
-import '../../grammars/constants/texts.dart';
 
 class ItemMeaningsTextView extends StatelessWidget {
   final Onomatopoeia item;

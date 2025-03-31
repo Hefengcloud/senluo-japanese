@@ -1,21 +1,19 @@
-import '../../../common/constants/texts.dart';
 import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
-import '../../grammars/constants/texts.dart';
 
 String generateFullText(Onomatopoeia item) {
   return """
 拟声拟态词 | ${item.name}
 
-$kTitleZhMeaning
+【中文意思】
 ${item.meanings['zh']?.map((e) => '- $e').toList().join('\n')}
 
-$kTitleEnMeaning
+【英文意思】
 ${item.meanings['en']?.map((e) => '- $e').toList().join('\n')}
 
-$kTitleJpMeaning
+【日文意思】
 ${item.meanings['jp']?.map((e) => '- $e').toList().join('\n')}
 
-$kTitleExample
+【例句】
 ${item.examples.map((e) => "◎ ${e['jp']}\n→ ${e['zh']}\n→ ${e['en']}\n").toList().join('\n')}
 """;
 }

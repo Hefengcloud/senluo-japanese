@@ -28,9 +28,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
       child: BlocBuilder<GrammarItemBloc, GrammarItemState>(
           builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(
-            title: const Text('画像'),
-          ),
+          appBar: AppBar(title: const Text('画像')),
           body: state is GrammarItemLoaded
               ? _buildImage(context, state)
               : _buildLoading(),
