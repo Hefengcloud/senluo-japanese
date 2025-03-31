@@ -5,7 +5,6 @@ import 'package:senluo_bunpo/senluo_bunpo.dart';
 import 'package:senluo_japanese_cms/pages/grammars/bloc/grammar_bloc.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_preview_page.dart';
 import 'package:senluo_japanese_cms/pages/grammars/grammar_slide_page.dart';
-import 'package:senluo_japanese_cms/pages/grammars/helpers/grammar_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class GrammarDetailsPage extends StatelessWidget {
