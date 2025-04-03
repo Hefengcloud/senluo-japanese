@@ -110,8 +110,6 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
     );
   }
 
-  _buildBottomAppBar(KanaDisplayLoaded state) {}
-
   AppBar _buildAppBar(KanaDisplayState state) {
     var title = "Loading";
 
@@ -385,9 +383,8 @@ class _KanaPreviewPageState extends State<KanaPreviewPage> {
             final audioPath = 'kana/audios/${kana.key}.m4a';
             try {
               await _player.play(AssetSource(audioPath)); // For assets
-            } catch (e) {
-              print('Error playing audio: $e');
-            }
+              // ignore: empty_catches
+            } catch (e) {}
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
