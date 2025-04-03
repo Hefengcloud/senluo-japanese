@@ -40,7 +40,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
               ? FloatingActionButton(
                   child: const Icon(Icons.save_outlined),
                   onPressed: () {
-                    _onSaveImage(context, state.displayedItem.key);
+                    _onSaveImage(context, state.item.key);
                   },
                 )
               : null,
@@ -83,7 +83,7 @@ class _GrammarPreviewPageState extends State<GrammarPreviewPage> {
         child: AspectRatio(
           aspectRatio: 3 / 4,
           child: GrammarImageView(
-            item: state.displayedItem,
+            item: state.item,
             fontScale: _fontScale,
           ),
         ),

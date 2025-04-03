@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
 import 'package:senluo_bunpo/senluo_bunpo.dart';
 
@@ -14,28 +15,28 @@ class GrammarItemBloc extends Bloc<GrammarItemEvent, GrammarItemState> {
 
   _onStarted(GrammarItemStarted event, Emitter<GrammarItemState> emit) async {
     final item = event.item;
-
-    final displayedItem = item.copyWith(
-      examples: List.from(item.examples.take(1)),
-    );
-    emit(GrammarItemLoaded(item: item, displayedItem: displayedItem));
+    final examples = item.examples
+        .mapIndexed<Example>((index, e) => e.copyWith(isSelected: index < 1))
+        .toList();
+    emit(GrammarItemLoaded(item: item.copyWith(examples: examples)));
   }
 
   _onExampleSelected(
     GrammarExampleSelected event,
     Emitter<GrammarItemState> emit,
   ) async {
-    final theState = state as GrammarItemLoaded;
-    final examples = List<Example>.from(theState.displayedItem.examples);
-    if (examples.contains(event.example)) {
-      examples.remove(event.example);
-    } else {
-      examples.add(event.example);
-    }
-    final displayedItem = theState.displayedItem.copyWith(examples: examples);
+    if (state is! GrammarItemLoaded) return;
+
+    final currentState = state as GrammarItemLoaded;
+    final updatedExamples = currentState.item.examples.map<Example>((example) {
+      if (example.jp == event.example.jp) {
+        return example.copyWith(isSelected: !example.isSelected);
+      }
+      return example;
+    }).toList();
+
     emit(GrammarItemLoaded(
-      item: theState.item,
-      displayedItem: displayedItem,
+      item: currentState.item.copyWith(examples: updatedExamples),
     ));
   }
 }

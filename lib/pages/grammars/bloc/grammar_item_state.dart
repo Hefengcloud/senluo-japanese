@@ -11,15 +11,13 @@ final class GrammarItemLoading extends GrammarItemState {}
 
 final class GrammarItemLoaded extends GrammarItemState {
   final GrammarItem item;
-  final GrammarItem displayedItem;
 
-  bool isExampleDisplayed(Example e) => displayedItem.examples.contains(e);
+  bool isExampleDisplayed(Example e) => e.isSelected;
 
   const GrammarItemLoaded({
     required this.item,
-    required this.displayedItem,
   });
 
   @override
-  List<Object> get props => [item, displayedItem];
+  List<Object> get props => [item];
 }
