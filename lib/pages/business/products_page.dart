@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/product_constants.dart';
-import 'package:senluo_japanese_cms/pages/kana/kana_home_page.dart';
+import 'package:senluo_kana/pages/kana_home_page.dart';
 
 import '../grammars/grammar_home_page.dart';
 

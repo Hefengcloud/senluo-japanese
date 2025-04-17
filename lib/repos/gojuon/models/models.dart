@@ -1,1 +1,0 @@
-export 'kana_models.dart';

@@ -58,6 +58,8 @@ dependencies:
     path: ../image_gallery_saver
   senluo_common:
     path: ../senluo_common
+  senluo_kana:
+    path: ../senluo_kana
   senluo_bunpo:
     path: ../senluo_bunpo
   permission_handler: ^11.4.0
@@ -120,12 +122,6 @@ flutter:
     - assets/vocabulary/category/animal/
     - assets/vocabulary/category/place/
     - assets/vocabulary/jlpt/
-    - assets/kana/origins/
-    - assets/kana/strokes/
-    - assets/kana/strokes/hiragana/
-    - assets/kana/strokes/katakana/
-    - assets/kana/words/
-    - assets/kana/audios/
     - assets/business/
 
     
