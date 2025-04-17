@@ -8,10 +8,10 @@ import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart'
 import 'package:senluo_japanese_cms/pages/business/products_page.dart';
 import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
 import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart';
-import 'package:senluo_japanese_cms/pages/kana/kana_home_page.dart';
 import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_home_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
+import 'package:senluo_kana/pages/kana_home_page.dart';
 
 import '../../repos/business/business_repository.dart';
 import '../grammars/grammar_home_page.dart';
