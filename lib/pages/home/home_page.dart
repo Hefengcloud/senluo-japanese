@@ -11,7 +11,6 @@ import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart
 import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_home_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
-import 'package:senluo_kana/pages/kana_home_page.dart';
 
 import '../../repos/business/business_repository.dart';
 import '../grammars/grammar_home_page.dart';
@@ -78,10 +77,6 @@ class _HomePageState extends State<HomePage> {
                 color: Theme.of(context).primaryColor,
               ),
             ),
-          ),
-          ListTile(
-            title: const Text('仮名'),
-            onTap: () => _goto(const KanaHomePage()),
           ),
           ListTile(
             title: const Text('文法'),

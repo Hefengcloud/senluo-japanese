@@ -10,7 +10,6 @@ import 'package:senluo_japanese_cms/repos/kanji/kanji_repository.dart';
 import 'package:senluo_japanese_cms/repos/onomatopoeia/onomatopoeia_repository.dart';
 import 'package:senluo_japanese_cms/repos/proverbs/proverb_repository.dart';
 import 'package:senluo_japanese_cms/repos/vocabulary/vocabulary_repository.dart';
-import 'package:senluo_kana/pages/bloc/kana_bloc.dart';
 import 'package:senluo_kana/repos/kana_repository.dart';
 
 import 'pages/grammars/bloc/grammar_bloc.dart';
@@ -41,9 +40,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => ProverbBloc(proverbRepository: proverbRepo)
             ..add(ProverbStarted()),
-        ),
-        BlocProvider(
-          create: (_) => KanaBloc(kanaRepo: kanaRepo)..add(const KanaStarted()),
         ),
         BlocProvider(
           create: (_) =>
