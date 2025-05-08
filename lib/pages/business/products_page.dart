@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:senluo_japanese_cms/pages/business/constants/product_constants.dart';
-import 'package:senluo_kana/pages/kana_home_page.dart';
 
 import '../grammars/grammar_home_page.dart';
 
@@ -20,10 +19,6 @@ class ProductsPage extends StatelessWidget {
         onTap: () {
           switch (idx) {
             case 0:
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (ctx) => const KanaHomePage()),
-              );
-            case 1:
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (ctx) => const GrammarHomePage()),
               );
