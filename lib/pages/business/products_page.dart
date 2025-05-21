@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/business/constants/product_constants.dart';
 
 import '../grammars/grammar_home_page.dart';
 
@@ -12,7 +11,7 @@ class ProductsPage extends StatelessWidget {
   }
 
   _buildBody(BuildContext context) {
-    const products = kMyProducts;
+    const products = [];
 
     return ListView.separated(
       itemBuilder: (ctx, idx) => ListTile(

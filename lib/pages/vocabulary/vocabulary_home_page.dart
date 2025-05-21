@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:senluo_goi/senluo_goi.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_category_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/jlpt/vocabulary_jlpt_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/textbook/vocabulary_textbook_page.dart';
-import 'package:senluo_japanese_cms/repos/vocabulary/vocabulary_repository.dart';
 
 class VocabularyHomePage extends StatefulWidget {
   const VocabularyHomePage({super.key});

@@ -12,7 +12,7 @@ final class VocabularyLoading extends VocabularyState {}
 final class VocabularyLoaded extends VocabularyState {
   final Map<VocabularyType, List<VocabularyMenu>> type2Menus;
 
-  final List<Word> wordList;
+  final List<VocabularyWord> wordList;
   final String currentPath;
 
   const VocabularyLoaded({

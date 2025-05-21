@@ -1,8 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:senluo_japanese_cms/repos/onomatopoeia/models/category_model.dart';
-import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
-import 'package:senluo_japanese_cms/repos/onomatopoeia/onomatopoeia_repository.dart';
+import 'package:senluo_onomatopoeia/senluo_onomatopoeia.dart';
 
 part 'onomatopoeia_event.dart';
 part 'onomatopoeia_state.dart';

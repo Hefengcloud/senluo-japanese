@@ -1,9 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:senluo_japanese_cms/repos/vocabulary/models/vocabulary_menu.dart';
-import 'package:senluo_japanese_cms/repos/vocabulary/vocabulary_repository.dart';
-
-import '../../../common/models/word.dart';
+import 'package:senluo_goi/senluo_goi.dart';
 
 part 'vocabulary_event.dart';
 part 'vocabulary_state.dart';

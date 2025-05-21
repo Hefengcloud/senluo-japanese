@@ -4,10 +4,10 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ruby_text/ruby_text.dart';
+import 'package:senluo_goi/senluo_goi.dart';
+import 'package:senluo_onomatopoeia/senluo_onomatopoeia.dart';
 
-import '../../common/models/word.dart';
 import '../../common/helpers/image_helper.dart';
-import '../onomatopoeia/constants/colors.dart';
 import 'bloc/preview_bloc.dart';
 
 class VocabularyPreviewPage extends StatefulWidget {
@@ -22,7 +22,7 @@ class VocabularyPreviewPage extends StatefulWidget {
 
   final String title;
   final String subtitle;
-  final List<Word> words;
+  final List<VocabularyWord> words;
 
   @override
   State<VocabularyPreviewPage> createState() => _VocabularyPreviewPageState();
@@ -178,7 +178,7 @@ class _VocabularyPreviewPageState extends State<VocabularyPreviewPage> {
         ),
       );
 
-  _buildWordCard(Word word) => Card(
+  _buildWordCard(VocabularyWord word) => Card(
         color: Colors.white,
         shadowColor: Colors.transparent,
         child: InkWell(

@@ -10,7 +10,7 @@ sealed class PreviewState extends Equatable {
 final class PreviewLoading extends PreviewState {}
 
 final class PreviewLoaded extends PreviewState {
-  final List<Word> words;
+  final List<VocabularyWord> words;
 
   final int pageCount;
   final int currentPage;
@@ -21,7 +21,7 @@ final class PreviewLoaded extends PreviewState {
     this.currentPage = 0,
   });
 
-  List<Word> get displayedWords => words
+  List<VocabularyWord> get displayedWords => words
       .whereIndexed((index, _) =>
           index < (currentPage + 1) * kWordCountPerPage &&
           index >= currentPage * kWordCountPerPage)

@@ -8,7 +8,7 @@ sealed class PreviewEvent extends Equatable {
 }
 
 class PreviewStarted extends PreviewEvent {
-  final List<Word> words;
+  final List<VocabularyWord> words;
 
   const PreviewStarted({required this.words});
 }

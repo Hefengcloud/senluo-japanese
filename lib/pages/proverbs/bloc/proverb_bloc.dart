@@ -1,9 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:senluo_japanese_cms/common/constants/kanas.dart';
-import 'package:senluo_japanese_cms/repos/proverbs/proverb_repository.dart';
-
-import '../../../repos/proverbs/models/proverb_item.dart';
+import 'package:senluo_common/senluo_common.dart';
+import 'package:senluo_proverb/senluo_proverb.dart';
 
 part 'proverb_event.dart';
 part 'proverb_state.dart';
