@@ -1,10 +1,10 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/common/constants/kanas.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/proverb_details_page.dart';
+import 'package:senluo_proverb/senluo_proverb.dart';
 
-import '../../repos/proverbs/models/proverb_item.dart';
 import 'bloc/proverb_bloc.dart';
 
 class ProverbHomePage extends StatefulWidget {

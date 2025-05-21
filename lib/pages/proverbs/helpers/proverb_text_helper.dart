@@ -1,6 +1,5 @@
 import 'package:senluo_common/senluo_common.dart';
-
-import '../../../repos/proverbs/models/proverb_item.dart';
+import 'package:senluo_proverb/senluo_proverb.dart';
 
 String generateProverbText(ProverbItem item) {
   String text = """

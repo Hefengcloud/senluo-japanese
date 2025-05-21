@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senluo_goi/senluo_goi.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_word_list_page.dart';
 
-import '../../repos/vocabulary/models/vocabulary_menu.dart';
-import '../../repos/vocabulary/vocabulary_repository.dart';
 import 'bloc/vocabulary_bloc.dart';
-import 'views/vocabulary_menu_list_view.dart';
 
 class VocabularyCategoryPage extends StatelessWidget {
   const VocabularyCategoryPage({super.key});

@@ -1,4 +1,4 @@
-import '../../../repos/onomatopoeia/models/onomatopoeia_models.dart';
+import 'package:senluo_onomatopoeia/senluo_onomatopoeia.dart';
 
 String generateFullText(Onomatopoeia item) {
   return """

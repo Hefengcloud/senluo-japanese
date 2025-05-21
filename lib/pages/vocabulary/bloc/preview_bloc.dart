@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
-
-import '../../../common/models/word.dart';
+import 'package:senluo_goi/senluo_goi.dart';
 
 part 'preview_event.dart';
 part 'preview_state.dart';
@@ -29,7 +28,7 @@ class PreviewBloc extends Bloc<PreviewEvent, PreviewState> {
     emit(theState.copyWith(currentPage: page));
   }
 
-  int _caculatePageCount(List<Word> words) {
+  int _caculatePageCount(List<VocabularyWord> words) {
     int wordCount = words.length;
     int pageCount = wordCount ~/ kWordCountPerPage;
     if (wordCount % kWordCountPerPage > 0) {

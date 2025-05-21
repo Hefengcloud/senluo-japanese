@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_common/senluo_common.dart';
-import 'package:senluo_japanese_cms/common/enums/enums.dart';
+import 'package:senluo_kanji/senluo_kanji.dart';
 
-import '../../repos/kanji/models/kanji_model.dart';
 import 'bloc/kanji_bloc.dart';
 import 'kanji_detail_page.dart';
 

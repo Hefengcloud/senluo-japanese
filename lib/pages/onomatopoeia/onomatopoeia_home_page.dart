@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/onomatopoeia_list_view.dart';
-import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
+import 'package:senluo_onomatopoeia/senluo_onomatopoeia.dart';
 
 import 'bloc/onomatopoeia_bloc.dart';
-import 'widgets/onomatopoeia_category_list_view.dart';
+import 'onomatopoeia_preview_page.dart';
 
 class OnomatopoeiaHomePage extends StatefulWidget {
   const OnomatopoeiaHomePage({super.key});
@@ -48,7 +47,19 @@ class _OnomatopoeiaHomePageState extends State<OnomatopoeiaHomePage> {
     if (state is OnomatopoeiaLoading) {
       return const Center(child: CircularProgressIndicator());
     } else if (state is OnomatopoeiaLoaded) {
-      return OnomatopoeiaListView(items: state.items);
+      return OnomatopoeiaListView(
+        items: state.items,
+        onItemTap: (item) => _showDisplayDialog(context, item),
+      );
     }
   }
+
+  _showDisplayDialog(BuildContext context, Onomatopoeia item) =>
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) {
+            return OnomatopoeiaPreviewPage(item: item);
+          },
+        ),
+      );
 }

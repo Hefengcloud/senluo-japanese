@@ -7,8 +7,6 @@ import 'package:senluo_japanese_cms/pages/business/marketing_page.dart';
 import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart';
 import 'package:senluo_japanese_cms/pages/business/products_page.dart';
 import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
-import 'package:senluo_japanese_cms/pages/expressions/expression_panel_page.dart';
-import 'package:senluo_japanese_cms/pages/keigo/keigo_home_page.dart';
 import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_home_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 
@@ -16,7 +14,6 @@ import '../../repos/business/business_repository.dart';
 import '../grammars/grammar_home_page.dart';
 import '../kanji/kanji_home_page.dart';
 import '../proverbs/proverb_home_page.dart';
-import '../tools/tools_home_page.dart';
 import '../zengo/zengo_home_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -99,20 +96,8 @@ class _HomePageState extends State<HomePage> {
             onTap: () => _goto(const OnomatopoeiaHomePage()),
           ),
           ListTile(
-            title: const Text('表現'),
-            onTap: () => _goto(const ExpressionHomePage()),
-          ),
-          ListTile(
-            title: const Text('敬語'),
-            onTap: () => _goto(const KeigoHomePage()),
-          ),
-          ListTile(
             title: const Text('禅語'),
             onTap: () => _goto(const ZengoHomePage()),
-          ),
-          ListTile(
-            title: const Text('ツール'),
-            onTap: () => _goto(const ToolsHomePage()),
           ),
         ],
       ),

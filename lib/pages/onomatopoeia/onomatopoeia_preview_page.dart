@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:senluo_japanese_cms/common/helpers/image_helper.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/widgets/onomatopoeia_image_view.dart';
-import 'package:senluo_japanese_cms/repos/onomatopoeia/models/onomatopoeia_models.dart';
+import 'package:senluo_onomatopoeia/senluo_onomatopoeia.dart';
 
+import '../../common/helpers/image_helper.dart';
 import 'helpers/item_text_helper.dart';
 
 enum PreviewType {

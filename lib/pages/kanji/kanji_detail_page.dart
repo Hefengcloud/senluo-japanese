@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:ruby_text/ruby_text.dart';
-import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
+import 'package:senluo_kanji/senluo_kanji.dart';
+import 'package:senluo_kanji/views/kanji_image_view.dart';
 
-import '../../common/models/word.dart';
 import '../../common/helpers/image_helper.dart';
-import '../../common/helpers/text_helper.dart';
-import '../../repos/kanji/models/kanji_model.dart';
 
 class KanjiDetailPage extends StatefulWidget {
   final int index;
@@ -73,7 +68,10 @@ class _KanjiDetailPageState extends State<KanjiDetailPage> {
             key: globalKey,
             child: AspectRatio(
               aspectRatio: 3 / 4,
-              child: _buildImagePanel(context, state.currentDetail),
+              child: KanjiImageView(
+                detail: state.currentDetail,
+                fontScale: _fontScale,
+              ),
             ),
           ),
           const Spacer(),
@@ -140,149 +138,6 @@ class _KanjiDetailPageState extends State<KanjiDetailPage> {
         ],
       );
 
-  _buildImagePanel(BuildContext context, KanjiDetail detail) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: kBgColor,
-      ),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              _buildKanji(detail),
-              const Gap(32),
-              _buildReadings(detail),
-            ],
-          ),
-          const Gap(32),
-          _buildMeaning(detail),
-          const Gap(32),
-          _buildVocabulary('言葉', detail.words.take(8).toList()),
-          if (detail.idioms.isNotEmpty) ...[
-            const Gap(16),
-            _buildVocabulary('四字熟語', detail.idioms.take(4).toList())
-          ],
-          if (detail.proverbs.isNotEmpty) ...[
-            const Gap(16),
-            _buildVocabulary('ことわざ', detail.proverbs.take(4).toList())
-          ],
-        ],
-      ),
-    );
-  }
-
-  Column _buildKanji(KanjiDetail detail) {
-    return Column(
-      children: [
-        _buildKanjiCard(detail),
-        Text("（${detail.strokeCount}）"),
-      ],
-    );
-  }
-
-  Column _buildReadings(KanjiDetail detail) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _buildReadingText('訓読み', detail.kunyomis),
-        const Gap(8),
-        _buildReadingText('音読み', detail.onyomis),
-      ],
-    );
-  }
-
-  Text _buildKanjiCard(KanjiDetail detail) {
-    return Text(
-      detail.char,
-      style: GoogleFonts.kleeOne(
-        fontSize: 128,
-        color: kBrandColor,
-        fontWeight: FontWeight.bold,
-      ),
-    );
-  }
-
-  _buildMeaning(KanjiDetail detail) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        const _Subtitle('意味'),
-        const Gap(8),
-        Text(
-          detail.meaning,
-          style: TextStyle(fontSize: 14 * _fontScale),
-        ),
-      ],
-    );
-  }
-
-  _buildVocabulary(String title, List<String> words) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _Subtitle(title),
-        const Gap(8),
-        Wrap(
-          children: words.map<Widget>((e) {
-            final word = parseMeaning(e);
-            return word.meaning.en.isNotEmpty
-                ? Tooltip(
-                    preferBelow: false,
-                    message: word.meaning.en,
-                    child: _buildWordMeaningText(word),
-                  )
-                : _buildWordMeaningText(word);
-          }).toList(),
-        ),
-      ],
-    );
-  }
-
-  _buildWordMeaningText(Word word) => Padding(
-        padding: const EdgeInsets.only(right: 16, bottom: 4),
-        child: word.reading.isNotEmpty
-            ? RubyText(
-                [RubyTextData(word.text, ruby: word.reading)],
-                style: TextStyle(fontSize: 14 * _fontScale),
-                textAlign: TextAlign.left,
-                softWrap: true,
-              )
-            : Text(
-                word.text,
-                style: TextStyle(fontSize: 14 * _fontScale),
-              ),
-      );
-
-  _buildReadingText(String title, List<String> readings) => Row(
-        children: [
-          _Subtitle(title),
-          const Gap(16),
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: readings
-                .map(
-                  (e) => Padding(
-                    padding: const EdgeInsets.only(
-                      right: 8.0,
-                      bottom: 4,
-                      top: 4,
-                    ),
-                    child: Text(
-                      e,
-                      style: TextStyle(fontSize: 14 * _fontScale),
-                    ),
-                  ),
-                )
-                .toList(),
-          ),
-        ],
-      );
-
   _saveKanjiAsImage(String name) async {
     final bytes = await captureWidget(globalKey);
     await saveImage(bytes!, '$name.png');
@@ -316,29 +171,6 @@ class _KanjiDetailPageState extends State<KanjiDetailPage> {
                 onTap: () {},
               )),
         ],
-      ),
-    );
-  }
-}
-
-class _Subtitle extends StatelessWidget {
-  final String text;
-  const _Subtitle(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: kBrandColor.withAlpha(33),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: kBrandColor,
-          fontWeight: FontWeight.bold,
-        ),
       ),
     );
   }

@@ -1,9 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:senluo_common/senluo_common.dart';
-import 'package:senluo_japanese_cms/repos/kanji/kanji_repository.dart';
-
-import '../../../repos/kanji/models/kanji_model.dart';
+import 'package:senluo_kanji/senluo_kanji.dart';
 
 part 'kanji_event.dart';
 part 'kanji_state.dart';

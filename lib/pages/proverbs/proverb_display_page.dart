@@ -1,13 +1,11 @@
 import 'dart:io';
 
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_common/widgets/everjapan_watermark.dart';
-import 'package:senluo_japanese_cms/pages/proverbs/constants/proverb_colors.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/helpers/proverb_text_helper.dart';
-import 'package:senluo_japanese_cms/repos/proverbs/models/proverb_item.dart';
+import 'package:senluo_proverb/constants/constants.dart';
+import 'package:senluo_proverb/senluo_proverb.dart';
 
 import '../../common/helpers/image_helper.dart';
 
@@ -65,7 +63,10 @@ class _ProverbDisplayPageState extends State<ProverbDisplayPage> {
           color: kProverbBgColor,
           padding: const EdgeInsets.all(8.0),
           child: EverjapanWatermark(
-            child: _buildImageContent(context, widget.item),
+            child: ProverbImageView(
+              item: widget.item,
+              fontSize: _currentSliderValue,
+            ),
           ),
         ),
       ),
@@ -91,46 +92,6 @@ class _ProverbDisplayPageState extends State<ProverbDisplayPage> {
         ],
       );
 
-  _buildImageContent(BuildContext context, ProverbItem item) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 32),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          const _ProverbLabel(),
-          const Spacer(),
-          _ProverbReadingView(item: item),
-          _buildIllustration(context, item),
-          const Spacer(),
-          ...item.meanings.map<AutoSizeText>(
-            (e) => AutoSizeText(
-              e,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.maShanZheng(
-                textStyle: const TextStyle(fontSize: 24.0),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  _buildIllustration(BuildContext context, ProverbItem item) {
-    if (item.imgUrl?.isNotEmpty == true) {
-      return Image.network(item.imgUrl!);
-    }
-    return AutoSizeText(
-      item.name,
-      textAlign: TextAlign.center,
-      style: GoogleFonts.notoSansJp(
-        fontSize: _currentSliderValue,
-        fontWeight: FontWeight.bold,
-        color: kProverbMainColor,
-      ),
-    );
-  }
-
   _saveProverbAsImage(ProverbItem item) async {
     final bytes = await captureWidget(globalKey);
     if (Platform.isIOS || Platform.isAndroid) {
@@ -154,45 +115,6 @@ class _ProverbDisplayPageState extends State<ProverbDisplayPage> {
       const SnackBar(
         content: Text('Text Copyied!'),
         behavior: SnackBarBehavior.floating,
-      ),
-    );
-  }
-}
-
-class _ProverbReadingView extends StatelessWidget {
-  final ProverbItem item;
-
-  const _ProverbReadingView({required this.item});
-
-  @override
-  Widget build(BuildContext context) {
-    return AutoSizeText(
-      item.reading,
-      textAlign: TextAlign.center,
-      style: GoogleFonts.notoSansJp(
-        textStyle: const TextStyle(fontSize: 28),
-      ),
-      maxLines: 1,
-    );
-  }
-}
-
-class _ProverbLabel extends StatelessWidget {
-  const _ProverbLabel();
-
-  @override
-  Widget build(BuildContext context) {
-    return Chip(
-      label: Text(
-        'ことわざ',
-        style: GoogleFonts.notoSansJp(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      backgroundColor: kProverbMainColor,
-      shape: const StadiumBorder(
-        side: BorderSide(style: BorderStyle.none),
       ),
     );
   }
