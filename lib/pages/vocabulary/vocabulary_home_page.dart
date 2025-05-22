@@ -4,31 +4,8 @@ import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_category_page.da
 import 'package:senluo_japanese_cms/pages/vocabulary/jlpt/vocabulary_jlpt_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/textbook/vocabulary_textbook_page.dart';
 
-class VocabularyHomePage extends StatefulWidget {
+class VocabularyHomePage extends StatelessWidget {
   const VocabularyHomePage({super.key});
-
-  @override
-  State<VocabularyHomePage> createState() => _VocabularyHomePageState();
-}
-
-class _VocabularyHomePageState extends State<VocabularyHomePage>
-    with SingleTickerProviderStateMixin {
-  late TabController _tabController;
-
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(
-      length: VocabularyType.values.length,
-      vsync: this,
-    );
-  }
-
-  @override
-  void dispose() {
-    _tabController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +21,9 @@ class _VocabularyHomePageState extends State<VocabularyHomePage>
                   (e) => Tab(text: e.text),
                 )
                 .toList(),
-            controller: _tabController,
           ),
         ),
         body: TabBarView(
-          controller: _tabController,
           children: types.map(
             (type) {
               if (type == VocabularyType.category) {
