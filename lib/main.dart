@@ -4,7 +4,6 @@ import 'package:senluo_bunpo/senluo_bunpo.dart';
 import 'package:senluo_goi/senluo_goi.dart';
 import 'package:senluo_japanese_cms/pages/home/home_page.dart';
 import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/bloc/onomatopoeia_bloc.dart';
 import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/bloc/vocabulary_bloc.dart';
 import 'package:senluo_kana/repos/kana_repository.dart';
@@ -40,10 +39,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => ProverbBloc(proverbRepository: proverbRepo)
             ..add(ProverbStarted()),
-        ),
-        BlocProvider(
-          create: (_) =>
-              OnomatopoeiaBloc(onomatopoeiaRepo)..add(OnomatopoeiaStarted()),
         ),
         BlocProvider(
           create: (_) => KanjiBloc(kanjiRepo)..add(KanjiStarted()),
