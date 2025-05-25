@@ -7,7 +7,6 @@ import 'package:senluo_japanese_cms/pages/business/marketing_page.dart';
 import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart';
 import 'package:senluo_japanese_cms/pages/business/products_page.dart';
 import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
-import 'package:senluo_japanese_cms/pages/onomatopoeia/onomatopoeia_home_page.dart';
 import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 
 import '../../repos/business/business_repository.dart';
@@ -90,10 +89,6 @@ class _HomePageState extends State<HomePage> {
           ListTile(
             title: const Text('慣用語'),
             onTap: () => _goto(const ProverbHomePage()),
-          ),
-          ListTile(
-            title: const Text('オノマトペ'),
-            onTap: () => _goto(const OnomatopoeiaHomePage()),
           ),
           ListTile(
             title: const Text('禅語'),

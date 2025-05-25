@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
 import 'package:senluo_bunpo/senluo_bunpo.dart';
+import 'package:senluo_common/senluo_common.dart';
 
 part 'grammar_item_event.dart';
 part 'grammar_item_state.dart';
