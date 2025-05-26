@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:senluo_japanese_cms/pages/business/cashflow_page.dart';
 import 'package:senluo_japanese_cms/pages/business/leadership_page.dart';
 import 'package:senluo_japanese_cms/pages/business/marketing_page.dart';
 import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart';
 import 'package:senluo_japanese_cms/pages/business/products_page.dart';
 import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
-import 'package:senluo_japanese_cms/pages/vocabulary/vocabulary_home_page.dart';
 
 import '../../repos/business/business_repository.dart';
-import '../grammars/grammar_home_page.dart';
-import '../kanji/kanji_home_page.dart';
-import '../proverbs/proverb_home_page.dart';
-import '../zengo/zengo_home_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -54,55 +48,7 @@ class _HomePageState extends State<HomePage> {
               CashflowPage(),
             ],
           ),
-          drawer: _buildDrawer(context),
         ),
-      ),
-    );
-  }
-
-  _buildDrawer(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          DrawerHeader(
-            child: Text(
-              "森罗日语",
-              style: GoogleFonts.zhiMangXing(
-                fontSize: 48,
-                color: Theme.of(context).primaryColor,
-              ),
-            ),
-          ),
-          ListTile(
-            title: const Text('文法'),
-            onTap: () => _goto(const GrammarHomePage()),
-          ),
-          ListTile(
-            title: const Text('語彙'),
-            onTap: () => _goto(const VocabularyHomePage()),
-          ),
-          ListTile(
-            title: const Text('漢字'),
-            onTap: () => _goto(const KanjiHomePage()),
-          ),
-          ListTile(
-            title: const Text('慣用語'),
-            onTap: () => _goto(const ProverbHomePage()),
-          ),
-          ListTile(
-            title: const Text('禅語'),
-            onTap: () => _goto(const ZengoHomePage()),
-          ),
-        ],
-      ),
-    );
-  }
-
-  _goto(Widget page) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => page,
       ),
     );
   }

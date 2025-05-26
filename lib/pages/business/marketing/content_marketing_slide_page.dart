@@ -3,10 +3,9 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:gap/gap.dart';
+import 'package:senluo_common/senluo_common.dart';
 import 'package:senluo_japanese_cms/repos/business/business_repository.dart';
 import 'package:senluo_japanese_cms/repos/business/models/content_marketing_step.dart';
-
-import '../../../common/helpers/image_helper.dart';
 
 class ContentMarketingSlidePage extends StatelessWidget {
   final BusinessRepository repo;

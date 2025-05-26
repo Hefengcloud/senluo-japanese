@@ -3,15 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senluo_bunpo/senluo_bunpo.dart';
 import 'package:senluo_goi/senluo_goi.dart';
 import 'package:senluo_japanese_cms/pages/home/home_page.dart';
-import 'package:senluo_japanese_cms/pages/kanji/bloc/kanji_bloc.dart';
-import 'package:senluo_japanese_cms/pages/proverbs/bloc/proverb_bloc.dart';
-import 'package:senluo_japanese_cms/pages/vocabulary/bloc/vocabulary_bloc.dart';
 import 'package:senluo_kana/repos/kana_repository.dart';
 import 'package:senluo_kanji/senluo_kanji.dart';
 import 'package:senluo_onomatopoeia/senluo_onomatopoeia.dart';
 import 'package:senluo_proverb/senluo_proverb.dart';
-
-import 'pages/grammars/bloc/grammar_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,33 +25,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (_) => GrammarBloc(grammarRepository: grammarRepo)
-            ..add(GrammarStarted()),
-        ),
-        BlocProvider(
-          create: (_) => ProverbBloc(proverbRepository: proverbRepo)
-            ..add(ProverbStarted()),
-        ),
-        BlocProvider(
-          create: (_) => KanjiBloc(kanjiRepo)..add(KanjiStarted()),
-        ),
-        BlocProvider(
-          create: (_) =>
-              VocabularyBloc(vocabularyRepo)..add(VocabularyStarted()),
-        ),
-      ],
-      child: MaterialApp(
-        title: 'SENLUO JAPANESE',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        debugShowCheckedModeBanner: false,
-        home: const HomePage(),
+    return MaterialApp(
+      title: 'Zen',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
     );
   }
 }
