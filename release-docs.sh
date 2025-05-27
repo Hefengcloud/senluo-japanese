@@ -12,4 +12,7 @@ else
 fi
 
 cp -r build/web/* docs/
-echo "Copied build/web* to docs/"
+echo "Copied build/web/* to docs/"
+
+git ci -am'update docs'
+git push -u origin main
