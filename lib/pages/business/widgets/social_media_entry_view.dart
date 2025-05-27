@@ -1,5 +1,6 @@
-import 'package:senluo_japanese_cms/pages/business/constants/marketing_constants.dart';
-import 'package:senluo_japanese_cms/widgets/entry_view.dart';
+
+import '../../../widgets/entry_view.dart';
+import '../constants/marketing_constants.dart';
 
 class SocialMediaEntryView extends EntryView {
   final SocialMedia socialMedia;

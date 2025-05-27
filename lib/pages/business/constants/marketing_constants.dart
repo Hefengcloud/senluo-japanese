@@ -1,4 +1,5 @@
-import 'package:senluo_japanese_cms/pages/business/data/marketing_channel.dart';
+
+import '../data/marketing_channel.dart';
 
 enum CustomerPersona {
   newbies('日语初学者'),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/business/cashflow_page.dart';
-import 'package:senluo_japanese_cms/pages/business/leadership_page.dart';
-import 'package:senluo_japanese_cms/pages/business/marketing_page.dart';
-import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart';
-import 'package:senluo_japanese_cms/pages/business/products_page.dart';
-import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
 
+import 'cashflow_page.dart';
 import 'constants/business_constants.dart';
+import 'leadership_page.dart';
+import 'marketing_page.dart';
+import 'overhead_operation_page.dart';
+import 'products_page.dart';
+import 'sales_page.dart';
 
 typedef BizPartTapCallback = void Function(BusinessPart part);
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/business/marketing/content_marketing_page.dart';
-import 'package:senluo_japanese_cms/pages/business/marketing/story_brand_framework_page.dart';
 
 import '../../repos/business/business_repository.dart';
+import 'marketing/content_marketing_page.dart';
+import 'marketing/story_brand_framework_page.dart';
 
 class MarketingPage extends StatelessWidget {
   const MarketingPage({super.key});

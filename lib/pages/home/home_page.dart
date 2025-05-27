@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:senluo_japanese_cms/pages/business/cashflow_page.dart';
-import 'package:senluo_japanese_cms/pages/business/leadership_page.dart';
-import 'package:senluo_japanese_cms/pages/business/marketing_page.dart';
-import 'package:senluo_japanese_cms/pages/business/overhead_operation_page.dart';
-import 'package:senluo_japanese_cms/pages/business/products_page.dart';
-import 'package:senluo_japanese_cms/pages/business/sales_page.dart';
 
 import '../../repos/business/business_repository.dart';
+import '../business/cashflow_page.dart';
+import '../business/leadership_page.dart';
+import '../business/marketing_page.dart';
+import '../business/overhead_operation_page.dart';
+import '../business/products_page.dart';
+import '../business/sales_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

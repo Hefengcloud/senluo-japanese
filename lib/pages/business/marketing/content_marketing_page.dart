@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:senluo_common/senluo_common.dart';
-import 'package:senluo_japanese_cms/pages/business/marketing/content_marketing_slide_page.dart';
-import 'package:senluo_japanese_cms/repos/business/business_repository.dart';
+
+import '../../../repos/business/business_repository.dart';
+import 'content_marketing_slide_page.dart';
 
 class ContentMarketingPage extends StatelessWidget {
   final BusinessRepository repo;
@@ -44,7 +44,6 @@ class ContentMarketingPage extends StatelessWidget {
                       children: e.details
                           .mapIndexed<ListTile>(
                             (idx, d) => ListTile(
-                              leading: Text(solidMaruNumbers[idx]),
                               title: Text(d),
                             ),
                           )

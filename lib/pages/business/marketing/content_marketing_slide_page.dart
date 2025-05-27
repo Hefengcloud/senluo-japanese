@@ -1,11 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:gap/gap.dart';
-import 'package:senluo_common/senluo_common.dart';
-import 'package:senluo_japanese_cms/repos/business/business_repository.dart';
-import 'package:senluo_japanese_cms/repos/business/models/content_marketing_step.dart';
+
+import '../../../repos/business/business_repository.dart';
+import '../../../repos/business/models/models.dart';
 
 class ContentMarketingSlidePage extends StatelessWidget {
   final BusinessRepository repo;
@@ -18,12 +17,6 @@ class ContentMarketingSlidePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Content Marketing'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.save_outlined),
-        onPressed: () {
-          _onSaveImage(context);
-        },
       ),
       body: FutureBuilder(
         future: repo.loadContentMarketingSteps(),
@@ -92,19 +85,5 @@ class ContentMarketingSlidePage extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  _onSaveImage(BuildContext context) async {
-    final device = Device.get();
-    final bytes = await captureWidget(_globalKey);
-    if (device.isPhone) {
-      final result = await saveImageToGallery(bytes!);
-      // ignore: use_build_context_synchronously
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Image ${result ? "" : "NOT "} Saved!')),
-      );
-    } else {
-      saveImageToFile(bytes!, 'content-marketing.jpg');
-    }
   }
 }

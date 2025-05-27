@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:senluo_japanese_cms/pages/business/constants/business_constants.dart';
+
+import 'constants/business_constants.dart';
 
 class LeadershipPage extends StatelessWidget {
   const LeadershipPage({super.key});
