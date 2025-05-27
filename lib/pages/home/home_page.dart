@@ -25,7 +25,6 @@ class _HomePageState extends State<HomePage> {
         length: 6,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('SENLUO JAPANESE'),
             bottom: const TabBar(
               isScrollable: true,
               tabs: [
