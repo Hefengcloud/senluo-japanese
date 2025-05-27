@@ -2,7 +2,7 @@
 echo "Building flutter to web"
 
 flutter clean web
-flutter build web --release --base-href="/senluo-business/"
+flutter build web --release --base-href="/senluo-japanese/"
 
 rm -rf ./docs
 mkdir docs
