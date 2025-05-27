@@ -1,6 +1,6 @@
 {
-    "name": "senluo_japanese_cms",
-    "short_name": "senluo_japanese_cms",
+    "name": "SenluoJapanese",
+    "short_name": "SenluoJapanese",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -25,15 +25,16 @@ class _HomePageState extends State<HomePage> {
         length: 6,
         child: Scaffold(
           appBar: AppBar(
+            title: const Text('SenluoJapanese'),
             bottom: const TabBar(
               isScrollable: true,
               tabs: [
                 Tab(child: Text("Leadership")),
                 Tab(child: Text("Products")),
                 Tab(child: Text("Marketing")),
-                Tab(child: Text("Sales")),
-                Tab(child: Text("Overhead Operation")),
-                Tab(child: Text("Cashflow")),
+                // Tab(child: Text("Sales")),
+                // Tab(child: Text("Overhead Operation")),
+                // Tab(child: Text("Cashflow")),
               ],
             ),
           ),
@@ -42,9 +43,9 @@ class _HomePageState extends State<HomePage> {
               LeadershipPage(),
               ProductsPage(),
               MarketingPage(),
-              SalesPage(),
-              OverheadOperationPage(),
-              CashflowPage(),
+              // SalesPage(),
+              // OverheadOperationPage(),
+              // CashflowPage(),
             ],
           ),
         ),
